@@ -13,26 +13,30 @@ from telegram.ext import (
     CallbackQueryHandler,
 )
 
-# ------------------ Config ------------------
+# ====================== CONFIG ======================
 URL = "https://magiaymentalismo.github.io/Atrapalo_clean/?v=1632222"
-UA = {"User-Agent": "Mozilla/5.0 (X11; Linux) AppleWebKit/537.36 Chrome/123 Safari/537.36"}
-TZ = ZoneInfo("Europe/Madrid")
+UA  = {"User-Agent": "Mozilla/5.0 (X11; Linux) AppleWebKit/537.36 Chrome/123 Safari/537.36"}
+TZ  = ZoneInfo("Europe/Madrid")
 TELEGRAM_LIMIT = 4096
 CACHE_TTL = 60  # segundos
 STATE_FILE = Path("state.json")
 
-# Logging
+# ⚠️ Seguridad: primero intenta leer TELEGRAM_TOKEN del entorno.
+# Si no existe, usa el token pegado aquí como respaldo.
+# ¡No subas este archivo con el token al repositorio público!
+TOKEN_FALLBACK = "8566367368:AAG4FTbn3uezMbtBFxMH7E2eEMeH4fsTbQ0"
+
+# Logging básico
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+# ====================== CACHE ======================
 _cache: Tuple[float, Dict[str, Any]] | None = None
-
 
 def _now() -> float:
     return time.monotonic()
 
-
-# ------------------ Utils ------------------
+# ====================== UTILS ======================
 def _normalize_int(x) -> Optional[int]:
     if x in (None, "", "—", "-", "N/A", "NA"):
         return None
@@ -42,8 +46,8 @@ def _normalize_int(x) -> Optional[int]:
     except Exception:
         return None
 
-
 def _split_for_telegram(text: str, limit: int = TELEGRAM_LIMIT) -> List[str]:
+    """Divide mensajes largos para no pasar el límite de Telegram."""
     if len(text) <= limit:
         return [text]
     parts, chunk = [], []
@@ -53,14 +57,13 @@ def _split_for_telegram(text: str, limit: int = TELEGRAM_LIMIT) -> List[str]:
             parts.append("".join(chunk))
             chunk, total = [line], len(line)
         else:
-            chunk.append(line)
-            total += len(line)
+            chunk.append(line); total += len(line)
     if chunk:
         parts.append("".join(chunk))
     return parts
 
-
 def _extract_payload_from_html(html: str) -> Dict[str, Any]:
+    """Busca el JSON principal (PAYLOAD) en el HTML."""
     soup = BeautifulSoup(html, "html.parser")
 
     tag = soup.find("script", id="PAYLOAD")
@@ -79,17 +82,29 @@ def _extract_payload_from_html(html: str) -> Dict[str, Any]:
 
     raise ValueError("No encontré el PAYLOAD en el HTML.")
 
-
 def fetch_payload(force: bool = False) -> Dict[str, Any]:
+    """Descarga y cachea los datos de la cartelera."""
     global _cache
     if (not force) and _cache and (_now() - _cache[0] < CACHE_TTL):
         return _cache[1]
-    r = requests.get(URL, headers=UA, timeout=20)
-    r.raise_for_status()
-    data = _extract_payload_from_html(r.text)
+
+    try:
+        r = requests.get(URL, headers=UA, timeout=20)
+        r.raise_for_status()
+    except requests.RequestException as e:
+        if _cache:
+            return _cache[1]
+        raise RuntimeError(f"HTTP error: {e}") from e
+
+    try:
+        data = _extract_payload_from_html(r.text)
+    except Exception as e:
+        if _cache:
+            return _cache[1]
+        raise RuntimeError(f"No pude parsear el payload: {e}") from e
+
     _cache = (_now(), data)
     return data
-
 
 def _safe_pct(vendidas: Optional[int], cap: Optional[int]) -> Optional[int]:
     if vendidas is None or cap in (None, 0):
@@ -98,7 +113,6 @@ def _safe_pct(vendidas: Optional[int], cap: Optional[int]) -> Optional[int]:
         return round((vendidas / cap) * 100)
     except Exception:
         return None
-
 
 def _fmt_extra(vendidas, cap, stock) -> str:
     parts = []
@@ -113,7 +127,6 @@ def _fmt_extra(vendidas, cap, stock) -> str:
     if stock not in (None, ""):
         parts.append(f"quedan {stock}")
     return (" · " + " · ".join(parts)) if parts else ""
-
 
 def format_resume(data: Dict[str, Any], evento: Optional[str] = None, top: int = 5) -> str:
     eventos = data.get("eventos", {})
@@ -139,30 +152,27 @@ def format_resume(data: Dict[str, Any], evento: Optional[str] = None, top: int =
         lines.append(f"\n— {k} —")
         for r in rows:
             fecha_label = r[0]
-            hora = r[1]
-            vendidas = _normalize_int(r[2] if len(r) > 2 else None)
-            cap = _normalize_int(r[4] if len(r) > 4 else None)
-            stock = _normalize_int(r[5] if len(r) > 5 else None)
+            hora        = r[1]
+            vendidas    = _normalize_int(r[2] if len(r) > 2 else None)
+            cap         = _normalize_int(r[4] if len(r) > 4 else None)
+            stock       = _normalize_int(r[5] if len(r) > 5 else None)
             extra = _fmt_extra(vendidas, cap, stock)
             lines.append(f"• {fecha_label} {hora}{extra}")
     return "\n".join(lines) if len(lines) > 1 else "Sin funciones."
-
 
 def _iter_all_rows(data: Dict[str, Any]):
     for k, v in (data.get("eventos") or {}).items():
         for r in v.get("table", {}).get("rows", []):
             yield k, r
 
-
 async def _reply_long(update: Update, text: str):
     for part in _split_for_telegram(text):
-        if update.callback_query:
+        if getattr(update, "callback_query", None):
             await update.callback_query.message.reply_text(part)
         else:
             await update.message.reply_text(part)
 
-
-# ------------------ Estado persistente ------------------
+# ====================== ESTADO ======================
 def _load_state():
     if STATE_FILE.exists():
         try:
@@ -171,65 +181,58 @@ def _load_state():
             pass
     return {"subscribers": [], "counts": {}}
 
-
 def _save_state(state):
     try:
         STATE_FILE.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
     except Exception as e:
         logger.warning("No pude guardar state.json: %s", e)
 
+def _iter_flat_functions(data: Dict[str, Any]):
+    """Rinde dicts con key estable para comparar ventas."""
+    eventos = data.get("eventos", {})
+    for evento, info in (eventos or {}).items():
+        for r in (info.get("table", {}) or {}).get("rows", []):
+            # r = [FechaLabel, Hora, Vendidas, FechaISO, Capacidad?, Stock?]
+            fecha_label = r[0] if len(r) > 0 else ""
+            hora        = r[1] if len(r) > 1 else ""
+            vendidas    = _normalize_int(r[2] if len(r) > 2 else None)
+            fecha_iso   = r[3] if len(r) > 3 else ""
+            cap         = _normalize_int(r[4] if len(r) > 4 else None)
+            stock       = _normalize_int(r[5] if len(r) > 5 else None)
+            key = f"{evento}::{fecha_iso}::{hora}"
+            yield {
+                "key": key,
+                "evento": evento,
+                "fecha_label": fecha_label,
+                "hora": hora,
+                "fecha_iso": fecha_iso,
+                "vendidas": vendidas,
+                "cap": cap,
+                "stock": stock,
+            }
 
-def _is_subscribed(chat_id: int) -> bool:
-    st = _load_state()
-    return chat_id in st.get("subscribers", [])
-
-
-def _subscribe(chat_id: int) -> bool:
-    st = _load_state()
-    if chat_id not in st["subscribers"]:
-        st["subscribers"].append(chat_id)
-        _save_state(st)
-        return True
-    return False
-
-
-def _unsubscribe(chat_id: int) -> bool:
-    st = _load_state()
-    if chat_id in st["subscribers"]:
-        st["subscribers"].remove(chat_id)
-        _save_state(st)
-        return True
-    return False
-
-
-# ------------------ Comandos ------------------
+# ====================== COMANDOS ======================
 async def start(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
-    data = fetch_payload()
-    eventos = list((data.get("eventos") or {}).keys())
-
-    buttons, row = [], []
-    for name in eventos[:6]:
-        row.append(InlineKeyboardButton(name, callback_data=f"evento_exact:{name}"))
-        if len(row) == 2:
-            buttons.append(row)
-            row = []
-    if row:
-        buttons.append(row)
-
-    buttons.append([InlineKeyboardButton("🪄 Todos", callback_data="status")])
-
-    chat_id = update.effective_chat.id
-    if _is_subscribed(chat_id):
-        sub_btn = InlineKeyboardButton("🔕 Desuscribirme", callback_data="sub:off")
-    else:
-        sub_btn = InlineKeyboardButton("🔔 Suscribirme", callback_data="sub:on")
-    buttons.append([sub_btn])
-
+    keyboard = [
+        [
+            InlineKeyboardButton("🎭 Disfrutá", callback_data="evento:Disfruta"),
+            InlineKeyboardButton("😱 Miedo", callback_data="evento:Miedo"),
+        ],
+        [
+            InlineKeyboardButton("🕵️‍♂️ Escondido", callback_data="evento:Escondido"),
+            InlineKeyboardButton("🪄 Todos", callback_data="status"),
+        ],
+        [
+            InlineKeyboardButton("🔔 Suscribirme", callback_data="subscribe"),
+            InlineKeyboardButton("🔕 Desuscribirme", callback_data="unsubscribe"),
+        ],
+    ]
+    reply_markup = InlineKeyboardMarkup(keyboard)
     await update.message.reply_text(
-        "🎩 ¡Hola! Soy el bot de la cartelera.\n¿De qué show querés saber hoy?",
-        reply_markup=InlineKeyboardMarkup(buttons),
+        "🎩 ¡Hola! Soy el bot de la cartelera.\n"
+        "¿De qué show querés saber hoy?",
+        reply_markup=reply_markup,
     )
-
 
 async def status_cmd(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     try:
@@ -238,7 +241,6 @@ async def status_cmd(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
         await _reply_long(update, msg)
     except Exception as e:
         await update.message.reply_text(f"Error leyendo datos: {e}")
-
 
 async def evento_cmd(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     try:
@@ -252,9 +254,118 @@ async def evento_cmd(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     except Exception as e:
         await update.message.reply_text(f"Error: {e}")
 
+async def find_cmd(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
+    try:
+        if not ctx.args:
+            await update.message.reply_text("Uso: /find YYYY-MM-DD")
+            return
+        wanted = ctx.args[0]
+        if not re.match(r"^\d{4}-\d{2}-\d{2}$", wanted):
+            await update.message.reply_text("Formato inválido. Usa YYYY-MM-DD.")
+            return
+        data = fetch_payload()
+        results = []
+        for k, r in _iter_all_rows(data):
+            if len(r) > 3 and r[3] == wanted:
+                results.append((k, r))
+        if not results:
+            await update.message.reply_text("No hay funciones ese día.")
+            return
+        lines = [f"🎫 Funciones el {wanted}:"]
+        for (k, r) in results:
+            fecha_label, hora = r[0], r[1]
+            vendidas = _normalize_int(r[2] if len(r) > 2 else None)
+            cap      = _normalize_int(r[4] if len(r) > 4 else None)
+            stock    = _normalize_int(r[5] if len(r) > 5 else None)
+            extra = _fmt_extra(vendidas, cap, stock)
+            lines.append(f"• {k}: {fecha_label} {hora}{extra}")
+        await _reply_long(update, "\n".join(lines))
+    except Exception as e:
+        await update.message.reply_text(f"Error: {e}")
 
-# ------------------ Polling de cambios ------------------
+async def lowstock_cmd(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
+    try:
+        threshold = None
+        if ctx.args:
+            try:
+                threshold = int(ctx.args[0])
+            except Exception:
+                threshold = None
+        threshold = threshold or 10
+
+        data = fetch_payload()
+        lines = [f"⚠️ Funciones con ≤ {threshold} entradas:"]
+        count = 0
+        for k, r in _iter_all_rows(data):
+            stock = _normalize_int(r[5] if len(r) > 5 else None)
+            if stock is not None and stock <= threshold and stock >= 0:
+                fecha_label, hora = r[0], r[1]
+                lines.append(f"• {k}: {fecha_label} {hora} · quedan {stock}")
+                count += 1
+        if count == 0:
+            await update.message.reply_text("No hay funciones con pocas entradas.")
+        else:
+            await _reply_long(update, "\n".join(lines))
+    except Exception as e:
+        await update.message.reply_text(f"Error: {e}")
+
+async def soldout_cmd(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
+    try:
+        data = fetch_payload()
+        lines = ["⛔ Funciones agotadas:"]
+        count = 0
+        for k, r in _iter_all_rows(data):
+            stock = _normalize_int(r[5] if len(r) > 5 else None)
+            if stock == 0:
+                fecha_label, hora = r[0], r[1]
+                lines.append(f"• {k}: {fecha_label} {hora} · AGOTADO")
+                count += 1
+        if count == 0:
+            await update.message.reply_text("No hay funciones agotadas.")
+        else:
+            await _reply_long(update, "\n".join(lines))
+    except Exception as e:
+        await update.message.reply_text(f"Error: {e}")
+
+async def raw_cmd(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
+    try:
+        data = fetch_payload()
+        keys = list(data.keys())
+        eventos = list((data.get("eventos") or {}).keys())
+        gen = data.get("generated_at") or data.get("generatedAt")
+        msg = (
+            "🧪 RAW\n"
+            f"keys: {keys}\n"
+            f"generated_at: {gen}\n"
+            f"eventos: {', '.join(eventos) if eventos else '(ninguno)'}"
+        )
+        await _reply_long(update, msg)
+    except Exception as e:
+        await update.message.reply_text(f"Error: {e}")
+
+# ====================== SUSCRIPCIÓN & ALERTAS ======================
+async def subscribe_cmd(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
+    chat_id = update.effective_chat.id
+    state = _load_state()
+    if chat_id not in state["subscribers"]:
+        state["subscribers"].append(chat_id)
+        _save_state(state)
+        await update.message.reply_text("✅ Suscripción activa. Te avisaré cuando suban las ventas o aparezcan funciones nuevas.")
+    else:
+        await update.message.reply_text("Ya estabas suscrito ✅")
+
+async def unsubscribe_cmd(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
+    chat_id = update.effective_chat.id
+    state = _load_state()
+    if chat_id in state["subscribers"]:
+        state["subscribers"].remove(chat_id)
+        _save_state(state)
+        await update.message.reply_text("❌ Suscripción cancelada. Ya no enviaré alertas.")
+    else:
+        await update.message.reply_text("No estabas suscrito.")
+
 async def poll_and_notify(context):
+    """Job que se ejecuta cada X minutos: compara vendidas y avisa."""
     try:
         data = fetch_payload()
     except Exception as e:
@@ -265,35 +376,33 @@ async def poll_and_notify(context):
     last_counts: Dict[str, int] = state.get("counts", {})
     changes = []
 
-    current_functions = []
-    eventos = data.get("eventos", {})
-    for evento, info in (eventos or {}).items():
-        for r in (info.get("table", {}) or {}).get("rows", []):
-            fecha_label, hora = r[0], r[1]
-            vendidas = _normalize_int(r[2] if len(r) > 2 else None)
-            fecha_iso = r[3] if len(r) > 3 else ""
-            cap = _normalize_int(r[4] if len(r) > 4 else None)
-            stock = _normalize_int(r[5] if len(r) > 5 else None)
-            key = f"{evento}::{fecha_iso}::{hora}"
-            current_functions.append(
-                {"key": key, "evento": evento, "fecha_label": fecha_label, "hora": hora, "vendidas": vendidas, "cap": cap, "stock": stock}
-            )
-
+    # Genera lista actual y compara
+    current_functions = list(_iter_flat_functions(data))
     for f in current_functions:
         k = f["key"]
         v = f["vendidas"] or 0
         prev = last_counts.get(k)
         if prev is None:
+            # Para evitar SPAM al primer arranque, comenta la línea siguiente
             changes.append(f"🆕 *Nueva función* — {f['evento']}\n• {f['fecha_label']} {f['hora']}")
         elif v > prev:
             diff = v - prev
             extra = _fmt_extra(v, f["cap"], f["stock"])
             changes.append(f"📈 *Nuevas ventas* (+{diff}) — {f['evento']}\n• {f['fecha_label']} {f['hora']}{extra}")
+
         last_counts[k] = v
 
-    state["counts"] = {f["key"]: f["vendidas"] or 0 for f in current_functions}
+    # Limpia keys de funciones que ya no existan
+    current_keys = {f["key"] for f in current_functions}
+    for k in list(last_counts.keys()):
+        if k not in current_keys:
+            last_counts.pop(k, None)
+
+    # Guarda estado
+    state["counts"] = last_counts
     _save_state(state)
 
+    # Notifica
     if changes and state["subscribers"]:
         text = "🔔 *Actualizaciones de cartelera*\n\n" + "\n\n".join(changes)
         for chat_id in state["subscribers"]:
@@ -302,55 +411,73 @@ async def poll_and_notify(context):
             except Exception as e:
                 logger.warning("No pude enviar alerta a %s: %s", chat_id, e)
 
-
-# ------------------ Botones ------------------
+# ====================== BOTONES (callback) ======================
 async def button_callback(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
-    data = query.data
 
+    data = query.data
     if data == "status":
         data_json = fetch_payload()
         msg = format_resume(data_json, evento=None, top=10)
         await _reply_long(update, msg)
         return
 
-    if data.startswith("evento_exact:"):
+    if data == "subscribe":
+        fake_update = Update(update.update_id, message=query.message)  # para reutilizar lógica
+        await subscribe_cmd(fake_update, ctx)
+        return
+
+    if data == "unsubscribe":
+        fake_update = Update(update.update_id, message=query.message)
+        await unsubscribe_cmd(fake_update, ctx)
+        return
+
+    if data.startswith("evento:"):
         nombre = data.split(":", 1)[1]
         data_json = fetch_payload()
         msg = format_resume(data_json, evento=nombre, top=20)
         await _reply_long(update, msg)
         return
 
-    if data == "sub:on":
-        changed = _subscribe(update.effective_chat.id)
-        text = "✅ Suscripción activa. Te avisaré cuando suban las ventas o aparezcan funciones nuevas." if changed else "Ya estabas suscrito ✅"
-        await query.message.reply_text(text)
-        return
-
-    if data == "sub:off":
-        changed = _unsubscribe(update.effective_chat.id)
-        text = "❌ Suscripción cancelada. Ya no enviaré alertas." if changed else "No estabas suscrito."
-        await query.message.reply_text(text)
-        return
-
     await query.edit_message_text("No entendí tu selección 😅")
 
-
-# ------------------ Main ------------------
+# ====================== MAIN ======================
 def main():
-    token = "8566367368:AAGK4ottcT8QLuMlCQ_k541T2ZNqEw-7JzE"  # tu token directo
+    # 1) Usa variable de entorno si existe
+    token = os.getenv("TELEGRAM_TOKEN")
+    # 2) Si no, usa el respaldo pegado aquí (⚠️ no subir a repositorios públicos)
+    if not token:
+        token = TOKEN_FALLBACK
+
+    if not token:
+        raise SystemExit("❌ Falta TOKEN. Configura TELEGRAM_TOKEN o edita TOKEN_FALLBACK.")
 
     app = ApplicationBuilder().token(token).build()
 
+    # Comandos
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("status", status_cmd))
     app.add_handler(CommandHandler("evento", evento_cmd))
+    app.add_handler(CommandHandler("find", find_cmd))
+    app.add_handler(CommandHandler("lowstock", lowstock_cmd))
+    app.add_handler(CommandHandler("soldout", soldout_cmd))
+    app.add_handler(CommandHandler("raw", raw_cmd))
+    app.add_handler(CommandHandler("subscribe", subscribe_cmd))
+    app.add_handler(CommandHandler("unsubscribe", unsubscribe_cmd))
+
+    # Botones
     app.add_handler(CallbackQueryHandler(button_callback))
 
+    # JobQueue: revisa cada 2 minutos
     app.job_queue.run_repeating(poll_and_notify, interval=120, first=5)
-    app.run_polling(drop_pending_updates=True)
 
+    # Manejador de errores silencioso
+    async def on_error(update, context):
+        logging.getLogger(__name__).warning("Error: %s", context.error)
+    app.add_error_handler(on_error)
+
+    app.run_polling(drop_pending_updates=True)
 
 if __name__ == "__main__":
     main()
