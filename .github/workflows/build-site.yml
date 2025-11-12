@@ -2,8 +2,8 @@ name: build-site
 
 on:
   schedule:
-    - cron: "0,30 * * * *"   # every 30 minutes (UTC)
-  workflow_dispatch: {}       # allow manual runs from the Actions tab
+    - cron: "*/30 * * * *"   # every 30 minutes (UTC)
+  workflow_dispatch: {}       # manual trigger
 
 concurrency:
   group: build-site
