@@ -246,11 +246,24 @@ def fetch_functions_dinaticket(url: str, timeout: int = 20) -> list[dict]:
         if not (dia and mes):
             continue
 
+        # ========== FIX DEL AÑO ========== #
         mes_num = MESES.get(mes.text.strip(), "01")
-        anio = datetime.now().year
+
+        now = datetime.now(ZoneInfo("Europe/Madrid"))
+        anio = now.year
+
+        # Primero asumimos año actual
         fecha_iso = f"{anio}-{mes_num}-{dia.text.strip().zfill(2)}"
         fecha_dt = datetime.strptime(fecha_iso, "%Y-%m-%d")
+
+        # Si esa fecha ya pasó → es del año siguiente
+        if fecha_dt.date() < now.date():
+            fecha_dt = fecha_dt.replace(year=anio + 1)
+
+        # Regenerar campos corregidos
+        fecha_iso = fecha_dt.strftime("%Y-%m-%d")
         fecha_label = fecha_dt.strftime("%d %b %Y")
+        # ================================= #
 
         hora_span = session.find("span", class_="session-card__time-session")
         hora_txt = (hora_span.text or "").strip()
