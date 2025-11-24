@@ -10,12 +10,6 @@
 <meta name="color-scheme" content="dark">
 <title>Cartelera — Magia & Teatro</title>
 
-<!-- Favicons -->
-<link rel="icon" type="image/png" sizes="32x32" href="./icons/favi.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./icons/favi.png">
-<link rel="shortcut icon" href="./icons/favi.png">
-<link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
-
 <style>
   :root{
     --bg:#000; --bg2:#090909; --panel:#0d0d0d; --card:#121212;
@@ -23,201 +17,170 @@
     --gold:#d4af37; --green:#22c55e; --orange:#f59e0b; --sold:#6b7280;
     --r:.9rem; --rx:999px; --pad:1rem;
   }
-  html,body{height:100%}
   body{
     margin:0; color:var(--ink);
-    background:
-      radial-gradient(1200px 700px at 50% -250px, rgba(212,175,55,.16) 0%, transparent 65%),
-      linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
-    font:600 clamp(16px, 1.9vw, 17px)/1.55 -apple-system, system-ui, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
-    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-    -webkit-text-size-adjust:100%;
-    min-height:100dvh; padding-bottom: env(safe-area-inset-bottom);
-    overflow-y: overlay; -webkit-tap-highlight-color: transparent;
+    background: linear-gradient(180deg, #000, #0b0b0b);
+    font:600 16px/1.55 -apple-system, system-ui;
   }
-  header{
-    position:sticky; top:0; z-index:10; padding-top:max(.25rem, env(safe-area-inset-top));
-    background:
-      radial-gradient(1200px 500px at 50% -200px, rgba(212,175,55,.10) 0%, transparent 60%),
-      linear-gradient(180deg, rgba(0,0,0,.85), rgba(0,0,0,.65));
-    border-bottom:1px solid var(--hair);
-    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  }
-  .wrap{max-width:1040px; margin:0 auto; padding: clamp(.85rem, 2vw, 1rem)}
-  h1{margin:0 0 .35rem; font:900 clamp(19px, 3.2vw, 26px)/1.15 "SF Pro Display", system-ui, sans-serif; letter-spacing:.2px}
-  .meta{color:var(--muted); font-size:.95rem}
-  .tabs{display:flex; gap:.6rem; margin-top:.7rem; overflow-x:auto; padding:.2rem 0 .5rem;
-        -webkit-overflow-scrolling:touch; overscroll-behavior-x:contain; scroll-snap-type:x proximity;}
-  .tabs::-webkit-scrollbar{display:none}
+  .wrap{max-width:1040px; margin:0 auto; padding:1rem}
+
+  header{position:sticky; top:0; padding:1rem; background:#000c; backdrop-filter:blur(10px)}
+  h1{margin:0 0 .3rem; font:900 25px/1.2 system-ui}
+  #meta{color:var(--muted); margin-bottom:.5rem}
+
+  .tabs{display:flex; gap:.6rem; overflow-x:auto; padding-bottom:.4rem}
   .tab{
-    scroll-snap-align:start; padding:.7rem 1rem; border-radius:var(--rx);
-    border:1px solid var(--hair); background:#161616; color:var(--ink);
-    font:800 .98rem/1 inherit; min-height:44px; letter-spacing:.2px; touch-action:manipulation;
-    transition: background .15s ease, border-color .15s ease, transform .06s ease, color .15s ease;
+    padding:.7rem 1rem; background:#161616; border-radius:999px;
+    border:1px solid var(--hair); color:var(--ink); font-weight:800;
   }
-  .tab:active{ transform:scale(.98) }
-  .tab:focus-visible{ outline:2px solid var(--gold); outline-offset:2px }
-  .tab.active{ background: color-mix(in oklab, var(--gold) 86%, #fff 0%); color:#111; border-color:#9a7a18; box-shadow: 0 2px 0 #9a7a18 inset, 0 0 0 1px #0007 inset; }
-  .panel{ background: linear-gradient(180deg, color-mix(in oklab,var(--panel) 86%, transparent), var(--panel));
-          border:1px solid var(--hair); border-radius: var(--r); padding: calc(var(--pad) - .1rem);
-          margin: 0 clamp(.7rem, 2vw, 1rem); box-shadow: 0 30px 80px rgba(0,0,0,.5); }
-  .list{ display:flex; flex-direction:column; gap:.95rem }
-  .item{ display:flex; justify-content:space-between; align-items:center; gap:1rem;
-         background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.00));
-         border:1px solid var(--hair); border-radius: var(--r); padding:1rem 1.05rem;
-         box-shadow: 0 1px 0 rgba(255,255,255,.05) inset, 0 10px 30px rgba(0,0,0,.55); }
-  .left{ display:flex; align-items:center; gap:.85rem; flex-wrap:wrap }
-  .date{ font:900 1.02rem/1.1 inherit; border-radius:.8rem; padding:.6rem .9rem; color:#f3f3f3; background:#0f0f0f; border:1px solid #2c2c2c; }
-  .time{ font:800 .98rem/1 inherit; border-radius: var(--rx); padding:.55rem .9rem; color:#f3f3f3; background:#141414; border:1px solid #2c2c2c; }
-  .chip{ padding:.56rem .92rem; border-radius:var(--rx); font:900 .94rem/1 inherit; border:1px solid transparent; letter-spacing:.2px }
-  .chip.gray { background:#2b2b2b; color:#fff; border-color:#3a3a3a }
-  .chip.green{ background:var(--green); color:#0b1b0f; border-color:#15803d }
-  .chip.gold { background:var(--gold);  color:#161616; border-color:#9a7a18 }
-  .chip.warn { background:var(--orange); color:#1a1200; border-color:#b45309 }
-  .chip.sold { background:#4b5563; color:#0e0f12; border-color:#374151; text-decoration: line-through; text-decoration-thickness:2px }
-  .meter{ width:100%; height:8px; border-radius:6px; background:#0d0d0d; border:1px solid #2c2c2c; overflow:hidden; margin-top:.45rem }
-  .fill{ height:100%; width:0%; background: linear-gradient(90deg, #198754, var(--gold) 60%, #ffb300); transition:width .25s ease }
-  .meta2{ color:var(--muted); font:800 .86rem/1.2 system-ui; margin-top:.28rem }
-  .month{ position: sticky; top: calc(56px + env(safe-area-inset-top));
-          margin: 1rem 0 .6rem; padding:.25rem 0; color: var(--gold);
-          font:900 .98rem/1.2 inherit; letter-spacing:.4px;
-          background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,.25) 100%); z-index: 1; }
-  @media (max-width: 520px){
-    .panel{ margin:0; padding:.9rem }
-    .item{ flex-direction:column; align-items:stretch; gap:.85rem }
-    .left{ justify-content:space-between }
-    .chip{ align-self:flex-end }
+  .tab.active{background:var(--gold); color:#111}
+
+  .panel{background:#111; padding:1rem; border-radius:.9rem}
+  .list{display:flex; flex-direction:column; gap:1rem}
+
+  .item{display:flex; justify-content:space-between; padding:1rem;
+        background:#161616; border-radius:.9rem; border:1px solid #272727}
+
+  .date{padding:.55rem .9rem; border-radius:.8rem; background:#0f0f0f; border:1px solid #2c2c2c; font-weight:900}
+  .time{padding:.5rem .9rem; border-radius:999px; background:#141414; border:1px solid #2c2c2c}
+
+  .chip{padding:.45rem .85rem; border-radius:999px; font-weight:900}
+  .chip.gray{background:#2b2b2b}
+  .chip.green{background:var(--green); color:#000}
+  .chip.gold{background:var(--gold); color:#000}
+  .chip.warn{background:var(--orange); color:#000}
+  .chip.sold{background:#555; text-decoration:line-through}
+
+  .meter{width:100%; height:8px; background:#0d0d0d; border:1px solid #2c2c2c; border-radius:6px; overflow:hidden}
+  .fill{height:100%; background:linear-gradient(90deg,#198754,var(--gold)); width:0%}
+
+  .meta2{margin-top:.3rem; color:var(--muted); font-size:.85rem}
+
+  .month{margin:1rem 0 .3rem; color:var(--gold); font-weight:900}
+
+  /* ABONO TEATRO badge */
+  .abono-chip{
+      display:inline-flex; gap:.45rem; align-items:center;
+      padding:.42rem .9rem; border-radius:999px;
+      font-weight:800; font-size:.8rem; border:1px solid transparent;
+      margin-top:.4rem; letter-spacing:.4px;
   }
-  @media (prefers-reduced-motion: reduce){
-    *{scroll-behavior:auto; transition:none !important; animation:none !important}
+  .abono-chip .dot{
+      width:9px; height:9px; border-radius:999px;
   }
+  .abono-chip.ok{background:rgba(22,163,74,.15); border-color:#22c55e; color:#bbf7d0}
+  .abono-chip.ok .dot{background:#22c55e}
+
+  .abono-chip.off{background:rgba(220,38,38,.18); border-color:#f87171; color:#fecaca}
+  .abono-chip.off .dot{background:#f87171}
 </style>
 </head>
+
 <body>
-  <header>
-    <div class="wrap">
-      <h1>Cartelera — Escalera de Jacob y Escondido</h1>
-      <div class="meta" id="meta"></div>
-      <div class="tabs" id="tabs"></div>
-    </div>
-  </header>
-  <main class="wrap">
-    <section class="panel">
-      <div id="list" class="list"></div>
-    </section>
-  </main>
-<<<<<<< Updated upstream
-<script id="PAYLOAD" type="application/json">{"generated_at": "2025-11-24T13:33:18.894401+01:00", "meta": {"source": "Dinaticket", "note": "Legible alto contraste; Escondido con capacidad/stock y % ocupación"}, "eventos": {"Disfruta": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock"], "rows": [["26 Nov 2025", "20:00 h", 12, "2025-11-26", 48, 36], ["10 Dec 2025", "20:00 h", 0, "2025-12-10", 48, 48], ["17 Dec 2025", "20:00 h", 0, "2025-12-17", 48, 48], ["23 Dec 2025", "21:00 h", 2, "2025-12-23", 51, 49]]}}, "Miedo": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock"], "rows": [["12 Dec 2025", "23:00 h", 9, "2025-12-12", 48, 39], ["19 Dec 2025", "23:00 h", 0, "2025-12-19", 48, 48], ["22 Dec 2025", "21:30 h", 5, "2025-12-22", 48, 43], ["26 Dec 2025", "23:00 h", 0, "2025-12-26", 48, 48]]}}, "Escondido": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock"], "rows": [["12 Dec 2025", "20:00 h", 2, "2025-12-12", 60, 58], ["13 Dec 2025", "17:00 h", 0, "2025-12-13", 0, 0], ["14 Dec 2025", "18:30 h", 10, "2025-12-14", 60, 50], ["21 Dec 2025", "18:30 h", 16, "2025-12-21", 35, 19], ["27 Dec 2025", "17:00 h", 0, "2025-12-27", 30, 30], ["28 Dec 2025", "18:30 h", 8, "2025-12-28", 35, 27], ["10 Jan 2026", "17:00 h", 0, "2026-01-10", 20, 20], ["17 Jan 2026", "17:00 h", 0, "2026-01-17", 20, 20], ["24 Jan 2026", "17:00 h", 0, "2026-01-24", 20, 20], ["31 Jan 2026", "17:00 h", 0, "2026-01-31", 20, 20], ["14 Feb 2026", "17:00 h", 0, "2026-02-14", 20, 20], ["28 Feb 2026", "17:00 h", 0, "2026-02-28", 20, 20]]}}}}</script>
-=======
-<script id="PAYLOAD" type="application/json">{"generated_at": "2025-11-24T13:47:24.918622+01:00", "meta": {"source": "Dinaticket", "note": "Legible alto contraste; Escondido con capacidad/stock, % ocupación y cruce AbonoTeatro"}, "eventos": {"Disfruta": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono"], "rows": [["26 Nov 2025", "20:00 h", 12, "2025-11-26", 48, 36, null], ["10 Dec 2025", "20:00 h", 0, "2025-12-10", 48, 48, null], ["17 Dec 2025", "20:00 h", 0, "2025-12-17", 48, 48, null], ["23 Dec 2025", "21:00 h", 2, "2025-12-23", 51, 49, null]]}}, "Miedo": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono"], "rows": [["12 Dec 2025", "23:00 h", 9, "2025-12-12", 48, 39, null], ["19 Dec 2025", "23:00 h", 0, "2025-12-19", 48, 48, null], ["22 Dec 2025", "21:30 h", 5, "2025-12-22", 48, 43, null], ["26 Dec 2025", "23:00 h", 0, "2025-12-26", 48, 48, null]]}}, "Escondido": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono"], "rows": [["12 Dec 2025", "20:00 h", 2, "2025-12-12", 60, 58, "venta"], ["13 Dec 2025", "17:00 h", 0, "2025-12-13", 0, 0, "agotado"], ["14 Dec 2025", "18:30 h", 10, "2025-12-14", 60, 50, "agotado"], ["21 Dec 2025", "18:30 h", 16, "2025-12-21", 35, 19, "agotado"], ["27 Dec 2025", "17:00 h", 0, "2025-12-27", 30, 30, "agotado"], ["28 Dec 2025", "18:30 h", 8, "2025-12-28", 35, 27, "venta"], ["10 Jan 2026", "17:00 h", 0, "2026-01-10", 20, 20, "agotado"], ["17 Jan 2026", "17:00 h", 0, "2026-01-17", 20, 20, "agotado"], ["24 Jan 2026", "17:00 h", 0, "2026-01-24", 20, 20, "agotado"], ["31 Jan 2026", "17:00 h", 0, "2026-01-31", 20, 20, "agotado"], ["14 Feb 2026", "17:00 h", 0, "2026-02-14", 20, 20, "agotado"], ["28 Feb 2026", "17:00 h", 0, "2026-02-28", 20, 20, "agotado"]]}}}}</script>
->>>>>>> Stashed changes
+<header>
+  <div class="wrap">
+    <h1>Cartelera — Escalera & Escondido</h1>
+    <div id="meta"></div>
+    <div id="tabs" class="tabs"></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="panel">
+    <div id="list" class="list"></div>
+  </section>
+</main>
+
+<script id="PAYLOAD" type="application/json">{"generated_at": "2025-11-24T14:30:21.164698+01:00", "eventos": {"Disfruta": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono"], "rows": [["26 Nov 2025", "00:00", 12, "2025-11-26", 48, 36, null], ["10 Dec 2025", "00:00", 0, "2025-12-10", 48, 48, null], ["17 Dec 2025", "00:00", 0, "2025-12-17", 48, 48, null], ["23 Dec 2025", "00:00", 2, "2025-12-23", 51, 49, null]]}}, "Miedo": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono"], "rows": [["12 Dec 2025", "00:00", 9, "2025-12-12", 48, 39, null], ["19 Dec 2025", "00:00", 0, "2025-12-19", 48, 48, null], ["22 Dec 2025", "00:00", 5, "2025-12-22", 48, 43, null], ["26 Dec 2025", "00:00", 0, "2025-12-26", 48, 48, null]]}}, "Escondido": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono"], "rows": [["12 Dec 2025", "00:00", 2, "2025-12-12", 60, 58, "agotado"], ["13 Dec 2025", "00:00", 0, "2025-12-13", 0, 0, "agotado"], ["14 Dec 2025", "00:00", 10, "2025-12-14", 60, 50, "agotado"], ["21 Dec 2025", "00:00", 16, "2025-12-21", 35, 19, "agotado"], ["27 Dec 2025", "00:00", 0, "2025-12-27", 30, 30, "agotado"], ["28 Dec 2025", "00:00", 8, "2025-12-28", 35, 27, "agotado"], ["10 Jan 2026", "00:00", 0, "2026-01-10", 20, 20, "agotado"], ["17 Jan 2026", "00:00", 0, "2026-01-17", 20, 20, "agotado"], ["24 Jan 2026", "00:00", 0, "2026-01-24", 20, 20, "agotado"], ["31 Jan 2026", "00:00", 0, "2026-01-31", 20, 20, "agotado"], ["14 Feb 2026", "00:00", 0, "2026-02-14", 20, 20, "agotado"], ["28 Feb 2026", "00:00", 0, "2026-02-28", 20, 20, "agotado"]]}}}}</script>
 <script>
-const payload = JSON.parse(document.getElementById('PAYLOAD').textContent);
+const payload = JSON.parse(document.getElementById("PAYLOAD").textContent);
 const eventos = payload.eventos || {};
+
 const gen = new Date(payload.generated_at);
+document.getElementById("meta").textContent =
+  "Generado: " + gen.toLocaleString("es-ES");
 
-// “hace X min”
-const diffMin = Math.max(0, Math.round((Date.now() - gen.getTime())/60000));
-const ago = diffMin===0 ? "justo ahora" : diffMin===1 ? "hace 1 min" : `hace ${diffMin} min`;
-document.getElementById('meta').textContent =
-  `Generado: ${gen.toLocaleDateString('es-ES')} ${gen.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})} — ${ago}`;
+let active = Object.keys(eventos)[0] || null;
 
-const tabsEl=document.getElementById('tabs'); let active=Object.keys(eventos)[0]||null;
-if(active){
-  Object.keys(eventos).forEach((k,i)=>{
-    const rows=(eventos[k].table?.rows)||[];
-    const b=document.createElement('button');
-    b.className='tab'+(i===0?' active':''); b.dataset.tab=k; b.textContent=`${k} (${rows.length})`;
-    b.onclick=()=>setActive(k); tabsEl.appendChild(b);
+const tabsEl = document.getElementById("tabs");
+for (const sala of Object.keys(eventos)){
+  const rows = eventos[sala].table.rows.length;
+  const b = document.createElement("button");
+  b.className = "tab" + (sala===active?" active":"");
+  b.textContent = `${sala} (${rows})`;
+  b.onclick = ()=>{ active=sala; updateTabs(); render(); };
+  tabsEl.appendChild(b);
+}
+
+function updateTabs(){
+  document.querySelectorAll(".tab").forEach(t=>{
+    t.classList.toggle("active",t.textContent.startsWith(active));
   });
-  document.body.className=active;
 }
 
-function setActive(k){ active=k; document.body.className=k;
-  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.dataset.tab===k));
-  render();
-}
-function parseRow(r){
-  // [FechaLabel, Hora, Vendidas, FechaISO, Capacidad, Stock, Abono]
-  return {
-    fecha_label:r[0],
-    hora:r[1],
-    vendidas:r[2],
-    fecha_iso:r[3],
-    cap:r[4]??null,
-    stock:r[5]??null,
-    abono:r[6]??null
-  };
-}
-const DAYS=['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
-function dayName(f){ return DAYS[new Date(f+'T00:00:00').getDay()]; }
+function parseRow(r){ return {
+  fecha_label:r[0], hora:r[1], vendidas:r[2],
+  fecha_iso:r[3], cap:r[4], stock:r[5], abono:r[6]
+}; }
 
+const DAYS=["Dom","Lun","Mar","Mié","Jue","Vie","Sáb"];
+function dayName(f){ return DAYS[new Date(f+'T00:00:00').getDay()] }
 function render(){
   if(!active) return;
-  let data=(eventos[active].table?.rows||[]).map(parseRow);
-  data.sort((a,b)=> (a.fecha_iso+a.hora).localeCompare(b.fecha_iso+b.hora));
+  const list = document.getElementById("list");
+  list.innerHTML = "";
 
-  const list=document.getElementById('list'); list.innerHTML='';
+  let rows = eventos[active].table.rows.map(parseRow);
+  rows.sort((a,b)=> (a.fecha_iso + a.hora).localeCompare(b.fecha_iso + b.hora));
+
   let currentMonth = "";
-  data.forEach(x=>{
-    const d=new Date(x.fecha_iso+'T00:00:00');
-    const monthKey = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`;
-    const monthLabel = d.toLocaleDateString('es-ES',{month:'long', year:'numeric'});
-    if(monthKey !== currentMonth){
-      currentMonth = monthKey;
-      list.insertAdjacentHTML('beforeend', `<h3 class="month">${monthLabel}</h3>`);
+  for (const x of rows){
+    const d = new Date(x.fecha_iso + "T00:00:00");
+    const monthKey = d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0");
+    const monthLabel = d.toLocaleDateString("es-ES",{month:"long",year:"numeric"});
+    if(monthKey!==currentMonth){
+      currentMonth=monthKey;
+      list.insertAdjacentHTML("beforeend",`<h3 class="month">${monthLabel}</h3>`);
     }
 
-    const fechaLabel=`${x.fecha_label} (${dayName(x.fecha_iso)})`;
-    let totalClass="chip gray";
-    if(x.vendidas>=1 && x.vendidas<=9) totalClass="chip green";
-    if(x.vendidas>=10) totalClass="chip gold";
+    const fecha = `${x.fecha_label} (${dayName(x.fecha_iso)})`;
 
-    const isEscondido = (active === "Escondido");
-    let rightHTML = `<span class="${totalClass}">Vendidas: <b>${x.vendidas}</b></span>`;
+    let chipClass="chip gray";
+    if(x.vendidas>=1) chipClass="chip green";
+    if(x.vendidas>=10) chipClass="chip gold";
+    if(x.stock===0) chipClass="chip sold";
 
-    if(isEscondido && x.cap){
-      const cap = Number(x.cap)||0;
-      const stock = (x.stock==null)? null : Number(x.stock);
-      const vendidas = Number(x.vendidas)||0;
-      const pct = cap>0 ? Math.round((vendidas/cap)*100) : 0;
-
-      let chipClass = "chip green";
-      if(stock===0) chipClass = "chip sold";
-      else if(pct>=70) chipClass = "chip gold";
-      else if(pct>=40) chipClass = "chip warn";
-
-      const stockTxt = (stock==null) ? "" : ` — quedan ${stock}`;
-      let abonoText = "";
-      if (x.abono === "venta") {
-        abonoText = "Abono Teatro: siguen en venta";
-      } else if (x.abono === "agotado") {
-        abonoText = "Abono Teatro agotado";
-      }
-
-      const abonoHTML = abonoText
-        ? `<div class="meta2">${abonoText}</div>`
-        : "";
-
-      rightHTML = `
-        <div style="min-width:220px; text-align:right">
-          <span class="${chipClass}">Vendidas: <b>${vendidas}</b> / ${cap}${stockTxt}</span>
-          <div class="meter" aria-hidden="true"><div class="fill" style="width:${Math.min(100, Math.max(0, pct))}%"></div></div>
-          <div class="meta2">${pct}% de ocupación</div>
-          ${abonoHTML}
-        </div>`;
+    let abonoHTML="";
+    if (x.abono==="venta"){
+      abonoHTML = `
+      <div class="abono-chip ok">
+        <span class="dot"></span>
+        <span>Abono Teatro · SIGUEN EN VENTA</span>
+      </div>`;
+    } else if (x.abono==="agotado"){
+      abonoHTML = `
+      <div class="abono-chip off">
+        <span class="dot"></span>
+        <span>Abono Teatro · AGOTADO</span>
+      </div>`;
     }
 
-    list.insertAdjacentHTML('beforeend',`
+    list.insertAdjacentHTML("beforeend",`
       <div class="item">
         <div class="left">
-          <div class="date">${fechaLabel}</div>
+          <div class="date">${fecha}</div>
           <div class="time">${x.hora}</div>
         </div>
-        ${rightHTML}
-      </div>`);
-  });
+
+        <div style="min-width:220px; text-align:right">
+          <span class="${chipClass}">Vendidas: <b>${x.vendidas}</b></span>
+          ${abonoHTML}
+        </div>
+      </div>
+    `);
+  }
 }
+
 if(active) render();
 </script>
 </body>
