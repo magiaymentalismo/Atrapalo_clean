@@ -3,185 +3,262 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="theme-color" content="#000000">
-<meta name="format-detection" content="telephone=no">
-<meta name="color-scheme" content="dark">
 <title>Cartelera — Magia & Teatro</title>
 
 <style>
   :root{
-    --bg:#000; --bg2:#090909; --panel:#0d0d0d; --card:#121212;
+    --bg:#000; --bg2:#090909; --panel:#0d0d0d;
     --ink:#f7f7f7; --muted:#b9b9b9; --hair:#272727;
     --gold:#d4af37; --green:#22c55e; --orange:#f59e0b; --sold:#6b7280;
-    --r:.9rem; --rx:999px; --pad:1rem;
+    --r:.9rem; --rx:999px;
   }
+
   body{
+    background:linear-gradient(180deg, var(--bg), var(--bg2));
     margin:0; color:var(--ink);
-    background: linear-gradient(180deg, #000, #0b0b0b);
-    font:600 16px/1.55 -apple-system, system-ui;
+    font:600 16px/1.55 system-ui;
   }
+
   .wrap{max-width:1040px; margin:0 auto; padding:1rem}
 
-  header{position:sticky; top:0; padding:1rem; background:#000c; backdrop-filter:blur(10px)}
-  h1{margin:0 0 .3rem; font:900 25px/1.2 system-ui}
-  #meta{color:var(--muted); margin-bottom:.5rem}
+  h1{margin:0 0 .35rem; font:900 24px/1.2 system-ui}
 
-  .tabs{display:flex; gap:.6rem; overflow-x:auto; padding-bottom:.4rem}
-  .tab{
-    padding:.7rem 1rem; background:#161616; border-radius:999px;
-    border:1px solid var(--hair); color:var(--ink); font-weight:800;
+  #meta{margin-top:.25rem; color:var(--muted); font-size:.9rem}
+
+  .tabs{
+    display:flex; gap:.6rem; margin-top:.7rem;
+    overflow-x:auto; padding:.2rem 0 .5rem;
   }
-  .tab.active{background:var(--gold); color:#111}
+  .tab{
+    padding:.7rem 1rem; border-radius:var(--rx);
+    border:1px solid var(--hair); background:#161616;
+    font-weight:800; cursor:pointer; color:var(--ink);
+  }
+  .tab.active{
+    background:var(--gold); color:#111;
+  }
 
-  .panel{background:#111; padding:1rem; border-radius:.9rem}
+  /* SUBTABS */
+  .subtabs{
+    display:flex; gap:.5rem; margin:1rem 0 .8rem;
+    border-bottom:1px solid var(--hair); padding-bottom:.4rem;
+  }
+  .subtab{
+    padding:.45rem .9rem; border-radius:var(--rx);
+    background:#141414; border:1px solid var(--hair);
+    font-weight:800; cursor:pointer; color:#9ca3af;
+  }
+  .subtab.active{
+    background:#fff; color:#111;
+  }
+
+  .panel{
+    background:#111; padding:1rem; border-radius:var(--r);
+  }
+
   .list{display:flex; flex-direction:column; gap:1rem}
 
-  .item{display:flex; justify-content:space-between; padding:1rem;
-        background:#161616; border-radius:.9rem; border:1px solid #272727}
+  .item{
+    padding:1rem; border-radius:var(--r);
+    border:1px solid var(--hair);
+    display:flex; justify-content:space-between;
+    background:#161616;
+  }
 
-  .date{padding:.55rem .9rem; border-radius:.8rem; background:#0f0f0f; border:1px solid #2c2c2c; font-weight:900}
-  .time{padding:.5rem .9rem; border-radius:999px; background:#141414; border:1px solid #2c2c2c}
-
-  .chip{padding:.45rem .85rem; border-radius:999px; font-weight:900}
-  .chip.gray{background:#2b2b2b}
+  .chip{
+    padding:.4rem .8rem; border-radius:var(--rx);
+    font-weight:900;
+  }
   .chip.green{background:var(--green); color:#000}
   .chip.gold{background:var(--gold); color:#000}
+  .chip.gray{background:#444}
   .chip.warn{background:var(--orange); color:#000}
   .chip.sold{background:#555; text-decoration:line-through}
 
-  .meter{width:100%; height:8px; background:#0d0d0d; border:1px solid #2c2c2c; border-radius:6px; overflow:hidden}
-  .fill{height:100%; background:linear-gradient(90deg,#198754,var(--gold)); width:0%}
+  .month{
+    margin:1.2rem 0 .4rem;
+    font-weight:900;
+    font-size:.96rem;
+    text-transform:capitalize;
+    color:var(--gold);
+    letter-spacing:.03em;
+  }
 
-  .meta2{margin-top:.3rem; color:var(--muted); font-size:.85rem}
-
-  .month{margin:1rem 0 .3rem; color:var(--gold); font-weight:900}
-
-  /* ABONO TEATRO badge */
   .abono-chip{
-      display:inline-flex; gap:.45rem; align-items:center;
-      padding:.42rem .9rem; border-radius:999px;
-      font-weight:800; font-size:.8rem; border:1px solid transparent;
-      margin-top:.4rem; letter-spacing:.4px;
+    font-size:.78rem;
+    padding:.25rem .7rem;
+    opacity:0.95;
   }
-  .abono-chip .dot{
-      width:9px; height:9px; border-radius:999px;
-  }
-  .abono-chip.ok{background:rgba(22,163,74,.15); border-color:#22c55e; color:#bbf7d0}
-  .abono-chip.ok .dot{background:#22c55e}
-
-  .abono-chip.off{background:rgba(220,38,38,.18); border-color:#f87171; color:#fecaca}
-  .abono-chip.off .dot{background:#f87171}
 </style>
 </head>
 
 <body>
-<header>
-  <div class="wrap">
-    <h1>Cartelera — Escalera & Escondido</h1>
-    <div id="meta"></div>
-    <div id="tabs" class="tabs"></div>
-  </div>
-</header>
+<div class="wrap">
+  <h1>Cartelera — Escalera & Escondido</h1>
+  <div id="meta"></div>
+  <div id="tabs" class="tabs"></div>
 
-<main class="wrap">
-  <section class="panel">
+  <div class="panel">
+    <div id="subtabs" class="subtabs"></div>
     <div id="list" class="list"></div>
-  </section>
-</main>
+  </div>
+</div>
 
-<script id="PAYLOAD" type="application/json">{"generated_at": "2025-11-24T17:18:18.159162+01:00", "eventos": {"Disfruta": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono"], "rows": [["26 Nov 2025", "00:00", 12, "2025-11-26", 48, 36, null], ["10 Dec 2025", "00:00", 0, "2025-12-10", 48, 48, null], ["17 Dec 2025", "00:00", 0, "2025-12-17", 48, 48, null], ["23 Dec 2025", "00:00", 2, "2025-12-23", 51, 49, null]]}}, "Miedo": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono"], "rows": [["12 Dec 2025", "00:00", 9, "2025-12-12", 48, 39, null], ["19 Dec 2025", "00:00", 0, "2025-12-19", 48, 48, null], ["22 Dec 2025", "00:00", 5, "2025-12-22", 48, 43, null], ["26 Dec 2025", "00:00", 0, "2025-12-26", 48, 48, null]]}}, "Escondido": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono"], "rows": [["12 Dec 2025", "00:00", 2, "2025-12-12", 60, 58, "agotado"], ["13 Dec 2025", "00:00", 0, "2025-12-13", 0, 0, "agotado"], ["14 Dec 2025", "00:00", 10, "2025-12-14", 60, 50, "agotado"], ["21 Dec 2025", "00:00", 16, "2025-12-21", 35, 19, "agotado"], ["27 Dec 2025", "00:00", 0, "2025-12-27", 30, 30, "agotado"], ["28 Dec 2025", "00:00", 8, "2025-12-28", 35, 27, "agotado"], ["10 Jan 2026", "00:00", 0, "2026-01-10", 20, 20, "agotado"], ["17 Jan 2026", "00:00", 0, "2026-01-17", 20, 20, "agotado"], ["24 Jan 2026", "00:00", 0, "2026-01-24", 20, 20, "agotado"], ["31 Jan 2026", "00:00", 0, "2026-01-31", 20, 20, "agotado"], ["14 Feb 2026", "00:00", 0, "2026-02-14", 20, 20, "agotado"], ["28 Feb 2026", "00:00", 0, "2026-02-28", 20, 20, "agotado"]]}}}}</script>
+<script id="PAYLOAD" type="application/json">{"generated_at": "2025-11-24T17:33:30.761927+01:00", "eventos": {"Escondido": {"proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono"], "rows": [["12 Dec 2025", "20:00:", 2, "2025-12-12", 60, 58, "venta"], ["13 Dec 2025", "17:00:", 0, "2025-12-13", 0, 0, "agotado"], ["14 Dec 2025", "18:30:", 10, "2025-12-14", 60, 50, "agotado"], ["21 Dec 2025", "18:30:", 16, "2025-12-21", 35, 19, "agotado"], ["27 Dec 2025", "17:00:", 0, "2025-12-27", 30, 30, "agotado"], ["28 Dec 2025", "18:30:", 8, "2025-12-28", 35, 27, "venta"], ["10 Jan 2026", "17:00:", 0, "2026-01-10", 20, 20, "agotado"], ["17 Jan 2026", "17:00:", 0, "2026-01-17", 20, 20, "agotado"], ["24 Jan 2026", "17:00:", 0, "2026-01-24", 20, 20, "agotado"], ["31 Jan 2026", "17:00:", 0, "2026-01-31", 20, 20, "agotado"], ["14 Feb 2026", "17:00:", 0, "2026-02-14", 20, 20, "agotado"], ["28 Feb 2026", "17:00:", 0, "2026-02-28", 20, 20, "agotado"]]}}, "pasadas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono"], "rows": []}}}, "Disfruta": {"proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono"], "rows": [["26 Nov 2025", "20:00:", 12, "2025-11-26", 48, 36, null], ["10 Dec 2025", "20:00:", 0, "2025-12-10", 48, 48, null], ["17 Dec 2025", "20:00:", 0, "2025-12-17", 48, 48, null], ["23 Dec 2025", "21:00:", 2, "2025-12-23", 51, 49, null]]}}, "pasadas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono"], "rows": []}}}, "Miedo": {"proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono"], "rows": [["12 Dec 2025", "23:00:", 9, "2025-12-12", 48, 39, null], ["19 Dec 2025", "23:00:", 0, "2025-12-19", 48, 48, null], ["22 Dec 2025", "21:30:", 5, "2025-12-22", 48, 43, null], ["26 Dec 2025", "23:00:", 0, "2025-12-26", 48, 48, null]]}}, "pasadas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono"], "rows": []}}}}}</script>
+
 <script>
 const payload = JSON.parse(document.getElementById("PAYLOAD").textContent);
 const eventos = payload.eventos || {};
-
-const gen = new Date(payload.generated_at);
-document.getElementById("meta").textContent =
-  "Generado: " + gen.toLocaleString("es-ES");
-
 let active = Object.keys(eventos)[0] || null;
+let subMode = "proximas"; // o "pasadas"
 
+document.getElementById("meta").textContent =
+  "Generado: " + new Date(payload.generated_at).toLocaleString("es-ES");
+
+// === Crear tabs principales ===
 const tabsEl = document.getElementById("tabs");
-for (const sala of Object.keys(eventos)){
-  const rows = eventos[sala].table.rows.length;
+for (const sala of Object.keys(eventos)) {
   const b = document.createElement("button");
-  b.className = "tab" + (sala===active?" active":"");
-  b.textContent = `${sala} (${rows})`;
-  b.onclick = ()=>{ active=sala; updateTabs(); render(); };
+  b.textContent = sala;
+  b.className = "tab" + (sala === active ? " active" : "");
+  b.onclick = () => { active = sala; updateTabs(); render(); };
   tabsEl.appendChild(b);
 }
 
 function updateTabs(){
   document.querySelectorAll(".tab").forEach(t=>{
-    t.classList.toggle("active",t.textContent.startsWith(active));
+    t.classList.toggle("active", t.textContent === active);
   });
 }
 
-function parseRow(r){ return {
-  fecha_label:r[0], hora:r[1], vendidas:r[2],
-  fecha_iso:r[3], cap:r[4], stock:r[5], abono:r[6]
-}; }
+// === Crear subtabs ===
+const subtabsEl = document.getElementById("subtabs");
+["proximas","pasadas"].forEach(mode=>{
+  const sb = document.createElement("button");
+  sb.textContent = mode==="proximas" ? "Próximas" : "Pasadas";
+  sb.dataset.mode = mode;
+  sb.className = "subtab" + (subMode===mode ? " active" : "");
+  sb.onclick = () => { subMode = mode; updateSubtabs(); render(); };
+  subtabsEl.appendChild(sb);
+});
 
-const DAYS=["Dom","Lun","Mar","Mié","Jue","Vie","Sáb"];
-function dayName(f){ return DAYS[new Date(f+'T00:00:00').getDay()] }
+function updateSubtabs(){
+  document.querySelectorAll(".subtab").forEach(s=>{
+    s.classList.toggle("active", s.dataset.mode === subMode);
+  });
+}
+
+// ---- Util para leer filas según estructura del payload ----
+function getRowsForActiveAndMode(){
+  const ev = eventos[active];
+  if (!ev) return [];
+
+  // Caso 1: payload con proximas/pasadas
+  if (ev.proximas || ev.pasadas){
+    const sec = ev[subMode];
+    if (!sec || !sec.table || !Array.isArray(sec.table.rows)) return [];
+    return sec.table.rows || [];
+  }
+
+  // Caso 2 (fallback): payload plano con table.rows y filtramos aquí
+  if (!ev.table || !Array.isArray(ev.table.rows)) return [];
+  let rows = ev.table.rows;
+
+  rows = rows.map(r => ({
+    fecha_label: r[0],
+    hora: r[1],
+    vendidas: r[2],
+    fecha_iso: r[3],
+    cap: r[4],
+    stock: r[5],
+    abono: (r.length >= 7 ? r[6] : null)
+  }));
+
+  const today = new Date();
+  today.setHours(0,0,0,0);
+
+  rows = rows.filter(r=>{
+    const hora = r.hora || "00:00";
+    const dt = new Date(r.fecha_iso + "T" + hora + ":00");
+    const dtDay = new Date(dt);
+    dtDay.setHours(0,0,0,0);
+    return subMode === "pasadas" ? dtDay < today : dtDay >= today;
+  });
+
+  return rows.map(r => [r.fecha_label, r.hora, r.vendidas, r.fecha_iso, r.cap, r.stock, r.abono]);
+}
+
+// === Render ===
 function render(){
-  if(!active) return;
-  const list = document.getElementById("list");
-  list.innerHTML = "";
+  const cont = document.getElementById("list");
+  cont.innerHTML = "";
+  if (!active || !eventos[active]) return;
 
-  let rows = eventos[active].table.rows.map(parseRow);
+  let rows = getRowsForActiveAndMode();
+  if (!rows || rows.length === 0){
+    cont.innerHTML = "<p style='color:#9ca3af'>Sin funciones en esta vista.</p>";
+    return;
+  }
+
+  // Parse rows normalizados (7 columnas: incluye Abono)
+  rows = rows.map(r => ({
+    fecha_label: r[0],
+    hora: r[1],
+    vendidas: r[2],
+    fecha_iso: r[3],
+    cap: r[4],
+    stock: r[5],
+    abono: (r.length >= 7 ? r[6] : null)
+  }));
+
+  // Ordenar
   rows.sort((a,b)=> (a.fecha_iso + a.hora).localeCompare(b.fecha_iso + b.hora));
 
-  let currentMonth = "";
-  for (const x of rows){
-    const d = new Date(x.fecha_iso + "T00:00:00");
-    const monthKey = d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0");
-    const monthLabel = d.toLocaleDateString("es-ES",{month:"long",year:"numeric"});
-    if(monthKey!==currentMonth){
-      currentMonth=monthKey;
-      list.insertAdjacentHTML("beforeend",`<h3 class="month">${monthLabel}</h3>`);
+  // Agrupar por mes
+  let currentMonthKey = null;
+  for (const r of rows){
+    const d = new Date(r.fecha_iso + "T00:00:00");
+    const monthKey = d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0");
+    if (monthKey !== currentMonthKey){
+      currentMonthKey = monthKey;
+      const label = d.toLocaleDateString("es-ES", { month: "long", year: "numeric" });
+      const h = document.createElement("h3");
+      h.className = "month";
+      h.textContent = label;
+      cont.appendChild(h);
     }
 
-    const fecha = `${x.fecha_label} (${dayName(x.fecha_iso)})`;
+    const div = document.createElement("div");
+    div.className="item";
 
-    let chipClass="chip gray";
-    if(x.vendidas>=1) chipClass="chip green";
-    if(x.vendidas>=10) chipClass="chip gold";
-    if(x.stock===0) chipClass="chip sold";
+    // chip color por vendidas
+    let chip="gray";
+    if (r.vendidas >=10) chip="gold";
+    else if (r.vendidas >=1) chip="green";
+    if (r.stock === 0) chip="sold";
 
-    let abonoHTML="";
-    if (x.abono==="venta"){
-      abonoHTML = `
-      <div class="abono-chip ok">
-        <span class="dot"></span>
-        <span>Abono Teatro · SIGUEN EN VENTA</span>
-      </div>`;
-    } else if (x.abono==="agotado"){
-      abonoHTML = `
-      <div class="abono-chip off">
-        <span class="dot"></span>
-        <span>Abono Teatro · AGOTADO</span>
-      </div>`;
+    const esEscondido = (active === "Escondido");
+    let abonoHTML = "";
+    if (esEscondido && r.abono) {
+      if (r.abono === "venta") {
+        abonoHTML = `<div class="chip green abono-chip">Abono Teatro: siguen en venta</div>`;
+      } else if (r.abono === "agotado") {
+        abonoHTML = `<div class="chip sold abono-chip">Abono Teatro agotado</div>`;
+      }
     }
 
-    list.insertAdjacentHTML("beforeend",`
-      <div class="item">
-        <div class="left">
-          <div class="date">${fecha}</div>
-          <div class="time">${x.hora}</div>
-        </div>
-
-        <div style="min-width:220px; text-align:right">
-          <span class="${chipClass}">Vendidas: <b>${x.vendidas}</b></span>
-          ${abonoHTML}
-        </div>
+    div.innerHTML = `
+      <div><b>${r.fecha_label}</b> — ${r.hora}</div>
+      <div style="display:flex; flex-direction:column; gap:.3rem; align-items:flex-end">
+        <div class="chip ${chip}">Vendidas: ${r.vendidas}</div>
+        ${abonoHTML}
       </div>
-    `);
+    `;
+    cont.appendChild(div);
   }
 }
 
-if(active) render();
+render();
 </script>
 </body>
 </html>
