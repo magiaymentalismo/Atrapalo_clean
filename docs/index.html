@@ -106,7 +106,11 @@
       <div id="list" class="list"></div>
     </section>
   </main>
+<<<<<<< Updated upstream
 <script id="PAYLOAD" type="application/json">{"generated_at": "2025-11-24T13:33:18.894401+01:00", "meta": {"source": "Dinaticket", "note": "Legible alto contraste; Escondido con capacidad/stock y % ocupación"}, "eventos": {"Disfruta": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock"], "rows": [["26 Nov 2025", "20:00 h", 12, "2025-11-26", 48, 36], ["10 Dec 2025", "20:00 h", 0, "2025-12-10", 48, 48], ["17 Dec 2025", "20:00 h", 0, "2025-12-17", 48, 48], ["23 Dec 2025", "21:00 h", 2, "2025-12-23", 51, 49]]}}, "Miedo": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock"], "rows": [["12 Dec 2025", "23:00 h", 9, "2025-12-12", 48, 39], ["19 Dec 2025", "23:00 h", 0, "2025-12-19", 48, 48], ["22 Dec 2025", "21:30 h", 5, "2025-12-22", 48, 43], ["26 Dec 2025", "23:00 h", 0, "2025-12-26", 48, 48]]}}, "Escondido": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock"], "rows": [["12 Dec 2025", "20:00 h", 2, "2025-12-12", 60, 58], ["13 Dec 2025", "17:00 h", 0, "2025-12-13", 0, 0], ["14 Dec 2025", "18:30 h", 10, "2025-12-14", 60, 50], ["21 Dec 2025", "18:30 h", 16, "2025-12-21", 35, 19], ["27 Dec 2025", "17:00 h", 0, "2025-12-27", 30, 30], ["28 Dec 2025", "18:30 h", 8, "2025-12-28", 35, 27], ["10 Jan 2026", "17:00 h", 0, "2026-01-10", 20, 20], ["17 Jan 2026", "17:00 h", 0, "2026-01-17", 20, 20], ["24 Jan 2026", "17:00 h", 0, "2026-01-24", 20, 20], ["31 Jan 2026", "17:00 h", 0, "2026-01-31", 20, 20], ["14 Feb 2026", "17:00 h", 0, "2026-02-14", 20, 20], ["28 Feb 2026", "17:00 h", 0, "2026-02-28", 20, 20]]}}}}</script>
+=======
+<script id="PAYLOAD" type="application/json">{"generated_at": "2025-11-24T13:47:24.918622+01:00", "meta": {"source": "Dinaticket", "note": "Legible alto contraste; Escondido con capacidad/stock, % ocupación y cruce AbonoTeatro"}, "eventos": {"Disfruta": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono"], "rows": [["26 Nov 2025", "20:00 h", 12, "2025-11-26", 48, 36, null], ["10 Dec 2025", "20:00 h", 0, "2025-12-10", 48, 48, null], ["17 Dec 2025", "20:00 h", 0, "2025-12-17", 48, 48, null], ["23 Dec 2025", "21:00 h", 2, "2025-12-23", 51, 49, null]]}}, "Miedo": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono"], "rows": [["12 Dec 2025", "23:00 h", 9, "2025-12-12", 48, 39, null], ["19 Dec 2025", "23:00 h", 0, "2025-12-19", 48, 48, null], ["22 Dec 2025", "21:30 h", 5, "2025-12-22", 48, 43, null], ["26 Dec 2025", "23:00 h", 0, "2025-12-26", 48, 48, null]]}}, "Escondido": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono"], "rows": [["12 Dec 2025", "20:00 h", 2, "2025-12-12", 60, 58, "venta"], ["13 Dec 2025", "17:00 h", 0, "2025-12-13", 0, 0, "agotado"], ["14 Dec 2025", "18:30 h", 10, "2025-12-14", 60, 50, "agotado"], ["21 Dec 2025", "18:30 h", 16, "2025-12-21", 35, 19, "agotado"], ["27 Dec 2025", "17:00 h", 0, "2025-12-27", 30, 30, "agotado"], ["28 Dec 2025", "18:30 h", 8, "2025-12-28", 35, 27, "venta"], ["10 Jan 2026", "17:00 h", 0, "2026-01-10", 20, 20, "agotado"], ["17 Jan 2026", "17:00 h", 0, "2026-01-17", 20, 20, "agotado"], ["24 Jan 2026", "17:00 h", 0, "2026-01-24", 20, 20, "agotado"], ["31 Jan 2026", "17:00 h", 0, "2026-01-31", 20, 20, "agotado"], ["14 Feb 2026", "17:00 h", 0, "2026-02-14", 20, 20, "agotado"], ["28 Feb 2026", "17:00 h", 0, "2026-02-28", 20, 20, "agotado"]]}}}}</script>
+>>>>>>> Stashed changes
 <script>
 const payload = JSON.parse(document.getElementById('PAYLOAD').textContent);
 const eventos = payload.eventos || {};
@@ -134,8 +138,16 @@ function setActive(k){ active=k; document.body.className=k;
   render();
 }
 function parseRow(r){
-  // [FechaLabel, Hora, Vendidas, FechaISO, Capacidad, Stock]
-  return {fecha_label:r[0],hora:r[1],vendidas:r[2],fecha_iso:r[3],cap:r[4]??null,stock:r[5]??null};
+  // [FechaLabel, Hora, Vendidas, FechaISO, Capacidad, Stock, Abono]
+  return {
+    fecha_label:r[0],
+    hora:r[1],
+    vendidas:r[2],
+    fecha_iso:r[3],
+    cap:r[4]??null,
+    stock:r[5]??null,
+    abono:r[6]??null
+  };
 }
 const DAYS=['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
 function dayName(f){ return DAYS[new Date(f+'T00:00:00').getDay()]; }
@@ -176,11 +188,23 @@ function render(){
       else if(pct>=40) chipClass = "chip warn";
 
       const stockTxt = (stock==null) ? "" : ` — quedan ${stock}`;
+      let abonoText = "";
+      if (x.abono === "venta") {
+        abonoText = "Abono Teatro: siguen en venta";
+      } else if (x.abono === "agotado") {
+        abonoText = "Abono Teatro agotado";
+      }
+
+      const abonoHTML = abonoText
+        ? `<div class="meta2">${abonoText}</div>`
+        : "";
+
       rightHTML = `
         <div style="min-width:220px; text-align:right">
           <span class="${chipClass}">Vendidas: <b>${vendidas}</b> / ${cap}${stockTxt}</span>
           <div class="meter" aria-hidden="true"><div class="fill" style="width:${Math.min(100, Math.max(0, pct))}%"></div></div>
           <div class="meta2">${pct}% de ocupación</div>
+          ${abonoHTML}
         </div>`;
     }
 

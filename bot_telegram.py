@@ -382,14 +382,30 @@ async def poll_and_notify(context):
         k = f["key"]
         v = f["vendidas"] or 0
         prev = last_counts.get(k)
+
         if prev is None:
             # Para evitar SPAM al primer arranque, comenta la línea siguiente
-            changes.append(f"🆕 *Nueva función* — {f['evento']}\n• {f['fecha_label']} {f['hora']}")
+            changes.append(
+                f"🆕 *Nueva función* — {f['evento']}\n"
+                f"• {f['fecha_label']} {f['hora']}"
+            )
         elif v > prev:
             diff = v - prev
             extra = _fmt_extra(v, f["cap"], f["stock"])
-            changes.append(f"📈 *Nuevas ventas* (+{diff}) — {f['evento']}\n• {f['fecha_label']} {f['hora']}{extra}")
+            changes.append(
+                f"📈 *Nuevas ventas* (+{diff}) — {f['evento']}\n"
+                f"• {f['fecha_label']} {f['hora']}{extra}"
+            )
+        elif v < prev:
+            # 👇 Aquí detectamos que BAJARON las vendidas
+            diff = prev - v
+            extra = _fmt_extra(v, f["cap"], f["stock"])
+            changes.append(
+                f"📉 *Bajaron las vendidas* (-{diff}) — {f['evento']}\n"
+                f"• {f['fecha_label']} {f['hora']}{extra}"
+            )
 
+        # Actualizamos siempre el valor actual
         last_counts[k] = v
 
     # Limpia keys de funciones que ya no existan
@@ -407,7 +423,11 @@ async def poll_and_notify(context):
         text = "🔔 *Actualizaciones de cartelera*\n\n" + "\n\n".join(changes)
         for chat_id in state["subscribers"]:
             try:
-                await context.bot.send_message(chat_id=chat_id, text=text, parse_mode="Markdown")
+                await context.bot.send_message(
+                    chat_id=chat_id,
+                    text=text,
+                    parse_mode="Markdown",
+                )
             except Exception as e:
                 logger.warning("No pude enviar alerta a %s: %s", chat_id, e)
 
