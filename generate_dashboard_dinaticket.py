@@ -210,6 +210,13 @@ function updateSubtabs(){
   });
 }
 
+// === Día de la semana ===
+const DAYS = ["Dom","Lun","Mar","Mié","Jue","Vie","Sáb"];
+function dayName(fechaIso){
+  const d = new Date(fechaIso + "T00:00:00");
+  return DAYS[d.getDay()];
+}
+
 // ---- Util para leer filas según estructura del payload ----
 function getRowsForActiveAndMode(){
   const ev = eventos[active];
@@ -309,8 +316,10 @@ function render(){
       }
     }
 
+    const diaSemana = dayName(r.fecha_iso);
+
     div.innerHTML = `
-      <div><b>${r.fecha_label}</b> — ${r.hora}</div>
+      <div><b>${r.fecha_label} (${diaSemana})</b> — ${r.hora}</div>
       <div style="display:flex; flex-direction:column; gap:.3rem; align-items:flex-end">
         <div class="chip ${chip}">Vendidas: ${r.vendidas}</div>
         ${abonoHTML}
