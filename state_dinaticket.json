@@ -1,72 +1,4 @@
 {
-  "Disfruta": [
-    {
-      "fecha_label": "26 Nov 2025",
-      "fecha_iso": "2025-11-26",
-      "hora": "20:00:",
-      "vendidas_dt": 12,
-      "capacidad": 48,
-      "stock": 36
-    },
-    {
-      "fecha_label": "10 Dec 2025",
-      "fecha_iso": "2025-12-10",
-      "hora": "20:00:",
-      "vendidas_dt": 0,
-      "capacidad": 48,
-      "stock": 48
-    },
-    {
-      "fecha_label": "17 Dec 2025",
-      "fecha_iso": "2025-12-17",
-      "hora": "20:00:",
-      "vendidas_dt": 0,
-      "capacidad": 48,
-      "stock": 48
-    },
-    {
-      "fecha_label": "23 Dec 2025",
-      "fecha_iso": "2025-12-23",
-      "hora": "21:00:",
-      "vendidas_dt": 2,
-      "capacidad": 51,
-      "stock": 49
-    }
-  ],
-  "Miedo": [
-    {
-      "fecha_label": "12 Dec 2025",
-      "fecha_iso": "2025-12-12",
-      "hora": "23:00:",
-      "vendidas_dt": 9,
-      "capacidad": 48,
-      "stock": 39
-    },
-    {
-      "fecha_label": "19 Dec 2025",
-      "fecha_iso": "2025-12-19",
-      "hora": "23:00:",
-      "vendidas_dt": 0,
-      "capacidad": 48,
-      "stock": 48
-    },
-    {
-      "fecha_label": "22 Dec 2025",
-      "fecha_iso": "2025-12-22",
-      "hora": "21:30:",
-      "vendidas_dt": 5,
-      "capacidad": 48,
-      "stock": 43
-    },
-    {
-      "fecha_label": "26 Dec 2025",
-      "fecha_iso": "2025-12-26",
-      "hora": "23:00:",
-      "vendidas_dt": 0,
-      "capacidad": 48,
-      "stock": 48
-    }
-  ],
   "Escondido": [
     {
       "fecha_label": "12 Dec 2025",
@@ -163,6 +95,74 @@
       "vendidas_dt": 0,
       "capacidad": 20,
       "stock": 20
+    }
+  ],
+  "Disfruta": [
+    {
+      "fecha_label": "26 Nov 2025",
+      "fecha_iso": "2025-11-26",
+      "hora": "20:00:",
+      "vendidas_dt": 12,
+      "capacidad": 48,
+      "stock": 36
+    },
+    {
+      "fecha_label": "10 Dec 2025",
+      "fecha_iso": "2025-12-10",
+      "hora": "20:00:",
+      "vendidas_dt": 0,
+      "capacidad": 48,
+      "stock": 48
+    },
+    {
+      "fecha_label": "17 Dec 2025",
+      "fecha_iso": "2025-12-17",
+      "hora": "20:00:",
+      "vendidas_dt": 0,
+      "capacidad": 48,
+      "stock": 48
+    },
+    {
+      "fecha_label": "23 Dec 2025",
+      "fecha_iso": "2025-12-23",
+      "hora": "21:00:",
+      "vendidas_dt": 2,
+      "capacidad": 51,
+      "stock": 49
+    }
+  ],
+  "Miedo": [
+    {
+      "fecha_label": "12 Dec 2025",
+      "fecha_iso": "2025-12-12",
+      "hora": "23:00:",
+      "vendidas_dt": 9,
+      "capacidad": 48,
+      "stock": 39
+    },
+    {
+      "fecha_label": "19 Dec 2025",
+      "fecha_iso": "2025-12-19",
+      "hora": "23:00:",
+      "vendidas_dt": 0,
+      "capacidad": 48,
+      "stock": 48
+    },
+    {
+      "fecha_label": "22 Dec 2025",
+      "fecha_iso": "2025-12-22",
+      "hora": "21:30:",
+      "vendidas_dt": 5,
+      "capacidad": 48,
+      "stock": 43
+    },
+    {
+      "fecha_label": "26 Dec 2025",
+      "fecha_iso": "2025-12-26",
+      "hora": "23:00:",
+      "vendidas_dt": 0,
+      "capacidad": 48,
+      "stock": 48
     }
   ]
 }

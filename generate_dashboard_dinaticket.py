@@ -316,12 +316,21 @@ function render(){
       }
     }
 
+    // === NUEVO: texto "vendidas / capacidad" para Escondido ===
+    let ventaLabel = `Vendidas: ${r.vendidas}`;
+    if (esEscondido && r.cap){
+      const cap = Number(r.cap) || 0;
+      const stock = (typeof r.stock === "number") ? r.stock : null;
+      const quedanTxt = (stock !== null) ? ` · quedan ${stock}` : "";
+      ventaLabel = `Vendidas: ${r.vendidas} / ${cap}${quedanTxt}`;
+    }
+
     const diaSemana = dayName(r.fecha_iso);
 
     div.innerHTML = `
       <div><b>${r.fecha_label} (${diaSemana})</b> — ${r.hora}</div>
       <div style="display:flex; flex-direction:column; gap:.3rem; align-items:flex-end">
-        <div class="chip ${chip}">Vendidas: ${r.vendidas}</div>
+        <div class="chip ${chip}">${ventaLabel}</div>
         ${abonoHTML}
       </div>
     `;
