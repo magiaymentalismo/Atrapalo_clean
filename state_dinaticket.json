@@ -163,6 +163,22 @@
       "vendidas_dt": 2,
       "capacidad": 51,
       "stock": 49
+    },
+    {
+      "fecha_label": "05 Jan 2026",
+      "fecha_iso": "2026-01-05",
+      "hora": "21:00:",
+      "vendidas_dt": 0,
+      "capacidad": 51,
+      "stock": 51
+    },
+    {
+      "fecha_label": "06 Jan 2026",
+      "fecha_iso": "2026-01-06",
+      "hora": "21:00:",
+      "vendidas_dt": 0,
+      "capacidad": 51,
+      "stock": 51
     }
   ]
 }

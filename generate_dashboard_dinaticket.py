@@ -177,11 +177,25 @@ let subMode = "proximas"; // o "pasadas"
 document.getElementById("meta").textContent =
   "Generado: " + new Date(payload.generated_at).toLocaleString("es-ES");
 
-// === Crear tabs principales ===
+// === Crear tabs principales (con contador) ===
 const tabsEl = document.getElementById("tabs");
 for (const sala of Object.keys(eventos)) {
+  const ev = eventos[sala];
+
+  let total = 0;
+  if (ev.proximas && ev.proximas.table && Array.isArray(ev.proximas.table.rows)) {
+    total += ev.proximas.table.rows.length;
+  }
+  if (ev.pasadas && ev.pasadas.table && Array.isArray(ev.pasadas.table.rows)) {
+    total += ev.pasadas.table.rows.length;
+  }
+  if (!total && ev.table && Array.isArray(ev.table.rows)) {
+    total = ev.table.rows.length;
+  }
+
   const b = document.createElement("button");
-  b.textContent = sala;
+  b.textContent = `${sala} (${total})`;
+  b.dataset.tab = sala;
   b.className = "tab" + (sala === active ? " active" : "");
   b.onclick = () => { active = sala; updateTabs(); render(); };
   tabsEl.appendChild(b);
@@ -189,7 +203,7 @@ for (const sala of Object.keys(eventos)) {
 
 function updateTabs(){
   document.querySelectorAll(".tab").forEach(t=>{
-    t.classList.toggle("active", t.textContent === active);
+    t.classList.toggle("active", t.dataset.tab === active);
   });
 }
 
@@ -316,7 +330,7 @@ function render(){
       }
     }
 
-    // === NUEVO: texto "vendidas / capacidad" para Escondido ===
+    // === Texto "vendidas / capacidad" para Escondido ===
     let ventaLabel = `Vendidas: ${r.vendidas}`;
     if (esEscondido && r.cap){
       const cap = Number(r.cap) || 0;
