@@ -95,6 +95,7 @@ TABS_HTML = r"""<!doctype html>
     padding:.7rem 1rem; border-radius:var(--rx);
     border:1px solid var(--hair); background:#161616;
     font-weight:800; cursor:pointer; color:var(--ink);
+    white-space:nowrap;
   }
   .tab.active{
     background:var(--gold); color:#111;
@@ -560,13 +561,14 @@ def build_rows(funcs: list[dict]) -> list[list]:
 
 def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
     """
-    Separa en PROXIMAS / PASADAS en el servidor.
+    Separa en PROXIMAS / PASADAS en el servidor usando FECHA+HORA.
     Añade info de AbonoTeatro solo a Escondido:
       - 'venta'   si (fecha,hora) está en AbonoTeatro
       - 'venta'   si no coincide la hora pero hay sesión ese día en AbonoTeatro
       - 'agotado' si no aparece ese día en AbonoTeatro
     """
-    today = datetime.now(ZoneInfo("Europe/Madrid")).date()
+    tz = ZoneInfo("Europe/Madrid")
+    now = datetime.now(tz)
     out: dict[str, dict] = {}
 
     # Preparamos también un set solo de fechas (para el fallback por día)
@@ -596,11 +598,29 @@ def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
         proximas: list[dict] = []
         pasadas: list[dict] = []
         for f in funcs:
-            try:
-                d = datetime.strptime(f["fecha_iso"], "%Y-%m-%d").date()
-            except Exception:
+            fecha_iso = f.get("fecha_iso")
+            hora_txt = f.get("hora") or "00:00"
+            if not fecha_iso:
                 continue
-            if d >= today:
+
+            # Intentamos FECHA+HORA primero
+            try:
+                ses_dt = datetime.strptime(
+                    f"{fecha_iso} {hora_txt}", "%Y-%m-%d %H:%M"
+                ).replace(tzinfo=tz)
+            except Exception:
+                # Fallback: solo fecha
+                try:
+                    d = datetime.strptime(fecha_iso, "%Y-%m-%d").date()
+                except Exception:
+                    continue
+                if d >= now.date():
+                    proximas.append(f)
+                else:
+                    pasadas.append(f)
+                continue
+
+            if ses_dt >= now:
                 proximas.append(f)
             else:
                 pasadas.append(f)
