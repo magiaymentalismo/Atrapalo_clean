@@ -58,6 +58,7 @@ MESES_LARGO = {
 }
 
 HISTORY_PATH = Path("state_dinaticket.json")
+TZ = ZoneInfo("Europe/Madrid")
 
 # ================== TEMPLATE (HTML) ================== #
 TABS_HTML = r"""<!doctype html>
@@ -384,7 +385,7 @@ def fetch_functions_dinaticket(url: str, timeout: int = 20) -> list[dict]:
         mes_num = MESES.get(mes.text.strip(), "01")
 
         # === FIX DEL AÑO ===
-        now = datetime.now(ZoneInfo("Europe/Madrid"))
+        now = datetime.now(TZ)
         anio = now.year
 
         fecha_iso_tmp = f"{anio}-{mes_num}-{dia.text.strip().zfill(2)}"
@@ -566,9 +567,11 @@ def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
       - 'venta'   si (fecha,hora) está en AbonoTeatro
       - 'venta'   si no coincide la hora pero hay sesión ese día en AbonoTeatro
       - 'agotado' si no aparece ese día en AbonoTeatro
+
+    Además, deja un bloque plano "table" por evento
+    para compatibilidad con el bot de Telegram.
     """
-    tz = ZoneInfo("Europe/Madrid")
-    now = datetime.now(tz)
+    now = datetime.now(TZ)
     out: dict[str, dict] = {}
 
     # Preparamos también un set solo de fechas (para el fallback por día)
@@ -583,13 +586,10 @@ def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
                 key = (fecha, hora)
 
                 if key in abono_shows:
-                    # Coincide fecha + hora exacta
                     f["abono_estado"] = "venta"
                 elif fecha in abono_fechas:
-                    # No coincide la hora pero sí hay sesión ese día en AbonoTeatro
                     f["abono_estado"] = "venta"
                 else:
-                    # Ese día no existe en AbonoTeatro
                     f["abono_estado"] = "agotado"
         else:
             for f in funcs:
@@ -597,6 +597,7 @@ def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
 
         proximas: list[dict] = []
         pasadas: list[dict] = []
+
         for f in funcs:
             fecha_iso = f.get("fecha_iso")
             hora_txt = f.get("hora") or "00:00"
@@ -607,7 +608,7 @@ def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
             try:
                 ses_dt = datetime.strptime(
                     f"{fecha_iso} {hora_txt}", "%Y-%m-%d %H:%M"
-                ).replace(tzinfo=tz)
+                ).replace(tzinfo=TZ)
             except Exception:
                 # Fallback: solo fecha
                 try:
@@ -625,14 +626,26 @@ def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
             else:
                 pasadas.append(f)
 
+        # DEBUG contadores para entender 20 vs 17 etc.
+        print(
+            f"[DEBUG] {sala}: total={len(funcs)} · "
+            f"proximas={len(proximas)} · pasadas={len(pasadas)}"
+        )
+
         out[sala] = {
+            # Bloque plano para el bot de Telegram (todas las funciones)
+            "table": {
+                "headers": ["Fecha","Hora","Vendidas","FechaISO","Capacidad","Stock","Abono"],
+                "rows": build_rows(funcs),
+            },
+            # Bloques separados para la web
             "proximas": {
                 "table": {
                     "headers": ["Fecha","Hora","Vendidas","FechaISO","Capacidad","Stock","Abono"],
                     "rows": build_rows(proximas),
                 }
             },
-            "pasadas":  {
+            "pasadas": {
                 "table": {
                     "headers": ["Fecha","Hora","Vendidas","FechaISO","Capacidad","Stock","Abono"],
                     "rows": build_rows(pasadas),
@@ -641,7 +654,7 @@ def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
         }
 
     return {
-        "generated_at": datetime.now(ZoneInfo("Europe/Madrid")).isoformat(),
+        "generated_at": datetime.now(TZ).isoformat(),
         "eventos": out,
     }
 

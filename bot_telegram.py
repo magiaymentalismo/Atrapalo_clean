@@ -66,14 +66,23 @@ def _extract_payload_from_html(html: str) -> Dict[str, Any]:
     """Busca el JSON principal (PAYLOAD) en el HTML."""
     soup = BeautifulSoup(html, "html.parser")
 
+    # 1) Script con id="PAYLOAD"
     tag = soup.find("script", id="PAYLOAD")
-    if tag and tag.string:
-        return json.loads(tag.string)
+    if tag:
+        txt = tag.string or tag.get_text()
+        txt = txt.strip()
+        if txt:
+            return json.loads(txt)
 
+    # 2) Script con data-payload
     tag = soup.find("script", attrs={"data-payload": True})
-    if tag and tag.string:
-        return json.loads(tag.string)
+    if tag:
+        txt = tag.string or tag.get_text()
+        txt = txt.strip()
+        if txt:
+            return json.loads(txt)
 
+    # 3) window.PAYLOAD en algún script
     for s in soup.find_all("script"):
         txt = s.string or ""
         m = re.search(r"window\.PAYLOAD\s*=\s*(\{.*?\})\s*;?", txt, flags=re.S)
@@ -128,6 +137,31 @@ def _fmt_extra(vendidas, cap, stock) -> str:
         parts.append(f"quedan {stock}")
     return (" · " + " · ".join(parts)) if parts else ""
 
+def _get_rows_for_event(info: Dict[str, Any], top: Optional[int] = None, mode: str = "proximas") -> List[list]:
+    """
+    Devuelve filas para un evento:
+      - Primero intenta `mode` (por defecto 'proximas')
+      - Si no hay nada, cae a `table.rows` plano
+    """
+    rows: List[list] = []
+
+    if isinstance(info, dict):
+        # 1) Intentar sección proximas/pasadas
+        sec = info.get(mode) or {}
+        table = (sec.get("table") or {})
+        if isinstance(table.get("rows"), list) and table["rows"]:
+            rows = table["rows"]
+
+        # 2) Fallback: bloque plano
+        if not rows:
+            flat_table = (info.get("table") or {})
+            if isinstance(flat_table.get("rows"), list):
+                rows = flat_table["rows"]
+
+    if top is not None and rows:
+        return rows[:top]
+    return rows or []
+
 def format_resume(data: Dict[str, Any], evento: Optional[str] = None, top: int = 5) -> str:
     eventos = data.get("eventos", {})
     gen_str = data.get("generated_at") or data.get("generatedAt") or datetime.now(tz=TZ).isoformat()
@@ -146,13 +180,15 @@ def format_resume(data: Dict[str, Any], evento: Optional[str] = None, top: int =
             return f"No encontré un evento que contenga “{evento}”."
 
     for k in keys:
-        rows = (eventos[k].get("table", {}).get("rows", []))[:top]
+        info = eventos.get(k) or {}
+        # Mostramos por defecto PRÓXIMAS funciones
+        rows = _get_rows_for_event(info, top=top, mode="proximas")
         if not rows:
             continue
         lines.append(f"\n— {k} —")
         for r in rows:
-            fecha_label = r[0]
-            hora        = r[1]
+            fecha_label = r[0] if len(r) > 0 else ""
+            hora        = r[1] if len(r) > 1 else ""
             vendidas    = _normalize_int(r[2] if len(r) > 2 else None)
             cap         = _normalize_int(r[4] if len(r) > 4 else None)
             stock       = _normalize_int(r[5] if len(r) > 5 else None)
@@ -161,8 +197,28 @@ def format_resume(data: Dict[str, Any], evento: Optional[str] = None, top: int =
     return "\n".join(lines) if len(lines) > 1 else "Sin funciones."
 
 def _iter_all_rows(data: Dict[str, Any]):
-    for k, v in (data.get("eventos") or {}).items():
-        for r in v.get("table", {}).get("rows", []):
+    """
+    Itera TODAS las funciones conocidas para comandos tipo /lowstock, /soldout, /find, alertas.
+    Usa primero table.rows plano; si no existe, concatena proximas+pasadas.
+    """
+    eventos = data.get("eventos") or {}
+    for k, info in eventos.items():
+        info = info or {}
+        table = (info.get("table") or {})
+        rows = table.get("rows")
+
+        if isinstance(rows, list) and rows:
+            src_rows = rows
+        else:
+            src_rows = []
+            for mode in ("proximas", "pasadas"):
+                sec = info.get(mode) or {}
+                t2 = (sec.get("table") or {})
+                rows2 = t2.get("rows")
+                if isinstance(rows2, list):
+                    src_rows.extend(rows2 or [])
+
+        for r in src_rows:
             yield k, r
 
 async def _reply_long(update: Update, text: str):
@@ -191,8 +247,24 @@ def _iter_flat_functions(data: Dict[str, Any]):
     """Rinde dicts con key estable para comparar ventas."""
     eventos = data.get("eventos", {})
     for evento, info in (eventos or {}).items():
-        for r in (info.get("table", {}) or {}).get("rows", []):
-            # r = [FechaLabel, Hora, Vendidas, FechaISO, Capacidad?, Stock?]
+        # Igual que _iter_all_rows, pero devolviendo dict
+        info = info or {}
+        table = (info.get("table") or {})
+        rows = table.get("rows")
+
+        if isinstance(rows, list) and rows:
+            src_rows = rows
+        else:
+            src_rows = []
+            for mode in ("proximas", "pasadas"):
+                sec = info.get(mode) or {}
+                t2 = (sec.get("table") or {})
+                rows2 = t2.get("rows")
+                if isinstance(rows2, list):
+                    src_rows.extend(rows2 or [])
+
+        for r in src_rows:
+            # r = [FechaLabel, Hora, Vendidas, FechaISO, Capacidad?, Stock?, Abono?]
             fecha_label = r[0] if len(r) > 0 else ""
             hora        = r[1] if len(r) > 1 else ""
             vendidas    = _normalize_int(r[2] if len(r) > 2 else None)
@@ -273,10 +345,11 @@ async def find_cmd(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
             return
         lines = [f"🎫 Funciones el {wanted}:"]
         for (k, r) in results:
-            fecha_label, hora = r[0], r[1]
-            vendidas = _normalize_int(r[2] if len(r) > 2 else None)
-            cap      = _normalize_int(r[4] if len(r) > 4 else None)
-            stock    = _normalize_int(r[5] if len(r) > 5 else None)
+            fecha_label = r[0] if len(r) > 0 else ""
+            hora        = r[1] if len(r) > 1 else ""
+            vendidas    = _normalize_int(r[2] if len(r) > 2 else None)
+            cap         = _normalize_int(r[4] if len(r) > 4 else None)
+            stock       = _normalize_int(r[5] if len(r) > 5 else None)
             extra = _fmt_extra(vendidas, cap, stock)
             lines.append(f"• {k}: {fecha_label} {hora}{extra}")
         await _reply_long(update, "\n".join(lines))
@@ -299,7 +372,8 @@ async def lowstock_cmd(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
         for k, r in _iter_all_rows(data):
             stock = _normalize_int(r[5] if len(r) > 5 else None)
             if stock is not None and stock <= threshold and stock >= 0:
-                fecha_label, hora = r[0], r[1]
+                fecha_label = r[0] if len(r) > 0 else ""
+                hora        = r[1] if len(r) > 1 else ""
                 lines.append(f"• {k}: {fecha_label} {hora} · quedan {stock}")
                 count += 1
         if count == 0:
@@ -317,7 +391,8 @@ async def soldout_cmd(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
         for k, r in _iter_all_rows(data):
             stock = _normalize_int(r[5] if len(r) > 5 else None)
             if stock == 0:
-                fecha_label, hora = r[0], r[1]
+                fecha_label = r[0] if len(r) > 0 else ""
+                hora        = r[1] if len(r) > 1 else ""
                 lines.append(f"• {k}: {fecha_label} {hora} · AGOTADO")
                 count += 1
         if count == 0:
@@ -384,7 +459,7 @@ async def poll_and_notify(context):
         prev = last_counts.get(k)
 
         if prev is None:
-            # Para evitar SPAM al primer arranque, comenta la línea siguiente
+            # Para evitar SPAM al primer arranque, puedes comentar este bloque si quieres
             changes.append(
                 f"🆕 *Nueva función* — {f['evento']}\n"
                 f"• {f['fecha_label']} {f['hora']}"
@@ -397,7 +472,6 @@ async def poll_and_notify(context):
                 f"• {f['fecha_label']} {f['hora']}{extra}"
             )
         elif v < prev:
-            # 👇 Aquí detectamos que BAJARON las vendidas
             diff = prev - v
             extra = _fmt_extra(v, f["cap"], f["stock"])
             changes.append(
