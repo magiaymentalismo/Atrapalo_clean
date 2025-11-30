@@ -60,305 +60,40 @@ MESES_LARGO = {
 HISTORY_PATH = Path("state_dinaticket.json")
 TZ = ZoneInfo("Europe/Madrid")
 
+import shutil
+
 # ================== TEMPLATE (HTML) ================== #
-TABS_HTML = r"""<!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-<title>Cartelera — Magia & Teatro</title>
+TEMPLATE_PATH = Path("template.html")
+MANIFEST_PATH = Path("manifest.json")
+SW_PATH = Path("sw.js")
 
-<style>
-  :root{
-    --bg:#000; --bg2:#090909; --panel:#0d0d0d;
-    --ink:#f7f7f7; --muted:#b9b9b9; --hair:#272727;
-    --gold:#d4af37; --green:#22c55e; --orange:#f59e0b; --sold:#6b7280;
-    --r:.9rem; --rx:999px;
-  }
+# ... (rest of the script remains the same until write_html)
 
-  body{
-    background:linear-gradient(180deg, var(--bg), var(--bg2));
-    margin:0; color:var(--ink);
-    font:600 16px/1.55 system-ui;
-  }
+def write_html(payload: dict) -> None:
+    if not TEMPLATE_PATH.exists():
+        print("❌ Error: No existe template.html")
+        return
 
-  .wrap{max-width:1040px; margin:0 auto; padding:1rem}
+    html_template = TEMPLATE_PATH.read_text("utf-8")
+    html = html_template.replace(
+        "{{PAYLOAD_JSON}}",
+        json.dumps(payload, ensure_ascii=False).replace("</script>", "<\\/script>")
+    )
+    
+    docs_dir = Path("docs")
+    docs_dir.mkdir(exist_ok=True)
+    
+    (docs_dir / "index.html").write_text(html, "utf-8")
+    print("✔ Generado docs/index.html")
 
-  h1{margin:0 0 .35rem; font:900 24px/1.2 system-ui}
-
-  #meta{margin-top:.25rem; color:var(--muted); font-size:.9rem}
-
-  .tabs{
-    display:flex; gap:.6rem; margin-top:.7rem;
-    overflow-x:auto; padding:.2rem 0 .5rem;
-  }
-  .tab{
-    padding:.7rem 1rem; border-radius:var(--rx);
-    border:1px solid var(--hair); background:#161616;
-    font-weight:800; cursor:pointer; color:var(--ink);
-    white-space:nowrap;
-  }
-  .tab.active{
-    background:var(--gold); color:#111;
-  }
-
-  /* SUBTABS */
-  .subtabs{
-    display:flex; gap:.5rem; margin:1rem 0 .8rem;
-    border-bottom:1px solid var(--hair); padding-bottom:.4rem;
-  }
-  .subtab{
-    padding:.45rem .9rem; border-radius:var(--rx);
-    background:#141414; border:1px solid var(--hair);
-    font-weight:800; cursor:pointer; color:#9ca3af;
-  }
-  .subtab.active{
-    background:#fff; color:#111;
-  }
-
-  .panel{
-    background:#111; padding:1rem; border-radius:var(--r);
-  }
-
-  .list{display:flex; flex-direction:column; gap:1rem}
-
-  .item{
-    padding:1rem; border-radius:var(--r);
-    border:1px solid var(--hair);
-    display:flex; justify-content:space-between;
-    background:#161616;
-  }
-
-  .chip{
-    padding:.4rem .8rem; border-radius:var(--rx);
-    font-weight:900;
-  }
-  .chip.green{background:var(--green); color:#000}
-  .chip.gold{background:var(--gold); color:#000}
-  .chip.gray{background:#444}
-  .chip.warn{background:var(--orange); color:#000}
-  .chip.sold{background:#555; text-decoration:line-through}
-
-  .month{
-    margin:1.2rem 0 .4rem;
-    font-weight:900;
-    font-size:.96rem;
-    text-transform:capitalize;
-    color:var(--gold);
-    letter-spacing:.03em;
-  }
-
-  .abono-chip{
-    font-size:.78rem;
-    padding:.25rem .7rem;
-    opacity:0.95;
-  }
-</style>
-</head>
-
-<body>
-<div class="wrap">
-  <h1>Cartelera — Escalera & Escondido</h1>
-  <div id="meta"></div>
-  <div id="tabs" class="tabs"></div>
-
-  <div class="panel">
-    <div id="subtabs" class="subtabs"></div>
-    <div id="list" class="list"></div>
-  </div>
-</div>
-
-<script id="PAYLOAD" type="application/json">{{PAYLOAD_JSON}}</script>
-
-<script>
-const payload = JSON.parse(document.getElementById("PAYLOAD").textContent);
-const eventos = payload.eventos || {};
-let active = Object.keys(eventos)[0] || null;
-let subMode = "proximas"; // o "pasadas"
-
-document.getElementById("meta").textContent =
-  "Generado: " + new Date(payload.generated_at).toLocaleString("es-ES");
-
-// === Crear tabs principales (con contador) ===
-const tabsEl = document.getElementById("tabs");
-for (const sala of Object.keys(eventos)) {
-  const ev = eventos[sala];
-
-  let total = 0;
-  if (ev.proximas && ev.proximas.table && Array.isArray(ev.proximas.table.rows)) {
-    total += ev.proximas.table.rows.length;
-  }
-  if (ev.pasadas && ev.pasadas.table && Array.isArray(ev.pasadas.table.rows)) {
-    total += ev.pasadas.table.rows.length;
-  }
-  if (!total && ev.table && Array.isArray(ev.table.rows)) {
-    total = ev.table.rows.length;
-  }
-
-  const b = document.createElement("button");
-  b.textContent = `${sala} (${total})`;
-  b.dataset.tab = sala;
-  b.className = "tab" + (sala === active ? " active" : "");
-  b.onclick = () => { active = sala; updateTabs(); render(); };
-  tabsEl.appendChild(b);
-}
-
-function updateTabs(){
-  document.querySelectorAll(".tab").forEach(t=>{
-    t.classList.toggle("active", t.dataset.tab === active);
-  });
-}
-
-// === Crear subtabs ===
-const subtabsEl = document.getElementById("subtabs");
-["proximas","pasadas"].forEach(mode=>{
-  const sb = document.createElement("button");
-  sb.textContent = mode==="proximas" ? "Próximas" : "Pasadas";
-  sb.dataset.mode = mode;
-  sb.className = "subtab" + (subMode===mode ? " active" : "");
-  sb.onclick = () => { subMode = mode; updateSubtabs(); render(); };
-  subtabsEl.appendChild(sb);
-});
-
-function updateSubtabs(){
-  document.querySelectorAll(".subtab").forEach(s=>{
-    s.classList.toggle("active", s.dataset.mode === subMode);
-  });
-}
-
-// === Día de la semana ===
-const DAYS = ["Dom","Lun","Mar","Mié","Jue","Vie","Sáb"];
-function dayName(fechaIso){
-  const d = new Date(fechaIso + "T00:00:00");
-  return DAYS[d.getDay()];
-}
-
-// ---- Util para leer filas según estructura del payload ----
-function getRowsForActiveAndMode(){
-  const ev = eventos[active];
-  if (!ev) return [];
-
-  // Caso 1: payload con proximas/pasadas
-  if (ev.proximas || ev.pasadas){
-    const sec = ev[subMode];
-    if (!sec || !sec.table || !Array.isArray(sec.table.rows)) return [];
-    return sec.table.rows || [];
-  }
-
-  // Caso 2 (fallback): payload plano con table.rows y filtramos aquí
-  if (!ev.table || !Array.isArray(ev.table.rows)) return [];
-  let rows = ev.table.rows;
-
-  rows = rows.map(r => ({
-    fecha_label: r[0],
-    hora: r[1],
-    vendidas: r[2],
-    fecha_iso: r[3],
-    cap: r[4],
-    stock: r[5],
-    abono: (r.length >= 7 ? r[6] : null)
-  }));
-
-  const today = new Date();
-  today.setHours(0,0,0,0);
-
-  rows = rows.filter(r=>{
-    const hora = r.hora || "00:00";
-    const dt = new Date(r.fecha_iso + "T" + hora + ":00");
-    const dtDay = new Date(dt);
-    dtDay.setHours(0,0,0,0);
-    return subMode === "pasadas" ? dtDay < today : dtDay >= today;
-  });
-
-  return rows.map(r => [r.fecha_label, r.hora, r.vendidas, r.fecha_iso, r.cap, r.stock, r.abono]);
-}
-
-// === Render ===
-function render(){
-  const cont = document.getElementById("list");
-  cont.innerHTML = "";
-  if (!active || !eventos[active]) return;
-
-  let rows = getRowsForActiveAndMode();
-  if (!rows || rows.length === 0){
-    cont.innerHTML = "<p style='color:#9ca3af'>Sin funciones en esta vista.</p>";
-    return;
-  }
-
-  // Parse rows normalizados (7 columnas: incluye Abono)
-  rows = rows.map(r => ({
-    fecha_label: r[0],
-    hora: r[1],
-    vendidas: r[2],
-    fecha_iso: r[3],
-    cap: r[4],
-    stock: r[5],
-    abono: (r.length >= 7 ? r[6] : null)
-  }));
-
-  // Ordenar
-  rows.sort((a,b)=> (a.fecha_iso + a.hora).localeCompare(b.fecha_iso + b.hora));
-
-  // Agrupar por mes
-  let currentMonthKey = null;
-  for (const r of rows){
-    const d = new Date(r.fecha_iso + "T00:00:00");
-    const monthKey = d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0");
-    if (monthKey !== currentMonthKey){
-      currentMonthKey = monthKey;
-      const label = d.toLocaleDateString("es-ES", { month: "long", year: "numeric" });
-      const h = document.createElement("h3");
-      h.className = "month";
-      h.textContent = label;
-      cont.appendChild(h);
-    }
-
-    const div = document.createElement("div");
-    div.className="item";
-
-    // chip color por vendidas
-    let chip="gray";
-    if (r.vendidas >=10) chip="gold";
-    else if (r.vendidas >=1) chip="green";
-    if (r.stock === 0) chip="sold";
-
-    const esEscondido = (active === "Escondido");
-    let abonoHTML = "";
-    if (esEscondido && r.abono) {
-      if (r.abono === "venta") {
-        abonoHTML = `<div class="chip green abono-chip">Abono Teatro: siguen en venta</div>`;
-      } else if (r.abono === "agotado") {
-        abonoHTML = `<div class="chip sold abono-chip">Abono Teatro agotado</div>`;
-      }
-    }
-
-    // === Texto "vendidas / capacidad" para Escondido ===
-    let ventaLabel = `Vendidas: ${r.vendidas}`;
-    if (esEscondido && r.cap){
-      const cap = Number(r.cap) || 0;
-      const stock = (typeof r.stock === "number") ? r.stock : null;
-      const quedanTxt = (stock !== null) ? ` · quedan ${stock}` : "";
-      ventaLabel = `Vendidas: ${r.vendidas} / ${cap}${quedanTxt}`;
-    }
-
-    const diaSemana = dayName(r.fecha_iso);
-
-    div.innerHTML = `
-      <div><b>${r.fecha_label} (${diaSemana})</b> — ${r.hora}</div>
-      <div style="display:flex; flex-direction:column; gap:.3rem; align-items:flex-end">
-        <div class="chip ${chip}">${ventaLabel}</div>
-        ${abonoHTML}
-      </div>
-    `;
-    cont.appendChild(div);
-  }
-}
-
-render();
-</script>
-</body>
-</html>
-"""
+    # Copiar archivos PWA
+    if MANIFEST_PATH.exists():
+        shutil.copy(MANIFEST_PATH, docs_dir / "manifest.json")
+        print("✔ Copiado manifest.json")
+    
+    if SW_PATH.exists():
+        shutil.copy(SW_PATH, docs_dir / "sw.js")
+        print("✔ Copiado sw.js")
 
 # ================== SCRAPER DINATICKET ================== #
 def fetch_functions_dinaticket(url: str, timeout: int = 20) -> list[dict]:
@@ -657,15 +392,6 @@ def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
         "generated_at": datetime.now(TZ).isoformat(),
         "eventos": out,
     }
-
-def write_html(payload: dict) -> None:
-    html = TABS_HTML.replace(
-        "{{PAYLOAD_JSON}}",
-        json.dumps(payload, ensure_ascii=False).replace("</script>", "<\\/script>")
-    )
-    Path("docs").mkdir(exist_ok=True)
-    Path("docs/index.html").write_text(html, "utf-8")
-    print("✔ Generado docs/index.html")
 
 # ================== MAIN ================== #
 if __name__ == "__main__":

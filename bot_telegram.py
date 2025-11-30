@@ -30,6 +30,10 @@ TOKEN_FALLBACK = "8566367368:AAG4FTbn3uezMbtBFxMH7E2eEMeH4fsTbQ0"
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+# Menos ruido de httpx y apscheduler en consola
+logging.getLogger("httpx").setLevel(logging.WARNING)
+logging.getLogger("apscheduler").setLevel(logging.INFO)
+
 # ====================== CACHE ======================
 _cache: Tuple[float, Dict[str, Any]] | None = None
 
@@ -57,7 +61,8 @@ def _split_for_telegram(text: str, limit: int = TELEGRAM_LIMIT) -> List[str]:
             parts.append("".join(chunk))
             chunk, total = [line], len(line)
         else:
-            chunk.append(line); total += len(line)
+            chunk.append(line)
+            total += len(line)
     if chunk:
         parts.append("".join(chunk))
     return parts
@@ -66,23 +71,17 @@ def _extract_payload_from_html(html: str) -> Dict[str, Any]:
     """Busca el JSON principal (PAYLOAD) en el HTML."""
     soup = BeautifulSoup(html, "html.parser")
 
-    # 1) Script con id="PAYLOAD"
+    # 1) <script id="PAYLOAD" type="application/json">...</script>
     tag = soup.find("script", id="PAYLOAD")
-    if tag:
-        txt = tag.string or tag.get_text()
-        txt = txt.strip()
-        if txt:
-            return json.loads(txt)
+    if tag and tag.string:
+        return json.loads(tag.string)
 
-    # 2) Script con data-payload
+    # 2) <script data-payload="true">...</script>
     tag = soup.find("script", attrs={"data-payload": True})
-    if tag:
-        txt = tag.string or tag.get_text()
-        txt = txt.strip()
-        if txt:
-            return json.loads(txt)
+    if tag and tag.string:
+        return json.loads(tag.string)
 
-    # 3) window.PAYLOAD en algún script
+    # 3) window.PAYLOAD = {...};
     for s in soup.find_all("script"):
         txt = s.string or ""
         m = re.search(r"window\.PAYLOAD\s*=\s*(\{.*?\})\s*;?", txt, flags=re.S)
@@ -102,6 +101,7 @@ def fetch_payload(force: bool = False) -> Dict[str, Any]:
         r.raise_for_status()
     except requests.RequestException as e:
         if _cache:
+            logger.warning("HTTP error, usando cache: %s", e)
             return _cache[1]
         raise RuntimeError(f"HTTP error: {e}") from e
 
@@ -109,6 +109,7 @@ def fetch_payload(force: bool = False) -> Dict[str, Any]:
         data = _extract_payload_from_html(r.text)
     except Exception as e:
         if _cache:
+            logger.warning("Error parseando payload, usando cache: %s", e)
             return _cache[1]
         raise RuntimeError(f"No pude parsear el payload: {e}") from e
 
@@ -135,32 +136,92 @@ def _fmt_extra(vendidas, cap, stock) -> str:
         parts.append(f"vendidas {vendidas}")
     if stock not in (None, ""):
         parts.append(f"quedan {stock}")
-    return (" · " + " · ".join(parts)) if parts else ""
+    return (" · " + " ".join(parts)) if parts else ""
 
-def _get_rows_for_event(info: Dict[str, Any], top: Optional[int] = None, mode: str = "proximas") -> List[list]:
+def _reply_long(update: Update, text: str):
+    """Sincrónico para usar dentro de async con 'await'."""
+    async def _inner():
+        for part in _split_for_telegram(text):
+            if getattr(update, "callback_query", None):
+                await update.callback_query.message.reply_text(part)
+            else:
+                await update.message.reply_text(part)
+    return _inner()
+
+# ================== HELPERS SOBRE EL PAYLOAD ================== #
+def _iter_all_rows(data: Dict[str, Any]):
     """
-    Devuelve filas para un evento:
-      - Primero intenta `mode` (por defecto 'proximas')
-      - Si no hay nada, cae a `table.rows` plano
+    Itera sobre TODAS las filas de todos los eventos,
+    independientemente de si vienen como:
+      - evento["table"]["rows"]
+      - evento["proximas"]["table"]["rows"] + evento["pasadas"]["table"]["rows"]
+    Rinde: (nombre_evento, fila)
     """
-    rows: List[list] = []
+    eventos = data.get("eventos") or {}
+    for nombre, info in eventos.items():
+        if not isinstance(info, dict):
+            continue
 
-    if isinstance(info, dict):
-        # 1) Intentar sección proximas/pasadas
-        sec = info.get(mode) or {}
-        table = (sec.get("table") or {})
-        if isinstance(table.get("rows"), list) and table["rows"]:
-            rows = table["rows"]
+        # Caso nuevo: proximas / pasadas
+        if "proximas" in info or "pasadas" in info:
+            for sec_name in ("proximas", "pasadas"):
+                sec = info.get(sec_name) or {}
+                table = (sec.get("table") or {})
+                rows = table.get("rows") or []
+                for r in rows:
+                    yield nombre, r
+        else:
+            # Caso legacy: tabla plana
+            table = (info.get("table") or {})
+            rows = table.get("rows") or []
+            for r in rows:
+                yield nombre, r
 
-        # 2) Fallback: bloque plano
+def _iter_flat_functions(data: Dict[str, Any]):
+    """
+    Versión normalizada de todas las funciones.
+    Rinde dicts con key estable para comparar ventas.
+    """
+    for evento, r in _iter_all_rows(data):
+        # r = [FechaLabel, Hora, Vendidas, FechaISO, Capacidad?, Stock?, Abono?]
+        fecha_label = r[0] if len(r) > 0 else ""
+        hora        = r[1] if len(r) > 1 else ""
+        vendidas    = _normalize_int(r[2] if len(r) > 2 else None)
+        fecha_iso   = r[3] if len(r) > 3 else ""
+        cap         = _normalize_int(r[4] if len(r) > 4 else None)
+        stock       = _normalize_int(r[5] if len(r) > 5 else None)
+
+        key = f"{evento}::{fecha_iso}::{hora}"
+        yield {
+            "key": key,
+            "evento": evento,
+            "fecha_label": fecha_label,
+            "hora": hora,
+            "fecha_iso": fecha_iso,
+            "vendidas": vendidas,
+            "cap": cap,
+            "stock": stock,
+        }
+
+def _get_rows_for_event_view(ev: Dict[str, Any], top: int = 5) -> List[list]:
+    """
+    Devuelve las filas que se usan para mostrar en /status o por evento.
+    PREFERIMOS 'proximas'. Si no hay, usamos 'pasadas'.
+    Soporta payload nuevo (proximas/pasadas) y legacy (table).
+    """
+    if not isinstance(ev, dict):
+        return []
+
+    # Nuevo formato
+    if "proximas" in ev or "pasadas" in ev:
+        rows = (((ev.get("proximas") or {}).get("table") or {}).get("rows") or [])
         if not rows:
-            flat_table = (info.get("table") or {})
-            if isinstance(flat_table.get("rows"), list):
-                rows = flat_table["rows"]
+            rows = (((ev.get("pasadas") or {}).get("table") or {}).get("rows") or [])
+        return rows[:top] if top else rows
 
-    if top is not None and rows:
-        return rows[:top]
-    return rows or []
+    # Formato antiguo
+    rows = (((ev.get("table") or {}).get("rows") or []))
+    return rows[:top] if top else rows
 
 def format_resume(data: Dict[str, Any], evento: Optional[str] = None, top: int = 5) -> str:
     eventos = data.get("eventos", {})
@@ -173,6 +234,8 @@ def format_resume(data: Dict[str, Any], evento: Optional[str] = None, top: int =
 
     lines = [header]
     keys = list(eventos.keys())
+
+    # Filtro por nombre de evento
     if evento:
         wanted = evento.casefold()
         keys = [k for k in keys if wanted in k.casefold()]
@@ -180,9 +243,8 @@ def format_resume(data: Dict[str, Any], evento: Optional[str] = None, top: int =
             return f"No encontré un evento que contenga “{evento}”."
 
     for k in keys:
-        info = eventos.get(k) or {}
-        # Mostramos por defecto PRÓXIMAS funciones
-        rows = _get_rows_for_event(info, top=top, mode="proximas")
+        ev = eventos.get(k) or {}
+        rows = _get_rows_for_event_view(ev, top=top)
         if not rows:
             continue
         lines.append(f"\n— {k} —")
@@ -194,94 +256,30 @@ def format_resume(data: Dict[str, Any], evento: Optional[str] = None, top: int =
             stock       = _normalize_int(r[5] if len(r) > 5 else None)
             extra = _fmt_extra(vendidas, cap, stock)
             lines.append(f"• {fecha_label} {hora}{extra}")
+
     return "\n".join(lines) if len(lines) > 1 else "Sin funciones."
-
-def _iter_all_rows(data: Dict[str, Any]):
-    """
-    Itera TODAS las funciones conocidas para comandos tipo /lowstock, /soldout, /find, alertas.
-    Usa primero table.rows plano; si no existe, concatena proximas+pasadas.
-    """
-    eventos = data.get("eventos") or {}
-    for k, info in eventos.items():
-        info = info or {}
-        table = (info.get("table") or {})
-        rows = table.get("rows")
-
-        if isinstance(rows, list) and rows:
-            src_rows = rows
-        else:
-            src_rows = []
-            for mode in ("proximas", "pasadas"):
-                sec = info.get(mode) or {}
-                t2 = (sec.get("table") or {})
-                rows2 = t2.get("rows")
-                if isinstance(rows2, list):
-                    src_rows.extend(rows2 or [])
-
-        for r in src_rows:
-            yield k, r
-
-async def _reply_long(update: Update, text: str):
-    for part in _split_for_telegram(text):
-        if getattr(update, "callback_query", None):
-            await update.callback_query.message.reply_text(part)
-        else:
-            await update.message.reply_text(part)
 
 # ====================== ESTADO ======================
 def _load_state():
     if STATE_FILE.exists():
         try:
-            return json.loads(STATE_FILE.read_text(encoding="utf-8"))
+            raw = json.loads(STATE_FILE.read_text(encoding="utf-8"))
         except Exception:
-            pass
-    return {"subscribers": [], "counts": {}}
+            raw = {}
+    else:
+        raw = {}
+
+    if not isinstance(raw, dict):
+        raw = {}
+    raw.setdefault("subscribers", [])
+    raw.setdefault("counts", {})
+    return raw
 
 def _save_state(state):
     try:
         STATE_FILE.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
     except Exception as e:
         logger.warning("No pude guardar state.json: %s", e)
-
-def _iter_flat_functions(data: Dict[str, Any]):
-    """Rinde dicts con key estable para comparar ventas."""
-    eventos = data.get("eventos", {})
-    for evento, info in (eventos or {}).items():
-        # Igual que _iter_all_rows, pero devolviendo dict
-        info = info or {}
-        table = (info.get("table") or {})
-        rows = table.get("rows")
-
-        if isinstance(rows, list) and rows:
-            src_rows = rows
-        else:
-            src_rows = []
-            for mode in ("proximas", "pasadas"):
-                sec = info.get(mode) or {}
-                t2 = (sec.get("table") or {})
-                rows2 = t2.get("rows")
-                if isinstance(rows2, list):
-                    src_rows.extend(rows2 or [])
-
-        for r in src_rows:
-            # r = [FechaLabel, Hora, Vendidas, FechaISO, Capacidad?, Stock?, Abono?]
-            fecha_label = r[0] if len(r) > 0 else ""
-            hora        = r[1] if len(r) > 1 else ""
-            vendidas    = _normalize_int(r[2] if len(r) > 2 else None)
-            fecha_iso   = r[3] if len(r) > 3 else ""
-            cap         = _normalize_int(r[4] if len(r) > 4 else None)
-            stock       = _normalize_int(r[5] if len(r) > 5 else None)
-            key = f"{evento}::{fecha_iso}::{hora}"
-            yield {
-                "key": key,
-                "evento": evento,
-                "fecha_label": fecha_label,
-                "hora": hora,
-                "fecha_iso": fecha_iso,
-                "vendidas": vendidas,
-                "cap": cap,
-                "stock": stock,
-            }
 
 # ====================== COMANDOS ======================
 async def start(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
@@ -425,7 +423,7 @@ async def subscribe_cmd(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     if chat_id not in state["subscribers"]:
         state["subscribers"].append(chat_id)
         _save_state(state)
-        await update.message.reply_text("✅ Suscripción activa. Te avisaré cuando suban las ventas o aparezcan funciones nuevas.")
+        await update.message.reply_text("✅ Suscripción activa. Te avisaré cuando suban o bajen las ventas.")
     else:
         await update.message.reply_text("Ya estabas suscrito ✅")
 
@@ -448,7 +446,7 @@ async def poll_and_notify(context):
         return
 
     state = _load_state()
-    last_counts: Dict[str, int] = state.get("counts", {})
+    last_counts: Dict[str, int] = state.get("counts", {}) or {}
     changes = []
 
     # Genera lista actual y compara
@@ -459,12 +457,12 @@ async def poll_and_notify(context):
         prev = last_counts.get(k)
 
         if prev is None:
-            # Para evitar SPAM al primer arranque, puedes comentar este bloque si quieres
-            changes.append(
-                f"🆕 *Nueva función* — {f['evento']}\n"
-                f"• {f['fecha_label']} {f['hora']}"
-            )
-        elif v > prev:
+            # 👉 Primera vez que vemos esta función: solo inicializamos,
+            # no mandamos alerta para evitar SPAM.
+            last_counts[k] = v
+            continue
+
+        if v > prev:
             diff = v - prev
             extra = _fmt_extra(v, f["cap"], f["stock"])
             changes.append(
@@ -568,7 +566,7 @@ def main():
 
     # Manejador de errores silencioso
     async def on_error(update, context):
-        logging.getLogger(__name__).warning("Error: %s", context.error)
+        logger.warning("Error: %s", context.error)
     app.add_error_handler(on_error)
 
     app.run_polling(drop_pending_updates=True)
