@@ -22,7 +22,6 @@
       --accent-green: #34c759;
       --accent-orange: #ff9f0a;
       --accent-red: #ff453a;
-      --accent-fever: #ff2a5b;
 
       --blur-md: 20px;
       --radius-lg: 24px;
@@ -66,7 +65,6 @@
       justify-content: center;
       z-index: 1000;
       pointer-events: none;
-      /* Let clicks pass through around the island */
     }
 
     .dynamic-island {
@@ -115,7 +113,6 @@
       scrollbar-width: none;
       view-transition-name: tabs-container;
       justify-content: center;
-      /* Center tabs on desktop */
     }
 
     @media(max-width: 600px) {
@@ -300,35 +297,6 @@
       opacity: 0.9;
     }
 
-    /* --- FEVER BUTTON --- */
-    .fever-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--accent-fever);
-      color: #fff;
-      text-decoration: none;
-      padding: 8px 16px;
-      border-radius: var(--radius-full);
-      font-size: 13px;
-      font-weight: 700;
-      box-shadow: 0 4px 15px rgba(255, 42, 91, 0.4);
-      transition: transform 0.2s;
-      margin-bottom: 16px;
-    }
-
-    .fever-btn:hover {
-      transform: scale(1.05);
-    }
-
-    .fever-icon {
-      width: 14px;
-      height: 14px;
-      background: #fff;
-      mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>') no-repeat center;
-      -webkit-mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>') no-repeat center;
-    }
-
     @media (max-width: 600px) {
       .wrap {
         padding: 16px;
@@ -369,20 +337,26 @@
     <div id="tabs" class="tabs"></div>
 
     <div class="panel">
-      <div style="display:flex; justify-content:space-between; align-items:center">
+      <div style="display:flex; justify-content:flex-start; align-items:center">
         <div id="subtabs" class="subtabs"></div>
-        <div id="fever-container"></div>
       </div>
       <div id="list" class="list"></div>
     </div>
   </div>
 
+<<<<<<< HEAD
   <script id="PAYLOAD" type="application/json">{"generated_at": "2025-12-01T00:37:36.061896+01:00", "eventos": {"Escondido": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["12 Dec 2025", "20:00:", 7, "2025-12-12", 60, 53, "venta", null], ["13 Dec 2025", "17:00:", 0, "2025-12-13", 0, 0, "agotado", null], ["14 Dec 2025", "18:30:", 13, "2025-12-14", 60, 47, "agotado", null], ["21 Dec 2025", "18:30:", 20, "2025-12-21", 35, 15, "agotado", null], ["27 Dec 2025", "17:00:", 6, "2025-12-27", 30, 24, "venta", null], ["28 Dec 2025", "18:30:", 11, "2025-12-28", 35, 24, "agotado", null], ["08 Jan 2026", "20:00:", 0, "2026-01-08", 20, 20, "venta", null], ["10 Jan 2026", "17:00:", 0, "2026-01-10", 20, 20, "venta", null], ["11 Jan 2026", "18:30:", 0, "2026-01-11", 35, 35, "agotado", null], ["15 Jan 2026", "20:00:", 0, "2026-01-15", 20, 20, "venta", null], ["17 Jan 2026", "17:00:", 2, "2026-01-17", 20, 18, "venta", null], ["18 Jan 2026", "18:30:", 0, "2026-01-18", 0, 0, "agotado", null], ["22 Jan 2026", "20:00:", 0, "2026-01-22", 20, 20, "venta", null], ["24 Jan 2026", "17:00:", 0, "2026-01-24", 20, 20, "venta", null], ["31 Jan 2026", "17:00:", 0, "2026-01-31", 20, 20, "agotado", null], ["14 Feb 2026", "17:00:", 0, "2026-02-14", 20, 20, "agotado", null], ["28 Feb 2026", "17:00:", 0, "2026-02-28", 20, 20, "agotado", null]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["12 Dec 2025", "20:00:", 7, "2025-12-12", 60, 53, "venta", null], ["13 Dec 2025", "17:00:", 0, "2025-12-13", 0, 0, "agotado", null], ["14 Dec 2025", "18:30:", 13, "2025-12-14", 60, 47, "agotado", null], ["21 Dec 2025", "18:30:", 20, "2025-12-21", 35, 15, "agotado", null], ["27 Dec 2025", "17:00:", 6, "2025-12-27", 30, 24, "venta", null], ["28 Dec 2025", "18:30:", 11, "2025-12-28", 35, 24, "agotado", null], ["08 Jan 2026", "20:00:", 0, "2026-01-08", 20, 20, "venta", null], ["10 Jan 2026", "17:00:", 0, "2026-01-10", 20, 20, "venta", null], ["11 Jan 2026", "18:30:", 0, "2026-01-11", 35, 35, "agotado", null], ["15 Jan 2026", "20:00:", 0, "2026-01-15", 20, 20, "venta", null], ["17 Jan 2026", "17:00:", 2, "2026-01-17", 20, 18, "venta", null], ["18 Jan 2026", "18:30:", 0, "2026-01-18", 0, 0, "agotado", null], ["22 Jan 2026", "20:00:", 0, "2026-01-22", 20, 20, "venta", null], ["24 Jan 2026", "17:00:", 0, "2026-01-24", 20, 20, "venta", null], ["31 Jan 2026", "17:00:", 0, "2026-01-31", 20, 20, "agotado", null], ["14 Feb 2026", "17:00:", 0, "2026-02-14", 20, 20, "agotado", null], ["28 Feb 2026", "17:00:", 0, "2026-02-28", 20, 20, "agotado", null]]}}, "pasadas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": []}}}, "Miedo": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["12 Dec 2025", "23:00:", 9, "2025-12-12", 48, 39, null, "agotado"], ["19 Dec 2025", "23:00:", 0, "2025-12-19", 48, 48, null, "agotado"], ["22 Dec 2025", "21:30:", 5, "2025-12-22", 48, 43, null, "agotado"], ["26 Dec 2025", "23:00:", 0, "2025-12-26", 48, 48, null, "agotado"], ["09 Jan 2026", "23:00:", 0, "2026-01-09", 48, 48, null, "agotado"], ["16 Jan 2026", "23:00:", 0, "2026-01-16", 48, 48, null, "agotado"], ["23 Jan 2026", "23:00:", 0, "2026-01-23", 48, 48, null, "agotado"], ["30 Jan 2026", "23:00:", 0, "2026-01-30", 48, 48, null, "agotado"]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["12 Dec 2025", "23:00:", 9, "2025-12-12", 48, 39, null, "agotado"], ["19 Dec 2025", "23:00:", 0, "2025-12-19", 48, 48, null, "agotado"], ["22 Dec 2025", "21:30:", 5, "2025-12-22", 48, 43, null, "agotado"], ["26 Dec 2025", "23:00:", 0, "2025-12-26", 48, 48, null, "agotado"], ["09 Jan 2026", "23:00:", 0, "2026-01-09", 48, 48, null, "agotado"], ["16 Jan 2026", "23:00:", 0, "2026-01-16", 48, 48, null, "agotado"], ["23 Jan 2026", "23:00:", 0, "2026-01-23", 48, 48, null, "agotado"], ["30 Jan 2026", "23:00:", 0, "2026-01-30", 48, 48, null, "agotado"]]}}, "pasadas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": []}}}, "Disfruta": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["26 Nov 2025", "20:00:", 12, "2025-11-26", 48, 36, null, "agotado"], ["10 Dec 2025", "20:00:", 0, "2025-12-10", 48, 48, null, "agotado"], ["17 Dec 2025", "20:00:", 0, "2025-12-17", 48, 48, null, "agotado"], ["23 Dec 2025", "21:00:", 5, "2025-12-23", 51, 46, null, "agotado"], ["05 Jan 2026", "21:00:", 0, "2026-01-05", 51, 51, null, "agotado"], ["06 Jan 2026", "21:00:", 0, "2026-01-06", 51, 51, null, "agotado"], ["07 Jan 2026", "20:00:", 0, "2026-01-07", 48, 48, null, "agotado"], ["14 Jan 2026", "20:00:", 0, "2026-01-14", 48, 48, null, "agotado"], ["21 Jan 2026", "20:00:", 0, "2026-01-21", 48, 48, null, "agotado"], ["28 Jan 2026", "20:00:", 0, "2026-01-28", 48, 48, null, "agotado"]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["10 Dec 2025", "20:00:", 0, "2025-12-10", 48, 48, null, "agotado"], ["17 Dec 2025", "20:00:", 0, "2025-12-17", 48, 48, null, "agotado"], ["23 Dec 2025", "21:00:", 5, "2025-12-23", 51, 46, null, "agotado"], ["05 Jan 2026", "21:00:", 0, "2026-01-05", 51, 51, null, "agotado"], ["06 Jan 2026", "21:00:", 0, "2026-01-06", 51, 51, null, "agotado"], ["07 Jan 2026", "20:00:", 0, "2026-01-07", 48, 48, null, "agotado"], ["14 Jan 2026", "20:00:", 0, "2026-01-14", 48, 48, null, "agotado"], ["21 Jan 2026", "20:00:", 0, "2026-01-21", 48, 48, null, "agotado"], ["28 Jan 2026", "20:00:", 0, "2026-01-28", 48, 48, null, "agotado"]]}}, "pasadas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["26 Nov 2025", "20:00:", 12, "2025-11-26", 48, 36, null, "agotado"]]}}}}, "fever_urls": {"Miedo": "https://feverup.com/m/290561", "Disfruta": "https://feverup.com/m/159767"}}</script>
+=======
+<<<<<<< Updated upstream
+  <script id="PAYLOAD" type="application/json">{"generated_at": "2025-12-01T00:14:20.185866+01:00", "eventos": {"Miedo": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["12 Dec 2025", "23:00:", 9, "2025-12-12", 48, 39, null, "agotado"], ["19 Dec 2025", "23:00:", 0, "2025-12-19", 48, 48, null, "agotado"], ["22 Dec 2025", "21:30:", 5, "2025-12-22", 48, 43, null, "agotado"], ["26 Dec 2025", "23:00:", 0, "2025-12-26", 48, 48, null, "agotado"], ["09 Jan 2026", "23:00:", 0, "2026-01-09", 48, 48, null, "agotado"], ["16 Jan 2026", "23:00:", 0, "2026-01-16", 48, 48, null, "agotado"], ["23 Jan 2026", "23:00:", 0, "2026-01-23", 48, 48, null, "agotado"], ["30 Jan 2026", "23:00:", 0, "2026-01-30", 48, 48, null, "agotado"]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["12 Dec 2025", "23:00:", 9, "2025-12-12", 48, 39, null, "agotado"], ["19 Dec 2025", "23:00:", 0, "2025-12-19", 48, 48, null, "agotado"], ["22 Dec 2025", "21:30:", 5, "2025-12-22", 48, 43, null, "agotado"], ["26 Dec 2025", "23:00:", 0, "2025-12-26", 48, 48, null, "agotado"], ["09 Jan 2026", "23:00:", 0, "2026-01-09", 48, 48, null, "agotado"], ["16 Jan 2026", "23:00:", 0, "2026-01-16", 48, 48, null, "agotado"], ["23 Jan 2026", "23:00:", 0, "2026-01-23", 48, 48, null, "agotado"], ["30 Jan 2026", "23:00:", 0, "2026-01-30", 48, 48, null, "agotado"]]}}, "pasadas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": []}}}, "Escondido": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["12 Dec 2025", "20:00:", 7, "2025-12-12", 60, 53, "venta", null], ["13 Dec 2025", "17:00:", 0, "2025-12-13", 0, 0, "agotado", null], ["14 Dec 2025", "18:30:", 13, "2025-12-14", 60, 47, "agotado", null], ["21 Dec 2025", "18:30:", 20, "2025-12-21", 35, 15, "agotado", null], ["27 Dec 2025", "17:00:", 6, "2025-12-27", 30, 24, "venta", null], ["28 Dec 2025", "18:30:", 11, "2025-12-28", 35, 24, "agotado", null], ["08 Jan 2026", "20:00:", 0, "2026-01-08", 20, 20, "venta", null], ["10 Jan 2026", "17:00:", 0, "2026-01-10", 20, 20, "venta", null], ["11 Jan 2026", "18:30:", 0, "2026-01-11", 35, 35, "agotado", null], ["15 Jan 2026", "20:00:", 0, "2026-01-15", 20, 20, "venta", null], ["17 Jan 2026", "17:00:", 2, "2026-01-17", 20, 18, "venta", null], ["18 Jan 2026", "18:30:", 0, "2026-01-18", 0, 0, "agotado", null], ["22 Jan 2026", "20:00:", 0, "2026-01-22", 20, 20, "venta", null], ["24 Jan 2026", "17:00:", 0, "2026-01-24", 20, 20, "venta", null], ["31 Jan 2026", "17:00:", 0, "2026-01-31", 20, 20, "agotado", null], ["14 Feb 2026", "17:00:", 0, "2026-02-14", 20, 20, "agotado", null], ["28 Feb 2026", "17:00:", 0, "2026-02-28", 20, 20, "agotado", null]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["12 Dec 2025", "20:00:", 7, "2025-12-12", 60, 53, "venta", null], ["13 Dec 2025", "17:00:", 0, "2025-12-13", 0, 0, "agotado", null], ["14 Dec 2025", "18:30:", 13, "2025-12-14", 60, 47, "agotado", null], ["21 Dec 2025", "18:30:", 20, "2025-12-21", 35, 15, "agotado", null], ["27 Dec 2025", "17:00:", 6, "2025-12-27", 30, 24, "venta", null], ["28 Dec 2025", "18:30:", 11, "2025-12-28", 35, 24, "agotado", null], ["08 Jan 2026", "20:00:", 0, "2026-01-08", 20, 20, "venta", null], ["10 Jan 2026", "17:00:", 0, "2026-01-10", 20, 20, "venta", null], ["11 Jan 2026", "18:30:", 0, "2026-01-11", 35, 35, "agotado", null], ["15 Jan 2026", "20:00:", 0, "2026-01-15", 20, 20, "venta", null], ["17 Jan 2026", "17:00:", 2, "2026-01-17", 20, 18, "venta", null], ["18 Jan 2026", "18:30:", 0, "2026-01-18", 0, 0, "agotado", null], ["22 Jan 2026", "20:00:", 0, "2026-01-22", 20, 20, "venta", null], ["24 Jan 2026", "17:00:", 0, "2026-01-24", 20, 20, "venta", null], ["31 Jan 2026", "17:00:", 0, "2026-01-31", 20, 20, "agotado", null], ["14 Feb 2026", "17:00:", 0, "2026-02-14", 20, 20, "agotado", null], ["28 Feb 2026", "17:00:", 0, "2026-02-28", 20, 20, "agotado", null]]}}, "pasadas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": []}}}, "Disfruta": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["26 Nov 2025", "20:00:", 12, "2025-11-26", 48, 36, null, "agotado"], ["10 Dec 2025", "20:00:", 0, "2025-12-10", 48, 48, null, "agotado"], ["17 Dec 2025", "20:00:", 0, "2025-12-17", 48, 48, null, "agotado"], ["23 Dec 2025", "21:00:", 5, "2025-12-23", 51, 46, null, "agotado"], ["05 Jan 2026", "21:00:", 0, "2026-01-05", 51, 51, null, "agotado"], ["06 Jan 2026", "21:00:", 0, "2026-01-06", 51, 51, null, "agotado"], ["07 Jan 2026", "20:00:", 0, "2026-01-07", 48, 48, null, "agotado"], ["14 Jan 2026", "20:00:", 0, "2026-01-14", 48, 48, null, "agotado"], ["21 Jan 2026", "20:00:", 0, "2026-01-21", 48, 48, null, "agotado"], ["28 Jan 2026", "20:00:", 0, "2026-01-28", 48, 48, null, "agotado"]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["10 Dec 2025", "20:00:", 0, "2025-12-10", 48, 48, null, "agotado"], ["17 Dec 2025", "20:00:", 0, "2025-12-17", 48, 48, null, "agotado"], ["23 Dec 2025", "21:00:", 5, "2025-12-23", 51, 46, null, "agotado"], ["05 Jan 2026", "21:00:", 0, "2026-01-05", 51, 51, null, "agotado"], ["06 Jan 2026", "21:00:", 0, "2026-01-06", 51, 51, null, "agotado"], ["07 Jan 2026", "20:00:", 0, "2026-01-07", 48, 48, null, "agotado"], ["14 Jan 2026", "20:00:", 0, "2026-01-14", 48, 48, null, "agotado"], ["21 Jan 2026", "20:00:", 0, "2026-01-21", 48, 48, null, "agotado"], ["28 Jan 2026", "20:00:", 0, "2026-01-28", 48, 48, null, "agotado"]]}}, "pasadas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["26 Nov 2025", "20:00:", 12, "2025-11-26", 48, 36, null, "agotado"]]}}}}, "fever_urls": {"Miedo": "https://feverup.com/m/290561", "Disfruta": "https://feverup.com/m/159767"}}</script>
+=======
+  <script id="PAYLOAD" type="application/json">{"generated_at": "2025-12-01T00:33:45.286285+01:00", "eventos": {"Disfruta": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["26 Nov 2025", "20:00:", 12, "2025-11-26", 48, 36, null, "agotado"], ["10 Dec 2025", "20:00:", 0, "2025-12-10", 48, 48, null, "agotado"], ["17 Dec 2025", "20:00:", 0, "2025-12-17", 48, 48, null, "agotado"], ["23 Dec 2025", "21:00:", 5, "2025-12-23", 51, 46, null, "agotado"], ["05 Jan 2026", "21:00:", 0, "2026-01-05", 51, 51, null, "agotado"], ["06 Jan 2026", "21:00:", 0, "2026-01-06", 51, 51, null, "agotado"], ["07 Jan 2026", "20:00:", 0, "2026-01-07", 48, 48, null, "agotado"], ["14 Jan 2026", "20:00:", 0, "2026-01-14", 48, 48, null, "agotado"], ["21 Jan 2026", "20:00:", 0, "2026-01-21", 48, 48, null, "agotado"], ["28 Jan 2026", "20:00:", 0, "2026-01-28", 48, 48, null, "agotado"]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["10 Dec 2025", "20:00:", 0, "2025-12-10", 48, 48, null, "agotado"], ["17 Dec 2025", "20:00:", 0, "2025-12-17", 48, 48, null, "agotado"], ["23 Dec 2025", "21:00:", 5, "2025-12-23", 51, 46, null, "agotado"], ["05 Jan 2026", "21:00:", 0, "2026-01-05", 51, 51, null, "agotado"], ["06 Jan 2026", "21:00:", 0, "2026-01-06", 51, 51, null, "agotado"], ["07 Jan 2026", "20:00:", 0, "2026-01-07", 48, 48, null, "agotado"], ["14 Jan 2026", "20:00:", 0, "2026-01-14", 48, 48, null, "agotado"], ["21 Jan 2026", "20:00:", 0, "2026-01-21", 48, 48, null, "agotado"], ["28 Jan 2026", "20:00:", 0, "2026-01-28", 48, 48, null, "agotado"]]}}, "pasadas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["26 Nov 2025", "20:00:", 12, "2025-11-26", 48, 36, null, "agotado"]]}}}, "Escondido": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["12 Dec 2025", "20:00:", 7, "2025-12-12", 60, 53, "venta", null], ["13 Dec 2025", "17:00:", 0, "2025-12-13", 0, 0, "agotado", null], ["14 Dec 2025", "18:30:", 13, "2025-12-14", 60, 47, "agotado", null], ["21 Dec 2025", "18:30:", 20, "2025-12-21", 35, 15, "agotado", null], ["27 Dec 2025", "17:00:", 6, "2025-12-27", 30, 24, "venta", null], ["28 Dec 2025", "18:30:", 11, "2025-12-28", 35, 24, "agotado", null], ["08 Jan 2026", "20:00:", 0, "2026-01-08", 20, 20, "venta", null], ["10 Jan 2026", "17:00:", 0, "2026-01-10", 20, 20, "venta", null], ["11 Jan 2026", "18:30:", 0, "2026-01-11", 35, 35, "agotado", null], ["15 Jan 2026", "20:00:", 0, "2026-01-15", 20, 20, "venta", null], ["17 Jan 2026", "17:00:", 2, "2026-01-17", 20, 18, "venta", null], ["18 Jan 2026", "18:30:", 0, "2026-01-18", 0, 0, "agotado", null], ["22 Jan 2026", "20:00:", 0, "2026-01-22", 20, 20, "venta", null], ["24 Jan 2026", "17:00:", 0, "2026-01-24", 20, 20, "venta", null], ["31 Jan 2026", "17:00:", 0, "2026-01-31", 20, 20, "agotado", null], ["14 Feb 2026", "17:00:", 0, "2026-02-14", 20, 20, "agotado", null], ["28 Feb 2026", "17:00:", 0, "2026-02-28", 20, 20, "agotado", null]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["12 Dec 2025", "20:00:", 7, "2025-12-12", 60, 53, "venta", null], ["13 Dec 2025", "17:00:", 0, "2025-12-13", 0, 0, "agotado", null], ["14 Dec 2025", "18:30:", 13, "2025-12-14", 60, 47, "agotado", null], ["21 Dec 2025", "18:30:", 20, "2025-12-21", 35, 15, "agotado", null], ["27 Dec 2025", "17:00:", 6, "2025-12-27", 30, 24, "venta", null], ["28 Dec 2025", "18:30:", 11, "2025-12-28", 35, 24, "agotado", null], ["08 Jan 2026", "20:00:", 0, "2026-01-08", 20, 20, "venta", null], ["10 Jan 2026", "17:00:", 0, "2026-01-10", 20, 20, "venta", null], ["11 Jan 2026", "18:30:", 0, "2026-01-11", 35, 35, "agotado", null], ["15 Jan 2026", "20:00:", 0, "2026-01-15", 20, 20, "venta", null], ["17 Jan 2026", "17:00:", 2, "2026-01-17", 20, 18, "venta", null], ["18 Jan 2026", "18:30:", 0, "2026-01-18", 0, 0, "agotado", null], ["22 Jan 2026", "20:00:", 0, "2026-01-22", 20, 20, "venta", null], ["24 Jan 2026", "17:00:", 0, "2026-01-24", 20, 20, "venta", null], ["31 Jan 2026", "17:00:", 0, "2026-01-31", 20, 20, "agotado", null], ["14 Feb 2026", "17:00:", 0, "2026-02-14", 20, 20, "agotado", null], ["28 Feb 2026", "17:00:", 0, "2026-02-28", 20, 20, "agotado", null]]}}, "pasadas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": []}}}, "Miedo": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["12 Dec 2025", "23:00:", 9, "2025-12-12", 48, 39, null, "agotado"], ["19 Dec 2025", "23:00:", 0, "2025-12-19", 48, 48, null, "agotado"], ["22 Dec 2025", "21:30:", 5, "2025-12-22", 48, 43, null, "agotado"], ["26 Dec 2025", "23:00:", 0, "2025-12-26", 48, 48, null, "agotado"], ["09 Jan 2026", "23:00:", 0, "2026-01-09", 48, 48, null, "agotado"], ["16 Jan 2026", "23:00:", 0, "2026-01-16", 48, 48, null, "agotado"], ["23 Jan 2026", "23:00:", 0, "2026-01-23", 48, 48, null, "agotado"], ["30 Jan 2026", "23:00:", 0, "2026-01-30", 48, 48, null, "agotado"]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["12 Dec 2025", "23:00:", 9, "2025-12-12", 48, 39, null, "agotado"], ["19 Dec 2025", "23:00:", 0, "2025-12-19", 48, 48, null, "agotado"], ["22 Dec 2025", "21:30:", 5, "2025-12-22", 48, 43, null, "agotado"], ["26 Dec 2025", "23:00:", 0, "2025-12-26", 48, 48, null, "agotado"], ["09 Jan 2026", "23:00:", 0, "2026-01-09", 48, 48, null, "agotado"], ["16 Jan 2026", "23:00:", 0, "2026-01-16", 48, 48, null, "agotado"], ["23 Jan 2026", "23:00:", 0, "2026-01-23", 48, 48, null, "agotado"], ["30 Jan 2026", "23:00:", 0, "2026-01-30", 48, 48, null, "agotado"]]}}, "pasadas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": []}}}}, "fever_urls": {"Miedo": "https://feverup.com/m/290561", "Disfruta": "https://feverup.com/m/159767"}}</script>
+>>>>>>> Stashed changes
+>>>>>>> 8c8cd8a (Limpieza de archivos de debug y Fever)
 
   <script>
     const payload = JSON.parse(document.getElementById("PAYLOAD").textContent);
     const eventos = payload.eventos || {};
-    const feverUrls = payload.fever_urls || {};
     let active = Object.keys(eventos)[0] || null;
     let subMode = "proximas"; // o "pasadas"
 
@@ -484,8 +458,7 @@
         fecha_iso: r[3],
         cap: r[4],
         stock: r[5],
-        abono: (r.length >= 7 ? r[6] : null),
-        fever: (r.length >= 8 ? r[7] : null)
+        abono: (r.length >= 7 ? r[6] : null)
       }));
 
       const today = new Date();
@@ -499,15 +472,13 @@
         return subMode === "pasadas" ? dtDay < today : dtDay >= today;
       });
 
-      return rows.map(r => [r.fecha_label, r.hora, r.vendidas, r.fecha_iso, r.cap, r.stock, r.abono, r.fever]);
+      return rows.map(r => [r.fecha_label, r.hora, r.vendidas, r.fecha_iso, r.cap, r.stock, r.abono]);
     }
 
     // === Render ===
     function render() {
       const cont = document.getElementById("list");
-      const feverCont = document.getElementById("fever-container");
       cont.innerHTML = "";
-      feverCont.innerHTML = "";
 
       if (!active || !eventos[active]) return;
 
@@ -525,8 +496,7 @@
         fecha_iso: r[3],
         cap: r[4],
         stock: r[5],
-        abono: (r.length >= 7 ? r[6] : null),
-        fever: (r.length >= 8 ? r[7] : null)
+        abono: (r.length >= 7 ? r[6] : null)
       }));
 
       // Ordenar
@@ -565,17 +535,7 @@
           }
         }
 
-        // === Fever Chip ===
-        let feverHTML = "";
-        if (r.fever) {
-          if (r.fever === "venta") {
-            feverHTML = `<div class="chip green abono-chip">Fever: Disponible</div>`;
-          } else if (r.fever === "agotado") {
-            feverHTML = `<div class="chip sold abono-chip">Fever: Agotado</div>`;
-          }
-        }
-
-        // === Texto "vendidas / capacidad" para Escondido ===
+        // Texto "vendidas / capacidad" para Escondido
         let ventaLabel = `Vendidas: ${r.vendidas}`;
         if (esEscondido && r.cap) {
           const cap = Number(r.cap) || 0;
@@ -587,16 +547,15 @@
         const diaSemana = dayName(r.fecha_iso);
 
         div.innerHTML = `
-      <div class="item-left">
-        <div class="item-date">${r.fecha_label} <span style="opacity:0.6; font-weight:400">(${diaSemana})</span></div>
-        <div class="item-time">${r.hora} h</div>
-      </div>
-      <div class="item-right">
-        <div class="chip ${chip}">${ventaLabel}</div>
-        ${abonoHTML}
-        ${feverHTML}
-      </div>
-    `;
+          <div class="item-left">
+            <div class="item-date">${r.fecha_label} <span style="opacity:0.6; font-weight:400">(${diaSemana})</span></div>
+            <div class="item-time">${r.hora} h</div>
+          </div>
+          <div class="item-right">
+            <div class="chip ${chip}">${ventaLabel}</div>
+            ${abonoHTML}
+          </div>
+        `;
         cont.appendChild(div);
       }
     }

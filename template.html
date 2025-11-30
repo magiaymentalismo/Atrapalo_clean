@@ -22,7 +22,6 @@
       --accent-green: #34c759;
       --accent-orange: #ff9f0a;
       --accent-red: #ff453a;
-      --accent-fever: #ff2a5b;
 
       --blur-md: 20px;
       --radius-lg: 24px;
@@ -66,7 +65,6 @@
       justify-content: center;
       z-index: 1000;
       pointer-events: none;
-      /* Let clicks pass through around the island */
     }
 
     .dynamic-island {
@@ -115,7 +113,6 @@
       scrollbar-width: none;
       view-transition-name: tabs-container;
       justify-content: center;
-      /* Center tabs on desktop */
     }
 
     @media(max-width: 600px) {
@@ -300,35 +297,6 @@
       opacity: 0.9;
     }
 
-    /* --- FEVER BUTTON --- */
-    .fever-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--accent-fever);
-      color: #fff;
-      text-decoration: none;
-      padding: 8px 16px;
-      border-radius: var(--radius-full);
-      font-size: 13px;
-      font-weight: 700;
-      box-shadow: 0 4px 15px rgba(255, 42, 91, 0.4);
-      transition: transform 0.2s;
-      margin-bottom: 16px;
-    }
-
-    .fever-btn:hover {
-      transform: scale(1.05);
-    }
-
-    .fever-icon {
-      width: 14px;
-      height: 14px;
-      background: #fff;
-      mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>') no-repeat center;
-      -webkit-mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>') no-repeat center;
-    }
-
     @media (max-width: 600px) {
       .wrap {
         padding: 16px;
@@ -369,9 +337,8 @@
     <div id="tabs" class="tabs"></div>
 
     <div class="panel">
-      <div style="display:flex; justify-content:space-between; align-items:center">
+      <div style="display:flex; justify-content:flex-start; align-items:center">
         <div id="subtabs" class="subtabs"></div>
-        <div id="fever-container"></div>
       </div>
       <div id="list" class="list"></div>
     </div>
@@ -382,7 +349,6 @@
   <script>
     const payload = JSON.parse(document.getElementById("PAYLOAD").textContent);
     const eventos = payload.eventos || {};
-    const feverUrls = payload.fever_urls || {};
     let active = Object.keys(eventos)[0] || null;
     let subMode = "proximas"; // o "pasadas"
 
@@ -484,8 +450,7 @@
         fecha_iso: r[3],
         cap: r[4],
         stock: r[5],
-        abono: (r.length >= 7 ? r[6] : null),
-        fever: (r.length >= 8 ? r[7] : null)
+        abono: (r.length >= 7 ? r[6] : null)
       }));
 
       const today = new Date();
@@ -499,15 +464,13 @@
         return subMode === "pasadas" ? dtDay < today : dtDay >= today;
       });
 
-      return rows.map(r => [r.fecha_label, r.hora, r.vendidas, r.fecha_iso, r.cap, r.stock, r.abono, r.fever]);
+      return rows.map(r => [r.fecha_label, r.hora, r.vendidas, r.fecha_iso, r.cap, r.stock, r.abono]);
     }
 
     // === Render ===
     function render() {
       const cont = document.getElementById("list");
-      const feverCont = document.getElementById("fever-container");
       cont.innerHTML = "";
-      feverCont.innerHTML = "";
 
       if (!active || !eventos[active]) return;
 
@@ -525,8 +488,7 @@
         fecha_iso: r[3],
         cap: r[4],
         stock: r[5],
-        abono: (r.length >= 7 ? r[6] : null),
-        fever: (r.length >= 8 ? r[7] : null)
+        abono: (r.length >= 7 ? r[6] : null)
       }));
 
       // Ordenar
@@ -565,17 +527,7 @@
           }
         }
 
-        // === Fever Chip ===
-        let feverHTML = "";
-        if (r.fever) {
-          if (r.fever === "venta") {
-            feverHTML = `<div class="chip green abono-chip">Fever: Disponible</div>`;
-          } else if (r.fever === "agotado") {
-            feverHTML = `<div class="chip sold abono-chip">Fever: Agotado</div>`;
-          }
-        }
-
-        // === Texto "vendidas / capacidad" para Escondido ===
+        // Texto "vendidas / capacidad" para Escondido
         let ventaLabel = `Vendidas: ${r.vendidas}`;
         if (esEscondido && r.cap) {
           const cap = Number(r.cap) || 0;
@@ -587,16 +539,15 @@
         const diaSemana = dayName(r.fecha_iso);
 
         div.innerHTML = `
-      <div class="item-left">
-        <div class="item-date">${r.fecha_label} <span style="opacity:0.6; font-weight:400">(${diaSemana})</span></div>
-        <div class="item-time">${r.hora} h</div>
-      </div>
-      <div class="item-right">
-        <div class="chip ${chip}">${ventaLabel}</div>
-        ${abonoHTML}
-        ${feverHTML}
-      </div>
-    `;
+          <div class="item-left">
+            <div class="item-date">${r.fecha_label} <span style="opacity:0.6; font-weight:400">(${diaSemana})</span></div>
+            <div class="item-time">${r.hora} h</div>
+          </div>
+          <div class="item-right">
+            <div class="chip ${chip}">${ventaLabel}</div>
+            ${abonoHTML}
+          </div>
+        `;
         cont.appendChild(div);
       }
     }
