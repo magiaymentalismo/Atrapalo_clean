@@ -1,0 +1,20 @@
+{
+    "name": "Cartelera Magia",
+    "short_name": "Cartelera",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#000000",
+    "icons": [
+        {
+            "src": "https://cdn-icons-png.flaticon.com/512/2665/2665038.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "https://cdn-icons-png.flaticon.com/512/2665/2665038.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
