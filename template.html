@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Cartelera — Magia & Teatro</title>
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="manifest.json?v=20251201">
   <meta name="theme-color" content="#000000">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -298,7 +298,7 @@
     for (const sala of Object.keys(eventos)) {
       const ev = eventos[sala];
       const total = (ev.proximas?.table?.rows?.length || 0) +
-                    (ev.pasadas?.table?.rows?.length || 0);
+        (ev.pasadas?.table?.rows?.length || 0);
       const b = document.createElement("button");
       b.textContent = `${sala} (${total})`;
       b.dataset.tab = sala;
@@ -351,40 +351,40 @@
         cap: r[4], stock: r[5], abono: r[6]
       }));
 
-      rows.sort((a,b)=> (a.fecha_iso+a.hora).localeCompare(b.fecha_iso+b.hora));
+      rows.sort((a, b) => (a.fecha_iso + a.hora).localeCompare(b.fecha_iso + b.hora));
 
       let currentMonth = null;
       for (const r of rows) {
-        const d = new Date(r.fecha_iso+"T00:00:00");
-        const key = d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0");
+        const d = new Date(r.fecha_iso + "T00:00:00");
+        const key = d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0");
         if (key !== currentMonth) {
           currentMonth = key;
           const h = document.createElement("h3");
           h.className = "month";
-          h.textContent = d.toLocaleDateString("es-ES",{month:"long",year:"numeric"});
+          h.textContent = d.toLocaleDateString("es-ES", { month: "long", year: "numeric" });
           cont.appendChild(h);
         }
 
-        const chip = r.stock===0 ? "sold" :
-                     r.vendidas>=10 ? "gold" :
-                     r.vendidas>=1 ? "green" : "gray";
+        const chip = r.stock === 0 ? "sold" :
+          r.vendidas >= 10 ? "gold" :
+            r.vendidas >= 1 ? "green" : "gray";
 
-        let abonoHTML="";
-        if (active==="Escondido" && r.abono){
-          if(r.abono==="venta") abonoHTML=`<div class="chip green abono-chip">Abono: Disponible</div>`;
-          if(r.abono==="agotado") abonoHTML=`<div class="chip sold abono-chip">Abono: Agotado</div>`;
+        let abonoHTML = "";
+        if (active === "Escondido" && r.abono) {
+          if (r.abono === "venta") abonoHTML = `<div class="chip green abono-chip">Abono: Disponible</div>`;
+          if (r.abono === "agotado") abonoHTML = `<div class="chip sold abono-chip">Abono: Agotado</div>`;
         }
 
-        const div=document.createElement("div");
-        div.className="item";
-        div.innerHTML=`
+        const div = document.createElement("div");
+        div.className = "item";
+        div.innerHTML = `
           <div class="item-left">
             <div class="item-date">${r.fecha_label} <span style="opacity:0.6">(${dayName(r.fecha_iso)})</span></div>
             <div class="item-time">${r.hora} h</div>
           </div>
           <div class="item-right">
             <div class="chip ${chip}">
-              ${active==="Escondido" ? `${r.vendidas} / ${r.cap} · Quedan ${r.stock}` : `Vendidas: ${r.vendidas}`}
+              ${active === "Escondido" ? `${r.vendidas} / ${r.cap} · Quedan ${r.stock}` : `Vendidas: ${r.vendidas}`}
             </div>
             ${abonoHTML}
           </div>`;
@@ -393,6 +393,11 @@
     }
 
     render();
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js?v=20251201').then(r => console.log('SW Registered')).catch(console.error);
+    }
   </script>
 </body>
 

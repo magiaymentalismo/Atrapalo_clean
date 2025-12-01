@@ -15,7 +15,11 @@ self.addEventListener('activate', (event) => {
         // Tomamos todos los clientes (pestañas) y los recargamos
         const clients = await self.clients.matchAll({ type: 'window', includeUncontrolled: true });
         for (const client of clients) {
-          client.navigate(client.url);
+          if (!client.url.includes('sw_reloaded=true')) {
+            const newUrl = new URL(client.url);
+            newUrl.searchParams.set('sw_reloaded', 'true');
+            client.navigate(newUrl.toString());
+          }
         }
       } catch (e) {
         // Si algo falla, al menos no rompemos la página
