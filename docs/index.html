@@ -46,7 +46,6 @@
       min-height: 100vh;
       padding-bottom: 40px;
       padding-top: calc(var(--safe-top) + 60px);
-      /* Space for Dynamic Island */
     }
 
     .wrap {
@@ -55,7 +54,7 @@
       padding: 20px;
     }
 
-    /* --- DYNAMIC ISLAND HEADER --- */
+    /* Dynamic Island */
     .dynamic-island-container {
       position: fixed;
       top: 10px;
@@ -83,15 +82,9 @@
       max-width: 90%;
     }
 
-    .dynamic-island:active {
-      transform: scale(0.98);
-    }
-
     .island-title {
       font-size: 15px;
       font-weight: 700;
-      color: #fff;
-      white-space: nowrap;
     }
 
     .island-meta {
@@ -99,10 +92,9 @@
       color: var(--text-secondary);
       border-left: 1px solid rgba(255, 255, 255, 0.2);
       padding-left: 12px;
-      white-space: nowrap;
     }
 
-    /* --- TABS --- */
+    /* Tabs */
     .tabs {
       display: flex;
       gap: 12px;
@@ -111,14 +103,7 @@
       padding: 4px;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
-      view-transition-name: tabs-container;
       justify-content: center;
-    }
-
-    @media(max-width: 600px) {
-      .tabs {
-        justify-content: flex-start;
-      }
     }
 
     .tabs::-webkit-scrollbar {
@@ -135,13 +120,9 @@
       font-weight: 600;
       cursor: pointer;
       white-space: nowrap;
-      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      transition: all 0.3s;
       backdrop-filter: blur(var(--blur-md));
       -webkit-backdrop-filter: blur(var(--blur-md));
-    }
-
-    .tab:hover {
-      background: rgba(255, 255, 255, 0.15);
     }
 
     .tab.active {
@@ -150,10 +131,9 @@
       border-color: transparent;
       box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
       transform: scale(1.02);
-      view-transition-name: active-tab;
     }
 
-    /* --- PANEL --- */
+    /* Panel */
     .panel {
       background: rgba(20, 20, 20, 0.4);
       border: 1px solid var(--glass-border);
@@ -162,10 +142,9 @@
       backdrop-filter: blur(40px);
       -webkit-backdrop-filter: blur(40px);
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-      view-transition-name: content-panel;
     }
 
-    /* --- SUBTABS --- */
+    /* Subtabs */
     .subtabs {
       display: inline-flex;
       background: rgba(0, 0, 0, 0.3);
@@ -180,21 +159,15 @@
       border-radius: var(--radius-full);
       color: var(--text-secondary);
       font-size: 14px;
-      font-weight: 600;
       cursor: pointer;
-      border: none;
-      background: transparent;
-      transition: all 0.2s ease;
     }
 
     .subtab.active {
       background: rgba(255, 255, 255, 0.15);
       color: #fff;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-      view-transition-name: active-subtab;
     }
 
-    /* --- LIST & ITEMS --- */
+    /* Items */
     .list {
       display: flex;
       flex-direction: column;
@@ -207,21 +180,17 @@
       font-weight: 700;
       color: var(--accent-gold);
       text-transform: capitalize;
-      letter-spacing: 0.5px;
       padding-left: 8px;
     }
 
     .item {
       display: flex;
       justify-content: space-between;
-      align-items: center;
       padding: 20px;
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid var(--glass-border);
       border-radius: var(--radius-md);
-      transition: transform 0.2s ease, background 0.2s ease;
-      position: relative;
-      overflow: hidden;
+      transition: 0.2s;
     }
 
     .item:hover {
@@ -232,19 +201,16 @@
     .item-left {
       display: flex;
       flex-direction: column;
-      gap: 4px;
     }
 
     .item-date {
       font-size: 17px;
       font-weight: 600;
-      color: #fff;
     }
 
     .item-time {
       font-size: 15px;
       color: var(--text-secondary);
-      font-weight: 500;
     }
 
     .item-right {
@@ -254,7 +220,6 @@
       gap: 8px;
     }
 
-    /* --- CHIPS --- */
     .chip {
       padding: 6px 12px;
       border-radius: 8px;
@@ -268,25 +233,21 @@
     .chip.green {
       background: rgba(52, 199, 89, 0.2);
       color: var(--accent-green);
-      border: 1px solid rgba(52, 199, 89, 0.3);
     }
 
     .chip.gold {
       background: rgba(255, 215, 0, 0.15);
       color: var(--accent-gold);
-      border: 1px solid rgba(255, 215, 0, 0.3);
     }
 
     .chip.gray {
       background: rgba(255, 255, 255, 0.1);
       color: var(--text-secondary);
-      border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .chip.sold {
       background: rgba(255, 69, 58, 0.15);
       color: var(--accent-red);
-      border: 1px solid rgba(255, 69, 58, 0.3);
       text-decoration: line-through;
     }
 
@@ -294,38 +255,12 @@
       font-size: 11px;
       padding: 4px 8px;
       border-radius: 6px;
-      opacity: 0.9;
-    }
-
-    @media (max-width: 600px) {
-      .wrap {
-        padding: 16px;
-      }
-
-      .item {
-        padding: 16px;
-      }
-
-      .item-date {
-        font-size: 16px;
-      }
-
-      .dynamic-island {
-        width: auto;
-      }
-    }
-
-    /* View Transitions */
-    ::view-transition-old(root),
-    ::view-transition-new(root) {
-      animation-duration: 0.3s;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Dynamic Island Header -->
   <div class="dynamic-island-container">
     <div class="dynamic-island">
       <div class="island-title">Cartelera</div>
@@ -344,48 +279,31 @@
     </div>
   </div>
 
-  <script id="PAYLOAD" type="application/json">{"generated_at": "2025-12-01T19:27:00.333903+01:00", "eventos": {"Escondido": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["12 Dec 2025", "20:00:", 7, "2025-12-12", 60, 53, "venta", null], ["13 Dec 2025", "17:00:", 0, "2025-12-13", 0, 0, "agotado", null], ["14 Dec 2025", "18:30:", 13, "2025-12-14", 60, 47, "agotado", null], ["21 Dec 2025", "18:30:", 20, "2025-12-21", 35, 15, "agotado", null], ["27 Dec 2025", "17:00:", 6, "2025-12-27", 30, 24, "venta", null], ["28 Dec 2025", "18:30:", 11, "2025-12-28", 35, 24, "agotado", null], ["08 Jan 2026", "20:00:", 0, "2026-01-08", 20, 20, "venta", null], ["10 Jan 2026", "17:00:", 0, "2026-01-10", 20, 20, "venta", null], ["11 Jan 2026", "18:30:", 0, "2026-01-11", 35, 35, "agotado", null], ["15 Jan 2026", "20:00:", 0, "2026-01-15", 20, 20, "venta", null], ["17 Jan 2026", "17:00:", 2, "2026-01-17", 20, 18, "venta", null], ["18 Jan 2026", "18:30:", 0, "2026-01-18", 35, 35, "agotado", null], ["22 Jan 2026", "20:00:", 0, "2026-01-22", 20, 20, "venta", null], ["24 Jan 2026", "17:00:", 0, "2026-01-24", 20, 20, "venta", null], ["25 Jan 2026", "18:30:", 0, "2026-01-25", 35, 35, "agotado", null], ["29 Jan 2026", "20:00:", 0, "2026-01-29", 20, 20, "venta", null], ["31 Jan 2026", "17:00:", 0, "2026-01-31", 20, 20, "agotado", null], ["14 Feb 2026", "17:00:", 0, "2026-02-14", 20, 20, "agotado", null], ["28 Feb 2026", "17:00:", 0, "2026-02-28", 20, 20, "agotado", null]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["12 Dec 2025", "20:00:", 7, "2025-12-12", 60, 53, "venta", null], ["13 Dec 2025", "17:00:", 0, "2025-12-13", 0, 0, "agotado", null], ["14 Dec 2025", "18:30:", 13, "2025-12-14", 60, 47, "agotado", null], ["21 Dec 2025", "18:30:", 20, "2025-12-21", 35, 15, "agotado", null], ["27 Dec 2025", "17:00:", 6, "2025-12-27", 30, 24, "venta", null], ["28 Dec 2025", "18:30:", 11, "2025-12-28", 35, 24, "agotado", null], ["08 Jan 2026", "20:00:", 0, "2026-01-08", 20, 20, "venta", null], ["10 Jan 2026", "17:00:", 0, "2026-01-10", 20, 20, "venta", null], ["11 Jan 2026", "18:30:", 0, "2026-01-11", 35, 35, "agotado", null], ["15 Jan 2026", "20:00:", 0, "2026-01-15", 20, 20, "venta", null], ["17 Jan 2026", "17:00:", 2, "2026-01-17", 20, 18, "venta", null], ["18 Jan 2026", "18:30:", 0, "2026-01-18", 35, 35, "agotado", null], ["22 Jan 2026", "20:00:", 0, "2026-01-22", 20, 20, "venta", null], ["24 Jan 2026", "17:00:", 0, "2026-01-24", 20, 20, "venta", null], ["25 Jan 2026", "18:30:", 0, "2026-01-25", 35, 35, "agotado", null], ["29 Jan 2026", "20:00:", 0, "2026-01-29", 20, 20, "venta", null], ["31 Jan 2026", "17:00:", 0, "2026-01-31", 20, 20, "agotado", null], ["14 Feb 2026", "17:00:", 0, "2026-02-14", 20, 20, "agotado", null], ["28 Feb 2026", "17:00:", 0, "2026-02-28", 20, 20, "agotado", null]]}}, "pasadas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": []}}}, "Disfruta": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["26 Nov 2025", "20:00:", 12, "2025-11-26", 48, 36, null, "agotado"], ["10 Dec 2025", "20:00:", 0, "2025-12-10", 48, 48, null, "agotado"], ["17 Dec 2025", "20:00:", 0, "2025-12-17", 48, 48, null, "agotado"], ["23 Dec 2025", "21:00:", 5, "2025-12-23", 51, 46, null, "agotado"], ["05 Jan 2026", "21:00:", 0, "2026-01-05", 51, 51, null, "agotado"], ["06 Jan 2026", "21:00:", 0, "2026-01-06", 51, 51, null, "agotado"], ["07 Jan 2026", "20:00:", 0, "2026-01-07", 48, 48, null, "agotado"], ["14 Jan 2026", "20:00:", 0, "2026-01-14", 48, 48, null, "agotado"], ["21 Jan 2026", "20:00:", 0, "2026-01-21", 48, 48, null, "agotado"], ["28 Jan 2026", "20:00:", 0, "2026-01-28", 48, 48, null, "agotado"]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["10 Dec 2025", "20:00:", 0, "2025-12-10", 48, 48, null, "agotado"], ["17 Dec 2025", "20:00:", 0, "2025-12-17", 48, 48, null, "agotado"], ["23 Dec 2025", "21:00:", 5, "2025-12-23", 51, 46, null, "agotado"], ["05 Jan 2026", "21:00:", 0, "2026-01-05", 51, 51, null, "agotado"], ["06 Jan 2026", "21:00:", 0, "2026-01-06", 51, 51, null, "agotado"], ["07 Jan 2026", "20:00:", 0, "2026-01-07", 48, 48, null, "agotado"], ["14 Jan 2026", "20:00:", 0, "2026-01-14", 48, 48, null, "agotado"], ["21 Jan 2026", "20:00:", 0, "2026-01-21", 48, 48, null, "agotado"], ["28 Jan 2026", "20:00:", 0, "2026-01-28", 48, 48, null, "agotado"]]}}, "pasadas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["26 Nov 2025", "20:00:", 12, "2025-11-26", 48, 36, null, "agotado"]]}}}, "Miedo": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["12 Dec 2025", "23:00:", 9, "2025-12-12", 48, 39, null, "agotado"], ["19 Dec 2025", "23:00:", 0, "2025-12-19", 48, 48, null, "agotado"], ["22 Dec 2025", "21:30:", 5, "2025-12-22", 48, 43, null, "agotado"], ["26 Dec 2025", "23:00:", 0, "2025-12-26", 48, 48, null, "agotado"], ["09 Jan 2026", "23:00:", 0, "2026-01-09", 48, 48, null, "agotado"], ["16 Jan 2026", "23:00:", 0, "2026-01-16", 48, 48, null, "agotado"], ["23 Jan 2026", "23:00:", 0, "2026-01-23", 48, 48, null, "agotado"], ["30 Jan 2026", "23:00:", 0, "2026-01-30", 48, 48, null, "agotado"]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["12 Dec 2025", "23:00:", 9, "2025-12-12", 48, 39, null, "agotado"], ["19 Dec 2025", "23:00:", 0, "2025-12-19", 48, 48, null, "agotado"], ["22 Dec 2025", "21:30:", 5, "2025-12-22", 48, 43, null, "agotado"], ["26 Dec 2025", "23:00:", 0, "2025-12-26", 48, 48, null, "agotado"], ["09 Jan 2026", "23:00:", 0, "2026-01-09", 48, 48, null, "agotado"], ["16 Jan 2026", "23:00:", 0, "2026-01-16", 48, 48, null, "agotado"], ["23 Jan 2026", "23:00:", 0, "2026-01-23", 48, 48, null, "agotado"], ["30 Jan 2026", "23:00:", 0, "2026-01-30", 48, 48, null, "agotado"]]}}, "pasadas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": []}}}}, "fever_urls": {"Miedo": "https://feverup.com/m/290561", "Disfruta": "https://feverup.com/m/159767"}}</script>
+  <!-- PAYLOAD -->
+  <script id="PAYLOAD" type="application/json">{"generated_at": "2025-12-01T19:53:15.637577+01:00", "eventos": {"Escondido": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["12 Dec 2025", "20:00:", 7, "2025-12-12", 60, 53, "venta", null], ["13 Dec 2025", "17:00:", 0, "2025-12-13", 0, 0, "agotado", null], ["14 Dec 2025", "18:30:", 13, "2025-12-14", 60, 47, "agotado", null], ["21 Dec 2025", "18:30:", 20, "2025-12-21", 35, 15, "agotado", null], ["27 Dec 2025", "17:00:", 6, "2025-12-27", 30, 24, "venta", null], ["28 Dec 2025", "18:30:", 11, "2025-12-28", 35, 24, "agotado", null], ["08 Jan 2026", "20:00:", 0, "2026-01-08", 20, 20, "venta", null], ["10 Jan 2026", "17:00:", 0, "2026-01-10", 20, 20, "venta", null], ["11 Jan 2026", "18:30:", 0, "2026-01-11", 35, 35, "agotado", null], ["15 Jan 2026", "20:00:", 0, "2026-01-15", 20, 20, "venta", null], ["17 Jan 2026", "17:00:", 2, "2026-01-17", 20, 18, "venta", null], ["18 Jan 2026", "18:30:", 0, "2026-01-18", 35, 35, "agotado", null], ["22 Jan 2026", "20:00:", 0, "2026-01-22", 20, 20, "venta", null], ["24 Jan 2026", "17:00:", 0, "2026-01-24", 20, 20, "venta", null], ["25 Jan 2026", "18:30:", 0, "2026-01-25", 35, 35, "agotado", null], ["29 Jan 2026", "20:00:", 0, "2026-01-29", 20, 20, "venta", null], ["31 Jan 2026", "17:00:", 0, "2026-01-31", 20, 20, "agotado", null], ["14 Feb 2026", "17:00:", 0, "2026-02-14", 20, 20, "agotado", null], ["28 Feb 2026", "17:00:", 0, "2026-02-28", 20, 20, "agotado", null]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["12 Dec 2025", "20:00:", 7, "2025-12-12", 60, 53, "venta", null], ["13 Dec 2025", "17:00:", 0, "2025-12-13", 0, 0, "agotado", null], ["14 Dec 2025", "18:30:", 13, "2025-12-14", 60, 47, "agotado", null], ["21 Dec 2025", "18:30:", 20, "2025-12-21", 35, 15, "agotado", null], ["27 Dec 2025", "17:00:", 6, "2025-12-27", 30, 24, "venta", null], ["28 Dec 2025", "18:30:", 11, "2025-12-28", 35, 24, "agotado", null], ["08 Jan 2026", "20:00:", 0, "2026-01-08", 20, 20, "venta", null], ["10 Jan 2026", "17:00:", 0, "2026-01-10", 20, 20, "venta", null], ["11 Jan 2026", "18:30:", 0, "2026-01-11", 35, 35, "agotado", null], ["15 Jan 2026", "20:00:", 0, "2026-01-15", 20, 20, "venta", null], ["17 Jan 2026", "17:00:", 2, "2026-01-17", 20, 18, "venta", null], ["18 Jan 2026", "18:30:", 0, "2026-01-18", 35, 35, "agotado", null], ["22 Jan 2026", "20:00:", 0, "2026-01-22", 20, 20, "venta", null], ["24 Jan 2026", "17:00:", 0, "2026-01-24", 20, 20, "venta", null], ["25 Jan 2026", "18:30:", 0, "2026-01-25", 35, 35, "agotado", null], ["29 Jan 2026", "20:00:", 0, "2026-01-29", 20, 20, "venta", null], ["31 Jan 2026", "17:00:", 0, "2026-01-31", 20, 20, "agotado", null], ["14 Feb 2026", "17:00:", 0, "2026-02-14", 20, 20, "agotado", null], ["28 Feb 2026", "17:00:", 0, "2026-02-28", 20, 20, "agotado", null]]}}, "pasadas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": []}}}, "Disfruta": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["26 Nov 2025", "20:00:", 12, "2025-11-26", 48, 36, null, "agotado"], ["10 Dec 2025", "20:00:", 0, "2025-12-10", 48, 48, null, "agotado"], ["17 Dec 2025", "20:00:", 0, "2025-12-17", 48, 48, null, "agotado"], ["23 Dec 2025", "21:00:", 5, "2025-12-23", 51, 46, null, "agotado"], ["05 Jan 2026", "21:00:", 0, "2026-01-05", 51, 51, null, "agotado"], ["06 Jan 2026", "21:00:", 0, "2026-01-06", 51, 51, null, "agotado"], ["07 Jan 2026", "20:00:", 0, "2026-01-07", 48, 48, null, "agotado"], ["14 Jan 2026", "20:00:", 0, "2026-01-14", 48, 48, null, "agotado"], ["21 Jan 2026", "20:00:", 0, "2026-01-21", 48, 48, null, "agotado"], ["28 Jan 2026", "20:00:", 0, "2026-01-28", 48, 48, null, "agotado"]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["10 Dec 2025", "20:00:", 0, "2025-12-10", 48, 48, null, "agotado"], ["17 Dec 2025", "20:00:", 0, "2025-12-17", 48, 48, null, "agotado"], ["23 Dec 2025", "21:00:", 5, "2025-12-23", 51, 46, null, "agotado"], ["05 Jan 2026", "21:00:", 0, "2026-01-05", 51, 51, null, "agotado"], ["06 Jan 2026", "21:00:", 0, "2026-01-06", 51, 51, null, "agotado"], ["07 Jan 2026", "20:00:", 0, "2026-01-07", 48, 48, null, "agotado"], ["14 Jan 2026", "20:00:", 0, "2026-01-14", 48, 48, null, "agotado"], ["21 Jan 2026", "20:00:", 0, "2026-01-21", 48, 48, null, "agotado"], ["28 Jan 2026", "20:00:", 0, "2026-01-28", 48, 48, null, "agotado"]]}}, "pasadas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["26 Nov 2025", "20:00:", 12, "2025-11-26", 48, 36, null, "agotado"]]}}}, "Miedo": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["12 Dec 2025", "23:00:", 9, "2025-12-12", 48, 39, null, "agotado"], ["19 Dec 2025", "23:00:", 0, "2025-12-19", 48, 48, null, "agotado"], ["22 Dec 2025", "21:30:", 5, "2025-12-22", 48, 43, null, "agotado"], ["26 Dec 2025", "23:00:", 0, "2025-12-26", 48, 48, null, "agotado"], ["09 Jan 2026", "23:00:", 0, "2026-01-09", 48, 48, null, "agotado"], ["16 Jan 2026", "23:00:", 0, "2026-01-16", 48, 48, null, "agotado"], ["23 Jan 2026", "23:00:", 0, "2026-01-23", 48, 48, null, "agotado"], ["30 Jan 2026", "23:00:", 0, "2026-01-30", 48, 48, null, "agotado"]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": [["12 Dec 2025", "23:00:", 9, "2025-12-12", 48, 39, null, "agotado"], ["19 Dec 2025", "23:00:", 0, "2025-12-19", 48, 48, null, "agotado"], ["22 Dec 2025", "21:30:", 5, "2025-12-22", 48, 43, null, "agotado"], ["26 Dec 2025", "23:00:", 0, "2025-12-26", 48, 48, null, "agotado"], ["09 Jan 2026", "23:00:", 0, "2026-01-09", 48, 48, null, "agotado"], ["16 Jan 2026", "23:00:", 0, "2026-01-16", 48, 48, null, "agotado"], ["23 Jan 2026", "23:00:", 0, "2026-01-23", 48, 48, null, "agotado"], ["30 Jan 2026", "23:00:", 0, "2026-01-30", 48, 48, null, "agotado"]]}}, "pasadas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever"], "rows": []}}}}, "fever_urls": {"Miedo": "https://feverup.com/m/290561", "Disfruta": "https://feverup.com/m/159767"}}</script>
 
   <script>
     const payload = JSON.parse(document.getElementById("PAYLOAD").textContent);
     const eventos = payload.eventos || {};
     let active = Object.keys(eventos)[0] || null;
-    let subMode = "proximas"; // o "pasadas"
+    let subMode = "proximas";
 
     document.getElementById("meta").textContent =
       new Date(payload.generated_at).toLocaleString("es-ES", {
         hour: '2-digit', minute: '2-digit'
       });
 
-    // === Crear tabs principales (con contador) ===
+    /* Tabs principales */
     const tabsEl = document.getElementById("tabs");
     for (const sala of Object.keys(eventos)) {
       const ev = eventos[sala];
-
-      let total = 0;
-      if (ev.proximas && ev.proximas.table && Array.isArray(ev.proximas.table.rows)) {
-        total += ev.proximas.table.rows.length;
-      }
-      if (ev.pasadas && ev.pasadas.table && Array.isArray(ev.pasadas.table.rows)) {
-        total += ev.pasadas.table.rows.length;
-      }
-      if (!total && ev.table && Array.isArray(ev.table.rows)) {
-        total = ev.table.rows.length;
-      }
-
+      const total = (ev.proximas?.table?.rows?.length || 0) +
+                    (ev.pasadas?.table?.rows?.length || 0);
       const b = document.createElement("button");
       b.textContent = `${sala} (${total})`;
       b.dataset.tab = sala;
       b.className = "tab" + (sala === active ? " active" : "");
-      b.onclick = () => {
-        if (document.startViewTransition) {
-          document.startViewTransition(() => {
-            active = sala; updateTabs(); render();
-          });
-        } else {
-          active = sala; updateTabs(); render();
-        }
-      };
+      b.onclick = () => { active = sala; updateTabs(); render(); };
       tabsEl.appendChild(b);
     }
 
@@ -395,22 +313,14 @@
       });
     }
 
-    // === Crear subtabs ===
+    /* Subtabs */
     const subtabsEl = document.getElementById("subtabs");
     ["proximas", "pasadas"].forEach(mode => {
       const sb = document.createElement("button");
       sb.textContent = mode === "proximas" ? "Próximas" : "Pasadas";
       sb.dataset.mode = mode;
       sb.className = "subtab" + (subMode === mode ? " active" : "");
-      sb.onclick = () => {
-        if (document.startViewTransition) {
-          document.startViewTransition(() => {
-            subMode = mode; updateSubtabs(); render();
-          });
-        } else {
-          subMode = mode; updateSubtabs(); render();
-        }
-      };
+      sb.onclick = () => { subMode = mode; updateSubtabs(); render(); };
       subtabsEl.appendChild(sb);
     });
 
@@ -420,143 +330,66 @@
       });
     }
 
-    // === Día de la semana ===
     const DAYS = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
-    function dayName(fechaIso) {
-      const d = new Date(fechaIso + "T00:00:00");
-      return DAYS[d.getDay()];
+    function dayName(f) {
+      return DAYS[new Date(f + "T00:00:00").getDay()];
     }
 
-    // ---- Util para leer filas según estructura del payload ----
-    function getRowsForActiveAndMode() {
+    function getRows() {
       const ev = eventos[active];
-      if (!ev) return [];
-
-      // Caso 1: payload con proximas/pasadas
-      if (ev.proximas || ev.pasadas) {
-        const sec = ev[subMode];
-        if (!sec || !sec.table || !Array.isArray(sec.table.rows)) return [];
-        return sec.table.rows || [];
-      }
-
-      // Caso 2 (fallback): payload plano con table.rows y filtramos aquí
-      if (!ev.table || !Array.isArray(ev.table.rows)) return [];
-      let rows = ev.table.rows;
-
-      rows = rows.map(r => ({
-        fecha_label: r[0],
-        hora: r[1],
-        vendidas: r[2],
-        fecha_iso: r[3],
-        cap: r[4],
-        stock: r[5],
-        abono: (r.length >= 7 ? r[6] : null)
-      }));
-
-      const today = new Date();
-      today.setHours(0, 0, 0, 0);
-
-      rows = rows.filter(r => {
-        const hora = r.hora || "00:00";
-        const dt = new Date(r.fecha_iso + "T" + hora + ":00");
-        const dtDay = new Date(dt);
-        dtDay.setHours(0, 0, 0, 0);
-        return subMode === "pasadas" ? dtDay < today : dtDay >= today;
-      });
-
-      return rows.map(r => [r.fecha_label, r.hora, r.vendidas, r.fecha_iso, r.cap, r.stock, r.abono]);
+      const sec = ev[subMode];
+      return (sec?.table?.rows) || [];
     }
 
-    // === Render ===
     function render() {
       const cont = document.getElementById("list");
       cont.innerHTML = "";
-
-      if (!active || !eventos[active]) return;
-
-      let rows = getRowsForActiveAndMode();
-      if (!rows || rows.length === 0) {
-        cont.innerHTML = "<p style='color:var(--text-secondary); text-align:center; padding:20px;'>Sin funciones en esta vista.</p>";
-        return;
-      }
-
-      // Parse rows normalizados (7 columnas: incluye Abono)
+      let rows = getRows();
       rows = rows.map(r => ({
-        fecha_label: r[0],
-        hora: r[1],
-        vendidas: r[2],
-        fecha_iso: r[3],
-        cap: r[4],
-        stock: r[5],
-        abono: (r.length >= 7 ? r[6] : null)
+        fecha_label: r[0], hora: r[1],
+        vendidas: r[2], fecha_iso: r[3],
+        cap: r[4], stock: r[5], abono: r[6]
       }));
 
-      // Ordenar
-      rows.sort((a, b) => (a.fecha_iso + a.hora).localeCompare(b.fecha_iso + b.hora));
+      rows.sort((a,b)=> (a.fecha_iso+a.hora).localeCompare(b.fecha_iso+b.hora));
 
-      // Agrupar por mes
-      let currentMonthKey = null;
+      let currentMonth = null;
       for (const r of rows) {
-        const d = new Date(r.fecha_iso + "T00:00:00");
-        const monthKey = d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0");
-        if (monthKey !== currentMonthKey) {
-          currentMonthKey = monthKey;
-          const label = d.toLocaleDateString("es-ES", { month: "long", year: "numeric" });
+        const d = new Date(r.fecha_iso+"T00:00:00");
+        const key = d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0");
+        if (key !== currentMonth) {
+          currentMonth = key;
           const h = document.createElement("h3");
           h.className = "month";
-          h.textContent = label;
+          h.textContent = d.toLocaleDateString("es-ES",{month:"long",year:"numeric"});
           cont.appendChild(h);
         }
 
-        const div = document.createElement("div");
-        div.className = "item";
+        const chip = r.stock===0 ? "sold" :
+                     r.vendidas>=10 ? "gold" :
+                     r.vendidas>=1 ? "green" : "gray";
 
-        // chip color por vendidas
-        let chip = "gray";
-        if (r.vendidas >= 10) chip = "gold";
-        else if (r.vendidas >= 1) chip = "green";
-        if (r.stock === 0) chip = "sold";
-
-        const esEscondido = (active === "Escondido");
-        let abonoHTML = "";
-        if (esEscondido && r.abono) {
-          if (r.abono === "venta") {
-            abonoHTML = `<div class="chip green abono-chip">Abono: Disponible</div>`;
-          } else if (r.abono === "agotado") {
-            abonoHTML = `<div class="chip sold abono-chip">Abono: Agotado</div>`;
-          }
+        let abonoHTML="";
+        if (active==="Escondido" && r.abono){
+          if(r.abono==="venta") abonoHTML=`<div class="chip green abono-chip">Abono: Disponible</div>`;
+          if(r.abono==="agotado") abonoHTML=`<div class="chip sold abono-chip">Abono: Agotado</div>`;
         }
 
-        // Texto "vendidas / capacidad" para Escondido
-        let ventaLabel = `Vendidas: ${r.vendidas}`;
-        if (esEscondido && r.cap) {
-          const cap = Number(r.cap) || 0;
-          const stock = (typeof r.stock === "number") ? r.stock : null;
-          const quedanTxt = (stock !== null) ? ` · Quedan ${stock}` : "";
-          ventaLabel = `${r.vendidas} / ${cap}${quedanTxt}`;
-        }
-
-        const diaSemana = dayName(r.fecha_iso);
-
-        div.innerHTML = `
+        const div=document.createElement("div");
+        div.className="item";
+        div.innerHTML=`
           <div class="item-left">
-            <div class="item-date">${r.fecha_label} <span style="opacity:0.6; font-weight:400">(${diaSemana})</span></div>
+            <div class="item-date">${r.fecha_label} <span style="opacity:0.6">(${dayName(r.fecha_iso)})</span></div>
             <div class="item-time">${r.hora} h</div>
           </div>
           <div class="item-right">
-            <div class="chip ${chip}">${ventaLabel}</div>
+            <div class="chip ${chip}">
+              ${active==="Escondido" ? `${r.vendidas} / ${r.cap} · Quedan ${r.stock}` : `Vendidas: ${r.vendidas}`}
+            </div>
             ${abonoHTML}
-          </div>
-        `;
+          </div>`;
         cont.appendChild(div);
       }
-    }
-
-    // Register Service Worker
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js');
-      });
     }
 
     render();
