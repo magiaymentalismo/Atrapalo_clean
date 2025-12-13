@@ -203,6 +203,41 @@ def _iter_flat_functions(data: Dict[str, Any]):
             "stock": stock,
         }
 
+def _iter_upcoming_functions(data: Dict[str, Any]):
+    """
+    Versión que solo itera sobre funciones PRÓXIMAS (no pasadas).
+    Esto evita alertas falsas cuando shows cierran y se mueven a 'pasadas'.
+    """
+    eventos = data.get("eventos") or {}
+    for nombre, info in eventos.items():
+        if not isinstance(info, dict):
+            continue
+
+        # Solo procesamos la sección "proximas"
+        proximas = info.get("proximas") or {}
+        table = proximas.get("table") or {}
+        rows = table.get("rows") or []
+        
+        for r in rows:
+            fecha_label = r[0] if len(r) > 0 else ""
+            hora        = r[1] if len(r) > 1 else ""
+            vendidas    = _normalize_int(r[2] if len(r) > 2 else None)
+            fecha_iso   = r[3] if len(r) > 3 else ""
+            cap         = _normalize_int(r[4] if len(r) > 4 else None)
+            stock       = _normalize_int(r[5] if len(r) > 5 else None)
+
+            key = f"{nombre}::{fecha_iso}::{hora}"
+            yield {
+                "key": key,
+                "evento": nombre,
+                "fecha_label": fecha_label,
+                "hora": hora,
+                "fecha_iso": fecha_iso,
+                "vendidas": vendidas,
+                "cap": cap,
+                "stock": stock,
+            }
+
 def _get_rows_for_event_view(ev: Dict[str, Any], top: int = 5) -> List[list]:
     """
     Devuelve las filas que se usan para mostrar en /status o por evento.
@@ -449,8 +484,8 @@ async def poll_and_notify(context):
     last_counts: Dict[str, int] = state.get("counts", {}) or {}
     changes = []
 
-    # Genera lista actual y compara
-    current_functions = list(_iter_flat_functions(data))
+    # Genera lista actual y compara (solo funciones próximas)
+    current_functions = list(_iter_upcoming_functions(data))
     for f in current_functions:
         k = f["key"]
         v = f["vendidas"] or 0
