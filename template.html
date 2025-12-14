@@ -295,6 +295,7 @@
     const tabsEl = document.getElementById("tabs");
     for (const sala of Object.keys(eventos)) {
       const ev = eventos[sala];
+      const total = (ev.proximas?.table?.rows?.length || 0);
       const b = document.createElement("button");
       b.textContent = `${sala} (${total})`;
       b.dataset.tab = sala;
