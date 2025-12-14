@@ -272,9 +272,7 @@
     <div id="tabs" class="tabs"></div>
 
     <div class="panel">
-      <div style="display:flex; justify-content:flex-start; align-items:center">
-        <div id="subtabs" class="subtabs"></div>
-      </div>
+
       <div id="list" class="list"></div>
     </div>
   </div>
@@ -297,8 +295,6 @@
     const tabsEl = document.getElementById("tabs");
     for (const sala of Object.keys(eventos)) {
       const ev = eventos[sala];
-      const total = (ev.proximas?.table?.rows?.length || 0) +
-        (ev.pasadas?.table?.rows?.length || 0);
       const b = document.createElement("button");
       b.textContent = `${sala} (${total})`;
       b.dataset.tab = sala;
@@ -313,22 +309,7 @@
       });
     }
 
-    /* Subtabs */
-    const subtabsEl = document.getElementById("subtabs");
-    ["proximas", "pasadas"].forEach(mode => {
-      const sb = document.createElement("button");
-      sb.textContent = mode === "proximas" ? "Próximas" : "Pasadas";
-      sb.dataset.mode = mode;
-      sb.className = "subtab" + (subMode === mode ? " active" : "");
-      sb.onclick = () => { subMode = mode; updateSubtabs(); render(); };
-      subtabsEl.appendChild(sb);
-    });
 
-    function updateSubtabs() {
-      document.querySelectorAll(".subtab").forEach(s => {
-        s.classList.toggle("active", s.dataset.mode === subMode);
-      });
-    }
 
     const DAYS = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
     function dayName(f) {

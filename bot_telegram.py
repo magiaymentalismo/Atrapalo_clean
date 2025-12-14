@@ -248,10 +248,9 @@ def _get_rows_for_event_view(ev: Dict[str, Any], top: int = 5) -> List[list]:
         return []
 
     # Nuevo formato
-    if "proximas" in ev or "pasadas" in ev:
+    # Nuevo formato
+    if "proximas" in ev:
         rows = (((ev.get("proximas") or {}).get("table") or {}).get("rows") or [])
-        if not rows:
-            rows = (((ev.get("pasadas") or {}).get("table") or {}).get("rows") or [])
         return rows[:top] if top else rows
 
     # Formato antiguo
