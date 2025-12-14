@@ -63,7 +63,7 @@ MESES_LARGO = {
     "diciembre": "12",
 }
 
-HISTORY_PATH = Path("state_dinaticket.json")
+
 TZ = ZoneInfo("Europe/Madrid")
 
 # ================== TEMPLATE (HTML) ================== #
@@ -251,37 +251,7 @@ def fetch_fever_dates(url: str, timeout: int = 15) -> set[str]:
 
 
 # ================== HISTORIAL ================== #
-def load_history() -> dict:
-    if not HISTORY_PATH.exists():
-        return {}
-    try:
-        return json.loads(HISTORY_PATH.read_text("utf-8"))
-    except:
-        return {}
 
-
-def save_history(data: dict) -> None:
-    HISTORY_PATH.write_text(json.dumps(data, ensure_ascii=False, indent=2), "utf-8")
-
-
-def merge_eventos(history: dict, current: dict) -> dict:
-    merged: dict[str, list[dict]] = {}
-    for sala in set(history) | set(current):
-        prev = history.get(sala, []) or []
-        curr = current.get(sala, []) or []
-        by_key = {}
-
-        for x in prev:
-            key = f"{x['fecha_iso']} {x['hora']}"
-            by_key[key] = x
-
-        for x in curr:
-            key = f"{x['fecha_iso']} {x['hora']}"
-            by_key[key] = x
-
-        merged[sala] = sorted(by_key.values(), key=lambda f: (f["fecha_iso"], f["hora"]))
-
-    return merged
 
 
 # ================== OUTPUT ================== #
@@ -370,10 +340,15 @@ def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
 
         print(f"[DEBUG] {sala}: total={len(funcs)} · proximas={len(proximas)} · pasadas={len(pasadas)}")
 
+        # Filtramos funciones pasadas para que no aparezcan en el JSON
+        # ni se guarden, tal como pidió el usuario.
+        if pasadas:
+            print(f"[INFO] Eliminando {len(pasadas)} funciones pasadas de {sala}")
+
         out[sala] = {
             "table": {
                 "headers": ["Fecha","Hora","Vendidas","FechaISO","Capacidad","Stock","Abono","Fever"],
-                "rows": build_rows(funcs),
+                "rows": build_rows(proximas),  # SOLO PROXIMAS
             },
             "proximas": {
                 "table": {
@@ -381,12 +356,7 @@ def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
                     "rows": build_rows(proximas),
                 }
             },
-            "pasadas": {
-                "table": {
-                    "headers": ["Fecha","Hora","Vendidas","FechaISO","Capacidad","Stock","Abono","Fever"],
-                    "rows": build_rows(pasadas),
-                }
-            },
+            # "pasadas": ... (Ya no enviamos pasadas)
         }
 
     return {
@@ -405,11 +375,11 @@ if __name__ == "__main__":
         current[sala] = funcs
         print(f"{sala}: {len(funcs)} funciones extraídas")
 
-    history = load_history()
-    print("Historial cargado.")
+    # history = load_history()
+    # print("Historial cargado.")
 
-    merged = merge_eventos(history, current)
-    save_history(merged)
+    # merged = merge_eventos(history, current)
+    # save_history(merged)
 
     try:
         abono_shows = fetch_abonoteatro_shows(ABONO_URL)
@@ -418,5 +388,6 @@ if __name__ == "__main__":
         print(f"Error al leer AbonoTeatro: {e}")
         abono_shows = set()
 
-    payload = build_payload(merged, abono_shows)
+    # Usamos 'current' directamente, eliminando el historial
+    payload = build_payload(current, abono_shows)
     write_html(payload)
