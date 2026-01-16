@@ -33,19 +33,20 @@ UA = {
     )
 }
 
+# Dinaticket suele usar abreviaturas tipo "Ene." pero a veces aparece sin punto.
 MESES = {
-    "Ene.": "01",
-    "Feb.": "02",
-    "Mar.": "03",
-    "Abr.": "04",
-    "May.": "05",
-    "Jun.": "06",
-    "Jul.": "07",
-    "Ago.": "08",
-    "Sep.": "09",
-    "Oct.": "10",
-    "Nov.": "11",
-    "Dic.": "12",
+    "Ene.": "01", "Ene": "01",
+    "Feb.": "02", "Feb": "02",
+    "Mar.": "03", "Mar": "03",
+    "Abr.": "04", "Abr": "04",
+    "May.": "05", "May": "05",
+    "Jun.": "06", "Jun": "06",
+    "Jul.": "07", "Jul": "07",
+    "Ago.": "08", "Ago": "08",
+    "Sep.": "09", "Sep": "09",
+    "Oct.": "10", "Oct": "10",
+    "Nov.": "11", "Nov": "11",
+    "Dic.": "12", "Dic": "12",
 }
 
 # Meses largos que usa AbonoTeatro ("noviembre 2025", etc.)
@@ -63,7 +64,6 @@ MESES_LARGO = {
     "noviembre": "11",
     "diciembre": "12",
 }
-
 
 TZ = ZoneInfo("Europe/Madrid")
 
@@ -122,7 +122,15 @@ def fetch_functions_dinaticket(url: str, timeout: int = 20) -> list[dict]:
         if not (dia and mes):
             continue
 
-        mes_num = MESES.get(mes.text.strip(), "01")
+        mes_txt = mes.text.strip()
+        mes_num = MESES.get(mes_txt)
+        if not mes_num:
+            # fallback: quitar punto y reintentar
+            mes_num = MESES.get(mes_txt.replace(".", ""))
+        if not mes_num:
+            # si no lo reconoce, saltamos (mejor que inventar)
+            print("DEBUG mes no reconocido Dinaticket:", repr(mes_txt))
+            continue
 
         now = datetime.now(TZ)
         anio = now.year
@@ -130,6 +138,7 @@ def fetch_functions_dinaticket(url: str, timeout: int = 20) -> list[dict]:
         fecha_iso_tmp = f"{anio}-{mes_num}-{dia.text.strip().zfill(2)}"
         fecha_dt = datetime.strptime(fecha_iso_tmp, "%Y-%m-%d")
 
+        # Si la fecha ya pasó, asumimos año siguiente
         if fecha_dt.date() < now.date():
             fecha_dt = fecha_dt.replace(year=anio + 1)
 
@@ -141,7 +150,8 @@ def fetch_functions_dinaticket(url: str, timeout: int = 20) -> list[dict]:
 
         m = re.match(r"^(\d{1,2})(?::?(\d{2}))?$", hora_txt)
         if m:
-            hh = int(m.group(1)); mm = int(m.group(2) or "00")
+            hh = int(m.group(1))
+            mm = int(m.group(2) or "00")
             hora = f"{hh:02d}:{mm:02d}"
         else:
             hora = hora_txt
@@ -243,16 +253,11 @@ def fetch_fever_dates(url: str, timeout: int = 15) -> set[str]:
 
         raw = m.group(1)
         fechas = re.findall(r'"(\d{4}-\d{2}-\d{2})"', raw)
-
         return set(fechas)
 
     except Exception as e:
         print(f"ERROR Fever scraping {url}: {e}")
         return set()
-
-
-# ================== HISTORIAL ================== #
-
 
 
 # ================== OUTPUT ================== #
@@ -304,10 +309,7 @@ def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
 
                 for f in funcs:
                     fecha = f["fecha_iso"]
-                    if fecha in fever_dates:
-                        f["fever_estado"] = "venta"
-                    else:
-                        f["fever_estado"] = "agotado"
+                    f["fever_estado"] = "venta" if fecha in fever_dates else "agotado"
             else:
                 for f in funcs:
                     f["fever_estado"] = None
@@ -315,8 +317,8 @@ def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
             for f in funcs:
                 f["fever_estado"] = None
 
-        proximas = []
-        pasadas = []
+        proximas: list[dict] = []
+        pasadas: list[dict] = []
 
         for f in funcs:
             fecha_iso = f["fecha_iso"]
@@ -324,7 +326,7 @@ def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
 
             try:
                 ses_dt = datetime.strptime(f"{fecha_iso} {hora_txt}", "%Y-%m-%d %H:%M").replace(tzinfo=TZ)
-            except:
+            except Exception:
                 ses_dt = None
 
             if ses_dt and ses_dt >= now:
@@ -332,24 +334,18 @@ def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
             elif ses_dt:
                 pasadas.append(f)
             else:
-                # fallback: solo fecha
                 d = datetime.strptime(fecha_iso, "%Y-%m-%d").date()
-                if d >= now.date():
-                    proximas.append(f)
-                else:
-                    pasadas.append(f)
+                (proximas if d >= now.date() else pasadas).append(f)
 
         print(f"[DEBUG] {sala}: total={len(funcs)} · proximas={len(proximas)} · pasadas={len(pasadas)}")
 
-        # Filtramos funciones pasadas para que no aparezcan en el JSON
-        # ni se guarden, tal como pidió el usuario.
         if pasadas:
             print(f"[INFO] Eliminando {len(pasadas)} funciones pasadas de {sala}")
 
         out[sala] = {
             "table": {
                 "headers": ["Fecha","Hora","Vendidas","FechaISO","Capacidad","Stock","Abono","Fever"],
-                "rows": build_rows(proximas),  # SOLO PROXIMAS
+                "rows": build_rows(proximas),
             },
             "proximas": {
                 "table": {
@@ -357,7 +353,6 @@ def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
                     "rows": build_rows(proximas),
                 }
             },
-            # "pasadas": ... (Ya no enviamos pasadas)
         }
 
     return {
@@ -376,12 +371,6 @@ if __name__ == "__main__":
         current[sala] = funcs
         print(f"{sala}: {len(funcs)} funciones extraídas")
 
-    # history = load_history()
-    # print("Historial cargado.")
-
-    # merged = merge_eventos(history, current)
-    # save_history(merged)
-
     try:
         abono_shows = fetch_abonoteatro_shows(ABONO_URL)
         print(f"AbonoTeatro: {len(abono_shows)} funciones en venta")
@@ -389,6 +378,5 @@ if __name__ == "__main__":
         print(f"Error al leer AbonoTeatro: {e}")
         abono_shows = set()
 
-    # Usamos 'current' directamente, eliminando el historial
     payload = build_payload(current, abono_shows)
     write_html(payload)
