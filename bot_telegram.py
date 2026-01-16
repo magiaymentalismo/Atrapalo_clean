@@ -21,8 +21,8 @@ TELEGRAM_LIMIT = 4096
 CACHE_TTL = 60  # segundos
 STATE_FILE = Path("state.json")
 
-# ✅ eventos donde NO queremos mostrar "vendidas" en el bot
-HIDE_VENDIDAS_FOR = {"Juanma"}
+# ✅ NO mostrar en el bot (pero sí existe en la web)
+EXCLUDE_EVENTS_FROM_BOT = {"Juanma"}
 
 # ⚠️ Seguridad: primero intenta leer TELEGRAM_TOKEN del entorno.
 # Si no existe, usa el token pegado aquí como respaldo.
@@ -42,6 +42,9 @@ _cache: Tuple[float, Dict[str, Any]] | None = None
 
 def _now() -> float:
     return time.monotonic()
+
+def _is_excluded(event_name: Optional[str]) -> bool:
+    return bool(event_name) and event_name in EXCLUDE_EVENTS_FROM_BOT
 
 # ====================== UTILS ======================
 def _normalize_int(x) -> Optional[int]:
@@ -128,11 +131,6 @@ def _safe_pct(vendidas: Optional[int], cap: Optional[int]) -> Optional[int]:
         return None
 
 def _fmt_extra(vendidas, cap, stock) -> str:
-    """
-    Arma el extra tipo:
-      120/200 (60%) · quedan 80
-    Si vendidas=None -> NO muestra vendidas (solo stock si hay).
-    """
     parts = []
     if cap is not None and vendidas is not None:
         pct = _safe_pct(vendidas, cap)
@@ -142,10 +140,8 @@ def _fmt_extra(vendidas, cap, stock) -> str:
             parts.append(f"{vendidas}/{cap}")
     elif vendidas is not None:
         parts.append(f"vendidas {vendidas}")
-
     if stock not in (None, ""):
         parts.append(f"quedan {stock}")
-
     return (" · " + " ".join(parts)) if parts else ""
 
 def _reply_long(update: Update, text: str):
@@ -158,14 +154,6 @@ def _reply_long(update: Update, text: str):
                 await update.message.reply_text(part)
     return _inner()
 
-def _vendidas_for_evento(evento: str, vendidas_value: Optional[int]) -> Optional[int]:
-    """
-    Si el evento está en HIDE_VENDIDAS_FOR, ocultamos vendidas en el bot.
-    """
-    if evento in HIDE_VENDIDAS_FOR:
-        return None
-    return vendidas_value
-
 # ================== HELPERS SOBRE EL PAYLOAD ================== #
 def _iter_all_rows(data: Dict[str, Any]):
     """
@@ -177,6 +165,8 @@ def _iter_all_rows(data: Dict[str, Any]):
     """
     eventos = data.get("eventos") or {}
     for nombre, info in eventos.items():
+        if _is_excluded(nombre):
+            continue
         if not isinstance(info, dict):
             continue
 
@@ -201,14 +191,13 @@ def _iter_flat_functions(data: Dict[str, Any]):
     Rinde dicts con key estable para comparar ventas.
     """
     for evento, r in _iter_all_rows(data):
+        # r = [FechaLabel, Hora, Vendidas, FechaISO, Capacidad?, Stock?, Abono?]
         fecha_label = r[0] if len(r) > 0 else ""
         hora        = r[1] if len(r) > 1 else ""
         vendidas    = _normalize_int(r[2] if len(r) > 2 else None)
         fecha_iso   = r[3] if len(r) > 3 else ""
         cap         = _normalize_int(r[4] if len(r) > 4 else None)
         stock       = _normalize_int(r[5] if len(r) > 5 else None)
-
-        vendidas = _vendidas_for_evento(evento, vendidas)
 
         key = f"{evento}::{fecha_iso}::{hora}"
         yield {
@@ -229,9 +218,12 @@ def _iter_upcoming_functions(data: Dict[str, Any]):
     """
     eventos = data.get("eventos") or {}
     for nombre, info in eventos.items():
+        if _is_excluded(nombre):
+            continue
         if not isinstance(info, dict):
             continue
 
+        # Solo procesamos la sección "proximas"
         proximas = info.get("proximas") or {}
         table = proximas.get("table") or {}
         rows = table.get("rows") or []
@@ -243,8 +235,6 @@ def _iter_upcoming_functions(data: Dict[str, Any]):
             fecha_iso   = r[3] if len(r) > 3 else ""
             cap         = _normalize_int(r[4] if len(r) > 4 else None)
             stock       = _normalize_int(r[5] if len(r) > 5 else None)
-
-            vendidas = _vendidas_for_evento(nombre, vendidas)
 
             key = f"{nombre}::{fecha_iso}::{hora}"
             yield {
@@ -267,10 +257,12 @@ def _get_rows_for_event_view(ev: Dict[str, Any], top: int = 5) -> List[list]:
     if not isinstance(ev, dict):
         return []
 
+    # Nuevo formato
     if "proximas" in ev:
         rows = (((ev.get("proximas") or {}).get("table") or {}).get("rows") or [])
         return rows[:top] if top else rows
 
+    # Formato antiguo
     rows = (((ev.get("table") or {}).get("rows") or []))
     return rows[:top] if top else rows
 
@@ -284,9 +276,9 @@ def format_resume(data: Dict[str, Any], evento: Optional[str] = None, top: int =
     header = f"🪄 Cartelera (actualizado {gen_dt:%d/%m %H:%M})"
 
     lines = [header]
-    keys = list(eventos.keys())
+    keys = [k for k in eventos.keys() if not _is_excluded(k)]
 
-    # Filtro por nombre de evento
+    # Filtro por nombre de evento (si el usuario pide "Juanma", no mostramos)
     if evento:
         wanted = evento.casefold()
         keys = [k for k in keys if wanted in k.casefold()]
@@ -298,16 +290,13 @@ def format_resume(data: Dict[str, Any], evento: Optional[str] = None, top: int =
         rows = _get_rows_for_event_view(ev, top=top)
         if not rows:
             continue
-
         lines.append(f"\n— {k} —")
         for r in rows:
             fecha_label = r[0] if len(r) > 0 else ""
             hora        = r[1] if len(r) > 1 else ""
-            vendidas_raw = _normalize_int(r[2] if len(r) > 2 else None)
-            vendidas     = _vendidas_for_evento(k, vendidas_raw)
+            vendidas    = _normalize_int(r[2] if len(r) > 2 else None)
             cap         = _normalize_int(r[4] if len(r) > 4 else None)
             stock       = _normalize_int(r[5] if len(r) > 5 else None)
-
             extra = _fmt_extra(vendidas, cap, stock)
             lines.append(f"• {fecha_label} {hora}{extra}")
 
@@ -344,9 +333,6 @@ async def start(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
         ],
         [
             InlineKeyboardButton("🕵️‍♂️ Escondido", callback_data="evento:Escondido"),
-            InlineKeyboardButton("🎤 Juanma", callback_data="evento:Juanma"),
-        ],
-        [
             InlineKeyboardButton("🪄 Todos", callback_data="status"),
         ],
         [
@@ -390,29 +376,23 @@ async def find_cmd(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
         if not re.match(r"^\d{4}-\d{2}-\d{2}$", wanted):
             await update.message.reply_text("Formato inválido. Usa YYYY-MM-DD.")
             return
-
         data = fetch_payload()
         results = []
         for k, r in _iter_all_rows(data):
             if len(r) > 3 and r[3] == wanted:
                 results.append((k, r))
-
         if not results:
             await update.message.reply_text("No hay funciones ese día.")
             return
-
         lines = [f"🎫 Funciones el {wanted}:"]
         for (k, r) in results:
             fecha_label = r[0] if len(r) > 0 else ""
             hora        = r[1] if len(r) > 1 else ""
-            vendidas_raw = _normalize_int(r[2] if len(r) > 2 else None)
-            vendidas     = _vendidas_for_evento(k, vendidas_raw)
+            vendidas    = _normalize_int(r[2] if len(r) > 2 else None)
             cap         = _normalize_int(r[4] if len(r) > 4 else None)
             stock       = _normalize_int(r[5] if len(r) > 5 else None)
-
             extra = _fmt_extra(vendidas, cap, stock)
             lines.append(f"• {k}: {fecha_label} {hora}{extra}")
-
         await _reply_long(update, "\n".join(lines))
     except Exception as e:
         await update.message.reply_text(f"Error: {e}")
@@ -437,7 +417,6 @@ async def lowstock_cmd(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
                 hora        = r[1] if len(r) > 1 else ""
                 lines.append(f"• {k}: {fecha_label} {hora} · quedan {stock}")
                 count += 1
-
         if count == 0:
             await update.message.reply_text("No hay funciones con pocas entradas.")
         else:
@@ -457,7 +436,6 @@ async def soldout_cmd(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
                 hora        = r[1] if len(r) > 1 else ""
                 lines.append(f"• {k}: {fecha_label} {hora} · AGOTADO")
                 count += 1
-
         if count == 0:
             await update.message.reply_text("No hay funciones agotadas.")
         else:
@@ -469,7 +447,7 @@ async def raw_cmd(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     try:
         data = fetch_payload()
         keys = list(data.keys())
-        eventos = list((data.get("eventos") or {}).keys())
+        eventos = [e for e in (data.get("eventos") or {}).keys() if not _is_excluded(e)]
         gen = data.get("generated_at") or data.get("generatedAt")
         msg = (
             "🧪 RAW\n"
@@ -514,21 +492,16 @@ async def poll_and_notify(context):
     last_counts: Dict[str, int] = state.get("counts", {}) or {}
     changes = []
 
-    # Genera lista actual y compara (solo funciones próximas)
+    # Solo funciones próximas (y excluyendo Juanma por _iter_upcoming_functions)
     current_functions = list(_iter_upcoming_functions(data))
-    for f in current_functions:
-        # ✅ si es Juanma (o cualquier otro hide), no comparamos ni avisamos vendidas
-        if f["evento"] in HIDE_VENDIDAS_FOR:
-            # igual mantenemos key limpia para no crecer state infinito
-            # pero NO guardamos vendidas porque no nos interesa.
-            continue
 
+    for f in current_functions:
         k = f["key"]
         v = f["vendidas"] or 0
         prev = last_counts.get(k)
 
         if prev is None:
-            # Primera vez: solo inicializamos para evitar spam
+            # Primera vez: inicializa sin avisar
             last_counts[k] = v
             continue
 
@@ -549,8 +522,8 @@ async def poll_and_notify(context):
 
         last_counts[k] = v
 
-    # Limpia keys de funciones que ya no existan
-    current_keys = {f["key"] for f in current_functions if f["evento"] not in HIDE_VENDIDAS_FOR}
+    # Limpia keys de funciones que ya no existan (y también purga Juanma viejo si quedó)
+    current_keys = {f["key"] for f in current_functions}
     for k in list(last_counts.keys()):
         if k not in current_keys:
             last_counts.pop(k, None)
@@ -596,6 +569,9 @@ async def button_callback(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
 
     if data.startswith("evento:"):
         nombre = data.split(":", 1)[1]
+        if _is_excluded(nombre):
+            await query.edit_message_text("Ese evento no se muestra en el bot 🙂")
+            return
         data_json = fetch_payload()
         msg = format_resume(data_json, evento=nombre, top=20)
         await _reply_long(update, msg)
@@ -605,7 +581,9 @@ async def button_callback(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
 
 # ====================== MAIN ======================
 def main():
+    # 1) Usa variable de entorno si existe
     token = os.getenv("TELEGRAM_TOKEN")
+    # 2) Si no, usa el respaldo pegado aquí (⚠️ no subir a repositorios públicos)
     if not token:
         token = TOKEN_FALLBACK
 
@@ -614,6 +592,7 @@ def main():
 
     app = ApplicationBuilder().token(token).build()
 
+    # Comandos
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("status", status_cmd))
     app.add_handler(CommandHandler("evento", evento_cmd))
@@ -624,11 +603,13 @@ def main():
     app.add_handler(CommandHandler("subscribe", subscribe_cmd))
     app.add_handler(CommandHandler("unsubscribe", unsubscribe_cmd))
 
+    # Botones
     app.add_handler(CallbackQueryHandler(button_callback))
 
     # JobQueue: revisa cada 2 minutos
     app.job_queue.run_repeating(poll_and_notify, interval=120, first=5)
 
+    # Manejador de errores silencioso
     async def on_error(update, context):
         logger.warning("Error: %s", context.error)
     app.add_error_handler(on_error)
