@@ -6,3 +6,5 @@ venv/
 venv/
 .venv/
 node_modules/
+
+state.json
