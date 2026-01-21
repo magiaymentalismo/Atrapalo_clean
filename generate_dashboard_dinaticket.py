@@ -99,6 +99,21 @@ def write_html(payload: dict) -> None:
         print("✔ Copiado sw.js")
 
 
+def write_schedule_json(payload: dict) -> None:
+    """
+    Exporta el payload completo a docs/schedule.json
+    para que GitHub Pages lo sirva y tu web (Hostinger) lo consuma por fetch.
+    """
+    docs_dir = Path("docs")
+    docs_dir.mkdir(exist_ok=True)
+
+    (docs_dir / "schedule.json").write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2),
+        "utf-8",
+    )
+    print("✔ Generado docs/schedule.json")
+
+
 # ================== SCRAPER DINATICKET ================== #
 def fetch_functions_dinaticket(url: str, timeout: int = 20) -> list[dict]:
     r = requests.get(url, headers=UA, timeout=timeout)
@@ -379,3 +394,4 @@ if __name__ == "__main__":
 
     payload = build_payload(current, abono_shows)
     write_html(payload)
+    write_schedule_json(payload)
