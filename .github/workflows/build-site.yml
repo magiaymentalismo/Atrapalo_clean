@@ -2,15 +2,17 @@ name: build-site
 
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "0 * * * *"   # cada hora (mucho más estable)
   workflow_dispatch: {}
 
 concurrency:
   group: build-site
-  cancel-in-progress: false   # 👈 CLAVE
+  cancel-in-progress: false
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
@@ -42,16 +44,16 @@ jobs:
           test -f docs/index.html
           test -f docs/schedule.json
 
-      - name: Commit & push if docs changed
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
 
-          git add -f docs/index.html docs/schedule.json docs/manifest.json docs/sw.js
-
-          if git diff --cached --quiet; then
-            echo "No changes"
-          else
-            git commit -m "Auto-update dashboard ($(TZ=Europe/Madrid date '+%Y-%m-%d %H:%M'))"
-            git push origin main
-          fi
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
