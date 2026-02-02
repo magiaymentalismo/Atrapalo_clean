@@ -5,8 +5,12 @@ on:
     - cron: "*/30 * * * *"   # every 30 minutes (UTC)
   workflow_dispatch: {}       # manual trigger
 
+# Separate concurrency by event type:
+# - cron runs cancel each other
+# - manual runs cancel each other
+# - cron and manual do NOT cancel each other
 concurrency:
-  group: build-site
+  group: build-site-${{ github.event_name }}
   cancel-in-progress: true
 
 permissions:
@@ -16,6 +20,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -29,7 +34,11 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           # use your repo requirements to match local env
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; else pip install requests beautifulsoup4; fi
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          else
+            pip install requests beautifulsoup4
+          fi
 
       - name: Generate dashboard (docs/index.html + docs/schedule.json)
         run: |
