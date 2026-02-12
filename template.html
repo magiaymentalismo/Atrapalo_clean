@@ -32,6 +32,13 @@
       --safe-top: env(safe-area-inset-top, 20px);
     }
 
+    /* Prevent horizontal overflow on mobile */
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
     body {
       background-color: var(--bg-deep);
       background-image:
@@ -73,7 +80,7 @@
       -webkit-backdrop-filter: blur(30px);
       border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: 30px;
-      padding: 8px 24px;
+      padding: 10px 24px;
       display: flex;
       align-items: center;
       gap: 12px;
@@ -123,6 +130,7 @@
       transition: all 0.3s;
       backdrop-filter: blur(var(--blur-md));
       -webkit-backdrop-filter: blur(var(--blur-md));
+      flex: 0 0 auto;
     }
 
     .tab.active {
@@ -169,6 +177,10 @@
       border-radius: var(--radius-md);
       transition: 0.2s;
       gap: 14px;
+
+      /* containment */
+      min-width: 0;
+      overflow: hidden;
     }
 
     .item:hover {
@@ -179,12 +191,16 @@
     .item-left {
       display: flex;
       flex-direction: column;
-      min-width: 220px;
+      min-width: 0;
+      flex: 1 1 auto;
     }
 
     .item-date {
       font-size: 17px;
       font-weight: 600;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     .item-time {
@@ -196,29 +212,41 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      gap: 8px;
+      gap: 10px;
+      flex: 0 0 auto;
+      min-width: 0;
+      max-width: 55%;
     }
 
+    /* Bigger chips (requested) + safe wrapping */
     .chip {
-      padding: 6px 12px;
-      border-radius: 8px;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.3px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.25px;
       text-transform: uppercase;
       backdrop-filter: blur(10px);
       text-align: right;
-      line-height: 1.2;
+      line-height: 1.25;
       max-width: 100%;
+      min-width: 0;
+
+      /* keep content contained */
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: break-word;
     }
 
     .chip .small {
       display: block;
-      font-size: 11px;
-      opacity: 0.85;
-      letter-spacing: 0.2px;
+      font-size: 12px;
+      opacity: 0.9;
+      letter-spacing: 0.15px;
       text-transform: none;
-      font-weight: 700;
+      font-weight: 800;
+      line-height: 1.25;
+      white-space: normal;
     }
 
     .chip.green {
@@ -243,9 +271,63 @@
     }
 
     .abono-chip {
-      font-size: 11px;
-      padding: 4px 8px;
-      border-radius: 6px;
+      font-size: 12px;
+      padding: 8px 12px;
+      border-radius: 10px;
+    }
+
+    /* ===== Mobile fix (no offset) ===== */
+    @media (max-width: 520px) {
+      body {
+        padding-top: calc(var(--safe-top) + 74px);
+      }
+
+      .wrap {
+        padding: 14px;
+      }
+
+      .panel {
+        padding: 16px;
+      }
+
+      .item {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+      }
+
+      .item-left {
+        min-width: 0;
+      }
+
+      .item-date {
+        white-space: normal;
+      }
+
+      .item-right {
+        align-items: stretch;
+        max-width: 100%;
+      }
+
+      .chip {
+        width: 100%;
+        text-align: left;
+        padding: 12px 14px; /* a bit bigger on mobile */
+      }
+
+      .chip .small {
+        font-size: 13px;
+      }
+
+      .month {
+        margin-top: 22px;
+      }
+
+      .dynamic-island {
+        width: calc(100% - 20px);
+        max-width: 520px;
+        justify-content: space-between;
+      }
     }
   </style>
 </head>
@@ -326,7 +408,8 @@
       let rows = getRows();
 
       // Índices:
-      // 0 Fecha, 1 Hora, 2 Vendidas(Dina), 3 FechaISO, 4 Cap(Dina), 5 Stock(Dina), 6 Abono, 7 Fever, 8 KulturCap, 9 KulturStock, 10 KulturVendidas
+      // 0 Fecha, 1 Hora, 2 Vendidas(Dina), 3 FechaISO, 4 Cap(Dina), 5 Stock(Dina), 6 Abono, 7 Fever,
+      // 8 KulturCap, 9 KulturStock, 10 KulturVendidas
       rows = rows.map(r => ({
         fecha_label: r[0],
         hora: r[1],
@@ -405,7 +488,9 @@
 
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js?v=20251201').then(r => console.log('SW Registered')).catch(console.error);
+      navigator.serviceWorker.register('sw.js?v=20251201')
+        .then(() => console.log('SW Registered'))
+        .catch(console.error);
     }
   </script>
 </body>
