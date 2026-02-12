@@ -2,7 +2,7 @@ name: build-site
 
 on:
   schedule:
-    - cron: "0 * * * *"   # cada hora (mucho más estable)
+    - cron: "0 * * * *"   # cada hora (UTC)
   workflow_dispatch: {}
 
 concurrency:
@@ -38,6 +38,8 @@ jobs:
           fi
 
       - name: Generate dashboard
+        env:
+          KULTUR_APPCHECK: ${{ secrets.KULTUR_APPCHECK }}
         run: |
           set -e
           python generate_dashboard_dinaticket.py
