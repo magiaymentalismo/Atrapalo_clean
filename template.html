@@ -440,3 +440,17 @@
 </body>
 
 </html>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js?v=2026-02-12-01').then(reg => {
+      // chequea updates cuando la app abre
+      reg.update();
+
+      // cuando cambia el SW controlador, recargá para tomar el nuevo HTML
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        window.location.reload();
+      });
+    }).catch(console.error);
+  }
+</script>
