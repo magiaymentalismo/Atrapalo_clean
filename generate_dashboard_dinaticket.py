@@ -36,8 +36,12 @@ UA = {
 # -------------------- KULTUR -------------------- #
 # Página: https://appkultur.com/madrid/el-juego-de-la-mente-magia-mental-con-ariel-hamui
 KULTUR_EVENT_ID_ESCONDIDO = "YaWZRG4MCxo1CHvr"
-KULTUR_CALENDAR_API = "https://europe-west6-kultur-platform.cloudfunctions.net/events_api_v2-getCalendar"
-KULTUR_APPCHECK = os.getenv("KULTUR_APPCHECK")  # se inyecta via GitHub Secrets
+
+# Usamos getSessions (más directo y suele responder mejor que getCalendar)
+KULTUR_SESSIONS_API = "https://europe-west6-kultur-platform.cloudfunctions.net/events_api_v2-getSessions"
+
+# Token AppCheck desde env / GitHub Secrets
+KULTUR_APPCHECK = os.getenv("KULTUR_APPCHECK")
 
 # Dinaticket suele usar abreviaturas tipo "Ene." pero a veces aparece sin punto.
 MESES = {
@@ -72,6 +76,7 @@ MESES_LARGO = {
 }
 
 TZ = ZoneInfo("Europe/Madrid")
+UTC = ZoneInfo("UTC")
 
 # ================== TEMPLATE (HTML) ================== #
 TEMPLATE_PATH = Path("template.html")
@@ -279,7 +284,7 @@ def fetch_fever_dates(url: str, timeout: int = 15) -> set[str]:
         return set()
 
 
-# ================== KULTUR (getCalendar) ================== #
+# ================== KULTUR helpers ================== #
 def _walk_json(obj):
     if isinstance(obj, dict):
         yield obj
@@ -313,8 +318,11 @@ def _extract_kultur_cap_stock(d: dict) -> tuple[int | None, int | None]:
 
     return (int(cap) if cap is not None else None, int(stock) if stock is not None else None)
 
-def fetch_kultur_calendar_capacity(event_id: str, from_date: str, to_date: str, timeout: int = 20) -> dict[tuple[str, str], dict]:
+
+# ================== KULTUR (getSessions, day by day) ================== #
+def fetch_kultur_sessions_capacity(event_id: str, days: int = 30) -> dict[tuple[str, str], dict]:
     """
+    Pedimos sesiones día por día para evitar timeouts.
     Devuelve:
       {(fecha_iso, hora): {"kultur_capacidad": int|None, "kultur_stock": int|None}}
     """
@@ -332,52 +340,69 @@ def fetch_kultur_calendar_capacity(event_id: str, from_date: str, to_date: str, 
         "referer": "https://appkultur.com/",
         "x-firebase-appcheck": KULTUR_APPCHECK,
     }
-    payload = {"data": {"eventId": event_id, "from": from_date, "to": to_date}}
 
-    # ✅ Reintentos + timeouts más altos para evitar Read timed out en GitHub Actions
-    for attempt in range(1, 4):  # hasta 3 intentos
-        try:
-            r = requests.post(
-                KULTUR_CALENDAR_API,
-                headers=headers,
-                json=payload,
-                timeout=(10, 25),  # 10s conectar, 60s leer
-            )
-
-            if r.status_code in (401, 403):
-                print(f"⚠️ Kultur 401/403 (token inválido o expirado). status={r.status_code}")
-                return {}
-
-            r.raise_for_status()
-            data = r.json()
-            break  # éxito
-
-        except requests.exceptions.ReadTimeout:
-            print(f"⚠️ Kultur timeout (intento {attempt}/3)")
-            if attempt == 3:
-                return {}
-        except Exception as e:
-            print(f"⚠️ Kultur error (intento {attempt}/3): {e}")
-            if attempt == 3:
-                return {}
-
+    now = datetime.now(TZ)
     out: dict[tuple[str, str], dict] = {}
-    for d in _walk_json(data):
-        dt_str = None
-        for k in ("start", "startAt", "dateTime", "datetime", "startDate"):
-            if isinstance(d.get(k), str):
-                dt_str = d[k]
+
+    for i in range(days):
+        day = (now + timedelta(days=i)).date()
+        from_dt = datetime(day.year, day.month, day.day, 0, 0, 0, tzinfo=TZ).astimezone(UTC)
+        to_dt = (from_dt + timedelta(days=1))
+
+        payload = {
+            "data": {
+                "eventId": event_id,
+                "from": from_dt.isoformat().replace("+00:00", "Z"),
+                "to": to_dt.isoformat().replace("+00:00", "Z"),
+            }
+        }
+
+        data = None
+
+        for attempt in range(1, 3):  # 2 intentos por día
+            try:
+                r = requests.post(
+                    KULTUR_SESSIONS_API,
+                    headers=headers,
+                    json=payload,
+                    timeout=(10, 25),
+                )
+                if r.status_code in (401, 403):
+                    print("⚠️ Kultur 401/403 (token inválido/expirado)")
+                    return {}
+                r.raise_for_status()
+                data = r.json()
                 break
-        if not dt_str:
+            except requests.exceptions.ReadTimeout:
+                if attempt == 2:
+                    print(f"⚠️ Kultur timeout en {day}")
+                    data = None
+            except Exception as e:
+                if attempt == 2:
+                    print(f"⚠️ Kultur error en {day}: {e}")
+                    data = None
+
+        if not data:
             continue
 
-        dt = _parse_iso_any(dt_str)
-        if not dt:
-            continue
+        for d in _walk_json(data):
+            dt_str = None
+            for k in ("start", "startAt", "dateTime", "datetime", "startDate"):
+                if isinstance(d.get(k), str):
+                    dt_str = d[k]
+                    break
+            if not dt_str:
+                continue
 
-        cap, stock = _extract_kultur_cap_stock(d)
-        key = (dt.strftime("%Y-%m-%d"), dt.strftime("%H:%M"))
-        out[key] = {"kultur_capacidad": cap, "kultur_stock": stock}
+            dt = _parse_iso_any(dt_str)
+            if not dt:
+                continue
+
+            cap, stock = _extract_kultur_cap_stock(d)
+            out[(dt.strftime("%Y-%m-%d"), dt.strftime("%H:%M"))] = {
+                "kultur_capacidad": cap,
+                "kultur_stock": stock,
+            }
 
     print("Kultur sesiones encontradas:", len(out))
     return out
@@ -406,15 +431,7 @@ def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
     now = datetime.now(TZ)
     out: dict[str, dict] = {}
 
-    # ✅ Pedimos menos rango para que responda rápido (evita timeouts)
-    from_date = now.strftime("%Y-%m-%d")
-    to_date = (now + timedelta(days=30)).strftime("%Y-%m-%d")
-
-    kultur_map = fetch_kultur_calendar_capacity(
-        event_id=KULTUR_EVENT_ID_ESCONDIDO,
-        from_date=from_date,
-        to_date=to_date,
-    )
+    kultur_map = fetch_kultur_sessions_capacity(KULTUR_EVENT_ID_ESCONDIDO, days=30)
 
     abono_fechas = {fecha for (fecha, _hora) in abono_shows}
 
@@ -441,6 +458,7 @@ def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
             if fever_url:
                 fever_dates = fetch_fever_dates(fever_url)
                 print(f"DEBUG Fever {sala} fechas:", sorted(fever_dates))
+
                 for f in funcs:
                     fecha = f["fecha_iso"]
                     f["fever_estado"] = "venta" if fecha in fever_dates else "agotado"
@@ -468,6 +486,7 @@ def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
         for f in funcs:
             fecha_iso = f["fecha_iso"]
             hora_txt = f["hora"] or "00:00"
+
             try:
                 ses_dt = datetime.strptime(f"{fecha_iso} {hora_txt}", "%Y-%m-%d %H:%M").replace(tzinfo=TZ)
             except Exception:
