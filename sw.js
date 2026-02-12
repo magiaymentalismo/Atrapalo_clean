@@ -17,6 +17,12 @@ self.addEventListener("install", (event) => {
   );
 });
 
+self.addEventListener("message", (event) => {
+  if (event.data && event.data.type === "SKIP_WAITING") {
+    self.skipWaiting();
+  }
+});
+
 // Activate: limpia cachés viejos y toma control ya
 self.addEventListener("activate", (event) => {
   event.waitUntil(

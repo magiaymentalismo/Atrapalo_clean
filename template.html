@@ -440,17 +440,45 @@
 </body>
 
 </html>
-
 <script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js?v=2026-02-12-01').then(reg => {
-      // chequea updates cuando la app abre
-      reg.update();
+  (function () {
+    if (!('serviceWorker' in navigator)) return;
 
-      // cuando cambia el SW controlador, recargá para tomar el nuevo HTML
-      navigator.serviceWorker.addEventListener('controllerchange', () => {
+    const RELOAD_KEY = "sw-reloaded-once";
+
+    navigator.serviceWorker.register('sw.js?v=2026-02-12-02').then((reg) => {
+      // Chequea updates al abrir (suave, 1 vez)
+      reg.update().catch(() => {});
+
+      function activateWaitingSW() {
+        if (!reg.waiting) return;
+        // le pedimos al SW waiting que se active ya
+        reg.waiting.postMessage({ type: "SKIP_WAITING" });
+      }
+
+      // Si ya hay un SW waiting (a veces pasa en iOS)
+      activateWaitingSW();
+
+      reg.addEventListener("updatefound", () => {
+        const sw = reg.installing;
+        if (!sw) return;
+
+        sw.addEventListener("statechange", () => {
+          // "installed" + hay controlador => update listo
+          if (sw.state === "installed" && navigator.serviceWorker.controller) {
+            // Activamos el SW nuevo
+            activateWaitingSW();
+          }
+        });
+      });
+
+      navigator.serviceWorker.addEventListener("controllerchange", () => {
+        // ✅ recargar SOLO una vez por sesión para evitar loops
+        if (sessionStorage.getItem(RELOAD_KEY) === "1") return;
+        sessionStorage.setItem(RELOAD_KEY, "1");
         window.location.reload();
       });
+
     }).catch(console.error);
-  }
+  })();
 </script>
