@@ -15,12 +15,10 @@
       --bg-deep: #000000;
       --glass-surface: rgba(255, 255, 255, 0.08);
       --glass-border: rgba(255, 255, 255, 0.12);
-      --glass-highlight: rgba(255, 255, 255, 0.2);
       --text-primary: #ffffff;
       --text-secondary: rgba(255, 255, 255, 0.6);
       --accent-gold: #ffd700;
       --accent-green: #34c759;
-      --accent-orange: #ff9f0a;
       --accent-red: #ff453a;
 
       --blur-md: 20px;
@@ -32,7 +30,6 @@
       --safe-top: env(safe-area-inset-top, 20px);
     }
 
-    /* Prevent horizontal overflow on mobile */
     html,
     body {
       max-width: 100%;
@@ -52,13 +49,13 @@
       -webkit-font-smoothing: antialiased;
       min-height: 100vh;
       padding-bottom: 40px;
-      padding-top: calc(var(--safe-top) + 60px);
+      padding-top: calc(var(--safe-top) + 62px);
     }
 
     .wrap {
       max-width: 1040px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 18px;
     }
 
     /* Dynamic Island */
@@ -80,18 +77,17 @@
       -webkit-backdrop-filter: blur(30px);
       border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: 30px;
-      padding: 10px 24px;
+      padding: 10px 18px;
       display: flex;
       align-items: center;
       gap: 12px;
+      max-width: 92%;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      max-width: 90%;
     }
 
     .island-title {
       font-size: 15px;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .island-meta {
@@ -105,9 +101,9 @@
     .tabs {
       display: flex;
       gap: 12px;
-      margin-bottom: 24px;
+      margin-bottom: 18px;
       overflow-x: auto;
-      padding: 4px;
+      padding: 4px 2px;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
       justify-content: center;
@@ -118,165 +114,233 @@
     }
 
     .tab {
-      padding: 12px 20px;
+      padding: 11px 18px;
       border-radius: var(--radius-full);
       background: var(--glass-surface);
       border: 1px solid var(--glass-border);
       color: var(--text-secondary);
       font-size: 15px;
-      font-weight: 600;
+      font-weight: 700;
       cursor: pointer;
       white-space: nowrap;
-      transition: all 0.3s;
+      transition: all 0.25s;
       backdrop-filter: blur(var(--blur-md));
       -webkit-backdrop-filter: blur(var(--blur-md));
       flex: 0 0 auto;
     }
 
     .tab.active {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.92);
       color: #000;
       border-color: transparent;
-      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
-      transform: scale(1.02);
+      box-shadow: 0 4px 18px rgba(255, 255, 255, 0.18);
+      transform: scale(1.01);
     }
 
     /* Panel */
     .panel {
-      background: rgba(20, 20, 20, 0.4);
+      background: rgba(20, 20, 20, 0.38);
       border: 1px solid var(--glass-border);
       border-radius: var(--radius-lg);
-      padding: 24px;
+      padding: 18px;
       backdrop-filter: blur(40px);
       -webkit-backdrop-filter: blur(40px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
     }
 
-    /* Items */
+    /* List + Month */
     .list {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 14px;
     }
 
     .month {
-      margin: 32px 0 12px;
+      margin: 26px 0 10px;
       font-size: 20px;
-      font-weight: 700;
+      font-weight: 900;
       color: var(--accent-gold);
       text-transform: capitalize;
-      padding-left: 8px;
+      padding-left: 6px;
     }
 
+    /* Card */
     .item {
-      display: flex;
-      justify-content: space-between;
-      padding: 20px;
       background: rgba(255, 255, 255, 0.03);
-      border: 1px solid var(--glass-border);
-      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      border-radius: 18px;
+      padding: 16px;
       transition: 0.2s;
-      gap: 14px;
-
-      /* containment */
       min-width: 0;
       overflow: hidden;
     }
 
     .item:hover {
-      background: rgba(255, 255, 255, 0.06);
+      background: rgba(255, 255, 255, 0.055);
       transform: translateY(-2px);
     }
 
-    .item-left {
+    .row-top {
       display: flex;
-      flex-direction: column;
-      min-width: 0;
-      flex: 1 1 auto;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
     }
 
-    .item-date {
-      font-size: 17px;
-      font-weight: 600;
-      overflow: hidden;
-      text-overflow: ellipsis;
+    .date {
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 1.15;
+    }
+
+    .date span {
+      color: rgba(255, 255, 255, 0.55);
+      font-weight: 800;
+      margin-left: 6px;
+      font-size: 16px;
       white-space: nowrap;
     }
 
-    .item-time {
+    .time {
+      margin-top: 6px;
       font-size: 15px;
       color: var(--text-secondary);
+      font-weight: 700;
     }
 
-    .item-right {
+    /* Chips container */
+    .chips {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    /* Compact pill chip */
+    .chip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      background: rgba(255, 255, 255, 0.05);
+      min-width: 0;
+    }
+
+    .chip-left {
       display: flex;
       flex-direction: column;
-      align-items: flex-end;
-      gap: 10px;
-      flex: 0 0 auto;
+      gap: 2px;
       min-width: 0;
-      max-width: 55%;
     }
 
-    /* Bigger chips (requested) + safe wrapping */
-    .chip {
-      padding: 10px 14px;
-      border-radius: 12px;
-      font-size: 14px;
-      font-weight: 800;
-      letter-spacing: 0.25px;
+    .chip-title {
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.3px;
       text-transform: uppercase;
-      backdrop-filter: blur(10px);
-      text-align: right;
-      line-height: 1.25;
-      max-width: 100%;
-      min-width: 0;
+      opacity: 0.9;
+    }
 
-      /* keep content contained */
+    .chip-value {
+      font-size: 14px;
+      font-weight: 900;
+      line-height: 1.2;
+      white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      word-break: break-word;
     }
 
-    .chip .small {
-      display: block;
+    .chip-tag {
       font-size: 12px;
-      opacity: 0.9;
-      letter-spacing: 0.15px;
-      text-transform: none;
-      font-weight: 800;
-      line-height: 1.25;
-      white-space: normal;
+      font-weight: 900;
+      padding: 6px 10px;
+      border-radius: 999px;
+      white-space: nowrap;
+      flex: 0 0 auto;
     }
 
     .chip.green {
-      background: rgba(52, 199, 89, 0.2);
+      background: rgba(52, 199, 89, 0.12);
+      border-color: rgba(52, 199, 89, 0.22);
+    }
+
+    .chip.green .chip-title,
+    .chip.green .chip-value,
+    .chip.green .chip-tag {
       color: var(--accent-green);
     }
 
     .chip.gold {
-      background: rgba(255, 215, 0, 0.15);
+      background: rgba(255, 215, 0, 0.10);
+      border-color: rgba(255, 215, 0, 0.18);
+    }
+
+    .chip.gold .chip-title,
+    .chip.gold .chip-value,
+    .chip.gold .chip-tag {
       color: var(--accent-gold);
     }
 
     .chip.gray {
-      background: rgba(255, 255, 255, 0.1);
-      color: var(--text-secondary);
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.12);
     }
 
+    .chip.gray .chip-title,
+    .chip.gray .chip-value,
+    .chip.gray .chip-tag {
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    /* No line-through: just red + lower opacity */
     .chip.sold {
-      background: rgba(255, 69, 58, 0.15);
+      background: rgba(255, 69, 58, 0.10);
+      border-color: rgba(255, 69, 58, 0.18);
+    }
+
+    .chip.sold .chip-title,
+    .chip.sold .chip-value,
+    .chip.sold .chip-tag {
       color: var(--accent-red);
-      text-decoration: line-through;
     }
 
-    .abono-chip {
+    .chip-tag.badge {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    /* Abono badge (small) */
+    .abono {
+      margin-top: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
       font-size: 12px;
-      padding: 8px 12px;
-      border-radius: 10px;
+      font-weight: 900;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.06);
+      width: fit-content;
+      max-width: 100%;
     }
 
-    /* ===== Mobile fix (no offset) ===== */
+    .abono.ok {
+      color: var(--accent-green);
+      background: rgba(52, 199, 89, 0.10);
+      border-color: rgba(52, 199, 89, 0.20);
+    }
+
+    .abono.no {
+      color: var(--accent-red);
+      background: rgba(255, 69, 58, 0.10);
+      border-color: rgba(255, 69, 58, 0.20);
+    }
+
+    /* ===== Mobile layout improvement ===== */
     @media (max-width: 520px) {
       body {
         padding-top: calc(var(--safe-top) + 74px);
@@ -287,46 +351,43 @@
       }
 
       .panel {
-        padding: 16px;
+        padding: 14px;
       }
 
       .item {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 12px;
+        padding: 14px;
+        border-radius: 18px;
       }
 
-      .item-left {
-        min-width: 0;
+      .date {
+        font-size: 18px;
       }
 
-      .item-date {
+      .time {
+        font-size: 15px;
+      }
+
+      /* Two columns for Dina/Kultur chips when possible */
+      .chips.two {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      /* Allow chip content to wrap nicely if needed */
+      .chip-value {
         white-space: normal;
-      }
-
-      .item-right {
-        align-items: stretch;
-        max-width: 100%;
-      }
-
-      .chip {
-        width: 100%;
-        text-align: left;
-        padding: 12px 14px; /* a bit bigger on mobile */
-      }
-
-      .chip .small {
-        font-size: 13px;
-      }
-
-      .month {
-        margin-top: 22px;
       }
 
       .dynamic-island {
         width: calc(100% - 20px);
-        max-width: 520px;
         justify-content: space-between;
+      }
+    }
+
+    /* If very small phones, fall back to one column */
+    @media (max-width: 360px) {
+      .chips.two {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -427,9 +488,11 @@
       rows.sort((a, b) => (a.fecha_iso + a.hora).localeCompare(b.fecha_iso + b.hora));
 
       let currentMonth = null;
+
       for (const r of rows) {
         const d = new Date(r.fecha_iso + "T00:00:00");
         const key = d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0");
+
         if (key !== currentMonth) {
           currentMonth = key;
           const h = document.createElement("h3");
@@ -438,48 +501,62 @@
           cont.appendChild(h);
         }
 
-        // Dina chip
-        const dinaChipClass = chipClassFrom(r.vendidas ?? 0, r.stock ?? 999999);
-        const dinaText = (active === "Escondido")
-          ? `Dina: ${r.vendidas ?? "—"} / ${r.cap ?? "—"} · Quedan ${r.stock ?? "—"}`
-          : `Vendidas: ${r.vendidas ?? "—"}`;
+        const hasKultur = (active === "Escondido") && (r.kcap !== null || r.kstock !== null || r.kvend !== null);
 
-        // Kultur chip (solo en Escondido)
-        const hasKultur = (r.kcap !== null || r.kstock !== null || r.kvend !== null);
-        const kulturChipClass = chipClassFrom(r.kvend ?? 0, r.kstock ?? 999999);
-        const kulturText = hasKultur
-          ? `Kultur: ${r.kvend ?? "—"} / ${r.kcap ?? "—"} · Quedan ${r.kstock ?? "—"}`
-          : `Kultur: —`;
+        // Dina
+        const dinaCls = chipClassFrom(r.vendidas ?? 0, r.stock ?? 999999);
+        const dinaValue = (active === "Escondido")
+          ? `${r.vendidas ?? "—"} / ${r.cap ?? "—"} · Quedan ${r.stock ?? "—"}`
+          : `${r.vendidas ?? "—"}`;
+
+        // Kultur
+        const kulturCls = chipClassFrom(r.kvend ?? 0, r.kstock ?? 999999);
+        const kulturValue = hasKultur
+          ? `${r.kvend ?? "—"} / ${r.kcap ?? "—"} · Quedan ${r.kstock ?? "—"}`
+          : "—";
+
+        // Build card
+        const card = document.createElement("div");
+        card.className = "item";
+
+        const chipsClass = (active === "Escondido") ? "chips two" : "chips";
 
         let abonoHTML = "";
         if (active === "Escondido" && r.abono) {
-          if (r.abono === "venta") abonoHTML = `<div class="chip green abono-chip">Abono: Disponible</div>`;
-          if (r.abono === "agotado") abonoHTML = `<div class="chip sold abono-chip">Abono: Agotado</div>`;
+          if (r.abono === "venta") abonoHTML = `<div class="abono ok">Abono: Disponible</div>`;
+          if (r.abono === "agotado") abonoHTML = `<div class="abono no">Abono: Agotado</div>`;
         }
 
-        const div = document.createElement("div");
-        div.className = "item";
-        div.innerHTML = `
-          <div class="item-left">
-            <div class="item-date">${r.fecha_label} <span style="opacity:0.6">(${dayName(r.fecha_iso)})</span></div>
-            <div class="item-time">${r.hora} h</div>
+        card.innerHTML = `
+          <div class="row-top">
+            <div class="date">${r.fecha_label}<span>(${dayName(r.fecha_iso)})</span></div>
           </div>
+          <div class="time">${r.hora} h</div>
 
-          <div class="item-right">
-            <div class="chip ${dinaChipClass}">
-              <span class="small">${dinaText}</span>
+          <div class="${chipsClass}">
+            <div class="chip ${dinaCls}">
+              <div class="chip-left">
+                <div class="chip-title">${active === "Escondido" ? "Dina" : "Vendidas"}</div>
+                <div class="chip-value">${dinaValue}</div>
+              </div>
+              <div class="chip-tag badge">${active === "Escondido" ? "DinaTicket" : "Info"}</div>
             </div>
 
             ${active === "Escondido" ? `
-              <div class="chip ${kulturChipClass}">
-                <span class="small">${kulturText}</span>
+              <div class="chip ${hasKultur ? kulturCls : "gray"}">
+                <div class="chip-left">
+                  <div class="chip-title">Kultur</div>
+                  <div class="chip-value">${kulturValue}</div>
+                </div>
+                <div class="chip-tag badge">AppKultur</div>
               </div>
             ` : ""}
-
-            ${abonoHTML}
           </div>
+
+          ${abonoHTML}
         `;
-        cont.appendChild(div);
+
+        cont.appendChild(card);
       }
     }
 

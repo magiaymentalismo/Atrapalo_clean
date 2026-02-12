@@ -15,12 +15,10 @@
       --bg-deep: #000000;
       --glass-surface: rgba(255, 255, 255, 0.08);
       --glass-border: rgba(255, 255, 255, 0.12);
-      --glass-highlight: rgba(255, 255, 255, 0.2);
       --text-primary: #ffffff;
       --text-secondary: rgba(255, 255, 255, 0.6);
       --accent-gold: #ffd700;
       --accent-green: #34c759;
-      --accent-orange: #ff9f0a;
       --accent-red: #ff453a;
 
       --blur-md: 20px;
@@ -30,6 +28,12 @@
 
       --font-stack: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
       --safe-top: env(safe-area-inset-top, 20px);
+    }
+
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
     }
 
     body {
@@ -45,13 +49,13 @@
       -webkit-font-smoothing: antialiased;
       min-height: 100vh;
       padding-bottom: 40px;
-      padding-top: calc(var(--safe-top) + 60px);
+      padding-top: calc(var(--safe-top) + 62px);
     }
 
     .wrap {
       max-width: 1040px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 18px;
     }
 
     /* Dynamic Island */
@@ -73,18 +77,17 @@
       -webkit-backdrop-filter: blur(30px);
       border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: 30px;
-      padding: 8px 24px;
+      padding: 10px 18px;
       display: flex;
       align-items: center;
       gap: 12px;
+      max-width: 92%;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      max-width: 90%;
     }
 
     .island-title {
       font-size: 15px;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .island-meta {
@@ -98,9 +101,9 @@
     .tabs {
       display: flex;
       gap: 12px;
-      margin-bottom: 24px;
+      margin-bottom: 18px;
       overflow-x: auto;
-      padding: 4px;
+      padding: 4px 2px;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
       justify-content: center;
@@ -111,141 +114,281 @@
     }
 
     .tab {
-      padding: 12px 20px;
+      padding: 11px 18px;
       border-radius: var(--radius-full);
       background: var(--glass-surface);
       border: 1px solid var(--glass-border);
       color: var(--text-secondary);
       font-size: 15px;
-      font-weight: 600;
+      font-weight: 700;
       cursor: pointer;
       white-space: nowrap;
-      transition: all 0.3s;
+      transition: all 0.25s;
       backdrop-filter: blur(var(--blur-md));
       -webkit-backdrop-filter: blur(var(--blur-md));
+      flex: 0 0 auto;
     }
 
     .tab.active {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.92);
       color: #000;
       border-color: transparent;
-      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
-      transform: scale(1.02);
+      box-shadow: 0 4px 18px rgba(255, 255, 255, 0.18);
+      transform: scale(1.01);
     }
 
     /* Panel */
     .panel {
-      background: rgba(20, 20, 20, 0.4);
+      background: rgba(20, 20, 20, 0.38);
       border: 1px solid var(--glass-border);
       border-radius: var(--radius-lg);
-      padding: 24px;
+      padding: 18px;
       backdrop-filter: blur(40px);
       -webkit-backdrop-filter: blur(40px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
     }
 
-    /* Items */
+    /* List + Month */
     .list {
       display: flex;
       flex-direction: column;
-      gap: 16px;
-    }
-
-    .month {
-      margin: 32px 0 12px;
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--accent-gold);
-      text-transform: capitalize;
-      padding-left: 8px;
-    }
-
-    .item {
-      display: flex;
-      justify-content: space-between;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid var(--glass-border);
-      border-radius: var(--radius-md);
-      transition: 0.2s;
       gap: 14px;
     }
 
+    .month {
+      margin: 26px 0 10px;
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--accent-gold);
+      text-transform: capitalize;
+      padding-left: 6px;
+    }
+
+    /* Card */
+    .item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      border-radius: 18px;
+      padding: 16px;
+      transition: 0.2s;
+      min-width: 0;
+      overflow: hidden;
+    }
+
     .item:hover {
-      background: rgba(255, 255, 255, 0.06);
+      background: rgba(255, 255, 255, 0.055);
       transform: translateY(-2px);
     }
 
-    .item-left {
+    .row-top {
       display: flex;
-      flex-direction: column;
-      min-width: 220px;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
     }
 
-    .item-date {
-      font-size: 17px;
-      font-weight: 600;
+    .date {
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 1.15;
     }
 
-    .item-time {
+    .date span {
+      color: rgba(255, 255, 255, 0.55);
+      font-weight: 800;
+      margin-left: 6px;
+      font-size: 16px;
+      white-space: nowrap;
+    }
+
+    .time {
+      margin-top: 6px;
       font-size: 15px;
       color: var(--text-secondary);
+      font-weight: 700;
     }
 
-    .item-right {
+    /* Chips container */
+    .chips {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    /* Compact pill chip */
+    .chip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      background: rgba(255, 255, 255, 0.05);
+      min-width: 0;
+    }
+
+    .chip-left {
       display: flex;
       flex-direction: column;
-      align-items: flex-end;
-      gap: 8px;
+      gap: 2px;
+      min-width: 0;
     }
 
-    .chip {
-      padding: 6px 12px;
-      border-radius: 8px;
-      font-size: 13px;
-      font-weight: 700;
+    .chip-title {
+      font-size: 12px;
+      font-weight: 900;
       letter-spacing: 0.3px;
       text-transform: uppercase;
-      backdrop-filter: blur(10px);
-      text-align: right;
-      line-height: 1.2;
-      max-width: 100%;
+      opacity: 0.9;
     }
 
-    .chip .small {
-      display: block;
-      font-size: 11px;
-      opacity: 0.85;
-      letter-spacing: 0.2px;
-      text-transform: none;
-      font-weight: 700;
+    .chip-value {
+      font-size: 14px;
+      font-weight: 900;
+      line-height: 1.2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .chip-tag {
+      font-size: 12px;
+      font-weight: 900;
+      padding: 6px 10px;
+      border-radius: 999px;
+      white-space: nowrap;
+      flex: 0 0 auto;
     }
 
     .chip.green {
-      background: rgba(52, 199, 89, 0.2);
+      background: rgba(52, 199, 89, 0.12);
+      border-color: rgba(52, 199, 89, 0.22);
+    }
+
+    .chip.green .chip-title,
+    .chip.green .chip-value,
+    .chip.green .chip-tag {
       color: var(--accent-green);
     }
 
     .chip.gold {
-      background: rgba(255, 215, 0, 0.15);
+      background: rgba(255, 215, 0, 0.10);
+      border-color: rgba(255, 215, 0, 0.18);
+    }
+
+    .chip.gold .chip-title,
+    .chip.gold .chip-value,
+    .chip.gold .chip-tag {
       color: var(--accent-gold);
     }
 
     .chip.gray {
-      background: rgba(255, 255, 255, 0.1);
-      color: var(--text-secondary);
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.12);
     }
 
+    .chip.gray .chip-title,
+    .chip.gray .chip-value,
+    .chip.gray .chip-tag {
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    /* No line-through: just red + lower opacity */
     .chip.sold {
-      background: rgba(255, 69, 58, 0.15);
-      color: var(--accent-red);
-      text-decoration: line-through;
+      background: rgba(255, 69, 58, 0.10);
+      border-color: rgba(255, 69, 58, 0.18);
     }
 
-    .abono-chip {
-      font-size: 11px;
-      padding: 4px 8px;
-      border-radius: 6px;
+    .chip.sold .chip-title,
+    .chip.sold .chip-value,
+    .chip.sold .chip-tag {
+      color: var(--accent-red);
+    }
+
+    .chip-tag.badge {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    /* Abono badge (small) */
+    .abono {
+      margin-top: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 900;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.06);
+      width: fit-content;
+      max-width: 100%;
+    }
+
+    .abono.ok {
+      color: var(--accent-green);
+      background: rgba(52, 199, 89, 0.10);
+      border-color: rgba(52, 199, 89, 0.20);
+    }
+
+    .abono.no {
+      color: var(--accent-red);
+      background: rgba(255, 69, 58, 0.10);
+      border-color: rgba(255, 69, 58, 0.20);
+    }
+
+    /* ===== Mobile layout improvement ===== */
+    @media (max-width: 520px) {
+      body {
+        padding-top: calc(var(--safe-top) + 74px);
+      }
+
+      .wrap {
+        padding: 14px;
+      }
+
+      .panel {
+        padding: 14px;
+      }
+
+      .item {
+        padding: 14px;
+        border-radius: 18px;
+      }
+
+      .date {
+        font-size: 18px;
+      }
+
+      .time {
+        font-size: 15px;
+      }
+
+      /* Two columns for Dina/Kultur chips when possible */
+      .chips.two {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      /* Allow chip content to wrap nicely if needed */
+      .chip-value {
+        white-space: normal;
+      }
+
+      .dynamic-island {
+        width: calc(100% - 20px);
+        justify-content: space-between;
+      }
+    }
+
+    /* If very small phones, fall back to one column */
+    @media (max-width: 360px) {
+      .chips.two {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -268,7 +411,7 @@
   </div>
 
   <!-- PAYLOAD -->
-  <script id="PAYLOAD" type="application/json">{"generated_at": "2026-02-12T17:54:18.384654+01:00", "eventos": {"Disfruta": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["25 Feb 2026", "20:00", 0, "2026-02-25", 48, 48, null, "agotado", null, null, null]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["25 Feb 2026", "20:00", 0, "2026-02-25", 48, 48, null, "agotado", null, null, null]]}}}, "Miedo": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["13 Feb 2026", "23:00", 9, "2026-02-13", 48, 39, null, "agotado", null, null, null], ["27 Feb 2026", "23:00", 2, "2026-02-27", 48, 46, null, "agotado", null, null, null]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["13 Feb 2026", "23:00", 9, "2026-02-13", 48, 39, null, "agotado", null, null, null], ["27 Feb 2026", "23:00", 2, "2026-02-27", 48, 46, null, "agotado", null, null, null]]}}}, "Escondido": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["12 Feb 2026", "20:00", 6, "2026-02-12", 20, 14, "venta", null, 15, 13, 2], ["14 Feb 2026", "17:00", 37, "2026-02-14", 37, 0, "agotado", null, 10, 10, 0], ["15 Feb 2026", "18:30", 19, "2026-02-15", 26, 7, "agotado", null, 10, 10, 0], ["26 Feb 2026", "20:00", 10, "2026-02-26", 45, 35, "venta", null, 15, 15, 0], ["28 Feb 2026", "17:00", 32, "2026-02-28", 38, 6, "agotado", null, 10, 10, 0]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["12 Feb 2026", "20:00", 6, "2026-02-12", 20, 14, "venta", null, 15, 13, 2], ["14 Feb 2026", "17:00", 37, "2026-02-14", 37, 0, "agotado", null, 10, 10, 0], ["15 Feb 2026", "18:30", 19, "2026-02-15", 26, 7, "agotado", null, 10, 10, 0], ["26 Feb 2026", "20:00", 10, "2026-02-26", 45, 35, "venta", null, 15, 15, 0], ["28 Feb 2026", "17:00", 32, "2026-02-28", 38, 6, "agotado", null, 10, 10, 0]]}}}}, "fever_urls": {"Miedo": "https://feverup.com/m/290561", "Disfruta": "https://feverup.com/m/159767"}}</script>
+  <script id="PAYLOAD" type="application/json">{"generated_at": "2026-02-12T18:12:30.581952+01:00", "eventos": {"Disfruta": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["25 Feb 2026", "20:00", 0, "2026-02-25", 48, 48, null, "agotado", null, null, null]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["25 Feb 2026", "20:00", 0, "2026-02-25", 48, 48, null, "agotado", null, null, null]]}}}, "Miedo": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["13 Feb 2026", "23:00", 9, "2026-02-13", 48, 39, null, "agotado", null, null, null], ["27 Feb 2026", "23:00", 2, "2026-02-27", 48, 46, null, "agotado", null, null, null]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["13 Feb 2026", "23:00", 9, "2026-02-13", 48, 39, null, "agotado", null, null, null], ["27 Feb 2026", "23:00", 2, "2026-02-27", 48, 46, null, "agotado", null, null, null]]}}}, "Escondido": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["12 Feb 2026", "20:00", 6, "2026-02-12", 20, 14, "agotado", null, 15, 13, 2], ["14 Feb 2026", "17:00", 37, "2026-02-14", 37, 0, "agotado", null, 10, 10, 0], ["15 Feb 2026", "18:30", 19, "2026-02-15", 26, 7, "agotado", null, 10, 10, 0], ["26 Feb 2026", "20:00", 10, "2026-02-26", 45, 35, "venta", null, 15, 15, 0], ["28 Feb 2026", "17:00", 32, "2026-02-28", 38, 6, "agotado", null, 10, 10, 0]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["12 Feb 2026", "20:00", 6, "2026-02-12", 20, 14, "agotado", null, 15, 13, 2], ["14 Feb 2026", "17:00", 37, "2026-02-14", 37, 0, "agotado", null, 10, 10, 0], ["15 Feb 2026", "18:30", 19, "2026-02-15", 26, 7, "agotado", null, 10, 10, 0], ["26 Feb 2026", "20:00", 10, "2026-02-26", 45, 35, "venta", null, 15, 15, 0], ["28 Feb 2026", "17:00", 32, "2026-02-28", 38, 6, "agotado", null, 10, 10, 0]]}}}}, "fever_urls": {"Miedo": "https://feverup.com/m/290561", "Disfruta": "https://feverup.com/m/159767"}}</script>
 
   <script>
     const payload = JSON.parse(document.getElementById("PAYLOAD").textContent);
@@ -326,7 +469,8 @@
       let rows = getRows();
 
       // Índices:
-      // 0 Fecha, 1 Hora, 2 Vendidas(Dina), 3 FechaISO, 4 Cap(Dina), 5 Stock(Dina), 6 Abono, 7 Fever, 8 KulturCap, 9 KulturStock, 10 KulturVendidas
+      // 0 Fecha, 1 Hora, 2 Vendidas(Dina), 3 FechaISO, 4 Cap(Dina), 5 Stock(Dina), 6 Abono, 7 Fever,
+      // 8 KulturCap, 9 KulturStock, 10 KulturVendidas
       rows = rows.map(r => ({
         fecha_label: r[0],
         hora: r[1],
@@ -344,9 +488,11 @@
       rows.sort((a, b) => (a.fecha_iso + a.hora).localeCompare(b.fecha_iso + b.hora));
 
       let currentMonth = null;
+
       for (const r of rows) {
         const d = new Date(r.fecha_iso + "T00:00:00");
         const key = d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0");
+
         if (key !== currentMonth) {
           currentMonth = key;
           const h = document.createElement("h3");
@@ -355,48 +501,62 @@
           cont.appendChild(h);
         }
 
-        // Dina chip
-        const dinaChipClass = chipClassFrom(r.vendidas ?? 0, r.stock ?? 999999);
-        const dinaText = (active === "Escondido")
-          ? `Dina: ${r.vendidas ?? "—"} / ${r.cap ?? "—"} · Quedan ${r.stock ?? "—"}`
-          : `Vendidas: ${r.vendidas ?? "—"}`;
+        const hasKultur = (active === "Escondido") && (r.kcap !== null || r.kstock !== null || r.kvend !== null);
 
-        // Kultur chip (solo en Escondido)
-        const hasKultur = (r.kcap !== null || r.kstock !== null || r.kvend !== null);
-        const kulturChipClass = chipClassFrom(r.kvend ?? 0, r.kstock ?? 999999);
-        const kulturText = hasKultur
-          ? `Kultur: ${r.kvend ?? "—"} / ${r.kcap ?? "—"} · Quedan ${r.kstock ?? "—"}`
-          : `Kultur: —`;
+        // Dina
+        const dinaCls = chipClassFrom(r.vendidas ?? 0, r.stock ?? 999999);
+        const dinaValue = (active === "Escondido")
+          ? `${r.vendidas ?? "—"} / ${r.cap ?? "—"} · Quedan ${r.stock ?? "—"}`
+          : `${r.vendidas ?? "—"}`;
+
+        // Kultur
+        const kulturCls = chipClassFrom(r.kvend ?? 0, r.kstock ?? 999999);
+        const kulturValue = hasKultur
+          ? `${r.kvend ?? "—"} / ${r.kcap ?? "—"} · Quedan ${r.kstock ?? "—"}`
+          : "—";
+
+        // Build card
+        const card = document.createElement("div");
+        card.className = "item";
+
+        const chipsClass = (active === "Escondido") ? "chips two" : "chips";
 
         let abonoHTML = "";
         if (active === "Escondido" && r.abono) {
-          if (r.abono === "venta") abonoHTML = `<div class="chip green abono-chip">Abono: Disponible</div>`;
-          if (r.abono === "agotado") abonoHTML = `<div class="chip sold abono-chip">Abono: Agotado</div>`;
+          if (r.abono === "venta") abonoHTML = `<div class="abono ok">Abono: Disponible</div>`;
+          if (r.abono === "agotado") abonoHTML = `<div class="abono no">Abono: Agotado</div>`;
         }
 
-        const div = document.createElement("div");
-        div.className = "item";
-        div.innerHTML = `
-          <div class="item-left">
-            <div class="item-date">${r.fecha_label} <span style="opacity:0.6">(${dayName(r.fecha_iso)})</span></div>
-            <div class="item-time">${r.hora} h</div>
+        card.innerHTML = `
+          <div class="row-top">
+            <div class="date">${r.fecha_label}<span>(${dayName(r.fecha_iso)})</span></div>
           </div>
+          <div class="time">${r.hora} h</div>
 
-          <div class="item-right">
-            <div class="chip ${dinaChipClass}">
-              <span class="small">${dinaText}</span>
+          <div class="${chipsClass}">
+            <div class="chip ${dinaCls}">
+              <div class="chip-left">
+                <div class="chip-title">${active === "Escondido" ? "Dina" : "Vendidas"}</div>
+                <div class="chip-value">${dinaValue}</div>
+              </div>
+              <div class="chip-tag badge">${active === "Escondido" ? "DinaTicket" : "Info"}</div>
             </div>
 
             ${active === "Escondido" ? `
-              <div class="chip ${kulturChipClass}">
-                <span class="small">${kulturText}</span>
+              <div class="chip ${hasKultur ? kulturCls : "gray"}">
+                <div class="chip-left">
+                  <div class="chip-title">Kultur</div>
+                  <div class="chip-value">${kulturValue}</div>
+                </div>
+                <div class="chip-tag badge">AppKultur</div>
               </div>
             ` : ""}
-
-            ${abonoHTML}
           </div>
+
+          ${abonoHTML}
         `;
-        cont.appendChild(div);
+
+        cont.appendChild(card);
       }
     }
 
@@ -405,7 +565,9 @@
 
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js?v=20251201').then(r => console.log('SW Registered')).catch(console.error);
+      navigator.serviceWorker.register('sw.js?v=20251201')
+        .then(() => console.log('SW Registered'))
+        .catch(console.error);
     }
   </script>
 </body>
