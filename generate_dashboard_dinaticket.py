@@ -43,6 +43,9 @@ KULTUR_SESSIONS_API = "https://europe-west6-kultur-platform.cloudfunctions.net/e
 # Token AppCheck desde env / GitHub Secrets
 KULTUR_APPCHECK = os.getenv("KULTUR_APPCHECK")
 
+# DEBUG: poner a "1" para imprimir un sample del JSON de Kultur (sin token)
+DEBUG_KULTUR = os.getenv("DEBUG_KULTUR", "0") == "1"
+
 # Dinaticket suele usar abreviaturas tipo "Ene." pero a veces aparece sin punto.
 MESES = {
     "Ene.": "01", "Ene": "01",
@@ -112,10 +115,6 @@ def write_html(payload: dict) -> None:
 
 
 def write_schedule_json(payload: dict) -> None:
-    """
-    Exporta el payload completo a docs/schedule.json
-    para que GitHub Pages lo sirva y tu web (Hostinger) lo consuma por fetch.
-    """
     docs_dir = Path("docs")
     docs_dir.mkdir(exist_ok=True)
 
@@ -149,9 +148,7 @@ def fetch_functions_dinaticket(url: str, timeout: int = 20) -> list[dict]:
             continue
 
         mes_txt = mes.text.strip()
-        mes_num = MESES.get(mes_txt)
-        if not mes_num:
-            mes_num = MESES.get(mes_txt.replace(".", ""))
+        mes_num = MESES.get(mes_txt) or MESES.get(mes_txt.replace(".", ""))
         if not mes_num:
             print("DEBUG mes no reconocido Dinaticket:", repr(mes_txt))
             continue
@@ -162,7 +159,6 @@ def fetch_functions_dinaticket(url: str, timeout: int = 20) -> list[dict]:
         fecha_iso_tmp = f"{anio}-{mes_num}-{dia.text.strip().zfill(2)}"
         fecha_dt = datetime.strptime(fecha_iso_tmp, "%Y-%m-%d")
 
-        # Si la fecha ya pasó, asumimos año siguiente
         if fecha_dt.date() < now.date():
             fecha_dt = fecha_dt.replace(year=anio + 1)
 
@@ -262,11 +258,6 @@ def fetch_abonoteatro_shows(url: str, timeout: int = 20) -> set[tuple[str, str]]
 
 # ================== FEVER (SIN PLAYWRIGHT) ================== #
 def fetch_fever_dates(url: str, timeout: int = 15) -> set[str]:
-    """
-    Fever embedda JSON dentro del HTML con un campo:
-        "datesWithSessions": ["2025-12-12", "2025-12-27"]
-    Extraemos solo fechas (sin horas).
-    """
     try:
         r = requests.get(url, headers=UA, timeout=timeout)
         r.raise_for_status()
@@ -304,28 +295,49 @@ def _parse_iso_any(s: str) -> datetime | None:
         return None
 
 def _extract_kultur_cap_stock(d: dict) -> tuple[int | None, int | None]:
-    cap_keys = ("capacity", "totalCapacity", "maxCapacity", "totalTickets", "quota", "maxTickets")
-    stock_keys = ("available", "availability", "remaining", "ticketsAvailable", "stock")
+    cap_keys = ("capacity", "totalCapacity", "maxCapacity", "totalTickets", "quota", "maxTickets", "cap")
+    stock_keys = ("available", "availability", "remaining", "ticketsAvailable", "stock", "left")
 
     cap = next((d.get(k) for k in cap_keys if isinstance(d.get(k), (int, float))), None)
     stock = next((d.get(k) for k in stock_keys if isinstance(d.get(k), (int, float))), None)
 
     stats = d.get("stats")
-    if cap is None and isinstance(stats, dict):
-        cap = next((stats.get(k) for k in cap_keys if isinstance(stats.get(k), (int, float))), None)
-    if stock is None and isinstance(stats, dict):
-        stock = next((stats.get(k) for k in stock_keys if isinstance(stats.get(k), (int, float))), None)
+    if isinstance(stats, dict):
+        if cap is None:
+            cap = next((stats.get(k) for k in cap_keys if isinstance(stats.get(k), (int, float))), None)
+        if stock is None:
+            stock = next((stats.get(k) for k in stock_keys if isinstance(stats.get(k), (int, float))), None)
 
     return (int(cap) if cap is not None else None, int(stock) if stock is not None else None)
 
+def _extract_dt_from_dict(d: dict) -> datetime | None:
+    # Intentamos muchas claves comunes
+    for k in (
+        "start", "startAt", "dateTime", "datetime", "startDate",
+        "startsAt", "start_time", "startTime", "begin", "beginAt",
+        "sessionStart", "sessionStartAt",
+    ):
+        s = d.get(k)
+        if isinstance(s, str) and s:
+            dt = _parse_iso_any(s)
+            if dt:
+                return dt
 
-# ================== KULTUR (getSessions, day by day) ================== #
+    # A veces viene como {"start": {"_seconds": ...}} (Firestore)
+    for k in ("start", "startAt", "startTime", "dateTime"):
+        v = d.get(k)
+        if isinstance(v, dict) and "_seconds" in v:
+            try:
+                secs = int(v["_seconds"])
+                return datetime.fromtimestamp(secs, tz=UTC).astimezone(TZ)
+            except Exception:
+                pass
+
+    return None
+
+
+# ================== KULTUR (getSessions) ================== #
 def fetch_kultur_sessions_capacity(event_id: str, days: int = 30) -> dict[tuple[str, str], dict]:
-    """
-    Pedimos sesiones día por día para evitar timeouts.
-    Devuelve:
-      {(fecha_iso, hora): {"kultur_capacidad": int|None, "kultur_stock": int|None}}
-    """
     if not KULTUR_APPCHECK:
         print("⚠️ KULTUR token present: False (secret no configurado)")
         return {}
@@ -347,7 +359,7 @@ def fetch_kultur_sessions_capacity(event_id: str, days: int = 30) -> dict[tuple[
     for i in range(days):
         day = (now + timedelta(days=i)).date()
         from_dt = datetime(day.year, day.month, day.day, 0, 0, 0, tzinfo=TZ).astimezone(UTC)
-        to_dt = (from_dt + timedelta(days=1))
+        to_dt = from_dt + timedelta(days=1)
 
         payload = {
             "data": {
@@ -358,8 +370,7 @@ def fetch_kultur_sessions_capacity(event_id: str, days: int = 30) -> dict[tuple[
         }
 
         data = None
-
-        for attempt in range(1, 3):  # 2 intentos por día
+        for attempt in range(1, 3):
             try:
                 r = requests.post(
                     KULTUR_SESSIONS_API,
@@ -376,25 +387,32 @@ def fetch_kultur_sessions_capacity(event_id: str, days: int = 30) -> dict[tuple[
             except requests.exceptions.ReadTimeout:
                 if attempt == 2:
                     print(f"⚠️ Kultur timeout en {day}")
-                    data = None
             except Exception as e:
                 if attempt == 2:
                     print(f"⚠️ Kultur error en {day}: {e}")
-                    data = None
 
-        if not data:
+        if data is None:
             continue
 
-        for d in _walk_json(data):
-            dt_str = None
-            for k in ("start", "startAt", "dateTime", "datetime", "startDate"):
-                if isinstance(d.get(k), str):
-                    dt_str = d[k]
-                    break
-            if not dt_str:
-                continue
+        if DEBUG_KULTUR and i == 0:
+            try:
+                print("DEBUG Kultur type:", type(data))
+                if isinstance(data, dict):
+                    print("DEBUG Kultur keys:", list(data.keys())[:50])
+                print("DEBUG Kultur sample:", json.dumps(data, ensure_ascii=False)[:2500])
+            except Exception:
+                pass
 
-            dt = _parse_iso_any(dt_str)
+        # Soportar envoltorios típicos: {"result": ...} / {"data": ...}
+        root = data
+        if isinstance(root, dict) and "result" in root and isinstance(root["result"], (dict, list)):
+            root = root["result"]
+        if isinstance(root, dict) and "data" in root and isinstance(root["data"], (dict, list)):
+            root = root["data"]
+
+        # Parsear cualquier dict que tenga datetime
+        for d in _walk_json(root):
+            dt = _extract_dt_from_dict(d)
             if not dt:
                 continue
 
@@ -431,7 +449,8 @@ def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
     now = datetime.now(TZ)
     out: dict[str, dict] = {}
 
-    kultur_map = fetch_kultur_sessions_capacity(KULTUR_EVENT_ID_ESCONDIDO, days=30)
+    # Probar más rango por si las sesiones no están en los próximos 30 días
+    kultur_map = fetch_kultur_sessions_capacity(KULTUR_EVENT_ID_ESCONDIDO, days=90)
 
     abono_fechas = {fecha for (fecha, _hora) in abono_shows}
 
@@ -458,7 +477,6 @@ def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
             if fever_url:
                 fever_dates = fetch_fever_dates(fever_url)
                 print(f"DEBUG Fever {sala} fechas:", sorted(fever_dates))
-
                 for f in funcs:
                     fecha = f["fecha_iso"]
                     f["fever_estado"] = "venta" if fecha in fever_dates else "agotado"
@@ -486,7 +504,6 @@ def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
         for f in funcs:
             fecha_iso = f["fecha_iso"]
             hora_txt = f["hora"] or "00:00"
-
             try:
                 ses_dt = datetime.strptime(f"{fecha_iso} {hora_txt}", "%Y-%m-%d %H:%M").replace(tzinfo=TZ)
             except Exception:
@@ -501,9 +518,6 @@ def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
                 (proximas if d >= now.date() else pasadas).append(f)
 
         print(f"[DEBUG] {sala}: total={len(funcs)} · proximas={len(proximas)} · pasadas={len(pasadas)}")
-
-        if pasadas:
-            print(f"[INFO] Eliminando {len(pasadas)} funciones pasadas de {sala}")
 
         headers = ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock"]
 
