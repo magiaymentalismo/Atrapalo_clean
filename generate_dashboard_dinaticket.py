@@ -341,7 +341,7 @@ def fetch_kultur_calendar_capacity(event_id: str, from_date: str, to_date: str, 
                 KULTUR_CALENDAR_API,
                 headers=headers,
                 json=payload,
-                timeout=(10, 60),  # 10s conectar, 60s leer
+                timeout=(10, 25),  # 10s conectar, 60s leer
             )
 
             if r.status_code in (401, 403):
