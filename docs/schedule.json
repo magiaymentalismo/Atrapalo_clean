@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-02T19:36:44.334775+01:00",
+  "generated_at": "2026-02-12T17:49:44.767661+01:00",
   "eventos": {
     "Disfruta": {
       "table": {
@@ -11,38 +11,24 @@
           "Capacidad",
           "Stock",
           "Abono",
-          "Fever"
+          "Fever",
+          "KulturCap",
+          "KulturStock",
+          "KulturVendidas"
         ],
         "rows": [
           [
-            "04 Feb 2026",
-            "20:00:",
-            2,
-            "2026-02-04",
-            48,
-            46,
-            null,
-            "agotado"
-          ],
-          [
-            "11 Feb 2026",
-            "20:00:",
-            0,
-            "2026-02-11",
-            48,
-            48,
-            null,
-            "agotado"
-          ],
-          [
             "25 Feb 2026",
-            "20:00:",
+            "20:00",
             0,
             "2026-02-25",
             48,
             48,
             null,
-            "agotado"
+            "agotado",
+            null,
+            null,
+            null
           ]
         ]
       },
@@ -56,38 +42,24 @@
             "Capacidad",
             "Stock",
             "Abono",
-            "Fever"
+            "Fever",
+            "KulturCap",
+            "KulturStock",
+            "KulturVendidas"
           ],
           "rows": [
             [
-              "04 Feb 2026",
-              "20:00:",
-              2,
-              "2026-02-04",
-              48,
-              46,
-              null,
-              "agotado"
-            ],
-            [
-              "11 Feb 2026",
-              "20:00:",
-              0,
-              "2026-02-11",
-              48,
-              48,
-              null,
-              "agotado"
-            ],
-            [
               "25 Feb 2026",
-              "20:00:",
+              "20:00",
               0,
               "2026-02-25",
               48,
               48,
               null,
-              "agotado"
+              "agotado",
+              null,
+              null,
+              null
             ]
           ]
         }
@@ -103,38 +75,37 @@
           "Capacidad",
           "Stock",
           "Abono",
-          "Fever"
+          "Fever",
+          "KulturCap",
+          "KulturStock",
+          "KulturVendidas"
         ],
         "rows": [
           [
-            "06 Feb 2026",
-            "23:00:",
-            0,
-            "2026-02-06",
-            48,
-            48,
-            null,
-            "agotado"
-          ],
-          [
             "13 Feb 2026",
-            "23:00:",
-            2,
+            "23:00",
+            9,
             "2026-02-13",
             48,
-            46,
+            39,
             null,
-            "agotado"
+            "agotado",
+            null,
+            null,
+            null
           ],
           [
             "27 Feb 2026",
-            "23:00:",
-            0,
+            "23:00",
+            2,
             "2026-02-27",
             48,
-            48,
+            46,
             null,
-            "agotado"
+            "agotado",
+            null,
+            null,
+            null
           ]
         ]
       },
@@ -148,38 +119,37 @@
             "Capacidad",
             "Stock",
             "Abono",
-            "Fever"
+            "Fever",
+            "KulturCap",
+            "KulturStock",
+            "KulturVendidas"
           ],
           "rows": [
             [
-              "06 Feb 2026",
-              "23:00:",
-              0,
-              "2026-02-06",
-              48,
-              48,
-              null,
-              "agotado"
-            ],
-            [
               "13 Feb 2026",
-              "23:00:",
-              2,
+              "23:00",
+              9,
               "2026-02-13",
               48,
-              46,
+              39,
               null,
-              "agotado"
+              "agotado",
+              null,
+              null,
+              null
             ],
             [
               "27 Feb 2026",
-              "23:00:",
-              0,
+              "23:00",
+              2,
               "2026-02-27",
               48,
-              48,
+              46,
               null,
-              "agotado"
+              "agotado",
+              null,
+              null,
+              null
             ]
           ]
         }
@@ -195,78 +165,76 @@
           "Capacidad",
           "Stock",
           "Abono",
-          "Fever"
+          "Fever",
+          "KulturCap",
+          "KulturStock",
+          "KulturVendidas"
         ],
         "rows": [
           [
-            "05 Feb 2026",
-            "20:00:",
-            2,
-            "2026-02-05",
-            45,
-            43,
-            "venta",
-            null
-          ],
-          [
-            "08 Feb 2026",
-            "18:30:",
-            2,
-            "2026-02-08",
-            30,
-            28,
-            "agotado",
-            null
-          ],
-          [
             "12 Feb 2026",
-            "20:00:",
-            0,
+            "20:00",
+            6,
             "2026-02-12",
-            45,
-            45,
+            20,
+            14,
             "venta",
-            null
+            null,
+            15,
+            13,
+            2
           ],
           [
             "14 Feb 2026",
-            "17:00:",
-            12,
+            "17:00",
+            37,
             "2026-02-14",
-            20,
-            8,
+            37,
+            0,
             "agotado",
-            null
+            null,
+            10,
+            10,
+            0
           ],
           [
             "15 Feb 2026",
-            "18:30:",
-            4,
+            "18:30",
+            19,
             "2026-02-15",
-            30,
             26,
+            7,
             "agotado",
-            null
+            null,
+            10,
+            10,
+            0
           ],
           [
             "26 Feb 2026",
-            "20:00:",
-            6,
+            "20:00",
+            10,
             "2026-02-26",
             45,
-            39,
+            35,
             "venta",
-            null
+            null,
+            15,
+            15,
+            0
           ],
           [
             "28 Feb 2026",
-            "17:00:",
-            14,
+            "17:00",
+            32,
             "2026-02-28",
-            20,
+            38,
             6,
-            "venta",
-            null
+            "agotado",
+            null,
+            10,
+            10,
+            0
           ]
         ]
       },
@@ -280,78 +248,76 @@
             "Capacidad",
             "Stock",
             "Abono",
-            "Fever"
+            "Fever",
+            "KulturCap",
+            "KulturStock",
+            "KulturVendidas"
           ],
           "rows": [
             [
-              "05 Feb 2026",
-              "20:00:",
-              2,
-              "2026-02-05",
-              45,
-              43,
-              "venta",
-              null
-            ],
-            [
-              "08 Feb 2026",
-              "18:30:",
-              2,
-              "2026-02-08",
-              30,
-              28,
-              "agotado",
-              null
-            ],
-            [
               "12 Feb 2026",
-              "20:00:",
-              0,
+              "20:00",
+              6,
               "2026-02-12",
-              45,
-              45,
+              20,
+              14,
               "venta",
-              null
+              null,
+              15,
+              13,
+              2
             ],
             [
               "14 Feb 2026",
-              "17:00:",
-              12,
+              "17:00",
+              37,
               "2026-02-14",
-              20,
-              8,
+              37,
+              0,
               "agotado",
-              null
+              null,
+              10,
+              10,
+              0
             ],
             [
               "15 Feb 2026",
-              "18:30:",
-              4,
+              "18:30",
+              19,
               "2026-02-15",
-              30,
               26,
+              7,
               "agotado",
-              null
+              null,
+              10,
+              10,
+              0
             ],
             [
               "26 Feb 2026",
-              "20:00:",
-              6,
+              "20:00",
+              10,
               "2026-02-26",
               45,
-              39,
+              35,
               "venta",
-              null
+              null,
+              15,
+              15,
+              0
             ],
             [
               "28 Feb 2026",
-              "17:00:",
-              14,
+              "17:00",
+              32,
               "2026-02-28",
-              20,
+              38,
               6,
-              "venta",
-              null
+              "agotado",
+              null,
+              10,
+              10,
+              0
             ]
           ]
         }

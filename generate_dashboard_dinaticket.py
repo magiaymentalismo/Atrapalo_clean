@@ -36,14 +36,10 @@ UA = {
 # -------------------- KULTUR -------------------- #
 # Página: https://appkultur.com/madrid/el-juego-de-la-mente-magia-mental-con-ariel-hamui
 KULTUR_EVENT_ID_ESCONDIDO = "YaWZRG4MCxo1CHvr"
-
-# Usamos getSessions (más directo y suele responder mejor que getCalendar)
 KULTUR_SESSIONS_API = "https://europe-west6-kultur-platform.cloudfunctions.net/events_api_v2-getSessions"
-
-# Token AppCheck desde env / GitHub Secrets
 KULTUR_APPCHECK = os.getenv("KULTUR_APPCHECK")
 
-# DEBUG: poner a "1" para imprimir un sample del JSON de Kultur (sin token)
+# DEBUG opcional (1 = imprime sample de Kultur el primer día)
 DEBUG_KULTUR = os.getenv("DEBUG_KULTUR", "0") == "1"
 
 # Dinaticket suele usar abreviaturas tipo "Ene." pero a veces aparece sin punto.
@@ -85,6 +81,29 @@ UTC = ZoneInfo("UTC")
 TEMPLATE_PATH = Path("template.html")
 MANIFEST_PATH = Path("manifest.json")
 SW_PATH = Path("sw.js")
+
+
+# ================== HELPERS ================== #
+def normalize_hhmm(h: str | None) -> str:
+    """
+    Normaliza horas tipo:
+      "20:00:" -> "20:00"
+      "20h" -> "20:00"
+      "20h00" -> "20:00"
+      "20:00 h" -> "20:00"
+    """
+    if not h:
+        return "00:00"
+    s = str(h).strip().lower()
+    s = s.replace(" ", "").replace("h", "")
+    s = re.sub(r"[^0-9:]", "", s)
+    s = s.rstrip(":")
+    m = re.match(r"^(\d{1,2})(?::?(\d{2}))?$", s)
+    if not m:
+        return s
+    hh = int(m.group(1))
+    mm = int(m.group(2) or "00")
+    return f"{hh:02d}:{mm:02d}"
 
 
 # ================== GENERATE HTML ================== #
@@ -159,6 +178,7 @@ def fetch_functions_dinaticket(url: str, timeout: int = 20) -> list[dict]:
         fecha_iso_tmp = f"{anio}-{mes_num}-{dia.text.strip().zfill(2)}"
         fecha_dt = datetime.strptime(fecha_iso_tmp, "%Y-%m-%d")
 
+        # Si la fecha ya pasó, asumimos año siguiente
         if fecha_dt.date() < now.date():
             fecha_dt = fecha_dt.replace(year=anio + 1)
 
@@ -166,15 +186,7 @@ def fetch_functions_dinaticket(url: str, timeout: int = 20) -> list[dict]:
         fecha_label = fecha_dt.strftime("%d %b %Y")
 
         hora_span = session.find("span", class_="session-card__time-session")
-        hora_txt = (hora_span.text or "").strip().lower().replace(" ", "").replace("h", ":")
-
-        m = re.match(r"^(\d{1,2})(?::?(\d{2}))?$", hora_txt)
-        if m:
-            hh = int(m.group(1))
-            mm = int(m.group(2) or "00")
-            hora = f"{hh:02d}:{mm:02d}"
-        else:
-            hora = hora_txt
+        hora = normalize_hhmm((hora_span.text or "") if hora_span else "")
 
         quota = session.find("div", class_="js-quota-row")
         if not quota:
@@ -245,9 +257,7 @@ def fetch_abonoteatro_shows(url: str, timeout: int = 20) -> set[tuple[str, str]]
             print("DEBUG hora rara:", repr(hora_txt))
             continue
 
-        hh = m_hora.group(1).zfill(2)
-        mm = m_hora.group(2).zfill(2)
-        hora = f"{hh}:{mm}"
+        hora = normalize_hhmm(f"{m_hora.group(1)}:{m_hora.group(2)}")
 
         fecha_iso = f"{anio}-{mes_num}-{dia_num}"
         out.add((fecha_iso, hora))
@@ -294,24 +304,7 @@ def _parse_iso_any(s: str) -> datetime | None:
     except Exception:
         return None
 
-def _extract_kultur_cap_stock(d: dict) -> tuple[int | None, int | None]:
-    cap_keys = ("capacity", "totalCapacity", "maxCapacity", "totalTickets", "quota", "maxTickets", "cap")
-    stock_keys = ("available", "availability", "remaining", "ticketsAvailable", "stock", "left")
-
-    cap = next((d.get(k) for k in cap_keys if isinstance(d.get(k), (int, float))), None)
-    stock = next((d.get(k) for k in stock_keys if isinstance(d.get(k), (int, float))), None)
-
-    stats = d.get("stats")
-    if isinstance(stats, dict):
-        if cap is None:
-            cap = next((stats.get(k) for k in cap_keys if isinstance(stats.get(k), (int, float))), None)
-        if stock is None:
-            stock = next((stats.get(k) for k in stock_keys if isinstance(stats.get(k), (int, float))), None)
-
-    return (int(cap) if cap is not None else None, int(stock) if stock is not None else None)
-
 def _extract_dt_from_dict(d: dict) -> datetime | None:
-    # Intentamos muchas claves comunes
     for k in (
         "start", "startAt", "dateTime", "datetime", "startDate",
         "startsAt", "start_time", "startTime", "begin", "beginAt",
@@ -323,7 +316,6 @@ def _extract_dt_from_dict(d: dict) -> datetime | None:
             if dt:
                 return dt
 
-    # A veces viene como {"start": {"_seconds": ...}} (Firestore)
     for k in ("start", "startAt", "startTime", "dateTime"):
         v = d.get(k)
         if isinstance(v, dict) and "_seconds" in v:
@@ -334,6 +326,37 @@ def _extract_dt_from_dict(d: dict) -> datetime | None:
                 pass
 
     return None
+
+def _extract_kultur_cap_stock_sold(d: dict) -> tuple[int | None, int | None, int | None]:
+    cap = stock = sold = None
+
+    av = d.get("availability")
+    if isinstance(av, dict):
+        v = av.get("capacity")
+        if isinstance(v, (int, float)): cap = int(v)
+        v = av.get("available")
+        if isinstance(v, (int, float)): stock = int(v)
+        v = av.get("sold")
+        if isinstance(v, (int, float)): sold = int(v)
+
+    if cap is None and isinstance(d.get("tickets"), (int, float)):
+        cap = int(d["tickets"])
+    if sold is None and isinstance(d.get("tickets_sold"), (int, float)):
+        sold = int(d["tickets_sold"])
+
+    stats = d.get("stats")
+    if isinstance(stats, dict):
+        if cap is None and isinstance(stats.get("capacity"), (int, float)):
+            cap = int(stats["capacity"])
+        if stock is None and isinstance(stats.get("available"), (int, float)):
+            stock = int(stats["available"])
+        if sold is None and isinstance(stats.get("sold"), (int, float)):
+            sold = int(stats["sold"])
+
+    if sold is None and cap is not None and stock is not None:
+        sold = max(0, cap - stock)
+
+    return cap, stock, sold
 
 
 # ================== KULTUR (getSessions) ================== #
@@ -403,23 +426,26 @@ def fetch_kultur_sessions_capacity(event_id: str, days: int = 30) -> dict[tuple[
             except Exception:
                 pass
 
-        # Soportar envoltorios típicos: {"result": ...} / {"data": ...}
         root = data
         if isinstance(root, dict) and "result" in root and isinstance(root["result"], (dict, list)):
             root = root["result"]
         if isinstance(root, dict) and "data" in root and isinstance(root["data"], (dict, list)):
             root = root["data"]
 
-        # Parsear cualquier dict que tenga datetime
         for d in _walk_json(root):
             dt = _extract_dt_from_dict(d)
             if not dt:
                 continue
 
-            cap, stock = _extract_kultur_cap_stock(d)
-            out[(dt.strftime("%Y-%m-%d"), dt.strftime("%H:%M"))] = {
+            cap, stock, sold = _extract_kultur_cap_stock_sold(d)
+
+            # Normalizamos HH:MM para matchear con Dinaticket
+            key = (dt.strftime("%Y-%m-%d"), dt.strftime("%H:%M"))
+
+            out[key] = {
                 "kultur_capacidad": cap,
                 "kultur_stock": stock,
+                "kultur_vendidas": sold,
             }
 
     print("Kultur sesiones encontradas:", len(out))
@@ -440,6 +466,7 @@ def build_rows(funcs: list[dict]) -> list[list]:
             f.get("fever_estado"),
             f.get("kultur_capacidad"),
             f.get("kultur_stock"),
+            f.get("kultur_vendidas"),
         ]
         for f in funcs
     ]
@@ -449,8 +476,7 @@ def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
     now = datetime.now(TZ)
     out: dict[str, dict] = {}
 
-    # Probar más rango por si las sesiones no están en los próximos 30 días
-    kultur_map = fetch_kultur_sessions_capacity(KULTUR_EVENT_ID_ESCONDIDO, days=90)
+    kultur_map = fetch_kultur_sessions_capacity(KULTUR_EVENT_ID_ESCONDIDO, days=30)
 
     abono_fechas = {fecha for (fecha, _hora) in abono_shows}
 
@@ -459,6 +485,7 @@ def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
         # ---------- ABONO ----------
         if sala == "Escondido":
             for f in funcs:
+                f["hora"] = normalize_hhmm(f.get("hora"))
                 fecha = f["fecha_iso"]
                 hora = f["hora"]
                 if (fecha, hora) in abono_shows:
@@ -478,6 +505,7 @@ def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
                 fever_dates = fetch_fever_dates(fever_url)
                 print(f"DEBUG Fever {sala} fechas:", sorted(fever_dates))
                 for f in funcs:
+                    f["hora"] = normalize_hhmm(f.get("hora"))
                     fecha = f["fecha_iso"]
                     f["fever_estado"] = "venta" if fecha in fever_dates else "agotado"
             else:
@@ -490,20 +518,25 @@ def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
         # ---------- KULTUR (Escondido) ----------
         if sala == "Escondido":
             for f in funcs:
+                f["hora"] = normalize_hhmm(f.get("hora"))
                 km = kultur_map.get((f["fecha_iso"], f["hora"]))
                 f["kultur_capacidad"] = km.get("kultur_capacidad") if km else None
                 f["kultur_stock"] = km.get("kultur_stock") if km else None
+                f["kultur_vendidas"] = km.get("kultur_vendidas") if km else None
         else:
             for f in funcs:
                 f["kultur_capacidad"] = None
                 f["kultur_stock"] = None
+                f["kultur_vendidas"] = None
 
         proximas: list[dict] = []
         pasadas: list[dict] = []
 
         for f in funcs:
             fecha_iso = f["fecha_iso"]
-            hora_txt = f["hora"] or "00:00"
+            hora_txt = normalize_hhmm(f.get("hora")) or "00:00"
+            f["hora"] = hora_txt
+
             try:
                 ses_dt = datetime.strptime(f"{fecha_iso} {hora_txt}", "%Y-%m-%d %H:%M").replace(tzinfo=TZ)
             except Exception:
@@ -519,19 +552,14 @@ def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
 
         print(f"[DEBUG] {sala}: total={len(funcs)} · proximas={len(proximas)} · pasadas={len(pasadas)}")
 
-        headers = ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock"]
+        headers = [
+            "Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock",
+            "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"
+        ]
 
         out[sala] = {
-            "table": {
-                "headers": headers,
-                "rows": build_rows(proximas),
-            },
-            "proximas": {
-                "table": {
-                    "headers": headers,
-                    "rows": build_rows(proximas),
-                }
-            },
+            "table": {"headers": headers, "rows": build_rows(proximas)},
+            "proximas": {"table": {"headers": headers, "rows": build_rows(proximas)}},
         }
 
     return {
