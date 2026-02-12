@@ -334,16 +334,32 @@ def fetch_kultur_calendar_capacity(event_id: str, from_date: str, to_date: str, 
     }
     payload = {"data": {"eventId": event_id, "from": from_date, "to": to_date}}
 
-    try:
-        r = requests.post(KULTUR_CALENDAR_API, headers=headers, json=payload, timeout=timeout)
-        if r.status_code in (401, 403):
-            print(f"⚠️ Kultur 401/403 (token inválido o expirado). status={r.status_code}")
-            return {}
-        r.raise_for_status()
-        data = r.json()
-    except Exception as e:
-        print("⚠️ Error llamando Kultur getCalendar:", e)
-        return {}
+    # ✅ Reintentos + timeouts más altos para evitar Read timed out en GitHub Actions
+    for attempt in range(1, 4):  # hasta 3 intentos
+        try:
+            r = requests.post(
+                KULTUR_CALENDAR_API,
+                headers=headers,
+                json=payload,
+                timeout=(10, 60),  # 10s conectar, 60s leer
+            )
+
+            if r.status_code in (401, 403):
+                print(f"⚠️ Kultur 401/403 (token inválido o expirado). status={r.status_code}")
+                return {}
+
+            r.raise_for_status()
+            data = r.json()
+            break  # éxito
+
+        except requests.exceptions.ReadTimeout:
+            print(f"⚠️ Kultur timeout (intento {attempt}/3)")
+            if attempt == 3:
+                return {}
+        except Exception as e:
+            print(f"⚠️ Kultur error (intento {attempt}/3): {e}")
+            if attempt == 3:
+                return {}
 
     out: dict[tuple[str, str], dict] = {}
     for d in _walk_json(data):
@@ -390,9 +406,10 @@ def build_payload(eventos: dict, abono_shows: set[tuple[str, str]]) -> dict:
     now = datetime.now(TZ)
     out: dict[str, dict] = {}
 
-    # ----------- KULTUR MAP (solo para Escondido) -----------
+    # ✅ Pedimos menos rango para que responda rápido (evita timeouts)
     from_date = now.strftime("%Y-%m-%d")
-    to_date = (now + timedelta(days=120)).strftime("%Y-%m-%d")
+    to_date = (now + timedelta(days=30)).strftime("%Y-%m-%d")
+
     kultur_map = fetch_kultur_calendar_capacity(
         event_id=KULTUR_EVENT_ID_ESCONDIDO,
         from_date=from_date,
