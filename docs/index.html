@@ -21,7 +21,6 @@
       --accent-green: #34c759;
       --accent-red: #ff453a;
 
-      --blur-md: 20px;
       --radius-lg: 24px;
       --radius-md: 16px;
       --radius-full: 999px;
@@ -31,10 +30,7 @@
     }
 
     html,
-    body {
-      max-width: 100%;
-      overflow-x: hidden;
-    }
+    body { max-width: 100%; overflow-x: hidden; }
 
     body {
       background-color: var(--bg-deep);
@@ -43,27 +39,24 @@
         radial-gradient(circle at 90% 80%, rgba(0, 80, 100, 0.3) 0%, transparent 40%),
         radial-gradient(circle at 50% 50%, rgba(40, 40, 40, 0.5) 0%, transparent 60%);
       background-attachment: fixed;
+
       margin: 0;
       color: var(--text-primary);
       font-family: var(--font-stack);
       -webkit-font-smoothing: antialiased;
       min-height: 100vh;
+
+      padding-top: calc(var(--safe-top) + 96px);
       padding-bottom: 40px;
-      padding-top: calc(var(--safe-top) + 62px);
     }
 
-    .wrap {
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 18px;
-    }
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 16px; }
 
     /* Dynamic Island */
     .dynamic-island-container {
       position: fixed;
-      top: 10px;
-      left: 0;
-      right: 0;
+      top: calc(var(--safe-top) + 8px);
+      left: 0; right: 0;
       display: flex;
       justify-content: center;
       z-index: 1000;
@@ -77,41 +70,38 @@
       -webkit-backdrop-filter: blur(30px);
       border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: 30px;
-      padding: 10px 18px;
+      padding: 10px 16px;
+
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 12px;
-      max-width: 92%;
+
+      width: min(560px, calc(100% - 20px));
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
 
-    .island-title {
-      font-size: 15px;
-      font-weight: 800;
-    }
-
+    .island-title { font-size: 15px; font-weight: 900; white-space: nowrap; }
     .island-meta {
       font-size: 12px;
       color: var(--text-secondary);
       border-left: 1px solid rgba(255, 255, 255, 0.2);
       padding-left: 12px;
+      white-space: nowrap;
     }
 
     /* Tabs */
     .tabs {
       display: flex;
       gap: 12px;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
       overflow-x: auto;
       padding: 4px 2px;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
       justify-content: center;
     }
-
-    .tabs::-webkit-scrollbar {
-      display: none;
-    }
+    .tabs::-webkit-scrollbar { display: none; }
 
     .tab {
       padding: 11px 18px;
@@ -120,12 +110,10 @@
       border: 1px solid var(--glass-border);
       color: var(--text-secondary);
       font-size: 15px;
-      font-weight: 700;
+      font-weight: 800;
       cursor: pointer;
       white-space: nowrap;
       transition: all 0.25s;
-      backdrop-filter: blur(var(--blur-md));
-      -webkit-backdrop-filter: blur(var(--blur-md));
       flex: 0 0 auto;
     }
 
@@ -142,21 +130,16 @@
       background: rgba(20, 20, 20, 0.38);
       border: 1px solid var(--glass-border);
       border-radius: var(--radius-lg);
-      padding: 18px;
+      padding: 14px;
       backdrop-filter: blur(40px);
       -webkit-backdrop-filter: blur(40px);
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
     }
 
-    /* List + Month */
-    .list {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
+    .list { display: flex; flex-direction: column; gap: 14px; }
 
     .month {
-      margin: 26px 0 10px;
+      margin: 22px 0 10px;
       font-size: 20px;
       font-weight: 900;
       color: var(--accent-gold);
@@ -169,30 +152,19 @@
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid rgba(255, 255, 255, 0.10);
       border-radius: 18px;
-      padding: 16px;
+      padding: 14px;
       transition: 0.2s;
-      min-width: 0;
       overflow: hidden;
-    }
-
-    .item:hover {
-      background: rgba(255, 255, 255, 0.055);
-      transform: translateY(-2px);
     }
 
     .row-top {
       display: flex;
       align-items: baseline;
       justify-content: space-between;
-      gap: 12px;
+      gap: 10px;
     }
 
-    .date {
-      font-size: 18px;
-      font-weight: 900;
-      line-height: 1.15;
-    }
-
+    .date { font-size: 18px; font-weight: 900; line-height: 1.15; }
     .date span {
       color: rgba(255, 255, 255, 0.55);
       font-weight: 800;
@@ -205,10 +177,9 @@
       margin-top: 6px;
       font-size: 15px;
       color: var(--text-secondary);
-      font-weight: 700;
+      font-weight: 800;
     }
 
-    /* Chips container */
     .chips {
       margin-top: 12px;
       display: grid;
@@ -216,103 +187,59 @@
       gap: 10px;
     }
 
-    /* Compact pill chip */
     .chip {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 10px;
-      padding: 10px 12px;
+      padding: 12px 12px;
       border-radius: 14px;
       border: 1px solid rgba(255, 255, 255, 0.10);
       background: rgba(255, 255, 255, 0.05);
       min-width: 0;
     }
 
-    .chip-left {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-      min-width: 0;
-    }
+    .chip-left { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 
     .chip-title {
       font-size: 12px;
       font-weight: 900;
-      letter-spacing: 0.3px;
+      letter-spacing: 0.35px;
       text-transform: uppercase;
       opacity: 0.9;
     }
 
+    /* ✅ Base size (Escondido) */
     .chip-value {
-      font-size: 14px;
-      font-weight: 900;
-      line-height: 1.2;
+      font-size: 15px;
+      font-weight: 950;
+      line-height: 1.15;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      max-width: 100%;
     }
 
-    .chip-tag {
-      font-size: 12px;
-      font-weight: 900;
-      padding: 6px 10px;
-      border-radius: 999px;
-      white-space: nowrap;
-      flex: 0 0 auto;
+    /* ✅ Bigger numbers for Disfruta/Miedo */
+    .chip-value.big {
+      font-size: 20px;
+      font-weight: 980;
+      letter-spacing: 0.2px;
     }
 
-    .chip.green {
-      background: rgba(52, 199, 89, 0.12);
-      border-color: rgba(52, 199, 89, 0.22);
-    }
+    .chip.green { background: rgba(52, 199, 89, 0.12); border-color: rgba(52, 199, 89, 0.22); }
+    .chip.green .chip-title, .chip.green .chip-value { color: var(--accent-green); }
 
-    .chip.green .chip-title,
-    .chip.green .chip-value,
-    .chip.green .chip-tag {
-      color: var(--accent-green);
-    }
+    .chip.gold { background: rgba(255, 215, 0, 0.10); border-color: rgba(255, 215, 0, 0.18); }
+    .chip.gold .chip-title, .chip.gold .chip-value { color: var(--accent-gold); }
 
-    .chip.gold {
-      background: rgba(255, 215, 0, 0.10);
-      border-color: rgba(255, 215, 0, 0.18);
-    }
+    .chip.gray { background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.12); }
+    .chip.gray .chip-title, .chip.gray .chip-value { color: rgba(255, 255, 255, 0.78); }
 
-    .chip.gold .chip-title,
-    .chip.gold .chip-value,
-    .chip.gold .chip-tag {
-      color: var(--accent-gold);
-    }
+    .chip.sold { background: rgba(255, 69, 58, 0.10); border-color: rgba(255, 69, 58, 0.18); }
+    .chip.sold .chip-title, .chip.sold .chip-value { color: var(--accent-red); }
 
-    .chip.gray {
-      background: rgba(255, 255, 255, 0.06);
-      border-color: rgba(255, 255, 255, 0.12);
-    }
-
-    .chip.gray .chip-title,
-    .chip.gray .chip-value,
-    .chip.gray .chip-tag {
-      color: rgba(255, 255, 255, 0.78);
-    }
-
-    /* No line-through: just red + lower opacity */
-    .chip.sold {
-      background: rgba(255, 69, 58, 0.10);
-      border-color: rgba(255, 69, 58, 0.18);
-    }
-
-    .chip.sold .chip-title,
-    .chip.sold .chip-value,
-    .chip.sold .chip-tag {
-      color: var(--accent-red);
-    }
-
-    .chip-tag.badge {
-      background: rgba(0, 0, 0, 0.25);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-    }
-
-    /* Abono badge (small) */
+    /* Abono badge */
     .abono {
       margin-top: 10px;
       display: inline-flex;
@@ -328,67 +255,13 @@
       max-width: 100%;
     }
 
-    .abono.ok {
-      color: var(--accent-green);
-      background: rgba(52, 199, 89, 0.10);
-      border-color: rgba(52, 199, 89, 0.20);
-    }
+    .abono.ok { color: var(--accent-green); background: rgba(52, 199, 89, 0.10); border-color: rgba(52, 199, 89, 0.20); }
+    .abono.no { color: var(--accent-red); background: rgba(255, 69, 58, 0.10); border-color: rgba(255, 69, 58, 0.20); }
 
-    .abono.no {
-      color: var(--accent-red);
-      background: rgba(255, 69, 58, 0.10);
-      border-color: rgba(255, 69, 58, 0.20);
-    }
-
-    /* ===== Mobile layout improvement ===== */
-    @media (max-width: 520px) {
-      body {
-        padding-top: calc(var(--safe-top) + 74px);
-      }
-
-      .wrap {
-        padding: 14px;
-      }
-
-      .panel {
-        padding: 14px;
-      }
-
-      .item {
-        padding: 14px;
-        border-radius: 18px;
-      }
-
-      .date {
-        font-size: 18px;
-      }
-
-      .time {
-        font-size: 15px;
-      }
-
-      /* Two columns for Dina/Kultur chips when possible */
-      .chips.two {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-      }
-
-      /* Allow chip content to wrap nicely if needed */
-      .chip-value {
-        white-space: normal;
-      }
-
-      .dynamic-island {
-        width: calc(100% - 20px);
-        justify-content: space-between;
-      }
-    }
-
-    /* If very small phones, fall back to one column */
-    @media (max-width: 360px) {
-      .chips.two {
-        grid-template-columns: 1fr;
-      }
+    @media (min-width: 700px) {
+      .panel { padding: 18px; }
+      .item { padding: 16px; }
+      .chips.two { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
@@ -411,7 +284,7 @@
   </div>
 
   <!-- PAYLOAD -->
-  <script id="PAYLOAD" type="application/json">{"generated_at": "2026-02-12T18:20:23.468558+01:00", "eventos": {"Disfruta": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["25 Feb 2026", "20:00", 0, "2026-02-25", 48, 48, null, "agotado", null, null, null]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["25 Feb 2026", "20:00", 0, "2026-02-25", 48, 48, null, "agotado", null, null, null]]}}}, "Miedo": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["13 Feb 2026", "23:00", 9, "2026-02-13", 48, 39, null, "agotado", null, null, null], ["27 Feb 2026", "23:00", 2, "2026-02-27", 48, 46, null, "agotado", null, null, null]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["13 Feb 2026", "23:00", 9, "2026-02-13", 48, 39, null, "agotado", null, null, null], ["27 Feb 2026", "23:00", 2, "2026-02-27", 48, 46, null, "agotado", null, null, null]]}}}, "Escondido": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["12 Feb 2026", "20:00", 6, "2026-02-12", 20, 14, "agotado", null, 15, 13, 2], ["14 Feb 2026", "17:00", 37, "2026-02-14", 37, 0, "agotado", null, 10, 10, 0], ["15 Feb 2026", "18:30", 19, "2026-02-15", 26, 7, "agotado", null, 10, 10, 0], ["26 Feb 2026", "20:00", 10, "2026-02-26", 45, 35, "venta", null, 15, 15, 0], ["28 Feb 2026", "17:00", 32, "2026-02-28", 38, 6, "agotado", null, 10, 10, 0]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["12 Feb 2026", "20:00", 6, "2026-02-12", 20, 14, "agotado", null, 15, 13, 2], ["14 Feb 2026", "17:00", 37, "2026-02-14", 37, 0, "agotado", null, 10, 10, 0], ["15 Feb 2026", "18:30", 19, "2026-02-15", 26, 7, "agotado", null, 10, 10, 0], ["26 Feb 2026", "20:00", 10, "2026-02-26", 45, 35, "venta", null, 15, 15, 0], ["28 Feb 2026", "17:00", 32, "2026-02-28", 38, 6, "agotado", null, 10, 10, 0]]}}}}, "fever_urls": {"Miedo": "https://feverup.com/m/290561", "Disfruta": "https://feverup.com/m/159767"}}</script>
+  <script id="PAYLOAD" type="application/json">{"generated_at": "2026-02-12T18:30:49.453288+01:00", "eventos": {"Disfruta": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["25 Feb 2026", "20:00", 0, "2026-02-25", 48, 48, null, "agotado", null, null, null]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["25 Feb 2026", "20:00", 0, "2026-02-25", 48, 48, null, "agotado", null, null, null]]}}}, "Miedo": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["13 Feb 2026", "23:00", 9, "2026-02-13", 48, 39, null, "agotado", null, null, null], ["27 Feb 2026", "23:00", 2, "2026-02-27", 48, 46, null, "agotado", null, null, null]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["13 Feb 2026", "23:00", 9, "2026-02-13", 48, 39, null, "agotado", null, null, null], ["27 Feb 2026", "23:00", 2, "2026-02-27", 48, 46, null, "agotado", null, null, null]]}}}, "Escondido": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["12 Feb 2026", "20:00", 6, "2026-02-12", 20, 14, "agotado", null, null, null, null], ["14 Feb 2026", "17:00", 37, "2026-02-14", 37, 0, "agotado", null, null, null, null], ["15 Feb 2026", "18:30", 19, "2026-02-15", 26, 7, "agotado", null, null, null, null], ["26 Feb 2026", "20:00", 10, "2026-02-26", 45, 35, "venta", null, null, null, null], ["28 Feb 2026", "17:00", 32, "2026-02-28", 38, 6, "agotado", null, null, null, null]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["12 Feb 2026", "20:00", 6, "2026-02-12", 20, 14, "agotado", null, null, null, null], ["14 Feb 2026", "17:00", 37, "2026-02-14", 37, 0, "agotado", null, null, null, null], ["15 Feb 2026", "18:30", 19, "2026-02-15", 26, 7, "agotado", null, null, null, null], ["26 Feb 2026", "20:00", 10, "2026-02-26", 45, 35, "venta", null, null, null, null], ["28 Feb 2026", "17:00", 32, "2026-02-28", 38, 6, "agotado", null, null, null, null]]}}}}, "fever_urls": {"Miedo": "https://feverup.com/m/290561", "Disfruta": "https://feverup.com/m/159767"}}</script>
 
   <script>
     const payload = JSON.parse(document.getElementById("PAYLOAD").textContent);
@@ -468,9 +341,6 @@
       cont.innerHTML = "";
       let rows = getRows();
 
-      // Índices:
-      // 0 Fecha, 1 Hora, 2 Vendidas(Dina), 3 FechaISO, 4 Cap(Dina), 5 Stock(Dina), 6 Abono, 7 Fever,
-      // 8 KulturCap, 9 KulturStock, 10 KulturVendidas
       rows = rows.map(r => ({
         fecha_label: r[0],
         hora: r[1],
@@ -479,7 +349,6 @@
         cap: fmtInt(r[4]),
         stock: fmtInt(r[5]),
         abono: r[6],
-        fever: r[7],
         kcap: fmtInt(r[8]),
         kstock: fmtInt(r[9]),
         kvend: fmtInt(r[10]),
@@ -501,31 +370,31 @@
           cont.appendChild(h);
         }
 
-        const hasKultur = (active === "Escondido") && (r.kcap !== null || r.kstock !== null || r.kvend !== null);
+        const isEscondido = active === "Escondido";
+        const isSimple = active === "Miedo" || active === "Disfruta";
+
+        const hasKultur = isEscondido && (r.kcap !== null || r.kstock !== null || r.kvend !== null);
 
         // Dina
         const dinaCls = chipClassFrom(r.vendidas ?? 0, r.stock ?? 999999);
-        const dinaValue = (active === "Escondido")
-          ? `${r.vendidas ?? "—"} / ${r.cap ?? "—"} · Quedan ${r.stock ?? "—"}`
+        const dinaValue = isEscondido
+          ? `${r.vendidas ?? "—"}/${r.cap ?? "—"} · quedan ${r.stock ?? "—"}`
           : `${r.vendidas ?? "—"}`;
 
         // Kultur
         const kulturCls = chipClassFrom(r.kvend ?? 0, r.kstock ?? 999999);
         const kulturValue = hasKultur
-          ? `${r.kvend ?? "—"} / ${r.kcap ?? "—"} · Quedan ${r.kstock ?? "—"}`
+          ? `${r.kvend ?? "—"}/${r.kcap ?? "—"} · quedan ${r.kstock ?? "—"}`
           : "—";
 
-        // Build card
-        const card = document.createElement("div");
-        card.className = "item";
-
-        const chipsClass = (active === "Escondido") ? "chips two" : "chips";
-
         let abonoHTML = "";
-        if (active === "Escondido" && r.abono) {
+        if (isEscondido && r.abono) {
           if (r.abono === "venta") abonoHTML = `<div class="abono ok">Abono: Disponible</div>`;
           if (r.abono === "agotado") abonoHTML = `<div class="abono no">Abono: Agotado</div>`;
         }
+
+        const card = document.createElement("div");
+        card.className = "item";
 
         card.innerHTML = `
           <div class="row-top">
@@ -533,22 +402,20 @@
           </div>
           <div class="time">${r.hora} h</div>
 
-          <div class="${chipsClass}">
+          <div class="chips ${isEscondido ? "" : ""}">
             <div class="chip ${dinaCls}">
               <div class="chip-left">
-                <div class="chip-title">${active === "Escondido" ? "Dina" : "Vendidas"}</div>
-                <div class="chip-value">${dinaValue}</div>
+                <div class="chip-title">${isEscondido ? "Dina" : "Vendidas"}</div>
+                <div class="chip-value ${isSimple ? "big" : ""}">${dinaValue}</div>
               </div>
-              <div class="chip-tag badge">${active === "Escondido" ? "DinaTicket" : "Info"}</div>
             </div>
 
-            ${active === "Escondido" ? `
+            ${isEscondido ? `
               <div class="chip ${hasKultur ? kulturCls : "gray"}">
                 <div class="chip-left">
                   <div class="chip-title">Kultur</div>
                   <div class="chip-value">${kulturValue}</div>
                 </div>
-                <div class="chip-tag badge">AppKultur</div>
               </div>
             ` : ""}
           </div>

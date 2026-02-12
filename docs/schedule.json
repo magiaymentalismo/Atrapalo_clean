@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-12T18:20:23.468558+01:00",
+  "generated_at": "2026-02-12T18:30:49.453288+01:00",
   "eventos": {
     "Disfruta": {
       "table": {
@@ -180,9 +180,9 @@
             14,
             "agotado",
             null,
-            15,
-            13,
-            2
+            null,
+            null,
+            null
           ],
           [
             "14 Feb 2026",
@@ -193,9 +193,9 @@
             0,
             "agotado",
             null,
-            10,
-            10,
-            0
+            null,
+            null,
+            null
           ],
           [
             "15 Feb 2026",
@@ -206,9 +206,9 @@
             7,
             "agotado",
             null,
-            10,
-            10,
-            0
+            null,
+            null,
+            null
           ],
           [
             "26 Feb 2026",
@@ -219,9 +219,9 @@
             35,
             "venta",
             null,
-            15,
-            15,
-            0
+            null,
+            null,
+            null
           ],
           [
             "28 Feb 2026",
@@ -232,9 +232,9 @@
             6,
             "agotado",
             null,
-            10,
-            10,
-            0
+            null,
+            null,
+            null
           ]
         ]
       },
@@ -263,9 +263,9 @@
               14,
               "agotado",
               null,
-              15,
-              13,
-              2
+              null,
+              null,
+              null
             ],
             [
               "14 Feb 2026",
@@ -276,9 +276,9 @@
               0,
               "agotado",
               null,
-              10,
-              10,
-              0
+              null,
+              null,
+              null
             ],
             [
               "15 Feb 2026",
@@ -289,9 +289,9 @@
               7,
               "agotado",
               null,
-              10,
-              10,
-              0
+              null,
+              null,
+              null
             ],
             [
               "26 Feb 2026",
@@ -302,9 +302,9 @@
               35,
               "venta",
               null,
-              15,
-              15,
-              0
+              null,
+              null,
+              null
             ],
             [
               "28 Feb 2026",
@@ -315,9 +315,9 @@
               6,
               "agotado",
               null,
-              10,
-              10,
-              0
+              null,
+              null,
+              null
             ]
           ]
         }
