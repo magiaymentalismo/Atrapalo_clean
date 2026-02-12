@@ -144,29 +144,6 @@
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     }
 
-    /* Subtabs */
-    .subtabs {
-      display: inline-flex;
-      background: rgba(0, 0, 0, 0.3);
-      padding: 4px;
-      border-radius: var(--radius-full);
-      margin-bottom: 24px;
-      border: 1px solid var(--glass-border);
-    }
-
-    .subtab {
-      padding: 8px 20px;
-      border-radius: var(--radius-full);
-      color: var(--text-secondary);
-      font-size: 14px;
-      cursor: pointer;
-    }
-
-    .subtab.active {
-      background: rgba(255, 255, 255, 0.15);
-      color: #fff;
-    }
-
     /* Items */
     .list {
       display: flex;
@@ -191,6 +168,7 @@
       border: 1px solid var(--glass-border);
       border-radius: var(--radius-md);
       transition: 0.2s;
+      gap: 14px;
     }
 
     .item:hover {
@@ -201,6 +179,7 @@
     .item-left {
       display: flex;
       flex-direction: column;
+      min-width: 220px;
     }
 
     .item-date {
@@ -228,6 +207,18 @@
       letter-spacing: 0.3px;
       text-transform: uppercase;
       backdrop-filter: blur(10px);
+      text-align: right;
+      line-height: 1.2;
+      max-width: 100%;
+    }
+
+    .chip .small {
+      display: block;
+      font-size: 11px;
+      opacity: 0.85;
+      letter-spacing: 0.2px;
+      text-transform: none;
+      font-weight: 700;
     }
 
     .chip.green {
@@ -272,13 +263,12 @@
     <div id="tabs" class="tabs"></div>
 
     <div class="panel">
-
       <div id="list" class="list"></div>
     </div>
   </div>
 
   <!-- PAYLOAD -->
-  <script id="PAYLOAD" type="application/json">{"generated_at": "2026-02-12T17:49:44.767661+01:00", "eventos": {"Disfruta": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["25 Feb 2026", "20:00", 0, "2026-02-25", 48, 48, null, "agotado", null, null, null]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["25 Feb 2026", "20:00", 0, "2026-02-25", 48, 48, null, "agotado", null, null, null]]}}}, "Miedo": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["13 Feb 2026", "23:00", 9, "2026-02-13", 48, 39, null, "agotado", null, null, null], ["27 Feb 2026", "23:00", 2, "2026-02-27", 48, 46, null, "agotado", null, null, null]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["13 Feb 2026", "23:00", 9, "2026-02-13", 48, 39, null, "agotado", null, null, null], ["27 Feb 2026", "23:00", 2, "2026-02-27", 48, 46, null, "agotado", null, null, null]]}}}, "Escondido": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["12 Feb 2026", "20:00", 6, "2026-02-12", 20, 14, "venta", null, 15, 13, 2], ["14 Feb 2026", "17:00", 37, "2026-02-14", 37, 0, "agotado", null, 10, 10, 0], ["15 Feb 2026", "18:30", 19, "2026-02-15", 26, 7, "agotado", null, 10, 10, 0], ["26 Feb 2026", "20:00", 10, "2026-02-26", 45, 35, "venta", null, 15, 15, 0], ["28 Feb 2026", "17:00", 32, "2026-02-28", 38, 6, "agotado", null, 10, 10, 0]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["12 Feb 2026", "20:00", 6, "2026-02-12", 20, 14, "venta", null, 15, 13, 2], ["14 Feb 2026", "17:00", 37, "2026-02-14", 37, 0, "agotado", null, 10, 10, 0], ["15 Feb 2026", "18:30", 19, "2026-02-15", 26, 7, "agotado", null, 10, 10, 0], ["26 Feb 2026", "20:00", 10, "2026-02-26", 45, 35, "venta", null, 15, 15, 0], ["28 Feb 2026", "17:00", 32, "2026-02-28", 38, 6, "agotado", null, 10, 10, 0]]}}}}, "fever_urls": {"Miedo": "https://feverup.com/m/290561", "Disfruta": "https://feverup.com/m/159767"}}</script>
+  <script id="PAYLOAD" type="application/json">{"generated_at": "2026-02-12T17:54:18.384654+01:00", "eventos": {"Disfruta": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["25 Feb 2026", "20:00", 0, "2026-02-25", 48, 48, null, "agotado", null, null, null]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["25 Feb 2026", "20:00", 0, "2026-02-25", 48, 48, null, "agotado", null, null, null]]}}}, "Miedo": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["13 Feb 2026", "23:00", 9, "2026-02-13", 48, 39, null, "agotado", null, null, null], ["27 Feb 2026", "23:00", 2, "2026-02-27", 48, 46, null, "agotado", null, null, null]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["13 Feb 2026", "23:00", 9, "2026-02-13", 48, 39, null, "agotado", null, null, null], ["27 Feb 2026", "23:00", 2, "2026-02-27", 48, 46, null, "agotado", null, null, null]]}}}, "Escondido": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["12 Feb 2026", "20:00", 6, "2026-02-12", 20, 14, "venta", null, 15, 13, 2], ["14 Feb 2026", "17:00", 37, "2026-02-14", 37, 0, "agotado", null, 10, 10, 0], ["15 Feb 2026", "18:30", 19, "2026-02-15", 26, 7, "agotado", null, 10, 10, 0], ["26 Feb 2026", "20:00", 10, "2026-02-26", 45, 35, "venta", null, 15, 15, 0], ["28 Feb 2026", "17:00", 32, "2026-02-28", 38, 6, "agotado", null, 10, 10, 0]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "Fever", "KulturCap", "KulturStock", "KulturVendidas"], "rows": [["12 Feb 2026", "20:00", 6, "2026-02-12", 20, 14, "venta", null, 15, 13, 2], ["14 Feb 2026", "17:00", 37, "2026-02-14", 37, 0, "agotado", null, 10, 10, 0], ["15 Feb 2026", "18:30", 19, "2026-02-15", 26, 7, "agotado", null, 10, 10, 0], ["26 Feb 2026", "20:00", 10, "2026-02-26", 45, 35, "venta", null, 15, 15, 0], ["28 Feb 2026", "17:00", 32, "2026-02-28", 38, 6, "agotado", null, 10, 10, 0]]}}}}, "fever_urls": {"Miedo": "https://feverup.com/m/290561", "Disfruta": "https://feverup.com/m/159767"}}</script>
 
   <script>
     const payload = JSON.parse(document.getElementById("PAYLOAD").textContent);
@@ -287,9 +277,7 @@
     let subMode = "proximas";
 
     document.getElementById("meta").textContent =
-      new Date(payload.generated_at).toLocaleString("es-ES", {
-        hour: '2-digit', minute: '2-digit'
-      });
+      new Date(payload.generated_at).toLocaleString("es-ES", { hour: '2-digit', minute: '2-digit' });
 
     /* Tabs principales */
     const tabsEl = document.getElementById("tabs");
@@ -310,8 +298,6 @@
       });
     }
 
-
-
     const DAYS = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
     function dayName(f) {
       return DAYS[new Date(f + "T00:00:00").getDay()];
@@ -323,14 +309,36 @@
       return (sec?.table?.rows) || [];
     }
 
+    function chipClassFrom(vendidas, stock) {
+      if (stock === 0) return "sold";
+      if (vendidas >= 10) return "gold";
+      if (vendidas >= 1) return "green";
+      return "gray";
+    }
+
+    function fmtInt(x) {
+      return (x === null || x === undefined) ? null : Number(x);
+    }
+
     function render() {
       const cont = document.getElementById("list");
       cont.innerHTML = "";
       let rows = getRows();
+
+      // Índices:
+      // 0 Fecha, 1 Hora, 2 Vendidas(Dina), 3 FechaISO, 4 Cap(Dina), 5 Stock(Dina), 6 Abono, 7 Fever, 8 KulturCap, 9 KulturStock, 10 KulturVendidas
       rows = rows.map(r => ({
-        fecha_label: r[0], hora: r[1],
-        vendidas: r[2], fecha_iso: r[3],
-        cap: r[4], stock: r[5], abono: r[6]
+        fecha_label: r[0],
+        hora: r[1],
+        vendidas: fmtInt(r[2]),
+        fecha_iso: r[3],
+        cap: fmtInt(r[4]),
+        stock: fmtInt(r[5]),
+        abono: r[6],
+        fever: r[7],
+        kcap: fmtInt(r[8]),
+        kstock: fmtInt(r[9]),
+        kvend: fmtInt(r[10]),
       }));
 
       rows.sort((a, b) => (a.fecha_iso + a.hora).localeCompare(b.fecha_iso + b.hora));
@@ -347,9 +355,18 @@
           cont.appendChild(h);
         }
 
-        const chip = r.stock === 0 ? "sold" :
-          r.vendidas >= 10 ? "gold" :
-            r.vendidas >= 1 ? "green" : "gray";
+        // Dina chip
+        const dinaChipClass = chipClassFrom(r.vendidas ?? 0, r.stock ?? 999999);
+        const dinaText = (active === "Escondido")
+          ? `Dina: ${r.vendidas ?? "—"} / ${r.cap ?? "—"} · Quedan ${r.stock ?? "—"}`
+          : `Vendidas: ${r.vendidas ?? "—"}`;
+
+        // Kultur chip (solo en Escondido)
+        const hasKultur = (r.kcap !== null || r.kstock !== null || r.kvend !== null);
+        const kulturChipClass = chipClassFrom(r.kvend ?? 0, r.kstock ?? 999999);
+        const kulturText = hasKultur
+          ? `Kultur: ${r.kvend ?? "—"} / ${r.kcap ?? "—"} · Quedan ${r.kstock ?? "—"}`
+          : `Kultur: —`;
 
         let abonoHTML = "";
         if (active === "Escondido" && r.abono) {
@@ -364,18 +381,28 @@
             <div class="item-date">${r.fecha_label} <span style="opacity:0.6">(${dayName(r.fecha_iso)})</span></div>
             <div class="item-time">${r.hora} h</div>
           </div>
+
           <div class="item-right">
-            <div class="chip ${chip}">
-              ${active === "Escondido" ? `${r.vendidas} / ${r.cap} · Quedan ${r.stock}` : `Vendidas: ${r.vendidas}`}
+            <div class="chip ${dinaChipClass}">
+              <span class="small">${dinaText}</span>
             </div>
+
+            ${active === "Escondido" ? `
+              <div class="chip ${kulturChipClass}">
+                <span class="small">${kulturText}</span>
+              </div>
+            ` : ""}
+
             ${abonoHTML}
-          </div>`;
+          </div>
+        `;
         cont.appendChild(div);
       }
     }
 
     render();
   </script>
+
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('sw.js?v=20251201').then(r => console.log('SW Registered')).catch(console.error);
