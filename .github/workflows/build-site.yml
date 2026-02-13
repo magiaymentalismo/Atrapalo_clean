@@ -2,7 +2,7 @@ name: build-site
 
 on:
   schedule:
-    - cron: "0 * * * *"   # cada hora (UTC)
+    - cron: "*/30 * * * *"   # cada 30 min (UTC)
   workflow_dispatch: {}
 
 concurrency:
@@ -17,7 +17,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
 
     steps:
       - name: Checkout repo
@@ -31,20 +31,19 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then
-            pip install -r requirements.txt
-          else
-            pip install requests beautifulsoup4
-          fi
+          pip install -r requirements.txt
+          # playwright NO está en tu requirements, lo instalamos acá:
+          pip install playwright
+          python -m playwright install chromium
 
-      - name: Generate dashboard
-        env:
-          KULTUR_APPCHECK: ${{ secrets.KULTUR_APPCHECK }}
+      - name: Generate dashboard (docs/)
         run: |
           set -e
           python generate_dashboard_dinaticket.py
           test -f docs/index.html
           test -f docs/schedule.json
+          echo "UTC now: $(date -u)"
+          echo "Madrid now: $(TZ=Europe/Madrid date '+%Y-%m-%d %H:%M:%S')"
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -56,6 +55,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
+
     steps:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
