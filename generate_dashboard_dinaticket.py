@@ -24,7 +24,11 @@ FEVER_URLS = {
     "Disfruta": "https://feverup.com/m/159767",
 }
 
-ABONO_URL = "https://compras.abonoteatro.com/?pagename=espectaculo&eventid=90857"
+# AbonoTeatro por sala (igual que FEVER_URLS)
+ABONO_URLS = {
+    "Escondido": "https://compras.abonoteatro.com/?pagename=espectaculo&eventid=90857",
+    "Disfruta": "https://compras.abonoteatro.com/?pagename=espectaculo&eventid=57914",
+}
 
 UA = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123 Safari/537.36"
@@ -38,6 +42,7 @@ SW_PATH = Path("sw.js")
 
 # ===================== HELPERS ===================== #
 
+
 def normalize_hhmm(h: str | None) -> str:
     if not h:
         return "00:00"
@@ -50,6 +55,7 @@ def normalize_hhmm(h: str | None) -> str:
         return s
     return f"{int(m.group(1)):02d}:{int(m.group(2) or '00'):02d}"
 
+
 def _walk_json(obj):
     if isinstance(obj, dict):
         yield obj
@@ -59,13 +65,15 @@ def _walk_json(obj):
         for x in obj:
             yield from _walk_json(x)
 
+
 # ===================== HTML OUTPUT ===================== #
+
 
 def write_html(payload: dict) -> None:
     html_template = TEMPLATE_PATH.read_text("utf-8")
     html = html_template.replace(
         "{{PAYLOAD_JSON}}",
-        json.dumps(payload, ensure_ascii=False).replace("</script>", "<\\/script>")
+        json.dumps(payload, ensure_ascii=False).replace("</script>", "<\\/script>"),
     )
 
     docs_dir = Path("docs")
@@ -81,6 +89,7 @@ def write_html(payload: dict) -> None:
 
     print("✔ Generado docs/index.html")
 
+
 def write_schedule_json(payload: dict) -> None:
     docs_dir = Path("docs")
     docs_dir.mkdir(exist_ok=True)
@@ -90,7 +99,9 @@ def write_schedule_json(payload: dict) -> None:
     )
     print("✔ Generado docs/schedule.json")
 
+
 # ===================== DINATICKET ===================== #
+
 
 def fetch_functions_dinaticket(url: str) -> list[dict]:
     r = requests.get(url, headers=UA, timeout=20)
@@ -110,9 +121,18 @@ def fetch_functions_dinaticket(url: str) -> list[dict]:
             continue
 
         mes_map = {
-            "Ene": "01","Feb": "02","Mar": "03","Abr": "04","May": "05",
-            "Jun": "06","Jul": "07","Ago": "08","Sep": "09","Oct": "10",
-            "Nov": "11","Dic": "12"
+            "Ene": "01",
+            "Feb": "02",
+            "Mar": "03",
+            "Abr": "04",
+            "May": "05",
+            "Jun": "06",
+            "Jul": "07",
+            "Ago": "08",
+            "Sep": "09",
+            "Oct": "10",
+            "Nov": "11",
+            "Dic": "12",
         }
 
         mes_txt = mes.text.strip().replace(".", "")
@@ -124,7 +144,7 @@ def fetch_functions_dinaticket(url: str) -> list[dict]:
         anio = now.year
 
         fecha_iso = f"{anio}-{mes_num}-{dia.text.strip().zfill(2)}"
-        fecha_label = datetime.strptime(fecha_iso,"%Y-%m-%d").strftime("%d %b %Y")
+        fecha_label = datetime.strptime(fecha_iso, "%Y-%m-%d").strftime("%d %b %Y")
 
         hora_span = session.find("span", class_="session-card__time-session")
         hora = normalize_hhmm(hora_span.text if hora_span else "")
@@ -137,27 +157,32 @@ def fetch_functions_dinaticket(url: str) -> list[dict]:
         stock = int(quota.get("data-stock", 0))
         vendidas = max(0, cap - stock)
 
-        out.append({
-            "fecha_label": fecha_label,
-            "fecha_iso": fecha_iso,
-            "hora": hora,
-            "vendidas_dt": vendidas,
-            "capacidad": cap,
-            "stock": stock,
-        })
+        out.append(
+            {
+                "fecha_label": fecha_label,
+                "fecha_iso": fecha_iso,
+                "hora": hora,
+                "vendidas_dt": vendidas,
+                "capacidad": cap,
+                "stock": stock,
+            }
+        )
 
     return out
 
+
 # ===================== ABONO ===================== #
 
-def fetch_abonoteatro_shows(url: str) -> set[tuple[str,str]]:
+
+def fetch_abonoteatro_shows(url: str) -> set[tuple[str, str]]:
     r = requests.get(url, headers=UA, timeout=20)
     r.raise_for_status()
     soup = BeautifulSoup(r.text, "html.parser")
 
-    out = set()
+    out: set[tuple[str, str]] = set()
 
     for ses in soup.find_all("div", class_="bsesion"):
+        # si hay botón comprar -> "en venta"
         if not ses.find("a", class_="buyBtn"):
             continue
 
@@ -168,18 +193,33 @@ def fetch_abonoteatro_shows(url: str) -> set[tuple[str,str]]:
         if not (mes_tag and dia_tag and hora_tag):
             continue
 
-        mes_nombre, anio = mes_tag.text.strip().lower().split()
+        # ejemplo: "febrero 2026"
+        parts = mes_tag.text.strip().lower().split()
+        if len(parts) < 2:
+            continue
+        mes_nombre, anio = parts[0], parts[1]
+
         mes_map = {
-            "enero":"01","febrero":"02","marzo":"03","abril":"04",
-            "mayo":"05","junio":"06","julio":"07","agosto":"08",
-            "septiembre":"09","octubre":"10","noviembre":"11","diciembre":"12"
+            "enero": "01",
+            "febrero": "02",
+            "marzo": "03",
+            "abril": "04",
+            "mayo": "05",
+            "junio": "06",
+            "julio": "07",
+            "agosto": "08",
+            "septiembre": "09",
+            "octubre": "10",
+            "noviembre": "11",
+            "diciembre": "12",
         }
 
         mes_num = mes_map.get(mes_nombre)
         if not mes_num:
             continue
 
-        dia = re.sub(r"\D","",dia_tag.text).zfill(2)
+        dia = re.sub(r"\D", "", dia_tag.text).zfill(2)
+
         hora_match = re.search(r"(\d{1,2}):(\d{2})", hora_tag.text)
         if not hora_match:
             continue
@@ -191,7 +231,9 @@ def fetch_abonoteatro_shows(url: str) -> set[tuple[str,str]]:
 
     return out
 
+
 # ===================== FEVER (PLAYWRIGHT REAL) ===================== #
+
 
 def fetch_fever_dates(url: str) -> set[str]:
     from playwright.sync_api import sync_playwright
@@ -199,7 +241,7 @@ def fetch_fever_dates(url: str) -> set[str]:
     def extract(text: str):
         dates = set()
         dates |= set(re.findall(r'"(\d{4}-\d{2}-\d{2})"', text))
-        dates |= set(re.findall(r'(20\d{2}-\d{2}-\d{2})T\d{2}:\d{2}', text))
+        dates |= set(re.findall(r"(20\d{2}-\d{2}-\d{2})T\d{2}:\d{2}", text))
         return dates
 
     with sync_playwright() as p:
@@ -212,48 +254,55 @@ def fetch_fever_dates(url: str) -> set[str]:
         dates = extract(html)
 
         try:
-            data = page.evaluate("() => window.__NEXT_DATA__ || window.__NUXT__ || null")
+            data = page.evaluate(
+                "() => window.__NEXT_DATA__ || window.__NUXT__ || null"
+            )
             if data:
                 blob = json.dumps(data)
                 dates |= extract(blob)
-        except:
+        except Exception:
             pass
 
         browser.close()
         return dates
 
+
 # ===================== BUILD PAYLOAD ===================== #
 
-def build_payload(eventos, abono_shows):
+
+def build_payload(
+    eventos: dict[str, list[dict]],
+    abono_by_sala: dict[str, set[tuple[str, str]]],
+):
     now = datetime.now(TZ)
-    out = {}
+    out: dict[str, dict] = {}
 
     for sala, funcs in eventos.items():
-
+        # FEVER
         if sala in FEVER_URLS:
             fever_dates = fetch_fever_dates(FEVER_URLS[sala])
         else:
             fever_dates = set()
 
+        # ABONO
+        abono_shows = abono_by_sala.get(sala, set())
+        has_abono = sala in abono_by_sala
+
         proximas = []
 
         for f in funcs:
-            f["hora"] = normalize_hhmm(f["hora"])
+            f["hora"] = normalize_hhmm(f.get("hora"))
 
-            if sala == "Escondido":
-                f["abono_estado"] = (
-                    "venta" if (f["fecha_iso"],f["hora"]) in abono_shows else "agotado"
-                )
-            else:
-                f["abono_estado"] = None
+            # AbonoTeatro: venta si aparece ese (fecha,hora), si no -> agotado
+            f["abono_estado"] = (
+                "venta" if (f["fecha_iso"], f["hora"]) in abono_shows else "agotado"
+            ) if has_abono else None
 
-            f["fever_estado"] = (
-                "venta" if f["fecha_iso"] in fever_dates else "agotado"
-            )
+            # Fever: venta si la fecha está dentro del set
+            f["fever_estado"] = "venta" if f["fecha_iso"] in fever_dates else "agotado"
 
             ses_dt = datetime.strptime(
-                f"{f['fecha_iso']} {f['hora']}",
-                "%Y-%m-%d %H:%M"
+                f"{f['fecha_iso']} {f['hora']}", "%Y-%m-%d %H:%M"
             ).replace(tzinfo=TZ)
 
             if ses_dt >= now:
@@ -261,17 +310,32 @@ def build_payload(eventos, abono_shows):
 
         rows = [
             [
-                f["fecha_label"],f["hora"],f["vendidas_dt"],f["fecha_iso"],
-                f["capacidad"],f["stock"],f["abono_estado"],f["fever_estado"]
+                f["fecha_label"],
+                f["hora"],
+                f["vendidas_dt"],
+                f["fecha_iso"],
+                f["capacidad"],
+                f["stock"],
+                f["abono_estado"],
+                f["fever_estado"],
             ]
             for f in proximas
         ]
 
-        headers = ["Fecha","Hora","Vendidas","FechaISO","Capacidad","Stock","Abono","Fever"]
+        headers = [
+            "Fecha",
+            "Hora",
+            "Vendidas",
+            "FechaISO",
+            "Capacidad",
+            "Stock",
+            "Abono",
+            "Fever",
+        ]
 
         out[sala] = {
-            "table":{"headers":headers,"rows":rows},
-            "proximas":{"table":{"headers":headers,"rows":rows}}
+            "table": {"headers": headers, "rows": rows},
+            "proximas": {"table": {"headers": headers, "rows": rows}},
         }
 
     return {
@@ -279,19 +343,23 @@ def build_payload(eventos, abono_shows):
         "eventos": out,
     }
 
+
 # ===================== MAIN ===================== #
 
 if __name__ == "__main__":
-    current = {}
+    current: dict[str, list[dict]] = {}
 
     for sala, url in EVENTS.items():
         funcs = fetch_functions_dinaticket(url)
         current[sala] = funcs
         print(f"{sala}: {len(funcs)} funciones")
 
-    abono_shows = fetch_abonoteatro_shows(ABONO_URL)
-    print("AbonoTeatro:", len(abono_shows))
+    abono_by_sala: dict[str, set[tuple[str, str]]] = {}
+    for sala, url in ABONO_URLS.items():
+        shows = fetch_abonoteatro_shows(url)
+        abono_by_sala[sala] = shows
+        print(f"AbonoTeatro {sala}: {len(shows)}")
 
-    payload = build_payload(current, abono_shows)
+    payload = build_payload(current, abono_by_sala)
     write_html(payload)
     write_schedule_json(payload)
