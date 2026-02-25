@@ -24,7 +24,7 @@ FEVER_URLS = {
     "Disfruta": "https://feverup.com/m/159767",
 }
 
-# AbonoTeatro por sala (igual que FEVER_URLS)
+# AbonoTeatro por sala
 ABONO_URLS = {
     "Escondido": "https://compras.abonoteatro.com/?pagename=espectaculo&eventid=90857",
     "Disfruta": "https://compras.abonoteatro.com/?pagename=espectaculo&eventid=57914",
@@ -108,7 +108,7 @@ def fetch_functions_dinaticket(url: str) -> list[dict]:
     r.raise_for_status()
     soup = BeautifulSoup(r.text, "html.parser")
 
-    out = []
+    out: list[dict] = []
 
     for session in soup.find_all("div", class_="js-session-row"):
         parent = session.find_parent("div", class_="js-session-group")
@@ -181,19 +181,17 @@ def fetch_abonoteatro_shows(url: str) -> set[tuple[str, str]]:
 
     out: set[tuple[str, str]] = set()
 
+    # ---------- 1) Formato antiguo (si alguna ficha lo mantiene) ----------
     for ses in soup.find_all("div", class_="bsesion"):
-        # si hay botón comprar -> "en venta"
         if not ses.find("a", class_="buyBtn"):
             continue
 
         mes_tag = ses.find("p", class_="psess")
         dia_tag = ses.find("p", class_="psesb")
         hora_tag = ses.find("h3", class_="horasesion")
-
         if not (mes_tag and dia_tag and hora_tag):
             continue
 
-        # ejemplo: "febrero 2026"
         parts = mes_tag.text.strip().lower().split()
         if len(parts) < 2:
             continue
@@ -226,7 +224,61 @@ def fetch_abonoteatro_shows(url: str) -> set[tuple[str, str]]:
 
         hora = normalize_hhmm(f"{hora_match.group(1)}:{hora_match.group(2)}")
         fecha_iso = f"{anio}-{mes_num}-{dia}"
+        out.add((fecha_iso, hora))
 
+    if out:
+        return out
+
+    # ---------- 2) Formato nuevo (Disfruta: texto suelto + link "Comprar") ----------
+    mes_map = {
+        "enero": "01",
+        "febrero": "02",
+        "marzo": "03",
+        "abril": "04",
+        "mayo": "05",
+        "junio": "06",
+        "julio": "07",
+        "agosto": "08",
+        "septiembre": "09",
+        "octubre": "10",
+        "noviembre": "11",
+        "diciembre": "12",
+    }
+    dow = r"(lunes|martes|mi[eé]rcoles|jueves|viernes|s[aá]bado|domingo)"
+
+    comprar_links = soup.find_all(
+        "a", string=lambda s: s and s.strip().lower() == "comprar"
+    )
+
+    for a in comprar_links:
+        block = a.find_parent(["article", "section", "div"])
+        if not block:
+            block = a.parent
+
+        t = block.get_text(" ", strip=True).lower()
+
+        m_my = re.search(
+            r"\b(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)\s+(20\d{2})\b",
+            t,
+        )
+        if not m_my:
+            continue
+        mes_nombre, anio = m_my.group(1), m_my.group(2)
+        mes_num = mes_map.get(mes_nombre)
+        if not mes_num:
+            continue
+
+        m_day = re.search(r"\b([0-3]?\d)\b\s+" + dow + r"\b", t)
+        if not m_day:
+            continue
+        dia = str(int(m_day.group(1))).zfill(2)
+
+        m_time = re.search(r"\b([0-2]?\d):([0-5]\d)\b", t)
+        if not m_time:
+            continue
+        hora = normalize_hhmm(f"{m_time.group(1)}:{m_time.group(2)}")
+
+        fecha_iso = f"{anio}-{mes_num}-{dia}"
         out.add((fecha_iso, hora))
 
     return out
@@ -279,26 +331,21 @@ def build_payload(
 
     for sala, funcs in eventos.items():
         # FEVER
-        if sala in FEVER_URLS:
-            fever_dates = fetch_fever_dates(FEVER_URLS[sala])
-        else:
-            fever_dates = set()
+        fever_dates = fetch_fever_dates(FEVER_URLS[sala]) if sala in FEVER_URLS else set()
 
         # ABONO
         abono_shows = abono_by_sala.get(sala, set())
         has_abono = sala in abono_by_sala
 
-        proximas = []
+        proximas: list[dict] = []
 
         for f in funcs:
             f["hora"] = normalize_hhmm(f.get("hora"))
 
-            # AbonoTeatro: venta si aparece ese (fecha,hora), si no -> agotado
             f["abono_estado"] = (
                 "venta" if (f["fecha_iso"], f["hora"]) in abono_shows else "agotado"
             ) if has_abono else None
 
-            # Fever: venta si la fecha está dentro del set
             f["fever_estado"] = "venta" if f["fecha_iso"] in fever_dates else "agotado"
 
             ses_dt = datetime.strptime(
