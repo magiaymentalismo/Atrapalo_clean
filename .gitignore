@@ -20,7 +20,6 @@ docs/index.local.backup.html
 
 # kultur scraping artifacts / secrets (local only)
 docs/kultur_request_*.json
-docs/kultur_cache_*.json
 docs/kultur_last_getsessions.json
 docs/kultur_fail.*
 docs/kultur_trace.zip
