@@ -30,16 +30,9 @@ jobs:
       - name: Install deps
         run: |
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install -r requirements.txt
 
-      # Cache de browsers de Playwright para acelerar runs
-      - name: Cache Playwright browsers
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/ms-playwright
-          key: ${{ runner.os }}-playwright-${{ hashFiles('**/requirements.txt') }}
-
-      # Instala Chromium headless shell + deps del sistema
+      # ✅ IMPORTANTE: instalar browsers de Playwright
       - name: Install Playwright browsers
         run: |
           python -m playwright install --with-deps chromium
@@ -47,6 +40,10 @@ jobs:
       - name: Run generator
         env:
           TZ: Europe/Madrid
+          KULTUR_DEBUG: "0"
+          KULTUR_CACHE: "1"
+          KULTUR_HEADLESS: "1"
+          KULTUR_DIRECT: "1"
         run: |
           python generate_dashboard_dinaticket.py
 
