@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Cartelera — Magia & Teatro</title>
 
-  <!-- Cache-bust: cambiá el v cuando quieras -->
-  <link rel="manifest" href="manifest.json?v=2026-03-04-01">
+  <link rel="manifest" href="manifest.json?v=20251201">
   <meta name="theme-color" content="#000000">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -32,7 +31,10 @@
     }
 
     html,
-    body { max-width: 100%; overflow-x: hidden; }
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
 
     body {
       background-color: var(--bg-deep);
@@ -52,13 +54,18 @@
       padding-bottom: 40px;
     }
 
-    .wrap { max-width: 1040px; margin: 0 auto; padding: 16px; }
+    .wrap {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 16px;
+    }
 
     /* Dynamic Island */
     .dynamic-island-container {
       position: fixed;
       top: calc(var(--safe-top) + 8px);
-      left: 0; right: 0;
+      left: 0;
+      right: 0;
       display: flex;
       justify-content: center;
       z-index: 1000;
@@ -83,7 +90,12 @@
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
 
-    .island-title { font-size: 15px; font-weight: 900; white-space: nowrap; }
+    .island-title {
+      font-size: 15px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
     .island-meta {
       font-size: 12px;
       color: var(--text-secondary);
@@ -103,7 +115,10 @@
       scrollbar-width: none;
       justify-content: center;
     }
-    .tabs::-webkit-scrollbar { display: none; }
+
+    .tabs::-webkit-scrollbar {
+      display: none;
+    }
 
     .tab {
       padding: 11px 18px;
@@ -138,7 +153,11 @@
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
     }
 
-    .list { display: flex; flex-direction: column; gap: 14px; }
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
 
     .month {
       margin: 22px 0 10px;
@@ -166,7 +185,12 @@
       gap: 10px;
     }
 
-    .date { font-size: 18px; font-weight: 900; line-height: 1.15; }
+    .date {
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 1.15;
+    }
+
     .date span {
       color: rgba(255, 255, 255, 0.55);
       font-weight: 800;
@@ -201,7 +225,12 @@
       min-width: 0;
     }
 
-    .chip-left { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+    .chip-left {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 0;
+    }
 
     .chip-title {
       font-size: 12px;
@@ -227,17 +256,45 @@
       letter-spacing: 0.2px;
     }
 
-    .chip.green { background: rgba(52, 199, 89, 0.12); border-color: rgba(52, 199, 89, 0.22); }
-    .chip.green .chip-title, .chip.green .chip-value { color: var(--accent-green); }
+    .chip.green {
+      background: rgba(52, 199, 89, 0.12);
+      border-color: rgba(52, 199, 89, 0.22);
+    }
 
-    .chip.gold { background: rgba(255, 215, 0, 0.10); border-color: rgba(255, 215, 0, 0.18); }
-    .chip.gold .chip-title, .chip.gold .chip-value { color: var(--accent-gold); }
+    .chip.green .chip-title,
+    .chip.green .chip-value {
+      color: var(--accent-green);
+    }
 
-    .chip.gray { background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.12); }
-    .chip.gray .chip-title, .chip.gray .chip-value { color: rgba(255, 255, 255, 0.78); }
+    .chip.gold {
+      background: rgba(255, 215, 0, 0.10);
+      border-color: rgba(255, 215, 0, 0.18);
+    }
 
-    .chip.sold { background: rgba(255, 69, 58, 0.10); border-color: rgba(255, 69, 58, 0.18); }
-    .chip.sold .chip-title, .chip.sold .chip-value { color: var(--accent-red); }
+    .chip.gold .chip-title,
+    .chip.gold .chip-value {
+      color: var(--accent-gold);
+    }
+
+    .chip.gray {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .chip.gray .chip-title,
+    .chip.gray .chip-value {
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .chip.sold {
+      background: rgba(255, 69, 58, 0.10);
+      border-color: rgba(255, 69, 58, 0.18);
+    }
+
+    .chip.sold .chip-title,
+    .chip.sold .chip-value {
+      color: var(--accent-red);
+    }
 
     /* Abono badge */
     .abono {
@@ -255,13 +312,30 @@
       max-width: 100%;
     }
 
-    .abono.ok { color: var(--accent-green); background: rgba(52, 199, 89, 0.10); border-color: rgba(52, 199, 89, 0.20); }
-    .abono.no { color: var(--accent-red); background: rgba(255, 69, 58, 0.10); border-color: rgba(255, 69, 58, 0.20); }
+    .abono.ok {
+      color: var(--accent-green);
+      background: rgba(52, 199, 89, 0.10);
+      border-color: rgba(52, 199, 89, 0.20);
+    }
+
+    .abono.no {
+      color: var(--accent-red);
+      background: rgba(255, 69, 58, 0.10);
+      border-color: rgba(255, 69, 58, 0.20);
+    }
 
     @media (min-width: 700px) {
-      .panel { padding: 18px; }
-      .item { padding: 16px; }
-      .chips.two { grid-template-columns: 1fr 1fr; }
+      .panel {
+        padding: 18px;
+      }
+
+      .item {
+        padding: 16px;
+      }
+
+      .chips.two {
+        grid-template-columns: 1fr 1fr;
+      }
     }
   </style>
 </head>
@@ -277,6 +351,7 @@
 
   <div class="wrap">
     <div id="tabs" class="tabs"></div>
+
     <div class="panel">
       <div id="list" class="list"></div>
     </div>
@@ -291,13 +366,8 @@
     let active = Object.keys(eventos)[0] || null;
     let subMode = "proximas";
 
-    // Hora de generación
-    try {
-      document.getElementById("meta").textContent =
-        new Date(payload.generated_at).toLocaleString("es-ES", { hour: '2-digit', minute: '2-digit' });
-    } catch {
-      document.getElementById("meta").textContent = "";
-    }
+    document.getElementById("meta").textContent =
+      new Date(payload.generated_at).toLocaleString("es-ES", { hour: '2-digit', minute: '2-digit' });
 
     /* Tabs principales */
     const tabsEl = document.getElementById("tabs");
@@ -325,39 +395,36 @@
 
     function getRows() {
       const ev = eventos[active];
-      const sec = ev?.[subMode];
+      const sec = ev[subMode];
       return (sec?.table?.rows) || [];
     }
 
     function chipClassFrom(vendidas, stock) {
-      const v = Number.isFinite(vendidas) ? vendidas : 0;
-      const s = Number.isFinite(stock) ? stock : 999999;
-      if (s === 0) return "sold";
-      if (v >= 10) return "gold";
-      if (v >= 1) return "green";
+      if (stock === 0) return "sold";
+      if ((vendidas ?? 0) >= 10) return "gold";
+      if ((vendidas ?? 0) >= 1) return "green";
       return "gray";
     }
 
     function fmtInt(x) {
-      if (x === null || x === undefined || x === "") return null;
-      const n = Number(x);
-      return Number.isFinite(n) ? n : null;
+      return (x === null || x === undefined) ? null : Number(x);
     }
 
-    function parseKulturCell(cell) {
-      // Puede venir:
-      // - objeto {vendidas, capacidad, stock}
-      // - string "venta"/"agotado"
-      // - null
-      if (!cell) return null;
-      if (typeof cell === "object") {
-        return {
-          vendidas: fmtInt(cell.vendidas),
-          capacidad: fmtInt(cell.capacidad),
-          stock: fmtInt(cell.stock),
-        };
-      }
-      return null;
+    // Kultur helpers
+    function kulturClassFrom(v) {
+      if (!v) return "gray";
+      const s = String(v).toLowerCase();
+      if (s === "agotado") return "sold";
+      if (s === "venta") return "green";
+      return "gray";
+    }
+
+    function kulturLabelFrom(v) {
+      if (!v) return "—";
+      const s = String(v).toLowerCase();
+      if (s === "venta") return "Venta";
+      if (s === "agotado") return "Agotado";
+      return String(v);
     }
 
     function render() {
@@ -365,16 +432,17 @@
       cont.innerHTML = "";
       let rows = getRows();
 
-      // mapping: [Fecha, Hora, VendidasDina, FechaISO, Capacidad, Stock, Abono, Kultur]
+      // ✅ mapping CORRECTO:
+      // [Fecha, Hora, Vendidas, FechaISO, Capacidad, Stock, Abono, Kultur]
       rows = rows.map(r => ({
         fecha_label: r[0],
         hora: r[1],
-        vendidas_dt: fmtInt(r[2]),
+        vendidas: fmtInt(r[2]),
         fecha_iso: r[3],
         cap: fmtInt(r[4]),
         stock: fmtInt(r[5]),
         abono: r[6],
-        kultur: parseKulturCell(r[7]),
+        kultur: r[7],
       }));
 
       rows.sort((a, b) => (a.fecha_iso + a.hora).localeCompare(b.fecha_iso + b.hora));
@@ -396,30 +464,16 @@
         const isSimple = active === "Miedo" || active === "Disfruta";
 
         // Dina
-        const dinaCls = chipClassFrom(r.vendidas_dt ?? 0, r.stock ?? 999999);
+        const dinaCls = chipClassFrom(r.vendidas ?? 0, r.stock ?? 999999);
         const dinaValue = isSimple
-          ? `${r.vendidas_dt ?? "—"}`
-          : `${r.vendidas_dt ?? "—"}/${r.cap ?? "—"} · quedan ${r.stock ?? "—"}`;
+          ? `${r.vendidas ?? "—"}`
+          : `${r.vendidas ?? "—"}/${r.cap ?? "—"} · quedan ${r.stock ?? "—"}`;
 
-        // Kultur (si hay datos numéricos)
-        let kulturHTML = "";
-        if (r.kultur && (r.kultur.vendidas !== null || r.kultur.capacidad !== null || r.kultur.stock !== null)) {
-          const kVend = r.kultur.vendidas ?? "—";
-          const kCap = r.kultur.capacidad ?? "—";
-          const kStock = r.kultur.stock ?? "—";
-          const kulturCls = chipClassFrom(r.kultur.vendidas ?? 0, r.kultur.stock ?? 999999);
+        // Kultur
+        const kulturCls = kulturClassFrom(r.kultur);
+        const kulturValue = kulturLabelFrom(r.kultur);
 
-          kulturHTML = `
-            <div class="chip ${kulturCls}">
-              <div class="chip-left">
-                <div class="chip-title">Kultur</div>
-                <div class="chip-value">${kVend}/${kCap} · quedan ${kStock}</div>
-              </div>
-            </div>
-          `;
-        }
-
-        // Abono badge
+        // Abono
         let abonoHTML = "";
         if (r.abono) {
           if (r.abono === "venta") abonoHTML = `<div class="abono ok">Abono: Disponible</div>`;
@@ -429,15 +483,13 @@
         const card = document.createElement("div");
         card.className = "item";
 
-        const chipsClass = kulturHTML ? "chips two" : "chips";
-
         card.innerHTML = `
           <div class="row-top">
             <div class="date">${r.fecha_label}<span>(${dayName(r.fecha_iso)})</span></div>
           </div>
           <div class="time">${r.hora} h</div>
 
-          <div class="${chipsClass}">
+          <div class="chips two">
             <div class="chip ${dinaCls}">
               <div class="chip-left">
                 <div class="chip-title">${isSimple ? "Vendidas" : "Dina"}</div>
@@ -445,7 +497,12 @@
               </div>
             </div>
 
-            ${kulturHTML}
+            <div class="chip ${kulturCls}">
+              <div class="chip-left">
+                <div class="chip-title">Kultur</div>
+                <div class="chip-value">${kulturValue}</div>
+              </div>
+            </div>
           </div>
 
           ${abonoHTML}
@@ -458,16 +515,17 @@
     render();
   </script>
 
-  <!-- Service Worker: un solo register y versionado -->
+  <!-- Service Worker: dejá SOLO este -->
   <script>
     (function () {
       if (!('serviceWorker' in navigator)) return;
 
-      const SW_URL = 'sw.js?v=2026-03-04-02';
       const RELOAD_KEY = "sw-reloaded-once";
 
-      navigator.serviceWorker.register(SW_URL).then((reg) => {
-        reg.update().catch(() => {});
+      // IMPORTANTE: esto registra el SW en la raíz del site de GitHub Pages.
+      // Si Pages está publicado desde /docs, entonces docs/sw.js queda accesible como /sw.js.
+      navigator.serviceWorker.register('sw.js?v=2026-03-04-03').then((reg) => {
+        reg.update().catch(() => { });
 
         function activateWaitingSW() {
           if (!reg.waiting) return;
@@ -479,6 +537,7 @@
         reg.addEventListener("updatefound", () => {
           const sw = reg.installing;
           if (!sw) return;
+
           sw.addEventListener("statechange", () => {
             if (sw.state === "installed" && navigator.serviceWorker.controller) {
               activateWaitingSW();
@@ -497,4 +556,42 @@
   </script>
 
 </body>
+
 </html>
+
+<script>
+  (function () {
+    if (!('serviceWorker' in navigator)) return;
+
+    const RELOAD_KEY = "sw-reloaded-once";
+
+    navigator.serviceWorker.register('sw.js?v=2026-02-12-02').then((reg) => {
+      reg.update().catch(() => {});
+
+      function activateWaitingSW() {
+        if (!reg.waiting) return;
+        reg.waiting.postMessage({ type: "SKIP_WAITING" });
+      }
+
+      activateWaitingSW();
+
+      reg.addEventListener("updatefound", () => {
+        const sw = reg.installing;
+        if (!sw) return;
+
+        sw.addEventListener("statechange", () => {
+          if (sw.state === "installed" && navigator.serviceWorker.controller) {
+            activateWaitingSW();
+          }
+        });
+      });
+
+      navigator.serviceWorker.addEventListener("controllerchange", () => {
+        if (sessionStorage.getItem(RELOAD_KEY) === "1") return;
+        sessionStorage.setItem(RELOAD_KEY, "1");
+        window.location.reload();
+      });
+
+    }).catch(console.error);
+  })();
+</script>
