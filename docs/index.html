@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="es">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -30,11 +29,7 @@
       --safe-top: env(safe-area-inset-top, 20px);
     }
 
-    html,
-    body {
-      max-width: 100%;
-      overflow-x: hidden;
-    }
+    html, body { max-width: 100%; overflow-x: hidden; }
 
     body {
       background-color: var(--bg-deep);
@@ -54,18 +49,12 @@
       padding-bottom: 40px;
     }
 
-    .wrap {
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 16px;
-    }
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 16px; }
 
-    /* Dynamic Island */
     .dynamic-island-container {
       position: fixed;
       top: calc(var(--safe-top) + 8px);
-      left: 0;
-      right: 0;
+      left: 0; right: 0;
       display: flex;
       justify-content: center;
       z-index: 1000;
@@ -90,12 +79,7 @@
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
 
-    .island-title {
-      font-size: 15px;
-      font-weight: 900;
-      white-space: nowrap;
-    }
-
+    .island-title { font-size: 15px; font-weight: 900; white-space: nowrap; }
     .island-meta {
       font-size: 12px;
       color: var(--text-secondary);
@@ -104,7 +88,6 @@
       white-space: nowrap;
     }
 
-    /* Tabs */
     .tabs {
       display: flex;
       gap: 12px;
@@ -115,10 +98,7 @@
       scrollbar-width: none;
       justify-content: center;
     }
-
-    .tabs::-webkit-scrollbar {
-      display: none;
-    }
+    .tabs::-webkit-scrollbar { display: none; }
 
     .tab {
       padding: 11px 18px;
@@ -142,7 +122,6 @@
       transform: scale(1.01);
     }
 
-    /* Panel */
     .panel {
       background: rgba(20, 20, 20, 0.38);
       border: 1px solid var(--glass-border);
@@ -153,11 +132,7 @@
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
     }
 
-    .list {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
+    .list { display: flex; flex-direction: column; gap: 14px; }
 
     .month {
       margin: 22px 0 10px;
@@ -168,7 +143,6 @@
       padding-left: 6px;
     }
 
-    /* Card */
     .item {
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid rgba(255, 255, 255, 0.10);
@@ -185,12 +159,7 @@
       gap: 10px;
     }
 
-    .date {
-      font-size: 18px;
-      font-weight: 900;
-      line-height: 1.15;
-    }
-
+    .date { font-size: 18px; font-weight: 900; line-height: 1.15; }
     .date span {
       color: rgba(255, 255, 255, 0.55);
       font-weight: 800;
@@ -225,12 +194,7 @@
       min-width: 0;
     }
 
-    .chip-left {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-      min-width: 0;
-    }
+    .chip-left { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 
     .chip-title {
       font-size: 12px;
@@ -256,47 +220,18 @@
       letter-spacing: 0.2px;
     }
 
-    .chip.green {
-      background: rgba(52, 199, 89, 0.12);
-      border-color: rgba(52, 199, 89, 0.22);
-    }
+    .chip.green { background: rgba(52, 199, 89, 0.12); border-color: rgba(52, 199, 89, 0.22); }
+    .chip.green .chip-title, .chip.green .chip-value { color: var(--accent-green); }
 
-    .chip.green .chip-title,
-    .chip.green .chip-value {
-      color: var(--accent-green);
-    }
+    .chip.gold { background: rgba(255, 215, 0, 0.10); border-color: rgba(255, 215, 0, 0.18); }
+    .chip.gold .chip-title, .chip.gold .chip-value { color: var(--accent-gold); }
 
-    .chip.gold {
-      background: rgba(255, 215, 0, 0.10);
-      border-color: rgba(255, 215, 0, 0.18);
-    }
+    .chip.gray { background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.12); }
+    .chip.gray .chip-title, .chip.gray .chip-value { color: rgba(255, 255, 255, 0.78); }
 
-    .chip.gold .chip-title,
-    .chip.gold .chip-value {
-      color: var(--accent-gold);
-    }
+    .chip.sold { background: rgba(255, 69, 58, 0.10); border-color: rgba(255, 69, 58, 0.18); }
+    .chip.sold .chip-title, .chip.sold .chip-value { color: var(--accent-red); }
 
-    .chip.gray {
-      background: rgba(255, 255, 255, 0.06);
-      border-color: rgba(255, 255, 255, 0.12);
-    }
-
-    .chip.gray .chip-title,
-    .chip.gray .chip-value {
-      color: rgba(255, 255, 255, 0.78);
-    }
-
-    .chip.sold {
-      background: rgba(255, 69, 58, 0.10);
-      border-color: rgba(255, 69, 58, 0.18);
-    }
-
-    .chip.sold .chip-title,
-    .chip.sold .chip-value {
-      color: var(--accent-red);
-    }
-
-    /* Abono badge */
     .abono {
       margin-top: 10px;
       display: inline-flex;
@@ -312,36 +247,18 @@
       max-width: 100%;
     }
 
-    .abono.ok {
-      color: var(--accent-green);
-      background: rgba(52, 199, 89, 0.10);
-      border-color: rgba(52, 199, 89, 0.20);
-    }
-
-    .abono.no {
-      color: var(--accent-red);
-      background: rgba(255, 69, 58, 0.10);
-      border-color: rgba(255, 69, 58, 0.20);
-    }
+    .abono.ok { color: var(--accent-green); background: rgba(52, 199, 89, 0.10); border-color: rgba(52, 199, 89, 0.20); }
+    .abono.no { color: var(--accent-red); background: rgba(255, 69, 58, 0.10); border-color: rgba(255, 69, 58, 0.20); }
 
     @media (min-width: 700px) {
-      .panel {
-        padding: 18px;
-      }
-
-      .item {
-        padding: 16px;
-      }
-
-      .chips.two {
-        grid-template-columns: 1fr 1fr;
-      }
+      .panel { padding: 18px; }
+      .item { padding: 16px; }
+      .chips.two { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
 
 <body>
-
   <div class="dynamic-island-container">
     <div class="dynamic-island">
       <div class="island-title">Cartelera</div>
@@ -357,8 +274,7 @@
     </div>
   </div>
 
-  <!-- PAYLOAD -->
-  <script id="PAYLOAD" type="application/json">{"generated_at": "2026-03-04T16:44:29.417110+01:00", "eventos": {"Disfruta": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "KulturVendidas", "KulturCapacidad"], "rows": [["04 Mar 2026", "20:00", 19, "2026-03-04", 48, 29, "agotado", null, null], ["11 Mar 2026", "20:00", 0, "2026-03-11", 48, 48, "venta", null, null], ["18 Mar 2026", "20:00", 0, "2026-03-18", 48, 48, "venta", null, null], ["25 Mar 2026", "20:00", 0, "2026-03-25", 48, 48, "venta", null, null], ["01 Apr 2026", "20:00", 0, "2026-04-01", 48, 48, "agotado", null, null]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "KulturVendidas", "KulturCapacidad"], "rows": [["04 Mar 2026", "20:00", 19, "2026-03-04", 48, 29, "agotado", null, null], ["11 Mar 2026", "20:00", 0, "2026-03-11", 48, 48, "venta", null, null], ["18 Mar 2026", "20:00", 0, "2026-03-18", 48, 48, "venta", null, null], ["25 Mar 2026", "20:00", 0, "2026-03-25", 48, 48, "venta", null, null], ["01 Apr 2026", "20:00", 0, "2026-04-01", 48, 48, "agotado", null, null]]}}}, "Miedo": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "KulturVendidas", "KulturCapacidad"], "rows": [["06 Mar 2026", "23:00", 11, "2026-03-06", 48, 37, null, null, null], ["13 Mar 2026", "23:00", 0, "2026-03-13", 48, 48, null, null, null], ["18 Mar 2026", "21:30", 0, "2026-03-18", 48, 48, null, null, null], ["20 Mar 2026", "23:00", 2, "2026-03-20", 48, 46, null, null, null], ["21 Mar 2026", "20:00", 0, "2026-03-21", 48, 48, null, null, null], ["27 Mar 2026", "23:00", 0, "2026-03-27", 48, 48, null, null, null], ["03 Apr 2026", "23:00", 0, "2026-04-03", 48, 48, null, null, null]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "KulturVendidas", "KulturCapacidad"], "rows": [["06 Mar 2026", "23:00", 11, "2026-03-06", 48, 37, null, null, null], ["13 Mar 2026", "23:00", 0, "2026-03-13", 48, 48, null, null, null], ["18 Mar 2026", "21:30", 0, "2026-03-18", 48, 48, null, null, null], ["20 Mar 2026", "23:00", 2, "2026-03-20", 48, 46, null, null, null], ["21 Mar 2026", "20:00", 0, "2026-03-21", 48, 48, null, null, null], ["27 Mar 2026", "23:00", 0, "2026-03-27", 48, 48, null, null, null], ["03 Apr 2026", "23:00", 0, "2026-04-03", 48, 48, null, null, null]]}}}, "Escondido": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "KulturVendidas", "KulturCapacidad"], "rows": [["05 Mar 2026", "20:00", 3, "2026-03-05", 33, 30, "venta", 2, 12], ["07 Mar 2026", "17:00", 10, "2026-03-07", 88, 78, "agotado", null, null], ["08 Mar 2026", "18:30", 0, "2026-03-08", 38, 38, "agotado", null, null], ["12 Mar 2026", "20:00", 0, "2026-03-12", 45, 45, "venta", null, null], ["13 Mar 2026", "20:00", 0, "2026-03-13", 40, 40, "venta", null, null], ["14 Mar 2026", "17:00", 6, "2026-03-14", 38, 32, "agotado", null, null], ["15 Mar 2026", "18:30", 0, "2026-03-15", 38, 38, "agotado", null, null], ["19 Mar 2026", "20:00", 0, "2026-03-19", 45, 45, "venta", null, null], ["20 Mar 2026", "20:00", 0, "2026-03-20", 40, 40, "venta", null, null], ["21 Mar 2026", "17:00", 5, "2026-03-21", 38, 33, "agotado", null, null], ["22 Mar 2026", "18:30", 2, "2026-03-22", 38, 36, "agotado", null, null], ["26 Mar 2026", "20:00", 2, "2026-03-26", 45, 43, "venta", null, null], ["28 Mar 2026", "17:00", 2, "2026-03-28", 38, 36, "agotado", null, null], ["29 Mar 2026", "18:30", 0, "2026-03-29", 38, 38, "agotado", null, null]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "KulturVendidas", "KulturCapacidad"], "rows": [["05 Mar 2026", "20:00", 3, "2026-03-05", 33, 30, "venta", 2, 12], ["07 Mar 2026", "17:00", 10, "2026-03-07", 88, 78, "agotado", null, null], ["08 Mar 2026", "18:30", 0, "2026-03-08", 38, 38, "agotado", null, null], ["12 Mar 2026", "20:00", 0, "2026-03-12", 45, 45, "venta", null, null], ["13 Mar 2026", "20:00", 0, "2026-03-13", 40, 40, "venta", null, null], ["14 Mar 2026", "17:00", 6, "2026-03-14", 38, 32, "agotado", null, null], ["15 Mar 2026", "18:30", 0, "2026-03-15", 38, 38, "agotado", null, null], ["19 Mar 2026", "20:00", 0, "2026-03-19", 45, 45, "venta", null, null], ["20 Mar 2026", "20:00", 0, "2026-03-20", 40, 40, "venta", null, null], ["21 Mar 2026", "17:00", 5, "2026-03-21", 38, 33, "agotado", null, null], ["22 Mar 2026", "18:30", 2, "2026-03-22", 38, 36, "agotado", null, null], ["26 Mar 2026", "20:00", 2, "2026-03-26", 45, 43, "venta", null, null], ["28 Mar 2026", "17:00", 2, "2026-03-28", 38, 36, "agotado", null, null], ["29 Mar 2026", "18:30", 0, "2026-03-29", 38, 38, "agotado", null, null]]}}}}}</script>
+  <script id="PAYLOAD" type="application/json">{"generated_at": "2026-03-04T16:47:36.777127+01:00", "eventos": {"Disfruta": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "KulturVendidas", "KulturCapacidad"], "rows": [["04 Mar 2026", "20:00", 19, "2026-03-04", 48, 29, "agotado", null, null], ["11 Mar 2026", "20:00", 0, "2026-03-11", 48, 48, "venta", null, null], ["18 Mar 2026", "20:00", 0, "2026-03-18", 48, 48, "venta", null, null], ["25 Mar 2026", "20:00", 0, "2026-03-25", 48, 48, "venta", null, null], ["01 Apr 2026", "20:00", 0, "2026-04-01", 48, 48, "agotado", null, null]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "KulturVendidas", "KulturCapacidad"], "rows": [["04 Mar 2026", "20:00", 19, "2026-03-04", 48, 29, "agotado", null, null], ["11 Mar 2026", "20:00", 0, "2026-03-11", 48, 48, "venta", null, null], ["18 Mar 2026", "20:00", 0, "2026-03-18", 48, 48, "venta", null, null], ["25 Mar 2026", "20:00", 0, "2026-03-25", 48, 48, "venta", null, null], ["01 Apr 2026", "20:00", 0, "2026-04-01", 48, 48, "agotado", null, null]]}}}, "Miedo": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "KulturVendidas", "KulturCapacidad"], "rows": [["06 Mar 2026", "23:00", 11, "2026-03-06", 48, 37, null, null, null], ["13 Mar 2026", "23:00", 0, "2026-03-13", 48, 48, null, null, null], ["18 Mar 2026", "21:30", 0, "2026-03-18", 48, 48, null, null, null], ["20 Mar 2026", "23:00", 2, "2026-03-20", 48, 46, null, null, null], ["21 Mar 2026", "20:00", 0, "2026-03-21", 48, 48, null, null, null], ["27 Mar 2026", "23:00", 0, "2026-03-27", 48, 48, null, null, null], ["03 Apr 2026", "23:00", 0, "2026-04-03", 48, 48, null, null, null]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "KulturVendidas", "KulturCapacidad"], "rows": [["06 Mar 2026", "23:00", 11, "2026-03-06", 48, 37, null, null, null], ["13 Mar 2026", "23:00", 0, "2026-03-13", 48, 48, null, null, null], ["18 Mar 2026", "21:30", 0, "2026-03-18", 48, 48, null, null, null], ["20 Mar 2026", "23:00", 2, "2026-03-20", 48, 46, null, null, null], ["21 Mar 2026", "20:00", 0, "2026-03-21", 48, 48, null, null, null], ["27 Mar 2026", "23:00", 0, "2026-03-27", 48, 48, null, null, null], ["03 Apr 2026", "23:00", 0, "2026-04-03", 48, 48, null, null, null]]}}}, "Escondido": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "KulturVendidas", "KulturCapacidad"], "rows": [["05 Mar 2026", "20:00", 3, "2026-03-05", 33, 30, "venta", 2, 12], ["07 Mar 2026", "17:00", 10, "2026-03-07", 88, 78, "agotado", null, null], ["08 Mar 2026", "18:30", 0, "2026-03-08", 38, 38, "agotado", null, null], ["12 Mar 2026", "20:00", 0, "2026-03-12", 45, 45, "venta", null, null], ["13 Mar 2026", "20:00", 0, "2026-03-13", 40, 40, "venta", null, null], ["14 Mar 2026", "17:00", 6, "2026-03-14", 38, 32, "agotado", null, null], ["15 Mar 2026", "18:30", 0, "2026-03-15", 38, 38, "agotado", null, null], ["19 Mar 2026", "20:00", 0, "2026-03-19", 45, 45, "venta", null, null], ["20 Mar 2026", "20:00", 0, "2026-03-20", 40, 40, "venta", null, null], ["21 Mar 2026", "17:00", 5, "2026-03-21", 38, 33, "agotado", null, null], ["22 Mar 2026", "18:30", 2, "2026-03-22", 38, 36, "agotado", null, null], ["26 Mar 2026", "20:00", 2, "2026-03-26", 45, 43, "venta", null, null], ["28 Mar 2026", "17:00", 2, "2026-03-28", 38, 36, "agotado", null, null], ["29 Mar 2026", "18:30", 0, "2026-03-29", 38, 38, "agotado", null, null]]}, "proximas": {"table": {"headers": ["Fecha", "Hora", "Vendidas", "FechaISO", "Capacidad", "Stock", "Abono", "KulturVendidas", "KulturCapacidad"], "rows": [["05 Mar 2026", "20:00", 3, "2026-03-05", 33, 30, "venta", 2, 12], ["07 Mar 2026", "17:00", 10, "2026-03-07", 88, 78, "agotado", null, null], ["08 Mar 2026", "18:30", 0, "2026-03-08", 38, 38, "agotado", null, null], ["12 Mar 2026", "20:00", 0, "2026-03-12", 45, 45, "venta", null, null], ["13 Mar 2026", "20:00", 0, "2026-03-13", 40, 40, "venta", null, null], ["14 Mar 2026", "17:00", 6, "2026-03-14", 38, 32, "agotado", null, null], ["15 Mar 2026", "18:30", 0, "2026-03-15", 38, 38, "agotado", null, null], ["19 Mar 2026", "20:00", 0, "2026-03-19", 45, 45, "venta", null, null], ["20 Mar 2026", "20:00", 0, "2026-03-20", 40, 40, "venta", null, null], ["21 Mar 2026", "17:00", 5, "2026-03-21", 38, 33, "agotado", null, null], ["22 Mar 2026", "18:30", 2, "2026-03-22", 38, 36, "agotado", null, null], ["26 Mar 2026", "20:00", 2, "2026-03-26", 45, 43, "venta", null, null], ["28 Mar 2026", "17:00", 2, "2026-03-28", 38, 36, "agotado", null, null], ["29 Mar 2026", "18:30", 0, "2026-03-29", 38, 38, "agotado", null, null]]}}}}}</script>
 
   <script>
     const payload = JSON.parse(document.getElementById("PAYLOAD").textContent);
@@ -369,7 +285,6 @@
     document.getElementById("meta").textContent =
       new Date(payload.generated_at).toLocaleString("es-ES", { hour: '2-digit', minute: '2-digit' });
 
-    /* Tabs principales */
     const tabsEl = document.getElementById("tabs");
     for (const sala of Object.keys(eventos)) {
       const ev = eventos[sala];
@@ -399,32 +314,15 @@
       return (sec?.table?.rows) || [];
     }
 
-    function chipClassFrom(vendidas, stock) {
-      if (stock === 0) return "sold";
-      if ((vendidas ?? 0) >= 10) return "gold";
-      if ((vendidas ?? 0) >= 1) return "green";
-      return "gray";
-    }
-
     function fmtInt(x) {
       return (x === null || x === undefined) ? null : Number(x);
     }
 
-    // Kultur helpers
-    function kulturClassFrom(v) {
-      if (!v) return "gray";
-      const s = String(v).toLowerCase();
-      if (s === "agotado") return "sold";
-      if (s === "venta") return "green";
+    function chipClassFromVendidasCap(v, cap) {
+      if (cap !== null && v !== null && cap > 0 && v >= cap) return "sold";
+      if ((v ?? 0) >= 10) return "gold";
+      if ((v ?? 0) >= 1) return "green";
       return "gray";
-    }
-
-    function kulturLabelFrom(v) {
-      if (!v) return "—";
-      const s = String(v).toLowerCase();
-      if (s === "venta") return "Venta";
-      if (s === "agotado") return "Agotado";
-      return String(v);
     }
 
     function render() {
@@ -432,8 +330,8 @@
       cont.innerHTML = "";
       let rows = getRows();
 
-      // ✅ mapping CORRECTO:
-      // [Fecha, Hora, Vendidas, FechaISO, Capacidad, Stock, Abono, Kultur]
+      // NUEVO mapping (9 cols):
+      // [Fecha, Hora, VendidasDT, FechaISO, CapDT, StockDT, Abono, KulturVendidas, KulturCapacidad]
       rows = rows.map(r => ({
         fecha_label: r[0],
         hora: r[1],
@@ -442,7 +340,8 @@
         cap: fmtInt(r[4]),
         stock: fmtInt(r[5]),
         abono: r[6],
-        kultur: r[7],
+        kultur_v: fmtInt(r[7]),
+        kultur_cap: fmtInt(r[8]),
       }));
 
       rows.sort((a, b) => (a.fecha_iso + a.hora).localeCompare(b.fecha_iso + b.hora));
@@ -463,17 +362,16 @@
 
         const isSimple = active === "Miedo" || active === "Disfruta";
 
-        // Dina
-        const dinaCls = chipClassFrom(r.vendidas ?? 0, r.stock ?? 999999);
+        const dinaCls = chipClassFromVendidasCap(r.vendidas ?? 0, r.cap ?? null);
         const dinaValue = isSimple
           ? `${r.vendidas ?? "—"}`
           : `${r.vendidas ?? "—"}/${r.cap ?? "—"} · quedan ${r.stock ?? "—"}`;
 
-        // Kultur
-        const kulturCls = kulturClassFrom(r.kultur);
-        const kulturValue = kulturLabelFrom(r.kultur);
+        // KULTUR (vendidas/capacidad)
+        const hasK = (r.kultur_v !== null && r.kultur_cap !== null);
+        const kulturCls = chipClassFromVendidasCap(r.kultur_v ?? 0, r.kultur_cap ?? null);
+        const kulturValue = hasK ? `${r.kultur_v}/${r.kultur_cap}` : "—";
 
-        // Abono
         let abonoHTML = "";
         if (r.abono) {
           if (r.abono === "venta") abonoHTML = `<div class="abono ok">Abono: Disponible</div>`;
@@ -497,7 +395,7 @@
               </div>
             </div>
 
-            <div class="chip ${kulturCls}">
+            <div class="chip ${hasK ? kulturCls : "gray"}">
               <div class="chip-left">
                 <div class="chip-title">Kultur</div>
                 <div class="chip-value">${kulturValue}</div>
@@ -515,16 +413,14 @@
     render();
   </script>
 
-  <!-- Service Worker: dejá SOLO este -->
+  <!-- ✅ Service Worker: SOLO UNO -->
   <script>
     (function () {
       if (!('serviceWorker' in navigator)) return;
 
       const RELOAD_KEY = "sw-reloaded-once";
 
-      // IMPORTANTE: esto registra el SW en la raíz del site de GitHub Pages.
-      // Si Pages está publicado desde /docs, entonces docs/sw.js queda accesible como /sw.js.
-      navigator.serviceWorker.register('sw.js?v=2026-03-04-03').then((reg) => {
+      navigator.serviceWorker.register('sw.js?v=2026-03-04-04').then((reg) => {
         reg.update().catch(() => { });
 
         function activateWaitingSW() {
@@ -554,44 +450,5 @@
       }).catch(console.error);
     })();
   </script>
-
 </body>
-
 </html>
-
-<script>
-  (function () {
-    if (!('serviceWorker' in navigator)) return;
-
-    const RELOAD_KEY = "sw-reloaded-once";
-
-    navigator.serviceWorker.register('sw.js?v=2026-02-12-02').then((reg) => {
-      reg.update().catch(() => {});
-
-      function activateWaitingSW() {
-        if (!reg.waiting) return;
-        reg.waiting.postMessage({ type: "SKIP_WAITING" });
-      }
-
-      activateWaitingSW();
-
-      reg.addEventListener("updatefound", () => {
-        const sw = reg.installing;
-        if (!sw) return;
-
-        sw.addEventListener("statechange", () => {
-          if (sw.state === "installed" && navigator.serviceWorker.controller) {
-            activateWaitingSW();
-          }
-        });
-      });
-
-      navigator.serviceWorker.addEventListener("controllerchange", () => {
-        if (sessionStorage.getItem(RELOAD_KEY) === "1") return;
-        sessionStorage.setItem(RELOAD_KEY, "1");
-        window.location.reload();
-      });
-
-    }).catch(console.error);
-  })();
-</script>
