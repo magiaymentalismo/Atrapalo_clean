@@ -1,15 +1,28 @@
-docs/index.local.backup.html
-docs/index.html
-venv/
-
+# macOS
 .DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# virtual env
 venv/
 .venv/
+
+# node
 node_modules/
 
+# local backups
+docs/index.local.backup.html
+
+# runtime state (local only)
 state.json
 
-=======
-state.json
-.DS_Store
-
+# debug / scraping artifacts
+docs/kultur_fail.*
+docs/kultur_trace.zip
+docs/kultur_debug_*
+docs/kultur_debug_responses.jsonl
+docs/kultur_firestore_raw.txt
+docs/kultur_last_getsessions.json
+docs/kultur_cache_*.json
