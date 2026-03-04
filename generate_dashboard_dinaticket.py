@@ -2,9 +2,7 @@
 from __future__ import annotations
 
 import json
-import os
 import re
-import shutil
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -20,52 +18,31 @@ EVENTS = {
     "Escondido": "https://www.dinaticket.com/es/provider/20073/event/4930233",
 }
 
-# ✅ KULTUR (solo Miedo y Escondido; Disfruta por ahora no tiene)
-KULTUR_URLS = {
-    "Miedo": "https://appkultur.com/madrid/city-search/miedo-mentalismo-y-espiritismo-con-ariel-hamui",
-    "Escondido": "https://appkultur.com/madrid/el-juego-de-la-mente-magia-mental-con-ariel-hamui",
-}
-
 # AbonoTeatro por sala
 ABONO_URLS = {
     "Escondido": "https://compras.abonoteatro.com/?pagename=espectaculo&eventid=90857",
     "Disfruta": "https://compras.abonoteatro.com/?pagename=espectaculo&eventid=57914",
 }
 
+# Kultur (usamos cache local versionado en docs/)
+# Si una sala no tiene, simplemente queda "—" en la UI.
+KULTUR_CACHE_FILES = {
+    "Escondido": "docs/kultur_cache_Escondido.json",
+    "Miedo": "docs/kultur_cache_Miedo.json",     # si lo creás/commiteás, se muestra
+    "Disfruta": "docs/kultur_cache_Disfruta.json" # si lo creás/commiteás, se muestra
+}
+
 UA = {
     "User-Agent": (
         "Mozilla/5.0 (Macintosh; Intel Mac OS X) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/123 Safari/537.36"
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123 Safari/537.36"
     )
 }
 
 TZ = ZoneInfo("Europe/Madrid")
 
 TEMPLATE_PATH = Path("template.html")
-MANIFEST_PATH = Path("manifest.json")
 
-# Service worker: preferimos el que está en docs/
-SW_SOURCE_PATHS = [Path("docs/sw.js"), Path("sw.js")]
-
-# Cache files de Kultur (en docs/)
-KULTUR_CACHE_PATHS = {
-    "Miedo": Path("docs/kultur_cache_Miedo.json"),
-    "Escondido": Path("docs/kultur_cache_Escondido.json"),
-    "Disfruta": Path("docs/kultur_cache_Disfruta.json"),
-}
-
-# ===================== FLAGS (ENV) ===================== #
-
-def env_flag(name: str, default: str = "0") -> bool:
-    v = os.getenv(name, default)
-    return str(v).strip().lower() in ("1", "true", "yes", "y", "on")
-
-
-KULTUR_DEBUG = env_flag("KULTUR_DEBUG", "0")
-KULTUR_CACHE = env_flag("KULTUR_CACHE", "1")       # usar cache si existe
-KULTUR_NO_CACHE = env_flag("KULTUR_NO_CACHE", "0") # forzar ignorar cache
-KULTUR_DIRECT = env_flag("KULTUR_DIRECT", "0")     # intentar scrape live
 
 # ===================== HELPERS ===================== #
 
@@ -82,131 +59,16 @@ def normalize_hhmm(h: str | None) -> str:
     return f"{int(m.group(1)):02d}:{int(m.group(2) or '00'):02d}"
 
 
-def safe_int(x):
+def safe_int(x, default=None):
     try:
         if x is None:
-            return None
+            return default
         return int(x)
     except Exception:
-        return None
+        return default
 
 
-def debug(msg: str):
-    if KULTUR_DEBUG:
-        print(f"[DEBUG] {msg}")
-
-
-# ---- KULTUR CACHE (idx) ----
-# Esperamos:
-# { "idx": { "YYYY-MM-DD|HH:MM": {"capacidad": 12, "stock": 10, "vendidas": 2}, ... } }
-def load_kultur_idx(path: Path) -> dict:
-    if not path.exists():
-        return {}
-    try:
-        data = json.loads(path.read_text("utf-8"))
-        idx = (data or {}).get("idx", {}) or {}
-        if isinstance(idx, dict):
-            return idx
-        return {}
-    except Exception:
-        return {}
-
-
-def write_kultur_idx(path: Path, idx: dict) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    payload = {"idx": idx}
-    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), "utf-8")
-
-
-def extract_json_object_containing_idx(text: str) -> dict | None:
-    """
-    Busca un objeto JSON que contenga una key "idx".
-    Esto es best-effort: si AppKultur cambia, no rompe el script.
-    """
-    # Intento 1: encontrar `"idx":{` y expandir llaves para capturar el objeto padre.
-    m = re.search(r'"idx"\s*:\s*{', text)
-    if not m:
-        return None
-
-    # buscamos el inicio del objeto padre más cercano hacia atrás: el '{' anterior
-    start = text.rfind("{", 0, m.start())
-    if start < 0:
-        return None
-
-    # expandir hasta el cierre balanceado
-    depth = 0
-    for i in range(start, len(text)):
-        ch = text[i]
-        if ch == "{":
-            depth += 1
-        elif ch == "}":
-            depth -= 1
-            if depth == 0:
-                blob = text[start : i + 1]
-                try:
-                    obj = json.loads(blob)
-                    if isinstance(obj, dict) and "idx" in obj and isinstance(obj["idx"], dict):
-                        return obj
-                except Exception:
-                    return None
-    return None
-
-
-def fetch_kultur_idx_direct(url: str) -> dict:
-    """
-    Intento live (sin prometer): baja HTML y busca JSON con idx embebido.
-    Si no lo encuentra, devuelve {} sin romper.
-    """
-    try:
-        r = requests.get(url, headers=UA, timeout=30)
-        r.raise_for_status()
-        html = r.text
-
-        obj = extract_json_object_containing_idx(html)
-        if obj and isinstance(obj.get("idx"), dict):
-            debug(f"Kultur: idx encontrado embebido en HTML ({len(obj['idx'])} keys)")
-            return obj["idx"]
-
-        # Intento 2: buscar <script type="application/json">...
-        soup = BeautifulSoup(html, "html.parser")
-        for s in soup.find_all("script"):
-            t = (s.string or "").strip()
-            if not t:
-                continue
-            if '"idx"' in t:
-                obj = extract_json_object_containing_idx(t)
-                if obj and isinstance(obj.get("idx"), dict):
-                    debug(f"Kultur: idx encontrado en <script> ({len(obj['idx'])} keys)")
-                    return obj["idx"]
-
-        debug("Kultur: no pude extraer idx del HTML (sin romper).")
-        return {}
-    except Exception as e:
-        debug(f"Kultur direct error: {e}")
-        return {}
-
-
-def get_kultur_idx_for_sala(sala: str) -> dict:
-    cache_path = KULTUR_CACHE_PATHS.get(sala)
-    idx_cache = load_kultur_idx(cache_path) if cache_path else {}
-
-    # Si NO_CACHE, ignoramos cache
-    if KULTUR_NO_CACHE:
-        idx_cache = {}
-
-    # Si DIRECT y tengo URL, intento live
-    idx_direct = {}
-    if KULTUR_DIRECT and sala in KULTUR_URLS:
-        idx_direct = fetch_kultur_idx_direct(KULTUR_URLS[sala])
-        # si conseguimos algo, lo guardamos a cache para futuras ejecuciones
-        if idx_direct and cache_path:
-            write_kultur_idx(cache_path, idx_direct)
-
-    # Prioridad: direct si tiene datos, sino cache
-    return idx_direct if idx_direct else (idx_cache if (KULTUR_CACHE and idx_cache) else {})
-
-
-# ===================== HTML OUTPUT ===================== #
+# ===================== OUTPUT ===================== #
 
 def write_html(payload: dict) -> None:
     html_template = TEMPLATE_PATH.read_text("utf-8")
@@ -217,19 +79,7 @@ def write_html(payload: dict) -> None:
 
     docs_dir = Path("docs")
     docs_dir.mkdir(exist_ok=True)
-
     (docs_dir / "index.html").write_text(html, "utf-8")
-
-    if MANIFEST_PATH.exists():
-        shutil.copy(MANIFEST_PATH, docs_dir / "manifest.json")
-
-    # SW: si existe en docs, lo dejamos; si existe solo en root, lo copiamos
-    sw_src = next((p for p in SW_SOURCE_PATHS if p.exists()), None)
-    if sw_src:
-        # copiamos a docs/sw.js solo si el source NO es ya docs/sw.js
-        if sw_src.resolve() != (docs_dir / "sw.js").resolve():
-            shutil.copy(sw_src, docs_dir / "sw.js")
-
     print("✔ Generado docs/index.html")
 
 
@@ -286,8 +136,8 @@ def fetch_functions_dinaticket(url: str) -> list[dict]:
         if not quota:
             continue
 
-        cap = int(quota.get("data-quota-total", 0))
-        stock = int(quota.get("data-stock", 0))
+        cap = safe_int(quota.get("data-quota-total", 0), 0)
+        stock = safe_int(quota.get("data-stock", 0), 0)
         vendidas = max(0, cap - stock)
 
         out.append(
@@ -313,7 +163,7 @@ def fetch_abonoteatro_shows(url: str) -> set[tuple[str, str]]:
 
     out: set[tuple[str, str]] = set()
 
-    # ---------- 1) Formato antiguo ----------
+    # --- 1) Formato antiguo ---
     for ses in soup.find_all("div", class_="bsesion"):
         if not ses.find("a", class_="buyBtn"):
             continue
@@ -352,7 +202,7 @@ def fetch_abonoteatro_shows(url: str) -> set[tuple[str, str]]:
     if out:
         return out
 
-    # ---------- 2) Formato nuevo ----------
+    # --- 2) Formato nuevo (texto + link Comprar) ---
     mes_map = {
         "enero": "01", "febrero": "02", "marzo": "03", "abril": "04",
         "mayo": "05", "junio": "06", "julio": "07", "agosto": "08",
@@ -396,39 +246,80 @@ def fetch_abonoteatro_shows(url: str) -> set[tuple[str, str]]:
     return out
 
 
+# ===================== KULTUR (desde cache versionado) ===================== #
+
+def load_kultur_idx_for_sala(sala: str) -> dict[str, dict]:
+    """
+    Lee docs/kultur_cache_<Sala>.json y devuelve idx:
+    {
+      "2026-03-05|20:00": {"capacidad":12,"stock":10,"vendidas":2}
+    }
+    """
+    path_str = KULTUR_CACHE_FILES.get(sala)
+    if not path_str:
+        return {}
+    p = Path(path_str)
+    if not p.exists():
+        return {}
+
+    try:
+        data = json.loads(p.read_text("utf-8"))
+    except Exception:
+        return {}
+
+    idx = data.get("idx")
+    if not isinstance(idx, dict):
+        return {}
+    return idx
+
+
 # ===================== BUILD PAYLOAD ===================== #
 
 def build_payload(
     eventos: dict[str, list[dict]],
     abono_by_sala: dict[str, set[tuple[str, str]]],
-    kultur_by_sala: dict[str, dict],
+    kultur_idx_by_sala: dict[str, dict[str, dict]],
 ):
     now = datetime.now(TZ)
     out: dict[str, dict] = {}
+
+    headers = [
+        "Fecha",
+        "Hora",
+        "Vendidas",
+        "FechaISO",
+        "Capacidad",
+        "Stock",
+        "Abono",
+        "KulturVendidas",
+        "KulturCapacidad",
+    ]
 
     for sala, funcs in eventos.items():
         abono_shows = abono_by_sala.get(sala, set())
         has_abono = sala in abono_by_sala
 
-        kultur_idx = kultur_by_sala.get(sala, {}) or {}
+        kidx = kultur_idx_by_sala.get(sala, {}) or {}
 
         proximas: list[dict] = []
 
         for f in funcs:
             f["hora"] = normalize_hhmm(f.get("hora"))
 
-            # ABONO
+            # Abono
             f["abono_estado"] = (
                 "venta" if (f["fecha_iso"], f["hora"]) in abono_shows else "agotado"
             ) if has_abono else None
 
-            # KULTUR (vendidas/capacidad/stock)
-            k_key = f"{f['fecha_iso']}|{f['hora']}"
-            k = kultur_idx.get(k_key) if isinstance(kultur_idx, dict) else None
-
-            f["kultur_vendidas"] = safe_int(k.get("vendidas")) if isinstance(k, dict) else None
-            f["kultur_capacidad"] = safe_int(k.get("capacidad")) if isinstance(k, dict) else None
-            f["kultur_stock"] = safe_int(k.get("stock")) if isinstance(k, dict) else None
+            # Kultur (vendidas/capacidad) por clave fecha|hora
+            key = f"{f['fecha_iso']}|{f['hora']}"
+            k = kidx.get(key)
+            if isinstance(k, dict):
+                f["kultur_vendidas"] = safe_int(k.get("vendidas"), None)
+                f["kultur_capacidad"] = safe_int(k.get("capacidad"), None)
+            else:
+                f["kultur_vendidas"] = None
+                f["kultur_capacidad"] = None
 
             ses_dt = datetime.strptime(
                 f"{f['fecha_iso']} {f['hora']}", "%Y-%m-%d %H:%M"
@@ -437,8 +328,6 @@ def build_payload(
             if ses_dt >= now:
                 proximas.append(f)
 
-        # ✅ Nuevo formato de columnas:
-        # [Fecha, Hora, VendidasDT, FechaISO, CapacidadDT, StockDT, Abono, KulturVendidas, KulturCapacidad, KulturStock]
         rows = [
             [
                 f["fecha_label"],
@@ -448,24 +337,10 @@ def build_payload(
                 f["capacidad"],
                 f["stock"],
                 f["abono_estado"],
-                f["kultur_vendidas"],
-                f["kultur_capacidad"],
-                f["kultur_stock"],
+                f.get("kultur_vendidas"),
+                f.get("kultur_capacidad"),
             ]
             for f in proximas
-        ]
-
-        headers = [
-            "Fecha",
-            "Hora",
-            "Vendidas",
-            "FechaISO",
-            "Capacidad",
-            "Stock",
-            "Abono",
-            "KulturVendidas",
-            "KulturCapacidad",
-            "KulturStock",
         ]
 
         out[sala] = {
@@ -495,15 +370,8 @@ if __name__ == "__main__":
         abono_by_sala[sala] = shows
         print(f"AbonoTeatro {sala}: {len(shows)}")
 
-    # ✅ Kultur por sala: cache + (opcional) direct
-    kultur_by_sala: dict[str, dict] = {}
-    for sala in EVENTS.keys():
-        kultur_by_sala[sala] = get_kultur_idx_for_sala(sala)
-        if sala in KULTUR_URLS:
-            print(f"Kultur {sala}: {len(kultur_by_sala[sala])} sesiones (idx)")
-        else:
-            print(f"Kultur {sala}: sin URL")
+    kultur_idx_by_sala = {s: load_kultur_idx_for_sala(s) for s in EVENTS.keys()}
 
-    payload = build_payload(current, abono_by_sala, kultur_by_sala)
+    payload = build_payload(current, abono_by_sala, kultur_idx_by_sala)
     write_html(payload)
     write_schedule_json(payload)
