@@ -27,13 +27,17 @@ ABONO_URLS = {
 
 # Kultur: solo para las que tengan link (por ahora Miedo + Escondido)
 KULTUR_URLS = {
-    "Miedo": "https://appkultur.com/madrid/city-search/miedo-mentalismo-y-espiritismo-con-ariel-hamui",
+    "Miedo": "https://appkultur.com/madrid/miedo-mentalismo-y-espiritismo-con-ariel-hamui",
     "Escondido": "https://appkultur.com/madrid/el-juego-de-la-mente-magia-mental-con-ariel-hamui",
-    # Disfruta por ahora no tiene
+    # "Disfruta": (no tiene por ahora)
 }
 
 UA = {
-    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123 Safari/537.36"
+    "User-Agent": (
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/123 Safari/537.36"
+    )
 }
 
 TZ = ZoneInfo("Europe/Madrid")
@@ -41,8 +45,8 @@ TZ = ZoneInfo("Europe/Madrid")
 TEMPLATE_PATH = Path("template.html")
 MANIFEST_PATH = Path("manifest.json")
 SW_PATH = Path("sw.js")
-
 DOCS_DIR = Path("docs")
+
 
 # ===================== HELPERS ===================== #
 
@@ -57,6 +61,42 @@ def normalize_hhmm(h: str | None) -> str:
     if not m:
         return s
     return f"{int(m.group(1)):02d}:{int(m.group(2) or '00'):02d}"
+
+
+def _walk(obj):
+    if isinstance(obj, dict):
+        yield obj
+        for v in obj.values():
+            yield from _walk(v)
+    elif isinstance(obj, list):
+        for x in obj:
+            yield from _walk(x)
+
+
+def _try_get(d: dict, keys: list[str]):
+    for k in keys:
+        if k in d and d[k] is not None:
+            return d[k]
+    return None
+
+
+def _iso_date_from_any(x) -> str | None:
+    if not x:
+        return None
+    s = str(x)
+    m = re.search(r"\b(20\d{2}-\d{2}-\d{2})\b", s)
+    return m.group(1) if m else None
+
+
+def _hhmm_from_any(x) -> str | None:
+    if not x:
+        return None
+    s = str(x)
+    m = re.search(r"\b([0-2]?\d):([0-5]\d)\b", s)
+    if not m:
+        return None
+    return normalize_hhmm(f"{m.group(1)}:{m.group(2)}")
+
 
 # ===================== HTML OUTPUT ===================== #
 
@@ -79,6 +119,7 @@ def write_html(payload: dict) -> None:
 
     print("✔ Generado docs/index.html")
 
+
 def write_schedule_json(payload: dict) -> None:
     DOCS_DIR.mkdir(exist_ok=True)
     (DOCS_DIR / "schedule.json").write_text(
@@ -86,6 +127,7 @@ def write_schedule_json(payload: dict) -> None:
         "utf-8",
     )
     print("✔ Generado docs/schedule.json")
+
 
 # ===================== DINATICKET ===================== #
 
@@ -147,6 +189,7 @@ def fetch_functions_dinaticket(url: str) -> list[dict]:
 
     return out
 
+
 # ===================== ABONO ===================== #
 
 def fetch_abonoteatro_shows(url: str) -> set[tuple[str, str]]:
@@ -203,7 +246,9 @@ def fetch_abonoteatro_shows(url: str) -> set[tuple[str, str]]:
     }
     dow = r"(lunes|martes|mi[eé]rcoles|jueves|viernes|s[aá]bado|domingo)"
 
-    comprar_links = soup.find_all("a", string=lambda s: s and s.strip().lower() == "comprar")
+    comprar_links = soup.find_all(
+        "a", string=lambda s: s and s.strip().lower() == "comprar"
+    )
 
     for a in comprar_links:
         block = a.find_parent(["article", "section", "div"])
@@ -238,18 +283,120 @@ def fetch_abonoteatro_shows(url: str) -> set[tuple[str, str]]:
 
     return out
 
-# ===================== KULTUR (CACHE LOCAL) ===================== #
+
+# ===================== KULTUR (PLAYWRIGHT -> CACHE) ===================== #
+
+def extract_kultur_idx_from_json(blob) -> dict[str, dict]:
+    """
+    Intenta armar idx:
+      'YYYY-MM-DD|HH:MM' -> {capacidad, stock, vendidas}
+    desde cualquier JSON capturado en red.
+    """
+    idx: dict[str, dict] = {}
+
+    for d in _walk(blob):
+        if not isinstance(d, dict):
+            continue
+
+        date_raw = _try_get(d, ["date", "day", "startDate", "start_date", "sessionDate", "session_date", "datetime", "start", "startsAt", "start_at"])
+        time_raw = _try_get(d, ["time", "hour", "startTime", "start_time", "sessionTime", "session_time", "startsAt", "start_at"])
+
+        fecha_iso = _iso_date_from_any(date_raw)
+        hora = _hhmm_from_any(time_raw)
+
+        if (not fecha_iso or not hora) and date_raw:
+            fecha_iso2 = _iso_date_from_any(date_raw)
+            hora2 = _hhmm_from_any(date_raw)
+            fecha_iso = fecha_iso or fecha_iso2
+            hora = hora or hora2
+
+        if not fecha_iso or not hora:
+            continue
+
+        cap = _try_get(d, ["capacidad", "capacity", "totalCapacity", "total_capacity", "total", "max", "maxCapacity", "max_capacity"])
+        stock = _try_get(d, ["stock", "available", "availability", "remaining", "left", "spotsLeft", "spots_left"])
+        sold = _try_get(d, ["vendidas", "sold", "booked", "reserved", "ticketsSold", "tickets_sold"])
+
+        try:
+            cap_i = int(cap) if cap is not None else None
+        except Exception:
+            cap_i = None
+
+        try:
+            stock_i = int(stock) if stock is not None else None
+        except Exception:
+            stock_i = None
+
+        try:
+            sold_i = int(sold) if sold is not None else None
+        except Exception:
+            sold_i = None
+
+        if sold_i is None and cap_i is not None and stock_i is not None:
+            sold_i = max(0, cap_i - stock_i)
+
+        if stock_i is None and cap_i is not None and sold_i is not None:
+            stock_i = max(0, cap_i - sold_i)
+
+        if cap_i is None or sold_i is None:
+            continue
+
+        key = f"{fecha_iso}|{hora}"
+        idx[key] = {"capacidad": cap_i, "stock": stock_i, "vendidas": sold_i}
+
+    return idx
+
+
+def fetch_and_write_kultur_cache(sala: str, url: str) -> dict:
+    """
+    Abre Kultur con Playwright, captura respuestas JSON,
+    extrae sesiones y escribe docs/kultur_cache_{Sala}.json
+    """
+    from playwright.sync_api import sync_playwright
+
+    DOCS_DIR.mkdir(exist_ok=True)
+
+    all_json = []
+    idx: dict[str, dict] = {}
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        ctx = browser.new_context()
+        page = ctx.new_page()
+
+        def on_response(resp):
+            try:
+                ct = (resp.headers.get("content-type") or "").lower()
+                if "application/json" in ct:
+                    all_json.append(resp.json())
+            except Exception:
+                pass
+
+        page.on("response", on_response)
+
+        page.goto(url, wait_until="domcontentloaded")
+        page.wait_for_timeout(6000)
+        try:
+            page.wait_for_load_state("networkidle", timeout=8000)
+        except Exception:
+            pass
+
+        browser.close()
+
+    for blob in all_json:
+        part = extract_kultur_idx_from_json(blob)
+        if part:
+            idx.update(part)
+
+    data = {"idx": idx}
+    out_path = DOCS_DIR / f"kultur_cache_{sala}.json"
+    out_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), "utf-8")
+    print(f"✔ Generado {out_path} (keys: {len(idx)})")
+
+    return data
+
 
 def load_kultur_cache(sala: str) -> dict:
-    """
-    Lee docs/kultur_cache_{Sala}.json si existe.
-    Formato esperado:
-    {
-      "idx": {
-        "YYYY-MM-DD|HH:MM": {"capacidad": 12, "stock": 10, "vendidas": 2}
-      }
-    }
-    """
     p = DOCS_DIR / f"kultur_cache_{sala}.json"
     if not p.exists():
         return {}
@@ -257,6 +404,7 @@ def load_kultur_cache(sala: str) -> dict:
         return json.loads(p.read_text("utf-8"))
     except Exception:
         return {}
+
 
 # ===================== BUILD PAYLOAD ===================== #
 
@@ -289,12 +437,14 @@ def build_payload(eventos: dict[str, list[dict]], abono_by_sala: dict[str, set[t
             f["kultur_vendidas"] = k.get("vendidas")
             f["kultur_capacidad"] = k.get("capacidad")
 
-            # filtro proximas
-            ses_dt = datetime.strptime(f"{f['fecha_iso']} {f['hora']}", "%Y-%m-%d %H:%M").replace(tzinfo=TZ)
+            ses_dt = datetime.strptime(
+                f"{f['fecha_iso']} {f['hora']}", "%Y-%m-%d %H:%M"
+            ).replace(tzinfo=TZ)
+
             if ses_dt >= now:
                 proximas.append(f)
 
-        # NUEVO formato: 9 columnas
+        # 9 columnas: Dina + Abono + Kultur vend/cap
         rows = [
             [
                 f["fecha_label"],
@@ -304,8 +454,8 @@ def build_payload(eventos: dict[str, list[dict]], abono_by_sala: dict[str, set[t
                 f["capacidad"],
                 f["stock"],
                 f["abono_estado"],
-                f["kultur_vendidas"],
-                f["kultur_capacidad"],
+                f.get("kultur_vendidas"),
+                f.get("kultur_capacidad"),
             ]
             for f in proximas
         ]
@@ -327,10 +477,8 @@ def build_payload(eventos: dict[str, list[dict]], abono_by_sala: dict[str, set[t
             "proximas": {"table": {"headers": headers, "rows": rows}},
         }
 
-    return {
-        "generated_at": datetime.now(TZ).isoformat(),
-        "eventos": out,
-    }
+    return {"generated_at": datetime.now(TZ).isoformat(), "eventos": out}
+
 
 # ===================== MAIN ===================== #
 
@@ -347,6 +495,13 @@ if __name__ == "__main__":
         shows = fetch_abonoteatro_shows(url)
         abono_by_sala[sala] = shows
         print(f"AbonoTeatro {sala}: {len(shows)}")
+
+    # KULTUR: generar caches automáticamente
+    for sala, url in KULTUR_URLS.items():
+        try:
+            fetch_and_write_kultur_cache(sala, url)
+        except Exception as e:
+            print(f"⚠️ Kultur {sala}: fallo al generar cache ({e})")
 
     payload = build_payload(current, abono_by_sala)
     write_html(payload)
