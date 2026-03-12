@@ -31,6 +31,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          python -m pip show playwright >/dev/null 2>&1 || python -m pip install playwright
 
       - name: Run generator
         env:
