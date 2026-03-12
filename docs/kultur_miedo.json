@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+      If you are serving your web app in a path other than the root, change the
+      href value below to reflect the base path you are serving from.
+
+      The path provided below has to start and end with a slash "/" in order for
+      it to work correctly.
+
+      For more details:
+      * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+      This is a placeholder for base href that will be replaced by the value of
+      the `--base-href` argument provided to `flutter build`.
+    -->
+    <base href="/">
+
+    <title>Kultur - Entradas de última hora con descuentos a eventos</title>
+
+    <meta charset="UTF-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+
+    <meta name="description"
+        content="En Kultur encontrarás entradas de última hora con descuentos exclusivos a todo tipo de eventos, espectáculos y experiencias: Teatro, monólogos, magia y mentalismo, visitas guiadas, exposiciones, flamenco, conciertos, fiestas... ¡Disfruta de Madrid al mejor precio!">
+    <meta name="keywords"
+        content="Kultur, Entradas, Lastminute, descuento, discount, teatro, magia, monólogos, fiesta, tours, conciertos, experiencias, flamenco, museos, últimahora, cultura">
+
+    <meta name="google-signin-client_id"
+        content="685022688033-60t2sklv5gfnbegd6leganhsf35ffgc7.apps.googleusercontent.com">
+
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Kultur - Entradas de última hora con descuentos a eventos">
+    <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+    <!-- update the version number as needed -->
+    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.12.313/build/pdf.js" type="text/javascript"></script>
+    <script type="text/javascript"
+        src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+    <script type="text/javascript">
+        pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdn.jsdelivr.net/npm/pdfjs-dist@2.12.313/build/pdf.worker.min.js";
+        pdfRenderOptions = {
+            cMapUrl: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@2.12.313/cmaps/',
+            cMapPacked: true,
+        }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/favicon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/favicon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/favicon-114x114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/favicon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/favicon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="icons/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="152x152" href="icons/favicon-152x152.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/favicon-192x192.png">
+
+
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <title>Kultur</title>
+
+    <link rel="manifest" href="manifest.json">
+
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H6GS15QD70"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-H6GS15QD70');
+</script>
+
+<body class="main">
+    <!-- Splash screen loading -->
+    <div id="loading">
+        <style>
+            body {
+                inset: 0;
+                overflow: hidden;
+                margin: 0;
+                padding: 0;
+                position: fixed;
+            }
+
+            #loading {
+                align-items: center;
+                display: flex;
+                height: 100%;
+                justify-content: center;
+                width: 100%;
+            }
+
+            #loading img {
+                animation: 1s ease-in-out 0s infinite alternate breathe;
+                opacity: 1;
+                width: 350px;
+                max-width: 50%;
+                margin: 20px;
+            }
+
+            @keyframes breathe {
+                from {
+                    transform: scale(1)
+                }
+
+                to {
+                    transform: scale(0.95)
+                }
+            }
+        </style>
+        <img src="icons/splash-icon.png" alt="Loading indicator" />
+    </div>
+
+    <script>
+        self.FIREBASE_APPCHECK_DEBUG_TOKEN = location.hostname === 'localhost';
+    </script>
+
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <script>
+        // add  MetaSEO JS functions here
+        function seoNameJS(name, content) {
+            safeAttrNameContentSetter(name, content)
+        }
+
+        function seoPropertyJS(property, content) {
+            safeAttrPropertyContentSetter(property, content)
+        }
+
+        function seoAttributeJS(key, val) {
+            if (key.indexOf('title') > -1 || key.indexOf('author') > -1) {
+                document.title = value
+            }
+            safeAttrSetter(key, val)
+        }
+
+        function safeAttrSetter(attr, value) {
+            if (key.indexOf('title') > -1 || key.indexOf('author') > -1) {
+                document.title = value
+            }
+            for (var i = 0; i < document.getElementsByTagName('head')[0].children.length; i++) {
+                var element = document.getElementsByTagName('head')[0].children[i]
+                if (element.hasAttribute(attr)) {
+                    element.setAttribute(attr, value)
+                    return
+                }
+            }
+            var ele = document.createElement('meta')
+            ele.setAttribute(attr, value)
+            document.getElementsByTagName('head')[0].appendChild(ele);
+        }
+
+        function safeAttrNameContentSetter(key, value) {
+            if (key.indexOf('title') > -1 || key.indexOf('author') > -1) {
+                document.title = value
+            }
+            for (var i = 0; i < document.getElementsByTagName('head')[0].children.length; i++) {
+                var element = document.getElementsByTagName('head')[0].children[i]
+                if (element.getAttribute('name') == key) {
+                    element.setAttribute('content', value)
+                    return
+                }
+            }
+            var ele = document.createElement('meta')
+            ele.setAttribute('name', key)
+            ele.setAttribute('content', value)
+            document.getElementsByTagName('head')[0].appendChild(ele);
+        }
+
+        function safeAttrPropertyContentSetter(key, value) {
+            for (var i = 0; i < document.getElementsByTagName('head')[0].children.length; i++) {
+                var element = document.getElementsByTagName('head')[0].children[i]
+                if (element.getAttribute('property') == key) {
+                    element.setAttribute('content', value)
+                    return
+                }
+            }
+            var ele = document.createElement('meta')
+            ele.setAttribute('property', key)
+            ele.setAttribute('content', value)
+            document.getElementsByTagName('head')[0].appendChild(ele);
+        }
+    </script>
+
+    <script src="flutter_bootstrap.js" async></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+</body>
+
+</html>
