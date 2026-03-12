@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-13T00:27:00.775679+01:00",
+  "generated_at": "2026-03-13T00:37:07.753122+01:00",
   "eventos": {
     "Disfruta": {
       "table": {
@@ -11,8 +11,7 @@
           "Capacidad",
           "Stock",
           "Abono",
-          "KulturVendidas",
-          "KulturCapacidad"
+          "KulturDisponibles"
         ],
         "rows": [
           [
@@ -23,7 +22,6 @@
             48,
             44,
             "agotado",
-            null,
             null
           ],
           [
@@ -34,7 +32,6 @@
             48,
             48,
             "venta",
-            null,
             null
           ],
           [
@@ -45,7 +42,6 @@
             48,
             48,
             "agotado",
-            null,
             null
           ]
         ]
@@ -60,8 +56,7 @@
             "Capacidad",
             "Stock",
             "Abono",
-            "KulturVendidas",
-            "KulturCapacidad"
+            "KulturDisponibles"
           ],
           "rows": [
             [
@@ -72,7 +67,6 @@
               48,
               44,
               "agotado",
-              null,
               null
             ],
             [
@@ -83,7 +77,6 @@
               48,
               48,
               "venta",
-              null,
               null
             ],
             [
@@ -94,7 +87,6 @@
               48,
               48,
               "agotado",
-              null,
               null
             ]
           ]
@@ -111,8 +103,7 @@
           "Capacidad",
           "Stock",
           "Abono",
-          "KulturVendidas",
-          "KulturCapacidad"
+          "KulturDisponibles"
         ],
         "rows": [
           [
@@ -122,7 +113,6 @@
             "2026-03-13",
             48,
             43,
-            null,
             null,
             null
           ],
@@ -134,7 +124,6 @@
             48,
             48,
             null,
-            null,
             null
           ],
           [
@@ -144,7 +133,6 @@
             "2026-03-20",
             48,
             38,
-            null,
             null,
             null
           ],
@@ -156,7 +144,6 @@
             48,
             48,
             null,
-            null,
             null
           ],
           [
@@ -166,7 +153,6 @@
             "2026-03-27",
             48,
             48,
-            null,
             null,
             null
           ],
@@ -178,7 +164,6 @@
             48,
             48,
             null,
-            null,
             null
           ],
           [
@@ -188,7 +173,6 @@
             "2026-04-04",
             48,
             48,
-            null,
             null,
             null
           ]
@@ -204,8 +188,7 @@
             "Capacidad",
             "Stock",
             "Abono",
-            "KulturVendidas",
-            "KulturCapacidad"
+            "KulturDisponibles"
           ],
           "rows": [
             [
@@ -215,7 +198,6 @@
               "2026-03-13",
               48,
               43,
-              null,
               null,
               null
             ],
@@ -227,7 +209,6 @@
               48,
               48,
               null,
-              null,
               null
             ],
             [
@@ -237,7 +218,6 @@
               "2026-03-20",
               48,
               38,
-              null,
               null,
               null
             ],
@@ -249,7 +229,6 @@
               48,
               48,
               null,
-              null,
               null
             ],
             [
@@ -259,7 +238,6 @@
               "2026-03-27",
               48,
               48,
-              null,
               null,
               null
             ],
@@ -271,7 +249,6 @@
               48,
               48,
               null,
-              null,
               null
             ],
             [
@@ -281,7 +258,6 @@
               "2026-04-04",
               48,
               48,
-              null,
               null,
               null
             ]
@@ -299,8 +275,7 @@
           "Capacidad",
           "Stock",
           "Abono",
-          "KulturVendidas",
-          "KulturCapacidad"
+          "KulturDisponibles"
         ],
         "rows": [
           [
@@ -311,7 +286,6 @@
             40,
             18,
             "agotado",
-            null,
             null
           ],
           [
@@ -322,7 +296,6 @@
             38,
             25,
             "agotado",
-            null,
             null
           ],
           [
@@ -333,7 +306,6 @@
             27,
             21,
             "agotado",
-            null,
             null
           ],
           [
@@ -344,7 +316,6 @@
             45,
             43,
             "venta",
-            null,
             null
           ],
           [
@@ -355,7 +326,6 @@
             40,
             33,
             "agotado",
-            null,
             null
           ],
           [
@@ -366,7 +336,6 @@
             38,
             33,
             "agotado",
-            null,
             null
           ],
           [
@@ -377,7 +346,6 @@
             38,
             36,
             "agotado",
-            null,
             null
           ],
           [
@@ -388,7 +356,6 @@
             45,
             40,
             "venta",
-            null,
             null
           ],
           [
@@ -399,7 +366,6 @@
             38,
             36,
             "agotado",
-            null,
             null
           ],
           [
@@ -410,7 +376,6 @@
             38,
             36,
             "agotado",
-            null,
             null
           ]
         ]
@@ -425,8 +390,7 @@
             "Capacidad",
             "Stock",
             "Abono",
-            "KulturVendidas",
-            "KulturCapacidad"
+            "KulturDisponibles"
           ],
           "rows": [
             [
@@ -437,7 +401,6 @@
               40,
               18,
               "agotado",
-              null,
               null
             ],
             [
@@ -448,7 +411,6 @@
               38,
               25,
               "agotado",
-              null,
               null
             ],
             [
@@ -459,7 +421,6 @@
               27,
               21,
               "agotado",
-              null,
               null
             ],
             [
@@ -470,7 +431,6 @@
               45,
               43,
               "venta",
-              null,
               null
             ],
             [
@@ -481,7 +441,6 @@
               40,
               33,
               "agotado",
-              null,
               null
             ],
             [
@@ -492,7 +451,6 @@
               38,
               33,
               "agotado",
-              null,
               null
             ],
             [
@@ -503,7 +461,6 @@
               38,
               36,
               "agotado",
-              null,
               null
             ],
             [
@@ -514,7 +471,6 @@
               45,
               40,
               "venta",
-              null,
               null
             ],
             [
@@ -525,7 +481,6 @@
               38,
               36,
               "agotado",
-              null,
               null
             ],
             [
@@ -536,7 +491,6 @@
               38,
               36,
               "agotado",
-              null,
               null
             ]
           ]
