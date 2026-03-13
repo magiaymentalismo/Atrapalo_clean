@@ -1,6 +1,37 @@
 {
-  "error": {
-    "message": "The function must be called from an App Check verified app.",
-    "status": "FAILED_PRECONDITION"
+  "result": {
+    "status": 200,
+    "success": true,
+    "data": [
+      {
+        "date": "2026-03-13",
+        "available": 2
+      },
+      {
+        "date": "2026-03-14",
+        "available": 2
+      },
+      {
+        "date": "2026-03-15",
+        "available": 12
+      },
+      {
+        "date": "2026-03-19",
+        "available": 12
+      },
+      {
+        "date": "2026-03-22",
+        "available": 12
+      },
+      {
+        "date": "2026-03-26",
+        "available": 12
+      },
+      {
+        "date": "2026-03-29",
+        "available": 12
+      }
+    ],
+    "error": null
   }
 }
