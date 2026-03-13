@@ -363,7 +363,7 @@ def build_payload(
             ) if has_abono else None
 
             # Kultur: buscar por fecha (sin hora)
-            k_disponibles = kultur_idx.get(f["fecha_iso"])  # int o None
+            k_disponibles = (kultur_idx.get(f["fecha_iso"]) or {}).get("disponibles") if isinstance(kultur_idx.get(f["fecha_iso"]), dict) else kultur_idx.get(f["fecha_iso"]) or next((v.get("disponibles") if isinstance(v, dict) else v for k, v in kultur_idx.items() if k.startswith(f["fecha_iso"])), None)  # int o None
             f["kultur_disponibles"] = k_disponibles
 
             ses_dt = datetime.strptime(
