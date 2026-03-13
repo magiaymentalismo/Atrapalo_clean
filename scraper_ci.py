@@ -311,30 +311,19 @@ def parse_kultur_response(data: dict) -> dict[str, int]:
 
 
 def fetch_and_write_kultur_cache(sala: str) -> dict:
-    DOCS_DIR.mkdir(exist_ok=True)
-    print(f"\n  Kultur WebKit [{sala}]...")
-
-    raw = fetch_kultur_webkit(sala)
-    if not raw:
-        print(f"  ❌ Sin respuesta Kultur para {sala}")
+    """En CI: solo leer cache existente."""
+    cache_path = DOCS_DIR / f"kultur_cache_{sala}.json"
+    if not cache_path.exists():
+        print(f"  Sin cache Kultur para {sala}")
         return {}
-
-    # Guardar raw
-    (DOCS_DIR / f"kultur_raw_{sala}.json").write_text(
-        json.dumps(raw, ensure_ascii=False, indent=2), "utf-8"
-    )
-
-    # idx por FECHA (sin hora, la API no la da)
-    idx = parse_kultur_response(raw)
-    print(f"  → {len(idx)} fechas Kultur: {list(idx.keys())[:5]}")
-
-    data = {"idx": idx}
-    (DOCS_DIR / f"kultur_cache_{sala}.json").write_text(
-        json.dumps(data, ensure_ascii=False, indent=2), "utf-8"
-    )
-    print(f"  ✔ kultur_cache_{sala}.json ({len(idx)} fechas)")
-    return data
-
+    try:
+        data = json.loads(cache_path.read_text("utf-8"))
+        idx = data.get("idx", {})
+        print(f"  Kultur {sala}: {len(idx)} fechas en cache")
+        return data
+    except Exception as e:
+        print(f"  Error cache Kultur {sala}: {e}")
+        return {}
 
 def load_kultur_cache(sala: str) -> dict:
     p = DOCS_DIR / f"kultur_cache_{sala}.json"
