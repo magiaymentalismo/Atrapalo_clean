@@ -98,7 +98,7 @@ async def fetch_kultur_data(sala: str) -> dict:
             fecha = key.split("|")[0]
             try:
                 d = datetime.strptime(fecha, "%Y-%m-%d").replace(tzinfo=TZ)
-                if -3600 < (d - now).total_seconds() <= 172800:
+                if -86400 < (d - now).total_seconds() <= 172800:
                     dates_to_check.append(fecha)
             except Exception:
                 pass
