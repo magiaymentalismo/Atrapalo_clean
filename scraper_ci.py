@@ -362,9 +362,27 @@ def build_payload(
                 "venta" if (f["fecha_iso"], f["hora"]) in abono_shows else "agotado"
             ) if has_abono else None
 
-            # Kultur: buscar por fecha (sin hora)
-            k_disponibles = (kultur_idx.get(f["fecha_iso"]) or {}).get("disponibles") if isinstance(kultur_idx.get(f["fecha_iso"]), dict) else kultur_idx.get(f["fecha_iso"]) or next((v.get("disponibles") if isinstance(v, dict) else v for k, v in kultur_idx.items() if k.startswith(f["fecha_iso"])), None)  # int o None
-            f["kultur_disponibles"] = k_disponibles
+            # Kultur: buscar por fecha+hora exacta, o por fecha como prefijo
+            def _find_kultur(idx, fecha_iso, hora):
+                # 1. clave exacta con hora
+                exact = idx.get(f"{fecha_iso}|{hora}")
+                if exact is not None:
+                    return exact if isinstance(exact, dict) else {"disponibles": exact, "capacidad": None, "vendidas": None}
+                # 2. cualquier clave que empiece por la fecha
+                for k, v in idx.items():
+                    if k.startswith(fecha_iso):
+                        return v if isinstance(v, dict) else {"disponibles": v, "capacidad": None, "vendidas": None}
+                return None
+
+            k_data = _find_kultur(kultur_idx, f["fecha_iso"], f["hora"])
+            if isinstance(k_data, dict):
+                f["kultur_disponibles"] = k_data.get("disponibles")
+                f["kultur_vendidas"]    = k_data.get("vendidas")
+                f["kultur_capacidad"]   = k_data.get("capacidad")
+            else:
+                f["kultur_disponibles"] = None
+                f["kultur_vendidas"]    = None
+                f["kultur_capacidad"]   = None
 
             ses_dt = datetime.strptime(
                 f"{f['fecha_iso']} {f['hora']}", "%Y-%m-%d %H:%M"
@@ -373,7 +391,7 @@ def build_payload(
             if ses_dt >= now:
                 proximas.append(f)
 
-        # 8 columnas: Fecha, Hora, VendidasDT, FechaISO, CapacidadDT, StockDT, Abono, KulturDisponibles
+        # 10 columnas
         rows = [
             [
                 f["fecha_label"],
@@ -384,6 +402,8 @@ def build_payload(
                 f["stock"],
                 f["abono_estado"],
                 f.get("kultur_disponibles"),
+                f.get("kultur_vendidas"),
+                f.get("kultur_capacidad"),
             ]
             for f in proximas
         ]
@@ -391,6 +411,7 @@ def build_payload(
         headers = [
             "Fecha", "Hora", "Vendidas", "FechaISO",
             "Capacidad", "Stock", "Abono", "KulturDisponibles",
+            "KulturVendidas", "KulturCapacidad",
         ]
 
         out[sala] = {

@@ -333,6 +333,19 @@
       return "gray";
     }
 
+    function kulturChipClassFull(vend, cap) {
+      if (vend === null || cap === null || cap === 0) return "gray";
+      const libre = cap - vend;
+      if (libre <= 0) return "sold";
+      if (libre <= 3) return "gold";
+      return "green";
+    }
+    function kulturValueFull(vend, cap) {
+      if (vend === null || cap === null) return "—";
+      const libre = cap - vend;
+      if (libre <= 0) return "Agotado";
+      return `${vend}/${cap}`;
+    }
     function kulturChipClass(disp) {
       if (disp === null || disp === undefined) return "gray";
       const d = Number(disp);
@@ -366,6 +379,8 @@
         stock: fmtInt(r[5]),
         abono: r[6],
         kulturDisp: (r.length > 7 ? fmtInt(r[7]) : null),
+        kulturVend: (r.length > 8 ? fmtInt(r[8]) : null),
+        kulturCap:  (r.length > 9 ? fmtInt(r[9]) : null),
       }));
 
       rows.sort((a, b) => (a.fecha_iso + a.hora).localeCompare(b.fecha_iso + b.hora));
@@ -392,9 +407,13 @@
           ? `${r.vendidas ?? "—"}`
           : `${r.vendidas ?? "—"}/${r.cap ?? "—"} · quedan ${r.stock ?? "—"}`;
 
-        // Kultur
-        const kCls = kulturChipClass(r.kulturDisp);
-        const kVal = kulturValue(r.kulturDisp);
+        // Kultur: si tenemos vendidas+cap (getSessions) usarlas, si no usar disponibles
+        const kCls = (r.kulturVend !== null && r.kulturCap !== null)
+          ? kulturChipClassFull(r.kulturVend, r.kulturCap)
+          : kulturChipClass(r.kulturDisp);
+        const kVal = (r.kulturVend !== null && r.kulturCap !== null)
+          ? kulturValueFull(r.kulturVend, r.kulturCap)
+          : kulturValue(r.kulturDisp);
 
         // Abono
         let abonoHTML = "";

@@ -1,19 +1,21 @@
 #!/usr/bin/env python3
 """
-Fetch Kultur calendar usando Playwright WebKit (Safari engine).
-WebKit genera un X-Firebase-AppCheck válido, igual que Safari desktop.
+Fetcher de Kultur via WebKit (Safari engine) — macOS only.
+Llama a getCalendar para todas las fechas, y getSessions para las que
+estan dentro de las proximas 48hs.
+Guarda: docs/kultur_cache_{sala}.json
 """
-from __future__ import annotations
-
+import asyncio
 import json
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
+
+from playwright.async_api import async_playwright
 
 TZ = ZoneInfo("Europe/Madrid")
 DOCS_DIR = Path("docs")
 
-# eventId por sala — sacarlos de la URL o de las DevTools
 KULTUR_EVENTS = {
     "Escondido": "YaWZRG4MCxo1CHvr",
     "Miedo":     "BW8A51aMmrnmTQzH",
@@ -24,208 +26,156 @@ KULTUR_PAGES = {
     "Miedo":     "https://appkultur.com/madrid/miedo-mentalismo-y-espiritismo-con-ariel-hamui",
 }
 
-CALENDAR_URL = "https://europe-west6-kultur-platform.cloudfunctions.net/events_api_v2-getCalendar"
+SESSIONS_ENDPOINT = "https://europe-west6-kultur-platform.cloudfunctions.net/events_api_v2-getSessions"
+CALENDAR_ENDPOINT = "https://europe-west6-kultur-platform.cloudfunctions.net/events_api_v2-getCalendar"
 
 
-def fetch_kultur_webkit(sala: str) -> dict:
-    """
-    Abre la página con WebKit, intercepta la llamada a getCalendar,
-    y devuelve el JSON de respuesta.
-    También intenta capturar la respuesta si ya fue hecha antes de que
-    podamos interceptarla.
-    """
-    from playwright.sync_api import sync_playwright
-
-    now = datetime.now(TZ)
+async def fetch_kultur_data(sala: str) -> dict:
     event_id = KULTUR_EVENTS[sala]
-    page_url = KULTUR_PAGES[sala]
-
-    result: dict = {}
-    captured: list[dict] = []
-
-    with sync_playwright() as p:
-        # WEBKIT = Safari engine, genera App Check token válido
-        browser = p.webkit.launch(headless=True)
-        ctx = browser.new_context()
-        page = ctx.new_page()
-
-        def on_response(resp):
-            if "getCalendar" in resp.url:
-                try:
-                    data = resp.json()
-                    captured.append(data)
-                    print(f"  ✓ getCalendar capturado: {resp.status}")
-                except Exception as e:
-                    print(f"  ⚠ getCalendar error al parsear: {e}")
-
-        page.on("response", on_response)
-
-        print(f"  → Abriendo {page_url} con WebKit...")
-        page.goto(page_url, wait_until="domcontentloaded")
-        page.wait_for_timeout(8000)
-        try:
-            page.wait_for_load_state("networkidle", timeout=8000)
-        except Exception:
-            pass
-
-        # Si no capturamos nada aún, intentar hacer la llamada manualmente
-        # desde el contexto del navegador (ya tiene el App Check token)
-        if not captured:
-            print("  → No capturado aún, intentando fetch manual desde el browser...")
-            from_date = now.strftime("%Y-%m-%d")
-            to_date = (now + timedelta(days=60)).strftime("%Y-%m-%d")
-
-            try:
-                js_result = page.evaluate(f"""
-                    async () => {{
-                        const resp = await fetch(
-                            "https://europe-west6-kultur-platform.cloudfunctions.net/events_api_v2-getCalendar",
-                            {{
-                                method: "POST",
-                                headers: {{
-                                    "Content-Type": "application/json",
-                                    "Accept": "*/*",
-                                }},
-                                body: JSON.stringify({{
-                                    data: {{
-                                        eventId: "{event_id}",
-                                        from: "{from_date}",
-                                        to: "{to_date}"
-                                    }}
-                                }})
-                            }}
-                        );
-                        return await resp.json();
-                    }}
-                """)
-                if js_result:
-                    captured.append(js_result)
-                    print(f"  ✓ getCalendar via fetch manual: OK")
-            except Exception as e:
-                print(f"  ⚠ fetch manual falló: {e}")
-
-        browser.close()
-
-    if captured:
-        result = captured[0]
-
-    return result
-
-
-def parse_kultur_response(data: dict) -> dict[str, dict]:
-    """
-    Convierte la respuesta de getCalendar a idx:
-    'YYYY-MM-DD|HH:MM' -> {disponibles, capacidad, vendidas}
-    
-    La respuesta tiene: result.data = [{date, available, time?, capacity?}, ...]
-    """
-    idx: dict[str, dict] = {}
-
-    # Navegar la estructura
-    items = None
-    if isinstance(data, dict):
-        # {"result": {"status": 200, "data": [...]}}
-        result = data.get("result", data)
-        if isinstance(result, dict):
-            items = result.get("data", result.get("sessions", result.get("items")))
-        if items is None:
-            # {"data": [...]}
-            items = data.get("data")
-
-    if not isinstance(items, list):
-        print(f"  ⚠ No se encontró lista de sesiones en: {list(data.keys()) if isinstance(data, dict) else type(data)}")
-        return idx
-
-    print(f"  → {len(items)} sesiones encontradas")
-
-    for item in items:
-        if not isinstance(item, dict):
-            continue
-
-        date = item.get("date") or item.get("fecha") or item.get("day")
-        time = item.get("time") or item.get("hora") or item.get("hour") or "00:00"
-        available = item.get("available") or item.get("stock") or item.get("disponibles") or 0
-        capacity = item.get("capacity") or item.get("capacidad") or item.get("total")
-        sold = item.get("sold") or item.get("vendidas") or item.get("booked")
-
-        if not date:
-            continue
-
-        # Normalizar hora
-        time_str = str(time).strip()
-        if ":" not in time_str:
-            time_str = "00:00"
-
-        try:
-            available = int(available)
-        except Exception:
-            available = 0
-
-        try:
-            capacity = int(capacity) if capacity is not None else None
-        except Exception:
-            capacity = None
-
-        try:
-            sold = int(sold) if sold is not None else None
-        except Exception:
-            sold = None
-
-        if sold is None and capacity is not None:
-            sold = max(0, capacity - available)
-
-        key = f"{date}|{time_str}"
-        idx[key] = {
-            "disponibles": available,
-            "capacidad": capacity,
-            "vendidas": sold,
-        }
-        print(f"    {key}: disponibles={available}, cap={capacity}, vendidas={sold}")
-
-    return idx
-
-
-def fetch_and_write_kultur_cache(sala: str) -> dict:
-    """Entry point principal — reemplaza al que usaba Chromium."""
-    DOCS_DIR.mkdir(exist_ok=True)
+    page_url  = KULTUR_PAGES[sala]
+    now       = datetime.now(TZ)
 
     print(f"\n{'='*50}")
     print(f"  Kultur WebKit [{sala}]")
     print(f"{'='*50}")
+    print(f"  -> Abriendo {page_url}...")
 
-    raw = fetch_kultur_webkit(sala)
+    calendar_data  = None
+    appcheck_token = None
 
-    if not raw:
-        print(f"  ❌ No se obtuvo respuesta")
+    async with async_playwright() as p:
+        browser = await p.webkit.launch(headless=True)
+        ctx  = await browser.new_context()
+        page = await ctx.new_page()
+
+        async def on_response(resp):
+            nonlocal calendar_data
+            if CALENDAR_ENDPOINT in resp.url:
+                try:
+                    calendar_data = await resp.json()
+                    print(f"  getCalendar: {resp.status}")
+                except Exception as e:
+                    print(f"  Error getCalendar: {e}")
+
+        async def on_request(req):
+            nonlocal appcheck_token
+            if CALENDAR_ENDPOINT in req.url or SESSIONS_ENDPOINT in req.url:
+                tok = req.headers.get("x-firebase-appcheck")
+                if tok:
+                    appcheck_token = tok
+
+        page.on("response", on_response)
+        page.on("request",  on_request)
+
+        await page.goto(page_url, wait_until="domcontentloaded")
+        await asyncio.sleep(10)
+        await browser.close()
+
+    if not calendar_data:
+        print("  Sin datos de getCalendar")
         return {}
 
-    # Guardar raw para debug
-    raw_path = DOCS_DIR / f"kultur_raw_{sala}.json"
-    raw_path.write_text(json.dumps(raw, ensure_ascii=False, indent=2), "utf-8")
-    print(f"  → Raw guardado en {raw_path}")
+    result = calendar_data.get("result", calendar_data)
+    items  = result.get("data") if isinstance(result, dict) else None
+    if not isinstance(items, list):
+        items = calendar_data.get("data", [])
 
-    idx = parse_kultur_response(raw)
+    idx = {}
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        date  = item.get("date") or item.get("fecha") or item.get("day")
+        avail = item.get("available") if item.get("available") is not None else item.get("stock")
+        if date:
+            key = f"{date}|00:00"
+            idx[key] = {"disponibles": int(avail) if avail is not None else None, "capacidad": None, "vendidas": None}
 
-    data = {"idx": idx}
-    out_path = DOCS_DIR / f"kultur_cache_{sala}.json"
-    out_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), "utf-8")
-    print(f"  ✔ Cache guardado: {out_path} ({len(idx)} sesiones)")
+    print(f"  -> {len(idx)} fechas en calendario")
 
-    return data
+    if appcheck_token:
+        dates_to_check = []
+        for key in list(idx.keys()):
+            fecha = key.split("|")[0]
+            try:
+                d = datetime.strptime(fecha, "%Y-%m-%d").replace(tzinfo=TZ)
+                if -3600 < (d - now).total_seconds() <= 172800:
+                    dates_to_check.append(fecha)
+            except Exception:
+                pass
+
+        if dates_to_check:
+            print(f"  -> getSessions para {len(dates_to_check)} fecha(s) proximas: {dates_to_check}")
+            async with async_playwright() as p2:
+                browser2 = await p2.webkit.launch(headless=True)
+                ctx2  = await browser2.new_context()
+                page2 = await ctx2.new_page()
+
+                for fecha in dates_to_check:
+                    try:
+                        d_local  = datetime.strptime(fecha, "%Y-%m-%d").replace(tzinfo=TZ)
+                        from_utc = (d_local - timedelta(hours=1)).astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
+                        to_utc   = (d_local + timedelta(hours=23)).astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
+                        payload_str = json.dumps({"data": {"eventId": event_id, "from": from_utc, "to": to_utc}})
+
+                        js = f"""
+                        async () => {{
+                            const r = await fetch("{SESSIONS_ENDPOINT}", {{
+                                method: "POST",
+                                headers: {{"Content-Type": "application/json", "x-firebase-appcheck": "{appcheck_token}"}},
+                                body: {json.dumps(payload_str)}
+                            }});
+                            return await r.json();
+                        }}
+                        """
+                        res = await page2.evaluate(js)
+                        if res:
+                            inner    = res.get("result", res)
+                            sessions = inner.get("data", []) if isinstance(inner, dict) else []
+                            for s in sessions:
+                                if not isinstance(s, dict):
+                                    continue
+                                av   = s.get("availability", {})
+                                sold = av.get("sold")
+                                cap  = av.get("capacity")
+                                avail = av.get("available")
+                                start = s.get("startTime", "")
+                                try:
+                                    dt_local = datetime.strptime(start, "%Y-%m-%dT%H:%M:%S.%fZ").replace(tzinfo=timezone.utc).astimezone(TZ)
+                                    hora_key = dt_local.strftime("%H:%M")
+                                except Exception:
+                                    hora_key = "00:00"
+                                old_key = f"{fecha}|00:00"
+                                if old_key in idx:
+                                    del idx[old_key]
+                                idx[f"{fecha}|{hora_key}"] = {"disponibles": avail, "capacidad": cap, "vendidas": sold}
+                                print(f"  getSessions {fecha} {hora_key}: vendidas={sold}, cap={cap}, disponibles={avail}")
+                                break
+                    except Exception as e:
+                        print(f"  getSessions {fecha}: error - {e}")
+
+                await browser2.close()
+        else:
+            print("  -> Sin fechas proximas para getSessions")
+    else:
+        print("  Sin token AppCheck - saltando getSessions")
+
+    return idx
+
+
+def main():
+    DOCS_DIR.mkdir(exist_ok=True)
+    for sala in KULTUR_EVENTS:
+        idx = asyncio.run(fetch_kultur_data(sala))
+        if not idx:
+            print(f"  Sin datos para {sala}")
+            continue
+        cache_path = DOCS_DIR / f"kultur_cache_{sala}.json"
+        cache_path.write_text(json.dumps({"idx": idx}, ensure_ascii=False, indent=2), "utf-8")
+        print(f"\n  Cache guardado: {cache_path} ({len(idx)} sesiones)")
+        print(f"\n  Resumen {sala}:")
+        for k, v in list(idx.items())[:10]:
+            print(f"    {k} -> {v}")
 
 
 if __name__ == "__main__":
-    for sala in KULTUR_EVENTS:
-        try:
-            result = fetch_and_write_kultur_cache(sala)
-            idx = result.get("idx", {})
-            if idx:
-                print(f"\n  Resumen {sala}:")
-                for k, v in sorted(idx.items()):
-                    print(f"    {k} → {v}")
-            else:
-                print(f"\n  ⚠ {sala}: cache vacío")
-        except Exception as e:
-            import traceback
-            print(f"\n❌ Error en {sala}: {e}")
-            traceback.print_exc()
+    main()
