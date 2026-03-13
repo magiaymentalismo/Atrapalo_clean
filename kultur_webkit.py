@@ -70,14 +70,11 @@ async def fetch_kultur_data(sala: str) -> dict:
         page.on("response", on_response)
 
         try:
-            await page.goto(page_url, wait_until="domcontentloaded")
-            try:
-                await page.wait_for_load_state("networkidle", timeout=10000)
-            except Exception:
-                pass
+            await page.goto(page_url, wait_until="domcontentloaded", timeout=30000)
+            await page.wait_for_timeout(3000)
 
             try:
-                await asyncio.wait_for(calendar_event.wait(), timeout=30)
+                await asyncio.wait_for(calendar_event.wait(), timeout=20)
             except Exception:
                 print("  Error esperando getCalendar: timeout esperando respuesta de red")
         except Exception as e:
