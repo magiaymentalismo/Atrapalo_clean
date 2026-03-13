@@ -81,14 +81,17 @@ async def fetch_kultur_data(sala: str) -> dict:
         items = calendar_data.get("data", [])
 
     idx = {}
+    calendar_avail_by_date = {}
     for item in items:
         if not isinstance(item, dict):
             continue
-        date  = item.get("date") or item.get("fecha") or item.get("day")
+        date = item.get("date") or item.get("fecha") or item.get("day")
         avail = item.get("available") if item.get("available") is not None else item.get("stock")
+        avail_int = int(avail) if avail is not None else None
         if date:
+            calendar_avail_by_date[date] = avail_int
             key = f"{date}|00:00"
-            idx[key] = {"disponibles": int(avail) if avail is not None else None, "capacidad": None, "vendidas": None}
+            idx[key] = {"disponibles": avail_int, "capacidad": None, "vendidas": None}
 
     print(f"  -> {len(idx)} fechas en calendario")
 
@@ -112,44 +115,77 @@ async def fetch_kultur_data(sala: str) -> dict:
 
                 for fecha in dates_to_check:
                     try:
-                        d_local  = datetime.strptime(fecha, "%Y-%m-%d").replace(tzinfo=TZ)
-                        from_utc = (d_local - timedelta(hours=1)).astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
-                        to_utc   = (d_local + timedelta(hours=23)).astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
-                        payload_str = json.dumps({"data": {"eventId": event_id, "from": from_utc, "to": to_utc}})
+                        d_local = datetime.strptime(fecha, "%Y-%m-%d").replace(tzinfo=TZ)
+                        day_start_local = d_local.replace(hour=0, minute=0, second=0, microsecond=0)
+                        day_end_local = day_start_local + timedelta(days=1)
+                        from_utc = day_start_local.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
+                        to_utc = day_end_local.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
+                        payload = {"data": {"eventId": event_id, "from": from_utc, "to": to_utc}}
 
                         js = f"""
                         async () => {{
+                            const payload = {json.dumps(payload)};
                             const r = await fetch("{SESSIONS_ENDPOINT}", {{
                                 method: "POST",
                                 headers: {{"Content-Type": "application/json", "x-firebase-appcheck": "{appcheck_token}"}},
-                                body: {json.dumps(payload_str)}
+                                body: JSON.stringify(payload)
                             }});
                             return await r.json();
                         }}
                         """
                         res = await page2.evaluate(js)
                         if res:
-                            inner    = res.get("result", res)
+                            inner = res.get("result", res)
                             sessions = inner.get("data", []) if isinstance(inner, dict) else []
+                            calendar_available = calendar_avail_by_date.get(fecha)
+                            valid_sessions = []
+
                             for s in sessions:
                                 if not isinstance(s, dict):
                                     continue
-                                av   = s.get("availability", {})
+
+                                av = s.get("availability") or {}
                                 sold = av.get("sold")
-                                cap  = av.get("capacity")
+                                cap = av.get("capacity")
                                 avail = av.get("available")
                                 start = s.get("startTime", "")
+
                                 try:
                                     dt_local = datetime.strptime(start, "%Y-%m-%dT%H:%M:%S.%fZ").replace(tzinfo=timezone.utc).astimezone(TZ)
                                     hora_key = dt_local.strftime("%H:%M")
                                 except Exception:
                                     hora_key = "00:00"
+
+                                suspicious_zero = (
+                                    (calendar_available is not None and calendar_available > 0)
+                                    and (avail in (0, None))
+                                    and (cap in (0, None))
+                                )
+
+                                if suspicious_zero:
+                                    print(
+                                        f"  getSessions {fecha} {hora_key}: ignorado por inconsistente "
+                                        f"(calendar={calendar_available}, vendidas={sold}, cap={cap}, disponibles={avail})"
+                                    )
+                                    continue
+
+                                valid_sessions.append((hora_key, avail, cap, sold))
+
+                            if valid_sessions:
                                 old_key = f"{fecha}|00:00"
                                 if old_key in idx:
                                     del idx[old_key]
-                                idx[f"{fecha}|{hora_key}"] = {"disponibles": avail, "capacidad": cap, "vendidas": sold}
-                                print(f"  getSessions {fecha} {hora_key}: vendidas={sold}, cap={cap}, disponibles={avail}")
-                                break
+
+                                for hora_key, avail, cap, sold in valid_sessions:
+                                    final_avail = avail if avail is not None else calendar_available
+                                    idx[f"{fecha}|{hora_key}"] = {
+                                        "disponibles": final_avail,
+                                        "capacidad": cap,
+                                        "vendidas": sold,
+                                    }
+                                    print(f"  getSessions {fecha} {hora_key}: vendidas={sold}, cap={cap}, disponibles={final_avail}")
+                            else:
+                                print(f"  getSessions {fecha}: sin sesiones validas; se conserva getCalendar={calendar_available}")
                     except Exception as e:
                         print(f"  getSessions {fecha}: error - {e}")
 
