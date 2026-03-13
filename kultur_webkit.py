@@ -40,8 +40,9 @@ async def fetch_kultur_data(sala: str) -> dict:
     print(f"{'='*50}")
     print(f"  -> Abriendo {page_url}...")
 
-    calendar_data  = None
+    calendar_data = None
     appcheck_token = None
+    calendar_event = asyncio.Event()
 
     async with async_playwright() as p:
         browser = await p.webkit.launch(headless=True)
@@ -52,10 +53,11 @@ async def fetch_kultur_data(sala: str) -> dict:
             nonlocal calendar_data
             if CALENDAR_ENDPOINT in resp.url:
                 try:
-                    calendar_data = await resp.json()
                     print(f"  getCalendar: {resp.status}")
+                    calendar_data = await resp.json()
+                    calendar_event.set()
                 except Exception as e:
-                    print(f"  Error getCalendar: {e}")
+                    print(f"  Error parseando getCalendar: {e}")
 
         async def on_request(req):
             nonlocal appcheck_token
@@ -64,11 +66,24 @@ async def fetch_kultur_data(sala: str) -> dict:
                 if tok:
                     appcheck_token = tok
 
+        page.on("request", on_request)
         page.on("response", on_response)
-        page.on("request",  on_request)
 
-        await page.goto(page_url, wait_until="domcontentloaded")
-        await asyncio.sleep(10)
+        try:
+            await page.goto(page_url, wait_until="domcontentloaded")
+            try:
+                await page.wait_for_load_state("networkidle", timeout=10000)
+            except Exception:
+                pass
+
+            try:
+                await asyncio.wait_for(calendar_event.wait(), timeout=30)
+            except Exception:
+                print("  Error esperando getCalendar: timeout esperando respuesta de red")
+        except Exception as e:
+            print(f"  Error cargando pagina: {e}")
+
+        await asyncio.sleep(2)
         await browser.close()
 
     if not calendar_data:
