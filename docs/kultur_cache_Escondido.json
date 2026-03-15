@@ -20,15 +20,10 @@
       "capacidad": null,
       "vendidas": null
     },
-    "2026-03-14|17:00": {
-      "disponibles": 4,
-      "capacidad": 10,
-      "vendidas": 6
-    },
     "2026-03-15|18:30": {
-      "disponibles": 12,
+      "disponibles": 8,
       "capacidad": 12,
-      "vendidas": 0
+      "vendidas": 4
     }
   }
 }
