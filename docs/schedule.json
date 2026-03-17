@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-17T08:02:32.250975+01:00",
+  "generated_at": "2026-03-17T09:06:21.440475+01:00",
   "eventos": {
     "Disfruta": {
       "table": {
@@ -551,7 +551,7 @@
             "2026-03-21",
             38,
             33,
-            "agotado",
+            "venta",
             null,
             null,
             null
@@ -563,7 +563,7 @@
             "2026-03-22",
             38,
             36,
-            "agotado",
+            "venta",
             12,
             null,
             null
@@ -587,7 +587,7 @@
             "2026-03-28",
             38,
             36,
-            "agotado",
+            "venta",
             null,
             null,
             null
@@ -599,7 +599,7 @@
             "2026-03-29",
             38,
             30,
-            "agotado",
+            "venta",
             12,
             null,
             null
@@ -652,7 +652,7 @@
               "2026-03-21",
               38,
               33,
-              "agotado",
+              "venta",
               null,
               null,
               null
@@ -664,7 +664,7 @@
               "2026-03-22",
               38,
               36,
-              "agotado",
+              "venta",
               12,
               null,
               null
@@ -688,7 +688,7 @@
               "2026-03-28",
               38,
               36,
-              "agotado",
+              "venta",
               null,
               null,
               null
@@ -700,7 +700,7 @@
               "2026-03-29",
               38,
               30,
-              "agotado",
+              "venta",
               12,
               null,
               null
