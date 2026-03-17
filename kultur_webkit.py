@@ -53,9 +53,21 @@ async def fetch_kultur_data(sala: str) -> dict:
             nonlocal calendar_data
             if CALENDAR_ENDPOINT in resp.url:
                 try:
-                    print(f"  getCalendar: {resp.status}")
-                    calendar_data = await resp.json()
-                    calendar_event.set()
+                    status = resp.status
+                    print(f"  getCalendar: {status}")
+                    data = await resp.json()
+
+                    result = data.get("result", data) if isinstance(data, dict) else {}
+                    items = result.get("data") if isinstance(result, dict) else None
+
+                    if status == 200 and isinstance(items, list):
+                        calendar_data = data
+                        calendar_event.set()
+                    else:
+                        print(
+                            f"  getCalendar ignorado: status={status}, "
+                            f"items={len(items) if isinstance(items, list) else 'None'}"
+                        )
                 except Exception as e:
                     print(f"  Error parseando getCalendar: {e}")
 
@@ -69,16 +81,36 @@ async def fetch_kultur_data(sala: str) -> dict:
         page.on("request", on_request)
         page.on("response", on_response)
 
-        try:
-            await page.goto(page_url, wait_until="domcontentloaded", timeout=30000)
-            await page.wait_for_timeout(3000)
-
+        for attempt in (1, 2):
             try:
-                await asyncio.wait_for(calendar_event.wait(), timeout=20)
-            except Exception:
-                print("  Error esperando getCalendar: timeout esperando respuesta de red")
-        except Exception as e:
-            print(f"  Error cargando pagina: {e}")
+                if attempt == 1:
+                    print("  -> Intento 1 cargando pagina")
+                    await page.goto(page_url, wait_until="domcontentloaded", timeout=30000)
+                else:
+                    print("  -> Intento 2 recargando pagina")
+                    calendar_event.clear()
+                    await page.reload(wait_until="domcontentloaded", timeout=30000)
+
+                await page.wait_for_timeout(8000)
+
+                try:
+                    await asyncio.wait_for(calendar_event.wait(), timeout=15)
+                except Exception:
+                    print(f"  Error esperando getCalendar en intento {attempt}")
+
+                if calendar_data:
+                    break
+
+                try:
+                    await page.mouse.wheel(0, 800)
+                    await page.wait_for_timeout(1500)
+                except Exception:
+                    pass
+            except Exception as e:
+                print(f"  Error cargando pagina en intento {attempt}: {e}")
+
+            if calendar_data:
+                break
 
         await asyncio.sleep(2)
         await browser.close()
