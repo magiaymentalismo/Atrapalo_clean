@@ -17,6 +17,7 @@ EVENTS = {
     "Disfruta": "https://www.dinaticket.com/es/provider/10402/event/4905281",
     "Miedo": "https://www.dinaticket.com/es/provider/10402/event/4915778",
     "Escondido": "https://www.dinaticket.com/es/provider/20073/event/4930233",
+    "Escondi2": "https://www.dinaticket.com/es/provider/20864/event/4943466",
 }
 
 # AbonoTeatro por sala
