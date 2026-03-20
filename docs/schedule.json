@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-20T10:04:59.394596+01:00",
+  "generated_at": "2026-03-20T10:15:20.968677+01:00",
   "eventos": {
     "Disfruta": {
       "table": {
@@ -630,6 +630,114 @@
               30,
               "venta",
               12,
+              null,
+              null
+            ]
+          ]
+        }
+      }
+    },
+    "Escondi2": {
+      "table": {
+        "headers": [
+          "Fecha",
+          "Hora",
+          "Vendidas",
+          "FechaISO",
+          "Capacidad",
+          "Stock",
+          "Abono",
+          "KulturDisponibles",
+          "KulturVendidas",
+          "KulturCapacidad"
+        ],
+        "rows": [
+          [
+            "02 Apr 2026",
+            "20:00",
+            0,
+            "2026-04-02",
+            60,
+            60,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "04 Apr 2026",
+            "17:00",
+            0,
+            "2026-04-04",
+            33,
+            33,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "05 Apr 2026",
+            "18:30",
+            0,
+            "2026-04-05",
+            25,
+            25,
+            null,
+            null,
+            null,
+            null
+          ]
+        ]
+      },
+      "proximas": {
+        "table": {
+          "headers": [
+            "Fecha",
+            "Hora",
+            "Vendidas",
+            "FechaISO",
+            "Capacidad",
+            "Stock",
+            "Abono",
+            "KulturDisponibles",
+            "KulturVendidas",
+            "KulturCapacidad"
+          ],
+          "rows": [
+            [
+              "02 Apr 2026",
+              "20:00",
+              0,
+              "2026-04-02",
+              60,
+              60,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              "04 Apr 2026",
+              "17:00",
+              0,
+              "2026-04-04",
+              33,
+              33,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              "05 Apr 2026",
+              "18:30",
+              0,
+              "2026-04-05",
+              25,
+              25,
+              null,
+              null,
               null,
               null
             ]
