@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-25T18:33:52.231269+01:00",
+  "generated_at": "2026-03-25T19:54:13.985613+01:00",
   "eventos": {
     "Disfruta": {
       "table": {
@@ -16,18 +16,6 @@
           "KulturCapacidad"
         ],
         "rows": [
-          [
-            "25 Mar 2026",
-            "20:00",
-            4,
-            "2026-03-25",
-            48,
-            44,
-            "agotado",
-            null,
-            null,
-            null
-          ],
           [
             "01 Apr 2026",
             "20:00",
@@ -129,18 +117,6 @@
             "KulturCapacidad"
           ],
           "rows": [
-            [
-              "25 Mar 2026",
-              "20:00",
-              4,
-              "2026-03-25",
-              48,
-              44,
-              "agotado",
-              null,
-              null,
-              null
-            ],
             [
               "01 Apr 2026",
               "20:00",
