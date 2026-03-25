@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-25T17:14:17.097811+01:00",
+  "generated_at": "2026-03-25T18:13:23.043349+01:00",
   "eventos": {
     "Disfruta": {
       "table": {
@@ -23,7 +23,7 @@
             "2026-03-25",
             48,
             44,
-            "venta",
+            "agotado",
             null,
             null,
             null
@@ -136,7 +136,7 @@
               "2026-03-25",
               48,
               44,
-              "venta",
+              "agotado",
               null,
               null,
               null
