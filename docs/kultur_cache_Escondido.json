@@ -1,14 +1,14 @@
 {
   "idx": {
     "2026-03-28|17:00": {
-      "disponibles": 8,
+      "disponibles": 5,
       "capacidad": 10,
-      "vendidas": 2
+      "vendidas": 5
     },
     "2026-03-29|18:30": {
-      "disponibles": 12,
+      "disponibles": 10,
       "capacidad": 12,
-      "vendidas": 0
+      "vendidas": 2
     }
   }
 }
