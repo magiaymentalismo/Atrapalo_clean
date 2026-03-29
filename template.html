@@ -425,19 +425,20 @@
             <div class="date">${r.fecha_label}<span>(${dayName(r.fecha_iso)})</span></div>
           </div>
           <div class="time">${r.hora} h</div>
-          <div class="chips two">
+      <div class="chips ${(r.kulturDisp !== null || r.kulturVend !== null) ? 'two' : ''}">
             <div class="chip ${dinaCls}">
               <div class="chip-left">
                 <div class="chip-title">Dina</div>
                 <div class="chip-value">${dinaValue}</div>
               </div>
             </div>
+            ${(r.kulturDisp !== null || r.kulturVend !== null) ? `
             <div class="chip ${kCls}">
               <div class="chip-left">
                 <div class="chip-title">Kultur</div>
                 <div class="chip-value">${kVal}</div>
               </div>
-            </div>
+            </div>` : ''}
           </div>
           ${abonoHTML}
         `;
