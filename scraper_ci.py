@@ -4,35 +4,25 @@ from __future__ import annotations
 import json
 import re
 import shutil
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
 import requests
 from bs4 import BeautifulSoup
 
-# ===================== CONFIG ===================== #
-
 EVENTS = {
     "Disfruta": "https://www.dinaticket.com/es/provider/10402/event/4905281",
     "Miedo":    "https://www.dinaticket.com/es/provider/10402/event/4915778",
-    "Escondido":"https://www.dinaticket.com/es/provider/20073/event/4930233",
     "Escondi2": "https://www.dinaticket.com/es/provider/20864/event/4943466",
 }
 
 ABONO_URLS = {
-    "Escondido": "https://compras.abonoteatro.com/?pagename=espectaculo&eventid=90857",
-    "Disfruta":  "https://compras.abonoteatro.com/?pagename=espectaculo&eventid=57914",
+    "Disfruta": "https://compras.abonoteatro.com/?pagename=espectaculo&eventid=57914",
 }
 
 KULTUR_EVENTS = {
-    "Escondido": "YaWZRG4MCxo1CHvr",
-    "Miedo":     "BW8A51aMmrnmTQzH",
-}
-
-KULTUR_PAGES = {
-    "Escondido": "https://appkultur.com/madrid/el-juego-de-la-mente-magia-mental-con-ariel-hamui",
-    "Miedo":     "https://appkultur.com/madrid/miedo-mentalismo-y-espiritismo-con-ariel-hamui",
+    "Miedo": "BW8A51aMmrnmTQzH",
 }
 
 UA = {
@@ -51,8 +41,6 @@ SW_PATH        = Path("sw.js")
 DOCS_DIR       = Path("docs")
 
 
-# ===================== HELPERS ===================== #
-
 def normalize_hhmm(h: str | None) -> str:
     if not h:
         return "00:00"
@@ -65,8 +53,6 @@ def normalize_hhmm(h: str | None) -> str:
         return s
     return f"{int(m.group(1)):02d}:{int(m.group(2) or '00'):02d}"
 
-
-# ===================== HTML OUTPUT ===================== #
 
 def write_html(payload: dict) -> None:
     html_template = TEMPLATE_PATH.read_text("utf-8")
@@ -91,8 +77,6 @@ def write_schedule_json(payload: dict) -> None:
     print("✔ Generado docs/schedule.json")
 
 
-# ===================== DINATICKET ===================== #
-
 def fetch_functions_dinaticket(url: str) -> list[dict]:
     r = requests.get(url, headers=UA, timeout=20)
     r.raise_for_status()
@@ -116,19 +100,14 @@ def fetch_functions_dinaticket(url: str) -> list[dict]:
         mes_num = mes_map.get(mes_txt)
         if not mes_num:
             continue
-
         now  = datetime.now(TZ)
         anio = now.year
-        # Fix año: si el mes ya pasó, es del año siguiente
         if int(mes_num) < now.month:
             anio += 1
-
         fecha_iso   = f"{anio}-{mes_num}-{dia.text.strip().zfill(2)}"
         fecha_label = datetime.strptime(fecha_iso, "%Y-%m-%d").strftime("%d %b %Y")
         hora_span   = session.find("span", class_="session-card__time-session")
         hora        = normalize_hhmm(hora_span.text if hora_span else "")
-
-        # FIX: find_all para sumar todas las zonas/tarifas
         quotas = session.find_all("div", class_="js-quota-row")
         if not quotas:
             cap, stock, vendidas = None, None, None
@@ -136,7 +115,6 @@ def fetch_functions_dinaticket(url: str) -> list[dict]:
             cap      = sum(int(q.get("data-quota-total", 0)) for q in quotas)
             stock    = sum(int(q.get("data-stock", 0))        for q in quotas)
             vendidas = max(0, cap - stock)
-
         out.append({
             "fecha_label": fecha_label,
             "fecha_iso":   fecha_iso,
@@ -148,15 +126,12 @@ def fetch_functions_dinaticket(url: str) -> list[dict]:
     return out
 
 
-# ===================== ABONO ===================== #
-
 def fetch_abonoteatro_shows(url: str) -> set[tuple[str, str]]:
     r = requests.get(url, headers=UA, timeout=20)
     r.raise_for_status()
     soup = BeautifulSoup(r.text, "html.parser")
     out: set[tuple[str, str]] = set()
 
-    # Formato antiguo
     for ses in soup.find_all("div", class_="bsesion"):
         if not ses.find("a", class_="buyBtn"):
             continue
@@ -188,7 +163,6 @@ def fetch_abonoteatro_shows(url: str) -> set[tuple[str, str]]:
     if out:
         return out
 
-    # Formato nuevo
     mes_map = {
         "enero":"01","febrero":"02","marzo":"03","abril":"04",
         "mayo":"05","junio":"06","julio":"07","agosto":"08",
@@ -222,121 +196,16 @@ def fetch_abonoteatro_shows(url: str) -> set[tuple[str, str]]:
     return out
 
 
-# ===================== KULTUR ===================== #
-
-def fetch_kultur_webkit(sala: str) -> dict:
-    from playwright.sync_api import sync_playwright
-
-    now        = datetime.now(TZ)
-    event_id   = KULTUR_EVENTS[sala]
-    page_url   = KULTUR_PAGES[sala]
-    captured: list[dict] = []
-
-    with sync_playwright() as p:
-        browser = p.webkit.launch(headless=True)
-        ctx  = browser.new_context()
-        page = ctx.new_page()
-
-        def on_response(resp):
-            if "getCalendar" in resp.url:
-                try:
-                    captured.append(resp.json())
-                    print(f"  ✓ getCalendar {resp.status}")
-                except Exception as e:
-                    print(f"  ⚠ getCalendar parse error: {e}")
-
-        page.on("response", on_response)
-        page.goto(page_url, wait_until="domcontentloaded")
-        page.wait_for_timeout(8000)
-        try:
-            page.wait_for_load_state("networkidle", timeout=8000)
-        except Exception:
-            pass
-
-        if not captured:
-            from_date = now.strftime("%Y-%m-%d")
-            to_date   = (now + timedelta(days=60)).strftime("%Y-%m-%d")
-            try:
-                js_result = page.evaluate(f"""
-                    async () => {{
-                        const resp = await fetch(
-                            "https://europe-west6-kultur-platform.cloudfunctions.net/events_api_v2-getCalendar",
-                            {{
-                                method: "POST",
-                                headers: {{"Content-Type": "application/json"}},
-                                body: JSON.stringify({{
-                                    data: {{
-                                        eventId: "{event_id}",
-                                        from: "{from_date}",
-                                        to: "{to_date}"
-                                    }}
-                                }})
-                            }}
-                        );
-                        return await resp.json();
-                    }}
-                """)
-                if js_result:
-                    captured.append(js_result)
-                    print(f"  ✓ getCalendar via fetch manual")
-            except Exception as e:
-                print(f"  ⚠ fetch manual falló: {e}")
-
-        browser.close()
-
-    return captured[0] if captured else {}
-
-
-def parse_kultur_response(data: dict) -> dict[str, int]:
-    idx: dict[str, int] = {}
-    result = data.get("result", data)
-    items  = None
-    if isinstance(result, dict):
-        items = result.get("data") or result.get("sessions") or result.get("items")
-    if items is None:
-        items = data.get("data")
-    if not isinstance(items, list):
-        return idx
-    for item in items:
-        if not isinstance(item, dict):
-            continue
-        date  = item.get("date") or item.get("fecha") or item.get("day")
-        avail = item.get("available") or item.get("stock") or item.get("disponibles") or 0
-        if not date:
-            continue
-        try:
-            idx[str(date)] = int(avail)
-        except Exception:
-            pass
-    return idx
-
-
-def fetch_and_write_kultur_cache(sala: str) -> dict:
-    cache_path = DOCS_DIR / f"kultur_cache_{sala}.json"
-    if not cache_path.exists():
-        print(f"  Sin cache Kultur para {sala}")
-        return {}
-    try:
-        data = json.loads(cache_path.read_text("utf-8"))
-        idx  = data.get("idx", {})
-        print(f"  Kultur {sala}: {len(idx)} fechas en cache")
-        return data
-    except Exception as e:
-        print(f"  Error cache Kultur {sala}: {e}")
-        return {}
-
-
 def load_kultur_cache(sala: str) -> dict:
     p = DOCS_DIR / f"kultur_cache_{sala}.json"
     if not p.exists():
+        print(f"  Sin cache Kultur para {sala}")
         return {}
     try:
         return json.loads(p.read_text("utf-8"))
     except Exception:
         return {}
 
-
-# ===================== BUILD PAYLOAD ===================== #
 
 def build_payload(
     eventos: dict[str, list[dict]],
@@ -356,7 +225,6 @@ def build_payload(
 
         for f in funcs:
             f["hora"] = normalize_hhmm(f.get("hora"))
-
             f["abono_estado"] = (
                 "venta" if (f["fecha_iso"], f["hora"]) in abono_shows else "agotado"
             ) if has_abono else None
@@ -417,8 +285,6 @@ def build_payload(
     return {"generated_at": datetime.now(TZ).isoformat(), "eventos": out}
 
 
-# ===================== MAIN ===================== #
-
 if __name__ == "__main__":
     current: dict[str, list[dict]] = {}
     for sala, url in EVENTS.items():
@@ -433,10 +299,10 @@ if __name__ == "__main__":
         print(f"Abono {sala}: {len(shows)}")
 
     for sala in KULTUR_EVENTS:
-        try:
-            fetch_and_write_kultur_cache(sala)
-        except Exception as e:
-            print(f"⚠️  Kultur {sala}: {e}")
+        cache = load_kultur_cache(sala)
+        idx = cache.get("idx", {})
+        if idx:
+            print(f"Kultur {sala}: {len(idx)} fechas en cache")
 
     payload = build_payload(current, abono_by_sala)
     write_html(payload)
