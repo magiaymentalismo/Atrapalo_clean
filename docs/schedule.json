@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-29T19:58:29.472578+02:00",
+  "generated_at": "2026-03-29T20:42:03.281169+02:00",
   "eventos": {
     "Disfruta": {
       "table": {
@@ -334,40 +334,6 @@
               null
             ]
           ]
-        }
-      }
-    },
-    "Escondido": {
-      "table": {
-        "headers": [
-          "Fecha",
-          "Hora",
-          "Vendidas",
-          "FechaISO",
-          "Capacidad",
-          "Stock",
-          "Abono",
-          "KulturDisponibles",
-          "KulturVendidas",
-          "KulturCapacidad"
-        ],
-        "rows": []
-      },
-      "proximas": {
-        "table": {
-          "headers": [
-            "Fecha",
-            "Hora",
-            "Vendidas",
-            "FechaISO",
-            "Capacidad",
-            "Stock",
-            "Abono",
-            "KulturDisponibles",
-            "KulturVendidas",
-            "KulturCapacidad"
-          ],
-          "rows": []
         }
       }
     },
