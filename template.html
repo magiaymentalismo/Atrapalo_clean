@@ -31,12 +31,13 @@
     html, body { max-width: 100%; overflow-x: hidden; }
 
     body {
-      background-color: #060608;
+      background-color: #08080f;
       background-image:
-        radial-gradient(ellipse at 10% 5%,  rgba(130, 40, 220, 0.55) 0%, transparent 42%),
-        radial-gradient(ellipse at 88% 12%, rgba(0,  110, 255, 0.40) 0%, transparent 38%),
-        radial-gradient(ellipse at 55% 85%, rgba(255, 45, 110, 0.35) 0%, transparent 42%),
-        radial-gradient(ellipse at 15% 90%, rgba(0,  190, 170, 0.28) 0%, transparent 38%);
+        radial-gradient(ellipse 80% 60% at 15%  8%,  rgba(120, 50, 240, 0.75) 0%, transparent 55%),
+        radial-gradient(ellipse 60% 50% at 85% 18%,  rgba(20, 100, 255, 0.65) 0%, transparent 50%),
+        radial-gradient(ellipse 70% 55% at 50% 92%,  rgba(220, 40,  90, 0.60) 0%, transparent 52%),
+        radial-gradient(ellipse 50% 40% at 10% 88%,  rgba(0,  190, 160, 0.45) 0%, transparent 45%),
+        radial-gradient(ellipse 40% 35% at 70% 55%,  rgba(255, 160,  20, 0.25) 0%, transparent 40%);
       background-attachment: fixed;
       margin: 0;
       color: var(--text-primary);
@@ -219,7 +220,7 @@
       gap: 10px;
     }
 
-    .date { font-size: 16px; font-weight: 800; line-height: 1.2; letter-spacing: -0.3px; }
+    .date { font-size: 17px; font-weight: 800; line-height: 1.2; letter-spacing: -0.3px; }
     .date span {
       font-size: 13px;
       font-weight: 600;
@@ -228,12 +229,11 @@
     }
 
     .time {
-      margin-top: 2px;
-      font-size: 30px;
-      font-weight: 900;
-      letter-spacing: -1.5px;
-      line-height: 1;
-      color: rgba(255, 255, 255, 0.92);
+      margin-top: 3px;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.1px;
+      color: var(--text-secondary);
     }
 
     /* ── Chips ── */
@@ -282,15 +282,16 @@
     }
 
     .chip-value {
-      font-size: 15px;
-      font-weight: 800;
-      line-height: 1.2;
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -0.4px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
 
-    .chip-value.big { font-size: 20px; font-weight: 900; letter-spacing: -0.3px; }
+    .chip-value.big { font-size: 22px; font-weight: 900; letter-spacing: -0.5px; }
 
     .chip.green {
       background: rgba(48, 209, 88, 0.14);
