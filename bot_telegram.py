@@ -332,7 +332,7 @@ async def start(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
             InlineKeyboardButton("😱 Miedo", callback_data="evento:Miedo"),
         ],
         [
-            InlineKeyboardButton("🕵️‍♂️ Escondido", callback_data="evento:Escondido"),
+            InlineKeyboardButton("🕵️‍♂️ Escondi2", callback_data="evento:Escondi2"),
             InlineKeyboardButton("🪄 Todos", callback_data="status"),
         ],
         [
