@@ -17,13 +17,11 @@ TZ = ZoneInfo("Europe/Madrid")
 DOCS_DIR = Path("docs")
 
 KULTUR_EVENTS = {
-    "Escondido": "YaWZRG4MCxo1CHvr",
-    "Miedo":     "BW8A51aMmrnmTQzH",
+    "Miedo": "BW8A51aMmrnmTQzH",
 }
 
 KULTUR_PAGES = {
-    "Escondido": "https://appkultur.com/madrid/el-juego-de-la-mente-magia-mental-con-ariel-hamui",
-    "Miedo":     "https://appkultur.com/madrid/miedo-mentalismo-y-espiritismo-con-ariel-hamui",
+    "Miedo": "https://appkultur.com/madrid/miedo-mentalismo-y-espiritismo-con-ariel-hamui",
 }
 
 SESSIONS_ENDPOINT = "https://europe-west6-kultur-platform.cloudfunctions.net/events_api_v2-getSessions"
