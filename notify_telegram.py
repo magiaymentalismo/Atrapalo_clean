@@ -30,6 +30,13 @@ def get_rows(data):
                 }
     return out
 
+def has_valid_data(rows):
+    """Devuelve True solo si al menos una fila tiene vendidas no None."""
+    for r in rows.values():
+        if r["vendidas"] is not None:
+            return True
+    return False
+
 if not CURR.exists():
     sys.exit(0)
 
@@ -37,8 +44,11 @@ curr_data = json.loads(CURR.read_text())
 curr = get_rows(curr_data)
 
 if not PREV.exists():
-    PREV.write_text(CURR.read_text())
-    print("Primera vez: snapshot guardado.")
+    if has_valid_data(curr):
+        PREV.write_text(CURR.read_text())
+        print("Primera vez: snapshot guardado.")
+    else:
+        print("Primera vez: datos inválidos, no se guarda snapshot.")
     sys.exit(0)
 
 prev = get_rows(json.loads(PREV.read_text()))
@@ -74,7 +84,12 @@ for key, c in curr.items():
         cap_str = f"/{c['kCap']}" if c['kCap'] else ""
         changes.append(f"{emoji} *{sala}* — {fecha} {hora}\nKultur: {ckv}{cap_str} ({'+' if diff>0 else ''}{diff})")
 
-PREV.write_text(CURR.read_text())
+# Solo actualizar prev si los datos son válidos
+if has_valid_data(curr):
+    PREV.write_text(CURR.read_text())
+else:
+    print("Datos inválidos en este run — prev no actualizado.")
+    sys.exit(0)
 
 if not changes:
     print("Sin cambios.")
