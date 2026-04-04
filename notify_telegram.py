@@ -42,50 +42,63 @@ if not CURR.exists():
 curr_data = json.loads(CURR.read_text())
 curr = get_rows(curr_data)
 
-if not PREV.exists():
-    if has_valid_data(curr):
-        PREV.write_text(CURR.read_text())
-        print("Primera vez: snapshot guardado.")
-    else:
-        print("Primera vez: datos inválidos, no se guarda snapshot.")
+if not has_valid_data(curr):
+    print("Datos inválidos — saliendo.")
     sys.exit(0)
 
-prev = get_rows(json.loads(PREV.read_text()))
+# Cargar maximos historicos
+if PREV.exists():
+    try:
+        maximos = json.loads(PREV.read_text())
+    except Exception:
+        maximos = {}
+else:
+    maximos = {}
+
 changes = []
 
 for key, c in curr.items():
-    p = prev.get(key)
     sala  = c["sala"]
     fecha = c["fecha"]
     hora  = c["hora"]
 
     try:
         cv = int(c["vendidas"]) if c["vendidas"] is not None else None
-        pv = int(p["vendidas"]) if p and p["vendidas"] is not None else None
     except Exception:
-        cv = pv = None
+        cv = None
 
-    if cv is not None and pv is not None and cv > pv:
-        diff = cv - pv
-        cap_str = f"/{c['cap']}" if c['cap'] else ""
-        changes.append(f"📈 *{sala}* — {fecha} {hora}\nDina: {cv}{cap_str} (+{diff})")
+    pv = maximos.get(key)  # maximo historico conocido
+
+    if cv is not None:
+        if pv is None:
+            # Primera vez que vemos esta funcion
+            maximos[key] = cv
+        elif cv > pv:
+            # Subida real — avisar y actualizar maximo
+            diff = cv - pv
+            cap_str = f"/{c['cap']}" if c['cap'] else ""
+            changes.append(f"📈 *{sala}* — {fecha} {hora}\nDina: {cv}{cap_str} (+{diff})")
+            maximos[key] = cv
+        # Si cv <= pv: no avisar, no actualizar maximo
 
     try:
         ckv = int(c["kVend"]) if c["kVend"] is not None else None
-        pkv = int(p["kVend"]) if p and p["kVend"] is not None else None
     except Exception:
-        ckv = pkv = None
+        ckv = None
 
-    if ckv is not None and pkv is not None and ckv > pkv:
-        diff = ckv - pkv
-        cap_str = f"/{c['kCap']}" if c['kCap'] else ""
-        changes.append(f"📈 *{sala}* — {fecha} {hora}\nKultur: {ckv}{cap_str} (+{diff})")
+    pkv = maximos.get(f"{key}::k")
 
-if has_valid_data(curr):
-    PREV.write_text(CURR.read_text())
-else:
-    print("Datos inválidos — prev no actualizado.")
-    sys.exit(0)
+    if ckv is not None:
+        if pkv is None:
+            maximos[f"{key}::k"] = ckv
+        elif ckv > pkv:
+            diff = ckv - pkv
+            cap_str = f"/{c['kCap']}" if c['kCap'] else ""
+            changes.append(f"📈 *{sala}* — {fecha} {hora}\nKultur: {ckv}{cap_str} (+{diff})")
+            maximos[f"{key}::k"] = ckv
+
+# Guardar maximos actualizados
+PREV.write_text(json.dumps(maximos, ensure_ascii=False, indent=2))
 
 if not changes:
     print("Sin cambios.")
