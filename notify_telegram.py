@@ -31,7 +31,6 @@ def get_rows(data):
     return out
 
 def has_valid_data(rows):
-    """Devuelve True solo si al menos una fila tiene vendidas no None."""
     for r in rows.values():
         if r["vendidas"] is not None:
             return True
@@ -66,11 +65,10 @@ for key, c in curr.items():
     except Exception:
         cv = pv = None
 
-    if cv is not None and pv is not None and cv != pv:
+    if cv is not None and pv is not None and cv > pv:
         diff = cv - pv
-        emoji = "📈" if diff > 0 else "📉"
         cap_str = f"/{c['cap']}" if c['cap'] else ""
-        changes.append(f"{emoji} *{sala}* — {fecha} {hora}\nDina: {cv}{cap_str} ({'+' if diff>0 else ''}{diff})")
+        changes.append(f"📈 *{sala}* — {fecha} {hora}\nDina: {cv}{cap_str} (+{diff})")
 
     try:
         ckv = int(c["kVend"]) if c["kVend"] is not None else None
@@ -78,17 +76,15 @@ for key, c in curr.items():
     except Exception:
         ckv = pkv = None
 
-    if ckv is not None and pkv is not None and ckv != pkv:
+    if ckv is not None and pkv is not None and ckv > pkv:
         diff = ckv - pkv
-        emoji = "📈" if diff > 0 else "📉"
         cap_str = f"/{c['kCap']}" if c['kCap'] else ""
-        changes.append(f"{emoji} *{sala}* — {fecha} {hora}\nKultur: {ckv}{cap_str} ({'+' if diff>0 else ''}{diff})")
+        changes.append(f"📈 *{sala}* — {fecha} {hora}\nKultur: {ckv}{cap_str} (+{diff})")
 
-# Solo actualizar prev si los datos son válidos
 if has_valid_data(curr):
     PREV.write_text(CURR.read_text())
 else:
-    print("Datos inválidos en este run — prev no actualizado.")
+    print("Datos inválidos — prev no actualizado.")
     sys.exit(0)
 
 if not changes:
