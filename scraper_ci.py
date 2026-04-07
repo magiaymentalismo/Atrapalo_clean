@@ -4,6 +4,7 @@ from __future__ import annotations
 import json
 import re
 import shutil
+import time
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -37,8 +38,8 @@ TZ = ZoneInfo("Europe/Madrid")
 
 TEMPLATE_PATH = Path("template.html")
 MANIFEST_PATH = Path("manifest.json")
-SW_PATH        = Path("sw.js")
-DOCS_DIR       = Path("docs")
+SW_PATH = Path("sw.js")
+DOCS_DIR = Path("docs")
 
 
 def normalize_hhmm(h: str | None) -> str:
@@ -85,10 +86,6 @@ def _extract_provider_event(url: str) -> tuple[str, str] | None:
 
 
 def _fetch_dinaticket_ajax_pages(url: str, max_pages: int = 8) -> str:
-    """
-    Descarga las páginas AJAX adicionales de DinaTicket:
-    ?pg_action=ajax_listado_pases&p=2,3,4...
-    """
     ids = _extract_provider_event(url)
     if not ids:
         return ""
@@ -101,31 +98,46 @@ def _fetch_dinaticket_ajax_pages(url: str, max_pages: int = 8) -> str:
         ajax_url = f"{base}?pg_action=ajax_listado_pases&p={p}"
         try:
             r = requests.get(ajax_url, headers=UA, timeout=20)
-            r.raise_for_status()
-            text = r.text.strip()
 
-            # Si no devuelve nada útil, cortamos.
+            if r.status_code == 429:
+                print(f"⚠️ Rate limit AJAX p={p}: {ajax_url}")
+                break
+
+            if r.status_code != 200:
+                print(f"⚠️ AJAX status {r.status_code}: {ajax_url}")
+                break
+
+            text = r.text.strip()
             if not text:
                 break
 
             chunks.append(text)
+            time.sleep(1)
 
-            # Si ya no trae botón o contenido nuevo de sesiones, muchas veces
-            # la siguiente página será vacía. Igual dejamos seguir hasta vacía.
-        except Exception:
+        except Exception as e:
+            print(f"⚠️ Error AJAX p={p}: {e}")
             break
 
     return "\n".join(chunks)
 
 
 def fetch_functions_dinaticket(url: str) -> list[dict]:
-    r = requests.get(url, headers=UA, timeout=20)
-    r.raise_for_status()
+    try:
+        r = requests.get(url, headers=UA, timeout=20)
 
-    # HTML inicial
+        if r.status_code == 429:
+            print(f"⚠️ Rate limit en DinaTicket: {url}")
+            return []
+
+        if r.status_code != 200:
+            print(f"⚠️ Error DinaTicket status {r.status_code}: {url}")
+            return []
+
+    except Exception as e:
+        print(f"⚠️ Error cargando DinaTicket {url}: {e}")
+        return []
+
     html = r.text
-
-    # HTML de páginas adicionales cargadas por "Ver más fechas"
     html_extra = _fetch_dinaticket_ajax_pages(url)
     if html_extra:
         html += "\n" + html_extra
@@ -181,11 +193,11 @@ def fetch_functions_dinaticket(url: str) -> list[dict]:
 
         out.append({
             "fecha_label": fecha_label,
-            "fecha_iso":   fecha_iso,
-            "hora":        hora,
+            "fecha_iso": fecha_iso,
+            "hora": hora,
             "vendidas_dt": vendidas,
-            "capacidad":   cap,
-            "stock":       stock,
+            "capacidad": cap,
+            "stock": stock,
         })
 
     out.sort(key=lambda x: (x["fecha_iso"], x["hora"]))
@@ -201,8 +213,8 @@ def fetch_abonoteatro_shows(url: str) -> set[tuple[str, str]]:
     for ses in soup.find_all("div", class_="bsesion"):
         if not ses.find("a", class_="buyBtn"):
             continue
-        mes_tag  = ses.find("p", class_="psess")
-        dia_tag  = ses.find("p", class_="psesb")
+        mes_tag = ses.find("p", class_="psess")
+        dia_tag = ses.find("p", class_="psesb")
         hora_tag = ses.find("h3", class_="horasesion")
         if not (mes_tag and dia_tag and hora_tag):
             continue
@@ -222,7 +234,7 @@ def fetch_abonoteatro_shows(url: str) -> set[tuple[str, str]]:
         hora_match = re.search(r"(\d{1,2}):(\d{2})", hora_tag.text)
         if not hora_match:
             continue
-        hora      = normalize_hhmm(f"{hora_match.group(1)}:{hora_match.group(2)}")
+        hora = normalize_hhmm(f"{hora_match.group(1)}:{hora_match.group(2)}")
         fecha_iso = f"{anio}-{mes_num}-{dia}"
         out.add((fecha_iso, hora))
 
@@ -251,11 +263,11 @@ def fetch_abonoteatro_shows(url: str) -> set[tuple[str, str]]:
         m_day = re.search(r"\b([0-3]?\d)\b\s+" + dow + r"\b", t)
         if not m_day:
             continue
-        dia    = str(int(m_day.group(1))).zfill(2)
+        dia = str(int(m_day.group(1))).zfill(2)
         m_time = re.search(r"\b([0-2]?\d):([0-5]\d)\b", t)
         if not m_time:
             continue
-        hora      = normalize_hhmm(f"{m_time.group(1)}:{m_time.group(2)}")
+        hora = normalize_hhmm(f"{m_time.group(1)}:{m_time.group(2)}")
         fecha_iso = f"{anio}-{mes_num}-{dia}"
         out.add((fecha_iso, hora))
 
@@ -282,10 +294,10 @@ def build_payload(
 
     for sala, funcs in eventos.items():
         abono_shows = abono_by_sala.get(sala, set())
-        has_abono   = sala in abono_by_sala
+        has_abono = sala in abono_by_sala
 
         kultur_cache = load_kultur_cache(sala) if sala in KULTUR_EVENTS else {}
-        kultur_idx   = (kultur_cache.get("idx") or {}) if isinstance(kultur_cache, dict) else {}
+        kultur_idx = (kultur_cache.get("idx") or {}) if isinstance(kultur_cache, dict) else {}
 
         proximas: list[dict] = []
 
@@ -307,12 +319,12 @@ def build_payload(
             k_data = _find_kultur(kultur_idx, f["fecha_iso"], f["hora"])
             if isinstance(k_data, dict):
                 f["kultur_disponibles"] = k_data.get("disponibles")
-                f["kultur_vendidas"]    = k_data.get("vendidas")
-                f["kultur_capacidad"]   = k_data.get("capacidad")
+                f["kultur_vendidas"] = k_data.get("vendidas")
+                f["kultur_capacidad"] = k_data.get("capacidad")
             else:
                 f["kultur_disponibles"] = None
-                f["kultur_vendidas"]    = None
-                f["kultur_capacidad"]   = None
+                f["kultur_vendidas"] = None
+                f["kultur_capacidad"] = None
 
             ses_dt = datetime.strptime(
                 f"{f['fecha_iso']} {f['hora']}", "%Y-%m-%d %H:%M"
@@ -344,7 +356,7 @@ def build_payload(
         ]
 
         out[sala] = {
-            "table":    {"headers": headers, "rows": rows},
+            "table": {"headers": headers, "rows": rows},
             "proximas": {"table": {"headers": headers, "rows": rows}},
         }
 
