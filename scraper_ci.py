@@ -86,6 +86,10 @@ def _extract_provider_event(url: str) -> tuple[str, str] | None:
 
 
 def _fetch_dinaticket_ajax_pages(url: str, max_pages: int = 8) -> str:
+    """
+    Descarga páginas extra de DinaTicket detrás de:
+    ?pg_action=ajax_listado_pases&p=2,3,4...
+    """
     ids = _extract_provider_event(url)
     if not ids:
         return ""
@@ -252,7 +256,8 @@ def fetch_abonoteatro_shows(url: str) -> set[tuple[str, str]]:
         block = a.find_parent(["article", "section", "div"]) or a.parent
         t = block.get_text(" ", strip=True).lower()
         m_my = re.search(
-            r"\b(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)\s+(20\d{2})\b", t,
+            r"\b(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)\s+(20\d{2})\b",
+            t,
         )
         if not m_my:
             continue
@@ -285,6 +290,37 @@ def load_kultur_cache(sala: str) -> dict:
         return {}
 
 
+def load_previous_event_rows(sala: str) -> list[dict]:
+    p = DOCS_DIR / "schedule.json"
+    if not p.exists():
+        return []
+
+    try:
+        data = json.loads(p.read_text("utf-8"))
+        rows = (
+            data.get("eventos", {})
+            .get(sala, {})
+            .get("table", {})
+            .get("rows", [])
+        )
+
+        out: list[dict] = []
+        for row in rows:
+            if len(row) < 6:
+                continue
+            out.append({
+                "fecha_label": row[0],
+                "hora": row[1],
+                "vendidas_dt": row[2],
+                "fecha_iso": row[3],
+                "capacidad": row[4],
+                "stock": row[5],
+            })
+        return out
+    except Exception:
+        return []
+
+
 def build_payload(
     eventos: dict[str, list[dict]],
     abono_by_sala: dict[str, set[tuple[str, str]]],
@@ -310,10 +346,18 @@ def build_payload(
             def _find_kultur(idx, fecha_iso, hora):
                 exact = idx.get(f"{fecha_iso}|{hora}")
                 if exact is not None:
-                    return exact if isinstance(exact, dict) else {"disponibles": exact, "capacidad": None, "vendidas": None}
+                    return exact if isinstance(exact, dict) else {
+                        "disponibles": exact,
+                        "capacidad": None,
+                        "vendidas": None,
+                    }
                 for k, v in idx.items():
                     if k.startswith(fecha_iso):
-                        return v if isinstance(v, dict) else {"disponibles": v, "capacidad": None, "vendidas": None}
+                        return v if isinstance(v, dict) else {
+                            "disponibles": v,
+                            "capacidad": None,
+                            "vendidas": None,
+                        }
                 return None
 
             k_data = _find_kultur(kultur_idx, f["fecha_iso"], f["hora"])
@@ -365,8 +409,16 @@ def build_payload(
 
 if __name__ == "__main__":
     current: dict[str, list[dict]] = {}
+
     for sala, url in EVENTS.items():
         funcs = fetch_functions_dinaticket(url)
+
+        if not funcs and sala == "Escondi2":
+            old_funcs = load_previous_event_rows(sala)
+            if old_funcs:
+                print(f"⚠️ Usando cache previa para {sala}: {len(old_funcs)} funciones")
+                funcs = old_funcs
+
         current[sala] = funcs
         print(f"Dina {sala}: {len(funcs)} funciones")
 
