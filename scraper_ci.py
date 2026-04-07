@@ -77,44 +77,108 @@ def write_schedule_json(payload: dict) -> None:
     print("✔ Generado docs/schedule.json")
 
 
+def _extract_provider_event(url: str) -> tuple[str, str] | None:
+    m = re.search(r"/provider/(\d+)/event/(\d+)", url)
+    if not m:
+        return None
+    return m.group(1), m.group(2)
+
+
+def _fetch_dinaticket_ajax_pages(url: str, max_pages: int = 8) -> str:
+    """
+    Descarga las páginas AJAX adicionales de DinaTicket:
+    ?pg_action=ajax_listado_pases&p=2,3,4...
+    """
+    ids = _extract_provider_event(url)
+    if not ids:
+        return ""
+
+    provider_id, event_id = ids
+    base = f"https://www.dinaticket.com/es/provider/{provider_id}/event/{event_id}"
+    chunks: list[str] = []
+
+    for p in range(2, max_pages + 1):
+        ajax_url = f"{base}?pg_action=ajax_listado_pases&p={p}"
+        try:
+            r = requests.get(ajax_url, headers=UA, timeout=20)
+            r.raise_for_status()
+            text = r.text.strip()
+
+            # Si no devuelve nada útil, cortamos.
+            if not text:
+                break
+
+            chunks.append(text)
+
+            # Si ya no trae botón o contenido nuevo de sesiones, muchas veces
+            # la siguiente página será vacía. Igual dejamos seguir hasta vacía.
+        except Exception:
+            break
+
+    return "\n".join(chunks)
+
+
 def fetch_functions_dinaticket(url: str) -> list[dict]:
     r = requests.get(url, headers=UA, timeout=20)
     r.raise_for_status()
-    soup = BeautifulSoup(r.text, "html.parser")
+
+    # HTML inicial
+    html = r.text
+
+    # HTML de páginas adicionales cargadas por "Ver más fechas"
+    html_extra = _fetch_dinaticket_ajax_pages(url)
+    if html_extra:
+        html += "\n" + html_extra
+
+    soup = BeautifulSoup(html, "html.parser")
     out: list[dict] = []
+    seen: set[tuple[str, str]] = set()
 
     for session in soup.find_all("div", class_="js-session-row"):
         parent = session.find_parent("div", class_="js-session-group")
         if not parent:
             continue
+
         dia = parent.find("span", class_="num_dia")
         mes = parent.find("span", class_="mes")
         if not dia or not mes:
             continue
+
         mes_map = {
             "Ene":"01","Feb":"02","Mar":"03","Abr":"04",
             "May":"05","Jun":"06","Jul":"07","Ago":"08",
             "Sep":"09","Oct":"10","Nov":"11","Dic":"12",
         }
+
         mes_txt = mes.text.strip().replace(".", "")
         mes_num = mes_map.get(mes_txt)
         if not mes_num:
             continue
-        now  = datetime.now(TZ)
+
+        now = datetime.now(TZ)
         anio = now.year
         if int(mes_num) < now.month:
             anio += 1
-        fecha_iso   = f"{anio}-{mes_num}-{dia.text.strip().zfill(2)}"
+
+        fecha_iso = f"{anio}-{mes_num}-{dia.text.strip().zfill(2)}"
         fecha_label = datetime.strptime(fecha_iso, "%Y-%m-%d").strftime("%d %b %Y")
-        hora_span   = session.find("span", class_="session-card__time-session")
-        hora        = normalize_hhmm(hora_span.text if hora_span else "")
+
+        hora_span = session.find("span", class_="session-card__time-session")
+        hora = normalize_hhmm(hora_span.text if hora_span else "")
+
+        key = (fecha_iso, hora)
+        if key in seen:
+            continue
+        seen.add(key)
+
         quotas = session.find_all("div", class_="js-quota-row")
         if not quotas:
             cap, stock, vendidas = None, None, None
         else:
-            cap      = sum(int(q.get("data-quota-total", 0)) for q in quotas)
-            stock    = sum(int(q.get("data-stock", 0))        for q in quotas)
+            cap = sum(int(q.get("data-quota-total", 0)) for q in quotas)
+            stock = sum(int(q.get("data-stock", 0)) for q in quotas)
             vendidas = max(0, cap - stock)
+
         out.append({
             "fecha_label": fecha_label,
             "fecha_iso":   fecha_iso,
@@ -123,6 +187,8 @@ def fetch_functions_dinaticket(url: str) -> list[dict]:
             "capacidad":   cap,
             "stock":       stock,
         })
+
+    out.sort(key=lambda x: (x["fecha_iso"], x["hora"]))
     return out
 
 
