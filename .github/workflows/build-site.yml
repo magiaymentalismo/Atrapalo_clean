@@ -45,12 +45,6 @@ jobs:
         run: |
           python notify_telegram.py
 
-      - name: Test bot polling temporary
-        env:
-          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-        run: |
-          timeout 60 python bot_telegram.py
-
       - name: Commit changes if any
         run: |
           git config user.name "github-actions[bot]"
