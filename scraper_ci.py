@@ -12,9 +12,12 @@ import requests
 from bs4 import BeautifulSoup
 
 EVENTS = {
-    "Disfruta": "https://www.dinaticket.com/es/provider/10402/event/4905281",
-    "Miedo":    "https://www.dinaticket.com/es/provider/10402/event/4915778",
-    "Escondi2": "https://www.dinaticket.com/es/provider/20864/event/4943466",
+    "Disfruta": [
+        "https://www.dinaticket.com/es/provider/10402/event/4905281",
+        "https://www.dinaticket.com/es/provider/20864/event/4947155",
+    ],
+    "Miedo":    ["https://www.dinaticket.com/es/provider/10402/event/4915778"],
+    "Escondi2": ["https://www.dinaticket.com/es/provider/20864/event/4943466"],
 }
 
 ABONO_URLS = {
@@ -279,8 +282,10 @@ def build_payload(
 
 if __name__ == "__main__":
     current: dict[str, list[dict]] = {}
-    for sala, url in EVENTS.items():
-        funcs = fetch_functions_dinaticket(url)
+    for sala, urls in EVENTS.items():
+        funcs = []
+        for url in urls:
+            funcs.extend(fetch_functions_dinaticket(url))
         current[sala] = funcs
         print(f"Dina {sala}: {len(funcs)} funciones")
 
