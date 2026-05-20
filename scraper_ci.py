@@ -12,10 +12,7 @@ import requests
 from bs4 import BeautifulSoup
 
 EVENTS = {
-    "Disfruta": [
-        "https://www.dinaticket.com/es/provider/10402/event/4905281",
-        "https://www.dinaticket.com/es/provider/20864/event/4947155",
-    ],
+    "Disfruta": ["https://www.dinaticket.com/es/provider/20864/event/4947155",],
     "Miedo":    ["https://www.dinaticket.com/es/provider/10402/event/4915778"],
     "Escondi2": ["https://www.dinaticket.com/es/provider/20864/event/4943466"],
 }
