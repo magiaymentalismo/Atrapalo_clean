@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T07:46:58.867913+02:00",
+  "generated_at": "2026-05-22T11:25:24.583085+02:00",
   "eventos": {
     "Disfruta": {
       "table": {
@@ -532,6 +532,114 @@
               "2026-06-28",
               30,
               30,
+              null,
+              null,
+              null,
+              null
+            ]
+          ]
+        }
+      }
+    },
+    "Cluedo": {
+      "table": {
+        "headers": [
+          "Fecha",
+          "Hora",
+          "Vendidas",
+          "FechaISO",
+          "Capacidad",
+          "Stock",
+          "Abono",
+          "KulturDisponibles",
+          "KulturVendidas",
+          "KulturCapacidad"
+        ],
+        "rows": [
+          [
+            "05 Jun 2026",
+            "19:30",
+            0,
+            "2026-06-05",
+            49,
+            49,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "19 Jun 2026",
+            "19:30",
+            0,
+            "2026-06-19",
+            49,
+            49,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "26 Jun 2026",
+            "19:30",
+            0,
+            "2026-06-26",
+            49,
+            49,
+            null,
+            null,
+            null,
+            null
+          ]
+        ]
+      },
+      "proximas": {
+        "table": {
+          "headers": [
+            "Fecha",
+            "Hora",
+            "Vendidas",
+            "FechaISO",
+            "Capacidad",
+            "Stock",
+            "Abono",
+            "KulturDisponibles",
+            "KulturVendidas",
+            "KulturCapacidad"
+          ],
+          "rows": [
+            [
+              "05 Jun 2026",
+              "19:30",
+              0,
+              "2026-06-05",
+              49,
+              49,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              "19 Jun 2026",
+              "19:30",
+              0,
+              "2026-06-19",
+              49,
+              49,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              "26 Jun 2026",
+              "19:30",
+              0,
+              "2026-06-26",
+              49,
+              49,
               null,
               null,
               null,
