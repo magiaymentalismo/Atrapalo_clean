@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T11:25:24.583085+02:00",
+  "generated_at": "2026-05-22T11:28:43.545002+02:00",
   "eventos": {
     "Disfruta": {
       "table": {
@@ -541,7 +541,7 @@
         }
       }
     },
-    "Cluedo": {
+    "CluedoMental": {
       "table": {
         "headers": [
           "Fecha",
