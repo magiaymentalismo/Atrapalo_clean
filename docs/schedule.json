@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T21:12:00.050631+02:00",
+  "generated_at": "2026-06-01T23:27:29.817063+02:00",
   "eventos": {
     "Disfruta": {
       "table": {
@@ -389,48 +389,7 @@
           "BuyUrl",
           "Source"
         ],
-        "rows": [
-          [
-            "05 Jun 2026",
-            "23:00",
-            null,
-            "2026-06-05",
-            null,
-            null,
-            "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904525",
-            "onebox"
-          ],
-          [
-            "12 Jun 2026",
-            "23:00",
-            0,
-            "2026-06-12",
-            52,
-            52,
-            "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904526",
-            "onebox"
-          ],
-          [
-            "19 Jun 2026",
-            "23:00",
-            0,
-            "2026-06-19",
-            52,
-            52,
-            "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904527",
-            "onebox"
-          ],
-          [
-            "26 Jun 2026",
-            "23:00",
-            0,
-            "2026-06-26",
-            52,
-            52,
-            "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904528",
-            "onebox"
-          ]
-        ]
+        "rows": []
       },
       "proximas": {
         "table": {
@@ -444,48 +403,7 @@
             "BuyUrl",
             "Source"
           ],
-          "rows": [
-            [
-              "05 Jun 2026",
-              "23:00",
-              null,
-              "2026-06-05",
-              null,
-              null,
-              "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904525",
-              "onebox"
-            ],
-            [
-              "12 Jun 2026",
-              "23:00",
-              0,
-              "2026-06-12",
-              52,
-              52,
-              "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904526",
-              "onebox"
-            ],
-            [
-              "19 Jun 2026",
-              "23:00",
-              0,
-              "2026-06-19",
-              52,
-              52,
-              "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904527",
-              "onebox"
-            ],
-            [
-              "26 Jun 2026",
-              "23:00",
-              0,
-              "2026-06-26",
-              52,
-              52,
-              "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904528",
-              "onebox"
-            ]
-          ]
+          "rows": []
         }
       }
     }
