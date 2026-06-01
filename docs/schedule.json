@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T19:18:53.386652+02:00",
+  "generated_at": "2026-06-01T19:28:08.522805+02:00",
   "eventos": {
     "Disfruta": {
       "table": {
@@ -10,8 +10,8 @@
           "FechaISO",
           "Capacidad",
           "Stock",
-          "Abono",
-          "BuyUrl"
+          "BuyUrl",
+          "Source"
         ],
         "rows": [
           [
@@ -21,8 +21,8 @@
             "2026-06-04",
             30,
             26,
-            "agotado",
-            null
+            null,
+            "dinaticket"
           ],
           [
             "25 Jun 2026",
@@ -31,8 +31,8 @@
             "2026-06-25",
             30,
             26,
-            "agotado",
-            null
+            null,
+            "dinaticket"
           ]
         ]
       },
@@ -45,8 +45,8 @@
             "FechaISO",
             "Capacidad",
             "Stock",
-            "Abono",
-            "BuyUrl"
+            "BuyUrl",
+            "Source"
           ],
           "rows": [
             [
@@ -56,8 +56,8 @@
               "2026-06-04",
               30,
               26,
-              "agotado",
-              null
+              null,
+              "dinaticket"
             ],
             [
               "25 Jun 2026",
@@ -66,8 +66,8 @@
               "2026-06-25",
               30,
               26,
-              "agotado",
-              null
+              null,
+              "dinaticket"
             ]
           ]
         }
@@ -82,8 +82,8 @@
           "FechaISO",
           "Capacidad",
           "Stock",
-          "Abono",
-          "BuyUrl"
+          "BuyUrl",
+          "Source"
         ],
         "rows": [
           [
@@ -94,7 +94,7 @@
             30,
             27,
             null,
-            null
+            "dinaticket"
           ],
           [
             "06 Jun 2026",
@@ -104,7 +104,7 @@
             0,
             0,
             null,
-            null
+            "dinaticket"
           ],
           [
             "13 Jun 2026",
@@ -114,7 +114,7 @@
             30,
             30,
             null,
-            null
+            "dinaticket"
           ],
           [
             "14 Jun 2026",
@@ -124,7 +124,7 @@
             30,
             30,
             null,
-            null
+            "dinaticket"
           ],
           [
             "20 Jun 2026",
@@ -134,7 +134,7 @@
             30,
             30,
             null,
-            null
+            "dinaticket"
           ],
           [
             "21 Jun 2026",
@@ -144,7 +144,7 @@
             30,
             30,
             null,
-            null
+            "dinaticket"
           ],
           [
             "25 Jun 2026",
@@ -154,7 +154,7 @@
             30,
             30,
             null,
-            null
+            "dinaticket"
           ],
           [
             "27 Jun 2026",
@@ -164,7 +164,7 @@
             30,
             30,
             null,
-            null
+            "dinaticket"
           ],
           [
             "28 Jun 2026",
@@ -174,7 +174,7 @@
             30,
             30,
             null,
-            null
+            "dinaticket"
           ]
         ]
       },
@@ -187,8 +187,8 @@
             "FechaISO",
             "Capacidad",
             "Stock",
-            "Abono",
-            "BuyUrl"
+            "BuyUrl",
+            "Source"
           ],
           "rows": [
             [
@@ -199,7 +199,7 @@
               30,
               27,
               null,
-              null
+              "dinaticket"
             ],
             [
               "06 Jun 2026",
@@ -209,7 +209,7 @@
               0,
               0,
               null,
-              null
+              "dinaticket"
             ],
             [
               "13 Jun 2026",
@@ -219,7 +219,7 @@
               30,
               30,
               null,
-              null
+              "dinaticket"
             ],
             [
               "14 Jun 2026",
@@ -229,7 +229,7 @@
               30,
               30,
               null,
-              null
+              "dinaticket"
             ],
             [
               "20 Jun 2026",
@@ -239,7 +239,7 @@
               30,
               30,
               null,
-              null
+              "dinaticket"
             ],
             [
               "21 Jun 2026",
@@ -249,7 +249,7 @@
               30,
               30,
               null,
-              null
+              "dinaticket"
             ],
             [
               "25 Jun 2026",
@@ -259,7 +259,7 @@
               30,
               30,
               null,
-              null
+              "dinaticket"
             ],
             [
               "27 Jun 2026",
@@ -269,7 +269,7 @@
               30,
               30,
               null,
-              null
+              "dinaticket"
             ],
             [
               "28 Jun 2026",
@@ -279,7 +279,7 @@
               30,
               30,
               null,
-              null
+              "dinaticket"
             ]
           ]
         }
@@ -294,8 +294,8 @@
           "FechaISO",
           "Capacidad",
           "Stock",
-          "Abono",
-          "BuyUrl"
+          "BuyUrl",
+          "Source"
         ],
         "rows": [
           [
@@ -306,7 +306,7 @@
             49,
             35,
             null,
-            null
+            "dinaticket"
           ],
           [
             "19 Jun 2026",
@@ -316,7 +316,7 @@
             49,
             49,
             null,
-            null
+            "dinaticket"
           ],
           [
             "26 Jun 2026",
@@ -326,7 +326,7 @@
             49,
             47,
             null,
-            null
+            "dinaticket"
           ]
         ]
       },
@@ -339,8 +339,8 @@
             "FechaISO",
             "Capacidad",
             "Stock",
-            "Abono",
-            "BuyUrl"
+            "BuyUrl",
+            "Source"
           ],
           "rows": [
             [
@@ -351,7 +351,7 @@
               49,
               35,
               null,
-              null
+              "dinaticket"
             ],
             [
               "19 Jun 2026",
@@ -361,7 +361,7 @@
               49,
               49,
               null,
-              null
+              "dinaticket"
             ],
             [
               "26 Jun 2026",
@@ -371,7 +371,7 @@
               49,
               47,
               null,
-              null
+              "dinaticket"
             ]
           ]
         }
@@ -386,8 +386,8 @@
           "FechaISO",
           "Capacidad",
           "Stock",
-          "Abono",
-          "BuyUrl"
+          "BuyUrl",
+          "Source"
         ],
         "rows": [
           [
@@ -397,8 +397,8 @@
             "2026-06-05",
             52,
             52,
-            null,
-            "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904525"
+            "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904525",
+            "onebox"
           ],
           [
             "12 Jun 2026",
@@ -407,8 +407,8 @@
             "2026-06-12",
             52,
             52,
-            null,
-            "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904526"
+            "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904526",
+            "onebox"
           ],
           [
             "19 Jun 2026",
@@ -417,8 +417,8 @@
             "2026-06-19",
             52,
             52,
-            null,
-            "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904527"
+            "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904527",
+            "onebox"
           ],
           [
             "26 Jun 2026",
@@ -427,8 +427,8 @@
             "2026-06-26",
             52,
             52,
-            null,
-            "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904528"
+            "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904528",
+            "onebox"
           ]
         ]
       },
@@ -441,8 +441,8 @@
             "FechaISO",
             "Capacidad",
             "Stock",
-            "Abono",
-            "BuyUrl"
+            "BuyUrl",
+            "Source"
           ],
           "rows": [
             [
@@ -452,8 +452,8 @@
               "2026-06-05",
               52,
               52,
-              null,
-              "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904525"
+              "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904525",
+              "onebox"
             ],
             [
               "12 Jun 2026",
@@ -462,8 +462,8 @@
               "2026-06-12",
               52,
               52,
-              null,
-              "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904526"
+              "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904526",
+              "onebox"
             ],
             [
               "19 Jun 2026",
@@ -472,8 +472,8 @@
               "2026-06-19",
               52,
               52,
-              null,
-              "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904527"
+              "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904527",
+              "onebox"
             ],
             [
               "26 Jun 2026",
@@ -482,8 +482,8 @@
               "2026-06-26",
               52,
               52,
-              null,
-              "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904528"
+              "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904528",
+              "onebox"
             ]
           ]
         }
