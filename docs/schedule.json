@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T15:11:43.481467+02:00",
+  "generated_at": "2026-06-01T19:05:51.311975+02:00",
   "eventos": {
     "Disfruta": {
       "table": {
@@ -10,10 +10,7 @@
           "FechaISO",
           "Capacidad",
           "Stock",
-          "Abono",
-          "KulturDisponibles",
-          "KulturVendidas",
-          "KulturCapacidad"
+          "Abono"
         ],
         "rows": [
           [
@@ -23,10 +20,7 @@
             "2026-06-04",
             30,
             26,
-            "agotado",
-            null,
-            null,
-            null
+            "agotado"
           ],
           [
             "25 Jun 2026",
@@ -35,10 +29,7 @@
             "2026-06-25",
             30,
             26,
-            "agotado",
-            null,
-            null,
-            null
+            "agotado"
           ]
         ]
       },
@@ -51,10 +42,7 @@
             "FechaISO",
             "Capacidad",
             "Stock",
-            "Abono",
-            "KulturDisponibles",
-            "KulturVendidas",
-            "KulturCapacidad"
+            "Abono"
           ],
           "rows": [
             [
@@ -64,10 +52,7 @@
               "2026-06-04",
               30,
               26,
-              "agotado",
-              null,
-              null,
-              null
+              "agotado"
             ],
             [
               "25 Jun 2026",
@@ -76,46 +61,9 @@
               "2026-06-25",
               30,
               26,
-              "agotado",
-              null,
-              null,
-              null
+              "agotado"
             ]
           ]
-        }
-      }
-    },
-    "Miedo": {
-      "table": {
-        "headers": [
-          "Fecha",
-          "Hora",
-          "Vendidas",
-          "FechaISO",
-          "Capacidad",
-          "Stock",
-          "Abono",
-          "KulturDisponibles",
-          "KulturVendidas",
-          "KulturCapacidad"
-        ],
-        "rows": []
-      },
-      "proximas": {
-        "table": {
-          "headers": [
-            "Fecha",
-            "Hora",
-            "Vendidas",
-            "FechaISO",
-            "Capacidad",
-            "Stock",
-            "Abono",
-            "KulturDisponibles",
-            "KulturVendidas",
-            "KulturCapacidad"
-          ],
-          "rows": []
         }
       }
     },
@@ -128,10 +76,7 @@
           "FechaISO",
           "Capacidad",
           "Stock",
-          "Abono",
-          "KulturDisponibles",
-          "KulturVendidas",
-          "KulturCapacidad"
+          "Abono"
         ],
         "rows": [
           [
@@ -141,9 +86,6 @@
             "2026-06-04",
             30,
             27,
-            null,
-            null,
-            null,
             null
           ],
           [
@@ -153,9 +95,6 @@
             "2026-06-06",
             0,
             0,
-            null,
-            null,
-            null,
             null
           ],
           [
@@ -165,9 +104,6 @@
             "2026-06-13",
             30,
             30,
-            null,
-            null,
-            null,
             null
           ],
           [
@@ -177,9 +113,6 @@
             "2026-06-14",
             30,
             30,
-            null,
-            null,
-            null,
             null
           ],
           [
@@ -189,9 +122,6 @@
             "2026-06-20",
             30,
             30,
-            null,
-            null,
-            null,
             null
           ],
           [
@@ -201,9 +131,6 @@
             "2026-06-21",
             30,
             30,
-            null,
-            null,
-            null,
             null
           ],
           [
@@ -213,9 +140,6 @@
             "2026-06-25",
             30,
             30,
-            null,
-            null,
-            null,
             null
           ],
           [
@@ -225,9 +149,6 @@
             "2026-06-27",
             30,
             30,
-            null,
-            null,
-            null,
             null
           ],
           [
@@ -237,9 +158,6 @@
             "2026-06-28",
             30,
             30,
-            null,
-            null,
-            null,
             null
           ]
         ]
@@ -253,10 +171,7 @@
             "FechaISO",
             "Capacidad",
             "Stock",
-            "Abono",
-            "KulturDisponibles",
-            "KulturVendidas",
-            "KulturCapacidad"
+            "Abono"
           ],
           "rows": [
             [
@@ -266,9 +181,6 @@
               "2026-06-04",
               30,
               27,
-              null,
-              null,
-              null,
               null
             ],
             [
@@ -278,9 +190,6 @@
               "2026-06-06",
               0,
               0,
-              null,
-              null,
-              null,
               null
             ],
             [
@@ -290,9 +199,6 @@
               "2026-06-13",
               30,
               30,
-              null,
-              null,
-              null,
               null
             ],
             [
@@ -302,9 +208,6 @@
               "2026-06-14",
               30,
               30,
-              null,
-              null,
-              null,
               null
             ],
             [
@@ -314,9 +217,6 @@
               "2026-06-20",
               30,
               30,
-              null,
-              null,
-              null,
               null
             ],
             [
@@ -326,9 +226,6 @@
               "2026-06-21",
               30,
               30,
-              null,
-              null,
-              null,
               null
             ],
             [
@@ -338,9 +235,6 @@
               "2026-06-25",
               30,
               30,
-              null,
-              null,
-              null,
               null
             ],
             [
@@ -350,9 +244,6 @@
               "2026-06-27",
               30,
               30,
-              null,
-              null,
-              null,
               null
             ],
             [
@@ -362,9 +253,6 @@
               "2026-06-28",
               30,
               30,
-              null,
-              null,
-              null,
               null
             ]
           ]
@@ -380,10 +268,7 @@
           "FechaISO",
           "Capacidad",
           "Stock",
-          "Abono",
-          "KulturDisponibles",
-          "KulturVendidas",
-          "KulturCapacidad"
+          "Abono"
         ],
         "rows": [
           [
@@ -393,9 +278,6 @@
             "2026-06-05",
             49,
             35,
-            null,
-            null,
-            null,
             null
           ],
           [
@@ -405,9 +287,6 @@
             "2026-06-19",
             49,
             49,
-            null,
-            null,
-            null,
             null
           ],
           [
@@ -417,9 +296,6 @@
             "2026-06-26",
             49,
             47,
-            null,
-            null,
-            null,
             null
           ]
         ]
@@ -433,10 +309,7 @@
             "FechaISO",
             "Capacidad",
             "Stock",
-            "Abono",
-            "KulturDisponibles",
-            "KulturVendidas",
-            "KulturCapacidad"
+            "Abono"
           ],
           "rows": [
             [
@@ -446,9 +319,6 @@
               "2026-06-05",
               49,
               35,
-              null,
-              null,
-              null,
               null
             ],
             [
@@ -458,9 +328,6 @@
               "2026-06-19",
               49,
               49,
-              null,
-              null,
-              null,
               null
             ],
             [
@@ -470,12 +337,37 @@
               "2026-06-26",
               49,
               47,
-              null,
-              null,
-              null,
               null
             ]
           ]
+        }
+      }
+    },
+    "Miedo": {
+      "table": {
+        "headers": [
+          "Fecha",
+          "Hora",
+          "Vendidas",
+          "FechaISO",
+          "Capacidad",
+          "Stock",
+          "Abono"
+        ],
+        "rows": []
+      },
+      "proximas": {
+        "table": {
+          "headers": [
+            "Fecha",
+            "Hora",
+            "Vendidas",
+            "FechaISO",
+            "Capacidad",
+            "Stock",
+            "Abono"
+          ],
+          "rows": []
         }
       }
     }
