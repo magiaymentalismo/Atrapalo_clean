@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T19:36:24.842389+02:00",
+  "generated_at": "2026-06-01T21:12:00.050631+02:00",
   "eventos": {
     "Disfruta": {
       "table": {
@@ -393,10 +393,10 @@
           [
             "05 Jun 2026",
             "23:00",
-            0,
+            null,
             "2026-06-05",
-            52,
-            52,
+            null,
+            null,
             "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904525",
             "onebox"
           ],
@@ -448,10 +448,10 @@
             [
               "05 Jun 2026",
               "23:00",
-              0,
+              null,
               "2026-06-05",
-              52,
-              52,
+              null,
+              null,
               "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904525",
               "onebox"
             ],
