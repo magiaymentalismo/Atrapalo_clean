@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Cartelera — Magia & Teatro</title>
 
-  <link rel="manifest" href="manifest.json?v=20251201">
+  <link rel="manifest" href="manifest.json?v=20260601">
   <meta name="theme-color" content="#000000">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -18,12 +18,10 @@
       --accent-gold: #ffd60a;
       --accent-green: #30d158;
       --accent-red: #ff453a;
-
       --radius-lg: 28px;
       --radius-md: 20px;
       --radius-sm: 14px;
       --radius-full: 999px;
-
       --font-stack: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
       --safe-top: env(safe-area-inset-top, 20px);
     }
@@ -33,11 +31,11 @@
     body {
       background-color: #08080f;
       background-image:
-        radial-gradient(ellipse 80% 60% at 15%  8%,  rgba(120, 50, 240, 0.42) 0%, transparent 55%),
-        radial-gradient(ellipse 60% 50% at 85% 18%,  rgba(20, 100, 255, 0.35) 0%, transparent 50%),
-        radial-gradient(ellipse 70% 55% at 50% 92%,  rgba(220, 40,  90, 0.32) 0%, transparent 52%),
-        radial-gradient(ellipse 50% 40% at 10% 88%,  rgba(0,  190, 160, 0.25) 0%, transparent 45%),
-        radial-gradient(ellipse 40% 35% at 70% 55%,  rgba(255, 160,  20, 0.15) 0%, transparent 40%);
+        radial-gradient(ellipse 80% 60% at 15% 8%, rgba(120, 50, 240, 0.42) 0%, transparent 55%),
+        radial-gradient(ellipse 60% 50% at 85% 18%, rgba(20, 100, 255, 0.35) 0%, transparent 50%),
+        radial-gradient(ellipse 70% 55% at 50% 92%, rgba(220, 40, 90, 0.32) 0%, transparent 52%),
+        radial-gradient(ellipse 50% 40% at 10% 88%, rgba(0, 190, 160, 0.25) 0%, transparent 45%),
+        radial-gradient(ellipse 40% 35% at 70% 55%, rgba(255, 160, 20, 0.15) 0%, transparent 40%);
       background-attachment: fixed;
       margin: 0;
       color: var(--text-primary);
@@ -50,11 +48,11 @@
 
     .wrap { max-width: 1040px; margin: 0 auto; padding: 16px; }
 
-    /* ── Dynamic Island ── */
     .dynamic-island-container {
       position: fixed;
       top: calc(var(--safe-top) + 8px);
-      left: 0; right: 0;
+      left: 0;
+      right: 0;
       display: flex;
       justify-content: center;
       z-index: 1000;
@@ -75,27 +73,33 @@
       width: min(560px, calc(100% - 20px));
       position: relative;
       overflow: hidden;
-      /* Liquid glass: rim de luz en el borde superior */
       box-shadow:
         inset 0 1.5px 0 rgba(255, 255, 255, 0.38),
-        inset 0 -1px 0  rgba(255, 255, 255, 0.05),
-        inset  1px 0 0  rgba(255, 255, 255, 0.10),
-        inset -1px 0 0  rgba(255, 255, 255, 0.05),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.05),
+        inset 1px 0 0 rgba(255, 255, 255, 0.10),
+        inset -1px 0 0 rgba(255, 255, 255, 0.05),
         0 16px 48px rgba(0, 0, 0, 0.55),
-        0  4px 12px rgba(0, 0, 0, 0.30);
+        0 4px 12px rgba(0, 0, 0, 0.30);
     }
 
-    /* Specular highlight (línea brillante en el tope del vidrio) */
     .dynamic-island::before {
       content: '';
       position: absolute;
-      top: 0; left: 12%; right: 12%;
+      top: 0;
+      left: 12%;
+      right: 12%;
       height: 1px;
       background: linear-gradient(90deg, transparent, rgba(255,255,255,0.65), transparent);
       pointer-events: none;
     }
 
-    .island-title { font-size: 15px; font-weight: 900; white-space: nowrap; letter-spacing: -0.3px; }
+    .island-title {
+      font-size: 15px;
+      font-weight: 900;
+      white-space: nowrap;
+      letter-spacing: -0.3px;
+    }
+
     .island-meta {
       font-size: 12px;
       color: var(--text-secondary);
@@ -104,7 +108,6 @@
       white-space: nowrap;
     }
 
-    /* ── Tabs ── */
     .tabs {
       display: flex;
       gap: 8px;
@@ -115,6 +118,7 @@
       scrollbar-width: none;
       justify-content: center;
     }
+
     .tabs::-webkit-scrollbar { display: none; }
 
     .tab {
@@ -143,10 +147,9 @@
       box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 1),
         0 10px 28px rgba(255, 255, 255, 0.22),
-        0  4px 12px rgba(0, 0, 0, 0.30);
+        0 4px 12px rgba(0, 0, 0, 0.30);
     }
 
-    /* ── Panel ── */
     .panel {
       background: rgba(255, 255, 255, 0.05);
       border-radius: var(--radius-lg);
@@ -157,23 +160,30 @@
       overflow: hidden;
       box-shadow:
         inset 0 1.5px 0 rgba(255, 255, 255, 0.22),
-        inset 0 -1px 0  rgba(255, 255, 255, 0.04),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.04),
         0 28px 56px rgba(0, 0, 0, 0.45),
-        0  8px 20px rgba(0, 0, 0, 0.22);
+        0 8px 20px rgba(0, 0, 0, 0.22);
     }
 
-    /* Sheen en la parte superior del panel */
     .panel::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       height: 70px;
       background: linear-gradient(180deg, rgba(255,255,255,0.06) 0%, transparent 100%);
       border-radius: var(--radius-lg) var(--radius-lg) 0 0;
       pointer-events: none;
     }
 
-    .list { display: flex; flex-direction: column; gap: 12px; position: relative; z-index: 1; }
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      position: relative;
+      z-index: 1;
+    }
 
     .month {
       margin: 20px 0 6px;
@@ -185,7 +195,6 @@
       letter-spacing: -0.2px;
     }
 
-    /* ── Card ── */
     .item {
       background: rgba(255, 255, 255, 0.065);
       border-radius: var(--radius-md);
@@ -197,17 +206,18 @@
       -webkit-backdrop-filter: blur(20px) saturate(160%);
       box-shadow:
         inset 0 1.5px 0 rgba(255, 255, 255, 0.22),
-        inset 0 -1px 0  rgba(255, 255, 255, 0.04),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.04),
         0 6px 20px rgba(0, 0, 0, 0.28);
     }
 
     .item:active { transform: scale(0.975); }
 
-    /* Specular highlight en cada card */
     .item::before {
       content: '';
       position: absolute;
-      top: 0; left: 18%; right: 18%;
+      top: 0;
+      left: 18%;
+      right: 18%;
       height: 1px;
       background: linear-gradient(90deg, transparent, rgba(255,255,255,0.45), transparent);
       pointer-events: none;
@@ -220,7 +230,13 @@
       gap: 10px;
     }
 
-    .date { font-size: 17px; font-weight: 800; line-height: 1.2; letter-spacing: -0.3px; }
+    .date {
+      font-size: 17px;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.3px;
+    }
+
     .date span {
       font-size: 17px;
       font-weight: 800;
@@ -236,7 +252,6 @@
       color: var(--text-secondary);
     }
 
-    /* ── Chips ── */
     .chips {
       margin-top: 14px;
       display: grid;
@@ -260,18 +275,26 @@
       -webkit-backdrop-filter: blur(20px);
     }
 
-    /* Sheen interno de los chips */
     .chip::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       height: 50%;
       background: linear-gradient(180deg, rgba(255,255,255,0.07) 0%, transparent 100%);
       border-radius: var(--radius-sm) var(--radius-sm) 0 0;
       pointer-events: none;
     }
 
-    .chip-left { display: flex; flex-direction: column; gap: 2px; min-width: 0; position: relative; z-index: 1; }
+    .chip-left {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 0;
+      position: relative;
+      z-index: 1;
+    }
 
     .chip-title {
       font-size: 11px;
@@ -291,62 +314,41 @@
       text-overflow: ellipsis;
     }
 
-    .chip-value.big { font-size: 22px; font-weight: 900; letter-spacing: -0.5px; }
-
     .chip.green {
       background: rgba(48, 209, 88, 0.14);
       box-shadow: inset 0 1px 0 rgba(48, 209, 88, 0.35), 0 3px 10px rgba(48, 209, 88, 0.10);
     }
-    .chip.green .chip-title, .chip.green .chip-value { color: var(--accent-green); }
+
+    .chip.green .chip-title,
+    .chip.green .chip-value { color: var(--accent-green); }
 
     .chip.gold {
       background: rgba(255, 214, 10, 0.12);
       box-shadow: inset 0 1px 0 rgba(255, 214, 10, 0.35), 0 3px 10px rgba(255, 214, 10, 0.08);
     }
-    .chip.gold .chip-title, .chip.gold .chip-value { color: var(--accent-gold); }
+
+    .chip.gold .chip-title,
+    .chip.gold .chip-value { color: var(--accent-gold); }
 
     .chip.gray {
       background: rgba(255, 255, 255, 0.07);
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14), 0 3px 10px rgba(0, 0, 0, 0.18);
     }
-    .chip.gray .chip-title, .chip.gray .chip-value { color: rgba(255, 255, 255, 0.62); }
+
+    .chip.gray .chip-title,
+    .chip.gray .chip-value { color: rgba(255, 255, 255, 0.62); }
 
     .chip.sold {
       background: rgba(255, 69, 58, 0.12);
       box-shadow: inset 0 1px 0 rgba(255, 69, 58, 0.30), 0 3px 10px rgba(255, 69, 58, 0.08);
     }
-    .chip.sold .chip-title, .chip.sold .chip-value { color: var(--accent-red); }
 
-    /* ── Abono ── */
-    .abono {
-      margin-top: 12px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 7px 14px;
-      border-radius: var(--radius-full);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.1px;
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-    }
-
-    .abono.ok {
-      color: var(--accent-green);
-      background: rgba(48, 209, 88, 0.12);
-      box-shadow: inset 0 1px 0 rgba(48, 209, 88, 0.32), 0 0 14px rgba(48, 209, 88, 0.12);
-    }
-    .abono.no {
-      color: var(--accent-red);
-      background: rgba(255, 69, 58, 0.12);
-      box-shadow: inset 0 1px 0 rgba(255, 69, 58, 0.28);
-    }
+    .chip.sold .chip-title,
+    .chip.sold .chip-value { color: var(--accent-red); }
 
     @media (min-width: 700px) {
       .panel { padding: 20px; }
       .item { padding: 18px; }
-      .chips.two { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
@@ -368,7 +370,6 @@
     </div>
   </div>
 
-  <!-- PAYLOAD -->
   <script id="PAYLOAD" type="application/json">{{PAYLOAD_JSON}}</script>
 
   <script>
@@ -377,18 +378,27 @@
     let active = Object.keys(eventos)[0] || null;
 
     document.getElementById("meta").textContent =
-      new Date(payload.generated_at).toLocaleString("es-ES", { hour: '2-digit', minute: '2-digit' });
+      new Date(payload.generated_at).toLocaleString("es-ES", {
+        hour: "2-digit",
+        minute: "2-digit"
+      });
 
-    /* Tabs */
     const tabsEl = document.getElementById("tabs");
+
     for (const sala of Object.keys(eventos)) {
       const ev = eventos[sala];
-      const total = (ev.proximas?.table?.rows?.length || 0);
+      const total = ev.proximas?.table?.rows?.length || 0;
+
       const b = document.createElement("button");
       b.textContent = `${sala} (${total})`;
       b.dataset.tab = sala;
       b.className = "tab" + (sala === active ? " active" : "");
-      b.onclick = () => { active = sala; updateTabs(); render(); };
+      b.onclick = () => {
+        active = sala;
+        updateTabs();
+        render();
+      };
+
       tabsEl.appendChild(b);
     }
 
@@ -399,138 +409,142 @@
     }
 
     const DAYS = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
-    function dayName(f) {
-      return DAYS[new Date(f + "T00:00:00").getDay()];
+
+    function dayName(fechaISO) {
+      return DAYS[new Date(fechaISO + "T00:00:00").getDay()];
     }
 
-    function getRows() {
-      const ev = eventos[active];
-      return (ev.proximas?.table?.rows) || [];
+    function getTable() {
+      return eventos[active]?.proximas?.table || { headers: [], rows: [] };
+    }
+
+    function colIndex(headers, name, fallback) {
+      const idx = headers.indexOf(name);
+      return idx >= 0 ? idx : fallback;
     }
 
     function fmtInt(x) {
-      return (x === null || x === undefined) ? null : Number(x);
+      if (x === null || x === undefined || x === "") return null;
+      const n = Number(x);
+      return Number.isFinite(n) ? n : null;
     }
 
     function chipClassFrom(vendidas, stock) {
-      const v = (vendidas ?? 0);
-      const s = (stock ?? 999999);
+      const v = vendidas ?? 0;
+      const s = stock ?? 999999;
+
       if (s === 0) return "sold";
-      if (v >= 10) return "gold";
+      if (s <= 3) return "gold";
       if (v >= 1) return "green";
       return "gray";
     }
 
-    function kulturChipClassFull(vend, cap) {
-      if (vend === null || cap === null || cap === 0) return "gray";
-      const libre = cap - vend;
-      if (libre <= 0) return "sold";
-      if (libre <= 3) return "gold";
-      return "green";
+    function sourceLabel(source) {
+      if (source === "onebox") return "Onebox";
+      if (source === "dinaticket") return "Dina";
+      return "Entradas";
     }
 
-    function kulturValueFull(vend, cap) {
-      if (vend === null || cap === null) return "—";
-      const libre = cap - vend;
-      if (libre <= 0) return "Agotado";
-      return `${vend}/${cap}`;
-    }
+    function stockValue(r) {
+      const vendidas = r.vendidas ?? "—";
+      const cap = r.cap ?? "—";
+      const stock = r.stock ?? "—";
 
-    function kulturChipClass(disp) {
-      if (disp === null || disp === undefined) return "gray";
-      const d = Number(disp);
-      if (!Number.isFinite(d)) return "gray";
-      if (d === 0) return "sold";
-      if (d <= 3) return "gold";
-      return "green";
-    }
+      if (r.stock === 0) return `${vendidas}/${cap} · agotado`;
 
-    function kulturValue(disp) {
-      if (disp === null || disp === undefined) return "—";
-      const d = Number(disp);
-      if (!Number.isFinite(d)) return "—";
-      if (d === 0) return "Agotado";
-      return `${d} libres`;
+      return `${vendidas}/${cap} · quedan ${stock}`;
     }
 
     function render() {
       const cont = document.getElementById("list");
       cont.innerHTML = "";
-      let rows = getRows();
 
-      rows = rows.map(r => ({
-        fecha_label: r[0],
-        hora:        r[1],
-        vendidas:    fmtInt(r[2]),
-        fecha_iso:   r[3],
-        cap:         fmtInt(r[4]),
-        stock:       fmtInt(r[5]),
-        abono:       r[6],
-        kulturDisp:  fmtInt(r[7] ?? null),
-        kulturVend:  fmtInt(r[8] ?? null),
-        kulturCap:   fmtInt(r[9] ?? null),
+      const table = getTable();
+      const headers = table.headers || [];
+      const rawRows = table.rows || [];
+
+      const idxFechaLabel = colIndex(headers, "Fecha", 0);
+      const idxHora = colIndex(headers, "Hora", 1);
+      const idxVendidas = colIndex(headers, "Vendidas", 2);
+      const idxFechaISO = colIndex(headers, "FechaISO", 3);
+      const idxCapacidad = colIndex(headers, "Capacidad", 4);
+      const idxStock = colIndex(headers, "Stock", 5);
+      const idxBuyUrl = colIndex(headers, "BuyUrl", 6);
+      const idxSource = colIndex(headers, "Source", 7);
+
+      let rows = rawRows.map(r => ({
+        fecha_label: r[idxFechaLabel],
+        hora: r[idxHora],
+        vendidas: fmtInt(r[idxVendidas]),
+        fecha_iso: r[idxFechaISO],
+        cap: fmtInt(r[idxCapacidad]),
+        stock: fmtInt(r[idxStock]),
+        buyUrl: r[idxBuyUrl] || null,
+        source: r[idxSource] || null
       }));
 
-      rows.sort((a, b) => (a.fecha_iso + a.hora).localeCompare(b.fecha_iso + b.hora));
+      rows = rows.filter(r => r.fecha_iso && r.hora);
+
+      rows.sort((a, b) =>
+        (a.fecha_iso + a.hora).localeCompare(b.fecha_iso + b.hora)
+      );
+
+      if (!rows.length) {
+        cont.innerHTML = `
+          <div class="item">
+            <div class="date">Sin funciones próximas</div>
+            <div class="time">No hay fechas disponibles ahora mismo.</div>
+          </div>
+        `;
+        return;
+      }
 
       let currentMonth = null;
 
       for (const r of rows) {
         const d = new Date(r.fecha_iso + "T00:00:00");
-        const key = d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0");
+        const key =
+          d.getFullYear() + "-" +
+          String(d.getMonth() + 1).padStart(2, "0");
 
         if (key !== currentMonth) {
           currentMonth = key;
+
           const h = document.createElement("h3");
           h.className = "month";
-          h.textContent = d.toLocaleDateString("es-ES", { month: "long", year: "numeric" });
+          h.textContent = d.toLocaleDateString("es-ES", {
+            month: "long",
+            year: "numeric"
+          });
+
           cont.appendChild(h);
         }
 
-        // Dina — siempre desglose completo
-        const dinaCls   = chipClassFrom(r.vendidas ?? 0, r.stock ?? 999999);
-        const dinaValue = `${r.vendidas ?? "—"}/${r.cap ?? "—"} · quedan ${r.stock ?? "—"}`;
-
-        // Kultur
-        const kCls = (r.kulturVend !== null && r.kulturCap !== null)
-          ? kulturChipClassFull(r.kulturVend, r.kulturCap)
-          : kulturChipClass(r.kulturDisp);
-        const kVal = (r.kulturVend !== null && r.kulturCap !== null)
-          ? kulturValueFull(r.kulturVend, r.kulturCap)
-          : kulturValue(r.kulturDisp);
-
-        // Abono
-        let abonoHTML = "";
-        if (r.abono) {
-          if (String(r.abono).toLowerCase() === "venta")
-            abonoHTML = `<div class="abono ok">Abono: Disponible</div>`;
-          if (String(r.abono).toLowerCase() === "agotado")
-            abonoHTML = `<div class="abono no">Abono: Agotado</div>`;
-        }
+        const chipCls = chipClassFrom(r.vendidas, r.stock);
+        const label = sourceLabel(r.source);
+        const value = stockValue(r);
 
         const card = document.createElement("div");
         card.className = "item";
+
         card.innerHTML = `
           <div class="row-top">
-            <div class="date">${r.fecha_label}<span>(${dayName(r.fecha_iso)})</span></div>
+            <div class="date">
+              ${r.fecha_label}
+              <span>(${dayName(r.fecha_iso)})</span>
+            </div>
           </div>
+
           <div class="time">${r.hora} h</div>
-      <div class="chips ${(r.kulturDisp !== null || r.kulturVend !== null) ? 'two' : ''}">
-            <div class="chip ${dinaCls}">
+
+          <div class="chips">
+            <div class="chip ${chipCls}">
               <div class="chip-left">
-                <div class="chip-title">Dina</div>
-                <div class="chip-value">${dinaValue}</div>
+                <div class="chip-title">${label}</div>
+                <div class="chip-value">${value}</div>
               </div>
             </div>
-            ${(r.kulturDisp !== null || r.kulturVend !== null) ? `
-            <div class="chip ${kCls}">
-              <div class="chip-left">
-                <div class="chip-title">Kultur</div>
-                <div class="chip-value">${kVal}</div>
-              </div>
-            </div>` : ''}
           </div>
-          ${abonoHTML}
         `;
 
         cont.appendChild(card);
@@ -542,24 +556,31 @@
 
   <script>
     (function () {
-      if (!('serviceWorker' in navigator)) return;
+      if (!("serviceWorker" in navigator)) return;
+
       const RELOAD_KEY = "sw-reloaded-once";
-      navigator.serviceWorker.register('sw.js?v=2026-03-05-01').then((reg) => {
+
+      navigator.serviceWorker.register("sw.js?v=2026-06-01-01").then((reg) => {
         reg.update().catch(() => {});
+
         function activateWaitingSW() {
           if (!reg.waiting) return;
           reg.waiting.postMessage({ type: "SKIP_WAITING" });
         }
+
         activateWaitingSW();
+
         reg.addEventListener("updatefound", () => {
           const sw = reg.installing;
           if (!sw) return;
+
           sw.addEventListener("statechange", () => {
             if (sw.state === "installed" && navigator.serviceWorker.controller) {
               activateWaitingSW();
             }
           });
         });
+
         navigator.serviceWorker.addEventListener("controllerchange", () => {
           if (sessionStorage.getItem(RELOAD_KEY) === "1") return;
           sessionStorage.setItem(RELOAD_KEY, "1");
