@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+    #!/usr/bin/env python3
 from __future__ import annotations
 
 import json
@@ -60,13 +60,16 @@ MESES_ES = {
 def normalize_hhmm(h: str | None) -> str:
     if not h:
         return "00:00"
+
     s = str(h).strip().lower()
     s = s.replace(" ", "").replace("h", "")
     s = re.sub(r"[^0-9:]", "", s)
     s = s.rstrip(":")
+
     m = re.match(r"^(\d{1,2})(?::?(\d{2}))?$", s)
     if not m:
         return s
+
     return f"{int(m.group(1)):02d}:{int(m.group(2) or '00'):02d}"
 
 
@@ -82,6 +85,7 @@ def write_html(payload: dict) -> None:
 
     if MANIFEST_PATH.exists():
         shutil.copy(MANIFEST_PATH, DOCS_DIR / "manifest.json")
+
     if SW_PATH.exists():
         shutil.copy(SW_PATH, DOCS_DIR / "sw.js")
 
@@ -90,24 +94,35 @@ def write_html(payload: dict) -> None:
 
 def write_schedule_json(payload: dict) -> None:
     DOCS_DIR.mkdir(exist_ok=True)
+
     (DOCS_DIR / "schedule.json").write_text(
         json.dumps(payload, ensure_ascii=False, indent=2),
         "utf-8",
     )
+
     print("✔ Generado docs/schedule.json")
 
 
 def fetch_functions_dinaticket(url: str) -> list[dict]:
     r = requests.get(url, headers=UA, timeout=20)
     r.raise_for_status()
-    soup = BeautifulSoup(r.text, "html.parser")
 
+    soup = BeautifulSoup(r.text, "html.parser")
     out: list[dict] = []
 
     mes_map = {
-        "Ene": "01", "Feb": "02", "Mar": "03", "Abr": "04",
-        "May": "05", "Jun": "06", "Jul": "07", "Ago": "08",
-        "Sep": "09", "Oct": "10", "Nov": "11", "Dic": "12",
+        "Ene": "01",
+        "Feb": "02",
+        "Mar": "03",
+        "Abr": "04",
+        "May": "05",
+        "Jun": "06",
+        "Jul": "07",
+        "Ago": "08",
+        "Sep": "09",
+        "Oct": "10",
+        "Nov": "11",
+        "Dic": "12",
     }
 
     for session in soup.find_all("div", class_="js-session-row"):
@@ -117,11 +132,13 @@ def fetch_functions_dinaticket(url: str) -> list[dict]:
 
         dia = parent.find("span", class_="num_dia")
         mes = parent.find("span", class_="mes")
+
         if not dia or not mes:
             continue
 
         mes_txt = mes.text.strip().replace(".", "")
         mes_num = mes_map.get(mes_txt)
+
         if not mes_num:
             continue
 
@@ -145,21 +162,23 @@ def fetch_functions_dinaticket(url: str) -> list[dict]:
         quotas = session.find_all("div", class_="js-quota-row")
 
         if not quotas:
-            cap, stock, vendidas = None, None, None
+            cap = None
+            stock = None
+            vendidas = None
         else:
             cap = sum(int(q.get("data-quota-total", 0)) for q in quotas)
             stock = sum(int(q.get("data-stock", 0)) for q in quotas)
             vendidas = max(0, cap - stock)
 
         out.append({
-    "fecha_label": fecha_label,
-    "fecha_iso": fecha_iso,
-    "hora": hora,
-    "vendidas_dt": vendidas,
-    "capacidad": capacidad,
-    "stock": stock,
-    "buy_url": select_url,
-})
+            "fecha_label": fecha_label,
+            "fecha_iso": fecha_iso,
+            "hora": hora,
+            "vendidas_dt": vendidas,
+            "capacidad": cap,
+            "stock": stock,
+            "buy_url": None,
+        })
 
     return sorted(out, key=lambda f: (f["fecha_iso"], f["hora"]))
 
@@ -325,6 +344,7 @@ def fetch_functions_onebox(url: str) -> list[dict]:
                     seen.add(key)
 
                     stock, capacidad = count_onebox_stock_playwright(page)
+
                     vendidas = (
                         max(0, capacidad - stock)
                         if stock is not None and capacidad is not None
@@ -341,6 +361,7 @@ def fetch_functions_onebox(url: str) -> list[dict]:
                         "vendidas_dt": vendidas,
                         "capacidad": capacidad,
                         "stock": stock,
+                        "buy_url": select_url,
                     })
 
             except Exception as e:
@@ -354,14 +375,23 @@ def fetch_functions_onebox(url: str) -> list[dict]:
 def fetch_abonoteatro_shows(url: str) -> set[tuple[str, str]]:
     r = requests.get(url, headers=UA, timeout=20)
     r.raise_for_status()
-    soup = BeautifulSoup(r.text, "html.parser")
 
+    soup = BeautifulSoup(r.text, "html.parser")
     out: set[tuple[str, str]] = set()
 
     mes_map = {
-        "enero": "01", "febrero": "02", "marzo": "03", "abril": "04",
-        "mayo": "05", "junio": "06", "julio": "07", "agosto": "08",
-        "septiembre": "09", "octubre": "10", "noviembre": "11", "diciembre": "12",
+        "enero": "01",
+        "febrero": "02",
+        "marzo": "03",
+        "abril": "04",
+        "mayo": "05",
+        "junio": "06",
+        "julio": "07",
+        "agosto": "08",
+        "septiembre": "09",
+        "octubre": "10",
+        "noviembre": "11",
+        "diciembre": "12",
     }
 
     for ses in soup.find_all("div", class_="bsesion"):
@@ -376,6 +406,7 @@ def fetch_abonoteatro_shows(url: str) -> set[tuple[str, str]]:
             continue
 
         parts = mes_tag.text.strip().lower().split()
+
         if len(parts) < 2:
             continue
 
@@ -388,6 +419,7 @@ def fetch_abonoteatro_shows(url: str) -> set[tuple[str, str]]:
         dia = re.sub(r"\D", "", dia_tag.text).zfill(2)
 
         hora_match = re.search(r"(\d{1,2}):(\d{2})", hora_tag.text)
+
         if not hora_match:
             continue
 
@@ -438,6 +470,7 @@ def build_payload(
                 f["capacidad"],
                 f["stock"],
                 f["abono_estado"],
+                f.get("buy_url"),
             ]
             for f in proximas
         ]
@@ -450,6 +483,7 @@ def build_payload(
             "Capacidad",
             "Stock",
             "Abono",
+            "BuyUrl",
         ]
 
         out[sala] = {
