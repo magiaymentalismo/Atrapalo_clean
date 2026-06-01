@@ -152,13 +152,14 @@ def fetch_functions_dinaticket(url: str) -> list[dict]:
             vendidas = max(0, cap - stock)
 
         out.append({
-            "fecha_label": fecha_label,
-            "fecha_iso": fecha_iso,
-            "hora": hora,
-            "vendidas_dt": vendidas,
-            "capacidad": cap,
-            "stock": stock,
-        })
+    "fecha_label": fecha_label,
+    "fecha_iso": fecha_iso,
+    "hora": hora,
+    "vendidas_dt": vendidas,
+    "capacidad": capacidad,
+    "stock": stock,
+    "buy_url": select_url,
+})
 
     return sorted(out, key=lambda f: (f["fecha_iso"], f["hora"]))
 
