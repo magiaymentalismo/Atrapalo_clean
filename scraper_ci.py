@@ -1,4 +1,4 @@
-    #!/usr/bin/env python3
+#!/usr/bin/env python3
 from __future__ import annotations
 
 import json
@@ -12,7 +12,9 @@ import requests
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
 
-EVENTS = {
+# ===================== CONFIG ===================== #
+
+DINATICKET_EVENTS = {
     "Disfruta": ["https://www.dinaticket.com/es/provider/20864/event/4947155"],
     "Escondi2": ["https://www.dinaticket.com/es/provider/20864/event/4943466"],
     "CluedoMental": ["https://www.dinaticket.com/es/provider/10402/event/4948503"],
@@ -20,10 +22,6 @@ EVENTS = {
 
 ONEBOX_EVENTS = {
     "Miedo": "https://entradas.laescaleradejacob.es/laescaleradejacob/events/56108",
-}
-
-ABONO_URLS = {
-    "Disfruta": "https://compras.abonoteatro.com/?pagename=espectaculo&eventid=57914",
 }
 
 UA = {
@@ -41,6 +39,21 @@ MANIFEST_PATH = Path("manifest.json")
 SW_PATH = Path("sw.js")
 DOCS_DIR = Path("docs")
 
+MESES_CORTOS = {
+    "Ene": "01",
+    "Feb": "02",
+    "Mar": "03",
+    "Abr": "04",
+    "May": "05",
+    "Jun": "06",
+    "Jul": "07",
+    "Ago": "08",
+    "Sep": "09",
+    "Oct": "10",
+    "Nov": "11",
+    "Dic": "12",
+}
+
 MESES_ES = {
     "ene": "01", "enero": "01",
     "feb": "02", "febrero": "02",
@@ -56,6 +69,8 @@ MESES_ES = {
     "dic": "12", "diciembre": "12",
 }
 
+
+# ===================== HELPERS ===================== #
 
 def normalize_hhmm(h: str | None) -> str:
     if not h:
@@ -73,7 +88,20 @@ def normalize_hhmm(h: str | None) -> str:
     return f"{int(m.group(1)):02d}:{int(m.group(2) or '00'):02d}"
 
 
+def safe_int(value, default: int = 0) -> int:
+    try:
+        return int(value)
+    except Exception:
+        return default
+
+
+# ===================== OUTPUT ===================== #
+
 def write_html(payload: dict) -> None:
+    if not TEMPLATE_PATH.exists():
+        print("⚠️ No existe template.html; no genero docs/index.html")
+        return
+
     html_template = TEMPLATE_PATH.read_text("utf-8")
     html = html_template.replace(
         "{{PAYLOAD_JSON}}",
@@ -103,27 +131,14 @@ def write_schedule_json(payload: dict) -> None:
     print("✔ Generado docs/schedule.json")
 
 
+# ===================== DINATICKET ===================== #
+
 def fetch_functions_dinaticket(url: str) -> list[dict]:
     r = requests.get(url, headers=UA, timeout=20)
     r.raise_for_status()
 
     soup = BeautifulSoup(r.text, "html.parser")
     out: list[dict] = []
-
-    mes_map = {
-        "Ene": "01",
-        "Feb": "02",
-        "Mar": "03",
-        "Abr": "04",
-        "May": "05",
-        "Jun": "06",
-        "Jul": "07",
-        "Ago": "08",
-        "Sep": "09",
-        "Oct": "10",
-        "Nov": "11",
-        "Dic": "12",
-    }
 
     for session in soup.find_all("div", class_="js-session-row"):
         parent = session.find_parent("div", class_="js-session-group")
@@ -136,17 +151,18 @@ def fetch_functions_dinaticket(url: str) -> list[dict]:
         if not dia or not mes:
             continue
 
-        mes_txt = mes.text.strip().replace(".", "")
-        mes_num = mes_map.get(mes_txt)
+        mes_txt = mes.get_text(strip=True).replace(".", "")
+        mes_num = MESES_CORTOS.get(mes_txt)
 
         if not mes_num:
+            print("DEBUG Dinaticket mes no reconocido:", repr(mes_txt))
             continue
 
         now = datetime.now(TZ)
         anio = now.year
 
         fecha_tmp = datetime.strptime(
-            f"{anio}-{mes_num}-{dia.text.strip().zfill(2)}",
+            f"{anio}-{mes_num}-{dia.get_text(strip=True).zfill(2)}",
             "%Y-%m-%d",
         )
 
@@ -157,7 +173,7 @@ def fetch_functions_dinaticket(url: str) -> list[dict]:
         fecha_label = fecha_tmp.strftime("%d %b %Y")
 
         hora_span = session.find("span", class_="session-card__time-session")
-        hora = normalize_hhmm(hora_span.text if hora_span else "")
+        hora = normalize_hhmm(hora_span.get_text(strip=True) if hora_span else "")
 
         quotas = session.find_all("div", class_="js-quota-row")
 
@@ -166,8 +182,8 @@ def fetch_functions_dinaticket(url: str) -> list[dict]:
             stock = None
             vendidas = None
         else:
-            cap = sum(int(q.get("data-quota-total", 0)) for q in quotas)
-            stock = sum(int(q.get("data-stock", 0)) for q in quotas)
+            cap = sum(safe_int(q.get("data-quota-total", 0)) for q in quotas)
+            stock = sum(safe_int(q.get("data-stock", 0)) for q in quotas)
             vendidas = max(0, cap - stock)
 
         out.append({
@@ -178,10 +194,13 @@ def fetch_functions_dinaticket(url: str) -> list[dict]:
             "capacidad": cap,
             "stock": stock,
             "buy_url": None,
+            "source": "dinaticket",
         })
 
     return sorted(out, key=lambda f: (f["fecha_iso"], f["hora"]))
 
+
+# ===================== ONEBOX ===================== #
 
 def parse_onebox_date(raw: str) -> tuple[str, str] | None:
     raw = raw.replace("\xa0", " ")
@@ -202,7 +221,7 @@ def parse_onebox_date(raw: str) -> tuple[str, str] | None:
     mes_num = MESES_ES.get(mes_key)
 
     if not mes_num:
-        print("DEBUG mes Onebox no reconocido:", repr(mes_txt))
+        print("DEBUG Onebox mes no reconocido:", repr(mes_txt))
         return None
 
     fecha_iso = f"{anio}-{mes_num}-{dia.zfill(2)}"
@@ -230,13 +249,13 @@ def extract_onebox_dates_from_text(text: str) -> list[str]:
 
 def count_onebox_stock_playwright(page) -> tuple[int | None, int | None]:
     available_selectors = [
+        ".seat.available",
+        ".available",
+        ".is-available",
         "[data-status='available']",
         "[data-state='available']",
         "[data-seat-status='available']",
         "[data-availability='available']",
-        ".available",
-        ".is-available",
-        ".seat.available",
         "button:not([disabled])[aria-label*='Asiento']",
         "button:not([disabled])[aria-label*='Butaca']",
         "button:not([disabled])[aria-label*='Seat']",
@@ -244,10 +263,10 @@ def count_onebox_stock_playwright(page) -> tuple[int | None, int | None]:
     ]
 
     total_selectors = [
+        ".seat",
         "[data-seat-id]",
         "[data-place-id]",
         "[data-seat]",
-        ".seat",
         "button[aria-label*='Asiento']",
         "button[aria-label*='Butaca']",
         "button[aria-label*='Seat']",
@@ -260,7 +279,6 @@ def count_onebox_stock_playwright(page) -> tuple[int | None, int | None]:
     for selector in available_selectors:
         try:
             n = page.locator(selector).count()
-            print(f"DEBUG AVAILABLE {selector} -> {n}")
             if n:
                 stock = n
                 break
@@ -270,7 +288,6 @@ def count_onebox_stock_playwright(page) -> tuple[int | None, int | None]:
     for selector in total_selectors:
         try:
             n = page.locator(selector).count()
-            print(f"DEBUG TOTAL {selector} -> {n}")
             if n:
                 capacidad = n
                 break
@@ -318,7 +335,7 @@ def fetch_functions_onebox(url: str) -> list[dict]:
             return []
 
         select_urls = get_onebox_select_urls(page, url)
-        print("DEBUG Onebox select URLs:", select_urls)
+        print(f"Onebox URLs detectadas: {len(select_urls)}")
 
         for select_url in select_urls:
             try:
@@ -328,7 +345,9 @@ def fetch_functions_onebox(url: str) -> list[dict]:
                 body_text = page.locator("body").inner_text(timeout=15000)
                 date_texts = extract_onebox_dates_from_text(body_text)
 
-                print("DEBUG Onebox fechas en", select_url, ":", date_texts)
+                if not date_texts:
+                    print(f"DEBUG Onebox sin fecha visible: {select_url}")
+                    continue
 
                 for raw_date in date_texts:
                     parsed = parse_onebox_date(raw_date)
@@ -362,6 +381,7 @@ def fetch_functions_onebox(url: str) -> list[dict]:
                         "capacidad": capacidad,
                         "stock": stock,
                         "buy_url": select_url,
+                        "source": "onebox",
                     })
 
             except Exception as e:
@@ -372,89 +392,36 @@ def fetch_functions_onebox(url: str) -> list[dict]:
     return sorted(out, key=lambda f: (f["fecha_iso"], f["hora"]))
 
 
-def fetch_abonoteatro_shows(url: str) -> set[tuple[str, str]]:
-    r = requests.get(url, headers=UA, timeout=20)
-    r.raise_for_status()
+# ===================== PAYLOAD ===================== #
 
-    soup = BeautifulSoup(r.text, "html.parser")
-    out: set[tuple[str, str]] = set()
-
-    mes_map = {
-        "enero": "01",
-        "febrero": "02",
-        "marzo": "03",
-        "abril": "04",
-        "mayo": "05",
-        "junio": "06",
-        "julio": "07",
-        "agosto": "08",
-        "septiembre": "09",
-        "octubre": "10",
-        "noviembre": "11",
-        "diciembre": "12",
-    }
-
-    for ses in soup.find_all("div", class_="bsesion"):
-        if not ses.find("a", class_="buyBtn"):
-            continue
-
-        mes_tag = ses.find("p", class_="psess")
-        dia_tag = ses.find("p", class_="psesb")
-        hora_tag = ses.find("h3", class_="horasesion")
-
-        if not (mes_tag and dia_tag and hora_tag):
-            continue
-
-        parts = mes_tag.text.strip().lower().split()
-
-        if len(parts) < 2:
-            continue
-
-        mes_nombre, anio = parts[0], parts[1]
-        mes_num = mes_map.get(mes_nombre)
-
-        if not mes_num:
-            continue
-
-        dia = re.sub(r"\D", "", dia_tag.text).zfill(2)
-
-        hora_match = re.search(r"(\d{1,2}):(\d{2})", hora_tag.text)
-
-        if not hora_match:
-            continue
-
-        hora = normalize_hhmm(f"{hora_match.group(1)}:{hora_match.group(2)}")
-        fecha_iso = f"{anio}-{mes_num}-{dia}"
-
-        out.add((fecha_iso, hora))
-
-    return out
-
-
-def build_payload(
-    eventos: dict[str, list[dict]],
-    abono_by_sala: dict[str, set[tuple[str, str]]],
-) -> dict:
+def build_payload(eventos: dict[str, list[dict]]) -> dict:
     now = datetime.now(TZ)
     out: dict[str, dict] = {}
 
-    for sala, funcs in eventos.items():
-        abono_shows = abono_by_sala.get(sala, set())
-        has_abono = sala in abono_by_sala
+    headers = [
+        "Fecha",
+        "Hora",
+        "Vendidas",
+        "FechaISO",
+        "Capacidad",
+        "Stock",
+        "BuyUrl",
+        "Source",
+    ]
 
+    for sala, funcs in eventos.items():
         proximas: list[dict] = []
 
         for f in funcs:
             f["hora"] = normalize_hhmm(f.get("hora"))
 
-            f["abono_estado"] = (
-                "venta" if (f["fecha_iso"], f["hora"]) in abono_shows else "agotado"
-            ) if has_abono else None
-
-            ses_dt = datetime.strptime(
-                f"{f['fecha_iso']} {f['hora']}",
-                "%Y-%m-%d %H:%M",
-            ).replace(tzinfo=TZ)
+            try:
+                ses_dt = datetime.strptime(
+                    f"{f['fecha_iso']} {f['hora']}",
+                    "%Y-%m-%d %H:%M",
+                ).replace(tzinfo=TZ)
+            except Exception:
+                continue
 
             if ses_dt >= now:
                 proximas.append(f)
@@ -463,28 +430,19 @@ def build_payload(
 
         rows = [
             [
-                f["fecha_label"],
-                f["hora"],
-                f["vendidas_dt"],
-                f["fecha_iso"],
-                f["capacidad"],
-                f["stock"],
-                f["abono_estado"],
+                f.get("fecha_label"),
+                f.get("hora"),
+                f.get("vendidas_dt"),
+                f.get("fecha_iso"),
+                f.get("capacidad"),
+                f.get("stock"),
                 f.get("buy_url"),
+                f.get("source"),
             ]
             for f in proximas
         ]
 
-        headers = [
-            "Fecha",
-            "Hora",
-            "Vendidas",
-            "FechaISO",
-            "Capacidad",
-            "Stock",
-            "Abono",
-            "BuyUrl",
-        ]
+        print(f"[DEBUG] {sala}: total={len(funcs)} próximas={len(proximas)}")
 
         out[sala] = {
             "table": {"headers": headers, "rows": rows},
@@ -497,10 +455,12 @@ def build_payload(
     }
 
 
+# ===================== MAIN ===================== #
+
 if __name__ == "__main__":
     current: dict[str, list[dict]] = {}
 
-    for sala, urls in EVENTS.items():
+    for sala, urls in DINATICKET_EVENTS.items():
         funcs: list[dict] = []
 
         for url in urls:
@@ -510,7 +470,7 @@ if __name__ == "__main__":
                 print(f"ERROR Dinaticket {sala}: {e}")
 
         current[sala] = funcs
-        print(f"Dina {sala}: {len(funcs)} funciones")
+        print(f"Dinaticket {sala}: {len(funcs)} funciones")
 
     for sala, url in ONEBOX_EVENTS.items():
         try:
@@ -521,20 +481,8 @@ if __name__ == "__main__":
 
         current[sala] = funcs
         print(f"Onebox {sala}: {len(funcs)} funciones")
-        print(f"DEBUG Onebox {sala} funcs:", funcs)
 
-    abono_by_sala: dict[str, set[tuple[str, str]]] = {}
+    payload = build_payload(current)
 
-    for sala, url in ABONO_URLS.items():
-        try:
-            shows = fetch_abonoteatro_shows(url)
-        except Exception as e:
-            print(f"ERROR Abono {sala}: {e}")
-            shows = set()
-
-        abono_by_sala[sala] = shows
-        print(f"Abono {sala}: {len(shows)}")
-
-    payload = build_payload(current, abono_by_sala)
     write_html(payload)
     write_schedule_json(payload)
