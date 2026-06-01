@@ -24,6 +24,16 @@ ONEBOX_EVENTS = {
     "Miedo": "https://entradas.laescaleradejacob.es/laescaleradejacob/events/56108",
 }
 
+# Respaldo por si Onebox no pinta los enlaces /select/ en GitHub Actions.
+ONEBOX_FALLBACK_SELECTS = {
+    "https://entradas.laescaleradejacob.es/laescaleradejacob/events/56108": [
+        "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904525",
+        "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904526",
+        "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904527",
+        "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904528",
+    ],
+}
+
 UA = {
     "User-Agent": (
         "Mozilla/5.0 (Macintosh; Intel Mac OS X) "
@@ -40,18 +50,9 @@ SW_PATH = Path("sw.js")
 DOCS_DIR = Path("docs")
 
 MESES_CORTOS = {
-    "Ene": "01",
-    "Feb": "02",
-    "Mar": "03",
-    "Abr": "04",
-    "May": "05",
-    "Jun": "06",
-    "Jul": "07",
-    "Ago": "08",
-    "Sep": "09",
-    "Oct": "10",
-    "Nov": "11",
-    "Dic": "12",
+    "Ene": "01", "Feb": "02", "Mar": "03", "Abr": "04",
+    "May": "05", "Jun": "06", "Jul": "07", "Ago": "08",
+    "Sep": "09", "Oct": "10", "Nov": "11", "Dic": "12",
 }
 
 MESES_ES = {
@@ -301,12 +302,35 @@ def get_onebox_select_urls(page, parent_url: str) -> list[str]:
     if "/select/" in parent_url:
         return [parent_url]
 
-    hrefs = page.eval_on_selector_all(
-        "a[href]",
-        """els => els.map(a => a.href).filter(h => h.includes('/select/'))"""
-    )
+    hrefs = []
 
-    return sorted(set(hrefs))
+    try:
+        page.wait_for_load_state("networkidle", timeout=15000)
+    except Exception:
+        pass
+
+    for delay in [2000, 4000, 6000]:
+        page.wait_for_timeout(delay)
+
+        try:
+            hrefs = page.eval_on_selector_all(
+                "a[href]",
+                """els => els.map(a => a.href).filter(h => h.includes('/select/'))"""
+            )
+        except Exception:
+            hrefs = []
+
+        hrefs = sorted(set(hrefs))
+
+        if hrefs:
+            return hrefs
+
+    fallback = ONEBOX_FALLBACK_SELECTS.get(parent_url, [])
+    if fallback:
+        print(f"⚠️ Onebox sin enlaces dinámicos; usando fallback: {len(fallback)} URLs")
+        return fallback
+
+    return []
 
 
 def fetch_functions_onebox(url: str) -> list[dict]:
@@ -328,7 +352,6 @@ def fetch_functions_onebox(url: str) -> list[dict]:
 
         try:
             page.goto(url, wait_until="domcontentloaded", timeout=45000)
-            page.wait_for_timeout(5000)
         except Exception as e:
             print(f"ERROR Onebox página padre {url}: {e}")
             browser.close()
@@ -340,7 +363,11 @@ def fetch_functions_onebox(url: str) -> list[dict]:
         for select_url in select_urls:
             try:
                 page.goto(select_url, wait_until="domcontentloaded", timeout=45000)
-                page.wait_for_timeout(5000)
+
+                try:
+                    page.wait_for_selector(".seat, .available", timeout=15000)
+                except Exception:
+                    page.wait_for_timeout(5000)
 
                 body_text = page.locator("body").inner_text(timeout=15000)
                 date_texts = extract_onebox_dates_from_text(body_text)
