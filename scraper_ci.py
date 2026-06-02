@@ -29,6 +29,12 @@ ONEBOX_FALLBACK_SELECTS = {
         {"url": "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904527", "fecha_iso": "2026-06-19", "hora": "23:00"},
         {"url": "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904528", "fecha_iso": "2026-06-26", "hora": "23:00"},
     ],
+
+    "https://entradas.laescaleradejacob.es/laescaleradejacob/events/56921": [
+        {"url": "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2905048", "fecha_iso": "2026-06-05", "hora": "19:30"},
+        {"url": "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2905049", "fecha_iso": "2026-06-19", "hora": "19:30"},
+        {"url": "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2905050", "fecha_iso": "2026-06-26", "hora": "19:30"},
+    ],
 }
 
 UA = {
