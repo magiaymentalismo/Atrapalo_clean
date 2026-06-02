@@ -17,11 +17,11 @@ from playwright.sync_api import sync_playwright
 DINATICKET_EVENTS = {
     "Disfruta": ["https://www.dinaticket.com/es/provider/20864/event/4947155"],
     "Escondi2": ["https://www.dinaticket.com/es/provider/20864/event/4943466"],
-    "CluedoMental": ["https://www.dinaticket.com/es/provider/10402/event/4948503"],
 }
 
 ONEBOX_EVENTS = {
     "Miedo": "https://entradas.laescaleradejacob.es/laescaleradejacob/events/56108",
+    "CluedoMental": "https://entradas.laescaleradejacob.es/laescaleradejacob/events/56921",
 }
 
 ONEBOX_FALLBACK_SELECTS = {
