@@ -45,6 +45,7 @@ TEMPLATE_PATH = Path("template.html")
 MANIFEST_PATH = Path("manifest.json")
 SW_PATH = Path("sw.js")
 DOCS_DIR = Path("docs")
+ONEBOX_CACHE_PATH = DOCS_DIR / "onebox_cache.json"
 
 MESES_CORTOS = {
     "Ene": "01", "Feb": "02", "Mar": "03", "Abr": "04",
@@ -91,6 +92,25 @@ def safe_int(value, default: int = 0) -> int:
         return default
 
 
+def load_onebox_cache() -> dict:
+    if not ONEBOX_CACHE_PATH.exists():
+        return {}
+
+    try:
+        return json.loads(ONEBOX_CACHE_PATH.read_text("utf-8"))
+    except Exception:
+        return {}
+
+
+def save_onebox_cache(cache: dict) -> None:
+    DOCS_DIR.mkdir(exist_ok=True)
+    ONEBOX_CACHE_PATH.write_text(
+        json.dumps(cache, ensure_ascii=False, indent=2),
+        "utf-8",
+    )
+    print("✔ Actualizado docs/onebox_cache.json")
+
+
 def write_html(payload: dict) -> None:
     if not TEMPLATE_PATH.exists():
         print("⚠️ No existe template.html; no genero docs/index.html")
@@ -116,12 +136,10 @@ def write_html(payload: dict) -> None:
 
 def write_schedule_json(payload: dict) -> None:
     DOCS_DIR.mkdir(exist_ok=True)
-
     (DOCS_DIR / "schedule.json").write_text(
         json.dumps(payload, ensure_ascii=False, indent=2),
         "utf-8",
     )
-
     print("✔ Generado docs/schedule.json")
 
 
@@ -324,6 +342,8 @@ def get_onebox_select_urls(page, parent_url: str) -> list[dict]:
 def fetch_functions_onebox(url: str) -> list[dict]:
     out: list[dict] = []
     seen: set[tuple[str, str]] = set()
+    cache = load_onebox_cache()
+    cache_changed = False
 
     with sync_playwright() as p:
         browser = p.chromium.launch(
@@ -383,12 +403,27 @@ def fetch_functions_onebox(url: str) -> list[dict]:
                 seen.add(key)
 
                 stock, capacidad = count_onebox_stock_playwright(page)
+                cache_key = f"{fecha_iso}|{hora}|{select_url}"
 
-                vendidas = (
-                    max(0, capacidad - stock)
-                    if stock is not None and capacidad is not None
-                    else None
-                )
+                if stock is not None and capacidad is not None:
+                    vendidas = max(0, capacidad - stock)
+                    cache[cache_key] = {
+                        "stock": stock,
+                        "capacidad": capacidad,
+                        "vendidas_dt": vendidas,
+                        "updated_at": datetime.now(TZ).isoformat(),
+                    }
+                    cache_changed = True
+                else:
+                    old = cache.get(cache_key)
+                    if old:
+                        stock = old.get("stock")
+                        capacidad = old.get("capacidad")
+                        vendidas = old.get("vendidas_dt")
+                        print(f"↩ Usando cache Onebox para {fecha_iso} {hora}: stock={stock}, cap={capacidad}")
+                    else:
+                        vendidas = None
+                        print(f"⚠️ Sin stock Onebox ni cache para {fecha_iso} {hora}")
 
                 fecha_dt = datetime.strptime(fecha_iso, "%Y-%m-%d")
                 fecha_label = fecha_dt.strftime("%d %b %Y")
@@ -408,6 +443,9 @@ def fetch_functions_onebox(url: str) -> list[dict]:
                 print(f"ERROR Onebox select {select_url}: {e}")
 
         browser.close()
+
+    if cache_changed:
+        save_onebox_cache(cache)
 
     return sorted(out, key=lambda f: (f["fecha_iso"], f["hora"]))
 
