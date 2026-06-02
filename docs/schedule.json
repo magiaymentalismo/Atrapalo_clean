@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T10:56:40.948497+02:00",
+  "generated_at": "2026-06-02T13:04:53.202838+02:00",
   "eventos": {
     "Disfruta": {
       "table": {
@@ -285,98 +285,6 @@
         }
       }
     },
-    "CluedoMental": {
-      "table": {
-        "headers": [
-          "Fecha",
-          "Hora",
-          "Vendidas",
-          "FechaISO",
-          "Capacidad",
-          "Stock",
-          "BuyUrl",
-          "Source"
-        ],
-        "rows": [
-          [
-            "05 Jun 2026",
-            "19:30",
-            14,
-            "2026-06-05",
-            49,
-            35,
-            null,
-            "dinaticket"
-          ],
-          [
-            "19 Jun 2026",
-            "19:30",
-            0,
-            "2026-06-19",
-            49,
-            49,
-            null,
-            "dinaticket"
-          ],
-          [
-            "26 Jun 2026",
-            "19:30",
-            2,
-            "2026-06-26",
-            49,
-            47,
-            null,
-            "dinaticket"
-          ]
-        ]
-      },
-      "proximas": {
-        "table": {
-          "headers": [
-            "Fecha",
-            "Hora",
-            "Vendidas",
-            "FechaISO",
-            "Capacidad",
-            "Stock",
-            "BuyUrl",
-            "Source"
-          ],
-          "rows": [
-            [
-              "05 Jun 2026",
-              "19:30",
-              14,
-              "2026-06-05",
-              49,
-              35,
-              null,
-              "dinaticket"
-            ],
-            [
-              "19 Jun 2026",
-              "19:30",
-              0,
-              "2026-06-19",
-              49,
-              49,
-              null,
-              "dinaticket"
-            ],
-            [
-              "26 Jun 2026",
-              "19:30",
-              2,
-              "2026-06-26",
-              49,
-              47,
-              null,
-              "dinaticket"
-            ]
-          ]
-        }
-      }
-    },
     "Miedo": {
       "table": {
         "headers": [
@@ -486,6 +394,36 @@
               "onebox"
             ]
           ]
+        }
+      }
+    },
+    "CluedoMental": {
+      "table": {
+        "headers": [
+          "Fecha",
+          "Hora",
+          "Vendidas",
+          "FechaISO",
+          "Capacidad",
+          "Stock",
+          "BuyUrl",
+          "Source"
+        ],
+        "rows": []
+      },
+      "proximas": {
+        "table": {
+          "headers": [
+            "Fecha",
+            "Hora",
+            "Vendidas",
+            "FechaISO",
+            "Capacidad",
+            "Stock",
+            "BuyUrl",
+            "Source"
+          ],
+          "rows": []
         }
       }
     }
