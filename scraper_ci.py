@@ -211,41 +211,48 @@ def parse_onebox_date(raw: str) -> tuple[str, str] | None:
     raw = raw.replace("\xa0", " ")
     raw = " ".join(raw.split()).lower()
 
-    m = re.search(
-        r"(?:lun|mar|mi[eé]|jue|vie|s[aá]b|dom)\.?,?\s+"
-        r"(\d{1,2})\s+([a-záéíóúñ]+)\s+(\d{4})\s*-\s*(\d{1,2}):(\d{2})",
-        raw,
-        re.IGNORECASE,
-    )
-    if not m:
-        return None
+    patterns = [
+        r"(?:lun|mar|mi[eé]|jue|vie|s[aá]b|dom)\.?,?\s+(\d{1,2})\s+([a-záéíóúñ]+)\s+(\d{4})\s*-\s*(\d{1,2}):(\d{2})",
+        r"(?:lunes|martes|mi[eé]rcoles|jueves|viernes|s[aá]bado|domingo)\.?,?\s+(\d{1,2})\s+de\s+([a-záéíóúñ]+)\s+de\s+(\d{4}).*?(\d{1,2}):(\d{2})",
+        r"(\d{1,2})[/-](\d{1,2})[/-](\d{4}).*?(\d{1,2}):(\d{2})",
+    ]
 
-    dia, mes_txt, anio, hh, mm = m.groups()
-    mes_key = mes_txt.lower().replace(".", "")
-    mes_num = MESES_ES.get(mes_key)
+    for i, pat in enumerate(patterns):
+        m = re.search(pat, raw, re.IGNORECASE)
+        if not m:
+            continue
 
-    if not mes_num:
-        print("DEBUG Onebox mes no reconocido:", repr(mes_txt))
-        return None
+        if i == 2:
+            dia, mes_num_raw, anio, hh, mm = m.groups()
+            mes_num = str(int(mes_num_raw)).zfill(2)
+        else:
+            dia, mes_txt, anio, hh, mm = m.groups()
+            mes_key = mes_txt.lower().replace(".", "")
+            mes_num = MESES_ES.get(mes_key)
+            if not mes_num:
+                print("DEBUG Onebox mes no reconocido:", repr(mes_txt))
+                return None
 
-    return f"{anio}-{mes_num}-{dia.zfill(2)}", f"{int(hh):02d}:{mm}"
+        return f"{anio}-{mes_num}-{dia.zfill(2)}", f"{int(hh):02d}:{mm}"
+
+    return None
 
 
 def extract_onebox_dates_from_text(text: str) -> list[str]:
     text = text.replace("\xa0", " ")
     text = " ".join(text.split())
 
-    pattern = re.compile(
-        r"(?:lun|mar|mi[eé]|jue|vie|s[aá]b|dom)\.?,?\s+"
-        r"\d{1,2}\s+"
-        r"(?:ene|feb|mar|abr|may|jun|jul|ago|sep|sept|oct|nov|dic|"
-        r"enero|febrero|marzo|abril|mayo|junio|julio|agosto|"
-        r"septiembre|octubre|noviembre|diciembre)"
-        r"\s+\d{4}\s*-\s*\d{1,2}:\d{2}",
-        re.IGNORECASE,
-    )
+    patterns = [
+        r"(?:lun|mar|mi[eé]|jue|vie|s[aá]b|dom)\.?,?\s+\d{1,2}\s+(?:ene|feb|mar|abr|may|jun|jul|ago|sep|sept|oct|nov|dic|enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)\s+\d{4}\s*-\s*\d{1,2}:\d{2}",
+        r"(?:lunes|martes|mi[eé]rcoles|jueves|viernes|s[aá]bado|domingo)\.?,?\s+\d{1,2}\s+de\s+(?:enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)\s+de\s+\d{4}.*?\d{1,2}:\d{2}",
+        r"\d{1,2}[/-]\d{1,2}[/-]\d{4}.*?\d{1,2}:\d{2}",
+    ]
 
-    return pattern.findall(text)
+    out: list[str] = []
+    for pat in patterns:
+        out.extend(re.findall(pat, text, re.IGNORECASE))
+
+    return out
 
 
 def count_onebox_stock_playwright(page) -> tuple[int | None, int | None]:
@@ -316,6 +323,38 @@ def extract_select_urls_from_html(html: str) -> list[str]:
     return sorted(urls)
 
 
+def save_debug_page(page, sala: str, label: str, select_url: str | None = None) -> None:
+    DOCS_DIR.mkdir(exist_ok=True)
+
+    clean_label = slugify(label)
+    debug_html = DOCS_DIR / f"debug_onebox_{slugify(sala)}_{clean_label}.html"
+    debug_txt = DOCS_DIR / f"debug_onebox_{slugify(sala)}_{clean_label}.txt"
+
+    html = page.content()
+    debug_html.write_text(html, "utf-8")
+
+    try:
+        body_text = page.locator("body").inner_text(timeout=10000)
+    except Exception:
+        body_text = ""
+
+    debug_txt.write_text(
+        "SALA:\n"
+        + sala
+        + "\n\nSELECT URL:\n"
+        + str(select_url or "")
+        + "\n\nPAGE URL:\n"
+        + page.url
+        + "\n\nBODY:\n"
+        + body_text[:15000]
+        + "\n\nHTML_HEAD:\n"
+        + html[:8000],
+        "utf-8",
+    )
+
+    print(f"DEBUG guardado {debug_txt} y {debug_html}")
+
+
 def get_onebox_select_urls(page, parent_url: str, sala: str) -> list[dict]:
     if "/select/" in parent_url:
         return [{"url": parent_url}]
@@ -362,30 +401,8 @@ def get_onebox_select_urls(page, parent_url: str, sala: str) -> list[dict]:
             out.append(fallback_by_url.get(h, {"url": h}))
         return out
 
-    DOCS_DIR.mkdir(exist_ok=True)
-    debug_html = DOCS_DIR / f"debug_onebox_{slugify(sala)}.html"
-    debug_txt = DOCS_DIR / f"debug_onebox_{slugify(sala)}.txt"
-
-    debug_html.write_text(html, "utf-8")
-
-    try:
-        body_text = page.locator("body").inner_text(timeout=10000)
-    except Exception:
-        body_text = ""
-
-    debug_txt.write_text(
-        "PAGE URL:\n"
-        + page.url
-        + "\n\nTOTAL HREFS:\n"
-        + str(len(all_hrefs))
-        + "\n\nHREFS:\n"
-        + "\n".join(all_hrefs)
-        + "\n\nBODY:\n"
-        + body_text[:10000],
-        "utf-8",
-    )
-
-    print(f"⚠️ Onebox sin /select/ para {sala}; guardado {debug_html} y {debug_txt}")
+    print(f"⚠️ Onebox sin /select/ para {sala}")
+    save_debug_page(page, sala, "parent_no_select", parent_url)
 
     if fallback:
         print(f"⚠️ Usando fallback: {len(fallback)} URLs")
@@ -425,6 +442,7 @@ def fetch_functions_onebox(url: str, sala: str) -> list[dict]:
 
         for select_item in select_items:
             select_url = select_item["url"]
+            select_id = select_url.rstrip("/").split("/")[-1]
 
             try:
                 page.goto(select_url, wait_until="domcontentloaded", timeout=45000)
@@ -441,6 +459,7 @@ def fetch_functions_onebox(url: str, sala: str) -> list[dict]:
                     parsed = parse_onebox_date(date_texts[0])
                     if not parsed:
                         print(f"DEBUG Onebox fecha no parseable: {date_texts[0]}")
+                        save_debug_page(page, sala, f"select_{select_id}_fecha_no_parseable", select_url)
                         continue
                     fecha_iso, hora = parsed
                 else:
@@ -449,6 +468,7 @@ def fetch_functions_onebox(url: str, sala: str) -> list[dict]:
 
                     if not fecha_iso or not hora:
                         print(f"DEBUG Onebox sin fecha visible y sin fallback: {select_url}")
+                        save_debug_page(page, sala, f"select_{select_id}_sin_fecha", select_url)
                         continue
 
                 key = (fecha_iso, hora)
@@ -479,6 +499,7 @@ def fetch_functions_onebox(url: str, sala: str) -> list[dict]:
                     else:
                         vendidas = None
                         print(f"⚠️ Sin stock Onebox ni cache para {fecha_iso} {hora}")
+                        save_debug_page(page, sala, f"select_{select_id}_sin_stock", select_url)
 
                 fecha_dt = datetime.strptime(fecha_iso, "%Y-%m-%d")
                 fecha_label = fecha_dt.strftime("%d %b %Y")
