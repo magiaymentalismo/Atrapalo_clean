@@ -360,6 +360,7 @@ def get_onebox_select_urls(page, parent_url: str, sala: str) -> list[dict]:
         return [{"url": parent_url}]
 
     fallback = ONEBOX_FALLBACK_SELECTS.get(parent_url, [])
+
     fallback_by_url = {
         item["url"]: item
         for item in fallback
@@ -371,38 +372,83 @@ def get_onebox_select_urls(page, parent_url: str, sala: str) -> list[dict]:
     except Exception:
         pass
 
-    all_hrefs: list[str] = []
-
     for delay in [3000, 6000, 9000]:
         page.wait_for_timeout(delay)
 
         try:
-            hrefs = page.eval_on_selector_all(
-                "a[href]",
-                """els => els.map(a => a.href)"""
+            items = page.eval_on_selector_all(
+                "a[href*='/select/']",
+                """
+                els => els.map(a => {
+                    let txt = [];
+                    let el = a;
+
+                    for (let i = 0; i < 10 && el; i++, el = el.parentElement) {
+                        txt.push(el.innerText || "");
+                    }
+
+                    return {
+                        url: a.href,
+                        text: txt.join("\\n")
+                    };
+                })
+                """
             )
         except Exception:
-            hrefs = []
+            items = []
 
-        all_hrefs = sorted(set(all_hrefs + hrefs))
-        select_hrefs = sorted({h for h in all_hrefs if "/select/" in h})
+        out = []
 
-        if select_hrefs:
-            out = []
-            for h in select_hrefs:
-                out.append(fallback_by_url.get(h, {"url": h}))
+        for item in items:
+            h = item.get("url")
+            txt = item.get("text") or ""
+
+            if not h:
+                continue
+
+            data = fallback_by_url.get(h, {"url": h})
+
+            fechas = extract_onebox_dates_from_text(txt)
+
+            if fechas:
+                parsed = parse_onebox_date(fechas[0])
+
+                if parsed:
+                    fecha_iso, hora = parsed
+
+                    data = {
+                        **data,
+                        "fecha_iso": fecha_iso,
+                        "hora": hora,
+                    }
+
+            out.append(data)
+
+        if out:
             return out
 
     html = page.content()
+
     html_urls = extract_select_urls_from_html(html)
+
     if html_urls:
         out = []
+
         for h in html_urls:
-            out.append(fallback_by_url.get(h, {"url": h}))
+            out.append(
+                fallback_by_url.get(h, {"url": h})
+            )
+
         return out
 
     print(f"⚠️ Onebox sin /select/ para {sala}")
-    save_debug_page(page, sala, "parent_no_select", parent_url)
+
+    save_debug_page(
+        page,
+        sala,
+        "parent_no_select",
+        parent_url,
+    )
 
     if fallback:
         print(f"⚠️ Usando fallback: {len(fallback)} URLs")
