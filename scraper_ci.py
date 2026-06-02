@@ -12,8 +12,6 @@ import requests
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
 
-# ===================== CONFIG ===================== #
-
 DINATICKET_EVENTS = {
     "Disfruta": ["https://www.dinaticket.com/es/provider/20864/event/4947155"],
     "Escondi2": ["https://www.dinaticket.com/es/provider/20864/event/4943466"],
@@ -26,26 +24,10 @@ ONEBOX_EVENTS = {
 
 ONEBOX_FALLBACK_SELECTS = {
     "https://entradas.laescaleradejacob.es/laescaleradejacob/events/56108": [
-        {
-            "url": "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904525",
-            "fecha_iso": "2026-06-05",
-            "hora": "23:00",
-        },
-        {
-            "url": "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904526",
-            "fecha_iso": "2026-06-12",
-            "hora": "23:00",
-        },
-        {
-            "url": "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904527",
-            "fecha_iso": "2026-06-19",
-            "hora": "23:00",
-        },
-        {
-            "url": "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904528",
-            "fecha_iso": "2026-06-26",
-            "hora": "23:00",
-        },
+        {"url": "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904525", "fecha_iso": "2026-06-05", "hora": "23:00"},
+        {"url": "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904526", "fecha_iso": "2026-06-12", "hora": "23:00"},
+        {"url": "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904527", "fecha_iso": "2026-06-19", "hora": "23:00"},
+        {"url": "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904528", "fecha_iso": "2026-06-26", "hora": "23:00"},
     ],
 }
 
@@ -66,18 +48,9 @@ DOCS_DIR = Path("docs")
 ONEBOX_CACHE_PATH = DOCS_DIR / "onebox_cache.json"
 
 MESES_CORTOS = {
-    "Ene": "01",
-    "Feb": "02",
-    "Mar": "03",
-    "Abr": "04",
-    "May": "05",
-    "Jun": "06",
-    "Jul": "07",
-    "Ago": "08",
-    "Sep": "09",
-    "Oct": "10",
-    "Nov": "11",
-    "Dic": "12",
+    "Ene": "01", "Feb": "02", "Mar": "03", "Abr": "04",
+    "May": "05", "Jun": "06", "Jul": "07", "Ago": "08",
+    "Sep": "09", "Oct": "10", "Nov": "11", "Dic": "12",
 }
 
 MESES_ES = {
@@ -96,21 +69,16 @@ MESES_ES = {
 }
 
 
-# ===================== HELPERS ===================== #
-
 def normalize_hhmm(h: str | None) -> str:
     if not h:
         return "00:00"
-
     s = str(h).strip().lower()
     s = s.replace(" ", "").replace("h", "")
     s = re.sub(r"[^0-9:]", "", s)
     s = s.rstrip(":")
-
     m = re.match(r"^(\d{1,2})(?::?(\d{2}))?$", s)
     if not m:
         return s
-
     return f"{int(m.group(1)):02d}:{int(m.group(2) or '00'):02d}"
 
 
@@ -121,10 +89,13 @@ def safe_int(value, default: int = 0) -> int:
         return default
 
 
+def slugify(s: str) -> str:
+    return re.sub(r"[^a-zA-Z0-9_-]+", "_", s).strip("_")
+
+
 def load_onebox_cache() -> dict:
     if not ONEBOX_CACHE_PATH.exists():
         return {}
-
     try:
         return json.loads(ONEBOX_CACHE_PATH.read_text("utf-8"))
     except Exception:
@@ -139,8 +110,6 @@ def save_onebox_cache(cache: dict) -> None:
     )
     print("✔ Actualizado docs/onebox_cache.json")
 
-
-# ===================== OUTPUT ===================== #
 
 def write_html(payload: dict) -> None:
     if not TEMPLATE_PATH.exists():
@@ -158,7 +127,6 @@ def write_html(payload: dict) -> None:
 
     if MANIFEST_PATH.exists():
         shutil.copy(MANIFEST_PATH, DOCS_DIR / "manifest.json")
-
     if SW_PATH.exists():
         shutil.copy(SW_PATH, DOCS_DIR / "sw.js")
 
@@ -174,8 +142,6 @@ def write_schedule_json(payload: dict) -> None:
     print("✔ Generado docs/schedule.json")
 
 
-# ===================== DINATICKET ===================== #
-
 def fetch_functions_dinaticket(url: str) -> list[dict]:
     r = requests.get(url, headers=UA, timeout=20)
     r.raise_for_status()
@@ -190,13 +156,11 @@ def fetch_functions_dinaticket(url: str) -> list[dict]:
 
         dia = parent.find("span", class_="num_dia")
         mes = parent.find("span", class_="mes")
-
         if not dia or not mes:
             continue
 
         mes_txt = mes.get_text(strip=True).replace(".", "")
         mes_num = MESES_CORTOS.get(mes_txt)
-
         if not mes_num:
             print("DEBUG Dinaticket mes no reconocido:", repr(mes_txt))
             continue
@@ -243,8 +207,6 @@ def fetch_functions_dinaticket(url: str) -> list[dict]:
     return sorted(out, key=lambda f: (f["fecha_iso"], f["hora"]))
 
 
-# ===================== ONEBOX ===================== #
-
 def parse_onebox_date(raw: str) -> tuple[str, str] | None:
     raw = raw.replace("\xa0", " ")
     raw = " ".join(raw.split()).lower()
@@ -255,7 +217,6 @@ def parse_onebox_date(raw: str) -> tuple[str, str] | None:
         raw,
         re.IGNORECASE,
     )
-
     if not m:
         return None
 
@@ -267,10 +228,7 @@ def parse_onebox_date(raw: str) -> tuple[str, str] | None:
         print("DEBUG Onebox mes no reconocido:", repr(mes_txt))
         return None
 
-    fecha_iso = f"{anio}-{mes_num}-{dia.zfill(2)}"
-    hora = f"{int(hh):02d}:{mm}"
-
-    return fecha_iso, hora
+    return f"{anio}-{mes_num}-{dia.zfill(2)}", f"{int(hh):02d}:{mm}"
 
 
 def extract_onebox_dates_from_text(text: str) -> list[str]:
@@ -340,7 +298,25 @@ def count_onebox_stock_playwright(page) -> tuple[int | None, int | None]:
     return stock, capacidad
 
 
-def get_onebox_select_urls(page, parent_url: str) -> list[dict]:
+def extract_select_urls_from_html(html: str) -> list[str]:
+    urls = set()
+
+    for m in re.findall(r'https?://[^"\']+/select/\d+', html):
+        urls.add(m)
+
+    for m in re.findall(r'["\']([^"\']*/select/\d+)["\']', html):
+        if m.startswith("http"):
+            urls.add(m)
+        elif m.startswith("/"):
+            urls.add("https://entradas.laescaleradejacob.es" + m)
+
+    for m in re.findall(r'\bselect/(\d+)\b', html):
+        urls.add(f"https://entradas.laescaleradejacob.es/laescaleradejacob/select/{m}")
+
+    return sorted(urls)
+
+
+def get_onebox_select_urls(page, parent_url: str, sala: str) -> list[dict]:
     if "/select/" in parent_url:
         return [{"url": parent_url}]
 
@@ -356,38 +332,69 @@ def get_onebox_select_urls(page, parent_url: str) -> list[dict]:
     except Exception:
         pass
 
-    for delay in [2000, 4000, 6000]:
+    all_hrefs: list[str] = []
+
+    for delay in [3000, 6000, 9000]:
         page.wait_for_timeout(delay)
 
         try:
             hrefs = page.eval_on_selector_all(
                 "a[href]",
-                """els => els.map(a => a.href).filter(h => h.includes('/select/'))"""
+                """els => els.map(a => a.href)"""
             )
         except Exception:
             hrefs = []
 
-        hrefs = sorted(set(hrefs))
+        all_hrefs = sorted(set(all_hrefs + hrefs))
+        select_hrefs = sorted({h for h in all_hrefs if "/select/" in h})
 
-        if hrefs:
+        if select_hrefs:
             out = []
-
-            for h in hrefs:
-                if h in fallback_by_url:
-                    out.append(fallback_by_url[h])
-                else:
-                    out.append({"url": h})
-
+            for h in select_hrefs:
+                out.append(fallback_by_url.get(h, {"url": h}))
             return out
 
+    html = page.content()
+    html_urls = extract_select_urls_from_html(html)
+    if html_urls:
+        out = []
+        for h in html_urls:
+            out.append(fallback_by_url.get(h, {"url": h}))
+        return out
+
+    DOCS_DIR.mkdir(exist_ok=True)
+    debug_html = DOCS_DIR / f"debug_onebox_{slugify(sala)}.html"
+    debug_txt = DOCS_DIR / f"debug_onebox_{slugify(sala)}.txt"
+
+    debug_html.write_text(html, "utf-8")
+
+    try:
+        body_text = page.locator("body").inner_text(timeout=10000)
+    except Exception:
+        body_text = ""
+
+    debug_txt.write_text(
+        "PAGE URL:\n"
+        + page.url
+        + "\n\nTOTAL HREFS:\n"
+        + str(len(all_hrefs))
+        + "\n\nHREFS:\n"
+        + "\n".join(all_hrefs)
+        + "\n\nBODY:\n"
+        + body_text[:10000],
+        "utf-8",
+    )
+
+    print(f"⚠️ Onebox sin /select/ para {sala}; guardado {debug_html} y {debug_txt}")
+
     if fallback:
-        print(f"⚠️ Onebox sin enlaces dinámicos; usando fallback: {len(fallback)} URLs")
+        print(f"⚠️ Usando fallback: {len(fallback)} URLs")
         return fallback
 
     return []
 
 
-def fetch_functions_onebox(url: str) -> list[dict]:
+def fetch_functions_onebox(url: str, sala: str) -> list[dict]:
     out: list[dict] = []
     seen: set[tuple[str, str]] = set()
     cache = load_onebox_cache()
@@ -413,8 +420,8 @@ def fetch_functions_onebox(url: str) -> list[dict]:
             browser.close()
             return []
 
-        select_items = get_onebox_select_urls(page, url)
-        print(f"Onebox URLs detectadas: {len(select_items)}")
+        select_items = get_onebox_select_urls(page, url, sala)
+        print(f"Onebox {sala} URLs detectadas: {len(select_items)}")
 
         for select_item in select_items:
             select_url = select_item["url"]
@@ -464,15 +471,11 @@ def fetch_functions_onebox(url: str) -> list[dict]:
                     cache_changed = True
                 else:
                     old = cache.get(cache_key)
-
                     if old:
                         stock = old.get("stock")
                         capacidad = old.get("capacidad")
                         vendidas = old.get("vendidas_dt")
-                        print(
-                            f"↩ Usando cache Onebox para {fecha_iso} {hora}: "
-                            f"stock={stock}, cap={capacidad}"
-                        )
+                        print(f"↩ Usando cache Onebox para {fecha_iso} {hora}: stock={stock}, cap={capacidad}")
                     else:
                         vendidas = None
                         print(f"⚠️ Sin stock Onebox ni cache para {fecha_iso} {hora}")
@@ -501,8 +504,6 @@ def fetch_functions_onebox(url: str) -> list[dict]:
 
     return sorted(out, key=lambda f: (f["fecha_iso"], f["hora"]))
 
-
-# ===================== PAYLOAD ===================== #
 
 def build_payload(eventos: dict[str, list[dict]]) -> dict:
     now = datetime.now(TZ)
@@ -565,14 +566,11 @@ def build_payload(eventos: dict[str, list[dict]]) -> dict:
     }
 
 
-# ===================== MAIN ===================== #
-
 if __name__ == "__main__":
     current: dict[str, list[dict]] = {}
 
     for sala, urls in DINATICKET_EVENTS.items():
         funcs: list[dict] = []
-
         for url in urls:
             try:
                 funcs.extend(fetch_functions_dinaticket(url))
@@ -584,7 +582,7 @@ if __name__ == "__main__":
 
     for sala, url in ONEBOX_EVENTS.items():
         try:
-            funcs = fetch_functions_onebox(url)
+            funcs = fetch_functions_onebox(url, sala)
         except Exception as e:
             print(f"ERROR Onebox {sala}: {e}")
             funcs = []
