@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-04T19:29:41.731838+02:00",
+  "generated_at": "2026-06-04T21:39:23.343094+02:00",
   "eventos": {
     "Disfruta": {
       "table": {
@@ -14,16 +14,6 @@
           "Source"
         ],
         "rows": [
-          [
-            "04 Jun 2026",
-            "21:30",
-            7,
-            "2026-06-04",
-            30,
-            23,
-            null,
-            "dinaticket"
-          ],
           [
             "25 Jun 2026",
             "21:30",
@@ -49,16 +39,6 @@
             "Source"
           ],
           "rows": [
-            [
-              "04 Jun 2026",
-              "21:30",
-              7,
-              "2026-06-04",
-              30,
-              23,
-              null,
-              "dinaticket"
-            ],
             [
               "25 Jun 2026",
               "21:30",
@@ -86,16 +66,6 @@
           "Source"
         ],
         "rows": [
-          [
-            "04 Jun 2026",
-            "20:00",
-            5,
-            "2026-06-04",
-            30,
-            25,
-            null,
-            "dinaticket"
-          ],
           [
             "06 Jun 2026",
             "17:00",
@@ -191,16 +161,6 @@
             "Source"
           ],
           "rows": [
-            [
-              "04 Jun 2026",
-              "20:00",
-              5,
-              "2026-06-04",
-              30,
-              25,
-              null,
-              "dinaticket"
-            ],
             [
               "06 Jun 2026",
               "17:00",
@@ -413,10 +373,10 @@
           [
             "05 Jun 2026",
             "19:30",
-            18,
+            20,
             "2026-06-05",
             51,
-            33,
+            31,
             "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2905048",
             "onebox"
           ],
@@ -458,10 +418,10 @@
             [
               "05 Jun 2026",
               "19:30",
-              18,
+              20,
               "2026-06-05",
               51,
-              33,
+              31,
               "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2905048",
               "onebox"
             ],
