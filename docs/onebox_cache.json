@@ -15,13 +15,13 @@
     "stock": 52,
     "capacidad": 52,
     "vendidas_dt": 0,
-    "updated_at": "2026-06-12T19:24:15.229818+02:00"
+    "updated_at": "2026-06-13T03:38:37.931165+02:00"
   },
   "2026-06-26|23:00|https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904528": {
     "stock": 52,
     "capacidad": 52,
     "vendidas_dt": 0,
-    "updated_at": "2026-06-12T19:24:16.794165+02:00"
+    "updated_at": "2026-06-13T03:38:39.570301+02:00"
   },
   "2026-06-05|19:30|https://entradas.laescaleradejacob.es/laescaleradejacob/select/2905048": {
     "stock": 26,
@@ -33,12 +33,12 @@
     "stock": 51,
     "capacidad": 51,
     "vendidas_dt": 0,
-    "updated_at": "2026-06-12T21:33:12.724958+02:00"
+    "updated_at": "2026-06-13T03:38:47.776435+02:00"
   },
   "2026-06-26|19:30|https://entradas.laescaleradejacob.es/laescaleradejacob/select/2905050": {
     "stock": 48,
     "capacidad": 51,
     "vendidas_dt": 3,
-    "updated_at": "2026-06-12T21:33:14.342554+02:00"
+    "updated_at": "2026-06-13T03:38:49.382426+02:00"
   }
 }
