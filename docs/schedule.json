@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T18:56:03.639716+02:00",
+  "generated_at": "2026-06-18T21:39:40.512412+02:00",
   "eventos": {
     "Disfruta": {
       "table": {
@@ -179,10 +179,10 @@
           [
             "25 Jun 2026",
             "20:00",
-            3,
+            5,
             "2026-06-25",
             30,
-            27,
+            25,
             null,
             "dinaticket"
           ],
@@ -234,10 +234,10 @@
             [
               "25 Jun 2026",
               "20:00",
-              3,
+              5,
               "2026-06-25",
               30,
-              27,
+              25,
               null,
               "dinaticket"
             ],
@@ -353,10 +353,10 @@
           [
             "19 Jun 2026",
             "19:30",
-            9,
+            11,
             "2026-06-19",
             51,
-            42,
+            40,
             "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2905049",
             "onebox"
           ],
@@ -388,10 +388,10 @@
             [
               "19 Jun 2026",
               "19:30",
-              9,
+              11,
               "2026-06-19",
               51,
-              42,
+              40,
               "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2905049",
               "onebox"
             ],
