@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-23T20:21:45.005480+02:00",
+  "generated_at": "2026-06-23T22:37:15.714901+02:00",
   "eventos": {
     "Disfruta": {
       "table": {
@@ -487,26 +487,6 @@
             50,
             "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904528",
             "onebox"
-          ],
-          [
-            "27 Jun 2026",
-            "23:00",
-            0,
-            "2026-06-27",
-            52,
-            52,
-            "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2921375",
-            "onebox"
-          ],
-          [
-            "28 Jun 2026",
-            "21:00",
-            3,
-            "2026-06-28",
-            52,
-            49,
-            "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2921377",
-            "onebox"
           ]
         ]
       },
@@ -531,26 +511,6 @@
               52,
               50,
               "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2904528",
-              "onebox"
-            ],
-            [
-              "27 Jun 2026",
-              "23:00",
-              0,
-              "2026-06-27",
-              52,
-              52,
-              "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2921375",
-              "onebox"
-            ],
-            [
-              "28 Jun 2026",
-              "21:00",
-              3,
-              "2026-06-28",
-              52,
-              49,
-              "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2921377",
               "onebox"
             ]
           ]
