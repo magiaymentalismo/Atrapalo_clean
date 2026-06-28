@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-28T19:46:47.920642+02:00",
+  "generated_at": "2026-06-28T21:27:28.358191+02:00",
   "eventos": {
     "Disfruta": {
       "table": {
@@ -397,18 +397,7 @@
           "BuyUrl",
           "Source"
         ],
-        "rows": [
-          [
-            "28 Jun 2026",
-            "21:00",
-            23,
-            "2026-06-28",
-            52,
-            29,
-            "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2921377",
-            "onebox"
-          ]
-        ]
+        "rows": []
       },
       "proximas": {
         "table": {
@@ -422,18 +411,7 @@
             "BuyUrl",
             "Source"
           ],
-          "rows": [
-            [
-              "28 Jun 2026",
-              "21:00",
-              23,
-              "2026-06-28",
-              52,
-              29,
-              "https://entradas.laescaleradejacob.es/laescaleradejacob/select/2921377",
-              "onebox"
-            ]
-          ]
+          "rows": []
         }
       }
     },
