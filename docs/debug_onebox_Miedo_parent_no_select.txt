@@ -20,21 +20,20 @@ Lu	Ma	Mi	Ju	Vi	Sá	Do
 22	23	24	25	26	27	28
 29	30	 	 	 	 	 
 Elige categoría:
-Ver todo 35
+Ver todo 29
 Magia 3
 Infantil +3 5
-Improvisación 4
+Improvisación 3
 Cine 1
 Músical 1
-Microteatro en el baño 1
 Humor 6
-Mentalismo 8
+Mentalismo 5
 Bebés 2
-Drama 4
+Drama 3
 Danza 1
 Hipnosis 1
 
-35 espectáculos
+29 espectáculos
 
 Ordenar por:
 Título            
@@ -45,18 +44,6 @@ AFTER KIKI
 Infantil +3
 Hasta el 31 jul
 ALGUIEN DIJO ¿SUPERPODERES?
- Más info
-Drama
-Hasta el 24 jun
-ALMA BLANCA
- Más info
-Mentalismo
-Hasta el 30 jun
-ATRÉVETE. MAGIA MENTAL
- Más info
-Mentalismo
-Hasta el 30 jun
-CLUEDO MENTAL
  Más info
 Humor
 Hasta el 31 jul
@@ -82,10 +69,6 @@ Drama
 Hasta el 30 jun
 EL BANQUETE
  Más info
-Improvisación
-Hasta el 30 jun
-EL MATCH DE IMPRO DE LA ESCALERA
- Más info
 Mentalismo
 Hasta el 30 jun
 EL MENTALISTA. JUANMA GONZÁLEZ
@@ -101,10 +84,6 @@ FANTASÍA
 Humor
 Hasta el 11 jul
 HORMONADA 2.0
- Más info
-Microteatro en el baño
-Hasta el 28 jun
-I FESTIVAL DE MICRO EN EL BAÑO: Semana 4 (23 al 28 jun)
  Más info
 Improvisación
 Hasta el 31 jul
@@ -141,10 +120,6 @@ MANIFIESTO
 Mentalismo
 Hasta el 31 jul
 Mentiroso Magia mental
- Más info
-Mentalismo
-Hasta el 30 jun
-MIEDO: UNA NOCHE DE MENTALISMO
  Más info
 Infantil +3
 Hasta el 31 jul
@@ -263,7 +238,7 @@ HTML_HEAD:
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 
-	<script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
+	<script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e66o1"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
 
     <script src="/js/modernizr.js"></script>    
 	<script src="/js/jquery-3.6.1.min.js"></script>
@@ -359,7 +334,7 @@ HTML_HEAD:
                                             <span>La Escalera</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-7" class="dropdown2 dropdown  fondonaranja">
+                                        <div id="dropdown-7" class="dropdown2 dropdown  fondoverde">
                                             <ul role="menu">
                                                                                                                                                         <li role="menuitem">
                                                         <a class="dropdown-link" href="/eventos/" target="_self">
@@ -380,6 +355,4 @@ HTML_HEAD:
                                                         </a>
                                                     </li>
                                                                                                                                                         <li role="menuitem">
-                                                        <a class="dropdown-link" href="/noticias/" target="_self">
-                                                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                                                 
+                                                        <a class="dro
