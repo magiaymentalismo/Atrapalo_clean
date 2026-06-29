@@ -22,11 +22,11 @@ Lu	Ma	Mi	Ju	Vi	Sá	Do
 Elige categoría:
 Ver todo 22
 Magia 3
-Infantil +3 5
+Infantil +3 4
 Drama 2
 Músical 1
 Humor 5
-Mentalismo 4
+Mentalismo 5
 Improvisación 2
 Cine 1
 Hipnosis 1
@@ -67,6 +67,10 @@ Drama
 Hasta el 30 jun
 EL BANQUETE
  Más info
+Mentalismo
+29 jun - 31 ago
+HACKEANDO MENTES
+ Más info
 Humor
 Hasta el 11 jul
 HORMONADA 2.0
@@ -106,10 +110,6 @@ POWER. UNA EXPERIENCIA MUY VIP
 Mentalismo
 Hasta el 31 jul
 SAL DE MI MENTE
- Más info
-Infantil +3
-Hasta el 30 jun
-SOÑANDO MAGIA
  Más info
 Humor
 Hasta el 31 jul
@@ -208,7 +208,7 @@ HTML_HEAD:
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 
-	<script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e66o1h1"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
+	<script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e66o1"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
 
     <script src="/js/modernizr.js"></script>    
 	<script src="/js/jquery-3.6.1.min.js"></script>
@@ -304,7 +304,7 @@ HTML_HEAD:
                                             <span>La Escalera</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-7" class="dropdown2 dropdown  fondoverde">
+                                        <div id="dropdown-7" class="dropdown2 dropdown  fondonaranja">
                                             <ul role="menu">
                                                                                                                                                         <li role="menuitem">
                                                         <a class="dropdown-link" href="/eventos/" target="_self">

@@ -20,20 +20,18 @@ Lu	Ma	Mi	Ju	Vi	Sá	Do
 22	23	24	25	26	27	28
 29	30	 	 	 	 	 
 Elige categoría:
-Ver todo 29
+Ver todo 22
 Magia 3
-Infantil +3 5
-Improvisación 3
-Cine 1
+Infantil +3 4
+Drama 2
 Músical 1
-Humor 6
+Humor 5
 Mentalismo 5
-Bebés 2
-Drama 3
-Danza 1
+Improvisación 2
+Cine 1
 Hipnosis 1
 
-29 espectáculos
+22 espectáculos
 
 Ordenar por:
 Título            
@@ -70,16 +68,8 @@ Hasta el 30 jun
 EL BANQUETE
  Más info
 Mentalismo
-Hasta el 30 jun
-EL MENTALISTA. JUANMA GONZÁLEZ
- Más info
-Bebés
-Hasta el 30 jun
-ESTRELLAS Y SOÑAR
- Más info
-Bebés
-Hasta el 30 jun
-FANTASÍA
+29 jun - 31 ago
+HACKEANDO MENTES
  Más info
 Humor
 Hasta el 11 jul
@@ -90,16 +80,8 @@ Hasta el 31 jul
 IMPROCAFÉ SHOW
  Más info
 Improvisación
-Hasta el 30 jun
-LA COCINA DE IMPRO CAFÉ
- Más info
-Improvisación
 Hasta el 28 jul
 LA IRA DEL GRAN TIKI
- Más info
-Drama
-Hasta el 26 jun
-LE POISON, C’EST MOI
  Más info
 Drama
 Hasta el 31 jul
@@ -112,10 +94,6 @@ Luces, cámara y magia
 Magia
 Hasta el 31 jul
 MAGIA EN TU CARA
- Más info
-Danza
-Hasta el 30 jun
-MANIFIESTO
  Más info
 Mentalismo
 Hasta el 31 jul
@@ -132,14 +110,6 @@ POWER. UNA EXPERIENCIA MUY VIP
 Mentalismo
 Hasta el 31 jul
 SAL DE MI MENTE
- Más info
-Humor
-Hasta el 30 jun
-SEX O NO SEX
- Más info
-Infantil +3
-Hasta el 30 jun
-SOÑANDO MAGIA
  Más info
 Humor
 Hasta el 31 jul
