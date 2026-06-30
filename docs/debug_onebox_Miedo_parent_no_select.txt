@@ -208,7 +208,7 @@ HTML_HEAD:
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 
-	<script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e66q0"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
+	<script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e66q0h1"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
 
     <script src="/js/modernizr.js"></script>    
 	<script src="/js/jquery-3.6.1.min.js"></script>
@@ -218,20 +218,35 @@ HTML_HEAD:
 	<script src="/js/main.js?26092023"></script>
 
 
+
+
+	
+
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('consent', 'default', {
+		ad_storage: 'denied',
+		analytics_storage: 'denied',
+		ad_user_data: 'denied',
+		ad_personalization: 'denied'
+	});
+	</script>
+	<!-- End Google Consent Mode default -->
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+
 	})(window,document,'script','dataLayer','GTM-KC33CRBV');</script>
+
 	<!-- End Google Tag Manager -->
 
-
-
     
-
-
-
 
 
 
@@ -322,7 +337,4 @@ HTML_HEAD:
                                                         <a class="dropdown-link" href="/contacto/" target="_self">
                                                             <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
                                                             <span>Contacto</span>
-                                                        </a>
-                                                    </li>
-                                                                                                                                                        <li role="menuitem">
-                                                        <a class="dro
+                                                       
