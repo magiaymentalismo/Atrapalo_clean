@@ -195,10 +195,12 @@ Política de cookies
 © 2026 La Escalera de Jacob
 
  
-Utilizamos cookies propias y de terceros para analizar nuestros servicios y mostrarte publicidad relacionada con tus preferencias en base a un perfil elaborado a partir de tus hábitos de navegación (por ejemplo, páginas visitadas). Puedes obtener más información y configurar tus preferencias AQUÍ:
-
-Aceptar todas las cookies Aceptar únicamente las Cookies técnicas
-Leer política de cookies
+×
+Sí, nos confesamos, usamos cookies
+Las usamos para cosas como analizar el tráfico de la web, ver en qué pasos se atasca una compra y, si nos das permiso, mostrarte publicidad relacionada con lo que te interesa. Tú decides: puedes aceptarlas todas, rechazarlas o entrar en "Mostrar detalles" y elegir qué compartes. Si quieres saber más, te lo contamos en la Política de privacidad
+ MOSTRAR DETALLES
+ACEPTAR TODO
+RECHAZAR TODO
 
 HTML_HEAD:
 <!DOCTYPE html><html lang="es" style="" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><head>
@@ -212,7 +214,7 @@ HTML_HEAD:
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 
-	<script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV&amp;is_td=1&amp;v=3&amp;t=t&amp;pid=972511749&amp;gtm=45He66u1v9254376772za200zd9254376772&amp;seq=1&amp;exp=0~115938466~115938468~119027224&amp;dl=www.laescaleradejacob.es%2Fcartelera%2F&amp;tdp=GTM-KC33CRBV;254376772;0;0;0&amp;frm=0&amp;rtg=254376772&amp;slo=6&amp;hlo=9&amp;lst=1&amp;bt=0&amp;ct=3&amp;mde=G-K16Q7JZ75Q;0_1&amp;z=0"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e66u1"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
+	<script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e66u1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
 
     <script src="/js/modernizr.js"></script>    
 	<script src="/js/jquery-3.6.1.min.js"></script>
@@ -337,4 +339,8 @@ HTML_HEAD:
                                                             <span>Conocenos</span>
                                                         </a>
                                                     </li>
-                                                                                                    
+                                                                                                                                                        <li role="menuitem">
+                                                        <a class="dropdown-link" href="/contacto/" target="_self">
+                                                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                                            <span>Contacto</span>
+             
