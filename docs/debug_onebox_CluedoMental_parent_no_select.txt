@@ -5,105 +5,337 @@ SELECT URL:
 https://entradas.laescaleradejacob.es/laescaleradejacob/events/56921
 
 PAGE URL:
-https://entradas.laescaleradejacob.es/laescaleradejacob/events/56921
+https://www.laescaleradejacob.es/cartelera/
 
 BODY:
-Sorry, you have been blocked
-You are unable to access proticketing.com
-Why have I been blocked?
+Cartelera
+Bar
+La Escalera  
+Elige día:
+JULIO 2026
+Lu	Ma	Mi	Ju	Vi	Sá	Do
+ 	 	1	2	3	4	5
+6	7	8	9	10	11	12
+13	14	15	16	17	18	19
+20	21	22	23	24	25	26
+27	28	29	30	31	 	 
+Elige categoría:
+Ver todo 22
+Magia 4
+Infantil +3 5
+Drama 1
+Hipnosis 1
+Humor 5
+Mentalismo 5
+Improvisación 2
+Cine 1
 
-This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.
+22 espectáculos
 
-What can I do to resolve this?
+Ordenar por:
+Título            
+Humor
+Hasta el 31 jul
+AFTER KIKI
+ Más info
+Infantil +3
+Hasta el 31 jul
+ALGUIEN DIJO ¿SUPERPODERES?
+ Más info
+Humor
+Hasta el 31 jul
+CORAZÓN EN REBAJAS
+ Más info
+Cine
+Hasta el 31 jul
+CORTOS CON Ñ
+ Más info
+Magia
+Hasta el 30 sep
+DAVID VEGA. NO SOLO ES MAGIA
+ Más info
+Hipnosis
+Hasta el 31 jul
+DELIRIUM: HIPNOSIS Y MENTALISMO
+ Más info
+Magia
+Hasta el 31 jul
+DESCARADO. COMEDIA MÁGICA
+ Más info
+Mentalismo
+Hasta el 31 ago
+HACKEANDO MENTES
+ Más info
+Humor
+Hasta el 11 jul
+HORMONADA 2.0
+ Más info
+Improvisación
+Hasta el 31 jul
+IMPROCAFÉ SHOW
+ Más info
+Improvisación
+Hasta el 28 jul
+LA IRA DEL GRAN TIKI
+ Más info
+Drama
+Hasta el 31 jul
+LO MÍO NO ES TUYO
+ Más info
+Infantil +3
+Hasta el 31 jul
+Luces, cámara y magia
+ Más info
+Magia
+Hasta el 31 jul
+MAGIA EN TU CARA
+ Más info
+Mentalismo
+Hasta el 31 jul
+Mentiroso Magia mental
+ Más info
+Infantil +3
+Hasta el 31 jul
+PIEDRA, PAPEL O TIJERA
+ Más info
+Magia
+Hasta el 31 jul
+POWER. UNA EXPERIENCIA MUY VIP
+ Más info
+Mentalismo
+Hasta el 31 jul
+SAL DE MI MENTE
+ Más info
+Infantil +3
+Hasta el 30 sep
+SOÑANDO MAGIA
+ Más info
+Humor
+Hasta el 31 ago
+SOY UNA PERSONA HORRIBLE
+ Más info
+Humor
+Hasta el 31 ago
+UN DÍA DE MIERDA
+ Más info
+Infantil +3
+Hasta el 31 jul
+VA DE MAGIA. MAGO PONCE
+ Más info
+PREGUNTAS FRECUENTES
+¿Con cuánta antelación puedo comprar mi entrada?
 
-You can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.
+Podrás comprar las entradas a través de nuestra web hasta media hora antes del comienzo del espectáculo. Pasada esa hora, deberás adquirirlas directamente en taquilla, siempre que queden disponibles y a un precio superior al de la compra anticipada.
 
-Cloudflare Ray ID: a160100e2a186d05 • Your IP: Click to reveal • Performance & security by Cloudflare
+¿Puedo seleccionar mi asiento en el proceso de compra?
+
+Sí, las entradas se venden numeradas.
+
+¿Es necesario imprimir mi entrada?
+
+No es necesario. Puedes decidir imprimirla o llevar el código QR en el móvil para que lo validemos cuando accedas a la sala.
+
+¿Necesito pasar por taquilla antes de acudir a la función?
+
+No es necesario. Te recomendamos que acudas al local al menos 10 minutos antes del comienzo de la función para que te informemos de cuál es la sala y cómo tienes que acceder. También puedes aprovechar para tomarte algo en el bar y pasar con tu bebida a la sala, ¡es parte de la experiencia!
+
+Si me retraso y la función ya ha comenzado, ¿puedo acceder a la sala?
+
+En la mayoría de espectáculos no podemos permitir el acceso una vez comenzada la función. Nuestras salas son pequeñas y la distracción para los actores es grande. Acude con tiempo suficiente, te lo agradecemos.
+
+¿Puedo realizar una compra telefónica?
+
+Salvo que se trate de un grupo de más de 10 personas, que sí se podrán gestionar por teléfono, las compras se tienen que realizar a través del sistema habilitado en nuestra página.
+
+¿Cómo gestiono una compra para un grupo?
+
+A partir de 10 personas consideramos que se trata de un grupo y tienes la posibilidad de gestionarlo por teléfono con nuestro personal. Tienes que ponerte en contacto con nosotros en el 625.721.745 o escribe a info@laescaleradejacob.es y te informamos sobre cómo proceder.
+
+¿Hay un espacio para colocar los carritos de los niños?
+
+Nuestro espacio es pequeño y no disponemos de un sitio específico para ello. Podéis dejarlos en el bar pero no nos responsabilizamos de ello. Si tenéis una alternativa al carrito, nosotros lo agradecemos.
+
+¿Hay algún parking cercano?
+
+Hay un aparcamiento muy cerca, el Parking Relatores (C/ Relatores, 11). Puedes ponerte en contacto con ellos en el 91.369.17.65, a veces os reservan la plaza si llamáis con 24h de antelación.
+
+Si no encuentras solución a tu pregunta, ¡llámanos al 625.721.745!
+
+Únete al Club Jacob
+
+Entradas con descuento, ofertas exclusivas e información sobre estrenos antes que nadie.
+
+UNIRSE AL CLUB
+Encuéntranos en:
+
+
+
+
+C/ Lavapiés nº9 Madrid
+Metro:Tirso de Molina
+info@laescaleradejacob.es
+625 721 745 (M a V de 10h a 14h)
+
+  
+Horario de apertura:
+M a J: 18:30h-23h
+V: 18:30h-02h
+S: 10:30h-02h
+D: 10.30h-23h
+
+Aviso legal
+Política de privacidad
+Política de cookies
+
+© 2026 La Escalera de Jacob
+
+ 
+×
+Sí, nos confesamos, usamos cookies
+Las usamos para cosas como analizar el tráfico de la web, ver en qué pasos se atasca una compra y, si nos das permiso, mostrarte publicidad relacionada con lo que te interesa. Tú decides: puedes aceptarlas todas, rechazarlas o entrar en "Mostrar detalles" y elegir qué compartes. Si quieres saber más, te lo contamos en la Política de privacidad
+ MOSTRAR DETALLES
+ACEPTAR TODO
+RECHAZAR TODO
 
 HTML_HEAD:
-<!DOCTYPE html><html class="no-js" lang="en-US"><!--<![endif]--><head>
-<title>Attention Required! | Cloudflare</title>
-<meta charset="UTF-8">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="robots" content="noindex, nofollow">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/cf.errors.css">
-<!--[if lt IE 9]><link rel="stylesheet" id='cf_styles-ie-css' href="/cdn-cgi/styles/cf.errors.ie.css" /><![endif]-->
-<style>body{margin:0;padding:0}</style>
+<!DOCTYPE html><html lang="es" style="" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartelera | La Escalera de Jacob — Teatro en Lavapiés, Madrid</title><meta name="Title" content="Cartelera | La Escalera de Jacob — Teatro en Lavapiés, Madrid"><meta name="keywords" content="teatro Madrid cartelera, espectáculos Lavapiés, magia Madrid, mentalismo Madrid, teatro infantil Madrid, humor Madrid, entradas teatro Madrid"><meta name="description" content="50 espectáculos en cartelera: magia, mentalismo, humor, infantil, impro y más. Teatro íntimo en Lavapiés, Madrid. Compra tu entrada online."><meta name="robots" content="index,follow"><link rel="canonical" href="https://www.laescaleradejacob.es/cartelera/"><meta property="og:title" content=""><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:image:width" content=""><meta property="og:image:height" content=""><meta property="og:site_name" content="Cartelera | La Escalera de Jacob — Teatro en Lavapiés, Madrid"><meta property="og:type" content="website"><meta property="og:url" content="https://www.laescaleradejacob.es/cartelera/"><meta name="twitter:card" content=""><meta name="twitter:creator" content=""><meta name="twitter:title" content=""><meta name="twitter:description" content=""><meta name="twitter:image" content=""><meta name="twitter:site" content="https://www.laescaleradejacob.es/cartelera/">
+	<link rel="icon" type="image/png" href="/favicon.png">
+	<link rel="stylesheet" href="/css/style.css?26092024">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+
+	<script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e66u1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
+
+    <script src="/js/modernizr.js"></script>    
+	<script src="/js/jquery-3.6.1.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<script src="/js/masonry.pkgd.min.js"></script>
+	<script src="/js/main.js?26092023"></script>
 
 
-<!--[if gte IE 10]><!-->
-<script>
-  if (!navigator.cookieEnabled) {
-    window.addEventListener('DOMContentLoaded', function () {
-      var cookieEl = document.getElementById('cookie-alert');
-      cookieEl.style.display = 'block';
-    })
-  }
-</script>
-<!--<![endif]-->
 
-</head>
-<body>
-  <div id="cf-wrapper">
-    <div class="cf-alert cf-alert-error cf-cookie-error" id="cookie-alert" data-translate="enable_cookies">Please enable cookies.</div>
-    <div id="cf-error-details" class="cf-error-details-wrapper">
-      <div class="cf-wrapper cf-header cf-error-overview">
-        <h1 data-translate="block_headline">Sorry, you have been blocked</h1>
-        <h2 class="cf-subheadline"><span data-translate="unable_to_access">You are unable to access</span> proticketing.com</h2>
-      </div><!-- /.header -->
 
-      <div class="cf-section cf-highlight">
-        <div class="cf-wrapper">
-          <div class="cf-screenshot-container cf-screenshot-full">
-            
-              <span class="cf-no-screenshot error"></span>
-            
-          </div>
-        </div>
-      </div><!-- /.captcha-container -->
+	
 
-      <div class="cf-section cf-wrapper">
-        <div class="cf-columns two">
-          <div class="cf-column">
-            <h2 data-translate="blocked_why_headline">Why have I been blocked?</h2>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('consent', 'default', {
+		ad_storage: 'denied',
+		analytics_storage: 'denied',
+		ad_user_data: 'denied',
+		ad_personalization: 'denied'
+	});
+	</script>
+	<!-- End Google Consent Mode default -->
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 
-            <p data-translate="blocked_why_detail">This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.</p>
-          </div>
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 
-          <div class="cf-column">
-            <h2 data-translate="blocked_resolve_headline">What can I do to resolve this?</h2>
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
-            <p data-translate="blocked_resolve_detail">You can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.</p>
-          </div>
-        </div>
-      </div><!-- /.section -->
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 
-      <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
-    <p class="text-13">
-      <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold">a160100e2a186d05</strong></span>
-      <span class="cf-footer-separator sm:hidden">•</span>
-      <span id="cf-footer-item-ip" class="cf-footer-item sm:block sm:mb-1">
-        Your IP:
-        <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
-        <span class="hidden" id="cf-footer-ip">20.51.199.0</span>
-        <span class="cf-footer-separator sm:hidden">•</span>
-      </span>
-      <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing" id="brand_link" target="_blank">Cloudflare</a></span>
-      
-    </p>
-    <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
-  </div><!-- /.error-footer -->
+	})(window,document,'script','dataLayer','GTM-KC33CRBV');</script>
 
-    </div><!-- /#cf-error-details -->
-  </div><!-- /#cf-wrapper -->
+	<!-- End Google Tag Manager -->
 
-  <script>
-    window._cf_translation = {};
     
-    
-  </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a160100e2a186d05',t:'MTc4MzE4ODM3NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; visibility: hidden;"></iframe><script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;c1c01d791d8d407dbb1a9af4c827c295&quot;,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
 
-</body></html>
+
+
+</head><body class="cartelera">
+	<div class="wrapper">	
+		<style>
+
+.search ul {
+  position: absolute;
+  top: 100%;
+  margin-top: -1px;
+  width: 100%;
+  z-index: 1;
+  background: #fff;
+  margin: 0;
+  list-style: none;
+  transition: none;
+  padding: 0;
+  border: 1px solid #bfc8c9;
+}
+.search ul li {
+  padding: 6px 12px;
+  transition: 0.2s background;
+  cursor: pointer;
+}
+.search ul li.selected {
+ background: rgba(0, 0, 0, 0.08);
+}
+.search ul li:hover {
+  background: #e6f0f2;
+}
+.search ul li + li {
+  border-top: 1px solid #bfc8c9;
+}
+.search .hidden {
+  display: none;
+}
+
+
+</style>
+
+
+<header id="nav-menu" aria-label="navigation bar">
+            <div class="container sinbordedebajo fondogranate">
+                <div class="nav-start">
+                    <a class="logo" href="/" title="Escalera de jacob">
+                        <span><img alt="Escalera de jacob" src="/img/logo.png"> </span>
+                    </a>
+                </div>
+
+                <div class="nav-end">
+                    <nav class="menu">
+
+
+                        <ul class="menu-bar">
+
+                            <li class="nav-link"><a href="/cartelera/">Cartelera</a></li>
+                                                            
+                                                                    <!-- Elemento simple sin submenú -->
+                                    <li class="nav-link">
+                                        <a href="/bar/" target="_self">
+                                            Bar                                        </a>
+                                    </li>
+
+                                
+                                                            
+                                                                    <!-- Elemento con submenú -->
+                                    <li>
+                                        <button class="nav-link dropdown-btn" data-dropdown="dropdown-7" aria-haspopup="true" aria-expanded="false" aria-label="La Escalera">
+                                            <span>La Escalera</span>&nbsp;
+                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                        </button>
+                                        <div id="dropdown-7" class="dropdown2 dropdown  fondoverde">
+                                            <ul role="menu">
+                                                                                                                                                        <li role="menuitem">
+                                                        <a class="dropdown-link" href="/eventos/" target="_self">
+                                                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                                            <span>Eventos</span>
+                                                        </a>
+                                                    </li>
+                                                                                                                                                        <li role="menuitem">
+                                                        <a class="dropdown-link" href="/conocenos/" target="_self">
+                                                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                                            <span>Conocenos</span>
+                                                        </a>
+                                                    </li>
+                                                                                                                                                        <li role="menuitem">
+                                                        <a class="dropdown-link" href="/contacto/" target="_self">
+                                                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                                            <span>Contacto</span>
+             
