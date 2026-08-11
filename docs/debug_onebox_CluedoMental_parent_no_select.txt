@@ -21,18 +21,18 @@ Lu	Ma	Mi	Ju	Vi	Sá	Do
 24	25	26	27	28	29	30
 31	 	 	 	 	 	 
 Elige categoría:
-Ver todo 28
+Ver todo 30
 Magia 4
 Infantil +3 6
 Improvisación 3
 Danza 1
-Humor 7
+Humor 8
 Mentalismo 5
-Bebés 1
+Bebés 2
 Cine 1
 Músical 1
 
-28 espectáculos
+30 espectáculos
 
 Ordenar por:
 Título            
@@ -112,6 +112,10 @@ Mentalismo
 Hasta el 30 sep
 Mentiroso Magia mental
  Más info
+Bebés
+Hasta el 30 sep
+MILONGA BAJO EL MAR
+ Más info
 Humor
 Hasta el 25 sep
 MISS DESGRACIAS
@@ -131,6 +135,10 @@ SAL DE MI MENTE
 Humor
 Hasta el 26 sep
 SEX O NO SEX
+ Más info
+Humor
+Hasta el 27 sep
+SOLTERAS, PERO NO SOLAS
  Más info
 Infantil +3
 Hasta el 30 sep
@@ -235,7 +243,7 @@ HTML_HEAD:
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 
-	<script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6871"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/w_Yb7dGGXaKesJ7BMiqFJqBG/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-4vnqr53bjkRRqtUSOAqWRyH0N6BpR4LuWl+LFZ7AmVjAPbRCSZdC/RwyTf4knyh9"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
+	<script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6871"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/XOqlk8PL_yVx6IdpLbpXdiLy/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-SY4915z6G18d/3C+a7YMHnjYHmRBa/0+k8v6HpU+OusP0+F0kOqqIkBS47gyNRV2"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
 
     <script src="/js/modernizr.js"></script>    
 	<script src="/js/jquery-3.6.1.min.js"></script>
