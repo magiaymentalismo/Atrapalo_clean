@@ -243,7 +243,7 @@ HTML_HEAD:
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 
-	<script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e68d0h1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/XOqlk8PL_yVx6IdpLbpXdiLy/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-SY4915z6G18d/3C+a7YMHnjYHmRBa/0+k8v6HpU+OusP0+F0kOqqIkBS47gyNRV2"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
+	<script type="text/javascript" async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV&amp;is_td=1&amp;v=3&amp;t=t&amp;pid=1631494323&amp;gtm=45He68d0v9254376772za200zd9254376772&amp;seq=1&amp;exp=115938465~115938469~118897920~118897930~120385423&amp;dl=www.laescaleradejacob.es%2Fcartelera%2F&amp;tdp=GTM-KC33CRBV;254376772;0;0;0&amp;frm=0&amp;rtg=254376772&amp;slo=7&amp;hlo=10&amp;lst=1&amp;bt=0&amp;ct=3&amp;mde=G-K16Q7JZ75Q;0_1&amp;z=0"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e68d0"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/XOqlk8PL_yVx6IdpLbpXdiLy/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-SY4915z6G18d/3C+a7YMHnjYHmRBa/0+k8v6HpU+OusP0+F0kOqqIkBS47gyNRV2"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
 
     <script src="/js/modernizr.js"></script>    
 	<script src="/js/jquery-3.6.1.min.js"></script>
@@ -362,8 +362,4 @@ HTML_HEAD:
                                                             <span>Eventos</span>
                                                         </a>
                                                     </li>
-                                                                                                                                                        <li role="menuitem">
-                                                        <a class="dropdown-link" href="/conocenos/" target="_self">
-                                                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                                                            <span>Conocenos</span>
-                 
+                                            
