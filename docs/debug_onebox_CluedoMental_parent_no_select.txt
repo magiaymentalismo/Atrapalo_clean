@@ -21,10 +21,10 @@ Lu	Ma	Mi	Ju	Vi	Sá	Do
 24	25	26	27	28	29	30
 31	 	 	 	 	 	 
 Elige categoría:
-Ver todo 30
+Ver todo 31
 Magia 4
 Infantil +3 6
-Improvisación 3
+Improvisación 4
 Danza 1
 Humor 8
 Mentalismo 5
@@ -32,7 +32,7 @@ Bebés 2
 Cine 1
 Músical 1
 
-30 espectáculos
+31 espectáculos
 
 Ordenar por:
 Título            
@@ -75,6 +75,10 @@ DIVAS Y DIVANES
 Improvisación
 Hasta el 30 sep
 EL MATCH DE IMPRO DE LA ESCALERA
+ Más info
+Improvisación
+18 ago - 08 sep
+ENSAYO GENERAL
  Más info
 Bebés
 Hasta el 27 sep
