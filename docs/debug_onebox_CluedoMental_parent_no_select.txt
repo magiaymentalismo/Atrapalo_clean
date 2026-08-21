@@ -45,22 +45,6 @@ Músical
 34 ESPECTÁCULOS
 Ordenar por:
 Próxima función
-INFANTIL +3
-HOY · 19:00
-ALUCINA ¡PEPINILLOS!
-Rubén Reyeros
-★★★★★ 4,4
-Desde 10 €
-COMPRAR
-→
-INFANTIL +3
-HOY · 19:30
-LUCES, CÁMARA Y MAGIA
-Carlos Devanti
-★★★★★ 4,9
-Desde 10 €
-COMPRAR
-→
 MENTALISMO
 HOY · 21:30
 SAL DE MI MENTE
@@ -81,6 +65,14 @@ INFANTIL +3
 MAÑANA · 18:00
 VA DE MAGIA. MAGO PONCE
 Mago Ponce
+★★★★★ 4,9
+Desde 10 €
+COMPRAR
+→
+INFANTIL +3
+MAÑANA · 18:30
+LUCES, CÁMARA Y MAGIA
+Carlos Devanti
 ★★★★★ 4,9
 Desde 10 €
 COMPRAR
@@ -114,6 +106,14 @@ MAÑANA · 22:30
 UN DÍA DE MIERDA
 Casaris Paz
 ★★★★★ 4,7
+Desde 10 €
+COMPRAR
+→
+INFANTIL +3
+DOM 23 · 19:30
+ALUCINA ¡PEPINILLOS!
+Rubén Reyeros
+★★★★★ 4,4
 Desde 10 €
 COMPRAR
 →
@@ -513,7 +513,7 @@ HTML_HEAD:
                                             <span>La Escalera</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-7" class="dropdown2 dropdown  fondoverde">
+                                        <div id="dropdown-7" class="dropdown2 dropdown  fondonaranja">
                                             <ul role="menu">
                                                                                                                                                         <li role="menuitem">
                                                         <a class="dropdown-link" href="/conocenos/" target="_self">
@@ -521,4 +521,4 @@ HTML_HEAD:
                                                         </a>
                                                     </li>
                                                                                                                                                         <li role="menuitem">
-          
+        
