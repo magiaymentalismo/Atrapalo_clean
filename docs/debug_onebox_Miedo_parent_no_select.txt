@@ -45,14 +45,6 @@ Músical
 34 ESPECTÁCULOS
 Ordenar por:
 Próxima función
-MENTALISMO
-HOY · 21:30
-SAL DE MI MENTE
-Fito Crawford
-★★★★★ 4,9
-Desde 12 €
-COMPRAR
-→
 HUMOR
 HOY · 22:30
 UN DÍA DE MIERDA
@@ -123,6 +115,14 @@ VA DE MAGIA. MAGO PONCE
 Mago Ponce
 ★★★★★ 4,9
 Desde 10 €
+COMPRAR
+→
+MENTALISMO
+VIE 28 · 21:30
+SAL DE MI MENTE
+Fito Crawford
+★★★★★ 4,9
+Desde 12 €
 COMPRAR
 →
 HUMOR
@@ -438,7 +438,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25062026">
     <link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/xg_pWYS8-HRESiV6Rdg4aY_R/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-zxOIzzFfGRHKoz3nj+U09a8Z67LDCUg/f9FJCbL+l7oH/k8t+gQG5Vo5FgwEDpO9"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e68j0h1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/XOqlk8PL_yVx6IdpLbpXdiLy/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-SY4915z6G18d/3C+a7YMHnjYHmRBa/0+k8v6HpU+OusP0+F0kOqqIkBS47gyNRV2"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e68j1h2"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
 
     <script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
