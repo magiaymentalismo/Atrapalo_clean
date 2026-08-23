@@ -45,14 +45,6 @@ Músical
 34 ESPECTÁCULOS
 Ordenar por:
 Próxima función
-INFANTIL +3
-HOY · 18:30
-LUCES, CÁMARA Y MAGIA
-Carlos Devanti
-★★★★★ 4,9
-Desde 10 €
-COMPRAR
-→
 MAGIA
 HOY · 20:00
 MAGIA EN TU CARA
@@ -73,6 +65,14 @@ INFANTIL +3
 MAR 25 · 19:00
 PIEDRA, PAPEL O TIJERA
 Nicolás Vicente “Mago Nicols”
+★★★★★ 4,9
+Desde 10 €
+COMPRAR
+→
+INFANTIL +3
+MAR 25 · 19:30
+LUCES, CÁMARA Y MAGIA
+Carlos Devanti
 ★★★★★ 4,9
 Desde 10 €
 COMPRAR
@@ -513,7 +513,7 @@ HTML_HEAD:
                                             <span>La Escalera</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-7" class="dropdown2 dropdown  fondoverde">
+                                        <div id="dropdown-7" class="dropdown2 dropdown  fondonaranja">
                                             <ul role="menu">
                                                                                                                                                         <li role="menuitem">
                                                         <a class="dropdown-link" href="/conocenos/" target="_self">
@@ -521,4 +521,4 @@ HTML_HEAD:
                                                         </a>
                                                     </li>
                                                                                                                                                         <li role="menuitem">
-          
+        
