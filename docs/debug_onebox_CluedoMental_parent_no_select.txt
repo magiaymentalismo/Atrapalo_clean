@@ -46,7 +46,7 @@ Músical
 Ordenar por:
 Próxima función
 INFANTIL +3
-MAR 25 · 19:00
+MAÑANA · 19:00
 PIEDRA, PAPEL O TIJERA
 Nicolás Vicente “Mago Nicols”
 ★★★★★ 4,9
@@ -54,7 +54,7 @@ Desde 10 €
 COMPRAR
 →
 INFANTIL +3
-MAR 25 · 19:30
+MAÑANA · 19:30
 LUCES, CÁMARA Y MAGIA
 Carlos Devanti
 ★★★★★ 4,9
@@ -62,7 +62,7 @@ Desde 10 €
 COMPRAR
 →
 MENTALISMO
-MAR 25 · 21:30
+MAÑANA · 21:30
 MENTIROSO MAGIA MENTAL
 Carlos Devanti
 ★★★★★ 4,9
@@ -513,7 +513,7 @@ HTML_HEAD:
                                             <span>La Escalera</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-7" class="dropdown2 dropdown  fondonaranja">
+                                        <div id="dropdown-7" class="dropdown2 dropdown  fondoverde">
                                             <ul role="menu">
                                                                                                                                                         <li role="menuitem">
                                                         <a class="dropdown-link" href="/conocenos/" target="_self">
@@ -521,4 +521,4 @@ HTML_HEAD:
                                                         </a>
                                                     </li>
                                                                                                                                                         <li role="menuitem">
-        
+          
