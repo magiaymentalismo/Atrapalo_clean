@@ -21,7 +21,7 @@ Magia, humor, impro, infantil y más, en Lavapiés. Elige día y plan.
 Todos los días
 ▾
 Ver todo
-34
+36
 Humor
 8
 Magia
@@ -31,9 +31,9 @@ Mentalismo
 Infantil +3
 7
 Bebés
-2
+3
 Impro
-4
+5
 Microteatro
 1
 Cine
@@ -42,7 +42,7 @@ Danza
 1
 Musical
 1
-34 ESPECTÁCULOS
+36 ESPECTÁCULOS
 Ordenar por:
 Próxima función
 INFANTIL +3
@@ -264,7 +264,7 @@ COMPRAR
 MENTALISMO
 DOM 13 · 21:30
 DESTINOS
-Adrián Gonalo
+Adrian Gonzalo
 ESTRENO
 Desde 12 €
 COMPRAR
@@ -293,6 +293,14 @@ María Simón
 Desde 12 €
 COMPRAR
 →
+BEBÉS
+SÁB 19 · 12:30
+FANTASÍA
+Belén Martínez
+★★★★★ 4,7
+Desde 7 €
+COMPRAR
+→
 HUMOR
 SÁB 19 · 22:30
 SEX O NO SEX
@@ -307,6 +315,14 @@ DIVAS Y DIVANES
 Diana Dardo, Mario Manzanares y Artista Invitada
 ★★★★★ 5,0
 Desde 15 €
+COMPRAR
+→
+IMPRO
+DOM 20 · 14:00
+LA COCINA DE IMPRO CAFÉ
+Alumnos y alumnas de la compañía de Impro café
+★★★★★ 4,8
+Desde 5 €
 COMPRAR
 →
 DANZA
