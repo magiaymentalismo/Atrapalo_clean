@@ -21,9 +21,9 @@ Magia, humor, impro, infantil y más, en Lavapiés. Elige día y plan.
 Todos los días
 ▾
 Ver todo
-36
+37
 Humor
-8
+9
 Magia
 4
 Mentalismo
@@ -42,7 +42,7 @@ Danza
 1
 Musical
 1
-36 ESPECTÁCULOS
+37 ESPECTÁCULOS
 Ordenar por:
 Próxima función
 INFANTIL +3
@@ -333,6 +333,13 @@ Victoria Pérez, María Barrio, Livia Peverelli, Cristina Mayoral y Maite Felipe
 Desde 10 €
 COMPRAR
 →
+HUMOR
+CUENTOS DEL FIN DEL MUNDO
+Alejandra Arias, Teresa Ponce de León, Jaime Páramo y Miguel Carbajo.
+★★★★★ 5,0
+Desde 10 €
+COMPRAR
+→
 AYUDA
 PREGUNTAS FRECUENTES
 ¿Por qué cobráis gastos de gestión?
@@ -454,7 +461,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25062026">
     <link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/xg_pWYS8-HRESiV6Rdg4aY_R/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-zxOIzzFfGRHKoz3nj+U09a8Z67LDCUg/f9FJCbL+l7oH/k8t+gQG5Vo5FgwEDpO9"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e68j0"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/xg_pWYS8-HRESiV6Rdg4aY_R/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-zxOIzzFfGRHKoz3nj+U09a8Z67LDCUg/f9FJCbL+l7oH/k8t+gQG5Vo5FgwEDpO9"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e68j0h1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
 
     <script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
@@ -529,7 +536,7 @@ HTML_HEAD:
                                             <span>La Escalera</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-7" class="dropdown2 dropdown  fondonaranja">
+                                        <div id="dropdown-7" class="dropdown2 dropdown  fondoverde">
                                             <ul role="menu">
                                                                                                                                                         <li role="menuitem">
                                                         <a class="dropdown-link" href="/conocenos/" target="_self">

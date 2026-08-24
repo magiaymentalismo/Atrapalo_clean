@@ -21,9 +21,9 @@ Magia, humor, impro, infantil y más, en Lavapiés. Elige día y plan.
 Todos los días
 ▾
 Ver todo
-36
+37
 Humor
-8
+9
 Magia
 4
 Mentalismo
@@ -42,7 +42,7 @@ Danza
 1
 Musical
 1
-36 ESPECTÁCULOS
+37 ESPECTÁCULOS
 Ordenar por:
 Próxima función
 INFANTIL +3
@@ -333,6 +333,13 @@ Victoria Pérez, María Barrio, Livia Peverelli, Cristina Mayoral y Maite Felipe
 Desde 10 €
 COMPRAR
 →
+HUMOR
+CUENTOS DEL FIN DEL MUNDO
+Alejandra Arias, Teresa Ponce de León, Jaime Páramo y Miguel Carbajo.
+★★★★★ 5,0
+Desde 10 €
+COMPRAR
+→
 AYUDA
 PREGUNTAS FRECUENTES
 ¿Por qué cobráis gastos de gestión?
@@ -529,7 +536,7 @@ HTML_HEAD:
                                             <span>La Escalera</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-7" class="dropdown2 dropdown  fondoverde">
+                                        <div id="dropdown-7" class="dropdown2 dropdown  fondonaranja">
                                             <ul role="menu">
                                                                                                                                                         <li role="menuitem">
                                                         <a class="dropdown-link" href="/conocenos/" target="_self">
@@ -537,4 +544,4 @@ HTML_HEAD:
                                                         </a>
                                                     </li>
                                                                                                                                                         <li role="menuitem">
-          
+        
