@@ -319,8 +319,8 @@ COMPRAR
 →
 IMPRO
 DOM 20 · 14:00
-LA COCINA DE IMPRO CAFÉ
-Alumnos y alumnas de la compañía de Impro café
+LA COCINA DE IMPROCAFÉ
+Alumnos y alumnas de la compañía de Improcafé
 ★★★★★ 4,8
 Desde 5 €
 COMPRAR
@@ -529,7 +529,7 @@ HTML_HEAD:
                                             <span>La Escalera</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-7" class="dropdown2 dropdown  fondonaranja">
+                                        <div id="dropdown-7" class="dropdown2 dropdown  fondoverde">
                                             <ul role="menu">
                                                                                                                                                         <li role="menuitem">
                                                         <a class="dropdown-link" href="/conocenos/" target="_self">
@@ -537,4 +537,4 @@ HTML_HEAD:
                                                         </a>
                                                     </li>
                                                                                                                                                         <li role="menuitem">
-        
+          
