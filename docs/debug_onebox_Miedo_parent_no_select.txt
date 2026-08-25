@@ -45,14 +45,6 @@ Musical
 38 ESPECTÁCULOS
 Ordenar por:
 Próxima función
-MENTALISMO
-HOY · 21:30
-MENTIROSO MAGIA MENTAL
-Carlos Devanti
-★★★★★ 4,9
-Desde 12 €
-COMPRAR
-→
 INFANTIL +3
 MAÑANA · 19:00
 PIEDRA, PAPEL O TIJERA
@@ -91,6 +83,14 @@ ALGUIEN DIJO ¿SUPERPODERES?
 Mago Ponce
 ★★★★★ 4,9
 Desde 10 €
+COMPRAR
+→
+MENTALISMO
+JUE 27 · 21:30
+MENTIROSO MAGIA MENTAL
+Carlos Devanti
+★★★★★ 4,9
+Desde 12 €
 COMPRAR
 →
 INFANTIL +3
@@ -543,7 +543,7 @@ HTML_HEAD:
                                             <span>La Escalera</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-7" class="dropdown2 dropdown  fondonaranja">
+                                        <div id="dropdown-7" class="dropdown2 dropdown  fondoverde">
                                             <ul role="menu">
                                                                                                                                                         <li role="menuitem">
                                                         <a class="dropdown-link" href="/conocenos/" target="_self">
@@ -551,4 +551,4 @@ HTML_HEAD:
                                                         </a>
                                                     </li>
                                                                                                                                                         <li role="menuitem">
-        
+          
