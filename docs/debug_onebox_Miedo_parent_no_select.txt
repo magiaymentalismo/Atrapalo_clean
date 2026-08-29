@@ -47,11 +47,43 @@ Hipnosis
 41 ESPECTÁCULOS
 Ordenar por:
 Próxima función
-MAGIA
-HOY · 20:30
-POWER. UNA EXPERIENCIA MUY VIP
+INFANTIL +3
+HOY · 18:00
+VA DE MAGIA. MAGO PONCE
 Mago Ponce
+★★★★★ 4,9
+Desde 10 €
+COMPRAR
+→
+INFANTIL +3
+HOY · 18:30
+LUCES, CÁMARA Y MAGIA
+Carlos Devanti
+★★★★★ 4,9
+Desde 10 €
+COMPRAR
+→
+INFANTIL +3
+HOY · 19:30
+PIEDRA, PAPEL O TIJERA
+Nicolás Vicente “Mago Nicols”
+★★★★★ 4,9
+Desde 10 €
+COMPRAR
+→
+MAGIA
+HOY · 20:00
+DESCARADO. MAGIA CANALLA
+Carlos Devanti
 ★★★★★ 5,0
+Desde 12 €
+COMPRAR
+→
+HUMOR
+HOY · 21:00
+CORAZÓN EN REBAJAS
+Laura Alcocer
+★★★★★ 4,8
 Desde 10 €
 COMPRAR
 →
@@ -63,12 +95,12 @@ Fito Crawford
 Desde 12 €
 COMPRAR
 →
-HUMOR
-HOY · 22:00
-SOY UNA PERSONA HORRIBLE
-Sara González
-★★★★★ 4,7
-Desde 10 €
+MENTALISMO
+HOY · 22:30
+HACKEANDO MENTES
+Antonio Martínez Salinas
+★★★★★ 5,0
+Desde 12 €
 COMPRAR
 →
 MENTALISMO
@@ -81,54 +113,6 @@ COMPRAR
 →
 INFANTIL +3
 MAÑANA · 18:00
-VA DE MAGIA. MAGO PONCE
-Mago Ponce
-★★★★★ 4,9
-Desde 10 €
-COMPRAR
-→
-INFANTIL +3
-MAÑANA · 18:30
-LUCES, CÁMARA Y MAGIA
-Carlos Devanti
-★★★★★ 4,9
-Desde 10 €
-COMPRAR
-→
-INFANTIL +3
-MAÑANA · 19:30
-PIEDRA, PAPEL O TIJERA
-Nicolás Vicente “Mago Nicols”
-★★★★★ 4,9
-Desde 10 €
-COMPRAR
-→
-MAGIA
-MAÑANA · 20:00
-DESCARADO. MAGIA CANALLA
-Carlos Devanti
-★★★★★ 5,0
-Desde 12 €
-COMPRAR
-→
-HUMOR
-MAÑANA · 21:00
-CORAZÓN EN REBAJAS
-Laura Alcocer
-★★★★★ 4,8
-Desde 10 €
-COMPRAR
-→
-MENTALISMO
-MAÑANA · 22:30
-HACKEANDO MENTES
-Antonio Martínez Salinas
-★★★★★ 5,0
-Desde 12 €
-COMPRAR
-→
-INFANTIL +3
-DOM 30 · 18:00
 ALGUIEN DIJO ¿SUPERPODERES?
 Mago Ponce
 ★★★★★ 4,9
@@ -136,10 +120,26 @@ Desde 10 €
 COMPRAR
 →
 MAGIA
-DOM 30 · 20:00
+MAÑANA · 19:30
+POWER. UNA EXPERIENCIA MUY VIP
+Mago Ponce
+★★★★★ 5,0
+Desde 10 €
+COMPRAR
+→
+MAGIA
+MAÑANA · 20:00
 MAGIA EN TU CARA
 Carlos Devanti
 ★★★★★ 4,9
+Desde 10 €
+COMPRAR
+→
+HUMOR
+VIE 4 · 22:00
+SOY UNA PERSONA HORRIBLE
+Sara González
+★★★★★ 4,7
 Desde 10 €
 COMPRAR
 →
@@ -495,7 +495,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
     <link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/GY0lZUzQQgeA0wDxVI-SQEZw/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-1svcoo9Odo9LALYC15RwThv4+VFP79m8RhkS8QLHdH23Jf/pi3DC26qTJql20hcF"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e68q1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/ox8dsmiqR62P1bqhciWOn7Fg/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-pbCeXEl55jpuJbknhtwj3/Z8+rCT81t6N1vj20QvNGwENqV8T4xYly2utiO6crY7"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e68q1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
 
     <script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
