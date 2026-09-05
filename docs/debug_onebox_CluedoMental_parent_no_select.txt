@@ -51,7 +51,7 @@ Hipnosis
 Ordenar por:
 Próxima función
 INFANTIL +3
-MAÑANA · 18:00
+HOY · 18:00
 ALGUIEN DIJO ¿SUPERPODERES?
 Mago Ponce
 ★★★★★ 4,9
@@ -59,7 +59,7 @@ Desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-MAÑANA · 18:30
+HOY · 18:30
 LUCES, CÁMARA Y MAGIA
 Carlos Devanti
 ★★★★★ 4,9
@@ -67,7 +67,7 @@ Desde 10 €
 VER FECHAS
 →
 MAGIA
-MAÑANA · 19:30
+HOY · 19:30
 POWER. UNA EXPERIENCIA MUY VIP
 Mago Ponce
 ★★★★★ 5,0
@@ -75,7 +75,7 @@ Desde 10 €
 VER FECHAS
 →
 MAGIA
-MAÑANA · 20:00
+HOY · 20:00
 MAGIA EN TU CARA
 Carlos Devanti
 ★★★★★ 4,9
@@ -83,7 +83,7 @@ Desde 10 €
 VER FECHAS
 →
 MENTALISMO
-MAÑANA · 21:30
+HOY · 21:30
 MENTIROSO MAGIA MENTAL
 Carlos Devanti
 ★★★★★ 4,9
