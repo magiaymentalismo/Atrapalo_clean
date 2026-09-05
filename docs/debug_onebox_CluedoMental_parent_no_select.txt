@@ -50,22 +50,6 @@ Hipnosis
 43 ESPECTÁCULOS
 Ordenar por:
 Próxima función
-MENTALISMO
-HOY · 21:30
-SAL DE MI MENTE
-Fito Crawford
-★★★★★ 4,9
-Desde 12 €
-VER FECHAS
-→
-MAGIA
-HOY · 23:00
-DESCARADO. MAGIA CANALLA
-Carlos Devanti
-★★★★★ 5,0
-Desde 12 €
-VER FECHAS
-→
 INFANTIL +3
 MAÑANA · 18:00
 ALGUIEN DIJO ¿SUPERPODERES?
@@ -146,12 +130,28 @@ Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, No
 Desde 12 €
 VER FECHAS
 →
+MAGIA
+VIE 11 · 20:00
+DESCARADO. MAGIA CANALLA
+Carlos Devanti
+★★★★★ 5,0
+Desde 12 €
+VER FECHAS
+→
 HUMOR
 VIE 11 · 21:00
 UN DÍA DE MIERDA
 Casaris Paz
 ★★★★★ 4,7
 Desde 10 €
+VER FECHAS
+→
+MENTALISMO
+VIE 11 · 21:30
+SAL DE MI MENTE
+Fito Crawford
+★★★★★ 4,9
+Desde 12 €
 VER FECHAS
 →
 HUMOR
@@ -590,11 +590,11 @@ HTML_HEAD:
                                             <span>Bonos</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
+                                        <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
                                             <ul role="menu">
                                                                                                                                                         <li role="menuitem">
                                                         <a class="dropdown-link" href="/bono-adultos/" target="_self">
                                                             <span>Bono Adultos</span>
                                                         </a>
                                                     </li>
-                                                                                                                        
+                                                                                                                          
