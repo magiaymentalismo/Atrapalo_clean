@@ -50,28 +50,12 @@ Hipnosis
 43 ESPECTÁCULOS
 Ordenar por:
 Próxima función
-HUMOR
-HOY · 19:30
-AFTER KIKI
-Casaris Paz, Jorge Alvariñas
-★★★★★ 4,8
-Desde 12 €
-VER FECHAS
-→
 MENTALISMO
 HOY · 21:30
 SAL DE MI MENTE
 Fito Crawford
 ★★★★★ 4,9
 Desde 12 €
-VER FECHAS
-→
-HUMOR
-HOY · 22:30
-UN DÍA DE MIERDA
-Casaris Paz
-★★★★★ 4,7
-Desde 10 €
 VER FECHAS
 →
 MAGIA
@@ -160,6 +144,14 @@ IMPROCAFÉ SHOW
 Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, Noneh Herrero, María Márquez, Pablo Acevedo
 ★★★★★ 4,9
 Desde 12 €
+VER FECHAS
+→
+HUMOR
+VIE 11 · 21:00
+UN DÍA DE MIERDA
+Casaris Paz
+★★★★★ 4,7
+Desde 10 €
 VER FECHAS
 →
 HUMOR
@@ -320,6 +312,14 @@ FANTASÍA
 Belén Martínez
 ★★★★★ 4,7
 Desde 7 €
+VER FECHAS
+→
+HUMOR
+SÁB 19 · 19:30
+AFTER KIKI
+Casaris Paz, Jorge Alvariñas
+★★★★★ 4,8
+Desde 12 €
 VER FECHAS
 →
 HUMOR
@@ -515,7 +515,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
     <link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/8x-4t2pegToiW8KmThtO4AQt/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-YV084F/CUzrbgJKoT1Sv9CjH5Dhq7MJmjZx5AxQe9hklpPiKvI2OYb+Nf1/GKj5U"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6921h1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/8x-4t2pegToiW8KmThtO4AQt/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-YV084F/CUzrbgJKoT1Sv9CjH5Dhq7MJmjZx5AxQe9hklpPiKvI2OYb+Nf1/GKj5U"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6921"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
 
     <script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
@@ -597,4 +597,4 @@ HTML_HEAD:
                                                             <span>Bono Adultos</span>
                                                         </a>
                                                     </li>
-                                                                                                                      
+                                                                                                                        
