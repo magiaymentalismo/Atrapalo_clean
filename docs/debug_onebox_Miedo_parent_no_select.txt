@@ -50,30 +50,6 @@ Hipnosis
 43 ESPECTÁCULOS
 Ordenar por:
 Próxima función
-INFANTIL +3
-HOY · 18:00
-ALGUIEN DIJO ¿SUPERPODERES?
-Mago Ponce
-★★★★★ 4,9
-Desde 10 €
-VER FECHAS
-→
-INFANTIL +3
-HOY · 18:30
-LUCES, CÁMARA Y MAGIA
-Carlos Devanti
-★★★★★ 4,9
-Desde 10 €
-VER FECHAS
-→
-MAGIA
-HOY · 19:30
-POWER. UNA EXPERIENCIA MUY VIP
-Mago Ponce
-★★★★★ 5,0
-Desde 10 €
-VER FECHAS
-→
 MENTALISMO
 HOY · 21:30
 MENTIROSO MAGIA MENTAL
@@ -120,6 +96,14 @@ IMPROCAFÉ SHOW
 Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, Noneh Herrero, María Márquez, Pablo Acevedo
 ★★★★★ 4,9
 Desde 12 €
+VER FECHAS
+→
+MAGIA
+JUE 10 · 21:30
+POWER. UNA EXPERIENCIA MUY VIP
+Mago Ponce
+★★★★★ 5,0
+Desde 10 €
 VER FECHAS
 →
 MAGIA
@@ -179,6 +163,14 @@ Desde 10 €
 VER FECHAS
 →
 INFANTIL +3
+SÁB 12 · 12:30
+ALGUIEN DIJO ¿SUPERPODERES?
+Mago Ponce
+★★★★★ 4,9
+Desde 10 €
+VER FECHAS
+→
+INFANTIL +3
 SÁB 12 · 16:30
 SOÑANDO MAGIA
 David Vega
@@ -198,6 +190,14 @@ INFANTIL +3
 SÁB 12 · 18:00
 VA DE MAGIA. MAGO PONCE
 Mago Ponce
+★★★★★ 4,9
+Desde 10 €
+VER FECHAS
+→
+INFANTIL +3
+SÁB 12 · 18:30
+LUCES, CÁMARA Y MAGIA
+Carlos Devanti
 ★★★★★ 4,9
 Desde 10 €
 VER FECHAS
@@ -514,7 +514,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
     <link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/8x-4t2pegToiW8KmThtO4AQt/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-YV084F/CUzrbgJKoT1Sv9CjH5Dhq7MJmjZx5AxQe9hklpPiKvI2OYb+Nf1/GKj5U"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6921"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/8x-4t2pegToiW8KmThtO4AQt/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-YV084F/CUzrbgJKoT1Sv9CjH5Dhq7MJmjZx5AxQe9hklpPiKvI2OYb+Nf1/GKj5U"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6930h2"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
 
     <script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
@@ -596,4 +596,4 @@ HTML_HEAD:
                                                             <span>Bono Adultos</span>
                                                         </a>
                                                     </li>
-                                                                                                                        
+                                                                                                                      
