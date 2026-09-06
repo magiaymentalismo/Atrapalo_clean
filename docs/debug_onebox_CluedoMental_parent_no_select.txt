@@ -74,14 +74,6 @@ Mago Ponce
 Desde 10 €
 VER FECHAS
 →
-MAGIA
-HOY · 20:00
-MAGIA EN TU CARA
-Carlos Devanti
-★★★★★ 4,9
-Desde 10 €
-VER FECHAS
-→
 MENTALISMO
 HOY · 21:30
 MENTIROSO MAGIA MENTAL
@@ -394,6 +386,13 @@ ESTRENO
 Desde 12 €
 VER FECHAS
 →
+MAGIA
+MAGIA EN TU CARA
+Carlos Devanti
+★★★★★ 4,9
+Desde 10 €
+VER FECHAS
+→
 AYUDA
 PREGUNTAS FRECUENTES
 ¿Por qué cobráis gastos de gestión?
@@ -590,11 +589,11 @@ HTML_HEAD:
                                             <span>Bonos</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
+                                        <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
                                             <ul role="menu">
                                                                                                                                                         <li role="menuitem">
                                                         <a class="dropdown-link" href="/bono-adultos/" target="_self">
                                                             <span>Bono Adultos</span>
                                                         </a>
                                                     </li>
-                                                                                                                        
+                                                                                                                          
