@@ -50,14 +50,6 @@ Hipnosis
 42 ESPECTÁCULOS
 Ordenar por:
 Próxima función
-CINE
-MAÑANA · 19:30
-CORTOS CON Ñ
-Festival de cortometrajes
-★★★★★ 4,3
-Desde 6 €
-VER FECHAS
-→
 IMPRO
 MAÑANA · 20:00
 ENSAYO GENERAL
@@ -266,6 +258,14 @@ ESTRENO
 Desde 12 €
 VER FECHAS
 →
+CINE
+MAR 15 · 19:30
+CORTOS CON Ñ
+Festival de cortometrajes
+★★★★★ 4,3
+Desde 6 €
+VER FECHAS
+→
 IMPRO
 MAR 15 · 21:00
 LA IRA DEL GRAN TIKI
@@ -379,7 +379,7 @@ Desde 12 €
 VER FECHAS
 →
 HIPNOSIS
-JUE 15 · 21:30
+JUE 8 · 21:30
 QUIMERA
 Pablo mentalista
 ESTRENO
