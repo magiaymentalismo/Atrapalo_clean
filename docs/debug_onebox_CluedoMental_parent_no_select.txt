@@ -49,7 +49,7 @@ Musical
 Ordenar por:
 Próxima función
 MENTALISMO
-MAÑANA · 20:00
+HOY · 20:00
 GOLDEN TICKET. TIENE QUE SER MAGIA
 Chap Magic
 ESTRENO
@@ -57,7 +57,7 @@ Desde 12 €
 VER FECHAS
 →
 HUMOR
-JUE 10 · 19:30
+MAÑANA · 19:30
 CUENTOS DEL FIN DEL MUNDO
 Alejandra Arias, Teresa Ponce de León, Jaime Páramo y Miguel Carbajo.
 ★★★★★ 5,0
@@ -65,7 +65,7 @@ Desde 15 €
 VER FECHAS
 →
 IMPRO
-JUE 10 · 21:00
+MAÑANA · 21:00
 IMPROCAFÉ SHOW
 Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, Noneh Herrero, María Márquez, Pablo Acevedo
 ★★★★★ 4,9
@@ -73,7 +73,7 @@ Desde 12 €
 VER FECHAS
 →
 MAGIA
-JUE 10 · 21:30
+MAÑANA · 21:30
 POWER. UNA EXPERIENCIA MUY VIP
 Mago Ponce
 ★★★★★ 5,0
@@ -504,7 +504,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
     <link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/8x-4t2pegToiW8KmThtO4AQt/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-YV084F/CUzrbgJKoT1Sv9CjH5Dhq7MJmjZx5AxQe9hklpPiKvI2OYb+Nf1/GKj5U"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6941h2"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/8x-4t2pegToiW8KmThtO4AQt/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-YV084F/CUzrbgJKoT1Sv9CjH5Dhq7MJmjZx5AxQe9hklpPiKvI2OYb+Nf1/GKj5U"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6930"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
 
     <script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
@@ -586,4 +586,4 @@ HTML_HEAD:
                                                             <span>Bono Adultos</span>
                                                         </a>
                                                     </li>
-                                                                                                                      
+                                                                                                                        
