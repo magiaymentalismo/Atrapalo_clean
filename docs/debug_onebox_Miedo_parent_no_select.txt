@@ -30,7 +30,7 @@ Humor
 Magia
 3
 Mentalismo
-8
+7
 Infantil +3
 7
 Bebés
@@ -38,14 +38,12 @@ Bebés
 Impro
 5
 Microteatro
-2
+3
 Cine
 1
 Danza
 1
 Musical
-1
-Hipnosis
 1
 42 ESPECTÁCULOS
 Ordenar por:
@@ -378,12 +376,12 @@ Soraya Santos, Sandra Mell, Fran Expósito, Javier Valverde, Chema Higuera.
 Desde 12 €
 VER FECHAS
 →
-HIPNOSIS
-JUE 8 · 21:30
-QUIMERA
-Pablo mentalista
+MICROTEATRO
+DOM 4 · 21:00
+THE CASQUIVANS
+Carolina Touceda y Gloria Rodríguez
 ESTRENO
-Desde 12 €
+Desde 10 €
 VER FECHAS
 →
 AYUDA
@@ -507,7 +505,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
     <link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/8x-4t2pegToiW8KmThtO4AQt/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-YV084F/CUzrbgJKoT1Sv9CjH5Dhq7MJmjZx5AxQe9hklpPiKvI2OYb+Nf1/GKj5U"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6921"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/8x-4t2pegToiW8KmThtO4AQt/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-YV084F/CUzrbgJKoT1Sv9CjH5Dhq7MJmjZx5AxQe9hklpPiKvI2OYb+Nf1/GKj5U"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6930"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
 
     <script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
@@ -582,11 +580,11 @@ HTML_HEAD:
                                             <span>Bonos</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
+                                        <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
                                             <ul role="menu">
                                                                                                                                                         <li role="menuitem">
                                                         <a class="dropdown-link" href="/bono-adultos/" target="_self">
                                                             <span>Bono Adultos</span>
                                                         </a>
                                                     </li>
-                                                                                                                        
+                                                                                                                          
