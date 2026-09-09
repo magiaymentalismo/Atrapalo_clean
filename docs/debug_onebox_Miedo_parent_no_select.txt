@@ -24,7 +24,7 @@ Magia, humor, impro, infantil y más, en Lavapiés. Elige día y plan.
 Todos los días
 ▾
 Ver todo
-42
+41
 Humor
 12
 Magia
@@ -36,7 +36,7 @@ Infantil +3
 Bebés
 3
 Impro
-5
+4
 Microteatro
 3
 Cine
@@ -45,7 +45,7 @@ Danza
 1
 Musical
 1
-42 ESPECTÁCULOS
+41 ESPECTÁCULOS
 Ordenar por:
 Próxima función
 MENTALISMO
@@ -376,13 +376,6 @@ ESTRENO
 Desde 10 €
 VER FECHAS
 →
-IMPRO
-ENSAYO GENERAL
-Juanjo Domínguez, Miguel Bermejo, Juan Carlos, Arancha Emes, Celia García, María Gil, Edu Páramo, Marta Sánchez
-ESTRENO
-Desde 10 €
-VER FECHAS
-→
 AYUDA
 PREGUNTAS FRECUENTES
 ¿Por qué cobráis gastos de gestión?
@@ -504,7 +497,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
     <link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/8x-4t2pegToiW8KmThtO4AQt/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-YV084F/CUzrbgJKoT1Sv9CjH5Dhq7MJmjZx5AxQe9hklpPiKvI2OYb+Nf1/GKj5U"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6930h1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/8x-4t2pegToiW8KmThtO4AQt/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-YV084F/CUzrbgJKoT1Sv9CjH5Dhq7MJmjZx5AxQe9hklpPiKvI2OYb+Nf1/GKj5U"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6930"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
 
     <script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
@@ -579,7 +572,7 @@ HTML_HEAD:
                                             <span>Bonos</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
+                                        <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
                                             <ul role="menu">
                                                                                                                                                         <li role="menuitem">
                                                         <a class="dropdown-link" href="/bono-adultos/" target="_self">
