@@ -48,14 +48,6 @@ Musical
 41 ESPECTÁCULOS
 Ordenar por:
 Próxima función
-MENTALISMO
-HOY · 20:00
-GOLDEN TICKET. TIENE QUE SER MAGIA
-Chap Magic
-ESTRENO
-Desde 12 €
-VER FECHAS
-→
 HUMOR
 MAÑANA · 19:30
 CUENTOS DEL FIN DEL MUNDO
@@ -262,6 +254,14 @@ LA IRA DEL GRAN TIKI
 Diego Rousselon, Laura Castro, Javier Torralba
 ★★★★★ 4,6
 Desde 10 €
+VER FECHAS
+→
+MENTALISMO
+MIÉ 16 · 20:00
+GOLDEN TICKET. TIENE QUE SER MAGIA
+Chap Magic
+ESTRENO
+Desde 12 €
 VER FECHAS
 →
 HUMOR
@@ -572,11 +572,11 @@ HTML_HEAD:
                                             <span>Bonos</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
+                                        <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
                                             <ul role="menu">
                                                                                                                                                         <li role="menuitem">
                                                         <a class="dropdown-link" href="/bono-adultos/" target="_self">
                                                             <span>Bono Adultos</span>
                                                         </a>
                                                     </li>
-                                                                                                                        
+                                                                                                                          
