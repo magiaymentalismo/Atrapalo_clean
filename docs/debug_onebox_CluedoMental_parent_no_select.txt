@@ -49,7 +49,7 @@ Musical
 Ordenar por:
 Próxima función
 MAGIA
-MAÑANA · 20:00
+HOY · 20:00
 DESCARADO. MAGIA CANALLA
 Carlos Devanti
 ★★★★★ 5,0
@@ -57,7 +57,7 @@ Desde 12 €
 VER FECHAS
 →
 HUMOR
-MAÑANA · 21:00
+HOY · 21:00
 UN DÍA DE MIERDA
 Casaris Paz
 ★★★★★ 4,7
@@ -65,7 +65,7 @@ Desde 10 €
 VER FECHAS
 →
 MENTALISMO
-MAÑANA · 21:30
+HOY · 21:30
 SAL DE MI MENTE
 Fito Crawford
 ★★★★★ 4,9
@@ -73,7 +73,7 @@ Desde 12 €
 VER FECHAS
 →
 HUMOR
-MAÑANA · 22:30
+HOY · 22:30
 SOY UNA PERSONA HORRIBLE
 Sara González
 ★★★★★ 4,7
@@ -81,7 +81,7 @@ Desde 10 €
 VER FECHAS
 →
 MENTALISMO
-MAÑANA · 23:00
+HOY · 23:00
 MENTIROSO MAGIA MENTAL
 Carlos Devanti
 ★★★★★ 4,9
@@ -89,7 +89,7 @@ Desde 12 €
 VER FECHAS
 →
 IMPRO
-MAÑANA · 23:59
+HOY · 23:59
 EL MATCH DE IMPRO DE LA ESCALERA
 Impro
 ★★★★★ 4,7
@@ -97,7 +97,7 @@ Desde 8 €
 VER FECHAS
 →
 BEBÉS
-SÁB 12 · 11:30
+MAÑANA · 11:30
 MILONGA BAJO EL MAR
 Ainhoa Sarmiento
 ★★★★★ 4,8
@@ -105,7 +105,7 @@ Desde 7 €
 VER FECHAS
 →
 INFANTIL +3
-SÁB 12 · 12:00
+MAÑANA · 12:00
 PIEDRA, PAPEL O TIJERA
 Nicolás Vicente “Mago Nicols”
 ★★★★★ 4,9
@@ -113,7 +113,7 @@ Desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-SÁB 12 · 12:30
+MAÑANA · 12:30
 ALGUIEN DIJO ¿SUPERPODERES?
 Mago Ponce
 ★★★★★ 4,9
@@ -121,7 +121,7 @@ Desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-SÁB 12 · 16:30
+MAÑANA · 16:30
 SOÑANDO MAGIA
 David Vega
 ★★★★★ 4,9
@@ -129,7 +129,7 @@ Desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-SÁB 12 · 17:00
+MAÑANA · 17:00
 ALUCINA ¡PEPINILLOS!
 Rubén Reyeros
 ★★★★★ 4,4
@@ -137,7 +137,7 @@ Desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-SÁB 12 · 18:00
+MAÑANA · 18:00
 VA DE MAGIA. MAGO PONCE
 Mago Ponce
 ★★★★★ 4,9
@@ -145,7 +145,7 @@ Desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-SÁB 12 · 18:30
+MAÑANA · 18:30
 LUCES, CÁMARA Y MAGIA
 Carlos Devanti
 ★★★★★ 4,9
@@ -153,7 +153,7 @@ Desde 10 €
 VER FECHAS
 →
 HUMOR
-SÁB 12 · 21:00
+MAÑANA · 21:00
 CORAZÓN EN REBAJAS
 Laura Alcocer
 ★★★★★ 4,8
@@ -505,7 +505,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
     <link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/8x-4t2pegToiW8KmThtO4AQt/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-YV084F/CUzrbgJKoT1Sv9CjH5Dhq7MJmjZx5AxQe9hklpPiKvI2OYb+Nf1/GKj5U"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6990"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/8x-4t2pegToiW8KmThtO4AQt/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-YV084F/CUzrbgJKoT1Sv9CjH5Dhq7MJmjZx5AxQe9hklpPiKvI2OYb+Nf1/GKj5U"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV&amp;is_td=1&amp;v=3&amp;t=t&amp;pid=436724442&amp;gtm=45He6992v9254376772za200zd9254376772&amp;seq=1&amp;exp=115616986~115938465~115938469~118897920~118897930~120385423~120469145~120469153&amp;dl=www.laescaleradejacob.es%2Fcartelera%2F&amp;tdp=GTM-KC33CRBV;254376772;0;0;0&amp;frm=0&amp;rtg=254376772&amp;slo=3&amp;hlo=8&amp;lst=1&amp;bt=0&amp;ct=3&amp;mde=G-K16Q7JZ75Q;0_1&amp;z=0"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6992"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
 
     <script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
@@ -580,11 +580,6 @@ HTML_HEAD:
                                             <span>Bonos</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
+                                        <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
                                             <ul role="menu">
-                                                                                                                                                        <li role="menuitem">
-                                                        <a class="dropdown-link" href="/bono-adultos/" target="_self">
-                                                            <span>Bono Adultos</span>
-                                                        </a>
-                                                    </li>
-                                                                                                                        
+                                                                                                                              
