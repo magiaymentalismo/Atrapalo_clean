@@ -48,52 +48,12 @@ Musical
 43 ESPECTÁCULOS
 Ordenar por:
 Próxima función
-MAGIA
-HOY · 20:00
-DESCARADO. MAGIA CANALLA
-Carlos Devanti
-★★★★★ 5,0
-Desde 12 €
-VER FECHAS
-→
-HUMOR
-HOY · 21:00
-UN DÍA DE MIERDA
-Casaris Paz
-★★★★★ 4,7
-Desde 12 €
-VER FECHAS
-→
-MENTALISMO
-HOY · 21:30
-SAL DE MI MENTE
-Fito Crawford
-★★★★★ 4,9
-Desde 12 €
-VER FECHAS
-→
-HUMOR
-HOY · 22:30
-SOY UNA PERSONA HORRIBLE
-Sara González
-★★★★★ 4,7
-Desde 10 €
-VER FECHAS
-→
 MENTALISMO
 HOY · 23:00
 MENTIROSO MAGIA MENTAL
 Carlos Devanti
 ★★★★★ 4,9
 Desde 12 €
-VER FECHAS
-→
-IMPRO
-HOY · 23:59
-EL MATCH DE IMPRO DE LA ESCALERA
-Impro
-★★★★★ 4,7
-Desde 8 €
 VER FECHAS
 →
 BEBÉS
@@ -153,11 +113,51 @@ Desde 10 €
 VER FECHAS
 →
 HUMOR
+MAÑANA · 19:30
+SOY UNA PERSONA HORRIBLE
+Sara González
+★★★★★ 4,7
+Desde 10 €
+VER FECHAS
+→
+HUMOR
 MAÑANA · 21:00
 CORAZÓN EN REBAJAS
 Laura Alcocer
 ★★★★★ 4,8
 Desde 10 €
+VER FECHAS
+→
+MENTALISMO
+MAÑANA · 21:30
+SAL DE MI MENTE
+Fito Crawford
+★★★★★ 4,9
+Desde 14 €
+VER FECHAS
+→
+HUMOR
+MAÑANA · 22:30
+UN DÍA DE MIERDA
+Casaris Paz
+★★★★★ 4,7
+Desde 12 €
+VER FECHAS
+→
+MAGIA
+MAÑANA · 23:00
+DESCARADO. MAGIA CANALLA
+Carlos Devanti
+★★★★★ 5,0
+Desde 12 €
+VER FECHAS
+→
+IMPRO
+MAÑANA · 23:59
+EL MATCH DE IMPRO DE LA ESCALERA
+Impro
+★★★★★ 4,7
+Desde 8 €
 VER FECHAS
 →
 BEBÉS
@@ -588,11 +588,11 @@ HTML_HEAD:
                                             <span>Bonos</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
+                                        <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
                                             <ul role="menu">
                                                                                                                                                         <li role="menuitem">
                                                         <a class="dropdown-link" href="/bono-adultos/" target="_self">
                                                             <span>Bono Adultos</span>
                                                         </a>
                                                     </li>
-                                                                                                                          
+                                                                                                                        
