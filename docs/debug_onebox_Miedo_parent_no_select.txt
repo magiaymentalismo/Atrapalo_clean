@@ -24,9 +24,9 @@ Magia, humor, impro, infantil y más, en Lavapiés. Elige día y plan.
 Todos los días
 ▾
 Ver todo
-42
+43
 Humor
-13
+14
 Magia
 3
 Mentalismo
@@ -45,7 +45,7 @@ Danza
 1
 Musical
 1
-42 ESPECTÁCULOS
+43 ESPECTÁCULOS
 Ordenar por:
 Próxima función
 MAGIA
@@ -61,7 +61,7 @@ HOY · 21:00
 UN DÍA DE MIERDA
 Casaris Paz
 ★★★★★ 4,7
-Desde 10 €
+Desde 12 €
 VER FECHAS
 →
 MENTALISMO
@@ -376,6 +376,14 @@ ESTRENO
 Desde 12 €
 VER FECHAS
 →
+HUMOR
+DOM 4 · 19:30
+DIVÁN DIVINO
+Samuel Padilla. Lluna Issa Casterà.
+ESTRENO
+Desde 14 €
+VER FECHAS
+→
 MICROTEATRO
 DOM 4 · 21:00
 THE CASQUIVANS
@@ -580,11 +588,11 @@ HTML_HEAD:
                                             <span>Bonos</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
+                                        <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
                                             <ul role="menu">
                                                                                                                                                         <li role="menuitem">
                                                         <a class="dropdown-link" href="/bono-adultos/" target="_self">
                                                             <span>Bono Adultos</span>
                                                         </a>
                                                     </li>
-                                                                                                                        
+                                                                                                                          
