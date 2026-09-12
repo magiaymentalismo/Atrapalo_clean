@@ -48,44 +48,12 @@ Musical
 43 ESPECTÁCULOS
 Ordenar por:
 Próxima función
-INFANTIL +3
-HOY · 16:30
-SOÑANDO MAGIA
-David Vega
-★★★★★ 4,9
-Desde 10 €
-VER FECHAS
-→
-INFANTIL +3
-HOY · 18:00
-VA DE MAGIA. MAGO PONCE
-Mago Ponce
-★★★★★ 4,9
-Desde 10 €
-VER FECHAS
-→
-INFANTIL +3
-HOY · 18:30
-LUCES, CÁMARA Y MAGIA
-Carlos Devanti
-★★★★★ 4,9
-Desde 10 €
-VER FECHAS
-→
 HUMOR
 HOY · 19:30
 SOY UNA PERSONA HORRIBLE
 Sara González
 ★★★★★ 4,7
 Desde 10 €
-VER FECHAS
-→
-MENTALISMO
-HOY · 20:00
-MENTIROSO MAGIA MENTAL
-Carlos Devanti
-★★★★★ 4,9
-Desde 12 €
 VER FECHAS
 →
 HUMOR
@@ -137,6 +105,14 @@ Desde 7 €
 VER FECHAS
 →
 INFANTIL +3
+MAÑANA · 12:00
+SOÑANDO MAGIA
+David Vega
+★★★★★ 4,9
+Desde 10 €
+VER FECHAS
+→
+INFANTIL +3
 MAÑANA · 12:30
 ALGUIEN DIJO ¿SUPERPODERES?
 Mago Ponce
@@ -148,6 +124,14 @@ INFANTIL +3
 MAÑANA · 13:30
 PIEDRA, PAPEL O TIJERA
 Nicolás Vicente “Mago Nicols”
+★★★★★ 4,9
+Desde 10 €
+VER FECHAS
+→
+INFANTIL +3
+MAÑANA · 16:30
+VA DE MAGIA. MAGO PONCE
+Mago Ponce
 ★★★★★ 4,9
 Desde 10 €
 VER FECHAS
@@ -272,6 +256,14 @@ María Simón
 Desde 12 €
 VER FECHAS
 →
+MENTALISMO
+VIE 18 · 23:00
+MENTIROSO MAGIA MENTAL
+Carlos Devanti
+★★★★★ 4,9
+Desde 12 €
+VER FECHAS
+→
 BEBÉS
 SÁB 19 · 11:30
 MILONGA BAJO EL MAR
@@ -286,6 +278,14 @@ FANTASÍA
 Belén Martínez
 ★★★★★ 4,7
 Desde 7 €
+VER FECHAS
+→
+INFANTIL +3
+SÁB 19 · 18:30
+LUCES, CÁMARA Y MAGIA
+Carlos Devanti
+★★★★★ 4,9
+Desde 10 €
 VER FECHAS
 →
 HUMOR
@@ -587,11 +587,11 @@ HTML_HEAD:
                                             <span>Bonos</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
+                                        <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
                                             <ul role="menu">
                                                                                                                                                         <li role="menuitem">
                                                         <a class="dropdown-link" href="/bono-adultos/" target="_self">
                                                             <span>Bono Adultos</span>
                                                         </a>
                                                     </li>
-                                                                                                                        
+                                                                                                                          
