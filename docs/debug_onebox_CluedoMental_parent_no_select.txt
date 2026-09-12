@@ -48,24 +48,8 @@ Musical
 43 ESPECTÁCULOS
 Ordenar por:
 Próxima función
-HUMOR
-HOY · 22:30
-UN DÍA DE MIERDA
-Casaris Paz
-★★★★★ 4,7
-Desde 12 €
-VER FECHAS
-→
-IMPRO
-HOY · 23:59
-EL MATCH DE IMPRO DE LA ESCALERA
-Impro
-★★★★★ 4,7
-Desde 8 €
-VER FECHAS
-→
 BEBÉS
-MAÑANA · 11:30
+HOY · 11:30
 ESTRELLAS Y SOÑAR
 Laura Alcocer
 ★★★★★ 4,7
@@ -73,7 +57,7 @@ Desde 7 €
 VER FECHAS
 →
 INFANTIL +3
-MAÑANA · 12:00
+HOY · 12:00
 SOÑANDO MAGIA
 David Vega
 ★★★★★ 4,9
@@ -81,7 +65,7 @@ Desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-MAÑANA · 13:30
+HOY · 13:30
 PIEDRA, PAPEL O TIJERA
 Nicolás Vicente “Mago Nicols”
 ★★★★★ 4,9
@@ -89,7 +73,7 @@ Desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-MAÑANA · 16:30
+HOY · 16:30
 VA DE MAGIA. MAGO PONCE
 Mago Ponce
 ★★★★★ 4,9
@@ -97,7 +81,7 @@ Desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-MAÑANA · 17:00
+HOY · 17:00
 MAGIA Y DESVARIOS VARIOS
 Joaco Showman
 ESTRENO
@@ -105,7 +89,7 @@ Desde 10 €
 VER FECHAS
 →
 MAGIA
-MAÑANA · 18:00
+HOY · 18:00
 DAVID VEGA. NO SOLO ES MAGIA
 David Vega
 ★★★★★ 4,9
@@ -113,7 +97,7 @@ Desde 10 €
 VER FECHAS
 →
 MENTALISMO
-MAÑANA · 18:30
+HOY · 18:30
 ATRÉVETE. MAGIA MENTAL
 Vicente Lucca
 ★★★★★ 4,8
@@ -121,7 +105,7 @@ Desde 10 €
 VER FECHAS
 →
 HUMOR
-MAÑANA · 19:30
+HOY · 19:30
 SOLTERAS, PERO NO SOLAS
 Iris Arisa, Nerea Valdés y Miguel Ángel Calvo.
 ★★★★★ 4,8
@@ -129,7 +113,7 @@ Desde 10 €
 VER FECHAS
 →
 MAGIA
-MAÑANA · 20:00
+HOY · 20:00
 POWER. UNA EXPERIENCIA MUY VIP
 Mago Ponce
 ★★★★★ 5,0
@@ -137,7 +121,7 @@ Desde 10 €
 VER FECHAS
 →
 MICROTEATRO
-MAÑANA · 21:00
+HOY · 21:00
 QUE TE PARTA UN RAYO
 Chema Viedma, Marta Martín, Ismael Vicente y Silvia Ros
 ESTRENO
@@ -145,7 +129,7 @@ Desde 10 €
 VER FECHAS
 →
 MENTALISMO
-MAÑANA · 21:30
+HOY · 21:30
 DESTINOS
 Adrian Gonzalo
 ESTRENO
@@ -217,6 +201,14 @@ Desde 12 €
 VER FECHAS
 →
 HUMOR
+VIE 18 · 21:00
+UN DÍA DE MIERDA
+Casaris Paz
+★★★★★ 4,7
+Desde 12 €
+VER FECHAS
+→
+HUMOR
 VIE 18 · 21:30
 MISS DESGRACIAS
 María Simón
@@ -238,6 +230,14 @@ MENTIROSO MAGIA MENTAL
 Carlos Devanti
 ★★★★★ 4,9
 Desde 12 €
+VER FECHAS
+→
+IMPRO
+VIE 18 · 23:59
+EL MATCH DE IMPRO DE LA ESCALERA
+Impro
+★★★★★ 4,7
+Desde 8 €
 VER FECHAS
 →
 BEBÉS
@@ -587,11 +587,11 @@ HTML_HEAD:
                                             <span>Bonos</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
+                                        <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
                                             <ul role="menu">
                                                                                                                                                         <li role="menuitem">
                                                         <a class="dropdown-link" href="/bono-adultos/" target="_self">
                                                             <span>Bono Adultos</span>
                                                         </a>
                                                     </li>
-                                                                                                                          
+                                                                                                                        
