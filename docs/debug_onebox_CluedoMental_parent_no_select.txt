@@ -48,30 +48,6 @@ Musical
 43 ESPECTÁCULOS
 Ordenar por:
 Próxima función
-INFANTIL +3
-HOY · 17:00
-MAGIA Y DESVARIOS VARIOS
-Joaco Showman
-ESTRENO
-Desde 10 €
-VER FECHAS
-→
-HUMOR
-HOY · 19:30
-SOLTERAS, PERO NO SOLAS
-Iris Arisa, Nerea Valdés y Miguel Ángel Calvo.
-★★★★★ 4,8
-Desde 10 €
-VER FECHAS
-→
-MAGIA
-HOY · 20:00
-POWER. UNA EXPERIENCIA MUY VIP
-Mago Ponce
-★★★★★ 5,0
-Desde 10 €
-VER FECHAS
-→
 MICROTEATRO
 HOY · 21:00
 QUE TE PARTA UN RAYO
@@ -280,6 +256,14 @@ David Vega
 Desde 10 €
 VER FECHAS
 →
+INFANTIL +3
+DOM 20 · 17:00
+MAGIA Y DESVARIOS VARIOS
+Joaco Showman
+ESTRENO
+Desde 10 €
+VER FECHAS
+→
 MAGIA
 DOM 20 · 18:00
 DAVID VEGA. NO SOLO ES MAGIA
@@ -293,6 +277,14 @@ DOM 20 · 18:30
 ATRÉVETE. MAGIA MENTAL
 Vicente Lucca
 ★★★★★ 4,8
+Desde 10 €
+VER FECHAS
+→
+MAGIA
+DOM 20 · 20:00
+POWER. UNA EXPERIENCIA MUY VIP
+Mago Ponce
+★★★★★ 5,0
 Desde 10 €
 VER FECHAS
 →
@@ -334,6 +326,14 @@ LA COCINA DE IMPROCAFÉ
 Alumnos y alumnas de la compañía de Improcafé
 ★★★★★ 4,8
 Desde 5 €
+VER FECHAS
+→
+HUMOR
+DOM 27 · 19:30
+SOLTERAS, PERO NO SOLAS
+Iris Arisa, Nerea Valdés y Miguel Ángel Calvo.
+★★★★★ 4,8
+Desde 10 €
 VER FECHAS
 →
 HUMOR
@@ -587,11 +587,11 @@ HTML_HEAD:
                                             <span>Bonos</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
+                                        <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
                                             <ul role="menu">
                                                                                                                                                         <li role="menuitem">
                                                         <a class="dropdown-link" href="/bono-adultos/" target="_self">
                                                             <span>Bono Adultos</span>
                                                         </a>
                                                     </li>
-                                                                                                                        
+                                                                                                                          
