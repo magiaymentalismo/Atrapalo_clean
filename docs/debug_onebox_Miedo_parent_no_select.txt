@@ -49,14 +49,6 @@ Musical
 Ordenar por:
 Próxima función
 INFANTIL +3
-HOY · 16:30
-VA DE MAGIA. MAGO PONCE
-Mago Ponce
-★★★★★ 4,9
-Desde 10 €
-VER FECHAS
-→
-INFANTIL +3
 HOY · 17:00
 MAGIA Y DESVARIOS VARIOS
 Joaco Showman
@@ -328,6 +320,14 @@ Mago Ponce
 Desde 10 €
 VER FECHAS
 →
+INFANTIL +3
+SÁB 26 · 18:00
+VA DE MAGIA. MAGO PONCE
+Mago Ponce
+★★★★★ 4,9
+Desde 10 €
+VER FECHAS
+→
 IMPRO
 DOM 27 · 14:00
 LA COCINA DE IMPROCAFÉ
@@ -587,11 +587,11 @@ HTML_HEAD:
                                             <span>Bonos</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
+                                        <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
                                             <ul role="menu">
                                                                                                                                                         <li role="menuitem">
                                                         <a class="dropdown-link" href="/bono-adultos/" target="_self">
                                                             <span>Bono Adultos</span>
                                                         </a>
                                                     </li>
-                                                                                                                          
+                                                                                                                        
