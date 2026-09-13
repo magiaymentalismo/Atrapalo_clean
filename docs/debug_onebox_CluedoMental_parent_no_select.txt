@@ -49,14 +49,6 @@ Musical
 Ordenar por:
 Próxima función
 INFANTIL +3
-HOY · 13:30
-PIEDRA, PAPEL O TIJERA
-Nicolás Vicente “Mago Nicols”
-★★★★★ 4,9
-Desde 10 €
-VER FECHAS
-→
-INFANTIL +3
 HOY · 16:30
 VA DE MAGIA. MAGO PONCE
 Mago Ponce
@@ -69,22 +61,6 @@ HOY · 17:00
 MAGIA Y DESVARIOS VARIOS
 Joaco Showman
 ESTRENO
-Desde 10 €
-VER FECHAS
-→
-MAGIA
-HOY · 18:00
-DAVID VEGA. NO SOLO ES MAGIA
-David Vega
-★★★★★ 4,9
-Desde 10 €
-VER FECHAS
-→
-MENTALISMO
-HOY · 18:30
-ATRÉVETE. MAGIA MENTAL
-Vicente Lucca
-★★★★★ 4,8
 Desde 10 €
 VER FECHAS
 →
@@ -232,6 +208,14 @@ Ainhoa Sarmiento
 Desde 7 €
 VER FECHAS
 →
+INFANTIL +3
+SÁB 19 · 12:00
+PIEDRA, PAPEL O TIJERA
+Nicolás Vicente “Mago Nicols”
+★★★★★ 4,9
+Desde 10 €
+VER FECHAS
+→
 BEBÉS
 SÁB 19 · 12:30
 FANTASÍA
@@ -301,6 +285,22 @@ DOM 20 · 12:00
 SOÑANDO MAGIA
 David Vega
 ★★★★★ 4,9
+Desde 10 €
+VER FECHAS
+→
+MAGIA
+DOM 20 · 18:00
+DAVID VEGA. NO SOLO ES MAGIA
+David Vega
+★★★★★ 4,9
+Desde 10 €
+VER FECHAS
+→
+MENTALISMO
+DOM 20 · 18:30
+ATRÉVETE. MAGIA MENTAL
+Vicente Lucca
+★★★★★ 4,8
 Desde 10 €
 VER FECHAS
 →
@@ -512,7 +512,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
     <link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/BnqMGSY_YP4cCmbNINHpJPkd/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-TGqr7QRNQUxJ068dgcrA+DJnq0Rl1w2853p2JaVg5zXIdku7CnDp6bOZ/2YcIz1K"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6992"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/BnqMGSY_YP4cCmbNINHpJPkd/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-TGqr7QRNQUxJ068dgcrA+DJnq0Rl1w2853p2JaVg5zXIdku7CnDp6bOZ/2YcIz1K"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69a0h2"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
 
     <script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
@@ -587,7 +587,7 @@ HTML_HEAD:
                                             <span>Bonos</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
+                                        <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
                                             <ul role="menu">
                                                                                                                                                         <li role="menuitem">
                                                         <a class="dropdown-link" href="/bono-adultos/" target="_self">
