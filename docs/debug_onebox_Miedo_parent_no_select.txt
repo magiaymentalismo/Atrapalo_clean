@@ -48,22 +48,6 @@ Musical
 43 ESPECTÁCULOS
 Ordenar por:
 Próxima función
-BEBÉS
-HOY · 11:30
-ESTRELLAS Y SOÑAR
-Laura Alcocer
-★★★★★ 4,7
-Desde 7 €
-VER FECHAS
-→
-INFANTIL +3
-HOY · 12:00
-SOÑANDO MAGIA
-David Vega
-★★★★★ 4,9
-Desde 10 €
-VER FECHAS
-→
 INFANTIL +3
 HOY · 13:30
 PIEDRA, PAPEL O TIJERA
@@ -304,12 +288,20 @@ Diana Dardo, Mario Manzanares y Artista Invitada
 Desde 15 €
 VER FECHAS
 →
-IMPRO
-DOM 20 · 14:00
-LA COCINA DE IMPROCAFÉ
-Alumnos y alumnas de la compañía de Improcafé
-★★★★★ 4,8
-Desde 5 €
+BEBÉS
+DOM 20 · 11:30
+ESTRELLAS Y SOÑAR
+Laura Alcocer
+★★★★★ 4,7
+Desde 7 €
+VER FECHAS
+→
+INFANTIL +3
+DOM 20 · 12:00
+SOÑANDO MAGIA
+David Vega
+★★★★★ 4,9
+Desde 10 €
 VER FECHAS
 →
 MICROTEATRO
@@ -334,6 +326,14 @@ ALGUIEN DIJO ¿SUPERPODERES?
 Mago Ponce
 ★★★★★ 4,9
 Desde 10 €
+VER FECHAS
+→
+IMPRO
+DOM 27 · 14:00
+LA COCINA DE IMPROCAFÉ
+Alumnos y alumnas de la compañía de Improcafé
+★★★★★ 4,8
+Desde 5 €
 VER FECHAS
 →
 HUMOR
@@ -587,11 +587,11 @@ HTML_HEAD:
                                             <span>Bonos</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
+                                        <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
                                             <ul role="menu">
                                                                                                                                                         <li role="menuitem">
                                                         <a class="dropdown-link" href="/bono-adultos/" target="_self">
                                                             <span>Bono Adultos</span>
                                                         </a>
                                                     </li>
-                                                                                                                        
+                                                                                                                          

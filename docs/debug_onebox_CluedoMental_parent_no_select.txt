@@ -5,105 +5,593 @@ SELECT URL:
 https://entradas.laescaleradejacob.es/laescaleradejacob/events/56921
 
 PAGE URL:
-https://entradas.laescaleradejacob.es/laescaleradejacob/events/56921
+https://www.laescaleradejacob.es/cartelera/
 
 BODY:
-Sorry, you have been blocked
-You are unable to access proticketing.com
-Why have I been blocked?
+Cartelera
+Club Jacob
+Bonos
+ 
+Bar
+La Escalera
+ 
+CARTELERA
+QUÉ HAY en cartelera
 
-This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.
+Magia, humor, impro, infantil y más, en Lavapiés. Elige día y plan.
 
-What can I do to resolve this?
+📅
+Todos los días
+▾
+Ver todo
+43
+Humor
+14
+Magia
+3
+Mentalismo
+7
+Infantil +3
+7
+Bebés
+3
+Impro
+4
+Microteatro
+3
+Cine
+1
+Danza
+1
+Musical
+1
+43 ESPECTÁCULOS
+Ordenar por:
+Próxima función
+INFANTIL +3
+HOY · 13:30
+PIEDRA, PAPEL O TIJERA
+Nicolás Vicente “Mago Nicols”
+★★★★★ 4,9
+Desde 10 €
+VER FECHAS
+→
+INFANTIL +3
+HOY · 16:30
+VA DE MAGIA. MAGO PONCE
+Mago Ponce
+★★★★★ 4,9
+Desde 10 €
+VER FECHAS
+→
+INFANTIL +3
+HOY · 17:00
+MAGIA Y DESVARIOS VARIOS
+Joaco Showman
+ESTRENO
+Desde 10 €
+VER FECHAS
+→
+MAGIA
+HOY · 18:00
+DAVID VEGA. NO SOLO ES MAGIA
+David Vega
+★★★★★ 4,9
+Desde 10 €
+VER FECHAS
+→
+MENTALISMO
+HOY · 18:30
+ATRÉVETE. MAGIA MENTAL
+Vicente Lucca
+★★★★★ 4,8
+Desde 10 €
+VER FECHAS
+→
+HUMOR
+HOY · 19:30
+SOLTERAS, PERO NO SOLAS
+Iris Arisa, Nerea Valdés y Miguel Ángel Calvo.
+★★★★★ 4,8
+Desde 10 €
+VER FECHAS
+→
+MAGIA
+HOY · 20:00
+POWER. UNA EXPERIENCIA MUY VIP
+Mago Ponce
+★★★★★ 5,0
+Desde 10 €
+VER FECHAS
+→
+MICROTEATRO
+HOY · 21:00
+QUE TE PARTA UN RAYO
+Chema Viedma, Marta Martín, Ismael Vicente y Silvia Ros
+ESTRENO
+Desde 10 €
+VER FECHAS
+→
+MENTALISMO
+HOY · 21:30
+DESTINOS
+Adrian Gonzalo
+ESTRENO
+Desde 12 €
+VER FECHAS
+→
+CINE
+MAR 15 · 19:30
+CORTOS CON Ñ
+Festival de cortometrajes
+★★★★★ 4,3
+Desde 6 €
+VER FECHAS
+→
+IMPRO
+MAR 15 · 21:00
+LA IRA DEL GRAN TIKI
+Diego Rousselon, Laura Castro, Javier Torralba
+★★★★★ 4,6
+Desde 10 €
+VER FECHAS
+→
+MENTALISMO
+MIÉ 16 · 20:00
+GOLDEN TICKET. TIENE QUE SER MAGIA
+Chap Magic
+ESTRENO
+Desde 12 €
+VER FECHAS
+→
+HUMOR
+JUE 17 · 19:30
+CUENTOS DEL FIN DEL MUNDO
+Alejandra Arias, Teresa Ponce de León, Jaime Páramo y Miguel Carbajo.
+★★★★★ 5,0
+Desde 15 €
+VER FECHAS
+→
+HUMOR
+JUE 17 · 20:00
+LA TELENOVELA DE LAS CHICAS COCODRILO
+Shirley Stonyrock Gad Yola del Peru
+ESTRENO
+Desde 12 €
+VER FECHAS
+→
+IMPRO
+JUE 17 · 21:15
+IMPROCAFÉ SHOW
+Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, Noneh Herrero, María Márquez, Pablo Acevedo
+★★★★★ 4,9
+Desde 12 €
+VER FECHAS
+→
+HUMOR
+VIE 18 · 19:30
+HORMONADA 2.0
+Sara Cardona
+★★★★★ 4,8
+Desde 12 €
+VER FECHAS
+→
+MAGIA
+VIE 18 · 20:00
+DESCARADO. MAGIA CANALLA
+Carlos Devanti
+★★★★★ 5,0
+Desde 12 €
+VER FECHAS
+→
+HUMOR
+VIE 18 · 21:00
+UN DÍA DE MIERDA
+Casaris Paz
+★★★★★ 4,7
+Desde 12 €
+VER FECHAS
+→
+HUMOR
+VIE 18 · 21:30
+MISS DESGRACIAS
+María Simón
+★★★★★ 5,0
+Desde 12 €
+VER FECHAS
+→
+HUMOR
+VIE 18 · 22:30
+SOY UNA PERSONA HORRIBLE
+Sara González
+★★★★★ 4,7
+Desde 10 €
+VER FECHAS
+→
+MENTALISMO
+VIE 18 · 23:00
+MENTIROSO MAGIA MENTAL
+Carlos Devanti
+★★★★★ 4,9
+Desde 12 €
+VER FECHAS
+→
+IMPRO
+VIE 18 · 23:59
+EL MATCH DE IMPRO DE LA ESCALERA
+Impro
+★★★★★ 4,7
+Desde 8 €
+VER FECHAS
+→
+BEBÉS
+SÁB 19 · 11:30
+MILONGA BAJO EL MAR
+Ainhoa Sarmiento
+★★★★★ 4,8
+Desde 7 €
+VER FECHAS
+→
+BEBÉS
+SÁB 19 · 12:30
+FANTASÍA
+Belén Martínez
+★★★★★ 4,7
+Desde 7 €
+VER FECHAS
+→
+INFANTIL +3
+SÁB 19 · 18:30
+LUCES, CÁMARA Y MAGIA
+Carlos Devanti
+★★★★★ 4,9
+Desde 10 €
+VER FECHAS
+→
+HUMOR
+SÁB 19 · 19:30
+AFTER KIKI
+Casaris Paz, Jorge Alvariñas
+★★★★★ 4,8
+Desde 12 €
+VER FECHAS
+→
+HUMOR
+SÁB 19 · 21:00
+CORAZÓN EN REBAJAS
+Laura Alcocer
+★★★★★ 4,8
+Desde 10 €
+VER FECHAS
+→
+MENTALISMO
+SÁB 19 · 21:30
+SAL DE MI MENTE
+Fito Crawford
+★★★★★ 4,9
+Desde 14 €
+VER FECHAS
+→
+HUMOR
+SÁB 19 · 22:30
+SEX O NO SEX
+María Simón
+★★★★★ 4,8
+Desde 10 €
+VER FECHAS
+→
+MUSICAL
+SÁB 19 · 23:00
+DIVAS Y DIVANES
+Diana Dardo, Mario Manzanares y Artista Invitada
+★★★★★ 5,0
+Desde 15 €
+VER FECHAS
+→
+BEBÉS
+DOM 20 · 11:30
+ESTRELLAS Y SOÑAR
+Laura Alcocer
+★★★★★ 4,7
+Desde 7 €
+VER FECHAS
+→
+INFANTIL +3
+DOM 20 · 12:00
+SOÑANDO MAGIA
+David Vega
+★★★★★ 4,9
+Desde 10 €
+VER FECHAS
+→
+MICROTEATRO
+MAR 22 · 20:00
+UNA NOCHE CON MI EX
+Aimar Vega Alejandra Bernal
+ESTRENO
+Desde 8 €
+VER FECHAS
+→
+DANZA
+MAR 22 · 21:15
+SUPRA
+Victoria Pérez, María Barrio, Livia Peverelli, Cristina Mayoral y Maite Felipe
+★★★★★ 5,0
+Desde 10 €
+VER FECHAS
+→
+INFANTIL +3
+SÁB 26 · 12:30
+ALGUIEN DIJO ¿SUPERPODERES?
+Mago Ponce
+★★★★★ 4,9
+Desde 10 €
+VER FECHAS
+→
+IMPRO
+DOM 27 · 14:00
+LA COCINA DE IMPROCAFÉ
+Alumnos y alumnas de la compañía de Improcafé
+★★★★★ 4,8
+Desde 5 €
+VER FECHAS
+→
+HUMOR
+VIE 2 · 19:00
+TODXS NOS VAMOS A MORIR
+Noelia Marló
+ESTRENO
+Desde 17.5 €
+VER FECHAS
+→
+MENTALISMO
+VIE 2 · 21:30
+HACKEANDO MENTES
+Antonio Martínez Salinas
+★★★★★ 5,0
+Desde 12 €
+VER FECHAS
+→
+HUMOR
+VIE 2 · 22:30
+SLASHER. THE EXPERIENCE
+Soraya Santos, Sandra Mell, Fran Expósito, Javier Valverde, Chema Higuera.
+★★★★★ 5,0
+Desde 12 €
+VER FECHAS
+→
+HUMOR
+SÁB 3 · 22:30
+TÍA, NADIE ES PERFECTA
+Almudena Alcocer, Maria Francés, Julia Olcina, Yaiza de la Torre y Alejandra Lozano
+ESTRENO
+Desde 12 €
+VER FECHAS
+→
+HUMOR
+DOM 4 · 19:30
+DIVÁN DIVINO
+Samuel Padilla. Lluna Issa Casterà.
+ESTRENO
+Desde 14 €
+VER FECHAS
+→
+MICROTEATRO
+DOM 4 · 21:00
+THE CASQUIVANS
+Carolina Touceda y Gloria Rodríguez
+ESTRENO
+Desde 10 €
+VER FECHAS
+→
+INFANTIL +3
+ALUCINA ¡PEPINILLOS!
+Rubén Reyeros
+★★★★★ 4,4
+Desde 10 €
+VER FECHAS
+→
+AYUDA
+PREGUNTAS FRECUENTES
+¿Por qué cobráis gastos de gestión?
 
-You can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.
+Sabemos que no te gustan. A nosotros tampoco, te lo decimos de verdad. Pero son lo que cuesta que puedas elegir tu butaca desde casa, pagar como prefieras y comprar hasta unos minutos antes de que empiece el show. Y que esa butaca sea tuya de verdad, sin sustos, la compres donde la compres. Nuestras entradas valen casi lo mismo que hace diez años, y queremos que siga siendo así. Pero con ese margen no podríamos mantener ninguno de esos servicios, que hace diez años ni existían. Por eso te cobramos 1,50 €, y preferimos contártelo así, sin adornos. Lo ajustamos todo lo que podemos. Por cierto: en taquilla también los hay, y el coste total es más alto que online.
 
-Cloudflare Ray ID: a3a4ad014cf6a8b3 • Your IP: Click to reveal • Performance & security by Cloudflare
+¿Con cuánta antelación puedo comprar mi entrada?
+
+Podrás comprar las entradas a través de nuestra web hasta unos minutos antes del comienzo del espectáculo. También puedes comprarlas en taquilla en horario de apertura del local, pero recuerda que tienen un precio superior al de compra online y están sujetas a disponibilidad. 
+
+¿Puedo realizar una compra telefónica?
+
+Salvo que se trate de un grupo de más de 10 personas, que sí se podrán gestionar por teléfono, las compras se tienen que realizar a través del sistema habilitado en nuestra página.
+
+¿Puedo seleccionar mi asiento en el proceso de compra?
+
+Sí, las entradas se venden numeradas.
+
+¿Es necesario imprimir mi entrada?
+
+No es necesario. Puedes decidir imprimirla o llevar el código QR en el móvil para que lo validemos cuando accedas a la sala.
+
+¿Necesito pasar por taquilla antes de acudir a la función?
+
+No es necesario. Te recomendamos que acudas al local al menos 10 minutos antes del comienzo de la función para que te informemos de cuál es la sala y cómo tienes que acceder. También puedes aprovechar para tomarte algo en el bar y pasar con tu bebida a la sala, ¡es parte de la experiencia!
+
+Si me retraso y la función ya ha comenzado, ¿puedo acceder a la sala?
+
+En la mayoría de espectáculos no podemos permitir el acceso una vez comenzada la función. Nuestras salas son pequeñas y la distracción para los actores es grande. Acude con tiempo suficiente, te lo agradecemos.
+
+¿Cómo gestiono una compra para un grupo?
+
+A partir de 10 personas consideramos que se trata de un grupo y tienes la posibilidad de gestionarlo por teléfono con nuestro personal. Tienes que ponerte en contacto con nosotros en el 625.721.745 o escribe a info@laescaleradejacob.es y te informamos sobre cómo proceder.
+
+¿Hay un espacio para colocar los carritos de los niños?
+
+Nuestro espacio es pequeño y no disponemos de un sitio específico para ello. Podéis dejarlos en el bar pero no nos responsabilizamos de ello. Si tenéis una alternativa al carrito, nosotros lo agradecemos.
+
+¿Hay algún parking cercano?
+
+Hay un aparcamiento muy cerca, el Parking Relatores (C/ Relatores, 11). Puedes ponerte en contacto con ellos en el 91.369.17.65, a veces os reservan la plaza si llamáis con 24h de antelación.
+
+Si no encuentras solución a tu pregunta, ¡llámanos al 625.721.745!
+20 AÑOS EN LAVAPIÉS
+DOS SALAS DE TEATRO
+BAR
+PASA CON TU BEBIDA AL SHOW
+MAGIA · MENTALISMO · HUMOR · IMPRO · INFANTILES
+DESDE 2005
+CALLE LAVAPIÉS 9
+20 AÑOS EN LAVAPIÉS
+DOS SALAS DE TEATRO
+BAR
+PASA CON TU BEBIDA AL SHOW
+MAGIA · MENTALISMO · HUMOR · IMPRO · INFANTILES
+DESDE 2005
+CALLE LAVAPIÉS 9
+NEWSLETTER · SUSCRIPCIÓN GRATUITA
+ÚNETE AL
+CLUB JACOB
+
+Promociones exclusivas y todas las novedades de la Escalera en tu correo, antes que nadie.
+
+TU EMAIL
+UNIRME AL CLUB →
+Al unirte aceptas la política de privacidad. Puedes darte de baja cuando quieras.
+DONDE EL TEATRO Y LA MAGIA
+se viven de cerca.
+
+Teatro íntimo, bar y un plan distinto cada día, a diez minutos andando de Sol
+
+ENCUÉNTRANOS
+
+C/ Lavapiés 9 · 28012 Madrid
+
+Metro Tirso de Molina
+
+info@laescaleradejacob.es
+
+625 721 745
+
+EXPLORA
+Cartelera
+Bar
+Eventos
+Conócenos
+Contacto
+Noticias
+HORARIO APERTURA
+
+M a V: a partir de las 18:30h
+
+S · D · Festivos: a partir de las 10:30h
+
+© 2026 LA ESCALERA DE JACOB
+
+Aviso legal
+Política de privacidad
+Política de cookies
+×
+Sí, nos confesamos, usamos cookies
+Las usamos para cosas como analizar el tráfico de la web, ver en qué pasos se atasca una compra y, si nos das permiso, mostrarte publicidad relacionada con lo que te interesa. Tú decides: puedes aceptarlas todas, rechazarlas o entrar en "Mostrar detalles" y elegir qué compartes. Si quieres saber más, te lo contamos en la Política de privacidad
+ MOSTRAR DETALLES
+ACEPTAR TODO
+RECHAZAR TODO
 
 HTML_HEAD:
-<!DOCTYPE html><html class="no-js" lang="en-US"><!--<![endif]--><head>
-<title>Attention Required! | Cloudflare</title>
-<meta charset="UTF-8">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="robots" content="noindex, nofollow">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/cf.errors.css">
-<!--[if lt IE 9]><link rel="stylesheet" id='cf_styles-ie-css' href="/cdn-cgi/styles/cf.errors.ie.css" /><![endif]-->
-<style>body{margin:0;padding:0}</style>
+<!DOCTYPE html><html lang="es" style="" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartelera | La Escalera de Jacob — Teatro en Lavapiés, Madrid</title><meta name="title" content="Cartelera | La Escalera de Jacob — Teatro en Lavapiés, Madrid"><meta name="keywords" content="teatro Madrid cartelera, espectáculos Lavapiés, magia Madrid, mentalismo Madrid, teatro infantil Madrid, humor Madrid, entradas teatro Madrid"><meta name="description" content="50 espectáculos en cartelera: magia, mentalismo, humor, infantil, impro y más. Teatro íntimo en Lavapiés, Madrid. Compra tu entrada online."><meta name="robots" content="index,follow"><link rel="canonical" href="https://www.laescaleradejacob.es/cartelera/"><meta property="og:title" content="Cartelera | La Escalera de Jacob — Teatro en Lavapiés, Madrid"><meta property="og:description" content="50 espectáculos en cartelera: magia, mentalismo, humor, infantil, impro y más. Teatro íntimo en Lavapiés, Madrid. Compra tu entrada online."><meta property="og:image" content=""><meta property="og:site_name" content="Cartelera | La Escalera de Jacob — Teatro en Lavapiés, Madrid"><meta property="og:type" content="website"><meta property="og:url" content="https://www.laescaleradejacob.es/cartelera/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content=""><meta name="twitter:title" content="Cartelera | La Escalera de Jacob — Teatro en Lavapiés, Madrid"><meta name="twitter:description" content="50 espectáculos en cartelera: magia, mentalismo, humor, infantil, impro y más. Teatro íntimo en Lavapiés, Madrid. Compra tu entrada online."><meta name="twitter:image" content=""><meta name="twitter:site" content="https://www.laescaleradejacob.es/cartelera/">
+	<link rel="icon" type="image/png" href="/favicon.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500;1,600&amp;family=Inter:wght@400;500;600;700&amp;display=swap" media="all" onload="this.media='all'">
+	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap"></noscript>
+	<link rel="stylesheet" href="/css/style.css?25082026">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/BnqMGSY_YP4cCmbNINHpJPkd/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-TGqr7QRNQUxJ068dgcrA+DJnq0Rl1w2853p2JaVg5zXIdku7CnDp6bOZ/2YcIz1K"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6992"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
+
+    <script src="/js/modernizr.js"></script>
+	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
+		<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+	<script defer="" src="/js/masonry.pkgd.min.js"></script>
+			<script src="https://www.google.com/recaptcha/api.js?hl=es&amp;onload=onRecaptchaClubReady&amp;render=explicit" async="" defer=""></script>
+		<script defer="" src="/js/main.js?010920262"></script>
 
 
-<!--[if gte IE 10]><!-->
-<script>
-  if (!navigator.cookieEnabled) {
-    window.addEventListener('DOMContentLoaded', function () {
-      var cookieEl = document.getElementById('cookie-alert');
-      cookieEl.style.display = 'block';
-    })
-  }
-</script>
-<!--<![endif]-->
+	<!-- Google Tag Manager -->
+	
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KC33CRBV');</script>
 
-<script src="/cdn-cgi/challenge-platform/scripts/precursor/main.js"></script></head>
-<body>
-  <div id="cf-wrapper">
-    <div class="cf-alert cf-alert-error cf-cookie-error" id="cookie-alert" data-translate="enable_cookies">Please enable cookies.</div>
-    <div id="cf-error-details" class="cf-error-details-wrapper">
-      <div class="cf-wrapper cf-header cf-error-overview">
-        <h1 data-translate="block_headline">Sorry, you have been blocked</h1>
-        <h2 class="cf-subheadline"><span data-translate="unable_to_access">You are unable to access</span> proticketing.com</h2>
-      </div><!-- /.header -->
+	<!-- End Google Tag Manager -->
 
-      <div class="cf-section cf-highlight">
-        <div class="cf-wrapper">
-          <div class="cf-screenshot-container cf-screenshot-full">
-            
-              <span class="cf-no-screenshot error"></span>
-            
-          </div>
-        </div>
-      </div><!-- /.captcha-container -->
 
-      <div class="cf-section cf-wrapper">
-        <div class="cf-columns two">
-          <div class="cf-column">
-            <h2 data-translate="blocked_why_headline">Why have I been blocked?</h2>
 
-            <p data-translate="blocked_why_detail">This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.</p>
-          </div>
-
-          <div class="cf-column">
-            <h2 data-translate="blocked_resolve_headline">What can I do to resolve this?</h2>
-
-            <p data-translate="blocked_resolve_detail">You can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.</p>
-          </div>
-        </div>
-      </div><!-- /.section -->
-
-      <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
-    <p class="text-13">
-      <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold">a3a4ad014cf6a8b3</strong></span>
-      <span class="cf-footer-separator sm:hidden">•</span>
-      <span id="cf-footer-item-ip" class="cf-footer-item sm:block sm:mb-1">
-        Your IP:
-        <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
-        <span class="hidden" id="cf-footer-ip">172.215.217.195</span>
-        <span class="cf-footer-separator sm:hidden">•</span>
-      </span>
-      <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing" id="brand_link" target="_blank">Cloudflare</a></span>
-      
-    </p>
-    <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
-  </div><!-- /.error-footer -->
-
-    </div><!-- /#cf-error-details -->
-  </div><!-- /#cf-wrapper -->
-
-  <script>
-    window._cf_translation = {};
     
-    
-  </script>
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;c1c01d791d8d407dbb1a9af4c827c295&quot;,&quot;spa&quot;:2}" crossorigin="anonymous"></script>
-<script>window.__CF$cv$params={r:'a3a4ad014cf6a8b3',t:'MTc4OTI3NjU0NA==',u:'01a099315cd57f038198bafc83992aac',ut:'HzbxKUvFjBQ5.b00mT4uoqQfZtXwdujzP6.w5aCnae0-1789276544-1.2.1.1-zmpfPHeCsSBbZAgKG90SJCKVVEVwizHcbMJculCRiG_Qttf2JH7L5Lm79upPOBLzqNkekgrJaxztilTF_sgqp6ZNRvTQDDV_Ojtp9owNuMM',i:60};(function(){if(!document.body)return;var s=document.createElement('script');s.src='/cdn-cgi/challenge-platform/scripts/precursor/main.js';document.head.appendChild(s);})();</script>
-</body></html>
+
+
+
+
+
+
+</head>
+<body class="cartelera">
+	<div class="wrapper">
+
+		<div class="contenedor-general" style="zoom: 1.36111;">
+			<script>
+				(function() {
+					var e = document.currentScript.parentElement,
+						s = getComputedStyle(document.documentElement).getPropertyValue('--zoom-max'),
+						m = parseFloat(s) || 1.5,
+						vw = window.innerWidth,
+						r = Math.min(Math.max((vw - 1024) / 576, 0), 1);
+					e.style.zoom = 1 + r * (m - 1);
+				})();
+			</script>
+			
+			<header id="nav-menu" aria-label="navigation bar">
+            <div class="container sinbordedebajo fondogranate">
+                <div class="nav-start">
+                    <a class="logo" href="/" title="Escalera de jacob">
+                        <span><img alt="Escalera de jacob" src="/img/logo.png"> </span>
+                    </a>
+                </div>
+
+                <div class="nav-end">
+                    <nav class="menu">
+
+
+                        <ul class="menu-bar">
+
+                            <li class="nav-link"><a href="/cartelera/">Cartelera</a></li>
+                                                            
+                                                                    <!-- Elemento simple sin submenú -->
+                                    <li class="nav-link">
+                                        <a href="/club-jacob/" target="_self">
+                                            Club Jacob                                        </a>
+                                    </li>
+
+                                
+                                                            
+                                                                    <!-- Elemento con submenú -->
+                                    <li>
+                                        <button class="nav-link dropdown-btn" data-dropdown="dropdown-9" aria-haspopup="true" aria-expanded="false" aria-label="Bonos">
+                                            <span>Bonos</span>&nbsp;
+                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                        </button>
+                                        <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
+                                            <ul role="menu">
+                                                                                                                                                        <li role="menuitem">
+                                                        <a class="dropdown-link" href="/bono-adultos/" target="_self">
+                                                            <span>Bono Adultos</span>
+                                                        </a>
+                                                    </li>
+                                                                                                                        
