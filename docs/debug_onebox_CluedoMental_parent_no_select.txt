@@ -197,7 +197,7 @@ SÁB 19 · 21:00
 CORAZÓN EN REBAJAS
 Laura Alcocer
 ★★★★★ 4,8
-Desde 10 €
+Desde 12 €
 VER FECHAS
 →
 MENTALISMO
@@ -213,7 +213,7 @@ SÁB 19 · 22:30
 SEX O NO SEX
 María Simón
 ★★★★★ 4,8
-Desde 10 €
+Desde 12 €
 VER FECHAS
 →
 MUSICAL
@@ -385,6 +385,7 @@ Desde 12 €
 VER FECHAS
 →
 INFANTIL +3
+SÁB 10 · 17:00
 ALUCINA ¡PEPINILLOS!
 Rubén Reyeros
 ★★★★★ 4,4
@@ -503,39 +504,50 @@ HTML_HEAD:
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cartelera | La Escalera de Jacob — Teatro en Lavapiés, Madrid</title><meta name="title" content="Cartelera | La Escalera de Jacob — Teatro en Lavapiés, Madrid"><meta name="keywords" content="teatro Madrid cartelera, espectáculos Lavapiés, magia Madrid, mentalismo Madrid, teatro infantil Madrid, humor Madrid, entradas teatro Madrid"><meta name="description" content="50 espectáculos en cartelera: magia, mentalismo, humor, infantil, impro y más. Teatro íntimo en Lavapiés, Madrid. Compra tu entrada online."><meta name="robots" content="index,follow"><link rel="canonical" href="https://www.laescaleradejacob.es/cartelera/"><meta property="og:title" content="Cartelera | La Escalera de Jacob — Teatro en Lavapiés, Madrid"><meta property="og:description" content="50 espectáculos en cartelera: magia, mentalismo, humor, infantil, impro y más. Teatro íntimo en Lavapiés, Madrid. Compra tu entrada online."><meta property="og:image" content=""><meta property="og:site_name" content="Cartelera | La Escalera de Jacob — Teatro en Lavapiés, Madrid"><meta property="og:type" content="website"><meta property="og:url" content="https://www.laescaleradejacob.es/cartelera/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content=""><meta name="twitter:title" content="Cartelera | La Escalera de Jacob — Teatro en Lavapiés, Madrid"><meta name="twitter:description" content="50 espectáculos en cartelera: magia, mentalismo, humor, infantil, impro y más. Teatro íntimo en Lavapiés, Madrid. Compra tu entrada online."><meta name="twitter:image" content=""><meta name="twitter:site" content="https://www.laescaleradejacob.es/cartelera/">
+	<title>Cartelera | La Escalera de Jacob — Teatro en Lavapiés, Madrid</title><meta name="title" content="Cartelera | La Escalera de Jacob — Teatro en Lavapiés, Madrid"><meta name="keywords" content="teatro Madrid cartelera, espectáculos Lavapiés, magia Madrid, mentalismo Madrid, teatro infantil Madrid, humor Madrid, entradas teatro Madrid"><meta name="description" content="Más de 30 espectáculos en cartelera: magia, mentalismo, humor, infantil, impro y más. Teatro íntimo en Lavapiés, Madrid. Compra tu entrada online."><meta name="robots" content="index,follow"><link rel="canonical" href="https://www.laescaleradejacob.es/cartelera/"><meta property="og:title" content="Cartelera | La Escalera de Jacob — Teatro en Lavapiés, Madrid"><meta property="og:description" content="Más de 30 espectáculos en cartelera: magia, mentalismo, humor, infantil, impro y más. Teatro íntimo en Lavapiés, Madrid. Compra tu entrada online."><meta property="og:image" content=""><meta property="og:site_name" content="La Escalera de Jacob"><meta property="og:type" content="website"><meta property="og:url" content="https://www.laescaleradejacob.es/cartelera/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content=""><meta name="twitter:title" content="Cartelera | La Escalera de Jacob — Teatro en Lavapiés, Madrid"><meta name="twitter:description" content="Más de 30 espectáculos en cartelera: magia, mentalismo, humor, infantil, impro y más. Teatro íntimo en Lavapiés, Madrid. Compra tu entrada online."><meta name="twitter:image" content="">
 	<link rel="icon" type="image/png" href="/favicon.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500;1,600&amp;family=Inter:wght@400;500;600;700&amp;display=swap" media="all" onload="this.media='all'">
-	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap"></noscript>
+	<noscript>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap">
+	</noscript>
 	<link rel="stylesheet" href="/css/style.css?25082026">
-    <link rel="stylesheet" href="/css/font-awesome.css">
+	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/BnqMGSY_YP4cCmbNINHpJPkd/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-TGqr7QRNQUxJ068dgcrA+DJnq0Rl1w2853p2JaVg5zXIdku7CnDp6bOZ/2YcIz1K"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6992"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>		
-
-    <script src="/js/modernizr.js"></script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/BnqMGSY_YP4cCmbNINHpJPkd/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-TGqr7QRNQUxJ068dgcrA+DJnq0Rl1w2853p2JaVg5zXIdku7CnDp6bOZ/2YcIz1K"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6992"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
-		<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-	<script defer="" src="/js/masonry.pkgd.min.js"></script>
-			<script src="https://www.google.com/recaptcha/api.js?hl=es&amp;onload=onRecaptchaClubReady&amp;render=explicit" async="" defer=""></script>
+			<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+		<script defer="" src="/js/masonry.pkgd.min.js"></script>
+				<script src="https://www.google.com/recaptcha/api.js?hl=es&amp;onload=onRecaptchaClubReady&amp;render=explicit" async="" defer=""></script>
 		<script defer="" src="/js/main.js?010920262"></script>
 
 
 	<!-- Google Tag Manager -->
-	
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-KC33CRBV');</script>
+
+	<script>
+		(function(w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start': new Date().getTime(),
+				event: 'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src =
+				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-KC33CRBV');
+	</script>
 
 	<!-- End Google Tag Manager -->
 
 
 
-    
-
+	
 
 
 
@@ -587,11 +599,11 @@ HTML_HEAD:
                                             <span>Bonos</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
+                                        <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
                                             <ul role="menu">
                                                                                                                                                         <li role="menuitem">
                                                         <a class="dropdown-link" href="/bono-adultos/" target="_self">
                                                             <span>Bono Adultos</span>
                                                         </a>
                                                     </li>
-                                                                                                                        
+                                                                                                                                             
