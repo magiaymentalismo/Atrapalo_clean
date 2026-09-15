@@ -205,7 +205,7 @@ SÁB 19 · 21:30
 SAL DE MI MENTE
 Fito Crawford
 ★★★★★ 4,9
-Desde 14 €
+Desde 12 €
 VER FECHAS
 →
 HUMOR
@@ -615,11 +615,11 @@ HTML_HEAD:
                                             <span>Bonos</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
+                                        <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
                                             <ul role="menu">
                                                                                                                                                         <li role="menuitem">
                                                         <a class="dropdown-link" href="/bono-adultos/" target="_self">
                                                             <span>Bono Adultos</span>
                                                         </a>
                                                     </li>
-                                                                                                                                             
+                                                                                                                                           
