@@ -48,22 +48,6 @@ Musical
 45 ESPECTÁCULOS
 Ordenar por:
 Próxima función
-CINE
-HOY · 19:30
-CORTOS CON Ñ
-Festival de cortometrajes
-★★★★★ 4,3
-Desde 6 €
-VER FECHAS
-→
-IMPRO
-HOY · 21:00
-LA IRA DEL GRAN TIKI
-Diego Rousselon, Laura Castro, Javier Torralba
-★★★★★ 4,6
-Desde 10 €
-VER FECHAS
-→
 MENTALISMO
 MAÑANA · 20:00
 GOLDEN TICKET. TIENE QUE SER MAGIA
@@ -288,12 +272,28 @@ ESTRENO
 Desde 10 €
 VER FECHAS
 →
+CINE
+MAR 22 · 19:30
+CORTOS CON Ñ
+Festival de cortometrajes
+★★★★★ 4,3
+Desde 6 €
+VER FECHAS
+→
 MICROTEATRO
 MAR 22 · 20:00
 UNA NOCHE CON MI EX
 Aimar Vega Alejandra Bernal
 ESTRENO
 Desde 8 €
+VER FECHAS
+→
+IMPRO
+MAR 22 · 21:00
+LA IRA DEL GRAN TIKI
+Diego Rousselon, Laura Castro, Javier Torralba
+★★★★★ 4,6
+Desde 10 €
 VER FECHAS
 →
 INFANTIL +3
@@ -531,7 +531,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/BnqMGSY_YP4cCmbNINHpJPkd/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-TGqr7QRNQUxJ068dgcrA+DJnq0Rl1w2853p2JaVg5zXIdku7CnDp6bOZ/2YcIz1K"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69b1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/BnqMGSY_YP4cCmbNINHpJPkd/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-TGqr7QRNQUxJ068dgcrA+DJnq0Rl1w2853p2JaVg5zXIdku7CnDp6bOZ/2YcIz1K"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69e0"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 			<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
