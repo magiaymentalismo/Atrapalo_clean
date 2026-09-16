@@ -232,14 +232,6 @@ Alumnos y alumnas de la compañía de Improcafé
 Desde 5 €
 VER FECHAS
 →
-INFANTIL +3
-DOM 20 · 17:00
-MAGIA Y DESVARIOS VARIOS
-Joaco Showman
-ESTRENO
-Desde 10 €
-VER FECHAS
-→
 MAGIA
 DOM 20 · 18:00
 DAVID VEGA. NO SOLO ES MAGIA
@@ -309,6 +301,14 @@ SÁB 26 · 18:00
 VA DE MAGIA. MAGO PONCE
 Mago Ponce
 ★★★★★ 4,9
+Desde 10 €
+VER FECHAS
+→
+INFANTIL +3
+DOM 27 · 17:00
+MAGIA Y DESVARIOS VARIOS
+Joaco Showman
+ESTRENO
 Desde 10 €
 VER FECHAS
 →
@@ -491,6 +491,9 @@ info@laescaleradejacob.es
 
 EXPLORA
 Cartelera
+Bono adultos
+Bono familiar
+Tarjeta regalo
 Bar
 Eventos
 Conócenos
@@ -531,7 +534,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/BnqMGSY_YP4cCmbNINHpJPkd/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-TGqr7QRNQUxJ068dgcrA+DJnq0Rl1w2853p2JaVg5zXIdku7CnDp6bOZ/2YcIz1K"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69e1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/BnqMGSY_YP4cCmbNINHpJPkd/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-TGqr7QRNQUxJ068dgcrA+DJnq0Rl1w2853p2JaVg5zXIdku7CnDp6bOZ/2YcIz1K"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV&amp;is_td=1&amp;v=3&amp;t=t&amp;pid=1421374738&amp;gtm=45He69e1v9254376772za200zd9254376772&amp;seq=1&amp;exp=115616985~115938465~115938468~118897920~118897930~120385423~120469145~120469153&amp;dl=www.laescaleradejacob.es%2Fcartelera%2F&amp;tdp=GTM-KC33CRBV;254376772;0;0;0&amp;frm=0&amp;rtg=254376772&amp;slo=1&amp;hlo=8&amp;lst=1&amp;bt=0&amp;ct=3&amp;mde=G-K16Q7JZ75Q;0_1&amp;z=0"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69e1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 			<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -615,11 +618,6 @@ HTML_HEAD:
                                             <span>Bonos</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
+                                        <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
                                             <ul role="menu">
-                                                                                                                                                        <li role="menuitem">
-                                                        <a class="dropdown-link" href="/bono-adultos/" target="_self">
-                                                            <span>Bono Adultos</span>
-                                                        </a>
-                                                    </li>
-                                                                                                                                           
+                                                                                                                                                

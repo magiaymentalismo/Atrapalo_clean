@@ -232,14 +232,6 @@ Alumnos y alumnas de la compañía de Improcafé
 Desde 5 €
 VER FECHAS
 →
-INFANTIL +3
-DOM 20 · 17:00
-MAGIA Y DESVARIOS VARIOS
-Joaco Showman
-ESTRENO
-Desde 10 €
-VER FECHAS
-→
 MAGIA
 DOM 20 · 18:00
 DAVID VEGA. NO SOLO ES MAGIA
@@ -309,6 +301,14 @@ SÁB 26 · 18:00
 VA DE MAGIA. MAGO PONCE
 Mago Ponce
 ★★★★★ 4,9
+Desde 10 €
+VER FECHAS
+→
+INFANTIL +3
+DOM 27 · 17:00
+MAGIA Y DESVARIOS VARIOS
+Joaco Showman
+ESTRENO
 Desde 10 €
 VER FECHAS
 →
@@ -491,6 +491,9 @@ info@laescaleradejacob.es
 
 EXPLORA
 Cartelera
+Bono adultos
+Bono familiar
+Tarjeta regalo
 Bar
 Eventos
 Conócenos
