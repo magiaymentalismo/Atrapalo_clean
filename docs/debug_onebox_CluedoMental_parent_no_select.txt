@@ -48,14 +48,6 @@ Musical
 47 ESPECTÁCULOS
 Ordenar por:
 Próxima función
-MENTALISMO
-HOY · 20:00
-GOLDEN TICKET. TIENE QUE SER MAGIA
-Chap Magic
-ESTRENO
-Desde 12 €
-VER FECHAS
-→
 HUMOR
 MAÑANA · 19:30
 CUENTOS DEL FIN DEL MUNDO
@@ -288,6 +280,14 @@ Diego Rousselon, Laura Castro, Javier Torralba
 Desde 10 €
 VER FECHAS
 →
+MENTALISMO
+MIÉ 23 · 20:00
+GOLDEN TICKET. TIENE QUE SER MAGIA
+Chap Magic
+ESTRENO
+Desde 12 €
+VER FECHAS
+→
 INFANTIL +3
 SÁB 26 · 12:30
 ALGUIEN DIJO ¿SUPERPODERES?
@@ -326,14 +326,6 @@ SUPRA
 Victoria Pérez, María Barrio, Livia Peverelli, Cristina Mayoral y Maite Felipe
 ★★★★★ 5,0
 Desde 10 €
-VER FECHAS
-→
-HUMOR
-VIE 2 · 19:00
-TODXS NOS VAMOS A MORIR
-Noelia Marló
-ESTRENO
-Desde 17.5 €
 VER FECHAS
 →
 MENTALISMO
@@ -398,6 +390,14 @@ AQUÍ SE HABLA PAJA
 Comedia, Stand up Comedy
 ESTRENO
 Desde 10 €
+VER FECHAS
+→
+HUMOR
+VIE 9 · 19:00
+TODXS NOS VAMOS A MORIR
+Noelia Marló
+ESTRENO
+Desde 17.5 €
 VER FECHAS
 →
 INFANTIL +3
@@ -550,7 +550,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/zqB-6Xpbd3lCIvi7Tr2D0pob/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-wXGHpHpDBnVjKOT3uRetLELve34vMvCn752jjw4CpIIpR+9fPJwe4g6mjdq7v4s/"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69f0"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/BnqMGSY_YP4cCmbNINHpJPkd/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-TGqr7QRNQUxJ068dgcrA+DJnq0Rl1w2853p2JaVg5zXIdku7CnDp6bOZ/2YcIz1K"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69f0"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 			<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -634,11 +634,11 @@ HTML_HEAD:
                                             <span>Bonos</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
+                                        <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
                                             <ul role="menu">
                                                                                                                                                         <li role="menuitem">
                                                         <a class="dropdown-link" href="/bono-adultos/" target="_self">
                                                             <span>Bono Adultos</span>
                                                         </a>
                                                     </li>
-                                                                                                                                             
+                                                                                                                                           
