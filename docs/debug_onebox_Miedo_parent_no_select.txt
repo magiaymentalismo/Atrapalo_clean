@@ -5,17 +5,621 @@ SELECT URL:
 https://entradas.laescaleradejacob.es/laescaleradejacob/events/56108
 
 PAGE URL:
-https://entradas.laescaleradejacob.es/laescaleradejacob/events/56108
+https://www.laescaleradejacob.es/cartelera/
 
 BODY:
+Cartelera
+Club Jacob
+Bonos
+ 
+Bar
+La Escalera
+ 
+CARTELERA
+QUÉ HAY en cartelera
 
+Magia, humor, impro, infantil y más, en Lavapiés. Elige día y plan.
+
+📅
+Todos los días
+▾
+Ver todo
+45
+Humor
+16
+Magia
+3
+Mentalismo
+7
+Infantil +3
+7
+Bebés
+3
+Impro
+4
+Microteatro
+3
+Cine
+1
+Danza
+1
+Musical
+1
+45 ESPECTÁCULOS
+Ordenar por:
+Próxima función
+MENTALISMO
+HOY · 20:00
+GOLDEN TICKET. TIENE QUE SER MAGIA
+Chap Magic
+ESTRENO
+Desde 12 €
+VER FECHAS
+→
+HUMOR
+MAÑANA · 19:30
+CUENTOS DEL FIN DEL MUNDO
+Alejandra Arias, Teresa Ponce de León, Jaime Páramo y Miguel Carbajo.
+★★★★★ 5,0
+Desde 15 €
+VER FECHAS
+→
+HUMOR
+MAÑANA · 20:00
+LA TELENOVELA DE LAS CHICAS COCODRILO
+Shirley Stonyrock Gad Yola del Peru
+ESTRENO
+Desde 12 €
+VER FECHAS
+→
+IMPRO
+MAÑANA · 21:15
+IMPROCAFÉ SHOW
+Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, Noneh Herrero, María Márquez, Pablo Acevedo
+★★★★★ 4,9
+Desde 12 €
+VER FECHAS
+→
+HUMOR
+VIE 18 · 19:30
+HORMONADA 2.0
+Sara Cardona
+★★★★★ 4,8
+Desde 12 €
+VER FECHAS
+→
+MAGIA
+VIE 18 · 20:00
+DESCARADO. MAGIA CANALLA
+Carlos Devanti
+★★★★★ 5,0
+Desde 12 €
+VER FECHAS
+→
+HUMOR
+VIE 18 · 21:00
+UN DÍA DE MIERDA
+Casaris Paz
+★★★★★ 4,7
+Desde 12 €
+VER FECHAS
+→
+HUMOR
+VIE 18 · 21:30
+MISS DESGRACIAS
+María Simón
+★★★★★ 5,0
+Desde 12 €
+VER FECHAS
+→
+HUMOR
+VIE 18 · 22:30
+SOY UNA PERSONA HORRIBLE
+Sara González
+★★★★★ 4,7
+Desde 10 €
+VER FECHAS
+→
+MENTALISMO
+VIE 18 · 23:00
+MENTIROSO MAGIA MENTAL
+Carlos Devanti
+★★★★★ 4,9
+Desde 12 €
+VER FECHAS
+→
+IMPRO
+VIE 18 · 23:59
+EL MATCH DE IMPRO DE LA ESCALERA
+Impro
+★★★★★ 4,7
+Desde 8 €
+VER FECHAS
+→
+BEBÉS
+SÁB 19 · 11:30
+MILONGA BAJO EL MAR
+Ainhoa Sarmiento
+★★★★★ 4,8
+Desde 7 €
+VER FECHAS
+→
+INFANTIL +3
+SÁB 19 · 12:00
+PIEDRA, PAPEL O TIJERA
+Nicolás Vicente “Mago Nicols”
+★★★★★ 4,9
+Desde 10 €
+VER FECHAS
+→
+BEBÉS
+SÁB 19 · 12:30
+FANTASÍA
+Belén Martínez
+★★★★★ 4,7
+Desde 7 €
+VER FECHAS
+→
+INFANTIL +3
+SÁB 19 · 18:30
+LUCES, CÁMARA Y MAGIA
+Carlos Devanti
+★★★★★ 4,9
+Desde 10 €
+VER FECHAS
+→
+HUMOR
+SÁB 19 · 19:30
+AFTER KIKI
+Casaris Paz, Jorge Alvariñas
+★★★★★ 4,8
+Desde 12 €
+VER FECHAS
+→
+HUMOR
+SÁB 19 · 21:00
+CORAZÓN EN REBAJAS
+Laura Alcocer
+★★★★★ 4,8
+Desde 12 €
+VER FECHAS
+→
+MENTALISMO
+SÁB 19 · 21:30
+SAL DE MI MENTE
+Fito Crawford
+★★★★★ 4,9
+Desde 12 €
+VER FECHAS
+→
+HUMOR
+SÁB 19 · 22:30
+SEX O NO SEX
+María Simón
+★★★★★ 4,8
+Desde 12 €
+VER FECHAS
+→
+MUSICAL
+SÁB 19 · 23:00
+DIVAS Y DIVANES
+Diana Dardo, Mario Manzanares y Artista Invitada
+★★★★★ 5,0
+Desde 15 €
+VER FECHAS
+→
+BEBÉS
+DOM 20 · 11:30
+ESTRELLAS Y SOÑAR
+Laura Alcocer
+★★★★★ 4,7
+Desde 7 €
+VER FECHAS
+→
+INFANTIL +3
+DOM 20 · 12:00
+SOÑANDO MAGIA
+David Vega
+★★★★★ 4,9
+Desde 10 €
+VER FECHAS
+→
+IMPRO
+DOM 20 · 14:00
+LA COCINA DE IMPROCAFÉ
+Alumnos y alumnas de la compañía de Improcafé
+★★★★★ 4,8
+Desde 5 €
+VER FECHAS
+→
+INFANTIL +3
+DOM 20 · 17:00
+MAGIA Y DESVARIOS VARIOS
+Joaco Showman
+ESTRENO
+Desde 10 €
+VER FECHAS
+→
+MAGIA
+DOM 20 · 18:00
+DAVID VEGA. NO SOLO ES MAGIA
+David Vega
+★★★★★ 4,9
+Desde 10 €
+VER FECHAS
+→
+MENTALISMO
+DOM 20 · 18:30
+ATRÉVETE. MAGIA MENTAL
+Vicente Lucca
+★★★★★ 4,8
+Desde 10 €
+VER FECHAS
+→
+MAGIA
+DOM 20 · 20:00
+POWER. UNA EXPERIENCIA MUY VIP
+Mago Ponce
+★★★★★ 5,0
+Desde 10 €
+VER FECHAS
+→
+MICROTEATRO
+DOM 20 · 21:00
+QUE TE PARTA UN RAYO
+Chema Viedma, Marta Martín, Ismael Vicente y Silvia Ros
+ESTRENO
+Desde 10 €
+VER FECHAS
+→
+CINE
+MAR 22 · 19:30
+CORTOS CON Ñ
+Festival de cortometrajes
+★★★★★ 4,3
+Desde 6 €
+VER FECHAS
+→
+MICROTEATRO
+MAR 22 · 20:00
+UNA NOCHE CON MI EX
+Aimar Vega Alejandra Bernal
+ESTRENO
+Desde 8 €
+VER FECHAS
+→
+IMPRO
+MAR 22 · 21:00
+LA IRA DEL GRAN TIKI
+Diego Rousselon, Laura Castro, Javier Torralba
+★★★★★ 4,6
+Desde 10 €
+VER FECHAS
+→
+INFANTIL +3
+SÁB 26 · 12:30
+ALGUIEN DIJO ¿SUPERPODERES?
+Mago Ponce
+★★★★★ 4,9
+Desde 10 €
+VER FECHAS
+→
+INFANTIL +3
+SÁB 26 · 18:00
+VA DE MAGIA. MAGO PONCE
+Mago Ponce
+★★★★★ 4,9
+Desde 10 €
+VER FECHAS
+→
+HUMOR
+DOM 27 · 19:30
+SOLTERAS, PERO NO SOLAS
+Iris Arisa, Nerea Valdés y Miguel Ángel Calvo.
+★★★★★ 4,8
+Desde 10 €
+VER FECHAS
+→
+DANZA
+MAR 29 · 21:15
+SUPRA
+Victoria Pérez, María Barrio, Livia Peverelli, Cristina Mayoral y Maite Felipe
+★★★★★ 5,0
+Desde 10 €
+VER FECHAS
+→
+HUMOR
+VIE 2 · 19:00
+TODXS NOS VAMOS A MORIR
+Noelia Marló
+ESTRENO
+Desde 17.5 €
+VER FECHAS
+→
+MENTALISMO
+VIE 2 · 21:30
+HACKEANDO MENTES
+Antonio Martínez Salinas
+★★★★★ 5,0
+Desde 12 €
+VER FECHAS
+→
+HUMOR
+VIE 2 · 22:30
+SLASHER. THE EXPERIENCE
+Soraya Santos, Sandra Mell, Fran Expósito, Javier Valverde, Chema Higuera.
+★★★★★ 5,0
+Desde 12 €
+VER FECHAS
+→
+HUMOR
+SÁB 3 · 22:30
+TÍA, NADIE ES PERFECTA
+Almudena Alcocer, Maria Francés, Julia Olcina, Yaiza de la Torre y Alejandra Lozano
+ESTRENO
+Desde 12 €
+VER FECHAS
+→
+HUMOR
+DOM 4 · 19:30
+DIVÁN DIVINO
+Samuel Padilla. Lluna Issa Casterà.
+ESTRENO
+Desde 14 €
+VER FECHAS
+→
+MICROTEATRO
+DOM 4 · 21:00
+THE CASQUIVANS
+Carolina Touceda y Gloria Rodríguez
+ESTRENO
+Desde 10 €
+VER FECHAS
+→
+MENTALISMO
+DOM 4 · 21:30
+DESTINOS
+Adrian Gonzalo
+★★★★★ 5,0
+Desde 12 €
+VER FECHAS
+→
+INFANTIL +3
+SÁB 10 · 17:00
+ALUCINA ¡PEPINILLOS!
+Rubén Reyeros
+★★★★★ 4,4
+Desde 10 €
+VER FECHAS
+→
+HUMOR
+MIÉ 21 · 19:30
+CHECKPOINT CHARLIE
+Alba Quiñones y José Urzáiz
+ESTRENO
+Desde 12 €
+VER FECHAS
+→
+HUMOR
+VIE 27 · 21:00
+CERO DRAMAS
+Paloma Jiménez
+ESTRENO
+Desde 14 €
+VER FECHAS
+→
+AYUDA
+PREGUNTAS FRECUENTES
+¿Por qué cobráis gastos de gestión?
+
+Sabemos que no te gustan. A nosotros tampoco, te lo decimos de verdad. Pero son lo que cuesta que puedas elegir tu butaca desde casa, pagar como prefieras y comprar hasta unos minutos antes de que empiece el show. Y que esa butaca sea tuya de verdad, sin sustos, la compres donde la compres. Nuestras entradas valen casi lo mismo que hace diez años, y queremos que siga siendo así. Pero con ese margen no podríamos mantener ninguno de esos servicios, que hace diez años ni existían. Por eso te cobramos 1,50 €, y preferimos contártelo así, sin adornos. Lo ajustamos todo lo que podemos. Por cierto: en taquilla también los hay, y el coste total es más alto que online.
+
+¿Con cuánta antelación puedo comprar mi entrada?
+
+Podrás comprar las entradas a través de nuestra web hasta unos minutos antes del comienzo del espectáculo. También puedes comprarlas en taquilla en horario de apertura del local, pero recuerda que tienen un precio superior al de compra online y están sujetas a disponibilidad. 
+
+¿Puedo realizar una compra telefónica?
+
+Salvo que se trate de un grupo de más de 10 personas, que sí se podrán gestionar por teléfono, las compras se tienen que realizar a través del sistema habilitado en nuestra página.
+
+¿Puedo seleccionar mi asiento en el proceso de compra?
+
+Sí, las entradas se venden numeradas.
+
+¿Es necesario imprimir mi entrada?
+
+No es necesario. Puedes decidir imprimirla o llevar el código QR en el móvil para que lo validemos cuando accedas a la sala.
+
+¿Necesito pasar por taquilla antes de acudir a la función?
+
+No es necesario. Te recomendamos que acudas al local al menos 10 minutos antes del comienzo de la función para que te informemos de cuál es la sala y cómo tienes que acceder. También puedes aprovechar para tomarte algo en el bar y pasar con tu bebida a la sala, ¡es parte de la experiencia!
+
+Si me retraso y la función ya ha comenzado, ¿puedo acceder a la sala?
+
+En la mayoría de espectáculos no podemos permitir el acceso una vez comenzada la función. Nuestras salas son pequeñas y la distracción para los actores es grande. Acude con tiempo suficiente, te lo agradecemos.
+
+¿Cómo gestiono una compra para un grupo?
+
+A partir de 10 personas consideramos que se trata de un grupo y tienes la posibilidad de gestionarlo por teléfono con nuestro personal. Tienes que ponerte en contacto con nosotros en el 625.721.745 o escribe a info@laescaleradejacob.es y te informamos sobre cómo proceder.
+
+¿Hay un espacio para colocar los carritos de los niños?
+
+Nuestro espacio es pequeño y no disponemos de un sitio específico para ello. Podéis dejarlos en el bar pero no nos responsabilizamos de ello. Si tenéis una alternativa al carrito, nosotros lo agradecemos.
+
+¿Hay algún parking cercano?
+
+Hay un aparcamiento muy cerca, el Parking Relatores (C/ Relatores, 11). Puedes ponerte en contacto con ellos en el 91.369.17.65, a veces os reservan la plaza si llamáis con 24h de antelación.
+
+Si no encuentras solución a tu pregunta, ¡llámanos al 625.721.745!
+20 AÑOS EN LAVAPIÉS
+DOS SALAS DE TEATRO
+BAR
+PASA CON TU BEBIDA AL SHOW
+MAGIA · MENTALISMO · HUMOR · IMPRO · INFANTILES
+DESDE 2005
+CALLE LAVAPIÉS 9
+20 AÑOS EN LAVAPIÉS
+DOS SALAS DE TEATRO
+BAR
+PASA CON TU BEBIDA AL SHOW
+MAGIA · MENTALISMO · HUMOR · IMPRO · INFANTILES
+DESDE 2005
+CALLE LAVAPIÉS 9
+NEWSLETTER · SUSCRIPCIÓN GRATUITA
+ÚNETE AL
+CLUB JACOB
+
+Promociones exclusivas y todas las novedades de la Escalera en tu correo, antes que nadie.
+
+TU EMAIL
+UNIRME AL CLUB →
+Al unirte aceptas la política de privacidad. Puedes darte de baja cuando quieras.
+DONDE EL TEATRO Y LA MAGIA
+se viven de cerca.
+
+Teatro íntimo, bar y un plan distinto cada día, a diez minutos andando de Sol
+
+ENCUÉNTRANOS
+
+C/ Lavapiés 9 · 28012 Madrid
+
+Metro Tirso de Molina
+
+info@laescaleradejacob.es
+
+625 721 745
+
+EXPLORA
+Cartelera
+Bar
+Eventos
+Conócenos
+Contacto
+Noticias
+HORARIO APERTURA
+
+M a V: a partir de las 18:30h
+
+S · D · Festivos: a partir de las 10:30h
+
+© 2026 LA ESCALERA DE JACOB
+
+Aviso legal
+Política de privacidad
+Política de cookies
+×
+Sí, nos confesamos, usamos cookies
+Las usamos para cosas como analizar el tráfico de la web, ver en qué pasos se atasca una compra y, si nos das permiso, mostrarte publicidad relacionada con lo que te interesa. Tú decides: puedes aceptarlas todas, rechazarlas o entrar en "Mostrar detalles" y elegir qué compartes. Si quieres saber más, te lo contamos en la Política de privacidad
+ MOSTRAR DETALLES
+ACEPTAR TODO
+RECHAZAR TODO
 
 HTML_HEAD:
-<!DOCTYPE html><html lang="en" data-beasties-container=""><head><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <meta charset="utf-8">
-    <base href="//client-dists.oneboxtds.com/channels-client/default/">
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="">
-    <link rel="preconnect" href="https://client-dists.oneboxtds.net/" crossorigin="">
-    <link rel="preconnect" href="https://client-dists.oneboxtds.com/" crossorigin="">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <style>@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:300;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/nunitosans/v19/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t4R-tCKQ.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:300;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/nunitosans/v19/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7txR-tCKQ.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:300;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/nunitosans/v19/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t6R-tCKQ.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:300;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/nunitosans/v19/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t7R-tCKQ.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:300;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/nunitosans/v19/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t1R-s.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/nunitosans/v19/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t4R-tCKQ.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/nunitosans/v19/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7txR-tCKQ.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/nunitosans/v19/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t6R-tCKQ.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/nunitosans/v19/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t7R-tCKQ.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/nunitosans/v19/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t1R-s.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/nunitosans/v19/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t4R-tCKQ.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/nunitosans/v19/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7txR-tCKQ.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/nunitosans/v19/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t6R-tCKQ.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/nunitosans/v19/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t7R-tCKQ.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/nunitosans/v19/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t1R-s.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:700;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/nunitosans/v19/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t4R-tCKQ.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:700;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/nunitosans/v19/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7txR-tCKQ.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:700;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/nunitosans/v19/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t6R-tCKQ.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:700;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/nunitosans/v19/pe0TMImSL
+<!DOCTYPE html><html lang="es" style="" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cartelera | La Escalera de Jacob — Teatro en Lavapiés, Madrid</title><meta name="title" content="Cartelera | La Escalera de Jacob — Teatro en Lavapiés, Madrid"><meta name="keywords" content="teatro Madrid cartelera, espectáculos Lavapiés, magia Madrid, mentalismo Madrid, teatro infantil Madrid, humor Madrid, entradas teatro Madrid"><meta name="description" content="Más de 30 espectáculos en cartelera: magia, mentalismo, humor, infantil, impro y más. Teatro íntimo en Lavapiés, Madrid. Compra tu entrada online."><meta name="robots" content="index,follow"><link rel="canonical" href="https://www.laescaleradejacob.es/cartelera/"><meta property="og:title" content="Cartelera | La Escalera de Jacob — Teatro en Lavapiés, Madrid"><meta property="og:description" content="Más de 30 espectáculos en cartelera: magia, mentalismo, humor, infantil, impro y más. Teatro íntimo en Lavapiés, Madrid. Compra tu entrada online."><meta property="og:image" content=""><meta property="og:site_name" content="La Escalera de Jacob"><meta property="og:type" content="website"><meta property="og:url" content="https://www.laescaleradejacob.es/cartelera/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content=""><meta name="twitter:title" content="Cartelera | La Escalera de Jacob — Teatro en Lavapiés, Madrid"><meta name="twitter:description" content="Más de 30 espectáculos en cartelera: magia, mentalismo, humor, infantil, impro y más. Teatro íntimo en Lavapiés, Madrid. Compra tu entrada online."><meta name="twitter:image" content="">
+	<link rel="icon" type="image/png" href="/favicon.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500;1,600&amp;family=Inter:wght@400;500;600;700&amp;display=swap" media="all" onload="this.media='all'">
+	<noscript>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap">
+	</noscript>
+	<link rel="stylesheet" href="/css/style.css?25082026">
+	<link rel="stylesheet" href="/css/font-awesome.css">
+
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/BnqMGSY_YP4cCmbNINHpJPkd/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-TGqr7QRNQUxJ068dgcrA+DJnq0Rl1w2853p2JaVg5zXIdku7CnDp6bOZ/2YcIz1K"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69e1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script src="/js/modernizr.js"></script>
+	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
+			<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+		<script defer="" src="/js/masonry.pkgd.min.js"></script>
+				<script src="https://www.google.com/recaptcha/api.js?hl=es&amp;onload=onRecaptchaClubReady&amp;render=explicit" async="" defer=""></script>
+		<script defer="" src="/js/main.js?010920262"></script>
+
+
+	<!-- Google Tag Manager -->
+
+	<script>
+		(function(w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start': new Date().getTime(),
+				event: 'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src =
+				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-KC33CRBV');
+	</script>
+
+	<!-- End Google Tag Manager -->
+
+
+
+	
+
+
+
+
+
+</head>
+<body class="cartelera">
+	<div class="wrapper">
+
+		<div class="contenedor-general" style="zoom: 1.36111;">
+			<script>
+				(function() {
+					var e = document.currentScript.parentElement,
+						s = getComputedStyle(document.documentElement).getPropertyValue('--zoom-max'),
+						m = parseFloat(s) || 1.5,
+						vw = window.innerWidth,
+						r = Math.min(Math.max((vw - 1024) / 576, 0), 1);
+					e.style.zoom = 1 + r * (m - 1);
+				})();
+			</script>
+			
+			<header id="nav-menu" aria-label="navigation bar">
+            <div class="container sinbordedebajo fondogranate">
+                <div class="nav-start">
+                    <a class="logo" href="/" title="Escalera de jacob">
+                        <span><img alt="Escalera de jacob" src="/img/logo.png"> </span>
+                    </a>
+                </div>
+
+                <div class="nav-end">
+                    <nav class="menu">
+
+
+                        <ul class="menu-bar">
+
+                            <li class="nav-link"><a href="/cartelera/">Cartelera</a></li>
+                                                            
+                                                                    <!-- Elemento simple sin submenú -->
+                                    <li class="nav-link">
+                                        <a href="/club-jacob/" target="_self">
+                                            Club Jacob                                        </a>
+                                    </li>
+
+                                
+                                                            
+                                                                    <!-- Elemento con submenú -->
+                                    <li>
+                                        <button class="nav-link dropdown-btn" data-dropdown="dropdown-9" aria-haspopup="true" aria-expanded="false" aria-label="Bonos">
+                                            <span>Bonos</span>&nbsp;
+                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                        </button>
+                                        <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
+                                            <ul role="menu">
+                                                                                                                                                        <li role="menuitem">
+                                                        <a class="dropdown-link" href="/bono-adultos/" target="_self">
+                                                            <span>Bono Adultos</span>
+                                                        </a>
+                                                    </li>
+                                                                                                                                             
