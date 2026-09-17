@@ -48,14 +48,6 @@ Musical
 48 ESPECTÁCULOS
 Ordenar por:
 Próxima función
-IMPRO
-HOY · 21:15
-IMPROCAFÉ SHOW
-Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, Noneh Herrero, María Márquez, Pablo Acevedo
-★★★★★ 4,9
-Desde 12 €
-VER FECHAS
-→
 HUMOR
 MAÑANA · 19:30
 HORMONADA 2.0
@@ -176,14 +168,6 @@ María Simón
 Desde 12 €
 VER FECHAS
 →
-MUSICAL
-SÁB 19 · 23:00
-DIVAS Y DIVANES
-Diana Dardo, Mario Manzanares y Artista Invitada
-★★★★★ 5,0
-Desde 15 €
-VER FECHAS
-→
 BEBÉS
 DOM 20 · 11:30
 ESTRELLAS Y SOÑAR
@@ -296,6 +280,14 @@ ESTRENO
 Desde 12 €
 VER FECHAS
 →
+IMPRO
+JUE 24 · 21:15
+IMPROCAFÉ SHOW
+Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, Noneh Herrero, María Márquez, Pablo Acevedo
+★★★★★ 4,9
+Desde 12 €
+VER FECHAS
+→
 INFANTIL +3
 SÁB 26 · 12:30
 ALGUIEN DIJO ¿SUPERPODERES?
@@ -310,6 +302,14 @@ VA DE MAGIA. MAGO PONCE
 Mago Ponce
 ★★★★★ 4,9
 Desde 10 €
+VER FECHAS
+→
+MUSICAL
+SÁB 26 · 23:00
+DIVAS Y DIVANES
+Diana Dardo, Mario Manzanares y Artista Invitada
+★★★★★ 5,0
+Desde 15 €
 VER FECHAS
 →
 INFANTIL +3
@@ -558,7 +558,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/BnqMGSY_YP4cCmbNINHpJPkd/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-TGqr7QRNQUxJ068dgcrA+DJnq0Rl1w2853p2JaVg5zXIdku7CnDp6bOZ/2YcIz1K"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69g0"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/BnqMGSY_YP4cCmbNINHpJPkd/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-TGqr7QRNQUxJ068dgcrA+DJnq0Rl1w2853p2JaVg5zXIdku7CnDp6bOZ/2YcIz1K"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69g1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 			<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -642,11 +642,11 @@ HTML_HEAD:
                                             <span>Bonos</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
+                                        <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
                                             <ul role="menu">
                                                                                                                                                         <li role="menuitem">
                                                         <a class="dropdown-link" href="/bono-adultos/" target="_self">
                                                             <span>Bono Adultos</span>
                                                         </a>
                                                     </li>
-                                                                                                                                             
+                                                                                                                                           
