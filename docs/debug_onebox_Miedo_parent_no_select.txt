@@ -48,44 +48,12 @@ Musical
 48 ESPECTÁCULOS
 Ordenar por:
 Próxima función
-MAGIA
-HOY · 20:00
-DESCARADO. MAGIA CANALLA
-Carlos Devanti
-★★★★★ 5,0
-Desde 12 €
-VER FECHAS
-→
-HUMOR
-HOY · 21:00
-UN DÍA DE MIERDA
-Casaris Paz
-★★★★★ 4,7
-Desde 12 €
-VER FECHAS
-→
-HUMOR
-HOY · 22:30
-SOY UNA PERSONA HORRIBLE
-Sara González
-★★★★★ 4,7
-Desde 10 €
-VER FECHAS
-→
 MENTALISMO
 HOY · 23:00
 MENTIROSO MAGIA MENTAL
 Carlos Devanti
 ★★★★★ 4,9
 Desde 12 €
-VER FECHAS
-→
-IMPRO
-HOY · 23:59
-EL MATCH DE IMPRO DE LA ESCALERA
-Impro
-★★★★★ 4,7
-Desde 8 €
 VER FECHAS
 →
 BEBÉS
@@ -110,6 +78,14 @@ FANTASÍA
 Belén Martínez
 ★★★★★ 4,7
 Desde 7 €
+VER FECHAS
+→
+HUMOR
+MAÑANA · 18:00
+SOY UNA PERSONA HORRIBLE
+Sara González
+★★★★★ 4,7
+Desde 10 €
 VER FECHAS
 →
 INFANTIL +3
@@ -160,6 +136,14 @@ Diana Dardo, Mario Manzanares y Artista Invitada
 Desde 15 €
 VER FECHAS
 →
+IMPRO
+MAÑANA · 23:59
+EL MATCH DE IMPRO DE LA ESCALERA
+Impro
+★★★★★ 4,7
+Desde 8 €
+VER FECHAS
+→
 BEBÉS
 DOM 20 · 11:30
 ESTRELLAS Y SOÑAR
@@ -198,6 +182,14 @@ ATRÉVETE. MAGIA MENTAL
 Vicente Lucca
 ★★★★★ 4,8
 Desde 10 €
+VER FECHAS
+→
+HUMOR
+DOM 20 · 19:30
+UN DÍA DE MIERDA
+Casaris Paz
+★★★★★ 4,7
+Desde 12 €
 VER FECHAS
 →
 MAGIA
@@ -285,6 +277,14 @@ VIE 25 · 19:30
 HORMONADA 2.0
 Sara Cardona
 ★★★★★ 4,8
+Desde 12 €
+VER FECHAS
+→
+MAGIA
+VIE 25 · 20:00
+DESCARADO. MAGIA CANALLA
+Carlos Devanti
+★★★★★ 5,0
 Desde 12 €
 VER FECHAS
 →
@@ -558,7 +558,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/BnqMGSY_YP4cCmbNINHpJPkd/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-TGqr7QRNQUxJ068dgcrA+DJnq0Rl1w2853p2JaVg5zXIdku7CnDp6bOZ/2YcIz1K"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69g1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/zqB-6Xpbd3lCIvi7Tr2D0pob/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-wXGHpHpDBnVjKOT3uRetLELve34vMvCn752jjw4CpIIpR+9fPJwe4g6mjdq7v4s/"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69g1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 			<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
