@@ -48,14 +48,6 @@ Musical
 48 ESPECTÁCULOS
 Ordenar por:
 Próxima función
-HUMOR
-HOY · 19:30
-HORMONADA 2.0
-Sara Cardona
-★★★★★ 4,8
-Desde 12 €
-VER FECHAS
-→
 MAGIA
 HOY · 20:00
 DESCARADO. MAGIA CANALLA
@@ -86,14 +78,6 @@ SOY UNA PERSONA HORRIBLE
 Sara González
 ★★★★★ 4,7
 Desde 10 €
-VER FECHAS
-→
-MENTALISMO
-HOY · 23:00
-MENTIROSO MAGIA MENTAL
-Carlos Devanti
-★★★★★ 4,9
-Desde 12 €
 VER FECHAS
 →
 IMPRO
@@ -144,6 +128,14 @@ Casaris Paz, Jorge Alvariñas
 Desde 12 €
 VER FECHAS
 →
+MENTALISMO
+MAÑANA · 20:00
+MENTIROSO MAGIA MENTAL
+Carlos Devanti
+★★★★★ 4,9
+Desde 12 €
+VER FECHAS
+→
 HUMOR
 MAÑANA · 21:00
 CORAZÓN EN REBAJAS
@@ -166,6 +158,14 @@ SEX O NO SEX
 María Simón
 ★★★★★ 4,8
 Desde 12 €
+VER FECHAS
+→
+MUSICAL
+MAÑANA · 23:00
+DIVAS Y DIVANES
+Diana Dardo, Mario Manzanares y Artista Invitada
+★★★★★ 5,0
+Desde 15 €
 VER FECHAS
 →
 BEBÉS
@@ -288,6 +288,14 @@ Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, No
 Desde 12 €
 VER FECHAS
 →
+HUMOR
+VIE 25 · 19:30
+HORMONADA 2.0
+Sara Cardona
+★★★★★ 4,8
+Desde 12 €
+VER FECHAS
+→
 INFANTIL +3
 SÁB 26 · 12:30
 ALGUIEN DIJO ¿SUPERPODERES?
@@ -302,14 +310,6 @@ VA DE MAGIA. MAGO PONCE
 Mago Ponce
 ★★★★★ 4,9
 Desde 10 €
-VER FECHAS
-→
-MUSICAL
-SÁB 26 · 23:00
-DIVAS Y DIVANES
-Diana Dardo, Mario Manzanares y Artista Invitada
-★★★★★ 5,0
-Desde 15 €
 VER FECHAS
 →
 INFANTIL +3
