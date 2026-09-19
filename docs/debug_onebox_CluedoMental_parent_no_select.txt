@@ -48,28 +48,12 @@ Musical
 48 ESPECTÁCULOS
 Ordenar por:
 Próxima función
-BEBÉS
-HOY · 11:30
-MILONGA BAJO EL MAR
-Ainhoa Sarmiento
-★★★★★ 4,8
-Desde 7 €
-VER FECHAS
-→
 INFANTIL +3
-HOY · 12:00
+HOY · 16:30
 PIEDRA, PAPEL O TIJERA
 Nicolás Vicente “Mago Nicols”
 ★★★★★ 4,9
 Desde 10 €
-VER FECHAS
-→
-BEBÉS
-HOY · 12:30
-FANTASÍA
-Belén Martínez
-★★★★★ 4,7
-Desde 7 €
 VER FECHAS
 →
 HUMOR
@@ -158,6 +142,14 @@ SOÑANDO MAGIA
 David Vega
 ★★★★★ 4,9
 Desde 10 €
+VER FECHAS
+→
+BEBÉS
+MAÑANA · 12:30
+FANTASÍA
+Belén Martínez
+★★★★★ 4,7
+Desde 7 €
 VER FECHAS
 →
 IMPRO
@@ -294,6 +286,14 @@ MISS DESGRACIAS
 María Simón
 ★★★★★ 5,0
 Desde 12 €
+VER FECHAS
+→
+BEBÉS
+SÁB 26 · 11:30
+MILONGA BAJO EL MAR
+Ainhoa Sarmiento
+★★★★★ 4,8
+Desde 7 €
 VER FECHAS
 →
 INFANTIL +3
@@ -558,7 +558,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/zqB-6Xpbd3lCIvi7Tr2D0pob/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-wXGHpHpDBnVjKOT3uRetLELve34vMvCn752jjw4CpIIpR+9fPJwe4g6mjdq7v4s/"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69g1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/zqB-6Xpbd3lCIvi7Tr2D0pob/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-wXGHpHpDBnVjKOT3uRetLELve34vMvCn752jjw4CpIIpR+9fPJwe4g6mjdq7v4s/"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69g1h1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 			<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -649,4 +649,4 @@ HTML_HEAD:
                                                             <span>Bono Adultos</span>
                                                         </a>
                                                     </li>
-                                                                                                                                             
+                                                                                                                                           
