@@ -48,46 +48,6 @@ Musical
 48 ESPECTÁCULOS
 Ordenar por:
 Próxima función
-INFANTIL +3
-HOY · 17:00
-LUCES, CÁMARA Y MAGIA
-Carlos Devanti
-★★★★★ 4,9
-Desde 10 €
-VER FECHAS
-→
-MAGIA
-HOY · 18:00
-DAVID VEGA. NO SOLO ES MAGIA
-David Vega
-★★★★★ 4,9
-Desde 10 €
-VER FECHAS
-→
-MENTALISMO
-HOY · 18:30
-ATRÉVETE. MAGIA MENTAL
-Vicente Lucca
-★★★★★ 4,8
-Desde 10 €
-VER FECHAS
-→
-HUMOR
-HOY · 19:30
-UN DÍA DE MIERDA
-Casaris Paz
-★★★★★ 4,7
-Desde 12 €
-VER FECHAS
-→
-MAGIA
-HOY · 20:00
-POWER. UNA EXPERIENCIA MUY VIP
-Mago Ponce
-★★★★★ 5,0
-Desde 10 €
-VER FECHAS
-→
 MICROTEATRO
 HOY · 21:00
 QUE TE PARTA UN RAYO
@@ -160,6 +120,14 @@ Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, No
 Desde 12 €
 VER FECHAS
 →
+MAGIA
+JUE 24 · 21:30
+POWER. UNA EXPERIENCIA MUY VIP
+Mago Ponce
+★★★★★ 5,0
+Desde 10 €
+VER FECHAS
+→
 HUMOR
 VIE 25 · 19:30
 HORMONADA 2.0
@@ -173,6 +141,14 @@ VIE 25 · 20:00
 DESCARADO. MAGIA CANALLA
 Carlos Devanti
 ★★★★★ 5,0
+Desde 12 €
+VER FECHAS
+→
+HUMOR
+VIE 25 · 21:00
+UN DÍA DE MIERDA
+Casaris Paz
+★★★★★ 4,7
 Desde 12 €
 VER FECHAS
 →
@@ -236,6 +212,14 @@ INFANTIL +3
 SÁB 26 · 18:00
 VA DE MAGIA. MAGO PONCE
 Mago Ponce
+★★★★★ 4,9
+Desde 10 €
+VER FECHAS
+→
+INFANTIL +3
+SÁB 26 · 18:30
+LUCES, CÁMARA Y MAGIA
+Carlos Devanti
 ★★★★★ 4,9
 Desde 10 €
 VER FECHAS
@@ -309,6 +293,22 @@ DOM 27 · 17:00
 MAGIA Y DESVARIOS VARIOS
 Joaco Showman
 ESTRENO
+Desde 10 €
+VER FECHAS
+→
+MAGIA
+DOM 27 · 18:00
+DAVID VEGA. NO SOLO ES MAGIA
+David Vega
+★★★★★ 4,9
+Desde 10 €
+VER FECHAS
+→
+MENTALISMO
+DOM 27 · 18:30
+ATRÉVETE. MAGIA MENTAL
+Vicente Lucca
+★★★★★ 4,8
 Desde 10 €
 VER FECHAS
 →
@@ -642,11 +642,11 @@ HTML_HEAD:
                                             <span>Bonos</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
+                                        <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
                                             <ul role="menu">
                                                                                                                                                         <li role="menuitem">
                                                         <a class="dropdown-link" href="/bono-adultos/" target="_self">
                                                             <span>Bono Adultos</span>
                                                         </a>
                                                     </li>
-                                                                                                                                             
+                                                                                                                                           
