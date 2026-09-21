@@ -49,7 +49,7 @@ Musical
 Ordenar por:
 Próxima función
 CINE
-MAÑANA · 19:30
+HOY · 19:30
 CORTOS CON Ñ
 Festival de cortometrajes
 ★★★★★ 4,3
@@ -57,7 +57,7 @@ Desde 6 €
 VER FECHAS
 →
 MICROTEATRO
-MAÑANA · 20:00
+HOY · 20:00
 UNA NOCHE CON MI EX
 Aimar Vega Alejandra Bernal
 ESTRENO
@@ -65,7 +65,7 @@ Desde 8 €
 VER FECHAS
 →
 IMPRO
-MAÑANA · 21:00
+HOY · 21:00
 LA IRA DEL GRAN TIKI
 Diego Rousselon, Laura Castro, Javier Torralba
 ★★★★★ 4,6
@@ -73,7 +73,7 @@ Desde 10 €
 VER FECHAS
 →
 MENTALISMO
-MIÉ 23 · 20:00
+MAÑANA · 20:00
 GOLDEN TICKET. TIENE QUE SER MAGIA
 Chap Magic
 ESTRENO
@@ -81,7 +81,7 @@ Desde 12 €
 VER FECHAS
 →
 HUMOR
-MIÉ 23 · 21:30
+MAÑANA · 21:30
 ROBERTO PETTINATO. GRACIAS POR TODO
 Roberto Pettinato
 ESTRENO
