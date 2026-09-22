@@ -49,7 +49,7 @@ Musical
 Ordenar por:
 Próxima función
 MENTALISMO
-MAÑANA · 20:00
+HOY · 20:00
 GOLDEN TICKET. TIENE QUE SER MAGIA
 Chap Magic
 ESTRENO
@@ -57,7 +57,7 @@ Desde 12 €
 VER FECHAS
 →
 HUMOR
-MAÑANA · 21:30
+HOY · 21:30
 ROBERTO PETTINATO. GRACIAS POR TODO
 Roberto Pettinato
 ESTRENO
@@ -65,7 +65,7 @@ Desde 20 €
 VER FECHAS
 →
 HUMOR
-JUE 24 · 19:30
+MAÑANA · 19:30
 CUENTOS DEL FIN DEL MUNDO
 Alejandra Arias, Teresa Ponce de León, Jaime Páramo y Miguel Carbajo.
 ★★★★★ 5,0
@@ -73,7 +73,7 @@ Desde 15 €
 VER FECHAS
 →
 HUMOR
-JUE 24 · 20:00
+MAÑANA · 20:00
 LA TELENOVELA DE LAS CHICAS COCODRILO
 Shirley Stonyrock Gad Yola del Peru
 ESTRENO
@@ -81,7 +81,7 @@ Desde 12 €
 VER FECHAS
 →
 IMPRO
-JUE 24 · 21:15
+MAÑANA · 21:15
 IMPROCAFÉ SHOW
 Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, Noneh Herrero, María Márquez, Pablo Acevedo
 ★★★★★ 4,9
@@ -89,7 +89,7 @@ Desde 12 €
 VER FECHAS
 →
 MAGIA
-JUE 24 · 21:30
+MAÑANA · 21:30
 POWER. UNA EXPERIENCIA MUY VIP
 Mago Ponce
 ★★★★★ 5,0
@@ -565,7 +565,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/zqB-6Xpbd3lCIvi7Tr2D0pob/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-wXGHpHpDBnVjKOT3uRetLELve34vMvCn752jjw4CpIIpR+9fPJwe4g6mjdq7v4s/"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69l0"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/zqB-6Xpbd3lCIvi7Tr2D0pob/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-wXGHpHpDBnVjKOT3uRetLELve34vMvCn752jjw4CpIIpR+9fPJwe4g6mjdq7v4s/"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69l1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 			<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -649,11 +649,11 @@ HTML_HEAD:
                                             <span>Bonos</span>&nbsp;
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </button>
-                                        <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
+                                        <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
                                             <ul role="menu">
                                                                                                                                                         <li role="menuitem">
                                                         <a class="dropdown-link" href="/bono-adultos/" target="_self">
                                                             <span>Bono Adultos</span>
                                                         </a>
                                                     </li>
-                                                                                                                                             
+                                                                                                                                           
