@@ -24,7 +24,7 @@ Magia, humor, impro, infantil y más, en Lavapiés. Elige día y plan.
 Todos los días
 ▾
 Ver todo
-48
+49
 Humor
 18
 Magia
@@ -38,40 +38,16 @@ Bebés
 Impro
 4
 Microteatro
-3
+4
 Cine
 1
 Danza
 1
 Musical
 1
-48 ESPECTÁCULOS
+49 ESPECTÁCULOS
 Ordenar por:
 Próxima función
-CINE
-HOY · 19:30
-CORTOS CON Ñ
-Festival de cortometrajes
-★★★★★ 4,3
-Desde 6 €
-VER FECHAS
-→
-MICROTEATRO
-HOY · 20:00
-UNA NOCHE CON MI EX
-Aimar Vega Alejandra Bernal
-ESTRENO
-Desde 8 €
-VER FECHAS
-→
-DANZA
-HOY · 21:15
-SUPRA
-Victoria Pérez, María Barrio, Livia Peverelli, Cristina Mayoral y Maite Felipe
-★★★★★ 5,0
-Desde 10 €
-VER FECHAS
-→
 MENTALISMO
 MAÑANA · 20:00
 GOLDEN TICKET. TIENE QUE SER MAGIA
@@ -328,6 +304,22 @@ ESTRENO
 Desde 10 €
 VER FECHAS
 →
+CINE
+MAR 29 · 19:30
+CORTOS CON Ñ
+Festival de cortometrajes
+★★★★★ 4,3
+Desde 6 €
+VER FECHAS
+→
+MICROTEATRO
+MAR 29 · 20:00
+UNA NOCHE CON MI EX
+Aimar Vega Alejandra Bernal
+ESTRENO
+Desde 8 €
+VER FECHAS
+→
 IMPRO
 MAR 29 · 21:00
 LA IRA DEL GRAN TIKI
@@ -416,6 +408,14 @@ Rubén Reyeros
 Desde 10 €
 VER FECHAS
 →
+MICROTEATRO
+MAR 20 · 20:00
+NI UNA HOSTIA SIN RESPUESTA
+Elena Tébar Nieto.
+ESTRENO
+Desde 8 €
+VER FECHAS
+→
 HUMOR
 MIÉ 4 · 19:30
 CHECKPOINT CHARLIE
@@ -430,6 +430,13 @@ CERO DRAMAS
 Paloma Jiménez
 ESTRENO
 Desde 14 €
+VER FECHAS
+→
+DANZA
+SUPRA
+Victoria Pérez, María Barrio, Livia Peverelli, Cristina Mayoral y Maite Felipe
+★★★★★ 5,0
+Desde 10 €
 VER FECHAS
 →
 AYUDA
