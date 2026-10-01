@@ -33,19 +33,10 @@ Para improvisar
 Algo breve
 Otros
 PARA SORPRENDERTE
-VER LOS 11 →
+VER LOS 10 →
 
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
-MENTALISMO
-HOY · 20:00
--10%
-SAL DE MI MENTE
-Fito Crawford
-★ 4,9
-desde 12 €
-VER FECHAS
-→
 MAGIA
 MAÑANA · 20:00
 -10%
@@ -80,6 +71,14 @@ POWER. UNA EXPERIENCIA MUY VIP
 Mago Ponce
 ★ 5,0
 desde 10 €
+VER FECHAS
+→
+MENTALISMO
+SÁB 3 · 21:30
+SAL DE MI MENTE
+Fito Crawford
+★ 4,9
+desde 12 €
 VER FECHAS
 →
 MENTALISMO
@@ -121,14 +120,6 @@ JUE 15 · 21:30
 -10%
 MILAGROS Y OTRAS MENTIRAS
 Mago Nicols
-ESTRENO
-desde 12 €
-VER FECHAS
-→
-MENTALISMO
-VIE 23 · 21:00
-SADIISTIC
-Rubén Reyeros
 ESTRENO
 desde 12 €
 VER FECHAS
@@ -237,15 +228,6 @@ VER LOS 17 →
 Las mejores propuestas de humor.
 
 HUMOR
-HOY · 19:30
--20%
-CUENTOS DEL FIN DEL MUNDO
-Alejandra Arias, Teresa Ponce de León, Jaime Páramo y Miguel Carbajo.
-★ 5,0
-desde 15 €
-VER FECHAS
-→
-HUMOR
 MAÑANA · 21:00
 -10%
 CORAZÓN EN REBAJAS
@@ -321,6 +303,15 @@ desde 10 €
 VER FECHAS
 →
 HUMOR
+JUE 8 · 19:30
+-20%
+CUENTOS DEL FIN DEL MUNDO
+Alejandra Arias, Teresa Ponce de León, Jaime Páramo y Miguel Carbajo.
+★ 5,0
+desde 15 €
+VER FECHAS
+→
+HUMOR
 VIE 9 · 19:00
 TODXS NOS VAMOS A MORIR
 Noelia Marló
@@ -381,15 +372,6 @@ PARA IMPROVISAR
 
 Impro: aquí no hay nada escrito.
 
-IMPRO
-HOY · 21:15
--20%
-IMPROCAFÉ SHOW
-Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, Noneh Herrero, María Márquez, Pablo Acevedo
-★ 4,9
-desde 12 €
-VER FECHAS
-→
 HUMOR
 MAÑANA · 22:30
 SLASHER. THE EXPERIENCE
@@ -421,6 +403,14 @@ LA IRA DEL GRAN TIKI
 Diego Rousselon, Laura Castro, Javier Torralba
 ★ 4,6
 desde 10 €
+VER FECHAS
+→
+IMPRO
+JUE 8 · 21:15
+IMPROCAFÉ SHOW
+Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, Noneh Herrero, María Márquez, Pablo Acevedo
+★ 4,9
+desde 12 €
 VER FECHAS
 →
 ALGO BREVE
@@ -482,7 +472,7 @@ VER FECHAS
 →
 Por plan
 Todos
-49
+48
 AYUDA
 PREGUNTAS FRECUENTES
 ¿Por qué cobráis gastos de gestión?
@@ -611,7 +601,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?01102026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/kemdRjWFxNjgsGdhRslyEPwU/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-aLxzEV/RvHaciAm5b4ApvURF2FlFZfOuJp/oc51GIvMVrFmYqT9SfKFSTfl0F6oc"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69t1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/kemdRjWFxNjgsGdhRslyEPwU/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-aLxzEV/RvHaciAm5b4ApvURF2FlFZfOuJp/oc51GIvMVrFmYqT9SfKFSTfl0F6oc"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69u0"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -695,7 +685,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
@@ -707,4 +697,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                              
+                            
