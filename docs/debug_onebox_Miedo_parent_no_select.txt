@@ -33,7 +33,7 @@ Para improvisar
 Algo breve
 Otros
 PARA SORPRENDERTE
-VER LOS 11 →
+VER LOS 10 →
 
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
@@ -42,15 +42,6 @@ HOY · 20:00
 -10%
 DESCARADO. MAGIA CANALLA
 Carlos Devanti
-★ 5,0
-desde 12 €
-VER FECHAS
-→
-MENTALISMO
-HOY · 21:30
--10%
-HACKEANDO MENTES
-Antonio Martínez Salinas
 ★ 5,0
 desde 12 €
 VER FECHAS
@@ -108,20 +99,20 @@ ESTRENO
 desde 12 €
 VER FECHAS
 →
-DRAMA
-MAR 13 · 20:00
-MÚSICA PARA EL BÚNKER
-Pablo Montero
-ESTRENO
-desde 12 €
-VER FECHAS
-→
 MAGIA
 JUE 15 · 21:30
 -10%
 MILAGROS Y OTRAS MENTIRAS
 Mago Nicols
 ESTRENO
+desde 12 €
+VER FECHAS
+→
+MENTALISMO
+VIE 16 · 21:30
+HACKEANDO MENTES
+Antonio Martínez Salinas
+★ 5,0
 desde 12 €
 VER FECHAS
 →
@@ -232,7 +223,7 @@ desde 10 €
 VER FECHAS
 →
 PARA REIRTE
-VER LOS 17 →
+VER LOS 19 →
 
 Las mejores propuestas de humor.
 
@@ -354,6 +345,23 @@ desde 12 €
 VER FECHAS
 →
 HUMOR
+MAR 3 · 21:00
+-10%
+QUE TE PARTA UN RAYO
+Marta Martín Ismael Vicente Silvia Ros Carlos Herrera
+ESTRENO
+desde 12 €
+VER FECHAS
+→
+HUMOR
+VIE 13 · 10:00
+HUEVOS ROTOS
+Samuel Buitrago y Adrián Portolés
+★ 5,0
+desde 10 €
+VER FECHAS
+→
+HUMOR
 MIÉ 18 · 19:30
 CHECKPOINT CHARLIE
 Alba Quiñones y José Urzáiz
@@ -458,15 +466,6 @@ ESTRENO
 desde 8 €
 VER FECHAS
 →
-HUMOR
-MAR 3 · 21:00
--10%
-QUE TE PARTA UN RAYO
-Marta Martín Ismael Vicente Silvia Ros Carlos Herrera
-ESTRENO
-desde 12 €
-VER FECHAS
-→
 OTROS
 
 Danza, cortos y todo lo que no entra en una caja.
@@ -479,9 +478,17 @@ Festival de cortometrajes
 desde 6 €
 VER FECHAS
 →
+DRAMA
+MAR 13 · 20:00
+MÚSICA PARA EL BÚNKER
+Pablo Montero
+ESTRENO
+desde 12 €
+VER FECHAS
+→
 Por plan
 Todos
-49
+50
 AYUDA
 PREGUNTAS FRECUENTES
 ¿Por qué cobráis gastos de gestión?
@@ -610,7 +617,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?01102026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/kemdRjWFxNjgsGdhRslyEPwU/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-aLxzEV/RvHaciAm5b4ApvURF2FlFZfOuJp/oc51GIvMVrFmYqT9SfKFSTfl0F6oc"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69u2h1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/kemdRjWFxNjgsGdhRslyEPwU/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-aLxzEV/RvHaciAm5b4ApvURF2FlFZfOuJp/oc51GIvMVrFmYqT9SfKFSTfl0F6oc"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69u2"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -706,4 +713,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                            
+                              
