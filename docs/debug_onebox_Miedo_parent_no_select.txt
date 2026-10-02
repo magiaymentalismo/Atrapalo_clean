@@ -33,7 +33,7 @@ Para improvisar
 Algo breve
 Otros
 PARA SORPRENDERTE
-VER LOS 10 →
+VER LOS 11 →
 
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
@@ -67,7 +67,7 @@ VER FECHAS
 MAGIA
 MAÑANA · 17:00
 -20%
-POWER. UNA EXPERIENCIA MUY VIP
+POWER: MAGIA Y MENTALISMO
 Mago Ponce
 ★ 5,0
 desde 10 €
@@ -101,6 +101,7 @@ VER FECHAS
 →
 MENTALISMO
 MIÉ 7 · 20:30
+-20%
 GOLDEN TICKET. TIENE QUE SER MAGIA
 Chap Magic
 ESTRENO
@@ -120,6 +121,14 @@ JUE 15 · 21:30
 -10%
 MILAGROS Y OTRAS MENTIRAS
 Mago Nicols
+ESTRENO
+desde 12 €
+VER FECHAS
+→
+MENTALISMO
+VIE 23 · 21:00
+SADIISTIC
+Rubén Reyeros
 ESTRENO
 desde 12 €
 VER FECHAS
@@ -472,7 +481,7 @@ VER FECHAS
 →
 Por plan
 Todos
-48
+49
 AYUDA
 PREGUNTAS FRECUENTES
 ¿Por qué cobráis gastos de gestión?
@@ -601,7 +610,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?01102026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/kemdRjWFxNjgsGdhRslyEPwU/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-aLxzEV/RvHaciAm5b4ApvURF2FlFZfOuJp/oc51GIvMVrFmYqT9SfKFSTfl0F6oc"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69u2"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/kemdRjWFxNjgsGdhRslyEPwU/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-aLxzEV/RvHaciAm5b4ApvURF2FlFZfOuJp/oc51GIvMVrFmYqT9SfKFSTfl0F6oc"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69u2h1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -685,7 +694,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
