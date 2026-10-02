@@ -38,7 +38,7 @@ VER LOS 10 →
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
 MAGIA
-MAÑANA · 17:00
+HOY · 17:00
 -20%
 POWER: MAGIA Y MENTALISMO
 Mago Ponce
@@ -47,7 +47,7 @@ desde 10 €
 VER FECHAS
 →
 MENTALISMO
-MAÑANA · 20:00
+HOY · 20:00
 MENTIROSO MAGIA MENTAL
 Carlos Devanti
 ★ 4,9
@@ -55,7 +55,7 @@ desde 12 €
 VER FECHAS
 →
 MENTALISMO
-MAÑANA · 21:30
+HOY · 21:30
 SAL DE MI MENTE
 Fito Crawford
 ★ 4,9
@@ -63,7 +63,7 @@ desde 12 €
 VER FECHAS
 →
 MENTALISMO
-DOM 4 · 18:30
+MAÑANA · 18:30
 -10%
 ATRÉVETE. MAGIA MENTAL
 Vicente Lucca
@@ -72,7 +72,7 @@ desde 12 €
 VER FECHAS
 →
 MENTALISMO
-DOM 4 · 21:30
+MAÑANA · 21:30
 -10%
 DESTINOS
 Adrian Gonzalo
@@ -129,7 +129,7 @@ VER LOS 11 →
 Magia infantil a partir de 3 años y espectáculos para bebés.
 
 BEBÉS
-MAÑANA · 11:30
+HOY · 11:30
 FANTASÍA
 Belén Martínez
 ★ 4,7
@@ -137,7 +137,7 @@ desde 7 €
 VER FECHAS
 →
 INFANTIL +3
-MAÑANA · 12:00
+HOY · 12:00
 -20%
 PIEDRA, PAPEL O TIJERA
 Nicolás Vicente “Mago Nicols”
@@ -146,7 +146,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-MAÑANA · 12:30
+HOY · 12:30
 -10%
 VA DE MAGIA. MAGO PONCE
 Mago Ponce
@@ -155,7 +155,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-MAÑANA · 16:30
+HOY · 16:30
 -10%
 SOÑANDO MAGIA
 David Vega
@@ -164,7 +164,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-MAÑANA · 18:00
+HOY · 18:00
 FLIPOMAGIA
 Gerard Clúa
 ★ 4,7
@@ -172,7 +172,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-MAÑANA · 18:30
+HOY · 18:30
 LUCES, CÁMARA Y MAGIA
 Carlos Devanti
 ★ 4,9
@@ -180,7 +180,7 @@ desde 10 €
 VER FECHAS
 →
 BEBÉS
-DOM 4 · 11:30
+MAÑANA · 11:30
 ESTRELLAS Y SOÑAR
 Laura Alcocer
 ★ 4,7
@@ -188,7 +188,7 @@ desde 7 €
 VER FECHAS
 →
 INFANTIL +3
-DOM 4 · 12:30
+MAÑANA · 12:30
 -10%
 ALGUIEN DIJO ¿SUPERPODERES?
 Mago Ponce
@@ -197,7 +197,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-DOM 4 · 17:00
+MAÑANA · 17:00
 -20%
 MAGIA Y DESVARIOS VARIOS
 Joaco Showman
@@ -227,16 +227,7 @@ VER LOS 19 →
 Las mejores propuestas de humor.
 
 HUMOR
-HOY · 21:00
--10%
-CORAZÓN EN REBAJAS
-Laura Alcocer
-★ 4,8
-desde 12 €
-VER FECHAS
-→
-HUMOR
-MAÑANA · 19:30
+HOY · 19:30
 AFTER KIKI
 Casaris Paz, Jorge Alvariñas
 ★ 4,8
@@ -244,7 +235,7 @@ desde 12 €
 VER FECHAS
 →
 HUMOR
-MAÑANA · 21:00
+HOY · 21:00
 -10%
 SOY UNA PERSONA HORRIBLE
 Sara González
@@ -253,7 +244,7 @@ desde 10 €
 VER FECHAS
 →
 HUMOR
-MAÑANA · 22:30
+HOY · 22:30
 TÍA, NADIE ES PERFECTA
 Almudena Alcocer, Maria Francés, Julia Olcina, Yaiza de la Torre y Alejandra Lozano
 ESTRENO
@@ -261,7 +252,7 @@ desde 12 €
 VER FECHAS
 →
 MUSICAL
-MAÑANA · 23:00
+HOY · 23:00
 DIVAS Y DIVANES
 Diana Dardo, Mario Manzanares y Artista Invitada
 ★ 5,0
@@ -269,7 +260,7 @@ desde 15 €
 VER FECHAS
 →
 HUMOR
-DOM 4 · 18:00
+MAÑANA · 18:00
 -20%
 HORMONADA 2.0
 Sara Cardona
@@ -278,7 +269,7 @@ desde 12 €
 VER FECHAS
 →
 HUMOR
-DOM 4 · 19:30
+MAÑANA · 19:30
 DIVÁN DIVINO
 Samuel Padilla. Lluna Issa Casterà.
 ESTRENO
@@ -308,6 +299,14 @@ TODXS NOS VAMOS A MORIR
 Noelia Marló
 ESTRENO
 desde 15 €
+VER FECHAS
+→
+HUMOR
+VIE 9 · 21:00
+CORAZÓN EN REBAJAS
+Laura Alcocer
+★ 4,8
+desde 12 €
 VER FECHAS
 →
 HUMOR
@@ -397,7 +396,7 @@ desde 8 €
 VER FECHAS
 →
 IMPRO
-DOM 4 · 14:00
+MAÑANA · 14:00
 LA COCINA DE IMPROCAFÉ
 Alumnos y alumnas de la compañía de Improcafé
 ★ 4,8
@@ -434,7 +433,7 @@ ALGO BREVE
 Microteatro, a un palmo de ti.
 
 MICROTEATRO
-DOM 4 · 21:00
+MAÑANA · 21:00
 THE CASQUIVANS
 Carolina Touceda y Gloria Rodríguez
 ESTRENO
@@ -616,7 +615,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?01102026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/kemdRjWFxNjgsGdhRslyEPwU/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-aLxzEV/RvHaciAm5b4ApvURF2FlFZfOuJp/oc51GIvMVrFmYqT9SfKFSTfl0F6oc"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69u2"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/guXhH0v-XMxlzmbTwqkaT4i5/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-F7+5HZU6FOmKBqfld7cNPAGWTkV3xbyIjnWYAkn97x47Lo8mOn8mC2ub2AhBZXUj"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69u2"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -700,7 +699,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
@@ -712,4 +711,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                            
+                              
