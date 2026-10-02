@@ -38,30 +38,20 @@ VER LOS 10 →
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
 MAGIA
-HOY · 20:00
--10%
-DESCARADO. MAGIA CANALLA
-Carlos Devanti
-★ 5,0
-desde 12 €
-VER FECHAS
-→
-MENTALISMO
-HOY · 23:00
--10%
-MENTIROSO MAGIA MENTAL
-Carlos Devanti
-★ 4,9
-desde 12 €
-VER FECHAS
-→
-MAGIA
 MAÑANA · 17:00
 -20%
 POWER: MAGIA Y MENTALISMO
 Mago Ponce
 ★ 5,0
 desde 10 €
+VER FECHAS
+→
+MENTALISMO
+MAÑANA · 20:00
+MENTIROSO MAGIA MENTAL
+Carlos Devanti
+★ 4,9
+desde 12 €
 VER FECHAS
 →
 MENTALISMO
@@ -96,6 +86,15 @@ MIÉ 7 · 20:30
 GOLDEN TICKET. TIENE QUE SER MAGIA
 Chap Magic
 ESTRENO
+desde 12 €
+VER FECHAS
+→
+MAGIA
+VIE 9 · 20:00
+-10%
+DESCARADO. MAGIA CANALLA
+Carlos Devanti
+★ 5,0
 desde 12 €
 VER FECHAS
 →
@@ -237,14 +236,6 @@ desde 12 €
 VER FECHAS
 →
 HUMOR
-HOY · 22:30
-SLASHER. THE EXPERIENCE
-Soraya Santos, Sandra Mell, Fran Expósito, Javier Valverde, Chema Higuera.
-★ 5,0
-desde 12 €
-VER FECHAS
-→
-HUMOR
 MAÑANA · 19:30
 AFTER KIKI
 Casaris Paz, Jorge Alvariñas
@@ -320,6 +311,14 @@ desde 15 €
 VER FECHAS
 →
 HUMOR
+VIE 9 · 22:30
+SLASHER. THE EXPERIENCE
+Soraya Santos, Sandra Mell, Fran Expósito, Javier Valverde, Chema Higuera.
+★ 5,0
+desde 12 €
+VER FECHAS
+→
+HUMOR
 SÁB 10 · 21:00
 MISS DESGRACIAS
 María Simón
@@ -389,14 +388,6 @@ PARA IMPROVISAR
 
 Impro: aquí no hay nada escrito.
 
-HUMOR
-HOY · 22:30
-SLASHER. THE EXPERIENCE
-Soraya Santos, Sandra Mell, Fran Expósito, Javier Valverde, Chema Higuera.
-★ 5,0
-desde 12 €
-VER FECHAS
-→
 IMPRO
 HOY · 23:59
 EL MATCH DE IMPRO DE LA ESCALERA
@@ -427,6 +418,14 @@ JUE 8 · 21:15
 IMPROCAFÉ SHOW
 Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, Noneh Herrero, María Márquez, Pablo Acevedo
 ★ 4,9
+desde 12 €
+VER FECHAS
+→
+HUMOR
+VIE 9 · 22:30
+SLASHER. THE EXPERIENCE
+Soraya Santos, Sandra Mell, Fran Expósito, Javier Valverde, Chema Higuera.
+★ 5,0
 desde 12 €
 VER FECHAS
 →
@@ -617,7 +616,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?01102026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/kemdRjWFxNjgsGdhRslyEPwU/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-aLxzEV/RvHaciAm5b4ApvURF2FlFZfOuJp/oc51GIvMVrFmYqT9SfKFSTfl0F6oc"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69u2"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/kemdRjWFxNjgsGdhRslyEPwU/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-aLxzEV/RvHaciAm5b4ApvURF2FlFZfOuJp/oc51GIvMVrFmYqT9SfKFSTfl0F6oc"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6a10h2"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -713,4 +712,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                              
+                            
