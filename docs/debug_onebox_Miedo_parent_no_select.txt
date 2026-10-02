@@ -38,7 +38,7 @@ VER LOS 10 →
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
 MAGIA
-MAÑANA · 20:00
+HOY · 20:00
 -10%
 DESCARADO. MAGIA CANALLA
 Carlos Devanti
@@ -47,7 +47,7 @@ desde 12 €
 VER FECHAS
 →
 MENTALISMO
-MAÑANA · 21:30
+HOY · 21:30
 -10%
 HACKEANDO MENTES
 Antonio Martínez Salinas
@@ -56,7 +56,7 @@ desde 12 €
 VER FECHAS
 →
 MENTALISMO
-MAÑANA · 23:00
+HOY · 23:00
 -10%
 MENTIROSO MAGIA MENTAL
 Carlos Devanti
@@ -65,7 +65,7 @@ desde 12 €
 VER FECHAS
 →
 MAGIA
-SÁB 3 · 17:00
+MAÑANA · 17:00
 -20%
 POWER. UNA EXPERIENCIA MUY VIP
 Mago Ponce
@@ -74,7 +74,7 @@ desde 10 €
 VER FECHAS
 →
 MENTALISMO
-SÁB 3 · 21:30
+MAÑANA · 21:30
 SAL DE MI MENTE
 Fito Crawford
 ★ 4,9
@@ -130,7 +130,7 @@ VER LOS 11 →
 Magia infantil a partir de 3 años y espectáculos para bebés.
 
 BEBÉS
-SÁB 3 · 11:30
+MAÑANA · 11:30
 FANTASÍA
 Belén Martínez
 ★ 4,7
@@ -138,7 +138,7 @@ desde 7 €
 VER FECHAS
 →
 INFANTIL +3
-SÁB 3 · 12:00
+MAÑANA · 12:00
 -20%
 PIEDRA, PAPEL O TIJERA
 Nicolás Vicente “Mago Nicols”
@@ -147,7 +147,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-SÁB 3 · 12:30
+MAÑANA · 12:30
 -10%
 VA DE MAGIA. MAGO PONCE
 Mago Ponce
@@ -156,7 +156,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-SÁB 3 · 16:30
+MAÑANA · 16:30
 -10%
 SOÑANDO MAGIA
 David Vega
@@ -165,7 +165,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-SÁB 3 · 18:00
+MAÑANA · 18:00
 FLIPOMAGIA
 Gerard Clúa
 ★ 4,7
@@ -173,7 +173,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-SÁB 3 · 18:30
+MAÑANA · 18:30
 LUCES, CÁMARA Y MAGIA
 Carlos Devanti
 ★ 4,9
@@ -228,7 +228,7 @@ VER LOS 17 →
 Las mejores propuestas de humor.
 
 HUMOR
-MAÑANA · 21:00
+HOY · 21:00
 -10%
 CORAZÓN EN REBAJAS
 Laura Alcocer
@@ -237,7 +237,7 @@ desde 12 €
 VER FECHAS
 →
 HUMOR
-MAÑANA · 22:30
+HOY · 22:30
 SLASHER. THE EXPERIENCE
 Soraya Santos, Sandra Mell, Fran Expósito, Javier Valverde, Chema Higuera.
 ★ 5,0
@@ -245,7 +245,7 @@ desde 12 €
 VER FECHAS
 →
 HUMOR
-SÁB 3 · 19:30
+MAÑANA · 19:30
 AFTER KIKI
 Casaris Paz, Jorge Alvariñas
 ★ 4,8
@@ -253,7 +253,7 @@ desde 12 €
 VER FECHAS
 →
 HUMOR
-SÁB 3 · 21:00
+MAÑANA · 21:00
 -10%
 SOY UNA PERSONA HORRIBLE
 Sara González
@@ -262,7 +262,7 @@ desde 10 €
 VER FECHAS
 →
 HUMOR
-SÁB 3 · 22:30
+MAÑANA · 22:30
 TÍA, NADIE ES PERFECTA
 Almudena Alcocer, Maria Francés, Julia Olcina, Yaiza de la Torre y Alejandra Lozano
 ESTRENO
@@ -270,7 +270,7 @@ desde 12 €
 VER FECHAS
 →
 MUSICAL
-SÁB 3 · 23:00
+MAÑANA · 23:00
 DIVAS Y DIVANES
 Diana Dardo, Mario Manzanares y Artista Invitada
 ★ 5,0
@@ -373,7 +373,7 @@ PARA IMPROVISAR
 Impro: aquí no hay nada escrito.
 
 HUMOR
-MAÑANA · 22:30
+HOY · 22:30
 SLASHER. THE EXPERIENCE
 Soraya Santos, Sandra Mell, Fran Expósito, Javier Valverde, Chema Higuera.
 ★ 5,0
@@ -381,7 +381,7 @@ desde 12 €
 VER FECHAS
 →
 IMPRO
-MAÑANA · 23:59
+HOY · 23:59
 EL MATCH DE IMPRO DE LA ESCALERA
 Impro
 ★ 4,7
@@ -601,7 +601,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?01102026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/M3Y7JiHDsN9LioFC-iZZqjKA/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-9+L14HKY3zbrhMk/0ciJXr7XCHS0Pb1urIj9Oga1mPCyi+fx5UrjndBishr0NFKS"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69u2h2"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/kemdRjWFxNjgsGdhRslyEPwU/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-aLxzEV/RvHaciAm5b4ApvURF2FlFZfOuJp/oc51GIvMVrFmYqT9SfKFSTfl0F6oc"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69u2"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -697,4 +697,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                          
+                            
