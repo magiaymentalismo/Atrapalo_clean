@@ -39,7 +39,7 @@ VER LOS 10 →
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
 MENTALISMO
-MAÑANA · 18:30
+HOY · 18:30
 -10%
 ATRÉVETE. MAGIA MENTAL
 Vicente Lucca
@@ -48,7 +48,7 @@ desde 12 €
 VER FECHAS
 →
 MAGIA
-MAÑANA · 20:00
+HOY · 20:00
 -20%
 POWER: MAGIA Y MENTALISMO
 Mago Ponce
@@ -57,7 +57,7 @@ desde 10 €
 VER FECHAS
 →
 MENTALISMO
-MAÑANA · 21:30
+HOY · 21:30
 -10%
 DESTINOS
 Adrian Gonzalo
@@ -130,7 +130,7 @@ VER LOS 11 →
 Magia infantil a partir de 3 años y espectáculos para bebés.
 
 BEBÉS
-MAÑANA · 11:30
+HOY · 11:30
 ESTRELLAS Y SOÑAR
 Laura Alcocer
 ★ 4,7
@@ -138,7 +138,7 @@ desde 7 €
 VER FECHAS
 →
 INFANTIL +3
-MAÑANA · 12:00
+HOY · 12:00
 -10%
 SOÑANDO MAGIA
 David Vega
@@ -147,7 +147,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-MAÑANA · 12:30
+HOY · 12:30
 -10%
 ALGUIEN DIJO ¿SUPERPODERES?
 Mago Ponce
@@ -156,7 +156,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-MAÑANA · 16:30
+HOY · 16:30
 -10%
 VA DE MAGIA. MAGO PONCE
 Mago Ponce
@@ -165,7 +165,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-MAÑANA · 17:00
+HOY · 17:00
 -20%
 MAGIA Y DESVARIOS VARIOS
 Joaco Showman
@@ -226,16 +226,8 @@ VER LOS 19 →
 
 Las mejores propuestas de humor.
 
-MUSICAL
-HOY · 23:00
-DIVAS Y DIVANES
-Diana Dardo, Mario Manzanares y Artista Invitada
-★ 5,0
-desde 15 €
-VER FECHAS
-→
 HUMOR
-MAÑANA · 18:00
+HOY · 18:00
 -20%
 HORMONADA 2.0
 Sara Cardona
@@ -244,7 +236,7 @@ desde 12 €
 VER FECHAS
 →
 HUMOR
-MAÑANA · 19:30
+HOY · 19:30
 DIVÁN DIVINO
 Samuel Padilla. Lluna Issa Casterà.
 ESTRENO
@@ -314,6 +306,14 @@ TÍA, NADIE ES PERFECTA
 Almudena Alcocer, Maria Francés, Julia Olcina, Yaiza de la Torre y Alejandra Lozano
 ESTRENO
 desde 12 €
+VER FECHAS
+→
+MUSICAL
+SÁB 10 · 23:00
+DIVAS Y DIVANES
+Diana Dardo, Mario Manzanares y Artista Invitada
+★ 5,0
+desde 15 €
 VER FECHAS
 →
 HUMOR
@@ -404,7 +404,7 @@ PARA IMPROVISAR
 Impro: aquí no hay nada escrito.
 
 IMPRO
-MAÑANA · 14:00
+HOY · 14:00
 LA COCINA DE IMPROCAFÉ
 Alumnos y alumnas de la compañía de Improcafé
 ★ 4,8
@@ -441,7 +441,7 @@ ALGO BREVE
 Microteatro, a un palmo de ti.
 
 MICROTEATRO
-MAÑANA · 21:00
+HOY · 21:00
 THE CASQUIVANS
 Carolina Touceda y Gloria Rodríguez
 ESTRENO
@@ -707,7 +707,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
@@ -719,4 +719,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                              
+                            
