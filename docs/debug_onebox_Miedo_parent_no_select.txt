@@ -39,22 +39,6 @@ VER LOS 10 →
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
 MENTALISMO
-HOY · 20:00
-MENTIROSO MAGIA MENTAL
-Carlos Devanti
-★ 4,9
-desde 12 €
-VER FECHAS
-→
-MENTALISMO
-HOY · 21:30
-SAL DE MI MENTE
-Fito Crawford
-★ 4,9
-desde 12 €
-VER FECHAS
-→
-MENTALISMO
 MAÑANA · 18:30
 -10%
 ATRÉVETE. MAGIA MENTAL
@@ -90,12 +74,28 @@ ESTRENO
 desde 12 €
 VER FECHAS
 →
+MENTALISMO
+JUE 8 · 20:00
+SAL DE MI MENTE
+Fito Crawford
+★ 4,9
+desde 12 €
+VER FECHAS
+→
 MAGIA
 VIE 9 · 20:00
 -10%
 DESCARADO. MAGIA CANALLA
 Carlos Devanti
 ★ 5,0
+desde 12 €
+VER FECHAS
+→
+MENTALISMO
+VIE 9 · 23:00
+MENTIROSO MAGIA MENTAL
+Carlos Devanti
+★ 4,9
 desde 12 €
 VER FECHAS
 →
@@ -156,15 +156,6 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-MAÑANA · 13:30
--20%
-PIEDRA, PAPEL O TIJERA
-Nicolás Vicente “Mago Nicols”
-★ 4,9
-desde 10 €
-VER FECHAS
-→
-INFANTIL +3
 MAÑANA · 16:30
 -10%
 VA DE MAGIA. MAGO PONCE
@@ -188,6 +179,14 @@ MILONGA BAJO EL MAR
 Ainhoa Sarmiento
 ★ 4,8
 desde 7 €
+VER FECHAS
+→
+INFANTIL +3
+SÁB 10 · 12:00
+PIEDRA, PAPEL O TIJERA
+Nicolás Vicente “Mago Nicols”
+★ 4,9
+desde 10 €
 VER FECHAS
 →
 INFANTIL +3
@@ -227,23 +226,6 @@ VER LOS 19 →
 
 Las mejores propuestas de humor.
 
-HUMOR
-HOY · 21:00
--10%
-SOY UNA PERSONA HORRIBLE
-Sara González
-★ 4,7
-desde 10 €
-VER FECHAS
-→
-HUMOR
-HOY · 22:30
-TÍA, NADIE ES PERFECTA
-Almudena Alcocer, Maria Francés, Julia Olcina, Yaiza de la Torre y Alejandra Lozano
-ESTRENO
-desde 12 €
-VER FECHAS
-→
 MUSICAL
 HOY · 23:00
 DIVAS Y DIVANES
@@ -311,10 +293,26 @@ desde 12 €
 VER FECHAS
 →
 HUMOR
+SÁB 10 · 19:30
+SOY UNA PERSONA HORRIBLE
+Sara González
+★ 4,7
+desde 10 €
+VER FECHAS
+→
+HUMOR
 SÁB 10 · 21:00
 MISS DESGRACIAS
 María Simón
 ★ 5,0
+desde 12 €
+VER FECHAS
+→
+HUMOR
+SÁB 10 · 22:30
+TÍA, NADIE ES PERFECTA
+Almudena Alcocer, Maria Francés, Julia Olcina, Yaiza de la Torre y Alejandra Lozano
+ESTRENO
 desde 12 €
 VER FECHAS
 →
