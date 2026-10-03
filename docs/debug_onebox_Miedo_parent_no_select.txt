@@ -129,32 +129,6 @@ VER LOS 11 →
 
 Magia infantil a partir de 3 años y espectáculos para bebés.
 
-BEBÉS
-HOY · 11:30
-FANTASÍA
-Belén Martínez
-★ 4,7
-desde 7 €
-VER FECHAS
-→
-INFANTIL +3
-HOY · 12:00
--20%
-PIEDRA, PAPEL O TIJERA
-Nicolás Vicente “Mago Nicols”
-★ 4,9
-desde 10 €
-VER FECHAS
-→
-INFANTIL +3
-HOY · 12:30
--10%
-VA DE MAGIA. MAGO PONCE
-Mago Ponce
-★ 4,9
-desde 10 €
-VER FECHAS
-→
 INFANTIL +3
 HOY · 16:30
 -10%
@@ -198,6 +172,24 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL +3
+MAÑANA · 13:30
+-20%
+PIEDRA, PAPEL O TIJERA
+Nicolás Vicente “Mago Nicols”
+★ 4,9
+desde 10 €
+VER FECHAS
+→
+INFANTIL +3
+MAÑANA · 16:30
+-10%
+VA DE MAGIA. MAGO PONCE
+Mago Ponce
+★ 4,9
+desde 10 €
+VER FECHAS
+→
+INFANTIL +3
 MAÑANA · 17:00
 -20%
 MAGIA Y DESVARIOS VARIOS
@@ -220,6 +212,14 @@ ALUCINA ¡PEPINILLOS!
 Rubén Reyeros
 ★ 4,4
 desde 10 €
+VER FECHAS
+→
+BEBÉS
+LUN 12 · 11:30
+FANTASÍA
+Belén Martínez
+★ 4,7
+desde 7 €
 VER FECHAS
 →
 PARA REIRTE
