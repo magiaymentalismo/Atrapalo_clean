@@ -39,24 +39,6 @@ VER LOS 10 →
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
 MENTALISMO
-HOY · 18:30
--10%
-ATRÉVETE. MAGIA MENTAL
-Vicente Lucca
-★ 4,8
-desde 12 €
-VER FECHAS
-→
-MAGIA
-HOY · 20:00
--20%
-POWER: MAGIA Y MENTALISMO
-Mago Ponce
-★ 5,0
-desde 10 €
-VER FECHAS
-→
-MENTALISMO
 HOY · 21:30
 -10%
 DESTINOS
@@ -96,6 +78,22 @@ VIE 9 · 23:00
 MENTIROSO MAGIA MENTAL
 Carlos Devanti
 ★ 4,9
+desde 12 €
+VER FECHAS
+→
+MAGIA
+DOM 11 · 20:00
+POWER: MAGIA Y MENTALISMO
+Mago Ponce
+★ 5,0
+desde 10 €
+VER FECHAS
+→
+MENTALISMO
+LUN 12 · 18:30
+ATRÉVETE. MAGIA MENTAL
+Vicente Lucca
+★ 4,8
 desde 12 €
 VER FECHAS
 →
@@ -223,15 +221,6 @@ VER LOS 19 →
 Las mejores propuestas de humor.
 
 HUMOR
-HOY · 18:00
--20%
-HORMONADA 2.0
-Sara Cardona
-★ 4,8
-desde 12 €
-VER FECHAS
-→
-HUMOR
 MIÉ 7 · 21:00
 AQUÍ SE HABLA PAJA
 Stand up comedy
@@ -310,6 +299,14 @@ DIVÁN DIVINO
 Samuel Padilla. Lluna Issa Casterà.
 ESTRENO
 desde 14 €
+VER FECHAS
+→
+HUMOR
+LUN 12 · 18:00
+HORMONADA 2.0
+Sara Cardona
+★ 4,8
+desde 12 €
 VER FECHAS
 →
 HUMOR
@@ -437,14 +434,6 @@ ALGO BREVE
 Microteatro, a un palmo de ti.
 
 MICROTEATRO
-HOY · 21:00
-THE CASQUIVANS
-Carolina Touceda y Gloria Rodríguez
-ESTRENO
-desde 10 €
-VER FECHAS
-→
-MICROTEATRO
 MAR 6 · 20:00
 UNA NOCHE CON MI EX
 Aimar Vega Alejandra Bernal
@@ -458,6 +447,14 @@ LA ÚLTIMA
 Vanessa Londoño y Jessica Serna
 ESTRENO
 desde 8 €
+VER FECHAS
+→
+MICROTEATRO
+DOM 18 · 21:00
+THE CASQUIVANS
+Carolina Touceda y Gloria Rodríguez
+ESTRENO
+desde 10 €
 VER FECHAS
 →
 MICROTEATRO
@@ -619,7 +616,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?01102026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/guXhH0v-XMzwgr6KUGswGxeS/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-BAYofqDTQ0EREVOgrkA1WObcS3SXhmwAcz1Y/LPI3h9My0mK7KdyNM21ZxgFnM/S"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69u2"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/guXhH0v-XMxlzmbTwqkaT4i5/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-F7+5HZU6FOmKBqfld7cNPAGWTkV3xbyIjnWYAkn97x47Lo8mOn8mC2ub2AhBZXUj"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69u2"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
