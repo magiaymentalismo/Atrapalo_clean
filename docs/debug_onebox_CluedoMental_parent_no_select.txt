@@ -39,15 +39,6 @@ VER LOS 10 →
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
 MENTALISMO
-HOY · 21:30
--10%
-DESTINOS
-Adrian Gonzalo
-★ 5,0
-desde 12 €
-VER FECHAS
-→
-MENTALISMO
 MIÉ 7 · 20:30
 -20%
 GOLDEN TICKET. TIENE QUE SER MAGIA
@@ -87,6 +78,14 @@ POWER: MAGIA Y MENTALISMO
 Mago Ponce
 ★ 5,0
 desde 10 €
+VER FECHAS
+→
+MENTALISMO
+DOM 11 · 21:30
+DESTINOS
+Adrian Gonzalo
+★ 5,0
+desde 12 €
 VER FECHAS
 →
 MENTALISMO
@@ -397,7 +396,7 @@ PARA IMPROVISAR
 Impro: aquí no hay nada escrito.
 
 IMPRO
-MAR 6 · 21:00
+MAÑANA · 21:00
 -20%
 LA IRA DEL GRAN TIKI
 Diego Rousselon, Laura Castro, Javier Torralba
@@ -434,7 +433,7 @@ ALGO BREVE
 Microteatro, a un palmo de ti.
 
 MICROTEATRO
-MAR 6 · 20:00
+MAÑANA · 20:00
 UNA NOCHE CON MI EX
 Aimar Vega Alejandra Bernal
 ESTRENO
@@ -470,7 +469,7 @@ OTROS
 Danza, cortos y todo lo que no entra en una caja.
 
 CINE
-MAR 6 · 19:30
+MAÑANA · 19:30
 CORTOS CON Ñ
 Festival de cortometrajes
 ★ 4,3
@@ -616,7 +615,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?01102026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/guXhH0v-XMzwgr6KUGswGxeS/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-BAYofqDTQ0EREVOgrkA1WObcS3SXhmwAcz1Y/LPI3h9My0mK7KdyNM21ZxgFnM/S"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69u2"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/guXhH0v-XMzwgr6KUGswGxeS/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-BAYofqDTQ0EREVOgrkA1WObcS3SXhmwAcz1Y/LPI3h9My0mK7KdyNM21ZxgFnM/S"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e69u2h1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -700,7 +699,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
@@ -712,4 +711,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                              
+                          
