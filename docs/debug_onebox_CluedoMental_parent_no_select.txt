@@ -129,32 +129,6 @@ VER LOS 11 →
 
 Magia infantil a partir de 3 años y espectáculos para bebés.
 
-BEBÉS
-HOY · 11:30
-ESTRELLAS Y SOÑAR
-Laura Alcocer
-★ 4,7
-desde 7 €
-VER FECHAS
-→
-INFANTIL +3
-HOY · 12:00
--10%
-SOÑANDO MAGIA
-David Vega
-★ 4,9
-desde 10 €
-VER FECHAS
-→
-INFANTIL +3
-HOY · 12:30
--10%
-ALGUIEN DIJO ¿SUPERPODERES?
-Mago Ponce
-★ 4,9
-desde 10 €
-VER FECHAS
-→
 INFANTIL +3
 HOY · 16:30
 -10%
@@ -190,6 +164,14 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL +3
+SÁB 10 · 16:30
+SOÑANDO MAGIA
+David Vega
+★ 4,9
+desde 10 €
+VER FECHAS
+→
+INFANTIL +3
 SÁB 10 · 17:00
 ALUCINA ¡PEPINILLOS!
 Rubén Reyeros
@@ -214,6 +196,22 @@ desde 10 €
 VER FECHAS
 →
 BEBÉS
+DOM 11 · 11:30
+ESTRELLAS Y SOÑAR
+Laura Alcocer
+★ 4,7
+desde 7 €
+VER FECHAS
+→
+INFANTIL +3
+DOM 11 · 12:30
+ALGUIEN DIJO ¿SUPERPODERES?
+Mago Ponce
+★ 4,9
+desde 10 €
+VER FECHAS
+→
+BEBÉS
 LUN 12 · 11:30
 FANTASÍA
 Belén Martínez
@@ -233,14 +231,6 @@ HORMONADA 2.0
 Sara Cardona
 ★ 4,8
 desde 12 €
-VER FECHAS
-→
-HUMOR
-HOY · 19:30
-DIVÁN DIVINO
-Samuel Padilla. Lluna Issa Casterà.
-ESTRENO
-desde 14 €
 VER FECHAS
 →
 HUMOR
@@ -314,6 +304,14 @@ DIVAS Y DIVANES
 Diana Dardo, Mario Manzanares y Artista Invitada
 ★ 5,0
 desde 15 €
+VER FECHAS
+→
+HUMOR
+DOM 11 · 19:30
+DIVÁN DIVINO
+Samuel Padilla. Lluna Issa Casterà.
+ESTRENO
+desde 14 €
 VER FECHAS
 →
 HUMOR
@@ -404,14 +402,6 @@ PARA IMPROVISAR
 Impro: aquí no hay nada escrito.
 
 IMPRO
-HOY · 14:00
-LA COCINA DE IMPROCAFÉ
-Alumnos y alumnas de la compañía de Improcafé
-★ 4,8
-desde 5 €
-VER FECHAS
-→
-IMPRO
 MAR 6 · 21:00
 -20%
 LA IRA DEL GRAN TIKI
@@ -434,6 +424,14 @@ EL MATCH DE IMPRO DE LA ESCALERA
 Impro
 ★ 4,7
 desde 8 €
+VER FECHAS
+→
+IMPRO
+DOM 11 · 14:00
+LA COCINA DE IMPROCAFÉ
+Alumnos y alumnas de la compañía de Improcafé
+★ 4,8
+desde 5 €
 VER FECHAS
 →
 ALGO BREVE
@@ -707,7 +705,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
@@ -719,4 +717,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                              
+                            
