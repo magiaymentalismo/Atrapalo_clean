@@ -39,15 +39,6 @@ VER LOS 10 →
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
 MENTALISMO
-HOY · 20:30
--20%
-GOLDEN TICKET. TIENE QUE SER MAGIA
-Chap Magic
-ESTRENO
-desde 12 €
-VER FECHAS
-→
-MENTALISMO
 MAÑANA · 20:00
 -10%
 SAL DE MI MENTE
@@ -113,6 +104,14 @@ VIE 16 · 21:30
 HACKEANDO MENTES
 Antonio Martínez Salinas
 ★ 5,0
+desde 12 €
+VER FECHAS
+→
+MENTALISMO
+MIÉ 21 · 20:30
+GOLDEN TICKET. TIENE QUE SER MAGIA
+Chap Magic
+ESTRENO
 desde 12 €
 VER FECHAS
 →
@@ -438,14 +437,6 @@ ALGO BREVE
 Microteatro, a un palmo de ti.
 
 MICROTEATRO
-HOY · 19:30
-LA ÚLTIMA
-Vanessa Londoño y Jessica Serna
-ESTRENO
-desde 8 €
-VER FECHAS
-→
-MICROTEATRO
 DOM 18 · 21:00
 THE CASQUIVANS
 Carolina Touceda y Gloria Rodríguez
@@ -462,10 +453,11 @@ desde 8 €
 VER FECHAS
 →
 MICROTEATRO
-UNA NOCHE CON MI EX
-Aimar Vega Alejandra Bernal
+MIÉ 28 · 19:30
+LA ÚLTIMA
+Vanessa Londoño y Jessica Serna
 ESTRENO
-desde 10 €
+desde 8 €
 VER FECHAS
 →
 OTROS
@@ -490,7 +482,7 @@ VER FECHAS
 →
 Por plan
 Todos
-50
+49
 AYUDA
 PREGUNTAS FRECUENTES
 ¿Por qué cobráis gastos de gestión?
@@ -619,7 +611,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?01102026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/guXhH0v-XMxlzmbTwqkaT4i5/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-F7+5HZU6FOmKBqfld7cNPAGWTkV3xbyIjnWYAkn97x47Lo8mOn8mC2ub2AhBZXUj"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6a51"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/guXhH0v-XMxlzmbTwqkaT4i5/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-F7+5HZU6FOmKBqfld7cNPAGWTkV3xbyIjnWYAkn97x47Lo8mOn8mC2ub2AhBZXUj"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6a60"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -703,7 +695,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
@@ -715,4 +707,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                            
+                              
