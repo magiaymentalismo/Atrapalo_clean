@@ -38,15 +38,6 @@ VER LOS 10 →
 
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
-MENTALISMO
-HOY · 20:00
--10%
-SAL DE MI MENTE
-Fito Crawford
-★ 4,9
-desde 12 €
-VER FECHAS
-→
 MAGIA
 MAÑANA · 20:00
 -10%
@@ -61,6 +52,14 @@ MAÑANA · 23:00
 -10%
 MENTIROSO MAGIA MENTAL
 Carlos Devanti
+★ 4,9
+desde 12 €
+VER FECHAS
+→
+MENTALISMO
+SÁB 10 · 21:30
+SAL DE MI MENTE
+Fito Crawford
 ★ 4,9
 desde 12 €
 VER FECHAS
@@ -222,15 +221,6 @@ VER LOS 19 →
 Las mejores propuestas de humor.
 
 HUMOR
-HOY · 19:30
--20%
-CUENTOS DEL FIN DEL MUNDO
-Alejandra Arias, Teresa Ponce de León, Jaime Páramo y Miguel Carbajo.
-★ 5,0
-desde 15 €
-VER FECHAS
-→
-HUMOR
 MAÑANA · 19:00
 TODXS NOS VAMOS A MORIR
 Noelia Marló
@@ -309,6 +299,14 @@ HORMONADA 2.0
 Sara Cardona
 ★ 4,8
 desde 12 €
+VER FECHAS
+→
+HUMOR
+JUE 15 · 19:30
+CUENTOS DEL FIN DEL MUNDO
+Alejandra Arias, Teresa Ponce de León, Jaime Páramo y Miguel Carbajo.
+★ 5,0
+desde 15 €
 VER FECHAS
 →
 HUMOR
@@ -399,15 +397,6 @@ PARA IMPROVISAR
 Impro: aquí no hay nada escrito.
 
 IMPRO
-HOY · 21:15
--20%
-IMPROCAFÉ SHOW
-Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, Noneh Herrero, María Márquez, Pablo Acevedo
-★ 4,9
-desde 12 €
-VER FECHAS
-→
-IMPRO
 MAÑANA · 23:59
 EL MATCH DE IMPRO DE LA ESCALERA
 Impro
@@ -430,6 +419,14 @@ LA IRA DEL GRAN TIKI
 Diego Rousselon, Laura Castro, Javier Torralba
 ★ 4,6
 desde 10 €
+VER FECHAS
+→
+IMPRO
+JUE 15 · 21:15
+IMPROCAFÉ SHOW
+Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, Noneh Herrero, María Márquez, Pablo Acevedo
+★ 4,9
+desde 12 €
 VER FECHAS
 →
 ALGO BREVE
@@ -611,7 +608,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?01102026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/nY0xPItgwtlvjEjk2TqdwOQz/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-/1sWrsnDMg43h+h3HLBppfna4sRREHmf1kQTTS1xLZ0apQeLJ3eRhZocwUtMuG/5"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6a61"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/nY0xPItgwtlvjEjk2TqdwOQz/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-/1sWrsnDMg43h+h3HLBppfna4sRREHmf1kQTTS1xLZ0apQeLJ3eRhZocwUtMuG/5"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6a70"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
