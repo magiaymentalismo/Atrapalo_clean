@@ -64,15 +64,6 @@ VER LOS 10 →
 
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
-MAGIA
-HOY · 20:00
--10%
-DESCARADO. MAGIA CANALLA
-Carlos Devanti
-★ 5,0
-desde 12 €
-VER FECHAS
-→
 MENTALISMO
 HOY · 23:00
 -10%
@@ -96,6 +87,15 @@ POWER: MAGIA Y MENTALISMO
 Mago Ponce
 ★ 5,0
 desde 10 €
+VER FECHAS
+→
+MAGIA
+DOM 11 · 21:30
+-10%
+DESCARADO. MAGIA CANALLA
+Carlos Devanti
+★ 5,0
+desde 12 €
 VER FECHAS
 →
 MENTALISMO
@@ -247,22 +247,6 @@ VER LOS 19 →
 Las mejores propuestas de humor.
 
 HUMOR
-HOY · 19:00
-TODXS NOS VAMOS A MORIR
-Noelia Marló
-ESTRENO
-desde 15 €
-VER FECHAS
-→
-HUMOR
-HOY · 21:30
-AQUÍ SE HABLA PAJA
-Stand up comedy
-ESTRENO
-desde 8 €
-VER FECHAS
-→
-HUMOR
 HOY · 22:30
 -10%
 SLASHER. THE EXPERIENCE
@@ -273,10 +257,11 @@ VER FECHAS
 →
 HUMOR
 MAÑANA · 19:30
+-10%
 SOY UNA PERSONA HORRIBLE
 Sara González
 ★ 4,7
-desde 12 €
+desde 10 €
 VER FECHAS
 →
 HUMOR
@@ -305,6 +290,7 @@ VER FECHAS
 →
 HUMOR
 DOM 11 · 21:00
+-10%
 SEX O NO SEX
 María Simón
 ★ 4,8
@@ -325,6 +311,14 @@ JUE 15 · 19:30
 CUENTOS DEL FIN DEL MUNDO
 Alejandra Arias, Teresa Ponce de León, Jaime Páramo y Miguel Carbajo.
 ★ 5,0
+desde 15 €
+VER FECHAS
+→
+HUMOR
+VIE 16 · 19:00
+TODXS NOS VAMOS A MORIR
+Noelia Marló
+ESTRENO
 desde 15 €
 VER FECHAS
 →
@@ -358,6 +352,14 @@ DIVÁN DIVINO
 Samuel Padilla. Lluna Issa Casterà.
 ESTRENO
 desde 14 €
+VER FECHAS
+→
+HUMOR
+MIÉ 21 · 21:00
+AQUÍ SE HABLA PAJA
+Stand up comedy
+ESTRENO
+desde 10 €
 VER FECHAS
 →
 HUMOR
@@ -406,7 +408,7 @@ PARA IMPROVISAR
 Impro: aquí no hay nada escrito.
 
 IMPRO
-HOY · 23:59
+MAÑANA · 23:59
 EL MATCH DE IMPRO DE LA ESCALERA
 Impro
 ★ 4,7
