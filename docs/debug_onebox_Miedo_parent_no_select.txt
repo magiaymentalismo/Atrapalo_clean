@@ -63,14 +63,6 @@ VER LOS 10 →
 
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
-MENTALISMO
-HOY · 21:30
-SAL DE MI MENTE
-Fito Crawford
-★ 4,9
-desde 12 €
-VER FECHAS
-→
 MAGIA
 MAÑANA · 20:00
 POWER: MAGIA Y MENTALISMO
@@ -111,6 +103,14 @@ LUN 12 · 18:30
 ATRÉVETE. MAGIA MENTAL
 Vicente Lucca
 ★ 4,8
+desde 12 €
+VER FECHAS
+→
+MENTALISMO
+JUE 15 · 20:00
+SAL DE MI MENTE
+Fito Crawford
+★ 4,9
 desde 12 €
 VER FECHAS
 →
@@ -248,30 +248,6 @@ VER LOS 19 →
 Las mejores propuestas de humor.
 
 HUMOR
-HOY · 21:00
-MISS DESGRACIAS
-María Simón
-★ 5,0
-desde 14 €
-VER FECHAS
-→
-HUMOR
-HOY · 22:30
-TÍA, NADIE ES PERFECTA
-Almudena Alcocer, Maria Francés, Julia Olcina, Yaiza de la Torre y Alejandra Lozano
-ESTRENO
-desde 12 €
-VER FECHAS
-→
-MUSICAL
-HOY · 23:00
-DIVAS Y DIVANES
-Diana Dardo, Mario Manzanares y Artista Invitada
-★ 5,0
-desde 15 €
-VER FECHAS
-→
-HUMOR
 MAÑANA · 21:00
 -10%
 SEX O NO SEX
@@ -362,6 +338,30 @@ desde 10 €
 VER FECHAS
 →
 HUMOR
+SÁB 24 · 21:00
+MISS DESGRACIAS
+María Simón
+★ 5,0
+desde 14 €
+VER FECHAS
+→
+HUMOR
+SÁB 24 · 22:30
+TÍA, NADIE ES PERFECTA
+Almudena Alcocer, Maria Francés, Julia Olcina, Yaiza de la Torre y Alejandra Lozano
+ESTRENO
+desde 12 €
+VER FECHAS
+→
+MUSICAL
+SÁB 24 · 23:00
+DIVAS Y DIVANES
+Diana Dardo, Mario Manzanares y Artista Invitada
+★ 5,0
+desde 15 €
+VER FECHAS
+→
+HUMOR
 MAR 3 · 21:00
 -10%
 QUE TE PARTA UN RAYO
@@ -407,14 +407,6 @@ PARA IMPROVISAR
 Impro: aquí no hay nada escrito.
 
 IMPRO
-HOY · 23:59
-EL MATCH DE IMPRO DE LA ESCALERA
-Impro
-★ 4,7
-desde 8 €
-VER FECHAS
-→
-IMPRO
 MAÑANA · 14:00
 LA COCINA DE IMPROCAFÉ
 Alumnos y alumnas de la compañía de Improcafé
@@ -437,6 +429,14 @@ IMPROCAFÉ SHOW
 Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, Noneh Herrero, María Márquez, Pablo Acevedo
 ★ 4,9
 desde 12 €
+VER FECHAS
+→
+IMPRO
+VIE 16 · 23:59
+EL MATCH DE IMPRO DE LA ESCALERA
+Impro
+★ 4,7
+desde 8 €
 VER FECHAS
 →
 ALGO BREVE
@@ -702,7 +702,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
@@ -714,4 +714,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                              
+                            
