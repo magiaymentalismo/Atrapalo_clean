@@ -64,7 +64,7 @@ VER LOS 10 →
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
 MAGIA
-MAÑANA · 20:00
+HOY · 20:00
 POWER: MAGIA Y MENTALISMO
 Mago Ponce
 ★ 5,0
@@ -72,7 +72,7 @@ desde 10 €
 VER FECHAS
 →
 MAGIA
-MAÑANA · 21:30
+HOY · 21:30
 -10%
 DESCARADO. MAGIA CANALLA
 Carlos Devanti
@@ -81,7 +81,7 @@ desde 12 €
 VER FECHAS
 →
 MENTALISMO
-MAÑANA · 22:30
+HOY · 22:30
 -10%
 DESTINOS
 Adrian Gonzalo
@@ -90,7 +90,7 @@ desde 12 €
 VER FECHAS
 →
 MENTALISMO
-MAÑANA · 23:00
+HOY · 23:00
 -10%
 MENTIROSO MAGIA MENTAL
 Carlos Devanti
@@ -99,7 +99,7 @@ desde 12 €
 VER FECHAS
 →
 MENTALISMO
-LUN 12 · 18:30
+MAÑANA · 18:30
 ATRÉVETE. MAGIA MENTAL
 Vicente Lucca
 ★ 4,8
@@ -154,7 +154,7 @@ VER LOS 11 →
 Magia infantil a partir de 3 años y espectáculos para bebés.
 
 BEBÉS
-MAÑANA · 11:30
+HOY · 11:30
 ESTRELLAS Y SOÑAR
 Laura Alcocer
 ★ 4,7
@@ -162,7 +162,7 @@ desde 7 €
 VER FECHAS
 →
 INFANTIL +3
-MAÑANA · 12:00
+HOY · 12:00
 SOÑANDO MAGIA
 David Vega
 ★ 4,9
@@ -170,7 +170,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-MAÑANA · 12:30
+HOY · 12:30
 ALGUIEN DIJO ¿SUPERPODERES?
 Mago Ponce
 ★ 4,9
@@ -178,7 +178,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-MAÑANA · 13:30
+HOY · 13:30
 PIEDRA, PAPEL O TIJERA
 Nicolás Vicente “Mago Nicols”
 ★ 4,9
@@ -186,7 +186,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-MAÑANA · 16:30
+HOY · 16:30
 -10%
 VA DE MAGIA. MAGO PONCE
 Mago Ponce
@@ -195,7 +195,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-MAÑANA · 17:00
+HOY · 17:00
 MAGIA Y DESVARIOS VARIOS
 Joaco Showman
 ESTRENO
@@ -203,7 +203,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-MAÑANA · 18:30
+HOY · 18:30
 LUCES, CÁMARA Y MAGIA
 Carlos Devanti
 ★ 4,9
@@ -211,7 +211,7 @@ desde 10 €
 VER FECHAS
 →
 BEBÉS
-LUN 12 · 11:30
+MAÑANA · 11:30
 FANTASÍA
 Belén Martínez
 ★ 4,7
@@ -248,7 +248,7 @@ VER LOS 19 →
 Las mejores propuestas de humor.
 
 HUMOR
-MAÑANA · 21:00
+HOY · 21:00
 -10%
 SEX O NO SEX
 María Simón
@@ -257,7 +257,7 @@ desde 12 €
 VER FECHAS
 →
 HUMOR
-LUN 12 · 18:00
+MAÑANA · 18:00
 -20%
 HORMONADA 2.0
 Sara Cardona
@@ -283,6 +283,7 @@ VER FECHAS
 →
 HUMOR
 VIE 16 · 21:00
+-10%
 CORAZÓN EN REBAJAS
 Laura Alcocer
 ★ 4,8
@@ -407,7 +408,7 @@ PARA IMPROVISAR
 Impro: aquí no hay nada escrito.
 
 IMPRO
-MAÑANA · 14:00
+HOY · 14:00
 LA COCINA DE IMPROCAFÉ
 Alumnos y alumnas de la compañía de Improcafé
 ★ 4,8
@@ -618,7 +619,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?01102026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/nY0xPItgwtlvjEjk2TqdwOQz/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-/1sWrsnDMg43h+h3HLBppfna4sRREHmf1kQTTS1xLZ0apQeLJ3eRhZocwUtMuG/5"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6a72"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/nY0xPItgwtlvjEjk2TqdwOQz/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-/1sWrsnDMg43h+h3HLBppfna4sRREHmf1kQTTS1xLZ0apQeLJ3eRhZocwUtMuG/5"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6a72h1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -714,4 +715,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                            
+                          
