@@ -64,25 +64,7 @@ VER LOS 10 →
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
 MENTALISMO
-HOY · 22:30
--10%
-DESTINOS
-Adrian Gonzalo
-★ 5,0
-desde 12 €
-VER FECHAS
-→
-MENTALISMO
-HOY · 23:00
--10%
-MENTIROSO MAGIA MENTAL
-Carlos Devanti
-★ 4,9
-desde 12 €
-VER FECHAS
-→
-MENTALISMO
-MAÑANA · 18:30
+HOY · 18:30
 ATRÉVETE. MAGIA MENTAL
 Vicente Lucca
 ★ 4,8
@@ -90,11 +72,19 @@ desde 12 €
 VER FECHAS
 →
 MAGIA
-MAÑANA · 19:30
+HOY · 19:30
 POWER: MAGIA Y MENTALISMO
 Mago Ponce
 ★ 5,0
 desde 10 €
+VER FECHAS
+→
+MENTALISMO
+HOY · 20:00
+MENTIROSO MAGIA MENTAL
+Carlos Devanti
+★ 4,9
+desde 12 €
 VER FECHAS
 →
 MENTALISMO
@@ -132,6 +122,14 @@ desde 12 €
 VER FECHAS
 →
 MENTALISMO
+SÁB 17 · 20:00
+DESTINOS
+Adrian Gonzalo
+★ 5,0
+desde 12 €
+VER FECHAS
+→
+MENTALISMO
 MIÉ 21 · 20:30
 GOLDEN TICKET. TIENE QUE SER MAGIA
 Chap Magic
@@ -153,7 +151,7 @@ VER LOS 11 →
 Magia infantil a partir de 3 años y espectáculos para bebés.
 
 BEBÉS
-MAÑANA · 11:30
+HOY · 11:30
 FANTASÍA
 Belén Martínez
 ★ 4,7
@@ -161,7 +159,7 @@ desde 7 €
 VER FECHAS
 →
 INFANTIL +3
-MAÑANA · 12:00
+HOY · 12:00
 SOÑANDO MAGIA
 David Vega
 ★ 4,9
@@ -169,7 +167,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-MAÑANA · 12:30
+HOY · 12:30
 ALGUIEN DIJO ¿SUPERPODERES?
 Mago Ponce
 ★ 4,9
@@ -177,7 +175,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-MAÑANA · 13:30
+HOY · 13:30
 PIEDRA, PAPEL O TIJERA
 Nicolás Vicente “Mago Nicols”
 ★ 4,9
@@ -185,7 +183,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-MAÑANA · 16:30
+HOY · 16:30
 VA DE MAGIA. MAGO PONCE
 Mago Ponce
 ★ 4,9
@@ -193,7 +191,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL +3
-MAÑANA · 17:00
+HOY · 17:00
 MAGIA Y DESVARIOS VARIOS
 Joaco Showman
 ESTRENO
@@ -246,16 +244,7 @@ VER LOS 19 →
 Las mejores propuestas de humor.
 
 HUMOR
-HOY · 21:00
--10%
-SEX O NO SEX
-María Simón
-★ 4,8
-desde 12 €
-VER FECHAS
-→
-HUMOR
-MAÑANA · 18:00
+HOY · 18:00
 -20%
 HORMONADA 2.0
 Sara Cardona
@@ -310,6 +299,14 @@ AFTER KIKI
 Casaris Paz, Jorge Alvariñas
 ★ 4,8
 desde 14 €
+VER FECHAS
+→
+HUMOR
+SÁB 17 · 21:00
+SEX O NO SEX
+María Simón
+★ 4,8
+desde 12 €
 VER FECHAS
 →
 HUMOR
@@ -406,7 +403,7 @@ PARA IMPROVISAR
 Impro: aquí no hay nada escrito.
 
 IMPRO
-MAR 13 · 21:00
+MAÑANA · 21:00
 -20%
 LA IRA DEL GRAN TIKI
 Diego Rousselon, Laura Castro, Javier Torralba
@@ -471,7 +468,7 @@ OTROS
 Danza, cortos y todo lo que no entra en una caja.
 
 CINE
-MAR 13 · 19:30
+MAÑANA · 19:30
 CORTOS CON Ñ
 Festival de cortometrajes
 ★ 4,3
@@ -479,7 +476,7 @@ desde 6 €
 VER FECHAS
 →
 DRAMA
-MAR 13 · 20:00
+MAÑANA · 20:00
 MÚSICA PARA EL BÚNKER
 Pablo Montero
 ESTRENO
