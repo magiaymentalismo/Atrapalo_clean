@@ -150,25 +150,8 @@ VER LOS 12 →
 
 Magia infantil a partir de 3 años y espectáculos para bebés.
 
-BEBÉS
-HOY · 11:30
-FANTASÍA
-Belén Martínez
-★ 4,7
-desde 7 €
-VER FECHAS
-→
 INFANTIL +3
-HOY · 12:00
--20%
-PIEDRA, PAPEL O TIJERA
-Nicolás Vicente “Mago Nicols”
-★ 4,9
-desde 10 €
-VER FECHAS
-→
-INFANTIL +3
-HOY · 12:30
+HOY · 16:30
 SOÑANDO MAGIA
 David Vega
 ★ 4,9
@@ -180,6 +163,14 @@ HOY · 17:00
 ALUCINA ¡PEPINILLOS!
 Rubén Reyeros
 ★ 4,4
+desde 10 €
+VER FECHAS
+→
+INFANTIL +3
+HOY · 18:30
+PIEDRA, PAPEL O TIJERA
+Nicolás Vicente “Mago Nicols”
+★ 4,9
 desde 10 €
 VER FECHAS
 →
@@ -238,6 +229,14 @@ LUCES, CÁMARA Y MAGIA
 Carlos Devanti
 ★ 4,9
 desde 10 €
+VER FECHAS
+→
+BEBÉS
+DOM 25 · 11:30
+FANTASÍA
+Belén Martínez
+★ 4,7
+desde 7 €
 VER FECHAS
 →
 INFANTIL +3
@@ -706,7 +705,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
@@ -718,4 +717,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                             
+                           
