@@ -63,15 +63,6 @@ VER LOS 10 →
 
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
-MAGIA
-HOY · 20:00
--10%
-POWER: MAGIA Y MENTALISMO
-Mago Ponce
-★ 5,0
-desde 10 €
-VER FECHAS
-→
 MENTALISMO
 MIÉ 21 · 20:30
 GOLDEN TICKET. TIENE QUE SER MAGIA
@@ -134,6 +125,14 @@ ATRÉVETE. MAGIA MENTAL
 Vicente Lucca
 ★ 4,8
 desde 12 €
+VER FECHAS
+→
+MAGIA
+DOM 25 · 20:00
+POWER: MAGIA Y MENTALISMO
+Mago Ponce
+★ 5,0
+desde 10 €
 VER FECHAS
 →
 MENTALISMO
@@ -251,14 +250,6 @@ VER LOS 18 →
 Las mejores propuestas de humor.
 
 HUMOR
-HOY · 19:30
-DIVÁN DIVINO
-Samuel Padilla. Lluna Issa Casterà.
-★ 5,0
-desde 14 €
-VER FECHAS
-→
-HUMOR
 MIÉ 21 · 21:00
 -15%
 AQUÍ SE HABLA PAJA
@@ -321,6 +312,14 @@ DIVAS Y DIVANES
 Diana Dardo, Mario Manzanares y Artista Invitada
 ★ 5,0
 desde 15 €
+VER FECHAS
+→
+HUMOR
+DOM 25 · 18:00
+DIVÁN DIVINO
+Samuel Padilla. Lluna Issa Casterà.
+★ 5,0
+desde 14 €
 VER FECHAS
 →
 HUMOR
@@ -436,19 +435,19 @@ ALGO BREVE
 Microteatro, a un palmo de ti.
 
 MICROTEATRO
-HOY · 21:00
-THE CASQUIVANS
-Carolina Touceda y Gloria Rodríguez
-ESTRENO
-desde 10 €
-VER FECHAS
-→
-MICROTEATRO
 MAR 20 · 20:00
 NI UNA HOSTIA SIN RESPUESTA
 Elena Tébar Nieto.
 ESTRENO
 desde 8 €
+VER FECHAS
+→
+MICROTEATRO
+DOM 25 · 21:00
+THE CASQUIVANS
+Carolina Touceda y Gloria Rodríguez
+ESTRENO
+desde 10 €
 VER FECHAS
 →
 MICROTEATRO
@@ -700,7 +699,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
@@ -712,4 +711,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                             
+                           
