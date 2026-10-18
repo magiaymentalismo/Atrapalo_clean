@@ -110,7 +110,7 @@ MAGIA
 JUE 22 · 21:30
 MILAGROS Y OTRAS MENTIRAS
 Mago Nicols
-ESTRENO
+★ 5,0
 desde 12 €
 VER FECHAS
 →
@@ -620,7 +620,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/4EDjxXf4knsx6UBM1L2V6cv8/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-W2rQfgMYhzGah502YeqcfmQBSye1dcV+LiFPWlJFPBP5maBO1Jr0YBF6nZVQpwYq"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6ae1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/4EDjxXf4knsT8wRTp1lOoMFE/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-7LbsLhiEdZ9FKOaJLgdWGCtQnEWLnjV+wXbapAAPYubYQaLww/lAh9Xe/dTGjV61"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6ae1h1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -716,4 +716,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                             
+                           
