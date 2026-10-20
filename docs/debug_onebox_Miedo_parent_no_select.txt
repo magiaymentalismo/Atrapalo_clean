@@ -65,7 +65,7 @@ VER LOS 10 →
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
 MENTALISMO
-MIÉ 21 · 20:30
+MAÑANA · 20:30
 -20%
 GOLDEN TICKET. TIENE QUE SER MAGIA
 Chap Magic
@@ -257,7 +257,7 @@ VER LOS 17 →
 Las mejores propuestas de humor.
 
 HUMOR
-MIÉ 21 · 21:00
+MAÑANA · 21:00
 -15%
 AQUÍ SE HABLA PAJA
 Stand up comedy
@@ -401,7 +401,7 @@ PARA IMPROVISAR
 Impro: aquí no hay nada escrito.
 
 IMPRO
-MAÑANA · 21:00
+HOY · 21:00
 LA IRA DEL GRAN TIKI
 Diego Rousselon, Laura Castro, Javier Torralba
 ★ 4,6
@@ -438,7 +438,7 @@ ALGO BREVE
 Microteatro, a un palmo de ti.
 
 MICROTEATRO
-MAÑANA · 20:00
+HOY · 20:00
 NI UNA HOSTIA SIN RESPUESTA
 Elena Tébar Nieto.
 ESTRENO
@@ -466,7 +466,7 @@ OTROS
 Danza, cortos y todo lo que no entra en una caja.
 
 CINE
-MAÑANA · 19:30
+HOY · 19:30
 CORTOS CON Ñ
 Festival de cortometrajes
 ★ 4,3
