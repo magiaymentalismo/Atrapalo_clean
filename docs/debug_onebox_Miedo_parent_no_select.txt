@@ -65,15 +65,6 @@ VER LOS 11 →
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
 MENTALISMO
-HOY · 20:30
--20%
-GOLDEN TICKET. TIENE QUE SER MAGIA
-Chap Magic
-ESTRENO
-desde 12 €
-VER FECHAS
-→
-MENTALISMO
 MAÑANA · 20:00
 SAL DE MI MENTE
 Fito Crawford
@@ -148,6 +139,14 @@ Adrian Gonzalo
 desde 12 €
 VER FECHAS
 →
+MENTALISMO
+MIÉ 28 · 20:30
+GOLDEN TICKET. TIENE QUE SER MAGIA
+Chap Magic
+ESTRENO
+desde 12 €
+VER FECHAS
+→
 DANZA
 SÁB 7 · 14:15
 TOKONOMA - (I RESIDENCIA DE CREACIÓN LEDJ)
@@ -157,7 +156,7 @@ desde 10 €
 VER FECHAS
 →
 CON NIÑOS
-VER LOS 12 →
+VER LOS 13 →
 
 Magia infantil a partir de 3 años y espectáculos para bebés.
 
@@ -258,6 +257,14 @@ ESTRELLAS Y SOÑAR
 Laura Alcocer
 ★ 4,7
 desde 7 €
+VER FECHAS
+→
+INFANTIL +3
+DOM 15 · 16:30
+CAPERUCITA MOZART
+Dirección; Andrés Alemán Intérpretes: Andrea Carpintero, Pedro Lluch, Paula Gironal
+ESTRENO
+desde 12 €
 VER FECHAS
 →
 PARA REIRTE
@@ -466,7 +473,7 @@ MICROTEATRO
 MAR 27 · 20:00
 NI UNA HOSTIA SIN RESPUESTA
 Elena Tébar Nieto.
-ESTRENO
+★ 5,0
 desde 8 €
 VER FECHAS
 →
@@ -501,7 +508,7 @@ VER FECHAS
 →
 Por plan
 Todos
-51
+52
 AYUDA
 PREGUNTAS FRECUENTES
 ¿Por qué cobráis gastos de gestión?
@@ -629,7 +636,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/NhfdZHzre16wrc2m6BxEdu7J/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-mgRWy7wa6Ylgkmaeu2xjp7hWdWDymL+8xpqspCIB1LPP3ld4AxIx1Irx+IyPmlOH"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6ak0"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/4EDjxXf4knsx6UBM1L2V6cv8/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-W2rQfgMYhzGah502YeqcfmQBSye1dcV+LiFPWlJFPBP5maBO1Jr0YBF6nZVQpwYq"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6ak1h1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -725,4 +732,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                             
+                           
