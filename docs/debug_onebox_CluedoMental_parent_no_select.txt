@@ -261,19 +261,10 @@ desde 7 €
 VER FECHAS
 →
 PARA REIRTE
-VER LOS 19 →
+VER LOS 18 →
 
 Las mejores propuestas de humor.
 
-HUMOR
-HOY · 21:00
--15%
-AQUÍ SE HABLA PAJA
-Stand up comedy
-ESTRENO
-desde 8 €
-VER FECHAS
-→
 HUMOR
 MAÑANA · 19:30
 -20%
@@ -348,6 +339,14 @@ María Simón
 desde 14 €
 VER FECHAS
 →
+HUMOR
+LUN 2 · 18:00
+CHECKPOINT CHARLIE
+Alba Quiñones y José Urzáiz
+ESTRENO
+desde 12 €
+VER FECHAS
+→
 MICROTEATRO
 MAR 3 · 20:00
 SUERTE
@@ -412,13 +411,6 @@ CERO DRAMAS
 Paloma Jiménez
 ESTRENO
 desde 14 €
-VER FECHAS
-→
-HUMOR
-CHECKPOINT CHARLIE
-Alba Quiñones y José Urzáiz
-ESTRENO
-desde 10 €
 VER FECHAS
 →
 PARA IMPROVISAR
@@ -509,7 +501,7 @@ VER FECHAS
 →
 Por plan
 Todos
-52
+51
 AYUDA
 PREGUNTAS FRECUENTES
 ¿Por qué cobráis gastos de gestión?
@@ -637,7 +629,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/4EDjxXf4knsx6UBM1L2V6cv8/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-W2rQfgMYhzGah502YeqcfmQBSye1dcV+LiFPWlJFPBP5maBO1Jr0YBF6nZVQpwYq"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6ak0h2"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/4EDjxXf4knsx6UBM1L2V6cv8/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-W2rQfgMYhzGah502YeqcfmQBSye1dcV+LiFPWlJFPBP5maBO1Jr0YBF6nZVQpwYq"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6ak0"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -733,4 +725,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                         
+                           
