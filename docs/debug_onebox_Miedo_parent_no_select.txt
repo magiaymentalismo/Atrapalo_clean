@@ -35,19 +35,10 @@ Para improvisar
 Algo breve
 Otros
 NOVEDADES
-VER LOS 10 →
+VER LOS 9 →
 
 Estrenos y todas las novedades de nuestra cartelera.
 
-MAGIA
-HOY · 21:30
--40%
-MILAGROS Y OTRAS MENTIRAS
-Mago Nicols
-★ 5,0
-desde 12 €
-VER FECHAS
-→
 HUMOR
 MAÑANA · 19:00
 TODXS NOS VAMOS A MORIR
@@ -72,6 +63,14 @@ ESTRENO
 desde 12 €
 VER FECHAS
 →
+MAGIA
+JUE 29 · 21:30
+MILAGROS Y OTRAS MENTIRAS
+Mago Nicols
+★ 5,0
+desde 12 €
+VER FECHAS
+→
 TERROR DIVERTIDO
 VIE 30 · 21:00
 EXPERIMENTO GORE
@@ -88,7 +87,7 @@ ESTRENO
 desde 12 €
 VER FECHAS
 →
-INFANTIL +3
+INFANTIL
 SÁB 7 · 17:00
 MÁS MAGIA
 Rubén Reyeros
@@ -96,30 +95,20 @@ ESTRENO
 desde 10 €
 VER FECHAS
 →
-INFANTIL +3
+CATAS Y EXPERIENCIAS
+SÁB 14 · 13:30
+QUESOS VS VINOS
+Alberto Javier Santos
+ESTRENO
+desde 35 €
+VER FECHAS
+→
+INFANTIL
 DOM 15 · 16:30
 CAPERUCITA MOZART
 Andrea Carpintero, Pedro Lluch, Paula Girona Dirección: Andrés Alemán Piano: María Argüeso
 ESTRENO
 desde 12 €
-VER FECHAS
-→
-DRAMA
-VIE 20 · 21:00
--20%
-EL GÉ
-Avelino Piedad
-★ 4,6
-desde 23 €
-VER FECHAS
-→
-HUMOR
-VIE 27 · 21:00
--10%
-CERO DRAMAS
-Paloma Jiménez
-ESTRENO
-desde 14 €
 VER FECHAS
 →
 PARA PASAR MIEDO
@@ -156,23 +145,6 @@ VER LOS 12 →
 
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
-MENTALISMO
-HOY · 20:00
-SAL DE MI MENTE
-Fito Crawford
-★ 4,9
-desde 12 €
-VER FECHAS
-→
-MAGIA
-HOY · 21:30
--40%
-MILAGROS Y OTRAS MENTIRAS
-Mago Nicols
-★ 5,0
-desde 12 €
-VER FECHAS
-→
 MAGIA
 MAÑANA · 20:00
 DESCARADO. MAGIA CANALLA
@@ -202,6 +174,14 @@ MENTALISMO
 MAÑANA · 23:00
 MENTIROSO MAGIA MENTAL
 Carlos Devanti
+★ 4,9
+desde 12 €
+VER FECHAS
+→
+MENTALISMO
+SÁB 24 · 21:30
+SAL DE MI MENTE
+Fito Crawford
 ★ 4,9
 desde 12 €
 VER FECHAS
@@ -239,6 +219,14 @@ ESTRENO
 desde 12 €
 VER FECHAS
 →
+MAGIA
+JUE 29 · 21:30
+MILAGROS Y OTRAS MENTIRAS
+Mago Nicols
+★ 5,0
+desde 12 €
+VER FECHAS
+→
 DANZA
 SÁB 7 · 14:15
 TOKONOMA - (I RESIDENCIA DE CREACIÓN LEDJ)
@@ -268,7 +256,7 @@ Ainhoa Sarmiento
 desde 7 €
 VER FECHAS
 →
-INFANTIL +3
+INFANTIL
 SÁB 24 · 12:00
 -20%
 PIEDRA, PAPEL O TIJERA
@@ -277,7 +265,7 @@ Nicolás Vicente “Mago Nicols”
 desde 10 €
 VER FECHAS
 →
-INFANTIL +3
+INFANTIL
 SÁB 24 · 12:30
 VA DE MAGIA. MAGO PONCE
 Mago Ponce
@@ -285,7 +273,7 @@ Mago Ponce
 desde 10 €
 VER FECHAS
 →
-INFANTIL +3
+INFANTIL
 SÁB 24 · 16:30
 SOÑANDO MAGIA
 David Vega
@@ -293,7 +281,7 @@ David Vega
 desde 10 €
 VER FECHAS
 →
-INFANTIL +3
+INFANTIL
 SÁB 24 · 17:00
 ALUCINA ¡PEPINILLOS!
 Rubén Reyeros
@@ -301,7 +289,7 @@ Rubén Reyeros
 desde 10 €
 VER FECHAS
 →
-INFANTIL +3
+INFANTIL
 SÁB 24 · 18:00
 FLIPOMAGIA
 Gerard Clúa
@@ -309,7 +297,7 @@ Gerard Clúa
 desde 10 €
 VER FECHAS
 →
-INFANTIL +3
+INFANTIL
 SÁB 24 · 18:30
 LUCES, CÁMARA Y MAGIA
 Carlos Devanti
@@ -325,7 +313,7 @@ Belén Martínez
 desde 7 €
 VER FECHAS
 →
-INFANTIL +3
+INFANTIL
 DOM 25 · 12:30
 -10%
 ALGUIEN DIJO ¿SUPERPODERES?
@@ -334,7 +322,7 @@ Mago Ponce
 desde 10 €
 VER FECHAS
 →
-INFANTIL +3
+INFANTIL
 DOM 25 · 17:00
 -20%
 MAGIA Y DESVARIOS VARIOS
@@ -343,7 +331,7 @@ Joaco Showman
 desde 10 €
 VER FECHAS
 →
-INFANTIL +3
+INFANTIL
 SÁB 7 · 17:00
 MÁS MAGIA
 Rubén Reyeros
@@ -359,7 +347,7 @@ Laura Alcocer
 desde 7 €
 VER FECHAS
 →
-INFANTIL +3
+INFANTIL
 DOM 15 · 16:30
 CAPERUCITA MOZART
 Andrea Carpintero, Pedro Lluch, Paula Girona Dirección: Andrés Alemán Piano: María Argüeso
@@ -368,19 +356,10 @@ desde 12 €
 VER FECHAS
 →
 PARA REIRTE
-VER LOS 18 →
+VER LOS 19 →
 
 Las mejores propuestas de humor.
 
-HUMOR
-HOY · 19:30
--20%
-CUENTOS DEL FIN DEL MUNDO
-Alejandra Arias, Teresa Ponce de León, Jaime Páramo y Miguel Carbajo.
-★ 5,0
-desde 15 €
-VER FECHAS
-→
 HUMOR
 MAÑANA · 19:00
 TODXS NOS VAMOS A MORIR
@@ -436,6 +415,14 @@ DIVÁN DIVINO
 Samuel Padilla. Lluna Issa Casterà.
 ★ 5,0
 desde 14 €
+VER FECHAS
+→
+HUMOR
+JUE 29 · 19:30
+CUENTOS DEL FIN DEL MUNDO
+Alejandra Arias, Teresa Ponce de León, Jaime Páramo y Miguel Carbajo.
+★ 5,0
+desde 15 €
 VER FECHAS
 →
 HUMOR
@@ -503,6 +490,14 @@ Samuel Buitrago y Adrián Portolés
 desde 10 €
 VER FECHAS
 →
+CATAS Y EXPERIENCIAS
+SÁB 14 · 13:30
+QUESOS VS VINOS
+Alberto Javier Santos
+ESTRENO
+desde 35 €
+VER FECHAS
+→
 HUMOR
 DOM 15 · 18:00
 HORMONADA 2.0
@@ -525,15 +520,6 @@ PARA IMPROVISAR
 Impro: aquí no hay nada escrito.
 
 IMPRO
-HOY · 21:15
--20%
-IMPROCAFÉ SHOW
-Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, Noneh Herrero, María Márquez, Pablo Acevedo
-★ 4,9
-desde 12 €
-VER FECHAS
-→
-IMPRO
 MAÑANA · 23:59
 EL MATCH DE IMPRO DE LA ESCALERA
 Impro
@@ -555,6 +541,14 @@ LA IRA DEL GRAN TIKI
 Diego Rousselon, Laura Castro, Javier Torralba
 ★ 4,6
 desde 10 €
+VER FECHAS
+→
+IMPRO
+JUE 29 · 21:15
+IMPROCAFÉ SHOW
+Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, Noneh Herrero, María Márquez, Pablo Acevedo
+★ 4,9
+desde 12 €
 VER FECHAS
 →
 ALGO BREVE
@@ -597,6 +591,14 @@ Festival de cortometrajes
 desde 6 €
 VER FECHAS
 →
+CATAS Y EXPERIENCIAS
+SÁB 14 · 13:30
+QUESOS VS VINOS
+Alberto Javier Santos
+ESTRENO
+desde 35 €
+VER FECHAS
+→
 DRAMA
 VIE 20 · 21:00
 -20%
@@ -608,7 +610,7 @@ VER FECHAS
 →
 Por plan
 Todos
-53
+54
 AYUDA
 PREGUNTAS FRECUENTES
 ¿Por qué cobráis gastos de gestión?
@@ -736,7 +738,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/4EDjxXf4knsx6UBM1L2V6cv8/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-W2rQfgMYhzGah502YeqcfmQBSye1dcV+LiFPWlJFPBP5maBO1Jr0YBF6nZVQpwYq"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6ak1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/4EDjxXf4knsT8wRTp1lOoMFE/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-7LbsLhiEdZ9FKOaJLgdWGCtQnEWLnjV+wXbapAAPYubYQaLww/lAh9Xe/dTGjV61"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6al1h2"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -832,4 +834,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                           
+                         
