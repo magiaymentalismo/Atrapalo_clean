@@ -39,14 +39,6 @@ VER LOS 9 →
 
 Estrenos y todas las novedades de nuestra cartelera.
 
-HUMOR
-HOY · 19:00
-TODXS NOS VAMOS A MORIR
-Noelia Marló
-★ 5,0
-desde 15 €
-VER FECHAS
-→
 MENTALISMO
 HOY · 21:00
 SADIISTIC
@@ -69,6 +61,14 @@ MILAGROS Y OTRAS MENTIRAS
 Mago Nicols
 ★ 5,0
 desde 12 €
+VER FECHAS
+→
+HUMOR
+VIE 30 · 19:00
+TODXS NOS VAMOS A MORIR
+Noelia Marló
+★ 5,0
+desde 15 €
 VER FECHAS
 →
 TERROR DIVERTIDO
@@ -358,18 +358,10 @@ desde 12 €
 VER FECHAS
 →
 PARA REIRTE
-VER LOS 20 →
+VER LOS 21 →
 
 Las mejores propuestas de humor.
 
-HUMOR
-HOY · 19:00
-TODXS NOS VAMOS A MORIR
-Noelia Marló
-★ 5,0
-desde 15 €
-VER FECHAS
-→
 HUMOR
 HOY · 22:30
 -10%
@@ -423,6 +415,14 @@ HUMOR
 JUE 29 · 19:30
 CUENTOS DEL FIN DEL MUNDO
 Alejandra Arias, Teresa Ponce de León, Jaime Páramo y Miguel Carbajo.
+★ 5,0
+desde 15 €
+VER FECHAS
+→
+HUMOR
+VIE 30 · 19:00
+TODXS NOS VAMOS A MORIR
+Noelia Marló
 ★ 5,0
 desde 15 €
 VER FECHAS
@@ -489,6 +489,14 @@ DOM 8 · 18:00
 SOY UNA PERSONA HORRIBLE
 Sara González
 ★ 4,7
+desde 12 €
+VER FECHAS
+→
+HUMOR
+VIE 13 · 21:00
+EN LA SOMBRA
+Sergio Arropide
+ESTRENO
 desde 12 €
 VER FECHAS
 →
@@ -561,6 +569,14 @@ Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, No
 desde 12 €
 VER FECHAS
 →
+IMPRO
+MAR 3 · 21:00
+SOLOS
+Laura Castro Javier Torralba
+ESTRENO
+desde 10 €
+VER FECHAS
+→
 ALGO BREVE
 
 Microteatro, a un palmo de ti.
@@ -620,7 +636,7 @@ VER FECHAS
 →
 Por plan
 Todos
-55
+57
 AYUDA
 PREGUNTAS FRECUENTES
 ¿Por qué cobráis gastos de gestión?

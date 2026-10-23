@@ -39,14 +39,6 @@ VER LOS 9 →
 
 Estrenos y todas las novedades de nuestra cartelera.
 
-HUMOR
-HOY · 19:00
-TODXS NOS VAMOS A MORIR
-Noelia Marló
-★ 5,0
-desde 15 €
-VER FECHAS
-→
 MENTALISMO
 HOY · 21:00
 SADIISTIC
@@ -69,6 +61,14 @@ MILAGROS Y OTRAS MENTIRAS
 Mago Nicols
 ★ 5,0
 desde 12 €
+VER FECHAS
+→
+HUMOR
+VIE 30 · 19:00
+TODXS NOS VAMOS A MORIR
+Noelia Marló
+★ 5,0
+desde 15 €
 VER FECHAS
 →
 TERROR DIVERTIDO
@@ -358,18 +358,10 @@ desde 12 €
 VER FECHAS
 →
 PARA REIRTE
-VER LOS 20 →
+VER LOS 21 →
 
 Las mejores propuestas de humor.
 
-HUMOR
-HOY · 19:00
-TODXS NOS VAMOS A MORIR
-Noelia Marló
-★ 5,0
-desde 15 €
-VER FECHAS
-→
 HUMOR
 HOY · 22:30
 -10%
@@ -423,6 +415,14 @@ HUMOR
 JUE 29 · 19:30
 CUENTOS DEL FIN DEL MUNDO
 Alejandra Arias, Teresa Ponce de León, Jaime Páramo y Miguel Carbajo.
+★ 5,0
+desde 15 €
+VER FECHAS
+→
+HUMOR
+VIE 30 · 19:00
+TODXS NOS VAMOS A MORIR
+Noelia Marló
 ★ 5,0
 desde 15 €
 VER FECHAS
@@ -489,6 +489,14 @@ DOM 8 · 18:00
 SOY UNA PERSONA HORRIBLE
 Sara González
 ★ 4,7
+desde 12 €
+VER FECHAS
+→
+HUMOR
+VIE 13 · 21:00
+EN LA SOMBRA
+Sergio Arropide
+ESTRENO
 desde 12 €
 VER FECHAS
 →
@@ -561,6 +569,14 @@ Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, No
 desde 12 €
 VER FECHAS
 →
+IMPRO
+MAR 3 · 21:00
+SOLOS
+Laura Castro Javier Torralba
+ESTRENO
+desde 10 €
+VER FECHAS
+→
 ALGO BREVE
 
 Microteatro, a un palmo de ti.
@@ -620,7 +636,7 @@ VER FECHAS
 →
 Por plan
 Todos
-55
+57
 AYUDA
 PREGUNTAS FRECUENTES
 ¿Por qué cobráis gastos de gestión?
@@ -748,7 +764,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/NhfdZHzre16wrc2m6BxEdu7J/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-mgRWy7wa6Ylgkmaeu2xjp7hWdWDymL+8xpqspCIB1LPP3ld4AxIx1Irx+IyPmlOH"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6al1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/4EDjxXf4knsx6UBM1L2V6cv8/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-W2rQfgMYhzGah502YeqcfmQBSye1dcV+LiFPWlJFPBP5maBO1Jr0YBF6nZVQpwYq"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6al1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
