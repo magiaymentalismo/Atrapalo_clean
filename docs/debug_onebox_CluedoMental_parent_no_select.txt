@@ -240,44 +240,20 @@ VER LOS 13 →
 
 Magia infantil a partir de 3 años y espectáculos para bebés.
 
-INFANTIL
-HOY · 16:30
-SOÑANDO MAGIA
-David Vega
-★ 4,9
-desde 10 €
-VER FECHAS
-→
-INFANTIL
-HOY · 17:00
-ALUCINA ¡PEPINILLOS!
-Rubén Reyeros
-★ 4,4
-desde 10 €
-VER FECHAS
-→
-INFANTIL
-HOY · 18:00
-FLIPOMAGIA
-Gerard Clúa
-★ 4,7
-desde 10 €
-VER FECHAS
-→
-INFANTIL
-HOY · 18:30
-LUCES, CÁMARA Y MAGIA
-Carlos Devanti
-★ 4,9
-desde 10 €
-VER FECHAS
-→
 BEBÉS
 MAÑANA · 11:30
 FANTASÍA
 Belén Martínez
 ★ 4,7
 desde 7 €
+VER FECHAS
+→
+INFANTIL
+MAÑANA · 12:00
+SOÑANDO MAGIA
+David Vega
+★ 4,9
+desde 10 €
 VER FECHAS
 →
 INFANTIL
@@ -321,6 +297,30 @@ MILONGA BAJO EL MAR
 Ainhoa Sarmiento
 ★ 4,8
 desde 7 €
+VER FECHAS
+→
+INFANTIL
+SÁB 31 · 17:00
+ALUCINA ¡PEPINILLOS!
+Rubén Reyeros
+★ 4,4
+desde 10 €
+VER FECHAS
+→
+INFANTIL
+SÁB 31 · 18:00
+FLIPOMAGIA
+Gerard Clúa
+★ 4,7
+desde 10 €
+VER FECHAS
+→
+INFANTIL
+SÁB 31 · 18:30
+LUCES, CÁMARA Y MAGIA
+Carlos Devanti
+★ 4,9
+desde 10 €
 VER FECHAS
 →
 INFANTIL
@@ -376,14 +376,6 @@ ESTRENO
 desde 12 €
 VER FECHAS
 →
-MUSICAL
-HOY · 23:00
-DIVAS Y DIVANES
-Diana Dardo, Mario Manzanares y Artista Invitada
-★ 5,0
-desde 15 €
-VER FECHAS
-→
 HUMOR
 MAÑANA · 18:00
 DIVÁN DIVINO
@@ -422,6 +414,14 @@ SEX O NO SEX
 María Simón
 ★ 4,8
 desde 14 €
+VER FECHAS
+→
+MUSICAL
+SÁB 31 · 23:00
+DIVAS Y DIVANES
+Diana Dardo, Mario Manzanares y Artista Invitada
+★ 5,0
+desde 15 €
 VER FECHAS
 →
 HUMOR
