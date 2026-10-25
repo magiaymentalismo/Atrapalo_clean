@@ -522,7 +522,7 @@ PARA IMPROVISAR
 Impro: aquí no hay nada escrito.
 
 IMPRO
-MAR 27 · 21:00
+MAÑANA · 21:00
 LA IRA DEL GRAN TIKI
 Diego Rousselon, Laura Castro, Javier Torralba
 ★ 4,6
@@ -566,7 +566,7 @@ ALGO BREVE
 Microteatro, a un palmo de ti.
 
 MICROTEATRO
-MAR 27 · 20:00
+MAÑANA · 20:00
 NI UNA HOSTIA SIN RESPUESTA
 Elena Tébar Nieto.
 ★ 5,0
@@ -593,7 +593,7 @@ OTROS
 Danza, cortos y todo lo que no entra en una caja.
 
 CINE
-MAR 27 · 19:30
+MAÑANA · 19:30
 CORTOS CON Ñ
 Festival de cortometrajes
 ★ 4,3
@@ -831,7 +831,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
@@ -843,4 +843,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                           
+                         
