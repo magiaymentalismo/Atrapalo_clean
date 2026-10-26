@@ -179,6 +179,7 @@ VER FECHAS
 →
 MENTALISMO
 VIE 30 · 23:00
+-10%
 MENTIROSO MAGIA MENTAL
 Carlos Devanti
 ★ 4,9
@@ -581,13 +582,6 @@ ESTRENO
 desde 8 €
 VER FECHAS
 →
-MICROTEATRO
-THE CASQUIVANS
-Carolina Touceda y Gloria Rodríguez
-ESTRENO
-desde 10 €
-VER FECHAS
-→
 OTROS
 
 Danza, cortos y todo lo que no entra en una caja.
@@ -619,7 +613,7 @@ VER FECHAS
 →
 Por plan
 Todos
-57
+56
 AYUDA
 PREGUNTAS FRECUENTES
 ¿Por qué cobráis gastos de gestión?
