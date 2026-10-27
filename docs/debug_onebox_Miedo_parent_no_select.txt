@@ -35,7 +35,7 @@ Para improvisar
 Algo breve
 Otros
 NOVEDADES
-VER LOS 8 →
+VER LOS 10 →
 
 Estrenos y todas las novedades de nuestra cartelera.
 
@@ -103,6 +103,23 @@ ESTRENO
 desde 12 €
 VER FECHAS
 →
+SHOWS IN ENGLISH
+MIÉ 18 · 19:00
+MADRID IS MAGIC
+Carlos Devanti
+ESTRENO
+desde 12 €
+VER FECHAS
+→
+DRAMA
+VIE 20 · 21:00
+-20%
+EL GÉ
+Avelino Piedad
+★ 4,6
+desde 23 €
+VER FECHAS
+→
 PARA PASAR MIEDO
 
 Octubre es el mes de Halloween, perfecto para pasar un poco de miedo.
@@ -132,7 +149,7 @@ desde 12 €
 VER FECHAS
 →
 PARA SORPRENDERTE
-VER LOS 12 →
+VER LOS 11 →
 
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
@@ -221,19 +238,11 @@ Adrian Gonzalo
 desde 12 €
 VER FECHAS
 →
-DANZA
-SÁB 7 · 14:15
-TOKONOMA - I RESIDENCIA DE CREACIÓN LEDJ
-Livia Peverelli, Cristina Mayoral y Maite Felipe
-★ 5,0
-desde 10 €
-VER FECHAS
-→
-HUMOR
-VIE 13 · 19:30
-PAREJAS
-Carlos Soto, Pilar Manzanares, Ester Marfil, Paula Fernández, Ana García, Mª Ángeles Lucas, Laura Albor, Ana Elena, Rosa Millet, Luis Belda, Mª Ángeles Núñez
-★ 5,0
+SHOWS IN ENGLISH
+MIÉ 18 · 19:00
+MADRID IS MAGIC
+Carlos Devanti
+ESTRENO
 desde 12 €
 VER FECHAS
 →
@@ -347,7 +356,7 @@ desde 12 €
 VER FECHAS
 →
 PARA REIRTE
-VER LOS 21 →
+VER LOS 22 →
 
 Las mejores propuestas de humor.
 
@@ -417,6 +426,14 @@ desde 14 €
 VER FECHAS
 →
 HUMOR
+DOM 1 · 21:00
+UN DÍA DE MIERDA
+Casaris Paz
+★ 4,7
+desde 12 €
+VER FECHAS
+→
+HUMOR
 LUN 2 · 18:00
 CHECKPOINT CHARLIE
 Alba Quiñones y José Urzáiz
@@ -437,14 +454,6 @@ MAR 3 · 21:00
 -10%
 QUE TE PARTA UN RAYO
 Marta Martín Ismael Vicente Silvia Ros Carlos Herrera
-ESTRENO
-desde 12 €
-VER FECHAS
-→
-SHOWS IN ENGLISH
-MIÉ 4 · 19:00
-MADRID IS MAGIC
-Carlos Devanti
 ESTRENO
 desde 12 €
 VER FECHAS
@@ -478,6 +487,14 @@ DOM 8 · 18:00
 SOY UNA PERSONA HORRIBLE
 Sara González
 ★ 4,7
+desde 12 €
+VER FECHAS
+→
+HUMOR
+VIE 13 · 19:30
+PAREJAS
+Carlos Soto, Pilar Manzanares, Ester Marfil, Paula Fernández, Ana García, Mª Ángeles Lucas, Laura Albor, Ana Elena, Rosa Millet, Luis Belda, Mª Ángeles Núñez
+★ 5,0
 desde 12 €
 VER FECHAS
 →
@@ -598,6 +615,14 @@ Festival de cortometrajes
 desde 6 €
 VER FECHAS
 →
+DANZA
+SÁB 7 · 14:15
+TOKONOMA - I RESIDENCIA DE CREACIÓN LEDJ
+Livia Peverelli, Cristina Mayoral y Maite Felipe
+★ 5,0
+desde 10 €
+VER FECHAS
+→
 CATAS Y EXPERIENCIAS
 SÁB 14 · 13:30
 QUESOS VS VINOS
@@ -617,7 +642,7 @@ VER FECHAS
 →
 Por plan
 Todos
-56
+57
 AYUDA
 PREGUNTAS FRECUENTES
 ¿Por qué cobráis gastos de gestión?
@@ -829,7 +854,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
@@ -841,4 +866,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                           
+                             
