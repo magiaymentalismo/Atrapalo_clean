@@ -536,14 +536,6 @@ PARA IMPROVISAR
 Impro: aquí no hay nada escrito.
 
 IMPRO
-HOY · 21:00
-LA IRA DEL GRAN TIKI
-Diego Rousselon, Laura Castro, Javier Torralba
-★ 4,6
-desde 10 €
-VER FECHAS
-→
-IMPRO
 JUE 29 · 21:15
 IMPROCAFÉ SHOW
 Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, Noneh Herrero, María Márquez, Pablo Acevedo
@@ -580,14 +572,6 @@ ALGO BREVE
 Microteatro, a un palmo de ti.
 
 MICROTEATRO
-HOY · 20:00
-NI UNA HOSTIA SIN RESPUESTA
-Elena Tébar Nieto.
-★ 5,0
-desde 8 €
-VER FECHAS
-→
-MICROTEATRO
 MAÑANA · 19:30
 LA ÚLTIMA
 Vanessa Londoño y Jessica Serna
@@ -603,12 +587,19 @@ ESTRENO
 desde 8 €
 VER FECHAS
 →
+MICROTEATRO
+NI UNA HOSTIA SIN RESPUESTA
+Elena Tébar Nieto.
+★ 5,0
+desde 10 €
+VER FECHAS
+→
 OTROS
 
 Danza, cortos y todo lo que no entra en una caja.
 
 CINE
-HOY · 19:30
+MAR 3 · 19:30
 CORTOS CON Ñ
 Festival de cortometrajes
 ★ 4,3
@@ -642,7 +633,7 @@ VER FECHAS
 →
 Por plan
 Todos
-57
+56
 AYUDA
 PREGUNTAS FRECUENTES
 ¿Por qué cobráis gastos de gestión?
@@ -770,7 +761,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/NhfdZHzre16wrc2m6BxEdu7J/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-mgRWy7wa6Ylgkmaeu2xjp7hWdWDymL+8xpqspCIB1LPP3ld4AxIx1Irx+IyPmlOH"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6an1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/NhfdZHzre16wrc2m6BxEdu7J/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-mgRWy7wa6Ylgkmaeu2xjp7hWdWDymL+8xpqspCIB1LPP3ld4AxIx1Irx+IyPmlOH"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6aq0"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -854,7 +845,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
@@ -866,4 +857,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                             
+                           
