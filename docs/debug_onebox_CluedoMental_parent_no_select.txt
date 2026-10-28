@@ -31,9 +31,8 @@ Para pasar miedo
 Para sorprenderte
 Con niños
 Para reirte
-Para improvisar
+Para descubrir
 Algo breve
-Otros
 NOVEDADES
 VER LOS 10 →
 
@@ -531,9 +530,10 @@ ESTRENO
 desde 14 €
 VER FECHAS
 →
-PARA IMPROVISAR
+PARA DESCUBRIR
+VER LOS 8 →
 
-Impro: aquí no hay nada escrito.
+Impro, danza, drama, cortos y otras propuestas para descubrir algo diferente.
 
 IMPRO
 MAÑANA · 21:15
@@ -559,12 +559,45 @@ Alumnos y alumnas de la compañía de Improcafé
 desde 5 €
 VER FECHAS
 →
+CINE
+MAR 3 · 19:30
+CORTOS CON Ñ
+Festival de cortometrajes
+★ 4,3
+desde 6 €
+VER FECHAS
+→
 IMPRO
 MAR 3 · 21:00
 SOLOS
 Laura Castro Javier Torralba
 ESTRENO
 desde 10 €
+VER FECHAS
+→
+DANZA
+SÁB 7 · 14:15
+TOKONOMA - I RESIDENCIA DE CREACIÓN LEDJ
+Livia Peverelli, Cristina Mayoral y Maite Felipe
+★ 5,0
+desde 10 €
+VER FECHAS
+→
+CATAS Y EXPERIENCIAS
+SÁB 14 · 13:30
+QUESOS VS VINOS
+Alberto Javier Santos
+ESTRENO
+desde 35 €
+VER FECHAS
+→
+DRAMA
+VIE 20 · 21:00
+-20%
+EL GÉ
+Avelino Piedad
+★ 4,6
+desde 23 €
 VER FECHAS
 →
 ALGO BREVE
@@ -592,43 +625,6 @@ NI UNA HOSTIA SIN RESPUESTA
 Elena Tébar Nieto.
 ★ 5,0
 desde 10 €
-VER FECHAS
-→
-OTROS
-
-Danza, cortos y todo lo que no entra en una caja.
-
-CINE
-MAR 3 · 19:30
-CORTOS CON Ñ
-Festival de cortometrajes
-★ 4,3
-desde 6 €
-VER FECHAS
-→
-DANZA
-SÁB 7 · 14:15
-TOKONOMA - I RESIDENCIA DE CREACIÓN LEDJ
-Livia Peverelli, Cristina Mayoral y Maite Felipe
-★ 5,0
-desde 10 €
-VER FECHAS
-→
-CATAS Y EXPERIENCIAS
-SÁB 14 · 13:30
-QUESOS VS VINOS
-Alberto Javier Santos
-ESTRENO
-desde 35 €
-VER FECHAS
-→
-DRAMA
-VIE 20 · 21:00
--20%
-EL GÉ
-Avelino Piedad
-★ 4,6
-desde 23 €
 VER FECHAS
 →
 Por plan
@@ -761,7 +757,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/NhfdZHzre16wrc2m6BxEdu7J/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-mgRWy7wa6Ylgkmaeu2xjp7hWdWDymL+8xpqspCIB1LPP3ld4AxIx1Irx+IyPmlOH"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6aq1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/bSuJ2xBC8cFy7pM4Z3Hu9boH/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-zENAM5qMqUDtT2+hijUwdHmee3H1CH5ZBYK4zHrGd/tky8p3dZ60Q/F5iwdmU6lE"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6aq1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -845,7 +841,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
@@ -857,4 +853,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                           
+                             
