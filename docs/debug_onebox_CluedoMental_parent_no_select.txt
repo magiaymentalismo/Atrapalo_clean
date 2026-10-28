@@ -154,7 +154,7 @@ VER LOS 11 →
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
 MENTALISMO
-MAÑANA · 20:30
+HOY · 20:30
 -20%
 GOLDEN TICKET. TIENE QUE SER MAGIA
 Chap Magic
@@ -163,7 +163,7 @@ desde 12 €
 VER FECHAS
 →
 MENTALISMO
-JUE 29 · 20:00
+MAÑANA · 20:00
 SAL DE MI MENTE
 Fito Crawford
 ★ 4,9
@@ -171,7 +171,7 @@ desde 12 €
 VER FECHAS
 →
 MAGIA
-JUE 29 · 21:30
+MAÑANA · 21:30
 -40%
 MILAGROS Y OTRAS MENTIRAS
 Mago Nicols
@@ -361,7 +361,7 @@ VER LOS 21 →
 Las mejores propuestas de humor.
 
 HUMOR
-JUE 29 · 19:30
+MAÑANA · 19:30
 -20%
 CUENTOS DEL FIN DEL MUNDO
 Alejandra Arias, Teresa Ponce de León, Jaime Páramo y Miguel Carbajo.
@@ -536,7 +536,7 @@ PARA IMPROVISAR
 Impro: aquí no hay nada escrito.
 
 IMPRO
-JUE 29 · 21:15
+MAÑANA · 21:15
 IMPROCAFÉ SHOW
 Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, Noneh Herrero, María Márquez, Pablo Acevedo
 ★ 4,9
@@ -572,7 +572,7 @@ ALGO BREVE
 Microteatro, a un palmo de ti.
 
 MICROTEATRO
-MAÑANA · 19:30
+HOY · 19:30
 LA ÚLTIMA
 Vanessa Londoño y Jessica Serna
 ESTRENO
@@ -761,7 +761,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/NhfdZHzre16wrc2m6BxEdu7J/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-mgRWy7wa6Ylgkmaeu2xjp7hWdWDymL+8xpqspCIB1LPP3ld4AxIx1Irx+IyPmlOH"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6aq0"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/NhfdZHzre16wrc2m6BxEdu7J/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-mgRWy7wa6Ylgkmaeu2xjp7hWdWDymL+8xpqspCIB1LPP3ld4AxIx1Irx+IyPmlOH"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6aq1h1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -845,7 +845,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
