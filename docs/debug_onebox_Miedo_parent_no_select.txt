@@ -48,6 +48,7 @@ VER FECHAS
 →
 IMPRO
 MAR 3 · 21:00
+-20%
 SOLOS
 Laura Castro Javier Torralba
 ESTRENO
@@ -426,6 +427,7 @@ VER FECHAS
 →
 HUMOR
 DOM 1 · 21:00
+-10%
 UN DÍA DE MIERDA
 Casaris Paz
 ★ 4,7
@@ -569,6 +571,7 @@ VER FECHAS
 →
 IMPRO
 MAR 3 · 21:00
+-20%
 SOLOS
 Laura Castro Javier Torralba
 ESTRENO
@@ -605,19 +608,18 @@ ALGO BREVE
 Microteatro, a un palmo de ti.
 
 MICROTEATRO
-HOY · 19:30
-LA ÚLTIMA
-Vanessa Londoño y Jessica Serna
-ESTRENO
-desde 8 €
-VER FECHAS
-→
-MICROTEATRO
 MAR 3 · 20:00
 SUERTE
 Autoría: Paula Muñoz Barrales Dirección: Macarena Torres Intérpretes: Cecilia Vilas Paula Lucas Paula Muñoz Barrales
 ESTRENO
 desde 8 €
+VER FECHAS
+→
+MICROTEATRO
+LA ÚLTIMA
+Vanessa Londoño y Jessica Serna
+ESTRENO
+desde 10 €
 VER FECHAS
 →
 MICROTEATRO
@@ -757,7 +759,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/bSuJ2xBC8cFy7pM4Z3Hu9boH/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-zENAM5qMqUDtT2+hijUwdHmee3H1CH5ZBYK4zHrGd/tky8p3dZ60Q/F5iwdmU6lE"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6aq1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/NhfdZHzre16wrc2m6BxEdu7J/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-mgRWy7wa6Ylgkmaeu2xjp7hWdWDymL+8xpqspCIB1LPP3ld4AxIx1Irx+IyPmlOH"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6ar0"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
