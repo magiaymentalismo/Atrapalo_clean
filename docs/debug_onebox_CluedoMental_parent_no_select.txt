@@ -268,6 +268,7 @@ VER FECHAS
 →
 INFANTIL
 SÁB 31 · 12:30
+-10%
 VA DE MAGIA. MAGO PONCE
 Mago Ponce
 ★ 4,9
@@ -360,15 +361,6 @@ VER LOS 21 →
 Las mejores propuestas de humor.
 
 HUMOR
-HOY · 19:30
--20%
-CUENTOS DEL FIN DEL MUNDO
-Alejandra Arias, Teresa Ponce de León, Jaime Páramo y Miguel Carbajo.
-★ 5,0
-desde 15 €
-VER FECHAS
-→
-HUMOR
 MAÑANA · 19:00
 TODXS NOS VAMOS A MORIR
 Noelia Marló
@@ -456,6 +448,14 @@ YIPITI
 Ana Gabriela Manzano, Carmen Garvín, Miriam Basanta
 ★ 5,0
 desde 12 €
+VER FECHAS
+→
+HUMOR
+JUE 5 · 19:30
+CUENTOS DEL FIN DEL MUNDO
+Alejandra Arias, Teresa Ponce de León, Jaime Páramo y Miguel Carbajo.
+★ 5,0
+desde 15 €
 VER FECHAS
 →
 HUMOR
@@ -758,7 +758,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/bSuJ2xBC8cFy7pM4Z3Hu9boH/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-zENAM5qMqUDtT2+hijUwdHmee3H1CH5ZBYK4zHrGd/tky8p3dZ60Q/F5iwdmU6lE"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6ar1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/bSuJ2xBC8cHT21-c68JXN31m/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-bKfWYeiXQy4jcZajO9AwXZSkGczS4c0kT+xVjuY9qFVoNvl502qdKpREUuDFEtkH"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6as0h1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -842,7 +842,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
@@ -854,4 +854,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                             
+                         
