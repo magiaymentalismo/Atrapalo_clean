@@ -39,7 +39,7 @@ VER LOS 10 →
 Estrenos y todas las novedades de nuestra cartelera.
 
 TERROR DIVERTIDO
-MAÑANA · 19:30
+HOY · 19:30
 EXPERIMENTO GORE
 María Simón, Chema Moro
 ESTRENO
@@ -124,16 +124,8 @@ PARA PASAR MIEDO
 
 Octubre es el mes de Halloween, perfecto para pasar un poco de miedo.
 
-MENTALISMO
-HOY · 21:30
-SADIISTIC
-Rubén Reyeros
-ESTRENO
-desde 12 €
-VER FECHAS
-→
 TERROR DIVERTIDO
-MAÑANA · 19:30
+HOY · 19:30
 EXPERIMENTO GORE
 María Simón, Chema Moro
 ESTRENO
@@ -141,11 +133,18 @@ desde 12 €
 VER FECHAS
 →
 HUMOR
-LUN 2 · 21:00
+MAÑANA · 21:00
 SLASHER. THE EXPERIENCE
 Soraya Santos, Sandra Mell, Fran Expósito, Javier Valverde, Chema Higuera.
 ★ 5,0
 desde 12 €
+VER FECHAS
+→
+MENTALISMO
+SADIISTIC
+Rubén Reyeros
+ESTRENO
+desde 10 €
 VER FECHAS
 →
 PARA SORPRENDERTE
@@ -154,15 +153,7 @@ VER LOS 11 →
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
 MENTALISMO
-HOY · 21:30
-SADIISTIC
-Rubén Reyeros
-ESTRENO
-desde 12 €
-VER FECHAS
-→
-MENTALISMO
-MAÑANA · 18:30
+HOY · 18:30
 ATRÉVETE. MAGIA MENTAL
 Vicente Lucca
 ★ 4,8
@@ -170,7 +161,7 @@ desde 12 €
 VER FECHAS
 →
 MAGIA
-MAÑANA · 20:00
+HOY · 20:00
 POWER: MAGIA Y MENTALISMO
 Mago Ponce
 ★ 5,0
@@ -178,7 +169,7 @@ desde 10 €
 VER FECHAS
 →
 MENTALISMO
-MAÑANA · 21:30
+HOY · 21:30
 -10%
 DESTINOS
 Adrian Gonzalo
@@ -187,7 +178,7 @@ desde 12 €
 VER FECHAS
 →
 MENTALISMO
-MAÑANA · 23:00
+HOY · 23:00
 -10%
 MENTIROSO MAGIA MENTAL
 Carlos Devanti
@@ -196,7 +187,7 @@ desde 12 €
 VER FECHAS
 →
 MENTALISMO
-LUN 2 · 20:00
+MAÑANA · 20:00
 -10%
 SAL DE MI MENTE
 Fito Crawford
@@ -245,13 +236,20 @@ ESTRENO
 desde 12 €
 VER FECHAS
 →
+MENTALISMO
+SADIISTIC
+Rubén Reyeros
+ESTRENO
+desde 10 €
+VER FECHAS
+→
 CON NIÑOS
 VER LOS 13 →
 
 Magia infantil a partir de 3 años y espectáculos para bebés.
 
 BEBÉS
-MAÑANA · 11:30
+HOY · 11:30
 FANTASÍA
 Belén Martínez
 ★ 4,7
@@ -259,7 +257,7 @@ desde 7 €
 VER FECHAS
 →
 INFANTIL
-MAÑANA · 12:00
+HOY · 12:00
 SOÑANDO MAGIA
 David Vega
 ★ 4,9
@@ -267,7 +265,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL
-MAÑANA · 12:30
+HOY · 12:30
 ALGUIEN DIJO ¿SUPERPODERES?
 Mago Ponce
 ★ 4,9
@@ -275,7 +273,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL
-MAÑANA · 16:30
+HOY · 16:30
 -10%
 VA DE MAGIA. MAGO PONCE
 Mago Ponce
@@ -284,7 +282,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL
-MAÑANA · 17:00
+HOY · 17:00
 MAGIA Y DESVARIOS VARIOS
 Joaco Showman
 ★ 5,0
@@ -292,7 +290,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL
-LUN 2 · 12:00
+MAÑANA · 12:00
 -10%
 LUCES, CÁMARA Y MAGIA
 Carlos Devanti
@@ -301,7 +299,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL
-LUN 2 · 13:30
+MAÑANA · 13:30
 PIEDRA, PAPEL O TIJERA
 Nicolás Vicente “Mago Nicols”
 ★ 4,9
@@ -309,7 +307,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL
-LUN 2 · 17:00
+MAÑANA · 17:00
 ALUCINA ¡PEPINILLOS!
 Rubén Reyeros
 ★ 4,4
@@ -362,23 +360,7 @@ VER LOS 21 →
 Las mejores propuestas de humor.
 
 HUMOR
-HOY · 21:00
-SEX O NO SEX
-María Simón
-★ 4,8
-desde 14 €
-VER FECHAS
-→
-HUMOR
-HOY · 22:30
-TÍA, NADIE ES PERFECTA
-Almudena Alcocer, Maria Francés, Julia Olcina, Yaiza de la Torre y Alejandra Lozano
-ESTRENO
-desde 12 €
-VER FECHAS
-→
-HUMOR
-MAÑANA · 18:00
+HOY · 18:00
 DIVÁN DIVINO
 Samuel Padilla. Lluna Issa Casterà.
 ★ 5,0
@@ -386,7 +368,7 @@ desde 14 €
 VER FECHAS
 →
 HUMOR
-MAÑANA · 21:00
+HOY · 21:00
 -10%
 UN DÍA DE MIERDA
 Casaris Paz
@@ -395,7 +377,7 @@ desde 12 €
 VER FECHAS
 →
 HUMOR
-MAÑANA · 22:30
+HOY · 22:30
 -10%
 AFTER KIKI
 Casaris Paz, Jorge Alvariñas
@@ -404,7 +386,7 @@ desde 14 €
 VER FECHAS
 →
 HUMOR
-LUN 2 · 18:00
+MAÑANA · 18:00
 CHECKPOINT CHARLIE
 Alba Quiñones y José Urzáiz
 ESTRENO
@@ -412,7 +394,7 @@ desde 12 €
 VER FECHAS
 →
 HUMOR
-LUN 2 · 21:00
+MAÑANA · 21:00
 SLASHER. THE EXPERIENCE
 Soraya Santos, Sandra Mell, Fran Expósito, Javier Valverde, Chema Higuera.
 ★ 5,0
@@ -469,6 +451,14 @@ María Simón
 desde 14 €
 VER FECHAS
 →
+HUMOR
+SÁB 7 · 22:30
+TÍA, NADIE ES PERFECTA
+Almudena Alcocer, Maria Francés, Julia Olcina, Yaiza de la Torre y Alejandra Lozano
+ESTRENO
+desde 12 €
+VER FECHAS
+→
 MUSICAL
 SÁB 7 · 23:00
 DIVAS Y DIVANES
@@ -518,6 +508,14 @@ desde 35 €
 VER FECHAS
 →
 HUMOR
+SÁB 14 · 21:00
+SEX O NO SEX
+María Simón
+★ 4,8
+desde 14 €
+VER FECHAS
+→
+HUMOR
 DOM 15 · 18:00
 HORMONADA 2.0
 Sara Cardona
@@ -540,7 +538,7 @@ VER LOS 8 →
 Impro, danza, drama, cortos y otras propuestas para descubrir algo diferente.
 
 IMPRO
-MAÑANA · 14:00
+HOY · 14:00
 LA COCINA DE IMPROCAFÉ
 Alumnos y alumnas de la compañía de Improcafé
 ★ 4,8
@@ -761,7 +759,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/NhfdZHzre16wrc2m6BxEdu7J/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-mgRWy7wa6Ylgkmaeu2xjp7hWdWDymL+8xpqspCIB1LPP3ld4AxIx1Irx+IyPmlOH"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6as1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/bSuJ2xBC8cHT21-c68JXN31m/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-bKfWYeiXQy4jcZajO9AwXZSkGczS4c0kT+xVjuY9qFVoNvl502qdKpREUuDFEtkH"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6as1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
