@@ -153,31 +153,6 @@ VER LOS 11 →
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
 MENTALISMO
-HOY · 18:30
-ATRÉVETE. MAGIA MENTAL
-Vicente Lucca
-★ 4,8
-desde 12 €
-VER FECHAS
-→
-MAGIA
-HOY · 20:00
-POWER: MAGIA Y MENTALISMO
-Mago Ponce
-★ 5,0
-desde 10 €
-VER FECHAS
-→
-MENTALISMO
-HOY · 21:30
--10%
-DESTINOS
-Adrian Gonzalo
-★ 5,0
-desde 12 €
-VER FECHAS
-→
-MENTALISMO
 HOY · 23:00
 -10%
 MENTIROSO MAGIA MENTAL
@@ -228,6 +203,30 @@ Antonio Martínez Salinas
 desde 12 €
 VER FECHAS
 →
+MENTALISMO
+DOM 8 · 18:30
+ATRÉVETE. MAGIA MENTAL
+Vicente Lucca
+★ 4,8
+desde 12 €
+VER FECHAS
+→
+MAGIA
+DOM 8 · 20:00
+POWER: MAGIA Y MENTALISMO
+Mago Ponce
+★ 5,0
+desde 10 €
+VER FECHAS
+→
+MENTALISMO
+DOM 8 · 21:30
+DESTINOS
+Adrian Gonzalo
+★ 5,0
+desde 12 €
+VER FECHAS
+→
 SHOWS IN ENGLISH
 MIÉ 18 · 19:00
 MADRID IS MAGIC
@@ -254,23 +253,6 @@ FANTASÍA
 Belén Martínez
 ★ 4,7
 desde 7 €
-VER FECHAS
-→
-INFANTIL
-MAÑANA · 12:00
--10%
-LUCES, CÁMARA Y MAGIA
-Carlos Devanti
-★ 4,9
-desde 10 €
-VER FECHAS
-→
-INFANTIL
-MAÑANA · 12:30
-SOÑANDO MAGIA
-David Vega
-★ 4,9
-desde 10 €
 VER FECHAS
 →
 INFANTIL
@@ -307,6 +289,14 @@ desde 7 €
 VER FECHAS
 →
 INFANTIL
+SÁB 7 · 16:30
+SOÑANDO MAGIA
+David Vega
+★ 4,9
+desde 10 €
+VER FECHAS
+→
+INFANTIL
 SÁB 7 · 17:00
 MÁS MAGIA
 Rubén Reyeros
@@ -319,6 +309,14 @@ SÁB 7 · 18:00
 FLIPOMAGIA
 Gerard Clúa
 ★ 4,7
+desde 10 €
+VER FECHAS
+→
+INFANTIL
+SÁB 7 · 18:30
+LUCES, CÁMARA Y MAGIA
+Carlos Devanti
+★ 4,9
 desde 10 €
 VER FECHAS
 →
@@ -359,24 +357,6 @@ VER LOS 22 →
 
 Las mejores propuestas de humor.
 
-HUMOR
-HOY · 21:00
--10%
-UN DÍA DE MIERDA
-Casaris Paz
-★ 4,7
-desde 12 €
-VER FECHAS
-→
-HUMOR
-HOY · 22:30
--10%
-AFTER KIKI
-Casaris Paz, Jorge Alvariñas
-★ 4,8
-desde 14 €
-VER FECHAS
-→
 HUMOR
 MAÑANA · 18:00
 CHECKPOINT CHARLIE
@@ -433,6 +413,14 @@ CORAZÓN EN REBAJAS
 Laura Alcocer
 ★ 4,8
 desde 12 €
+VER FECHAS
+→
+HUMOR
+SÁB 7 · 19:30
+AFTER KIKI
+Casaris Paz, Jorge Alvariñas
+★ 4,8
+desde 14 €
 VER FECHAS
 →
 HUMOR
@@ -538,6 +526,13 @@ CERO DRAMAS
 Paloma Jiménez
 ESTRENO
 desde 14 €
+VER FECHAS
+→
+HUMOR
+UN DÍA DE MIERDA
+Casaris Paz
+★ 4,7
+desde 10 €
 VER FECHAS
 →
 PARA DESCUBRIR
@@ -767,7 +762,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/bSuJ2xBC8cHT21-c68JXN31m/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-bKfWYeiXQy4jcZajO9AwXZSkGczS4c0kT+xVjuY9qFVoNvl502qdKpREUuDFEtkH"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6as1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/bSuJ2xBC8cFy7pM4Z3Hu9boH/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-zENAM5qMqUDtT2+hijUwdHmee3H1CH5ZBYK4zHrGd/tky8p3dZ60Q/F5iwdmU6lE"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6as1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
