@@ -38,16 +38,8 @@ VER LOS 10 →
 
 Estrenos y todas las novedades de nuestra cartelera.
 
-TERROR DIVERTIDO
-HOY · 19:30
-EXPERIMENTO GORE
-María Simón, Chema Moro
-ESTRENO
-desde 12 €
-VER FECHAS
-→
 IMPRO
-MAÑANA · 21:00
+HOY · 21:00
 -20%
 SOLOS
 Laura Castro Javier Torralba
@@ -120,24 +112,30 @@ Avelino Piedad
 desde 23 €
 VER FECHAS
 →
+TERROR DIVERTIDO
+EXPERIMENTO GORE
+María Simón, Chema Moro
+ESTRENO
+desde 10 €
+VER FECHAS
+→
 PARA PASAR MIEDO
 
 Octubre es el mes de Halloween, perfecto para pasar un poco de miedo.
 
-TERROR DIVERTIDO
-HOY · 19:30
-EXPERIMENTO GORE
-María Simón, Chema Moro
-ESTRENO
-desde 12 €
-VER FECHAS
-→
 HUMOR
-HOY · 21:00
+VIE 6 · 22:30
 SLASHER. THE EXPERIENCE
 Soraya Santos, Sandra Mell, Fran Expósito, Javier Valverde, Chema Higuera.
 ★ 5,0
 desde 12 €
+VER FECHAS
+→
+TERROR DIVERTIDO
+EXPERIMENTO GORE
+María Simón, Chema Moro
+ESTRENO
+desde 10 €
 VER FECHAS
 →
 MENTALISMO
@@ -153,29 +151,19 @@ VER LOS 11 →
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
 MENTALISMO
-HOY · 18:30
--10%
-MENTIROSO MAGIA MENTAL
-Carlos Devanti
-★ 4,9
-desde 12 €
-VER FECHAS
-→
-MENTALISMO
-HOY · 20:00
--10%
-SAL DE MI MENTE
-Fito Crawford
-★ 4,9
-desde 12 €
-VER FECHAS
-→
-MENTALISMO
-MIÉ 4 · 20:30
+MAÑANA · 20:30
 -20%
 GOLDEN TICKET. TIENE QUE SER MAGIA
 Chap Magic
 ESTRENO
+desde 12 €
+VER FECHAS
+→
+MENTALISMO
+JUE 5 · 20:00
+SAL DE MI MENTE
+Fito Crawford
+★ 4,9
 desde 12 €
 VER FECHAS
 →
@@ -200,6 +188,14 @@ VIE 6 · 21:30
 HACKEANDO MENTES
 Antonio Martínez Salinas
 ★ 5,0
+desde 12 €
+VER FECHAS
+→
+MENTALISMO
+VIE 6 · 23:00
+MENTIROSO MAGIA MENTAL
+Carlos Devanti
+★ 4,9
 desde 12 €
 VER FECHAS
 →
@@ -357,26 +353,10 @@ Las mejores propuestas de humor.
 
 HUMOR
 HOY · 21:00
-SLASHER. THE EXPERIENCE
-Soraya Santos, Sandra Mell, Fran Expósito, Javier Valverde, Chema Higuera.
-★ 5,0
-desde 12 €
-VER FECHAS
-→
-HUMOR
-MAÑANA · 21:00
 -10%
 QUE TE PARTA UN RAYO
 Marta Martín Ismael Vicente Silvia Ros Carlos Herrera
 ESTRENO
-desde 12 €
-VER FECHAS
-→
-HUMOR
-MIÉ 4 · 21:00
-YIPITI
-Ana Gabriela Manzano, Carmen Garvín, Miriam Basanta
-★ 5,0
 desde 12 €
 VER FECHAS
 →
@@ -402,6 +382,14 @@ VIE 6 · 21:00
 CORAZÓN EN REBAJAS
 Laura Alcocer
 ★ 4,8
+desde 12 €
+VER FECHAS
+→
+HUMOR
+VIE 6 · 22:30
+SLASHER. THE EXPERIENCE
+Soraya Santos, Sandra Mell, Fran Expósito, Javier Valverde, Chema Higuera.
+★ 5,0
 desde 12 €
 VER FECHAS
 →
@@ -518,6 +506,14 @@ desde 12 €
 VER FECHAS
 →
 HUMOR
+MIÉ 18 · 21:00
+YIPITI
+Ana Gabriela Manzano, Carmen Garvín, Miriam Basanta
+★ 5,0
+desde 12 €
+VER FECHAS
+→
+HUMOR
 VIE 27 · 21:30
 -10%
 CERO DRAMAS
@@ -539,7 +535,7 @@ VER LOS 8 →
 Impro, danza, drama, cortos y otras propuestas para descubrir algo diferente.
 
 CINE
-MAÑANA · 19:30
+HOY · 19:30
 CORTOS CON Ñ
 Festival de cortometrajes
 ★ 4,3
@@ -547,7 +543,7 @@ desde 6 €
 VER FECHAS
 →
 IMPRO
-MAÑANA · 21:00
+HOY · 21:00
 -20%
 SOLOS
 Laura Castro Javier Torralba
@@ -609,7 +605,7 @@ ALGO BREVE
 Microteatro, a un palmo de ti.
 
 MICROTEATRO
-MAÑANA · 20:00
+HOY · 20:00
 SUERTE
 Autoría: Paula Muñoz Barrales Dirección: Macarena Torres Intérpretes: Cecilia Vilas Paula Lucas Paula Muñoz Barrales
 ESTRENO
@@ -746,7 +742,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/bSuJ2xBC8cFy7pM4Z3Hu9boH/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-zENAM5qMqUDtT2+hijUwdHmee3H1CH5ZBYK4zHrGd/tky8p3dZ60Q/F5iwdmU6lE"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6at0h2"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/NhfdZHzre16wrc2m6BxEdu7J/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-mgRWy7wa6Ylgkmaeu2xjp7hWdWDymL+8xpqspCIB1LPP3ld4AxIx1Irx+IyPmlOH"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6au1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -830,7 +826,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
