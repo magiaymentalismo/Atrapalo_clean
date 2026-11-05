@@ -38,7 +38,7 @@ VER LOS 8 →
 Estrenos y todas las novedades de nuestra cartelera.
 
 DANZA
-SÁB 7 · 14:15
+MAÑANA · 14:15
 TOKONOMA - I RESIDENCIA DE CREACIÓN LEDJ
 Livia Peverelli, Cristina Mayoral y Maite Felipe
 ★ 5,0
@@ -46,7 +46,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL
-SÁB 7 · 17:00
+MAÑANA · 17:00
 MÁS MAGIA
 Rubén Reyeros
 ESTRENO
@@ -108,16 +108,7 @@ VER LOS 10 →
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
 MAGIA
-HOY · 21:30
--40%
-MILAGROS Y OTRAS MENTIRAS
-Mago Nicols
-★ 5,0
-desde 12 €
-VER FECHAS
-→
-MAGIA
-MAÑANA · 20:00
+HOY · 20:00
 -10%
 DESCARADO. MAGIA CANALLA
 Carlos Devanti
@@ -126,7 +117,7 @@ desde 12 €
 VER FECHAS
 →
 MENTALISMO
-MAÑANA · 21:30
+HOY · 21:30
 HACKEANDO MENTES
 Antonio Martínez Salinas
 ★ 5,0
@@ -134,7 +125,7 @@ desde 12 €
 VER FECHAS
 →
 MENTALISMO
-MAÑANA · 23:00
+HOY · 23:00
 -10%
 MENTIROSO MAGIA MENTAL
 Carlos Devanti
@@ -143,7 +134,7 @@ desde 12 €
 VER FECHAS
 →
 MENTALISMO
-SÁB 7 · 21:30
+MAÑANA · 21:30
 SAL DE MI MENTE
 Fito Crawford
 ★ 4,9
@@ -175,6 +166,14 @@ Adrian Gonzalo
 desde 12 €
 VER FECHAS
 →
+MAGIA
+JUE 12 · 21:30
+MILAGROS Y OTRAS MENTIRAS
+Mago Nicols
+★ 5,0
+desde 12 €
+VER FECHAS
+→
 SHOWS IN ENGLISH
 MIÉ 18 · 19:00
 MADRID IS MAGIC
@@ -198,7 +197,7 @@ VER LOS 13 →
 Magia infantil a partir de 3 años y espectáculos para bebés.
 
 BEBÉS
-SÁB 7 · 11:30
+MAÑANA · 11:30
 MILONGA BAJO EL MAR
 Ainhoa Sarmiento
 ★ 4,8
@@ -206,7 +205,7 @@ desde 7 €
 VER FECHAS
 →
 INFANTIL
-SÁB 7 · 12:00
+MAÑANA · 12:00
 PIEDRA, PAPEL O TIJERA
 Nicolás Vicente “Mago Nicols”
 ★ 4,9
@@ -214,7 +213,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL
-SÁB 7 · 12:30
+MAÑANA · 12:30
 VA DE MAGIA. MAGO PONCE
 Mago Ponce
 ★ 4,9
@@ -222,7 +221,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL
-SÁB 7 · 16:30
+MAÑANA · 16:30
 SOÑANDO MAGIA
 David Vega
 ★ 4,9
@@ -230,7 +229,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL
-SÁB 7 · 17:00
+MAÑANA · 17:00
 MÁS MAGIA
 Rubén Reyeros
 ESTRENO
@@ -238,7 +237,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL
-SÁB 7 · 18:00
+MAÑANA · 18:00
 -10%
 FLIPOMAGIA
 Gerard Clúa
@@ -247,7 +246,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL
-SÁB 7 · 18:30
+MAÑANA · 18:30
 LUCES, CÁMARA Y MAGIA
 Carlos Devanti
 ★ 4,9
@@ -308,15 +307,7 @@ VER LOS 20 →
 Las mejores propuestas de humor.
 
 HUMOR
-HOY · 19:30
-CUENTOS DEL FIN DEL MUNDO
-Alejandra Arias, Teresa Ponce de León, Jaime Páramo y Miguel Carbajo.
-★ 5,0
-desde 15 €
-VER FECHAS
-→
-HUMOR
-MAÑANA · 19:00
+HOY · 19:00
 TODXS NOS VAMOS A MORIR
 Noelia Marló
 ★ 5,0
@@ -324,7 +315,7 @@ desde 15 €
 VER FECHAS
 →
 HUMOR
-MAÑANA · 21:00
+HOY · 21:00
 CORAZÓN EN REBAJAS
 Laura Alcocer
 ★ 4,8
@@ -332,7 +323,7 @@ desde 12 €
 VER FECHAS
 →
 HUMOR
-MAÑANA · 22:30
+HOY · 22:30
 SLASHER. THE EXPERIENCE
 Soraya Santos, Sandra Mell, Fran Expósito, Javier Valverde, Chema Higuera.
 ★ 5,0
@@ -340,7 +331,7 @@ desde 12 €
 VER FECHAS
 →
 HUMOR
-SÁB 7 · 19:30
+MAÑANA · 19:30
 AFTER KIKI
 Casaris Paz, Jorge Alvariñas
 ★ 4,8
@@ -348,7 +339,7 @@ desde 14 €
 VER FECHAS
 →
 HUMOR
-SÁB 7 · 21:00
+MAÑANA · 21:00
 MISS DESGRACIAS
 María Simón
 ★ 5,0
@@ -356,7 +347,7 @@ desde 14 €
 VER FECHAS
 →
 HUMOR
-SÁB 7 · 22:30
+MAÑANA · 22:30
 TÍA, NADIE ES PERFECTA
 Almudena Alcocer, Maria Francés, Julia Olcina, Yaiza de la Torre y Alejandra Lozano
 ESTRENO
@@ -364,7 +355,7 @@ desde 12 €
 VER FECHAS
 →
 MUSICAL
-SÁB 7 · 23:00
+MAÑANA · 23:00
 DIVAS Y DIVANES
 Diana Dardo, Mario Manzanares y Artista Invitada
 ★ 5,0
@@ -372,7 +363,7 @@ desde 15 €
 VER FECHAS
 →
 HUMOR
-SÁB 7 · 23:59
+MAÑANA · 23:59
 -15%
 AQUÍ SE HABLA PAJA
 Stand up comedy
@@ -411,6 +402,14 @@ QUE TE PARTA UN RAYO
 Marta Martín Ismael Vicente Silvia Ros Carlos Herrera
 ESTRENO
 desde 12 €
+VER FECHAS
+→
+HUMOR
+JUE 12 · 19:30
+CUENTOS DEL FIN DEL MUNDO
+Alejandra Arias, Teresa Ponce de León, Jaime Páramo y Miguel Carbajo.
+★ 5,0
+desde 15 €
 VER FECHAS
 →
 HUMOR
@@ -476,17 +475,8 @@ VER LOS 7 →
 
 Impro, danza, drama, cortos y otras propuestas para descubrir algo diferente.
 
-IMPRO
-HOY · 21:15
--20%
-IMPROCAFÉ SHOW
-Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, Noneh Herrero, María Márquez, Pablo Acevedo
-★ 4,9
-desde 12 €
-VER FECHAS
-→
 DANZA
-SÁB 7 · 14:15
+MAÑANA · 14:15
 TOKONOMA - I RESIDENCIA DE CREACIÓN LEDJ
 Livia Peverelli, Cristina Mayoral y Maite Felipe
 ★ 5,0
@@ -516,6 +506,14 @@ SOLOS
 Laura Castro Javier Torralba
 ESTRENO
 desde 10 €
+VER FECHAS
+→
+IMPRO
+JUE 12 · 21:15
+IMPROCAFÉ SHOW
+Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, Noneh Herrero, María Márquez, Pablo Acevedo
+★ 4,9
+desde 12 €
 VER FECHAS
 →
 CATAS Y EXPERIENCIAS
@@ -676,7 +674,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/bSuJ2xBC8cFy7pM4Z3Hu9boH/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-zENAM5qMqUDtT2+hijUwdHmee3H1CH5ZBYK4zHrGd/tky8p3dZ60Q/F5iwdmU6lE"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6b40"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/bSuJ2xBC8cFy7pM4Z3Hu9boH/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-zENAM5qMqUDtT2+hijUwdHmee3H1CH5ZBYK4zHrGd/tky8p3dZ60Q/F5iwdmU6lE"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6b41"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -760,7 +758,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
@@ -772,4 +770,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                           
+                             
