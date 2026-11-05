@@ -108,7 +108,7 @@ VER LOS 10 →
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
 MENTALISMO
-MAÑANA · 20:00
+HOY · 20:00
 -10%
 SAL DE MI MENTE
 Fito Crawford
@@ -117,7 +117,7 @@ desde 12 €
 VER FECHAS
 →
 MAGIA
-MAÑANA · 21:30
+HOY · 21:30
 -40%
 MILAGROS Y OTRAS MENTIRAS
 Mago Nicols
@@ -126,7 +126,7 @@ desde 12 €
 VER FECHAS
 →
 MAGIA
-VIE 6 · 20:00
+MAÑANA · 20:00
 -10%
 DESCARADO. MAGIA CANALLA
 Carlos Devanti
@@ -135,7 +135,7 @@ desde 12 €
 VER FECHAS
 →
 MENTALISMO
-VIE 6 · 21:30
+MAÑANA · 21:30
 HACKEANDO MENTES
 Antonio Martínez Salinas
 ★ 5,0
@@ -143,7 +143,7 @@ desde 12 €
 VER FECHAS
 →
 MENTALISMO
-VIE 6 · 23:00
+MAÑANA · 23:00
 -10%
 MENTIROSO MAGIA MENTAL
 Carlos Devanti
@@ -309,7 +309,7 @@ VER LOS 20 →
 Las mejores propuestas de humor.
 
 HUMOR
-MAÑANA · 19:30
+HOY · 19:30
 -20%
 CUENTOS DEL FIN DEL MUNDO
 Alejandra Arias, Teresa Ponce de León, Jaime Páramo y Miguel Carbajo.
@@ -318,7 +318,7 @@ desde 15 €
 VER FECHAS
 →
 HUMOR
-VIE 6 · 19:00
+MAÑANA · 19:00
 TODXS NOS VAMOS A MORIR
 Noelia Marló
 ★ 5,0
@@ -326,7 +326,7 @@ desde 15 €
 VER FECHAS
 →
 HUMOR
-VIE 6 · 21:00
+MAÑANA · 21:00
 CORAZÓN EN REBAJAS
 Laura Alcocer
 ★ 4,8
@@ -334,7 +334,7 @@ desde 12 €
 VER FECHAS
 →
 HUMOR
-VIE 6 · 22:30
+MAÑANA · 22:30
 SLASHER. THE EXPERIENCE
 Soraya Santos, Sandra Mell, Fran Expósito, Javier Valverde, Chema Higuera.
 ★ 5,0
@@ -479,7 +479,7 @@ VER LOS 7 →
 Impro, danza, drama, cortos y otras propuestas para descubrir algo diferente.
 
 IMPRO
-MAÑANA · 21:15
+HOY · 21:15
 -20%
 IMPROCAFÉ SHOW
 Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, Noneh Herrero, María Márquez, Pablo Acevedo
@@ -678,7 +678,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/bSuJ2xBC8cFy7pM4Z3Hu9boH/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-zENAM5qMqUDtT2+hijUwdHmee3H1CH5ZBYK4zHrGd/tky8p3dZ60Q/F5iwdmU6lE"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6b30"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/bSuJ2xBC8cFy7pM4Z3Hu9boH/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-zENAM5qMqUDtT2+hijUwdHmee3H1CH5ZBYK4zHrGd/tky8p3dZ60Q/F5iwdmU6lE"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6b31"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -762,7 +762,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
@@ -774,4 +774,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                             
+                           
