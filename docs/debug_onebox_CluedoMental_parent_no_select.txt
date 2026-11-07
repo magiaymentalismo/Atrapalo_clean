@@ -194,37 +194,20 @@ VER LOS 13 →
 
 Magia infantil a partir de 3 años y espectáculos para bebés.
 
-INFANTIL
-HOY · 16:30
-SOÑANDO MAGIA
-David Vega
-★ 4,9
-desde 10 €
-VER FECHAS
-→
-INFANTIL
-HOY · 18:00
--10%
-FLIPOMAGIA
-Gerard Clúa
-★ 4,7
-desde 10 €
-VER FECHAS
-→
-INFANTIL
-HOY · 18:30
-LUCES, CÁMARA Y MAGIA
-Carlos Devanti
-★ 4,9
-desde 10 €
-VER FECHAS
-→
 BEBÉS
 MAÑANA · 11:30
 FANTASÍA
 Belén Martínez
 ★ 4,7
 desde 7 €
+VER FECHAS
+→
+INFANTIL
+MAÑANA · 12:00
+SOÑANDO MAGIA
+David Vega
+★ 4,9
+desde 10 €
 VER FECHAS
 →
 INFANTIL
@@ -270,6 +253,14 @@ Laura Alcocer
 desde 7 €
 VER FECHAS
 →
+INFANTIL
+LUN 9 · 12:00
+LUCES, CÁMARA Y MAGIA
+Carlos Devanti
+★ 4,9
+desde 10 €
+VER FECHAS
+→
 BEBÉS
 SÁB 14 · 11:30
 MILONGA BAJO EL MAR
@@ -283,6 +274,14 @@ SÁB 14 · 17:00
 MÁS MAGIA
 Rubén Reyeros
 ESTRENO
+desde 10 €
+VER FECHAS
+→
+INFANTIL
+SÁB 14 · 18:00
+FLIPOMAGIA
+Gerard Clúa
+★ 4,7
 desde 10 €
 VER FECHAS
 →
@@ -307,14 +306,6 @@ VER LOS 20 →
 Las mejores propuestas de humor.
 
 HUMOR
-HOY · 19:30
-AFTER KIKI
-Casaris Paz, Jorge Alvariñas
-★ 4,8
-desde 14 €
-VER FECHAS
-→
-HUMOR
 HOY · 21:00
 MISS DESGRACIAS
 María Simón
@@ -328,14 +319,6 @@ TÍA, NADIE ES PERFECTA
 Almudena Alcocer, Maria Francés, Julia Olcina, Yaiza de la Torre y Alejandra Lozano
 ESTRENO
 desde 12 €
-VER FECHAS
-→
-MUSICAL
-HOY · 23:00
-DIVAS Y DIVANES
-Diana Dardo, Mario Manzanares y Artista Invitada
-★ 5,0
-desde 15 €
 VER FECHAS
 →
 HUMOR
@@ -430,11 +413,27 @@ desde 35 €
 VER FECHAS
 →
 HUMOR
+SÁB 14 · 19:30
+AFTER KIKI
+Casaris Paz, Jorge Alvariñas
+★ 4,8
+desde 14 €
+VER FECHAS
+→
+HUMOR
 SÁB 14 · 21:00
 SEX O NO SEX
 María Simón
 ★ 4,8
 desde 14 €
+VER FECHAS
+→
+MUSICAL
+SÁB 14 · 23:00
+DIVAS Y DIVANES
+Diana Dardo, Mario Manzanares y Artista Invitada
+★ 5,0
+desde 15 €
 VER FECHAS
 →
 HUMOR
