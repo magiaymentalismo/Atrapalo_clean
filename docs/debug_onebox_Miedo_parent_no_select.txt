@@ -38,7 +38,7 @@ VER LOS 8 →
 Estrenos y todas las novedades de nuestra cartelera.
 
 IMPRO
-MAR 10 · 21:15
+MAÑANA · 21:15
 -20%
 SOLOS
 Laura Castro Javier Torralba
@@ -107,15 +107,7 @@ VER LOS 10 →
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
 MENTALISMO
-HOY · 21:30
-DESTINOS
-Adrian Gonzalo
-★ 5,0
-desde 12 €
-VER FECHAS
-→
-MENTALISMO
-MAÑANA · 18:30
+HOY · 18:30
 -10%
 MENTIROSO MAGIA MENTAL
 Carlos Devanti
@@ -124,7 +116,15 @@ desde 12 €
 VER FECHAS
 →
 MENTALISMO
-MAÑANA · 20:00
+HOY · 19:30
+DESTINOS
+Adrian Gonzalo
+★ 5,0
+desde 12 €
+VER FECHAS
+→
+MENTALISMO
+HOY · 20:00
 SAL DE MI MENTE
 Fito Crawford
 ★ 4,9
@@ -194,7 +194,7 @@ VER LOS 12 →
 Magia infantil a partir de 3 años y espectáculos para bebés.
 
 BEBÉS
-MAÑANA · 11:30
+HOY · 11:30
 ESTRELLAS Y SOÑAR
 Laura Alcocer
 ★ 4,7
@@ -202,7 +202,7 @@ desde 7 €
 VER FECHAS
 →
 INFANTIL
-MAÑANA · 12:30
+HOY · 12:30
 SOÑANDO MAGIA
 David Vega
 ★ 4,9
@@ -210,7 +210,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL
-MAÑANA · 16:30
+HOY · 16:30
 VA DE MAGIA. MAGO PONCE
 Mago Ponce
 ★ 4,9
@@ -218,7 +218,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL
-MAÑANA · 17:00
+HOY · 17:00
 PIEDRA, PAPEL O TIJERA
 Nicolás Vicente “Mago Nicols”
 ★ 4,9
@@ -295,7 +295,7 @@ VER LOS 20 →
 Las mejores propuestas de humor.
 
 HUMOR
-MAÑANA · 18:00
+HOY · 18:00
 CHECKPOINT CHARLIE
 Alba Quiñones y José Urzáiz
 ESTRENO
@@ -303,7 +303,7 @@ desde 12 €
 VER FECHAS
 →
 HUMOR
-MAR 10 · 21:00
+MAÑANA · 21:00
 QUE TE PARTA UN RAYO
 Marta Martín Ismael Vicente Silvia Ros Carlos Herrera
 ESTRENO
@@ -463,7 +463,7 @@ VER LOS 7 →
 Impro, danza, drama, cortos y otras propuestas para descubrir algo diferente.
 
 CINE
-MAR 10 · 19:30
+MAÑANA · 19:30
 CORTOS CON Ñ
 Festival de cortometrajes
 ★ 4,3
@@ -471,7 +471,7 @@ desde 6 €
 VER FECHAS
 →
 IMPRO
-MAR 10 · 21:15
+MAÑANA · 21:15
 -20%
 SOLOS
 Laura Castro Javier Torralba
@@ -523,7 +523,7 @@ ALGO BREVE
 Microteatro, a un palmo de ti.
 
 MICROTEATRO
-MAR 10 · 20:00
+MAÑANA · 20:00
 SUERTE
 Autoría: Paula Muñoz Barrales Dirección: Macarena Torres Intérpretes: Cecilia Vilas Paula Lucas Paula Muñoz Barrales
 ESTRENO
@@ -660,7 +660,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/bSuJ2xBC8cFy7pM4Z3Hu9boH/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-zENAM5qMqUDtT2+hijUwdHmee3H1CH5ZBYK4zHrGd/tky8p3dZ60Q/F5iwdmU6lE"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6b41"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/eiVW-J8HuKsDxSGNYMZ-9XFQ/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-9IL/ckr6Z26krlZO9X/HhnPrbTGmBtP0SggiOAHT/p8g9NXmZLffi0YB8oJ2NXez"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6b41"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -744,7 +744,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
@@ -756,4 +756,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                             
+                           
