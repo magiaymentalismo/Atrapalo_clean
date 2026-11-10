@@ -108,6 +108,7 @@ Magia, mentalismo e hipnosis que te dejan sin palabras.
 
 MENTALISMO
 JUE 12 · 20:00
+-10%
 SAL DE MI MENTE
 Fito Crawford
 ★ 4,9
@@ -116,6 +117,7 @@ VER FECHAS
 →
 MAGIA
 JUE 12 · 21:30
+-40%
 MILAGROS Y OTRAS MENTIRAS
 Mago Nicols
 ★ 5,0
@@ -124,6 +126,7 @@ VER FECHAS
 →
 MAGIA
 VIE 13 · 20:00
+-10%
 DESCARADO. MAGIA CANALLA
 Carlos Devanti
 ★ 5,0
@@ -132,6 +135,7 @@ VER FECHAS
 →
 MENTALISMO
 VIE 13 · 21:30
+-10%
 HACKEANDO MENTES
 Antonio Martínez Salinas
 ★ 5,0
@@ -164,6 +168,7 @@ VER FECHAS
 →
 MENTALISMO
 DOM 15 · 21:30
+-10%
 DESTINOS
 Adrian Gonzalo
 ★ 5,0
@@ -336,6 +341,7 @@ VER FECHAS
 →
 HUMOR
 VIE 13 · 23:00
+-10%
 HUEVOS ROTOS
 Samuel Buitrago y Adrián Portolés
 ★ 5,0
@@ -479,6 +485,7 @@ VER FECHAS
 →
 IMPRO
 JUE 12 · 21:15
+-20%
 IMPROCAFÉ SHOW
 Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, Noneh Herrero, María Márquez, Pablo Acevedo
 ★ 4,9
@@ -742,7 +749,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
@@ -754,4 +761,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                             
+                           
