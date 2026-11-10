@@ -37,15 +37,6 @@ VER LOS 8 →
 
 Estrenos y todas las novedades de nuestra cartelera.
 
-IMPRO
-HOY · 21:15
--20%
-SOLOS
-Laura Castro Javier Torralba
-ESTRENO
-desde 10 €
-VER FECHAS
-→
 HUMOR
 VIE 13 · 19:30
 PAREJAS
@@ -66,6 +57,14 @@ INFANTIL
 SÁB 14 · 17:00
 MÁS MAGIA
 Rubén Reyeros
+ESTRENO
+desde 10 €
+VER FECHAS
+→
+IMPRO
+MAR 17 · 21:15
+SOLOS
+Laura Castro Javier Torralba
 ESTRENO
 desde 10 €
 VER FECHAS
@@ -102,7 +101,7 @@ desde 10 €
 VER FECHAS
 →
 PARA SORPRENDERTE
-VER LOS 10 →
+VER LOS 11 →
 
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
@@ -188,6 +187,14 @@ MIÉ 18 · 20:30
 -20%
 GOLDEN TICKET. TIENE QUE SER MAGIA
 Chap Magic
+ESTRENO
+desde 12 €
+VER FECHAS
+→
+MENTALISMO
+SÁB 12 · 23:00
+SADIISTIC
+Rubén Reyeros
 ESTRENO
 desde 12 €
 VER FECHAS
@@ -299,14 +306,6 @@ VER LOS 20 →
 Las mejores propuestas de humor.
 
 HUMOR
-HOY · 21:00
-QUE TE PARTA UN RAYO
-Marta Martín Ismael Vicente Silvia Ros Carlos Herrera
-ESTRENO
-desde 12 €
-VER FECHAS
-→
-HUMOR
 JUE 12 · 19:30
 CUENTOS DEL FIN DEL MUNDO
 Alejandra Arias, Teresa Ponce de León, Jaime Páramo y Miguel Carbajo.
@@ -415,6 +414,14 @@ desde 8 €
 VER FECHAS
 →
 HUMOR
+MAR 17 · 21:00
+QUE TE PARTA UN RAYO
+Marta Martín Ismael Vicente Silvia Ros Carlos Herrera
+ESTRENO
+desde 12 €
+VER FECHAS
+→
+HUMOR
 MIÉ 18 · 21:00
 YIPITI
 Ana Gabriela Manzano, Carmen Garvín, Miriam Basanta
@@ -466,23 +473,6 @@ VER LOS 7 →
 
 Impro, danza, drama, cortos y otras propuestas para descubrir algo diferente.
 
-CINE
-HOY · 19:30
-CORTOS CON Ñ
-Festival de cortometrajes
-★ 4,3
-desde 6 €
-VER FECHAS
-→
-IMPRO
-HOY · 21:15
--20%
-SOLOS
-Laura Castro Javier Torralba
-ESTRENO
-desde 10 €
-VER FECHAS
-→
 IMPRO
 JUE 12 · 21:15
 -20%
@@ -508,6 +498,22 @@ Alumnos y alumnas de la compañía de Improcafé
 desde 5 €
 VER FECHAS
 →
+CINE
+MAR 17 · 19:30
+CORTOS CON Ñ
+Festival de cortometrajes
+★ 4,3
+desde 6 €
+VER FECHAS
+→
+IMPRO
+MAR 17 · 21:15
+SOLOS
+Laura Castro Javier Torralba
+ESTRENO
+desde 10 €
+VER FECHAS
+→
 DRAMA
 VIE 20 · 21:00
 EL GÉ
@@ -528,7 +534,7 @@ ALGO BREVE
 Microteatro, a un palmo de ti.
 
 MICROTEATRO
-HOY · 20:00
+MAR 17 · 20:00
 SUERTE
 Autoría: Paula Muñoz Barrales Dirección: Macarena Torres Intérpretes: Cecilia Vilas Paula Lucas Paula Muñoz Barrales
 ESTRENO
@@ -537,7 +543,7 @@ VER FECHAS
 →
 Por plan
 Todos
-49
+50
 AYUDA
 PREGUNTAS FRECUENTES
 ¿Por qué cobráis gastos de gestión?
@@ -665,7 +671,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/0lEGiwO4Qwx5R9ArxUy0mBpf/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-EAo6Ha/0aEx5jCr6g7xMjsJOFOBjyTnujJgSxqmLVf5aQyd8AcHOvLGNnr6SM7pG"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6b61"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/0lEGiwO4Qwx5R9ArxUy0mBpf/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-EAo6Ha/0aEx5jCr6g7xMjsJOFOBjyTnujJgSxqmLVf5aQyd8AcHOvLGNnr6SM7pG"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6b90"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
