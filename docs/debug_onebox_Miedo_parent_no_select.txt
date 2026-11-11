@@ -17,9 +17,9 @@ Si usas una VPN o un proxy, desactívalo.
 Prueba con otra conexión, por ejemplo con datos móviles.
 Espera unos minutos y vuelve a intentarlo, sin recargar la página muchas veces.
 Referencia (Ray ID):
-a58bceb5ac3e4c7c
+a590e6759d73f7ff
 Tu IP:
-52.160.160.240
+4.246.70.124
 Avísanos de un error
 
 HTML_HEAD:
