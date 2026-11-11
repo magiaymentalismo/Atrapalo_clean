@@ -106,7 +106,7 @@ VER LOS 11 →
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
 MENTALISMO
-JUE 12 · 20:00
+MAÑANA · 20:00
 -10%
 SAL DE MI MENTE
 Fito Crawford
@@ -115,7 +115,7 @@ desde 12 €
 VER FECHAS
 →
 MAGIA
-JUE 12 · 21:30
+MAÑANA · 21:30
 -40%
 MILAGROS Y OTRAS MENTIRAS
 Mago Nicols
@@ -306,7 +306,7 @@ VER LOS 20 →
 Las mejores propuestas de humor.
 
 HUMOR
-JUE 12 · 19:30
+MAÑANA · 19:30
 CUENTOS DEL FIN DEL MUNDO
 Alejandra Arias, Teresa Ponce de León, Jaime Páramo y Miguel Carbajo.
 ★ 5,0
@@ -474,7 +474,7 @@ VER LOS 7 →
 Impro, danza, drama, cortos y otras propuestas para descubrir algo diferente.
 
 IMPRO
-JUE 12 · 21:15
+MAÑANA · 21:15
 -20%
 IMPROCAFÉ SHOW
 Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, Noneh Herrero, María Márquez, Pablo Acevedo
@@ -671,7 +671,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/0lEGiwO4Qwx5R9ArxUy0mBpf/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-EAo6Ha/0aEx5jCr6g7xMjsJOFOBjyTnujJgSxqmLVf5aQyd8AcHOvLGNnr6SM7pG"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6b90h1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/0lEGiwO4Qwx5R9ArxUy0mBpf/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-EAo6Ha/0aEx5jCr6g7xMjsJOFOBjyTnujJgSxqmLVf5aQyd8AcHOvLGNnr6SM7pG"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6ba0h2"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
