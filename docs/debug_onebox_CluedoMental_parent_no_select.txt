@@ -33,18 +33,10 @@ Para reirte
 Para descubrir
 Algo breve
 NOVEDADES
-VER LOS 8 →
+VER LOS 7 →
 
 Estrenos y todas las novedades de nuestra cartelera.
 
-IMPRO
-MAÑANA · 21:15
-SOLOS
-Laura Castro Javier Torralba
-ESTRENO
-desde 10 €
-VER FECHAS
-→
 SHOWS IN ENGLISH
 MIÉ 18 · 19:00
 MADRID IS MAGIC
@@ -86,10 +78,11 @@ desde 12 €
 VER FECHAS
 →
 CATAS Y EXPERIENCIAS
+SÁB 5 · 13:30
 QUESOS VS VINOS
 Alberto Javier Santos
 ESTRENO
-desde 10 €
+desde 35 €
 VER FECHAS
 →
 DANZA
@@ -123,6 +116,7 @@ VER FECHAS
 →
 MENTALISMO
 JUE 19 · 20:00
+-10%
 SAL DE MI MENTE
 Fito Crawford
 ★ 4,9
@@ -131,6 +125,7 @@ VER FECHAS
 →
 MAGIA
 JUE 19 · 21:30
+-40%
 MILAGROS Y OTRAS MENTIRAS
 Mago Nicols
 ★ 5,0
@@ -163,6 +158,7 @@ VER FECHAS
 →
 MENTALISMO
 DOM 22 · 18:30
+-10%
 ATRÉVETE. MAGIA MENTAL
 Vicente Lucca
 ★ 4,8
@@ -382,6 +378,7 @@ VER FECHAS
 →
 HUMOR
 DOM 22 · 18:00
+-10%
 SOY UNA PERSONA HORRIBLE
 Sara González
 ★ 4,7
@@ -445,12 +442,12 @@ Laura Alcocer
 desde 12 €
 VER FECHAS
 →
-HUMOR
-LUN 7 · 19:30
-UN DÍA DE MIERDA
-Casaris Paz
-★ 4,7
-desde 12 €
+CATAS Y EXPERIENCIAS
+SÁB 5 · 13:30
+QUESOS VS VINOS
+Alberto Javier Santos
+ESTRENO
+desde 35 €
 VER FECHAS
 →
 HUMOR
@@ -469,11 +466,12 @@ Samuel Padilla. Lluna Issa Casterà.
 desde 14 €
 VER FECHAS
 →
-CATAS Y EXPERIENCIAS
-QUESOS VS VINOS
-Alberto Javier Santos
-ESTRENO
-desde 10 €
+HUMOR
+SÁB 26 · 19:30
+UN DÍA DE MIERDA
+Casaris Paz
+★ 4,7
+desde 12 €
 VER FECHAS
 →
 HUMOR
@@ -484,7 +482,7 @@ desde 10 €
 VER FECHAS
 →
 PARA DESCUBRIR
-VER LOS 7 →
+VER LOS 6 →
 
 Impro, danza, drama, cortos y otras propuestas para descubrir algo diferente.
 
@@ -494,14 +492,6 @@ CORTOS CON Ñ
 Festival de cortometrajes
 ★ 4,3
 desde 6 €
-VER FECHAS
-→
-IMPRO
-MAÑANA · 21:15
-SOLOS
-Laura Castro Javier Torralba
-ESTRENO
-desde 10 €
 VER FECHAS
 →
 IMPRO
@@ -529,10 +519,11 @@ desde 5 €
 VER FECHAS
 →
 CATAS Y EXPERIENCIAS
+SÁB 5 · 13:30
 QUESOS VS VINOS
 Alberto Javier Santos
 ESTRENO
-desde 10 €
+desde 35 €
 VER FECHAS
 →
 DANZA
@@ -556,7 +547,7 @@ VER FECHAS
 →
 Por plan
 Todos
-53
+52
 AYUDA
 PREGUNTAS FRECUENTES
 ¿Por qué cobráis gastos de gestión?
@@ -684,7 +675,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/4i3aN5wAweL7i3ADI7BSX4B-/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-hmpOzIrwNV9U5olYi1fEDkIADCL+6vEU2nMaqFORl8aTIbVDVal2OZwsqxY2mbTt"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6bb1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/4i3aN5wAweL7i3ADI7BSX4B-/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-hmpOzIrwNV9U5olYi1fEDkIADCL+6vEU2nMaqFORl8aTIbVDVal2OZwsqxY2mbTt"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6bc0"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -768,7 +759,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
@@ -780,4 +771,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                           
+                             
