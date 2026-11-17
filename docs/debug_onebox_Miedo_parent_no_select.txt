@@ -37,14 +37,6 @@ VER LOS 7 →
 
 Estrenos y todas las novedades de nuestra cartelera.
 
-SHOWS IN ENGLISH
-MAÑANA · 19:00
-MADRID IS MAGIC
-Carlos Devanti
-ESTRENO
-desde 12 €
-VER FECHAS
-→
 DRAMA
 VIE 20 · 21:00
 EL GÉ
@@ -69,12 +61,28 @@ ESTRENO
 desde 12 €
 VER FECHAS
 →
+SHOWS IN ENGLISH
+MIÉ 25 · 19:00
+MADRID IS MAGIC
+Carlos Devanti
+ESTRENO
+desde 12 €
+VER FECHAS
+→
 HUMOR
 MIÉ 25 · 19:30
 PAREJAS
 Carlos Soto, Pilar Manzanares, Ester Marfil, Paula Fernández, Ana García, Mª Ángeles Lucas, Laura Albor, Ana Elena, Rosa Millet, Luis Belda, Mª Ángeles Núñez
 ★ 5,0
 desde 12 €
+VER FECHAS
+→
+DANZA
+SÁB 28 · 14:15
+REFORMA - I RESIDENCIA DE CREACIÓN LEDJ
+Maite Felipe y Martín Barriuso Producción musical: Pablo González Toledo
+★ 5,0
+desde 10 €
 VER FECHAS
 →
 CATAS Y EXPERIENCIAS
@@ -85,26 +93,11 @@ ESTRENO
 desde 35 €
 VER FECHAS
 →
-DANZA
-TOKONOMA - I RESIDENCIA DE CREACIÓN LEDJ
-Livia Peverelli, Cristina Mayoral y Maite Felipe
-★ 5,0
-desde 10 €
-VER FECHAS
-→
 PARA SORPRENDERTE
 VER LOS 12 →
 
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
-SHOWS IN ENGLISH
-MAÑANA · 19:00
-MADRID IS MAGIC
-Carlos Devanti
-ESTRENO
-desde 12 €
-VER FECHAS
-→
 MENTALISMO
 MAÑANA · 20:30
 -20%
@@ -174,10 +167,18 @@ desde 10 €
 VER FECHAS
 →
 MENTALISMO
-DOM 22 · 21:30
+DOM 22 · 21:00
 DESTINOS
 Adrian Gonzalo
 ★ 5,0
+desde 12 €
+VER FECHAS
+→
+SHOWS IN ENGLISH
+MIÉ 25 · 19:00
+MADRID IS MAGIC
+Carlos Devanti
+ESTRENO
 desde 12 €
 VER FECHAS
 →
@@ -475,10 +476,11 @@ desde 12 €
 VER FECHAS
 →
 HUMOR
+SÁB 23 · 21:00
 SEX O NO SEX
 María Simón
 ★ 4,8
-desde 10 €
+desde 14 €
 VER FECHAS
 →
 PARA DESCUBRIR
@@ -486,14 +488,6 @@ VER LOS 6 →
 
 Impro, danza, drama, cortos y otras propuestas para descubrir algo diferente.
 
-CINE
-HOY · 19:30
-CORTOS CON Ñ
-Festival de cortometrajes
-★ 4,3
-desde 6 €
-VER FECHAS
-→
 IMPRO
 JUE 19 · 21:15
 IMPROCAFÉ SHOW
@@ -518,6 +512,22 @@ Alumnos y alumnas de la compañía de Improcafé
 desde 5 €
 VER FECHAS
 →
+CINE
+MAR 24 · 19:30
+CORTOS CON Ñ
+Festival de cortometrajes
+★ 4,3
+desde 6 €
+VER FECHAS
+→
+DANZA
+SÁB 28 · 14:15
+REFORMA - I RESIDENCIA DE CREACIÓN LEDJ
+Maite Felipe y Martín Barriuso Producción musical: Pablo González Toledo
+★ 5,0
+desde 10 €
+VER FECHAS
+→
 CATAS Y EXPERIENCIAS
 SÁB 5 · 13:30
 QUESOS VS VINOS
@@ -526,23 +536,15 @@ ESTRENO
 desde 35 €
 VER FECHAS
 →
-DANZA
-TOKONOMA - I RESIDENCIA DE CREACIÓN LEDJ
-Livia Peverelli, Cristina Mayoral y Maite Felipe
-★ 5,0
-desde 10 €
-VER FECHAS
-→
 ALGO BREVE
 
 Microteatro, a un palmo de ti.
 
 MICROTEATRO
-HOY · 20:00
 SUERTE
 Autoría: Paula Muñoz Barrales Dirección: Macarena Torres Intérpretes: Cecilia Vilas Paula Lucas Paula Muñoz Barrales
 ESTRENO
-desde 8 €
+desde 10 €
 VER FECHAS
 →
 Por plan
@@ -675,7 +677,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/4i3aN5wAweL7i3ADI7BSX4B-/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-hmpOzIrwNV9U5olYi1fEDkIADCL+6vEU2nMaqFORl8aTIbVDVal2OZwsqxY2mbTt"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6bd1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/4i3aN5wAweL7i3ADI7BSX4B-/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-hmpOzIrwNV9U5olYi1fEDkIADCL+6vEU2nMaqFORl8aTIbVDVal2OZwsqxY2mbTt"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6bg0"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
