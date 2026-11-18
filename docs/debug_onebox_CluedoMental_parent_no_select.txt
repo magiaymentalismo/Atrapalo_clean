@@ -99,7 +99,7 @@ VER LOS 12 →
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
 MENTALISMO
-MAÑANA · 20:30
+HOY · 20:30
 -20%
 GOLDEN TICKET. TIENE QUE SER MAGIA
 Chap Magic
@@ -108,7 +108,7 @@ desde 12 €
 VER FECHAS
 →
 MENTALISMO
-JUE 19 · 20:00
+MAÑANA · 20:00
 -10%
 SAL DE MI MENTE
 Fito Crawford
@@ -117,7 +117,7 @@ desde 12 €
 VER FECHAS
 →
 MAGIA
-JUE 19 · 21:30
+MAÑANA · 21:30
 -40%
 MILAGROS Y OTRAS MENTIRAS
 Mago Nicols
@@ -305,15 +305,7 @@ VER LOS 22 →
 Las mejores propuestas de humor.
 
 HUMOR
-HOY · 21:00
-QUE TE PARTA UN RAYO
-Marta Martín Ismael Vicente Silvia Ros Carlos Herrera
-ESTRENO
-desde 12 €
-VER FECHAS
-→
-HUMOR
-JUE 19 · 19:30
+MAÑANA · 19:30
 CUENTOS DEL FIN DEL MUNDO
 Alejandra Arias, Teresa Ponce de León, Jaime Páramo y Miguel Carbajo.
 ★ 5,0
@@ -483,13 +475,20 @@ María Simón
 desde 14 €
 VER FECHAS
 →
+HUMOR
+QUE TE PARTA UN RAYO
+Marta Martín Ismael Vicente Silvia Ros Carlos Herrera
+ESTRENO
+desde 10 €
+VER FECHAS
+→
 PARA DESCUBRIR
 VER LOS 6 →
 
 Impro, danza, drama, cortos y otras propuestas para descubrir algo diferente.
 
 IMPRO
-JUE 19 · 21:15
+MAÑANA · 21:15
 IMPROCAFÉ SHOW
 Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, Noneh Herrero, María Márquez, Pablo Acevedo
 ★ 4,9
@@ -677,7 +676,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/4i3aN5wAweL7i3ADI7BSX4B-/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-hmpOzIrwNV9U5olYi1fEDkIADCL+6vEU2nMaqFORl8aTIbVDVal2OZwsqxY2mbTt"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6bg0"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/4i3aN5wAweL7i3ADI7BSX4B-/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-hmpOzIrwNV9U5olYi1fEDkIADCL+6vEU2nMaqFORl8aTIbVDVal2OZwsqxY2mbTt"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6bg2"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
