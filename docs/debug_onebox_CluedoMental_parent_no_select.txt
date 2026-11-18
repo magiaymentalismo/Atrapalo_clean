@@ -94,13 +94,12 @@ desde 35 €
 VER FECHAS
 →
 PARA SORPRENDERTE
-VER LOS 12 →
+VER LOS 13 →
 
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
 MENTALISMO
 HOY · 20:30
--20%
 GOLDEN TICKET. TIENE QUE SER MAGIA
 Chap Magic
 ESTRENO
@@ -196,6 +195,14 @@ DAVID VEGA. NO SOLO ES MAGIA
 David Vega
 ★ 4,9
 desde 10 €
+VER FECHAS
+→
+DRAMA
+DOM 13 · 19:30
+METUS. LA CARA MÁS DESCONOCIDA DEL MIEDO
+Samuel Padilla, Patricia Domínguez.
+★ 4,8
+desde 14 €
 VER FECHAS
 →
 CON NIÑOS
@@ -300,7 +307,7 @@ desde 7 €
 VER FECHAS
 →
 PARA REIRTE
-VER LOS 22 →
+VER LOS 23 →
 
 Las mejores propuestas de humor.
 
@@ -419,6 +426,14 @@ Sara Cardona
 desde 12 €
 VER FECHAS
 →
+MICROTEATRO
+MAR 1 · 21:00
+CABÁRCENO
+Irene Muro y Óscar Fervaz
+ESTRENO
+desde 10 €
+VER FECHAS
+→
 HUMOR
 MIÉ 2 · 19:30
 CHECKPOINT CHARLIE
@@ -483,7 +498,7 @@ desde 10 €
 VER FECHAS
 →
 PARA DESCUBRIR
-VER LOS 6 →
+VER LOS 7 →
 
 Impro, danza, drama, cortos y otras propuestas para descubrir algo diferente.
 
@@ -527,6 +542,14 @@ Maite Felipe y Martín Barriuso Producción musical: Pablo González Toledo
 desde 10 €
 VER FECHAS
 →
+DANZA
+MIÉ 2 · 21:00
+MICRODANZAS 4.0
+Claudia León, Dahiana Betancourt, Sofia Barbieri, Mathi Lachama, Semilla, Bo, Celia Cabezas, Maite Felipe y Martín Barriuso
+★ 4,8
+desde 10 €
+VER FECHAS
+→
 CATAS Y EXPERIENCIAS
 SÁB 5 · 13:30
 QUESOS VS VINOS
@@ -548,7 +571,7 @@ VER FECHAS
 →
 Por plan
 Todos
-52
+55
 AYUDA
 PREGUNTAS FRECUENTES
 ¿Por qué cobráis gastos de gestión?
@@ -676,7 +699,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/4i3aN5wAweL7i3ADI7BSX4B-/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-hmpOzIrwNV9U5olYi1fEDkIADCL+6vEU2nMaqFORl8aTIbVDVal2OZwsqxY2mbTt"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6bg2"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/4i3aN5wAweL7i3ADI7BSX4B-/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-hmpOzIrwNV9U5olYi1fEDkIADCL+6vEU2nMaqFORl8aTIbVDVal2OZwsqxY2mbTt"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6bh0"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
