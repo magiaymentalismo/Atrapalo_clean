@@ -107,15 +107,6 @@ Fito Crawford
 desde 12 €
 VER FECHAS
 →
-MAGIA
-HOY · 21:30
--40%
-MILAGROS Y OTRAS MENTIRAS
-Mago Nicols
-★ 5,0
-desde 12 €
-VER FECHAS
-→
 MENTALISMO
 MAÑANA · 20:00
 MENTIROSO MAGIA MENTAL
@@ -178,6 +169,14 @@ MIÉ 25 · 20:30
 GOLDEN TICKET. TIENE QUE SER MAGIA
 Chap Magic
 ESTRENO
+desde 12 €
+VER FECHAS
+→
+MAGIA
+JUE 26 · 21:30
+MILAGROS Y OTRAS MENTIRAS
+Mago Nicols
+★ 5,0
 desde 12 €
 VER FECHAS
 →
@@ -312,14 +311,6 @@ VER LOS 23 →
 Las mejores propuestas de humor.
 
 HUMOR
-HOY · 19:30
-CUENTOS DEL FIN DEL MUNDO
-Alejandra Arias, Teresa Ponce de León, Jaime Páramo y Miguel Carbajo.
-★ 5,0
-desde 15 €
-VER FECHAS
-→
-HUMOR
 MAÑANA · 19:00
 TODXS NOS VAMOS A MORIR
 Noelia Marló
@@ -399,6 +390,14 @@ YIPITI
 Ana Gabriela Manzano, Carmen Garvín, Miriam Basanta
 ★ 5,0
 desde 12 €
+VER FECHAS
+→
+HUMOR
+JUE 26 · 19:30
+CUENTOS DEL FIN DEL MUNDO
+Alejandra Arias, Teresa Ponce de León, Jaime Páramo y Miguel Carbajo.
+★ 5,0
+desde 15 €
 VER FECHAS
 →
 HUMOR
@@ -558,20 +557,9 @@ ESTRENO
 desde 35 €
 VER FECHAS
 →
-ALGO BREVE
-
-Microteatro, a un palmo de ti.
-
-MICROTEATRO
-SUERTE
-Autoría: Paula Muñoz Barrales Dirección: Macarena Torres Intérpretes: Cecilia Vilas Paula Lucas Paula Muñoz Barrales
-ESTRENO
-desde 10 €
-VER FECHAS
-→
 Por plan
 Todos
-55
+54
 AYUDA
 PREGUNTAS FRECUENTES
 ¿Por qué cobráis gastos de gestión?
@@ -699,7 +687,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/4i3aN5wAweL7i3ADI7BSX4B-/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-hmpOzIrwNV9U5olYi1fEDkIADCL+6vEU2nMaqFORl8aTIbVDVal2OZwsqxY2mbTt"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6bh1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/4i3aN5wAweL7i3ADI7BSX4B-/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-hmpOzIrwNV9U5olYi1fEDkIADCL+6vEU2nMaqFORl8aTIbVDVal2OZwsqxY2mbTt"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6bi0h2"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -783,7 +771,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
@@ -795,4 +783,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                             
+                         
