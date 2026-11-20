@@ -318,14 +318,6 @@ desde 15 €
 VER FECHAS
 →
 HUMOR
-HOY · 22:30
-MISS DESGRACIAS
-María Simón
-★ 5,0
-desde 14 €
-VER FECHAS
-→
-HUMOR
 HOY · 23:00
 HUEVOS ROTOS
 Samuel Buitrago y Adrián Portolés
@@ -364,15 +356,6 @@ AQUÍ SE HABLA PAJA
 Stand up comedy
 ESTRENO
 desde 8 €
-VER FECHAS
-→
-HUMOR
-DOM 22 · 18:00
--10%
-SOY UNA PERSONA HORRIBLE
-Sara González
-★ 4,7
-desde 12 €
 VER FECHAS
 →
 HUMOR
@@ -446,6 +429,22 @@ QUESOS VS VINOS
 Alberto Javier Santos
 ESTRENO
 desde 35 €
+VER FECHAS
+→
+HUMOR
+SÁB 5 · 21:00
+MISS DESGRACIAS
+María Simón
+★ 5,0
+desde 14 €
+VER FECHAS
+→
+HUMOR
+SÁB 5 · 22:30
+SOY UNA PERSONA HORRIBLE
+Sara González
+★ 4,7
+desde 12 €
 VER FECHAS
 →
 HUMOR
@@ -686,7 +685,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/4i3aN5wAweL7i3ADI7BSX4B-/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-hmpOzIrwNV9U5olYi1fEDkIADCL+6vEU2nMaqFORl8aTIbVDVal2OZwsqxY2mbTt"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6bh1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/4i3aN5wAweL7i3ADI7BSX4B-/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-hmpOzIrwNV9U5olYi1fEDkIADCL+6vEU2nMaqFORl8aTIbVDVal2OZwsqxY2mbTt"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6bi0h2"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -770,7 +769,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
@@ -782,4 +781,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                             
+                         
