@@ -37,6 +37,14 @@ VER LOS 7 →
 
 Estrenos y todas las novedades de nuestra cartelera.
 
+INFANTIL
+HOY · 17:00
+MÁS MAGIA
+Rubén Reyeros
+ESTRENO
+desde 10 €
+VER FECHAS
+→
 DRAMA
 HOY · 21:00
 EL GÉ
@@ -46,15 +54,7 @@ desde 23 €
 VER FECHAS
 →
 INFANTIL
-MAÑANA · 17:00
-MÁS MAGIA
-Rubén Reyeros
-ESTRENO
-desde 10 €
-VER FECHAS
-→
-INFANTIL
-DOM 22 · 16:30
+MAÑANA · 16:30
 CAPERUCITA MOZART
 Andrea Carpintero, Pedro Lluch, Paula Girona
 ESTRENO
@@ -98,24 +98,8 @@ VER LOS 13 →
 
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
-MENTALISMO
-HOY · 20:00
-MENTIROSO MAGIA MENTAL
-Carlos Devanti
-★ 4,9
-desde 12 €
-VER FECHAS
-→
-MENTALISMO
-HOY · 21:30
-HACKEANDO MENTES
-Antonio Martínez Salinas
-★ 5,0
-desde 12 €
-VER FECHAS
-→
 MAGIA
-MAÑANA · 20:00
+HOY · 20:00
 DESCARADO. MAGIA CANALLA
 Carlos Devanti
 ★ 5,0
@@ -123,7 +107,7 @@ desde 12 €
 VER FECHAS
 →
 MENTALISMO
-MAÑANA · 21:30
+HOY · 21:30
 SAL DE MI MENTE
 Fito Crawford
 ★ 4,9
@@ -131,7 +115,7 @@ desde 12 €
 VER FECHAS
 →
 MENTALISMO
-DOM 22 · 18:30
+MAÑANA · 18:30
 -10%
 ATRÉVETE. MAGIA MENTAL
 Vicente Lucca
@@ -140,7 +124,7 @@ desde 12 €
 VER FECHAS
 →
 MAGIA
-DOM 22 · 20:00
+MAÑANA · 20:00
 POWER: MAGIA Y MENTALISMO
 Mago Ponce
 ★ 5,0
@@ -148,7 +132,7 @@ desde 10 €
 VER FECHAS
 →
 MENTALISMO
-DOM 22 · 21:00
+MAÑANA · 21:00
 DESTINOS
 Adrian Gonzalo
 ★ 5,0
@@ -175,6 +159,22 @@ MAGIA
 JUE 26 · 21:30
 MILAGROS Y OTRAS MENTIRAS
 Mago Nicols
+★ 5,0
+desde 12 €
+VER FECHAS
+→
+MENTALISMO
+VIE 27 · 23:00
+MENTIROSO MAGIA MENTAL
+Carlos Devanti
+★ 4,9
+desde 12 €
+VER FECHAS
+→
+MENTALISMO
+VIE 11 · 22:30
+HACKEANDO MENTES
+Antonio Martínez Salinas
 ★ 5,0
 desde 12 €
 VER FECHAS
@@ -209,7 +209,7 @@ VER LOS 12 →
 Magia infantil a partir de 3 años y espectáculos para bebés.
 
 BEBÉS
-MAÑANA · 11:30
+HOY · 11:30
 FANTASÍA
 Belén Martínez
 ★ 4,7
@@ -217,7 +217,7 @@ desde 7 €
 VER FECHAS
 →
 INFANTIL
-MAÑANA · 12:00
+HOY · 12:00
 PIEDRA, PAPEL O TIJERA
 Nicolás Vicente “Mago Nicols”
 ★ 4,9
@@ -225,15 +225,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL
-MAÑANA · 12:30
-VA DE MAGIA. MAGO PONCE
-Mago Ponce
-★ 4,9
-desde 10 €
-VER FECHAS
-→
-INFANTIL
-MAÑANA · 16:30
+HOY · 16:30
 SOÑANDO MAGIA
 David Vega
 ★ 4,9
@@ -241,7 +233,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL
-MAÑANA · 17:00
+HOY · 17:00
 MÁS MAGIA
 Rubén Reyeros
 ESTRENO
@@ -249,7 +241,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL
-MAÑANA · 18:00
+HOY · 18:00
 FLIPOMAGIA
 Gerard Clúa
 ★ 4,7
@@ -257,7 +249,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL
-MAÑANA · 18:30
+HOY · 18:30
 LUCES, CÁMARA Y MAGIA
 Carlos Devanti
 ★ 4,9
@@ -265,7 +257,7 @@ desde 10 €
 VER FECHAS
 →
 BEBÉS
-DOM 22 · 11:30
+MAÑANA · 11:30
 ESTRELLAS Y SOÑAR
 Laura Alcocer
 ★ 4,7
@@ -273,7 +265,7 @@ desde 7 €
 VER FECHAS
 →
 INFANTIL
-DOM 22 · 12:30
+MAÑANA · 12:30
 ALGUIEN DIJO ¿SUPERPODERES?
 Mago Ponce
 ★ 4,9
@@ -281,7 +273,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL
-DOM 22 · 16:30
+MAÑANA · 16:30
 CAPERUCITA MOZART
 Andrea Carpintero, Pedro Lluch, Paula Girona
 ESTRENO
@@ -289,7 +281,7 @@ desde 12 €
 VER FECHAS
 →
 INFANTIL
-DOM 22 · 17:00
+MAÑANA · 17:00
 MAGIA Y DESVARIOS VARIOS
 Joaco Showman
 ★ 5,0
@@ -304,29 +296,21 @@ Ainhoa Sarmiento
 desde 7 €
 VER FECHAS
 →
+INFANTIL
+SÁB 28 · 12:30
+VA DE MAGIA. MAGO PONCE
+Mago Ponce
+★ 4,9
+desde 10 €
+VER FECHAS
+→
 PARA REIRTE
 VER LOS 23 →
 
 Las mejores propuestas de humor.
 
 HUMOR
-HOY · 19:00
-TODXS NOS VAMOS A MORIR
-Noelia Marló
-★ 5,0
-desde 15 €
-VER FECHAS
-→
-HUMOR
-HOY · 23:00
-HUEVOS ROTOS
-Samuel Buitrago y Adrián Portolés
-★ 5,0
-desde 10 €
-VER FECHAS
-→
-HUMOR
-MAÑANA · 19:30
+HOY · 19:30
 AFTER KIKI
 Casaris Paz, Jorge Alvariñas
 ★ 4,8
@@ -334,7 +318,7 @@ desde 14 €
 VER FECHAS
 →
 HUMOR
-MAÑANA · 22:30
+HOY · 22:30
 TÍA, NADIE ES PERFECTA
 Almudena Alcocer, Maria Francés, Julia Olcina, Yaiza de la Torre y Alejandra Lozano
 ESTRENO
@@ -342,7 +326,7 @@ desde 12 €
 VER FECHAS
 →
 MUSICAL
-MAÑANA · 23:00
+HOY · 23:00
 DIVAS Y DIVANES
 Diana Dardo, Mario Manzanares y Artista Invitada
 ★ 5,0
@@ -350,7 +334,7 @@ desde 15 €
 VER FECHAS
 →
 HUMOR
-MAÑANA · 23:59
+HOY · 23:59
 -15%
 AQUÍ SE HABLA PAJA
 Stand up comedy
@@ -375,8 +359,15 @@ desde 15 €
 VER FECHAS
 →
 HUMOR
+VIE 27 · 19:00
+TODXS NOS VAMOS A MORIR
+Noelia Marló
+★ 5,0
+desde 15 €
+VER FECHAS
+→
+HUMOR
 VIE 27 · 21:30
--10%
 CERO DRAMAS
 Paloma Jiménez
 ESTRENO
@@ -420,6 +411,14 @@ VIE 4 · 21:00
 CORAZÓN EN REBAJAS
 Laura Alcocer
 ★ 4,8
+desde 12 €
+VER FECHAS
+→
+HUMOR
+VIE 4 · 21:30
+HUEVOS ROTOS
+Samuel Buitrago y Adrián Portolés
+★ 5,0
 desde 12 €
 VER FECHAS
 →
@@ -508,7 +507,7 @@ desde 23 €
 VER FECHAS
 →
 IMPRO
-DOM 22 · 14:00
+MAÑANA · 14:00
 LA COCINA DE IMPROCAFÉ
 Alumnos y alumnas de la compañía de Improcafé
 ★ 4,8
@@ -685,7 +684,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/4i3aN5wAweL7i3ADI7BSX4B-/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-hmpOzIrwNV9U5olYi1fEDkIADCL+6vEU2nMaqFORl8aTIbVDVal2OZwsqxY2mbTt"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6bi0h2"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/DqDoLJqJmjhqr0vRwNZ2MCHA/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-i/pzQd9yXaF4YJKjgwZnirzbnHFJVcV7xWx5ZG/4PsUh39iq1QuGX0/kQYjMub19"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6bh1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -769,7 +768,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
@@ -781,4 +780,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                         
+                             
