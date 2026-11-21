@@ -38,27 +38,19 @@ VER LOS 7 →
 Estrenos y todas las novedades de nuestra cartelera.
 
 INFANTIL
-HOY · 17:00
-MÁS MAGIA
-Rubén Reyeros
-ESTRENO
-desde 10 €
-VER FECHAS
-→
-DRAMA
-HOY · 21:00
-EL GÉ
-Avelino Piedad
-★ 4,6
-desde 23 €
-VER FECHAS
-→
-INFANTIL
 MAÑANA · 16:30
 CAPERUCITA MOZART
 Andrea Carpintero, Pedro Lluch, Paula Girona
 ESTRENO
 desde 12 €
+VER FECHAS
+→
+DRAMA
+MAÑANA · 19:30
+EL GÉ
+Avelino Piedad
+★ 4,6
+desde 23 €
 VER FECHAS
 →
 SHOWS IN ENGLISH
@@ -93,27 +85,19 @@ ESTRENO
 desde 35 €
 VER FECHAS
 →
+INFANTIL
+SÁB 5 · 17:00
+MÁS MAGIA
+Rubén Reyeros
+ESTRENO
+desde 10 €
+VER FECHAS
+→
 PARA SORPRENDERTE
 VER LOS 13 →
 
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
-MAGIA
-HOY · 20:00
-DESCARADO. MAGIA CANALLA
-Carlos Devanti
-★ 5,0
-desde 12 €
-VER FECHAS
-→
-MENTALISMO
-HOY · 21:30
-SAL DE MI MENTE
-Fito Crawford
-★ 4,9
-desde 12 €
-VER FECHAS
-→
 MENTALISMO
 MAÑANA · 18:30
 -10%
@@ -155,10 +139,26 @@ ESTRENO
 desde 12 €
 VER FECHAS
 →
+MENTALISMO
+JUE 26 · 20:00
+SAL DE MI MENTE
+Fito Crawford
+★ 4,9
+desde 12 €
+VER FECHAS
+→
 MAGIA
 JUE 26 · 21:30
 MILAGROS Y OTRAS MENTIRAS
 Mago Nicols
+★ 5,0
+desde 12 €
+VER FECHAS
+→
+MAGIA
+VIE 27 · 20:00
+DESCARADO. MAGIA CANALLA
+Carlos Devanti
 ★ 5,0
 desde 12 €
 VER FECHAS
@@ -208,44 +208,20 @@ VER LOS 12 →
 
 Magia infantil a partir de 3 años y espectáculos para bebés.
 
-INFANTIL
-HOY · 16:30
-SOÑANDO MAGIA
-David Vega
-★ 4,9
-desde 10 €
-VER FECHAS
-→
-INFANTIL
-HOY · 17:00
-MÁS MAGIA
-Rubén Reyeros
-ESTRENO
-desde 10 €
-VER FECHAS
-→
-INFANTIL
-HOY · 18:00
-FLIPOMAGIA
-Gerard Clúa
-★ 4,7
-desde 10 €
-VER FECHAS
-→
-INFANTIL
-HOY · 18:30
-LUCES, CÁMARA Y MAGIA
-Carlos Devanti
-★ 4,9
-desde 10 €
-VER FECHAS
-→
 BEBÉS
 MAÑANA · 11:30
 ESTRELLAS Y SOÑAR
 Laura Alcocer
 ★ 4,7
 desde 7 €
+VER FECHAS
+→
+INFANTIL
+MAÑANA · 12:00
+SOÑANDO MAGIA
+David Vega
+★ 4,9
+desde 10 €
 VER FECHAS
 →
 INFANTIL
@@ -296,6 +272,22 @@ Mago Ponce
 desde 10 €
 VER FECHAS
 →
+INFANTIL
+SÁB 28 · 17:00
+LUCES, CÁMARA Y MAGIA
+Carlos Devanti
+★ 4,9
+desde 10 €
+VER FECHAS
+→
+INFANTIL
+SÁB 28 · 18:00
+FLIPOMAGIA
+Gerard Clúa
+★ 4,7
+desde 10 €
+VER FECHAS
+→
 BEBÉS
 DOM 29 · 11:30
 FANTASÍA
@@ -304,33 +296,25 @@ Belén Martínez
 desde 7 €
 VER FECHAS
 →
+INFANTIL
+SÁB 5 · 17:00
+MÁS MAGIA
+Rubén Reyeros
+ESTRENO
+desde 10 €
+VER FECHAS
+→
 PARA REIRTE
 VER LOS 23 →
 
 Las mejores propuestas de humor.
 
 HUMOR
-HOY · 19:30
-AFTER KIKI
-Casaris Paz, Jorge Alvariñas
-★ 4,8
-desde 14 €
-VER FECHAS
-→
-HUMOR
 HOY · 22:30
 TÍA, NADIE ES PERFECTA
 Almudena Alcocer, Maria Francés, Julia Olcina, Yaiza de la Torre y Alejandra Lozano
 ESTRENO
 desde 12 €
-VER FECHAS
-→
-MUSICAL
-HOY · 23:00
-DIVAS Y DIVANES
-Diana Dardo, Mario Manzanares y Artista Invitada
-★ 5,0
-desde 15 €
 VER FECHAS
 →
 HUMOR
@@ -380,6 +364,14 @@ SLASHER. THE EXPERIENCE
 Soraya Santos, Sandra Mell, Fran Expósito, Javier Valverde, Chema Higuera.
 ★ 5,0
 desde 12 €
+VER FECHAS
+→
+HUMOR
+SÁB 28 · 19:30
+AFTER KIKI
+Casaris Paz, Jorge Alvariñas
+★ 4,8
+desde 14 €
 VER FECHAS
 →
 HUMOR
@@ -486,6 +478,13 @@ María Simón
 desde 14 €
 VER FECHAS
 →
+MUSICAL
+DIVAS Y DIVANES
+Diana Dardo, Mario Manzanares y Artista Invitada
+★ 5,0
+desde 10 €
+VER FECHAS
+→
 HUMOR
 QUE TE PARTA UN RAYO
 Marta Martín Ismael Vicente Silvia Ros Carlos Herrera
@@ -498,20 +497,20 @@ VER LOS 7 →
 
 Impro, danza, drama, cortos y otras propuestas para descubrir algo diferente.
 
-DRAMA
-HOY · 21:00
-EL GÉ
-Avelino Piedad
-★ 4,6
-desde 23 €
-VER FECHAS
-→
 IMPRO
 MAÑANA · 14:00
 LA COCINA DE IMPROCAFÉ
 Alumnos y alumnas de la compañía de Improcafé
 ★ 4,8
 desde 5 €
+VER FECHAS
+→
+DRAMA
+MAÑANA · 19:30
+EL GÉ
+Avelino Piedad
+★ 4,6
+desde 23 €
 VER FECHAS
 →
 CINE
@@ -768,7 +767,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
@@ -780,4 +779,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                           
+                             
