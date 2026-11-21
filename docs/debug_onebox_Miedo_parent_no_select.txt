@@ -208,22 +208,6 @@ VER LOS 12 →
 
 Magia infantil a partir de 3 años y espectáculos para bebés.
 
-BEBÉS
-HOY · 11:30
-FANTASÍA
-Belén Martínez
-★ 4,7
-desde 7 €
-VER FECHAS
-→
-INFANTIL
-HOY · 12:00
-PIEDRA, PAPEL O TIJERA
-Nicolás Vicente “Mago Nicols”
-★ 4,9
-desde 10 €
-VER FECHAS
-→
 INFANTIL
 HOY · 16:30
 SOÑANDO MAGIA
@@ -273,6 +257,14 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL
+MAÑANA · 13:30
+PIEDRA, PAPEL O TIJERA
+Nicolás Vicente “Mago Nicols”
+★ 4,9
+desde 10 €
+VER FECHAS
+→
+INFANTIL
 MAÑANA · 16:30
 CAPERUCITA MOZART
 Andrea Carpintero, Pedro Lluch, Paula Girona
@@ -302,6 +294,14 @@ VA DE MAGIA. MAGO PONCE
 Mago Ponce
 ★ 4,9
 desde 10 €
+VER FECHAS
+→
+BEBÉS
+DOM 29 · 11:30
+FANTASÍA
+Belén Martínez
+★ 4,7
+desde 7 €
 VER FECHAS
 →
 PARA REIRTE
@@ -684,7 +684,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082026">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/4i3aN5wAweL7i3ADI7BSX4B-/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-hmpOzIrwNV9U5olYi1fEDkIADCL+6vEU2nMaqFORl8aTIbVDVal2OZwsqxY2mbTt"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6bh1h1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/4i3aN5wAweL7i3ADI7BSX4B-/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-hmpOzIrwNV9U5olYi1fEDkIADCL+6vEU2nMaqFORl8aTIbVDVal2OZwsqxY2mbTt"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6bh1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -780,4 +780,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                           
+                             
