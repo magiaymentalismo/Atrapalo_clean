@@ -38,7 +38,7 @@ VER LOS 7 →
 Estrenos y todas las novedades de nuestra cartelera.
 
 INFANTIL
-MAÑANA · 16:30
+HOY · 16:30
 CAPERUCITA MOZART
 Andrea Carpintero, Pedro Lluch, Paula Girona
 ESTRENO
@@ -46,7 +46,7 @@ desde 12 €
 VER FECHAS
 →
 DRAMA
-MAÑANA · 19:30
+HOY · 19:30
 EL GÉ
 Avelino Piedad
 ★ 4,6
@@ -99,7 +99,7 @@ VER LOS 13 →
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
 MENTALISMO
-MAÑANA · 18:30
+HOY · 18:30
 -10%
 ATRÉVETE. MAGIA MENTAL
 Vicente Lucca
@@ -108,7 +108,7 @@ desde 12 €
 VER FECHAS
 →
 MAGIA
-MAÑANA · 20:00
+HOY · 20:00
 POWER: MAGIA Y MENTALISMO
 Mago Ponce
 ★ 5,0
@@ -116,7 +116,7 @@ desde 10 €
 VER FECHAS
 →
 MENTALISMO
-MAÑANA · 21:00
+HOY · 21:00
 DESTINOS
 Adrian Gonzalo
 ★ 5,0
@@ -209,7 +209,7 @@ VER LOS 12 →
 Magia infantil a partir de 3 años y espectáculos para bebés.
 
 BEBÉS
-MAÑANA · 11:30
+HOY · 11:30
 ESTRELLAS Y SOÑAR
 Laura Alcocer
 ★ 4,7
@@ -217,7 +217,7 @@ desde 7 €
 VER FECHAS
 →
 INFANTIL
-MAÑANA · 12:00
+HOY · 12:00
 SOÑANDO MAGIA
 David Vega
 ★ 4,9
@@ -225,7 +225,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL
-MAÑANA · 12:30
+HOY · 12:30
 ALGUIEN DIJO ¿SUPERPODERES?
 Mago Ponce
 ★ 4,9
@@ -233,15 +233,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL
-MAÑANA · 13:30
-PIEDRA, PAPEL O TIJERA
-Nicolás Vicente “Mago Nicols”
-★ 4,9
-desde 10 €
-VER FECHAS
-→
-INFANTIL
-MAÑANA · 16:30
+HOY · 16:30
 CAPERUCITA MOZART
 Andrea Carpintero, Pedro Lluch, Paula Girona
 ESTRENO
@@ -249,7 +241,7 @@ desde 12 €
 VER FECHAS
 →
 INFANTIL
-MAÑANA · 17:00
+HOY · 17:00
 MAGIA Y DESVARIOS VARIOS
 Joaco Showman
 ★ 5,0
@@ -262,6 +254,14 @@ MILONGA BAJO EL MAR
 Ainhoa Sarmiento
 ★ 4,8
 desde 7 €
+VER FECHAS
+→
+INFANTIL
+SÁB 28 · 12:00
+PIEDRA, PAPEL O TIJERA
+Nicolás Vicente “Mago Nicols”
+★ 4,9
+desde 10 €
 VER FECHAS
 →
 INFANTIL
@@ -309,23 +309,6 @@ VER LOS 23 →
 
 Las mejores propuestas de humor.
 
-HUMOR
-HOY · 22:30
-TÍA, NADIE ES PERFECTA
-Almudena Alcocer, Maria Francés, Julia Olcina, Yaiza de la Torre y Alejandra Lozano
-ESTRENO
-desde 12 €
-VER FECHAS
-→
-HUMOR
-HOY · 23:59
--15%
-AQUÍ SE HABLA PAJA
-Stand up comedy
-ESTRENO
-desde 8 €
-VER FECHAS
-→
 HUMOR
 MIÉ 25 · 19:30
 PAREJAS
@@ -375,11 +358,28 @@ desde 14 €
 VER FECHAS
 →
 HUMOR
+SÁB 28 · 22:30
+TÍA, NADIE ES PERFECTA
+Almudena Alcocer, Maria Francés, Julia Olcina, Yaiza de la Torre y Alejandra Lozano
+ESTRENO
+desde 12 €
+VER FECHAS
+→
+HUMOR
 DOM 29 · 18:00
 HORMONADA 2.0
 Sara Cardona
 ★ 4,8
 desde 12 €
+VER FECHAS
+→
+HUMOR
+DOM 29 · 21:00
+-15%
+AQUÍ SE HABLA PAJA
+Stand up comedy
+ESTRENO
+desde 8 €
 VER FECHAS
 →
 MICROTEATRO
@@ -498,7 +498,7 @@ VER LOS 7 →
 Impro, danza, drama, cortos y otras propuestas para descubrir algo diferente.
 
 IMPRO
-MAÑANA · 14:00
+HOY · 14:00
 LA COCINA DE IMPROCAFÉ
 Alumnos y alumnas de la compañía de Improcafé
 ★ 4,8
@@ -506,7 +506,7 @@ desde 5 €
 VER FECHAS
 →
 DRAMA
-MAÑANA · 19:30
+HOY · 19:30
 EL GÉ
 Avelino Piedad
 ★ 4,6
@@ -767,7 +767,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
@@ -779,4 +779,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                             
+                           
