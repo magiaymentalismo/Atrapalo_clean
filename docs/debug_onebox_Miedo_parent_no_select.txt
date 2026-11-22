@@ -37,14 +37,6 @@ VER LOS 7 →
 
 Estrenos y todas las novedades de nuestra cartelera.
 
-INFANTIL
-HOY · 16:30
-CAPERUCITA MOZART
-Andrea Carpintero, Pedro Lluch, Paula Girona
-ESTRENO
-desde 12 €
-VER FECHAS
-→
 DRAMA
 HOY · 19:30
 EL GÉ
@@ -75,6 +67,14 @@ REFORMA - I RESIDENCIA DE CREACIÓN LEDJ
 Maite Felipe y Martín Barriuso Producción musical: Pablo González Toledo
 ★ 5,0
 desde 10 €
+VER FECHAS
+→
+INFANTIL
+DOM 29 · 16:30
+CAPERUCITA MOZART
+Andrea Carpintero, Pedro Lluch, Paula Girona
+ESTRENO
+desde 12 €
 VER FECHAS
 →
 CATAS Y EXPERIENCIAS
@@ -209,46 +209,6 @@ VER LOS 12 →
 Magia infantil a partir de 3 años y espectáculos para bebés.
 
 BEBÉS
-HOY · 11:30
-ESTRELLAS Y SOÑAR
-Laura Alcocer
-★ 4,7
-desde 7 €
-VER FECHAS
-→
-INFANTIL
-HOY · 12:00
-SOÑANDO MAGIA
-David Vega
-★ 4,9
-desde 10 €
-VER FECHAS
-→
-INFANTIL
-HOY · 12:30
-ALGUIEN DIJO ¿SUPERPODERES?
-Mago Ponce
-★ 4,9
-desde 10 €
-VER FECHAS
-→
-INFANTIL
-HOY · 16:30
-CAPERUCITA MOZART
-Andrea Carpintero, Pedro Lluch, Paula Girona
-ESTRENO
-desde 12 €
-VER FECHAS
-→
-INFANTIL
-HOY · 17:00
-MAGIA Y DESVARIOS VARIOS
-Joaco Showman
-★ 5,0
-desde 10 €
-VER FECHAS
-→
-BEBÉS
 SÁB 28 · 11:30
 MILONGA BAJO EL MAR
 Ainhoa Sarmiento
@@ -268,6 +228,14 @@ INFANTIL
 SÁB 28 · 12:30
 VA DE MAGIA. MAGO PONCE
 Mago Ponce
+★ 4,9
+desde 10 €
+VER FECHAS
+→
+INFANTIL
+SÁB 28 · 16:30
+SOÑANDO MAGIA
+David Vega
 ★ 4,9
 desde 10 €
 VER FECHAS
@@ -297,10 +265,42 @@ desde 7 €
 VER FECHAS
 →
 INFANTIL
+DOM 29 · 12:30
+ALGUIEN DIJO ¿SUPERPODERES?
+Mago Ponce
+★ 4,9
+desde 10 €
+VER FECHAS
+→
+INFANTIL
+DOM 29 · 16:30
+CAPERUCITA MOZART
+Andrea Carpintero, Pedro Lluch, Paula Girona
+ESTRENO
+desde 12 €
+VER FECHAS
+→
+INFANTIL
 SÁB 5 · 17:00
 MÁS MAGIA
 Rubén Reyeros
 ESTRENO
+desde 10 €
+VER FECHAS
+→
+BEBÉS
+DOM 6 · 11:30
+ESTRELLAS Y SOÑAR
+Laura Alcocer
+★ 4,7
+desde 7 €
+VER FECHAS
+→
+INFANTIL
+LUN 7 · 17:00
+MAGIA Y DESVARIOS VARIOS
+Joaco Showman
+★ 5,0
 desde 10 €
 VER FECHAS
 →
@@ -497,14 +497,6 @@ VER LOS 7 →
 
 Impro, danza, drama, cortos y otras propuestas para descubrir algo diferente.
 
-IMPRO
-HOY · 14:00
-LA COCINA DE IMPROCAFÉ
-Alumnos y alumnas de la compañía de Improcafé
-★ 4,8
-desde 5 €
-VER FECHAS
-→
 DRAMA
 HOY · 19:30
 EL GÉ
@@ -535,6 +527,14 @@ REFORMA - I RESIDENCIA DE CREACIÓN LEDJ
 Maite Felipe y Martín Barriuso Producción musical: Pablo González Toledo
 ★ 5,0
 desde 10 €
+VER FECHAS
+→
+IMPRO
+DOM 29 · 14:00
+LA COCINA DE IMPROCAFÉ
+Alumnos y alumnas de la compañía de Improcafé
+★ 4,8
+desde 5 €
 VER FECHAS
 →
 DANZA
@@ -667,7 +667,7 @@ ACEPTAR TODO
 RECHAZAR TODO
 
 HTML_HEAD:
-<!DOCTYPE html><html lang="es" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" style=""><head><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+<!DOCTYPE html><html lang="es" style="" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
 	<meta charset="UTF-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -767,7 +767,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
@@ -779,4 +779,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                           
+                             

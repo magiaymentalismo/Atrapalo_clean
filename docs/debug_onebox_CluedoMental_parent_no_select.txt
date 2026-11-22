@@ -37,14 +37,6 @@ VER LOS 7 →
 
 Estrenos y todas las novedades de nuestra cartelera.
 
-INFANTIL
-HOY · 16:30
-CAPERUCITA MOZART
-Andrea Carpintero, Pedro Lluch, Paula Girona
-ESTRENO
-desde 12 €
-VER FECHAS
-→
 DRAMA
 HOY · 19:30
 EL GÉ
@@ -75,6 +67,14 @@ REFORMA - I RESIDENCIA DE CREACIÓN LEDJ
 Maite Felipe y Martín Barriuso Producción musical: Pablo González Toledo
 ★ 5,0
 desde 10 €
+VER FECHAS
+→
+INFANTIL
+DOM 29 · 16:30
+CAPERUCITA MOZART
+Andrea Carpintero, Pedro Lluch, Paula Girona
+ESTRENO
+desde 12 €
 VER FECHAS
 →
 CATAS Y EXPERIENCIAS
@@ -209,46 +209,6 @@ VER LOS 12 →
 Magia infantil a partir de 3 años y espectáculos para bebés.
 
 BEBÉS
-HOY · 11:30
-ESTRELLAS Y SOÑAR
-Laura Alcocer
-★ 4,7
-desde 7 €
-VER FECHAS
-→
-INFANTIL
-HOY · 12:00
-SOÑANDO MAGIA
-David Vega
-★ 4,9
-desde 10 €
-VER FECHAS
-→
-INFANTIL
-HOY · 12:30
-ALGUIEN DIJO ¿SUPERPODERES?
-Mago Ponce
-★ 4,9
-desde 10 €
-VER FECHAS
-→
-INFANTIL
-HOY · 16:30
-CAPERUCITA MOZART
-Andrea Carpintero, Pedro Lluch, Paula Girona
-ESTRENO
-desde 12 €
-VER FECHAS
-→
-INFANTIL
-HOY · 17:00
-MAGIA Y DESVARIOS VARIOS
-Joaco Showman
-★ 5,0
-desde 10 €
-VER FECHAS
-→
-BEBÉS
 SÁB 28 · 11:30
 MILONGA BAJO EL MAR
 Ainhoa Sarmiento
@@ -268,6 +228,14 @@ INFANTIL
 SÁB 28 · 12:30
 VA DE MAGIA. MAGO PONCE
 Mago Ponce
+★ 4,9
+desde 10 €
+VER FECHAS
+→
+INFANTIL
+SÁB 28 · 16:30
+SOÑANDO MAGIA
+David Vega
 ★ 4,9
 desde 10 €
 VER FECHAS
@@ -297,10 +265,42 @@ desde 7 €
 VER FECHAS
 →
 INFANTIL
+DOM 29 · 12:30
+ALGUIEN DIJO ¿SUPERPODERES?
+Mago Ponce
+★ 4,9
+desde 10 €
+VER FECHAS
+→
+INFANTIL
+DOM 29 · 16:30
+CAPERUCITA MOZART
+Andrea Carpintero, Pedro Lluch, Paula Girona
+ESTRENO
+desde 12 €
+VER FECHAS
+→
+INFANTIL
 SÁB 5 · 17:00
 MÁS MAGIA
 Rubén Reyeros
 ESTRENO
+desde 10 €
+VER FECHAS
+→
+BEBÉS
+DOM 6 · 11:30
+ESTRELLAS Y SOÑAR
+Laura Alcocer
+★ 4,7
+desde 7 €
+VER FECHAS
+→
+INFANTIL
+LUN 7 · 17:00
+MAGIA Y DESVARIOS VARIOS
+Joaco Showman
+★ 5,0
 desde 10 €
 VER FECHAS
 →
@@ -497,14 +497,6 @@ VER LOS 7 →
 
 Impro, danza, drama, cortos y otras propuestas para descubrir algo diferente.
 
-IMPRO
-HOY · 14:00
-LA COCINA DE IMPROCAFÉ
-Alumnos y alumnas de la compañía de Improcafé
-★ 4,8
-desde 5 €
-VER FECHAS
-→
 DRAMA
 HOY · 19:30
 EL GÉ
@@ -535,6 +527,14 @@ REFORMA - I RESIDENCIA DE CREACIÓN LEDJ
 Maite Felipe y Martín Barriuso Producción musical: Pablo González Toledo
 ★ 5,0
 desde 10 €
+VER FECHAS
+→
+IMPRO
+DOM 29 · 14:00
+LA COCINA DE IMPROCAFÉ
+Alumnos y alumnas de la compañía de Improcafé
+★ 4,8
+desde 5 €
 VER FECHAS
 →
 DANZA
