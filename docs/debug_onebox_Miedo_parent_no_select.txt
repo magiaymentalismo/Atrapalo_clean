@@ -562,14 +562,6 @@ Alumnos y alumnas de la compañía de Improcafé
 desde 5 €
 VER FECHAS
 →
-CINE
-MAR 1 · 19:30
-CORTOS CON Ñ
-Festival de cortometrajes
-★ 4,3
-desde 6 €
-VER FECHAS
-→
 DANZA
 MIÉ 2 · 21:00
 MICRODANZAS 4.0
@@ -584,6 +576,14 @@ QUESOS VS VINOS
 Alberto Javier Santos
 ESTRENO
 desde 35 €
+VER FECHAS
+→
+CINE
+MAR 15 · 19:30
+CORTOS CON Ñ
+Festival de cortometrajes
+★ 4,3
+desde 6 €
 VER FECHAS
 →
 ALGO BREVE
@@ -728,7 +728,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082029">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/4i3aN5wAweL7i3ADI7BSX4B-/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-hmpOzIrwNV9U5olYi1fEDkIADCL+6vEU2nMaqFORl8aTIbVDVal2OZwsqxY2mbTt"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6bh1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/DqDoLJqJmjhqr0vRwNZ2MCHA/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-i/pzQd9yXaF4YJKjgwZnirzbnHFJVcV7xWx5ZG/4PsUh39iq1QuGX0/kQYjMub19"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6bh1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
