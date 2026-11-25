@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T15:12:02.204028+01:00",
+  "generated_at": "2026-11-26T00:16:16.230934+01:00",
   "eventos": {
     "Disfruta": {
       "table": {
@@ -13,18 +13,7 @@
           "BuyUrl",
           "Source"
         ],
-        "rows": [
-          [
-            "26 Nov 2026",
-            "21:30",
-            0,
-            "2026-11-26",
-            30,
-            30,
-            null,
-            "dinaticket"
-          ]
-        ]
+        "rows": []
       },
       "proximas": {
         "table": {
@@ -38,18 +27,7 @@
             "BuyUrl",
             "Source"
           ],
-          "rows": [
-            [
-              "26 Nov 2026",
-              "21:30",
-              0,
-              "2026-11-26",
-              30,
-              30,
-              null,
-              "dinaticket"
-            ]
-          ]
+          "rows": []
         }
       }
     },
