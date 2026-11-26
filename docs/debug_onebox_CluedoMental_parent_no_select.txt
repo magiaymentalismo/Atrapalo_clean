@@ -37,20 +37,20 @@ VER LOS 11 →
 
 Estrenos y todas las novedades de nuestra cartelera.
 
-DRAMA
-MAÑANA · 21:00
-EL GÉ
-Avelino Piedad
-★ 4,6
-desde 23 €
-VER FECHAS
-→
 DANZA
 SÁB 28 · 14:15
 REFORMA - I RESIDENCIA DE CREACIÓN LEDJ
 Maite Felipe y Martín Barriuso Producción musical: Pablo González Toledo
 ★ 5,0
 desde 10 €
+VER FECHAS
+→
+DRAMA
+SÁB 28 · 21:00
+EL GÉ
+Avelino Piedad
+★ 4,6
+desde 23 €
 VER FECHAS
 →
 INFANTIL
@@ -171,6 +171,7 @@ VER FECHAS
 →
 MAGIA
 DOM 29 · 20:00
+-10%
 POWER: MAGIA Y MENTALISMO
 Mago Ponce
 ★ 5,0
@@ -536,20 +537,20 @@ Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, No
 desde 12 €
 VER FECHAS
 →
-DRAMA
-MAÑANA · 21:00
-EL GÉ
-Avelino Piedad
-★ 4,6
-desde 23 €
-VER FECHAS
-→
 DANZA
 SÁB 28 · 14:15
 REFORMA - I RESIDENCIA DE CREACIÓN LEDJ
 Maite Felipe y Martín Barriuso Producción musical: Pablo González Toledo
 ★ 5,0
 desde 10 €
+VER FECHAS
+→
+DRAMA
+SÁB 28 · 21:00
+EL GÉ
+Avelino Piedad
+★ 4,6
+desde 23 €
 VER FECHAS
 →
 IMPRO
@@ -735,7 +736,7 @@ HTML_HEAD:
 	<link rel="stylesheet" href="/css/style.css?25082029">
 	<link rel="stylesheet" href="/css/font-awesome.css">
 
-	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/DqDoLJqJmjhqr0vRwNZ2MCHA/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-i/pzQd9yXaF4YJKjgwZnirzbnHFJVcV7xWx5ZG/4PsUh39iq1QuGX0/kQYjMub19"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6bh1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/DqDoLJqJmjhqr0vRwNZ2MCHA/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-i/pzQd9yXaF4YJKjgwZnirzbnHFJVcV7xWx5ZG/4PsUh39iq1QuGX0/kQYjMub19"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K16Q7JZ75Q&amp;cx=c&amp;gtm=4e6bh1h1"></script><script type="text/javascript" async="" src="https://cdn.cookie-script.com/s/1f7f392095044d6a7d04b33d813094f7.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KC33CRBV"></script><script>var pathSeccion= "/cartelera/";var root_path="/";var isLogged= 0;</script>
 	<script src="/js/modernizr.js"></script>
 	<script defer="" src="/js/jquery-3.6.1.min.js"></script>
 				<script defer="" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -831,4 +832,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                             
+                           
