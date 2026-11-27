@@ -38,7 +38,7 @@ VER LOS 11 →
 Estrenos y todas las novedades de nuestra cartelera.
 
 DANZA
-SÁB 28 · 14:15
+MAÑANA · 14:15
 REFORMA - I RESIDENCIA DE CREACIÓN LEDJ
 Maite Felipe y Martín Barriuso Producción musical: Pablo González Toledo
 ★ 5,0
@@ -46,7 +46,7 @@ desde 10 €
 VER FECHAS
 →
 DRAMA
-SÁB 28 · 21:00
+MAÑANA · 21:00
 EL GÉ
 Avelino Piedad
 ★ 4,6
@@ -129,24 +129,8 @@ VER LOS 14 →
 
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
-MENTALISMO
+MAGIA
 HOY · 20:00
-SAL DE MI MENTE
-Fito Crawford
-★ 4,9
-desde 12 €
-VER FECHAS
-→
-MAGIA
-HOY · 21:30
-MILAGROS Y OTRAS MENTIRAS
-Mago Nicols
-★ 5,0
-desde 12 €
-VER FECHAS
-→
-MAGIA
-MAÑANA · 20:00
 DESCARADO. MAGIA CANALLA
 Carlos Devanti
 ★ 5,0
@@ -154,9 +138,17 @@ desde 12 €
 VER FECHAS
 →
 MENTALISMO
-MAÑANA · 23:00
+HOY · 23:00
 MENTIROSO MAGIA MENTAL
 Carlos Devanti
+★ 4,9
+desde 12 €
+VER FECHAS
+→
+MENTALISMO
+MAÑANA · 21:30
+SAL DE MI MENTE
+Fito Crawford
 ★ 4,9
 desde 12 €
 VER FECHAS
@@ -201,6 +193,14 @@ MIÉ 2 · 20:30
 GOLDEN TICKET. TIENE QUE SER MAGIA
 Chap Magic
 ESTRENO
+desde 12 €
+VER FECHAS
+→
+MAGIA
+JUE 3 · 21:30
+MILAGROS Y OTRAS MENTIRAS
+Mago Nicols
+★ 5,0
 desde 12 €
 VER FECHAS
 →
@@ -250,7 +250,7 @@ VER LOS 12 →
 Magia infantil a partir de 3 años y espectáculos para bebés.
 
 BEBÉS
-SÁB 28 · 11:30
+MAÑANA · 11:30
 MILONGA BAJO EL MAR
 Ainhoa Sarmiento
 ★ 4,8
@@ -258,7 +258,7 @@ desde 7 €
 VER FECHAS
 →
 INFANTIL
-SÁB 28 · 12:00
+MAÑANA · 12:00
 PIEDRA, PAPEL O TIJERA
 Nicolás Vicente “Mago Nicols”
 ★ 4,9
@@ -266,7 +266,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL
-SÁB 28 · 12:30
+MAÑANA · 12:30
 VA DE MAGIA. MAGO PONCE
 Mago Ponce
 ★ 4,9
@@ -274,7 +274,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL
-SÁB 28 · 16:30
+MAÑANA · 16:30
 SOÑANDO MAGIA
 David Vega
 ★ 4,9
@@ -282,7 +282,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL
-SÁB 28 · 17:00
+MAÑANA · 17:00
 LUCES, CÁMARA Y MAGIA
 Carlos Devanti
 ★ 4,9
@@ -290,7 +290,7 @@ desde 10 €
 VER FECHAS
 →
 INFANTIL
-SÁB 28 · 18:00
+MAÑANA · 18:00
 FLIPOMAGIA
 Gerard Clúa
 ★ 4,7
@@ -351,15 +351,7 @@ VER LOS 22 →
 Las mejores propuestas de humor.
 
 HUMOR
-HOY · 19:30
-CUENTOS DEL FIN DEL MUNDO
-Alejandra Arias, Teresa Ponce de León, Jaime Páramo y Miguel Carbajo.
-★ 5,0
-desde 15 €
-VER FECHAS
-→
-HUMOR
-MAÑANA · 19:00
+HOY · 19:00
 TODXS NOS VAMOS A MORIR
 Noelia Marló
 ★ 5,0
@@ -367,7 +359,7 @@ desde 15 €
 VER FECHAS
 →
 HUMOR
-MAÑANA · 21:30
+HOY · 21:30
 CERO DRAMAS
 Paloma Jiménez
 ESTRENO
@@ -375,7 +367,7 @@ desde 14 €
 VER FECHAS
 →
 HUMOR
-MAÑANA · 22:30
+HOY · 22:30
 SLASHER. THE EXPERIENCE
 Soraya Santos, Sandra Mell, Fran Expósito, Javier Valverde, Chema Higuera.
 ★ 5,0
@@ -383,7 +375,7 @@ desde 12 €
 VER FECHAS
 →
 HUMOR
-SÁB 28 · 19:30
+MAÑANA · 19:30
 AFTER KIKI
 Casaris Paz, Jorge Alvariñas
 ★ 4,8
@@ -391,7 +383,7 @@ desde 14 €
 VER FECHAS
 →
 HUMOR
-SÁB 28 · 22:30
+MAÑANA · 22:30
 TÍA, NADIE ES PERFECTA
 Almudena Alcocer, Maria Francés, Julia Olcina, Yaiza de la Torre y Alejandra Lozano
 ESTRENO
@@ -465,6 +457,14 @@ desde 12 €
 VER FECHAS
 →
 HUMOR
+JUE 10 · 19:30
+CUENTOS DEL FIN DEL MUNDO
+Alejandra Arias, Teresa Ponce de León, Jaime Páramo y Miguel Carbajo.
+★ 5,0
+desde 15 €
+VER FECHAS
+→
+HUMOR
 SÁB 12 · 21:00
 SEX O NO SEX
 María Simón
@@ -529,16 +529,8 @@ VER LOS 8 →
 
 Impro, danza, drama, cortos y otras propuestas para descubrir algo diferente.
 
-IMPRO
-HOY · 21:15
-IMPROCAFÉ SHOW
-Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, Noneh Herrero, María Márquez, Pablo Acevedo
-★ 4,9
-desde 12 €
-VER FECHAS
-→
 DANZA
-SÁB 28 · 14:15
+MAÑANA · 14:15
 REFORMA - I RESIDENCIA DE CREACIÓN LEDJ
 Maite Felipe y Martín Barriuso Producción musical: Pablo González Toledo
 ★ 5,0
@@ -546,7 +538,7 @@ desde 10 €
 VER FECHAS
 →
 DRAMA
-SÁB 28 · 21:00
+MAÑANA · 21:00
 EL GÉ
 Avelino Piedad
 ★ 4,6
@@ -569,6 +561,14 @@ Claudia León, Dahiana Betancourt, Sofia Barbieri, Mathi Lachama, Semilla, Bo, C
 desde 10 €
 VER FECHAS
 →
+IMPRO
+JUE 3 · 21:15
+IMPROCAFÉ SHOW
+Teban Arroyo, Fran Cano, Noel León, Jorge López, Javi Palomino, Isa Aulló, Noneh Herrero, María Márquez, Pablo Acevedo
+★ 4,9
+desde 12 €
+VER FECHAS
+→
 CATAS Y EXPERIENCIAS
 SÁB 5 · 13:30
 QUESOS VS VINOS
@@ -578,7 +578,7 @@ desde 35 €
 VER FECHAS
 →
 CINE
-MAR 15 · 19:30
+MAR 15 · 19:45
 CORTOS CON Ñ
 Festival de cortometrajes
 ★ 4,3
