@@ -37,14 +37,6 @@ VER LOS 11 →
 
 Estrenos y todas las novedades de nuestra cartelera.
 
-DANZA
-HOY · 14:15
-REFORMA - I RESIDENCIA DE CREACIÓN LEDJ
-Maite Felipe y Martín Barriuso Producción musical: Pablo González Toledo
-★ 5,0
-desde 10 €
-VER FECHAS
-→
 DRAMA
 HOY · 21:00
 EL GÉ
@@ -124,33 +116,24 @@ Carlos Soto, Pilar Manzanares, Ester Marfil, Paula Fernández, Ana García, Mª 
 desde 10 €
 VER FECHAS
 →
+DANZA
+REFORMA - I RESIDENCIA DE CREACIÓN LEDJ
+Maite Felipe y Martín Barriuso Producción musical: Pablo González Toledo
+★ 5,0
+desde 10 €
+VER FECHAS
+→
 PARA SORPRENDERTE
 VER LOS 14 →
 
 Magia, mentalismo e hipnosis que te dejan sin palabras.
 
-MAGIA
-HOY · 18:30
-DESCARADO. MAGIA CANALLA
-Carlos Devanti
-★ 5,0
-desde 12 €
-VER FECHAS
-→
 MENTALISMO
 HOY · 20:00
 MENTIROSO MAGIA MENTAL
 Carlos Devanti
 ★ 4,9
 desde 14 €
-VER FECHAS
-→
-MENTALISMO
-HOY · 21:30
-SAL DE MI MENTE
-Fito Crawford
-★ 4,9
-desde 12 €
 VER FECHAS
 →
 MENTALISMO
@@ -196,10 +179,28 @@ ESTRENO
 desde 12 €
 VER FECHAS
 →
+MENTALISMO
+JUE 3 · 20:00
+-10%
+SAL DE MI MENTE
+Fito Crawford
+★ 4,9
+desde 12 €
+VER FECHAS
+→
 MAGIA
 JUE 3 · 21:30
 MILAGROS Y OTRAS MENTIRAS
 Mago Nicols
+★ 5,0
+desde 12 €
+VER FECHAS
+→
+MAGIA
+VIE 4 · 23:00
+-10%
+DESCARADO. MAGIA CANALLA
+Carlos Devanti
 ★ 5,0
 desde 12 €
 VER FECHAS
@@ -250,59 +251,19 @@ VER LOS 12 →
 Magia infantil a partir de 3 años y espectáculos para bebés.
 
 BEBÉS
-HOY · 11:30
-MILONGA BAJO EL MAR
-Ainhoa Sarmiento
-★ 4,8
-desde 7 €
-VER FECHAS
-→
-INFANTIL
-HOY · 12:00
-PIEDRA, PAPEL O TIJERA
-Nicolás Vicente “Mago Nicols”
-★ 4,9
-desde 10 €
-VER FECHAS
-→
-INFANTIL
-HOY · 12:30
-VA DE MAGIA. MAGO PONCE
-Mago Ponce
-★ 4,9
-desde 10 €
-VER FECHAS
-→
-INFANTIL
-HOY · 16:30
-SOÑANDO MAGIA
-David Vega
-★ 4,9
-desde 10 €
-VER FECHAS
-→
-INFANTIL
-HOY · 17:00
-LUCES, CÁMARA Y MAGIA
-Carlos Devanti
-★ 4,9
-desde 10 €
-VER FECHAS
-→
-INFANTIL
-HOY · 18:00
-FLIPOMAGIA
-Gerard Clúa
-★ 4,7
-desde 10 €
-VER FECHAS
-→
-BEBÉS
 MAÑANA · 11:30
 FANTASÍA
 Belén Martínez
 ★ 4,7
 desde 7 €
+VER FECHAS
+→
+INFANTIL
+MAÑANA · 12:00
+LUCES, CÁMARA Y MAGIA
+Carlos Devanti
+★ 4,9
+desde 10 €
 VER FECHAS
 →
 INFANTIL
@@ -322,10 +283,51 @@ desde 12 €
 VER FECHAS
 →
 INFANTIL
+MAÑANA · 17:00
+-20%
+PIEDRA, PAPEL O TIJERA
+Nicolás Vicente “Mago Nicols”
+★ 4,9
+desde 10 €
+VER FECHAS
+→
+BEBÉS
+SÁB 5 · 11:30
+MILONGA BAJO EL MAR
+Ainhoa Sarmiento
+★ 4,8
+desde 7 €
+VER FECHAS
+→
+INFANTIL
+SÁB 5 · 12:30
+VA DE MAGIA. MAGO PONCE
+Mago Ponce
+★ 4,9
+desde 10 €
+VER FECHAS
+→
+INFANTIL
+SÁB 5 · 16:30
+SOÑANDO MAGIA
+David Vega
+★ 4,9
+desde 10 €
+VER FECHAS
+→
+INFANTIL
 SÁB 5 · 17:00
 MÁS MAGIA
 Rubén Reyeros
 ESTRENO
+desde 10 €
+VER FECHAS
+→
+INFANTIL
+SÁB 5 · 18:00
+FLIPOMAGIA
+Gerard Clúa
+★ 4,7
 desde 10 €
 VER FECHAS
 →
@@ -527,14 +529,6 @@ VER LOS 8 →
 
 Impro, danza, drama, cortos y otras propuestas para descubrir algo diferente.
 
-DANZA
-HOY · 14:15
-REFORMA - I RESIDENCIA DE CREACIÓN LEDJ
-Maite Felipe y Martín Barriuso Producción musical: Pablo González Toledo
-★ 5,0
-desde 10 €
-VER FECHAS
-→
 DRAMA
 HOY · 21:00
 EL GÉ
@@ -590,6 +584,13 @@ CUANDO SEAMOS VIEJAS
 Patricia Torres, Feña Ortalli, Gala M
 ESTRENO
 desde 14 €
+VER FECHAS
+→
+DANZA
+REFORMA - I RESIDENCIA DE CREACIÓN LEDJ
+Maite Felipe y Martín Barriuso Producción musical: Pablo González Toledo
+★ 5,0
+desde 10 €
 VER FECHAS
 →
 ALGO BREVE
@@ -718,7 +719,7 @@ ACEPTAR TODO
 RECHAZAR TODO
 
 HTML_HEAD:
-<!DOCTYPE html><html lang="es" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" style=""><head><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+<!DOCTYPE html><html lang="es" style="" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
 	<meta charset="UTF-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -818,7 +819,7 @@ HTML_HEAD:
                                     <span>Bonos</span>&nbsp;
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </button>
-                                <div id="dropdown-9" class="dropdown2 dropdown  fondoverde">
+                                <div id="dropdown-9" class="dropdown2 dropdown  fondonaranja">
                                     <ul role="menu">
                                                                                                                                 <li role="menuitem">
                                                 <a class="dropdown-link" href="/bono-adultos/" target="_self">
@@ -830,4 +831,4 @@ HTML_HEAD:
                                                     <span>Bono Familiar</span>
                                                 </a>
                                             </li>
-                             
+                           
